@@ -26,9 +26,9 @@ export default function HomePage() {
       <CaseStudiesWallSection />
       <WhoWeWorkWithSection />
       <AdvantageFlow />
-      <KnockoutAuthorityBannerSection />
       <VideoTestimonialsWallSection />
       <FaqSection />
+      <KnockoutAuthorityBannerSection />
     </>
   );
 }
