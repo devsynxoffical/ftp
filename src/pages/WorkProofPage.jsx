@@ -1,510 +1,783 @@
-import React, { useState } from 'react';
-import { Sparkles, ZoomIn, X, ArrowRight, Filter, Search, ShieldCheck, TrendingUp, CheckCircle2 } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { 
+  CheckCircle2, 
+  ExternalLink, 
+  Eye, 
+  X, 
+  ChevronLeft, 
+  ChevronRight, 
+  ShieldCheck,
+  ArrowRight,
+  Sparkles,
+  PhoneCall
+} from "lucide-react";
+import GlobalBottomSections from "../components/GlobalBottomSections";
+
+// Generate full proof items list from the 59 images
+const TOTAL_PROOFS = 59;
+
+const categories = [
+  { id: "ALL", label: "ALL" },
+  { id: "HIGH-TICKET", label: "HIGH-TICKET" },
+  { id: "VSL", label: "VSL" },
+  { id: "LOW-TICKET", label: "LOW-TICKET" },
+  { id: "AI CALLING", label: "AI CALLING" },
+];
+
+const categoryAssigner = (i) => {
+  const mod = i % 4;
+  if (mod === 1) return "HIGH-TICKET";
+  if (mod === 2) return "VSL";
+  if (mod === 3) return "LOW-TICKET";
+  return "AI CALLING";
+};
+
+const proofTitles = [
+  "High-Ticket B2B Lead Acquisition Architecture",
+  "8-Figure Automated VSL Video Funnel",
+  "High-Converting Low-Ticket Bridge & Upsell Engine",
+  "24/7 AI Voice Calling Agent & Live CRM Sync",
+  "Multi-Channel Lead Qualification Workflow",
+  "Consulting Application Funnel & Calendar Engine",
+  "Webinar Conversion & Automated Follow-Up Stack",
+  "E-Commerce Micro-Offer Checkout Optimizer",
+  "Automated SMS & Voice Reactivation Campaign",
+  "High-ROAS Paid Acquisition Landing Flow",
+  "Enterprise Pipeline Booking & Show-Up Engine",
+  "High-Ticket Close Acceleration Funnel",
+  "VSL Drop-Off Recovery & Retargeting Sequence",
+  "Low-Ticket Membership Acquisition Funnel",
+  "AI Outbound Prospecting & Voice Booking Pipeline",
+];
+
+const PROOF_ITEMS = Array.from({ length: TOTAL_PROOFS }, (_, idx) => {
+  const num = idx + 1;
+  const numStr = String(num).padStart(3, "0");
+  const category = categoryAssigner(num);
+  const title = proofTitles[idx % proofTitles.length] + ` #${num}`;
+  
+  return {
+    id: num,
+    title,
+    category,
+    image: `/workprof/wp-${numStr}.webp`,
+    badge: category,
+  };
+});
 
 export default function WorkProofPage() {
-  const [activeCategory, setActiveCategory] = useState('ALL');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeModalImage, setActiveModalImage] = useState(null);
+  const [activeCategory, setActiveCategory] = useState("ALL");
+  const [lightboxIndex, setLightboxIndex] = useState(null);
 
-  // Generate all 59 real work proofs
-  const categoriesList = ['HIGH-TICKET', 'VSL', 'LOW-TICKET', 'AI CALLING'];
-  const metricsList = [
-    '+340% Pipeline ROI',
-    '4.8x Return On Ad Spend',
-    '68% Order Bump Rate',
-    '89% Show-Up Rate',
-    '$185k/mo Added Pipeline',
-    '42 Qualified Calls/Wk',
-    '$4,500 Retainer Won',
-    '5.2x ROAS Scaling',
-    '<60s Lead Response',
-    '100% CRM & Calendar Sync',
-    '$0 CAC Front-End',
-    '24/7 Autonomous Booking',
-  ];
+  const filteredProofs = activeCategory === "ALL" 
+    ? PROOF_ITEMS 
+    : PROOF_ITEMS.filter((item) => item.category === activeCategory);
 
-  const nichesList = [
-    'Agency & High-Ticket Consulting',
-    'B2B Enterprise & Tech Services',
-    'Digital Products & Education',
-    'Professional Services',
-    'High-Ticket Mentorship',
-    'SaaS & Custom Solutions',
-    'Info-Marketing & Courses',
-    'Local & National Services',
-    'Growth Marketing Agency',
-    'Consulting & Advisory',
-    'E-Learning & Digital Books',
-    'High-Growth Tech & Services',
-  ];
+  const openLightbox = (index) => {
+    setLightboxIndex(index);
+    document.body.style.overflow = "hidden";
+  };
 
-  const allWorkProofs = Array.from({ length: 59 }, (_, i) => {
-    const numStr = String(i + 1).padStart(3, '0');
-    const cat = categoriesList[i % categoriesList.length];
-    const stat = metricsList[i % metricsList.length];
-    const niche = nichesList[i % nichesList.length];
+  const closeLightbox = () => {
+    setLightboxIndex(null);
+    document.body.style.overflow = "auto";
+  };
 
-    let badgeColor = '#6366f1';
-    let statColor = '#fbbf24';
-    if (cat === 'VSL') {
-      badgeColor = '#0284c7';
-      statColor = '#38bdf8';
-    } else if (cat === 'LOW-TICKET') {
-      badgeColor = '#059669';
-      statColor = '#34d399';
-    } else if (cat === 'AI CALLING') {
-      badgeColor = '#7c3aed';
-      statColor = '#a78bfa';
+  const nextProof = (e) => {
+    e?.stopPropagation();
+    if (lightboxIndex !== null) {
+      setLightboxIndex((lightboxIndex + 1) % filteredProofs.length);
     }
+  };
 
-    return {
-      id: i + 1,
-      filename: `wp-${numStr}.webp`,
-      image: `/workprof/wp-${numStr}.webp`,
-      title: `Client Evidence Build #${i + 1}`,
-      niche,
-      category: cat,
-      stats: stat,
-      badgeColor,
-      statColor,
+  const prevProof = (e) => {
+    e?.stopPropagation();
+    if (lightboxIndex !== null) {
+      setLightboxIndex((lightboxIndex - 1 + filteredProofs.length) % filteredProofs.length);
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (lightboxIndex === null) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowRight") nextProof();
+      if (e.key === "ArrowLeft") prevProof();
     };
-  });
-
-  const filteredProofs = allWorkProofs.filter((item) => {
-    const matchesCategory = activeCategory === 'ALL' || item.category === activeCategory;
-    const matchesSearch =
-      searchQuery.trim() === '' ||
-      item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.niche.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.stats.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightboxIndex, filteredProofs]);
 
   return (
-    <div style={{ paddingTop: '100px', background: '#06040f', minHeight: '100vh', color: '#ffffff' }}>
-      {/* Hero Header Section */}
-      <section style={{ padding: '60px 0 40px 0', position: 'relative', overflow: 'hidden' }}>
-        {/* Ambient Glows */}
+    <div style={{ minHeight: "100vh", background: "#ffffff", color: "#121214", position: "relative" }}>
+      
+      {/* 1. Light Theme Header & Hero Container Matching Other Pages */}
+      <div
+        style={{
+          position: "relative",
+          background: "#ffffff",
+          paddingTop: "140px",
+          paddingBottom: "80px",
+          overflow: "hidden",
+        }}
+      >
+        {/* Ambient Top Header Background Image */}
         <div
           style={{
-            position: 'absolute',
-            top: '10%',
-            left: '20%',
-            width: '600px',
-            height: '400px',
-            background: 'radial-gradient(circle, rgba(124, 58, 237, 0.22) 0%, transparent 70%)',
-            pointerEvents: 'none',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: "640px",
+            pointerEvents: "none",
+            zIndex: 0,
           }}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '10%',
-            right: '15%',
-            width: '500px',
-            height: '400px',
-            background: 'radial-gradient(circle, rgba(56, 189, 248, 0.18) 0%, transparent 70%)',
-            pointerEvents: 'none',
-          }}
-        />
+        >
+          <img
+            src="/assets/brDjQ9FKiJg6kFs0X0MVPgSRyiw.png"
+            alt="Header Glow"
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              objectPosition: "center top",
+              opacity: 0.85,
+            }}
+          />
+        </div>
 
-        <div className="container-wide" style={{ position: 'relative', zIndex: 2, textAlign: 'center' }}>
+        {/* Hero Content (Clean Light Theme) */}
+        <div
+          style={{
+            maxWidth: "1240px",
+            margin: "0 auto",
+            padding: "0 24px",
+            position: "relative",
+            zIndex: 1,
+            textAlign: "center",
+          }}
+        >
+          {/* Badge */}
           <div
             style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              padding: '6px 20px',
-              borderRadius: '999px',
-              background: 'rgba(99, 102, 241, 0.15)',
-              border: '1.5px solid rgba(167, 139, 250, 0.4)',
-              color: '#c4b5fd',
-              fontSize: '0.82rem',
-              fontWeight: 900,
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em',
-              marginBottom: '20px',
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              background: "rgba(56, 26, 201, 0.07)",
+              border: "1px solid rgba(56, 26, 201, 0.18)",
+              borderRadius: "9999px",
+              padding: "8px 22px",
+              marginBottom: "28px",
+              backdropFilter: "blur(10px)",
             }}
           >
-            <Sparkles size={15} style={{ color: '#a78bfa' }} />
-            <span>TRANSPARENT CLIENT EVIDENCE &amp; WORK PROOF VAULT</span>
+            <ShieldCheck size={16} color="#381ac9" />
+            <span
+              style={{
+                fontSize: "0.82rem",
+                fontWeight: 800,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                color: "#381ac9",
+              }}
+            >
+              TRANSPARENT CLIENT EVIDENCE & WORK PROOF VAULT
+            </span>
           </div>
 
+          {/* Main Title (Dark crisp typography with clean gradient highlight) */}
           <h1
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2.5rem, 5vw, 4.4rem)',
+              fontFamily: '"Geist", "Inter", sans-serif',
               fontWeight: 900,
+              fontSize: "clamp(2.5rem, 5.5vw, 4.2rem)",
+              letterSpacing: "-0.04em",
               lineHeight: 1.08,
-              letterSpacing: '-0.02em',
-              color: '#ffffff',
-              marginBottom: '20px',
+              marginBottom: "24px",
+              textTransform: "uppercase",
+              color: "#121214",
             }}
           >
-            59+ VERIFIED PROOFS. <br />
-            <span className="text-gradient-purple">REAL CLIENT FUNNELS &amp; PIPELINES.</span>
+            59+ VERIFIED PROOFS.
+            <br />
+            <span
+              style={{
+                background: "linear-gradient(135deg, #381ac9 0%, #6262fe 50%, #121214 100%)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              REAL CLIENT FUNNELS & PIPELINES.
+            </span>
           </h1>
 
+          {/* Subtitle */}
           <p
             style={{
-              fontSize: '1.15rem',
-              color: '#cbd5e1',
-              maxWidth: '780px',
-              margin: '0 auto 40px auto',
-              lineHeight: 1.6,
+              fontSize: "1.18rem",
+              lineHeight: 1.65,
+              color: "#525256",
+              maxWidth: "780px",
+              margin: "0 auto 50px auto",
               fontWeight: 500,
             }}
           >
             Browse our complete library of live client funnel builds, CRM dashboards, appointment booking graphs, and verified acquisition workflows. Click any image to inspect full-resolution proof.
           </p>
 
-          {/* Quick Metrics Bar */}
+          {/* 4 Stat Cards (Clean Light Theme with subtle shadows & borders) */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(4, 1fr)',
-              gap: '16px',
-              maxWidth: '980px',
-              margin: '0 auto 48px auto',
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "20px",
+              maxWidth: "1080px",
+              margin: "0 auto",
             }}
-            className="four-col-grid"
           >
-            {[
-              { val: '$50M+', lbl: 'Generated Pipeline' },
-              { val: '340%', lbl: 'Average Booking Lift' },
-              { val: '89%', lbl: 'Show-Up Rate' },
-              { val: '59+', lbl: 'Verified Proofs' },
-            ].map((m, idx) => (
-              <div
-                key={idx}
-                style={{
-                  background: 'rgba(18, 14, 28, 0.85)',
-                  border: '1px solid rgba(255, 255, 255, 0.12)',
-                  borderRadius: '16px',
-                  padding: '18px 16px',
-                  boxShadow: '0 8px 25px rgba(0, 0, 0, 0.4)',
-                }}
-              >
-                <div style={{ fontSize: '1.8rem', fontWeight: 900, color: '#38bdf8', fontFamily: 'var(--font-display)' }}>
-                  {m.val}
-                </div>
-                <div style={{ fontSize: '0.78rem', color: '#94a3b8', fontWeight: 700, textTransform: 'uppercase' }}>
-                  {m.lbl}
-                </div>
+            <div
+              style={{
+                background: "#ffffff",
+                border: "1px solid #e8e8ed",
+                borderRadius: "24px",
+                padding: "28px 24px",
+                textAlign: "center",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)",
+              }}
+            >
+              <div style={{ fontSize: "2.8rem", fontWeight: 900, color: "#381ac9", letterSpacing: "-0.04em" }}>$50M+</div>
+              <div style={{ fontSize: "0.95rem", color: "#525256", fontWeight: 700, marginTop: "6px" }}>
+                Generated Pipeline
               </div>
-            ))}
-          </div>
-
-          {/* Search & Filter Controls */}
-          <div
-            style={{
-              display: 'flex',
-              flexWrap: 'wrap',
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              gap: '16px',
-              background: 'rgba(18, 14, 28, 0.9)',
-              border: '1.5px solid rgba(255, 255, 255, 0.12)',
-              borderRadius: '20px',
-              padding: '16px 24px',
-              maxWidth: '1240px',
-              margin: '0 auto 40px auto',
-              boxShadow: '0 12px 35px rgba(0,0,0,0.5)',
-            }}
-          >
-            {/* Filter Pills */}
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
-              {['ALL', 'HIGH-TICKET', 'VSL', 'LOW-TICKET', 'AI CALLING'].map((cat) => {
-                const isSelected = activeCategory === cat;
-                return (
-                  <button
-                    key={cat}
-                    onClick={() => setActiveCategory(cat)}
-                    style={{
-                      padding: '8px 18px',
-                      borderRadius: '999px',
-                      background: isSelected
-                        ? 'linear-gradient(135deg, #6366f1 0%, #7c3aed 100%)'
-                        : 'rgba(255, 255, 255, 0.06)',
-                      border: isSelected ? '1px solid #a78bfa' : '1px solid rgba(255, 255, 255, 0.12)',
-                      color: isSelected ? '#ffffff' : '#cbd5e1',
-                      fontSize: '0.82rem',
-                      fontWeight: 800,
-                      cursor: 'pointer',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.04em',
-                      transition: 'all 0.25s ease',
-                      boxShadow: isSelected ? '0 4px 15px rgba(124, 58, 237, 0.4)' : 'none',
-                    }}
-                  >
-                    {cat}
-                  </button>
-                );
-              })}
             </div>
 
-            {/* Search Input */}
-            <div style={{ position: 'relative', minWidth: '260px' }}>
-              <Search
-                size={16}
-                style={{ position: 'absolute', left: '14px', top: '50%', transform: 'translateY(-50%)', color: '#94a3b8' }}
-              />
-              <input
-                type="text"
-                placeholder="Search proofs or niche..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                style={{
-                  width: '100%',
-                  padding: '9px 16px 9px 38px',
-                  borderRadius: '999px',
-                  background: 'rgba(0, 0, 0, 0.5)',
-                  border: '1px solid rgba(255, 255, 255, 0.15)',
-                  color: '#ffffff',
-                  fontSize: '0.84rem',
-                  outline: 'none',
-                }}
-              />
+            <div
+              style={{
+                background: "#ffffff",
+                border: "1px solid #e8e8ed",
+                borderRadius: "24px",
+                padding: "28px 24px",
+                textAlign: "center",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)",
+              }}
+            >
+              <div style={{ fontSize: "2.8rem", fontWeight: 900, color: "#121214", letterSpacing: "-0.04em" }}>340%</div>
+              <div style={{ fontSize: "0.95rem", color: "#525256", fontWeight: 700, marginTop: "6px" }}>
+                Average Booking Lift
+              </div>
+            </div>
+
+            <div
+              style={{
+                background: "#ffffff",
+                border: "1px solid #e8e8ed",
+                borderRadius: "24px",
+                padding: "28px 24px",
+                textAlign: "center",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)",
+              }}
+            >
+              <div style={{ fontSize: "2.8rem", fontWeight: 900, color: "#121214", letterSpacing: "-0.04em" }}>89%</div>
+              <div style={{ fontSize: "0.95rem", color: "#525256", fontWeight: 700, marginTop: "6px" }}>
+                Show-Up Rate
+              </div>
+            </div>
+
+            <div
+              style={{
+                background: "#ffffff",
+                border: "1px solid #e8e8ed",
+                borderRadius: "24px",
+                padding: "28px 24px",
+                textAlign: "center",
+                boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04), 0 2px 6px rgba(0, 0, 0, 0.02)",
+              }}
+            >
+              <div style={{ fontSize: "2.8rem", fontWeight: 900, color: "#381ac9", letterSpacing: "-0.04em" }}>59+</div>
+              <div style={{ fontSize: "0.95rem", color: "#525256", fontWeight: 700, marginTop: "6px" }}>
+                Verified Proofs
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Gallery Grid Section */}
-      <section style={{ paddingBottom: '90px' }}>
-        <div className="container-wide">
+      {/* 2. Main Proof Vault Gallery Area (Dark Theme Cards & Filter System) */}
+      <div style={{ background: "#121214", color: "#ffffff", padding: "70px 0 100px 0", position: "relative" }}>
+        <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "0 24px" }}>
+          
+          {/* Filter Pills */}
           <div
             style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-              gap: '24px',
-              marginBottom: '50px',
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: "10px",
+              flexWrap: "wrap",
+              marginBottom: "50px",
+              padding: "8px",
+              background: "rgba(255, 255, 255, 0.04)",
+              borderRadius: "9999px",
+              border: "1px solid rgba(255, 255, 255, 0.08)",
+              maxWidth: "760px",
+              margin: "0 auto 50px auto",
             }}
           >
-            {filteredProofs.map((item) => (
+            {categories.map((cat) => {
+              const isSelected = activeCategory === cat.id;
+              const count = cat.id === "ALL" 
+                ? TOTAL_PROOFS 
+                : PROOF_ITEMS.filter(p => p.category === cat.id).length;
+
+              return (
+                <button
+                  key={cat.id}
+                  onClick={() => setActiveCategory(cat.id)}
+                  style={{
+                    background: isSelected
+                      ? "linear-gradient(135deg, #6262fe 0%, #381ac9 100%)"
+                      : "transparent",
+                    color: isSelected ? "#ffffff" : "rgba(255, 255, 255, 0.65)",
+                    border: isSelected
+                      ? "1px solid rgba(178, 178, 255, 0.4)"
+                      : "1px solid transparent",
+                    padding: "10px 24px",
+                    borderRadius: "9999px",
+                    fontSize: "0.85rem",
+                    fontWeight: 700,
+                    cursor: "pointer",
+                    letterSpacing: "0.04em",
+                    transition: "all 0.25s cubic-bezier(0.16, 1, 0.3, 1)",
+                    boxShadow: isSelected ? "0 4px 16px rgba(98, 98, 254, 0.35)" : "none",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "8px",
+                  }}
+                >
+                  <span>{cat.label}</span>
+                  <span
+                    style={{
+                      fontSize: "0.74rem",
+                      padding: "2px 7px",
+                      borderRadius: "9999px",
+                      background: isSelected ? "rgba(255, 255, 255, 0.2)" : "rgba(255, 255, 255, 0.08)",
+                      color: isSelected ? "#ffffff" : "rgba(255, 255, 255, 0.5)",
+                    }}
+                  >
+                    {count}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Gallery Grid */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fill, minmax(360px, 1fr))",
+              gap: "24px",
+              marginBottom: "80px",
+            }}
+          >
+            {filteredProofs.map((item, index) => (
               <div
                 key={item.id}
-                onClick={() => setActiveModalImage(item)}
+                onClick={() => openLightbox(index)}
                 style={{
-                  background: 'rgba(18, 14, 28, 0.95)',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  border: '1.5px solid rgba(255, 255, 255, 0.12)',
-                  position: 'relative',
-                  cursor: 'pointer',
-                  transition: 'all 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
-                  boxShadow: '0 12px 35px rgba(0,0,0,0.65)',
+                  background: "linear-gradient(180deg, rgba(33, 33, 36, 0.85) 0%, rgba(20, 20, 22, 0.85) 100%)",
+                  border: "1px solid rgba(255, 255, 255, 0.08)",
+                  borderRadius: "24px",
+                  overflow: "hidden",
+                  cursor: "pointer",
+                  transition: "all 0.35s cubic-bezier(0.16, 1, 0.3, 1)",
+                  position: "relative",
+                  display: "flex",
+                  flexDirection: "column",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = item.badgeColor;
-                  e.currentTarget.style.transform = 'translateY(-6px) scale(1.02)';
-                  e.currentTarget.style.boxShadow = `0 20px 45px ${item.badgeColor}44`;
+                  e.currentTarget.style.transform = "translateY(-6px)";
+                  e.currentTarget.style.borderColor = "rgba(178, 178, 255, 0.4)";
+                  e.currentTarget.style.boxShadow = "0 20px 40px rgba(0, 0, 0, 0.45), 0 0 24px rgba(98, 98, 254, 0.15)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = 'rgba(255, 255, 255, 0.12)';
-                  e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                  e.currentTarget.style.boxShadow = '0 12px 35px rgba(0,0,0,0.65)';
+                  e.currentTarget.style.transform = "translateY(0px)";
+                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.08)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
-                {/* Full Uncropped Screenshot */}
-                <div style={{ position: 'relative', width: '100%', background: '#0a0714' }}>
+                {/* Image Container */}
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    height: "260px",
+                    background: "#1a1a1e",
+                    overflow: "hidden",
+                  }}
+                >
                   <img
                     src={item.image}
                     alt={item.title}
                     loading="lazy"
                     style={{
-                      width: '100%',
-                      height: 'auto',
-                      display: 'block',
-                      objectFit: 'contain',
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "top center",
+                      transition: "transform 0.4s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.transform = "scale(1.04)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.transform = "scale(1)";
                     }}
                   />
 
-                  {/* Floating Category Pill */}
+                  {/* Floating Badge */}
                   <div
                     style={{
-                      position: 'absolute',
-                      top: '12px',
-                      left: '12px',
-                      background: item.badgeColor,
-                      color: '#ffffff',
-                      fontSize: '0.7rem',
-                      fontWeight: 900,
-                      padding: '4px 12px',
-                      borderRadius: '999px',
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.04em',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.6)',
+                      position: "absolute",
+                      top: "14px",
+                      left: "14px",
+                      background: "rgba(18, 18, 20, 0.75)",
+                      backdropFilter: "blur(10px)",
+                      WebkitBackdropFilter: "blur(10px)",
+                      border: "1px solid rgba(255, 255, 255, 0.12)",
+                      borderRadius: "9999px",
+                      padding: "4px 12px",
+                      fontSize: "0.72rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.06em",
+                      color: "#b2b2ff",
+                      textTransform: "uppercase",
                     }}
                   >
-                    {item.category}
+                    {item.badge}
                   </div>
 
-                  {/* Hover Zoom Icon Badge */}
+                  {/* Hover Inspect Overlay */}
                   <div
+                    className="inspect-overlay"
                     style={{
-                      position: 'absolute',
-                      bottom: '12px',
-                      right: '12px',
-                      background: 'rgba(0, 0, 0, 0.75)',
-                      backdropFilter: 'blur(8px)',
-                      border: '1px solid rgba(255, 255, 255, 0.2)',
-                      color: '#ffffff',
-                      borderRadius: '50%',
-                      width: '34px',
-                      height: '34px',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      boxShadow: '0 4px 12px rgba(0,0,0,0.5)',
+                      position: "absolute",
+                      inset: 0,
+                      background: "rgba(18, 18, 20, 0.4)",
+                      opacity: 0,
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                      color: "#ffffff",
+                      fontWeight: 600,
+                      fontSize: "0.9rem",
+                      backdropFilter: "blur(4px)",
+                      transition: "opacity 0.25s ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.opacity = "1";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.opacity = "0";
                     }}
                   >
-                    <ZoomIn size={16} />
+                    <Eye size={18} />
+                    <span>Inspect Proof</span>
+                  </div>
+                </div>
+
+                {/* Card Bottom Meta */}
+                <div style={{ padding: "18px 20px", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+                  <div>
+                    <div style={{ fontSize: "0.96rem", fontWeight: 700, color: "#ffffff", marginBottom: "4px" }}>
+                      Proof #{item.id}
+                    </div>
+                    <div style={{ fontSize: "0.82rem", color: "rgba(255, 255, 255, 0.55)" }}>
+                      Verified Client Build
+                    </div>
+                  </div>
+                  <div
+                    style={{
+                      width: "36px",
+                      height: "36px",
+                      borderRadius: "50%",
+                      background: "rgba(255, 255, 255, 0.06)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#b2b2ff",
+                    }}
+                  >
+                    <ExternalLink size={16} />
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Bottom Fast-Track Consultation Callout */}
+          {/* Bottom Strategy Call CTA */}
+          {/* Bottom CTA Card */}
           <div
             style={{
-              background: 'linear-gradient(135deg, #1e1b4b 0%, #312e81 45%, #4338ca 75%, #6366f1 100%)',
-              borderRadius: '24px',
-              padding: '48px 36px',
-              textAlign: 'center',
-              boxShadow: '0 20px 60px rgba(67, 56, 202, 0.45)',
-              border: '2px solid rgba(255, 255, 255, 0.25)',
-              maxWidth: '1000px',
-              margin: '0 auto',
+              background: "linear-gradient(180deg, rgba(24, 24, 30, 0.9) 0%, rgba(14, 14, 18, 0.98) 100%)",
+              border: "1px solid rgba(255, 255, 255, 0.1)",
+              borderRadius: "32px",
+              padding: "60px 32px",
+              textAlign: "center",
+              marginBottom: "40px",
+              position: "relative",
+              overflow: "hidden",
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 35px rgba(124, 58, 237, 0.12)",
             }}
-          >
-            <h2
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(2rem, 3.5vw, 3rem)',
-                fontWeight: 900,
-                color: '#ffffff',
-                marginBottom: '14px',
-              }}
-            >
-              READY TO BUILD A FUNNEL LIKE THESE FOR YOUR BUSINESS?
-            </h2>
-            <p
-              style={{
-                fontSize: '1.05rem',
-                color: 'rgba(255, 255, 255, 0.95)',
-                maxWidth: '680px',
-                margin: '0 auto 28px auto',
-                lineHeight: 1.6,
-              }}
-            >
-              We craft the complete conversion architecture, direct-response copy, CRM integration, and &lt;60s AI calling agents in 5–10 business days.
-            </p>
-            <Link
-              to="/contact"
-              style={{
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: '10px',
-                padding: '16px 40px',
-                background: '#ffffff',
-                color: '#4338ca',
-                borderRadius: '999px',
-                fontWeight: 900,
-                fontSize: '1rem',
-                textDecoration: 'none',
-                boxShadow: '0 10px 30px rgba(0,0,0,0.35)',
-                textTransform: 'uppercase',
-                letterSpacing: '0.04em',
-                transition: 'all 0.3s ease',
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.transform = 'translateY(-3px) scale(1.02)')}
-              onMouseLeave={(e) => (e.currentTarget.style.transform = 'translateY(0) scale(1)')}
-            >
-              <span>CLAIM YOUR CUSTOM FUNNEL BUILD ➔</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Lightbox Modal */}
-      {activeModalImage && (
-        <div
-          style={{
-            position: 'fixed',
-            inset: 0,
-            zIndex: 3000,
-            background: 'rgba(4, 2, 10, 0.95)',
-            backdropFilter: 'blur(20px)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            padding: '24px',
-          }}
-          onClick={() => setActiveModalImage(null)}
-        >
-          <div
-            style={{
-              position: 'relative',
-              maxWidth: '960px',
-              width: '100%',
-              maxHeight: '90vh',
-              background: '#0d0922',
-              border: '2px solid rgba(167, 139, 250, 0.4)',
-              borderRadius: '24px',
-              overflow: 'hidden',
-              display: 'flex',
-              flexDirection: 'column',
-              boxShadow: '0 30px 80px rgba(0,0,0,0.95)',
-            }}
-            onClick={(e) => e.stopPropagation()}
           >
             <div
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                padding: '18px 24px',
-                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
-                background: '#120d30',
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "8px",
+                padding: "6px 16px",
+                borderRadius: "9999px",
+                backgroundColor: "rgba(139, 92, 246, 0.12)",
+                border: "1px solid rgba(167, 139, 250, 0.25)",
+                color: "#c4b5fd",
+                fontSize: "12px",
+                fontWeight: 600,
+                letterSpacing: "0.08em",
+                textTransform: "uppercase",
+                marginBottom: "20px",
               }}
             >
-              <div>
-                <h3 style={{ fontSize: '1.2rem', fontWeight: 800, color: '#ffffff' }}>{activeModalImage.title}</h3>
-                <p style={{ fontSize: '0.82rem', color: activeModalImage.statColor, fontWeight: 700 }}>
-                  {activeModalImage.niche} • {activeModalImage.stats}
-                </p>
-              </div>
-              <button
-                onClick={() => setActiveModalImage(null)}
+              <Sparkles size={14} color="#a78bfa" />
+              <span>Bespoke Conversion Infrastructure</span>
+            </div>
+
+            <h2
+              style={{
+                fontSize: "clamp(2rem, 3.8vw, 2.8rem)",
+                fontWeight: 900,
+                letterSpacing: "-0.03em",
+                marginBottom: "16px",
+                color: "#ffffff",
+                fontFamily: '"Roboto Condensed", "Geist", sans-serif',
+                textTransform: "uppercase",
+              }}
+            >
+              Ready For Your Own High-Converting Funnel?
+            </h2>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                color: "rgba(255, 255, 255, 0.7)",
+                maxWidth: "640px",
+                margin: "0 auto 32px auto",
+                lineHeight: 1.6,
+              }}
+            >
+              We design, write, build, and automate high-ticket funnels with guaranteed conversion lift. Turn your traffic into predictable revenue.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "16px",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <Link
+                to="/contact"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  border: 'none',
-                  color: '#ffffff',
-                  width: '36px',
-                  height: '36px',
-                  borderRadius: '50%',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  background: "linear-gradient(135deg, #6d28d9 0%, #7c3aed 50%, #4f46e5 100%)",
+                  color: "#ffffff",
+                  padding: "16px 32px",
+                  borderRadius: "16px",
+                  fontWeight: 700,
+                  fontSize: "0.95rem",
+                  textDecoration: "none",
+                  boxShadow: "0 10px 25px -4px rgba(124, 58, 237, 0.5)",
+                  border: "1px solid rgba(255, 255, 255, 0.2)",
+                  transition: "all 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                  e.currentTarget.style.boxShadow = "0 14px 30px -4px rgba(124, 58, 237, 0.7)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 10px 25px -4px rgba(124, 58, 237, 0.5)";
                 }}
               >
-                <X size={20} />
-              </button>
+                <span>Build My Funnel</span>
+                <ArrowRight size={18} />
+              </Link>
+
+              <Link
+                to="/contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  backgroundColor: "rgba(255, 255, 255, 0.05)",
+                  color: "#ffffff",
+                  padding: "16px 28px",
+                  borderRadius: "16px",
+                  fontWeight: 700,
+                  fontSize: "0.95rem",
+                  textDecoration: "none",
+                  border: "1px solid rgba(255, 255, 255, 0.12)",
+                  transition: "all 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.1)";
+                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.25)";
+                  e.currentTarget.style.transform = "translateY(-2px)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.05)";
+                  e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.12)";
+                  e.currentTarget.style.transform = "translateY(0)";
+                }}
+              >
+                <PhoneCall size={16} />
+                <span>Book A Strategy Call</span>
+              </Link>
             </div>
-            <div style={{ overflowY: 'auto', maxHeight: 'calc(90vh - 85px)', padding: '20px', background: '#080514' }}>
-              <img
-                src={activeModalImage.image}
-                alt={activeModalImage.title}
-                style={{ width: '100%', height: 'auto', borderRadius: '12px', display: 'block' }}
-              />
+          </div>
+
+        </div>
+      </div>
+
+      {/* Lightbox Modal */}
+      {lightboxIndex !== null && filteredProofs[lightboxIndex] && (
+        <div
+          onClick={closeLightbox}
+          style={{
+            position: "fixed",
+            inset: 0,
+            background: "rgba(0, 0, 0, 0.92)",
+            backdropFilter: "blur(16px)",
+            WebkitBackdropFilter: "blur(16px)",
+            zIndex: 999999,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "24px",
+          }}
+        >
+          {/* Close Button */}
+          <button
+            onClick={closeLightbox}
+            style={{
+              position: "absolute",
+              top: "24px",
+              right: "24px",
+              width: "48px",
+              height: "48px",
+              borderRadius: "50%",
+              background: "rgba(255, 255, 255, 0.12)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              color: "#ffffff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              zIndex: 10,
+              transition: "background 0.2s ease",
+            }}
+          >
+            <X size={24} />
+          </button>
+
+          {/* Prev Button */}
+          <button
+            onClick={prevProof}
+            style={{
+              position: "absolute",
+              left: "24px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              width: "52px",
+              height: "52px",
+              borderRadius: "50%",
+              background: "rgba(255, 255, 255, 0.12)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              color: "#ffffff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              zIndex: 10,
+            }}
+          >
+            <ChevronLeft size={28} />
+          </button>
+
+          {/* Next Button */}
+          <button
+            onClick={nextProof}
+            style={{
+              position: "absolute",
+              right: "24px",
+              top: "50%",
+              transform: "translateY(-50%)",
+              width: "52px",
+              height: "52px",
+              borderRadius: "50%",
+              background: "rgba(255, 255, 255, 0.12)",
+              border: "1px solid rgba(255, 255, 255, 0.2)",
+              color: "#ffffff",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              cursor: "pointer",
+              zIndex: 10,
+            }}
+          >
+            <ChevronRight size={28} />
+          </button>
+
+          {/* Modal Content */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              maxWidth: "92vw",
+              maxHeight: "88vh",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <img
+              src={filteredProofs[lightboxIndex].image}
+              alt={filteredProofs[lightboxIndex].title}
+              style={{
+                maxWidth: "100%",
+                maxHeight: "78vh",
+                objectFit: "contain",
+                borderRadius: "16px",
+                border: "1px solid rgba(255, 255, 255, 0.15)",
+                boxShadow: "0 25px 50px rgba(0, 0, 0, 0.6)",
+              }}
+            />
+            <div style={{ marginTop: "16px", textAlign: "center" }}>
+              <div style={{ fontSize: "1.1rem", fontWeight: 700, color: "#ffffff" }}>
+                Proof #{filteredProofs[lightboxIndex].id} &bull; {filteredProofs[lightboxIndex].category}
+              </div>
+              <div style={{ fontSize: "0.85rem", color: "rgba(255, 255, 255, 0.6)", marginTop: "4px" }}>
+                {lightboxIndex + 1} of {filteredProofs.length} verified proofs
+              </div>
             </div>
           </div>
         </div>
       )}
+
+      <GlobalBottomSections />
     </div>
   );
 }

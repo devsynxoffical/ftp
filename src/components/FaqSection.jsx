@@ -1,153 +1,154 @@
 import React, { useState } from 'react';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import { ChevronDown, Plus, Minus } from 'lucide-react';
 
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState(0);
 
   const faqs = [
     {
-      q: 'What does Funnels That Print build?',
-      a: 'We build conversion-focused funnels and the supporting systems around them, including landing pages, high-ticket funnels, VSLs, low-ticket funnels, bridge funnels, application flows, automations, CRM workflows, and AI calling.',
+      q: 'How does OneFin sync with my existing bank and accounting software?',
+      a: 'OneFin uses secure, encrypted Open Banking APIs and direct Plaid integrations to sync real-time transactions with zero manual entry required. We support QuickBooks, Xero, NetSuite, and 10,000+ financial institutions worldwide.',
     },
     {
-      q: 'Can you build the funnel from scratch?',
-      a: 'Yes. We handle the complete end-to-end scope: conversion strategy, wireframing, copywriting, UI/UX design, custom frontend development, CRM/calendar integrations, tracking, and automation.',
+      q: 'Is my financial data secure on OneFin?',
+      a: 'Yes, absolutely. We enforce 256-bit AES bank-grade encryption at rest and in transit, SOC 2 Type II compliance, multi-factor biometric authentication, and strict role-based access controls for your entire team.',
     },
     {
-      q: 'Can you work with my existing funnel?',
-      a: 'Yes. If you already have an existing funnel or landing page, we can audit, optimize, rebuild, or connect it with the follow-up and AI calling systems you need to maximize pipeline conversions.',
+      q: 'Can I issue custom physical and virtual cards for team members?',
+      a: 'Yes. You can instantly create virtual cards with pre-set spending limits, category restrictions, and single-use expiry dates. Physical cards can be dispatched worldwide directly to employee addresses.',
     },
     {
-      q: 'Do you build low-ticket funnels?',
-      a: 'Yes. We can build the complete customer journey, including sales pages, high-converting checkout flows, 1-click upsells, downsells, order bumps, and automated post-purchase sequences.',
+      q: 'What are the fees for international payments and multi-currency exchange?',
+      a: 'We offer direct mid-market exchange rates with zero hidden markups. Payouts to 140+ countries settle within seconds, with transparent flat fee structures displayed before you hit send.',
     },
     {
-      q: 'What is a bridge funnel?',
-      a: 'A bridge funnel prepares and warms up a prospect before they reach your primary offer. It is particularly useful when sending cold traffic toward an offer that requires additional education, authority, or trust.',
-    },
-    {
-      q: 'What does the AI Calling Agent do?',
-      a: 'It automatically engages new leads in under 60 seconds, conducts an intelligent two-way conversation, asks qualifying questions, answers common FAQs, and helps move qualified prospects straight onto your sales calendar.',
-    },
-    {
-      q: 'Can you set up my automations?',
-      a: 'Yes. We build comprehensive workflows for lead nurturing, email, SMS, appointment reminders, no-show follow-ups, lead reactivation, pipeline stage movement, and internal team notifications.',
-    },
-    {
-      q: 'Do you integrate with CRMs?',
-      a: 'Yes. We connect your funnel with platforms like GoHighLevel, HubSpot, ActiveCampaign, Close, Salesforce, Stripe, Zapier, Make, and your calendar booking tools.',
-    },
-    {
-      q: 'Do I need paid advertising?',
-      a: 'No. Your funnel can work effectively with paid ads (Meta, Google, YouTube, LinkedIn), organic social traffic, email newsletters, outbound campaigns, referrals, or partner channels.',
-    },
-    {
-      q: 'How long does a funnel take to build?',
-      a: 'Most projects take approximately 5–10 business days, depending on the scope, number of pages, custom integrations, and automation requirements.',
-    },
-    {
-      q: 'Do you guarantee results?',
-      a: 'A funnel\'s performance depends on multiple variables, including offer strength, target market, traffic quality, and sales execution. We don\'t promise an arbitrary number of appointments. Our focus is engineering high-standard infrastructure to give your traffic the highest mathematical probability of becoming a qualified booked call.',
+      q: 'How does the 14-day free trial work?',
+      a: 'You get full access to all Pro features for 14 days without any commitment. You can cancel at any time with a single click from your account dashboard.',
     },
   ];
 
   return (
-    <section id="faq" style={{ padding: '100px 0', background: '#f6f4fe', position: 'relative' }}>
-      <div className="container" style={{ maxWidth: '920px' }}>
-        <div style={{ textAlign: 'center', marginBottom: '50px' }}>
-          <div className="badge-pill" style={{ marginBottom: '14px' }}>
-            <HelpCircle size={14} />
-            <span>GOT QUESTIONS?</span>
+    <section
+      id="faq"
+      style={{
+        padding: '120px 0',
+        background: '#121214',
+        color: '#ffffff',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      <div style={{ maxWidth: '840px', margin: '0 auto', padding: '0 24px' }}>
+        {/* Section Header */}
+        <div style={{ textAlign: 'center', margin: '0 auto 60px auto' }}>
+          {/* Badge: 07 faq */}
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
+            <div
+              style={{
+                transform: 'rotate(-12deg)',
+                background: '#212124',
+                border: '1px solid #292929',
+                padding: '4px 10px',
+                borderRadius: '8px',
+                fontSize: '0.82rem',
+                fontWeight: 800,
+                color: '#8f8f8f',
+              }}
+            >
+              07
+            </div>
+            <div
+              style={{
+                transform: 'rotate(6deg)',
+                background: '#212124',
+                border: '1px solid #292929',
+                padding: '4px 12px',
+                borderRadius: '8px',
+                fontSize: '0.82rem',
+                fontWeight: 800,
+                color: '#efefef',
+                textTransform: 'lowercase',
+              }}
+            >
+              faq
+            </div>
           </div>
+
           <h2
             style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2.2rem, 3.4vw, 3rem)',
-              fontWeight: 900,
-              lineHeight: 1.15,
-              letterSpacing: '-0.025em',
-              color: '#0f0c24',
-              marginBottom: '16px',
+              fontSize: 'clamp(2.2rem, 4.5vw, 3.6rem)',
+              fontWeight: 800,
+              lineHeight: 1.12,
+              letterSpacing: '-0.035em',
+              color: '#ffffff',
+              marginBottom: '20px',
             }}
           >
-            FREQUENTLY ASKED <span className="text-gradient-purple">QUESTIONS</span>
+            Got questions? We've got clear answers.
           </h2>
-          <p style={{ fontSize: '1.02rem', color: '#4c4474', lineHeight: 1.6 }}>
-            Everything you need to know about working with Funnels That Print, our process, and our systems.
+          <p style={{ fontSize: 'clamp(1rem, 1.4vw, 1.15rem)', color: '#8f8f8f', maxWidth: '640px', margin: '0 auto' }}>
+            Everything you need to know about setting up, integrating, and scaling your finances with OneFin.
           </p>
         </div>
 
-        {/* Accordion Container */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-          {faqs.map((faq, idx) => {
-            const isOpen = openIndex === idx;
+        {/* FAQ Accordion List */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
             return (
               <div
-                key={idx}
+                key={index}
                 style={{
-                  background: '#ffffff',
-                  border: isOpen ? '1.5px solid #6C5CE7' : '1px solid rgba(108, 92, 231, 0.14)',
-                  borderRadius: '16px',
+                  background: '#1b1b1f',
+                  border: isOpen ? '1px solid #6262fe' : '1px solid #292929',
+                  borderRadius: '20px',
                   overflow: 'hidden',
-                  transition: 'all 0.3s ease',
-                  boxShadow: isOpen ? '0 10px 30px rgba(108, 92, 231, 0.1)' : '0 2px 8px rgba(108, 92, 231, 0.04)',
+                  transition: 'border-color 0.2s ease',
                 }}
               >
                 <button
-                  onClick={() => setOpenIndex(isOpen ? -1 : idx)}
+                  onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   style={{
                     width: '100%',
-                    padding: '22px 26px',
+                    padding: '24px 28px',
                     display: 'flex',
                     alignItems: 'center',
                     justifyContent: 'space-between',
                     gap: '16px',
-                    background: 'none',
+                    background: 'transparent',
                     border: 'none',
+                    color: '#ffffff',
                     textAlign: 'left',
+                    fontSize: '1.1rem',
+                    fontWeight: 700,
                     cursor: 'pointer',
-                    color: '#0f0c24',
                   }}
-                  aria-expanded={isOpen}
                 >
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontSize: '1.1rem',
-                      fontWeight: 800,
-                      color: isOpen ? '#6C5CE7' : '#0f0c24',
-                      lineHeight: 1.35,
-                    }}
-                  >
-                    {faq.q}
-                  </span>
+                  <span>{faq.q}</span>
                   <div
                     style={{
                       width: '32px',
                       height: '32px',
                       borderRadius: '50%',
-                      background: isOpen ? '#6C5CE7' : '#ede9fe',
-                      color: isOpen ? '#ffffff' : '#6C5CE7',
+                      background: isOpen ? '#381ac9' : '#212124',
                       display: 'flex',
                       alignItems: 'center',
                       justifyContent: 'center',
                       flexShrink: 0,
-                      transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
-                      transition: 'all 0.3s ease',
                     }}
                   >
-                    <ChevronDown size={18} />
+                    {isOpen ? <Minus size={16} color="#ffffff" /> : <Plus size={16} color="#8f8f8f" />}
                   </div>
                 </button>
 
                 {isOpen && (
                   <div
                     style={{
-                      padding: '0 26px 24px 26px',
-                      fontSize: '0.96rem',
-                      color: '#4c4474',
-                      lineHeight: 1.7,
-                      borderTop: '1px solid rgba(108, 92, 231, 0.1)',
+                      padding: '0 28px 24px 28px',
+                      color: '#8f8f8f',
+                      fontSize: '1rem',
+                      lineHeight: 1.6,
+                      borderTop: '1px solid rgba(255,255,255,0.05)',
                       paddingTop: '16px',
                     }}
                   >
