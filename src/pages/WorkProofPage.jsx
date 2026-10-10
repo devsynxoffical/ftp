@@ -777,7 +777,7 @@ export default function WorkProofPage() {
         </div>
       )}
 
-      <GlobalBottomSections />
+      <GlobalBottomSections showProof={false} />
     </div>
   );
 }

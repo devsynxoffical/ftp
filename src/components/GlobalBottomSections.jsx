@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { ArrowRight, Eye, PhoneCall, Zap } from "lucide-react";
 import Footer from "./Footer";
 import "../styles/home-finora.css";
 
-export default function GlobalBottomSections() {
+export default function GlobalBottomSections({ showProof } = {}) {
+  const location = useLocation();
+  const shouldShowProof = showProof !== undefined ? showProof : !location.pathname.startsWith("/workproof");
+
   const [activePost, setActivePost] = useState(1);
   const [openFaq, setOpenFaq] = useState(0);
   const [proofCategory, setProofCategory] = useState("ALL");
@@ -297,68 +300,70 @@ export default function GlobalBottomSections() {
         </div>
 
         {/* ==================== WORK PROOF SHOWCASE ==================== */}
-        <div className="sec box center proof-sec" id="proof">
-          <div className="kick">
-            <b>05</b>
-            <span>VERIFIED WORK PROOF</span>
-          </div>
-          <h2 className="d h2">59+ HIGH-CONVERTING LIVE BUILDS.</h2>
-          <p className="lead" style={{ marginTop: "20px" }}>
-            Real client architectures, VSL presentation funnels, and automated AI calling pipelines engineered for massive ROI.
-          </p>
+        {shouldShowProof && (
+          <div className="sec box center proof-sec" id="proof">
+            <div className="kick">
+              <b>05</b>
+              <span>VERIFIED WORK PROOF</span>
+            </div>
+            <h2 className="d h2">59+ HIGH-CONVERTING LIVE BUILDS.</h2>
+            <p className="lead" style={{ marginTop: "20px" }}>
+              Real client architectures, VSL presentation funnels, and automated AI calling pipelines engineered for massive ROI.
+            </p>
 
-          {/* Category Filter Tabs */}
-          <div className="proof-filters">
-            {proofCategories.map((cat) => (
-              <button
-                key={cat}
-                type="button"
-                className={`proof-filter-btn ${proofCategory === cat ? "active" : ""}`}
-                onClick={() => setProofCategory(cat)}
-              >
-                {cat === "ALL" ? "ALL BUILDS (59+)" : cat}
-              </button>
-            ))}
-          </div>
+            {/* Category Filter Tabs */}
+            <div className="proof-filters">
+              {proofCategories.map((cat) => (
+                <button
+                  key={cat}
+                  type="button"
+                  className={`proof-filter-btn ${proofCategory === cat ? "active" : ""}`}
+                  onClick={() => setProofCategory(cat)}
+                >
+                  {cat === "ALL" ? "ALL BUILDS (59+)" : cat}
+                </button>
+              ))}
+            </div>
 
-          {/* Glass Card Grid */}
-          <div className="proof-grid">
-            {filteredHomeProofs.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                className="proof-card"
-                onClick={() => setLightboxProof(item)}
-                aria-label={`View ${item.title}`}
-              >
-                <div className="proof-img-wrap">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    className="proof-img"
-                    loading="lazy"
-                  />
-                  <span className="proof-pill">{item.category}</span>
-                  <div className="proof-zoom-icon">
-                    <Eye size={18} />
+            {/* Glass Card Grid */}
+            <div className="proof-grid">
+              {filteredHomeProofs.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  className="proof-card"
+                  onClick={() => setLightboxProof(item)}
+                  aria-label={`View ${item.title}`}
+                >
+                  <div className="proof-img-wrap">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="proof-img"
+                      loading="lazy"
+                    />
+                    <span className="proof-pill">{item.category}</span>
+                    <div className="proof-zoom-icon">
+                      <Eye size={18} />
+                    </div>
                   </div>
-                </div>
-                <div className="proof-info">
-                  <b>{item.title}</b>
-                  <span>⚡ {item.metric}</span>
-                </div>
-              </button>
-            ))}
-          </div>
+                  <div className="proof-info">
+                    <b>{item.title}</b>
+                    <span>⚡ {item.metric}</span>
+                  </div>
+                </button>
+              ))}
+            </div>
 
-          {/* Explore all button */}
-          <div style={{ marginTop: "40px" }}>
-            <Link to="/workproof" className="btn v" style={{ padding: "14px 28px", fontSize: "14px" }}>
-              <span>Explore All 59+ Verified Proofs</span>
-              <ArrowRight size={16} />
-            </Link>
+            {/* Explore all button */}
+            <div style={{ marginTop: "40px" }}>
+              <Link to="/workproof" className="btn v" style={{ padding: "14px 28px", fontSize: "14px" }}>
+                <span>Explore All 59+ Verified Proofs</span>
+                <ArrowRight size={16} />
+              </Link>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* ==================== BLOG PREVIEW WITH REAL IMAGES ==================== */}
         <div className="sec box center" id="blog" style={{ paddingTop: "20px" }}>
