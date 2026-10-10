@@ -241,7 +241,7 @@
   mask-image: linear-gradient(#000 62%, transparent);
 }
 
-.home-finora .phone {
+.home-finora .stage .phone {
   position: absolute;
   left: 50%;
   top: 0;
@@ -256,7 +256,7 @@
   z-index: 1;
 }
 
-.home-finora .phone::before {
+.home-finora .stage .phone::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -276,7 +276,7 @@
   }
 }
 
-.home-finora .phone em {
+.home-finora .stage .phone em {
   position: absolute;
   left: 50%;
   top: 5%;
@@ -1543,9 +1543,22 @@
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
+  translate: 0 0;
   width: clamp(200px, 22vw, 300px);
   height: auto;
   z-index: 1;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+  aspect-ratio: auto;
+}
+
+.home-finora .arc .phone::before,
+.home-finora .arc .phone::after {
+  display: none !important;
+  content: none !important;
 }
 
 .home-finora .arc .phone .arc-phone-img {

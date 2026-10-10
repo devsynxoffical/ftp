@@ -1135,7 +1135,7 @@ export default function HomePage() {
             SEAMLESS INTEGRATION WITH YOUR ENTIRE TECH STACK.
           </h2>
           <div className="arc">
-            <div className="phone">
+            <div className="phone arc-phone">
               <img
                 src="/assets/cmMkedPPHQRkAShnmUn1lEZAz8.png"
                 alt="OneFin Integrations Device"
