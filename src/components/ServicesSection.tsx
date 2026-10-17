@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { SERVICES } from "@/data/siteContent";
 
 export default function ServicesSection() {
@@ -11,22 +10,19 @@ export default function ServicesSection() {
   const systemServices = SERVICES.filter((s) => s.category === "system");
   const currentService = SERVICES[selectedId] || SERVICES[0];
 
-  const renderPreviewContent = (id: number) => {
+  const renderPvContent = (id: number) => {
     switch (id) {
       case 0:
         return (
           <>
             <div className="f o">
-              <b>Application</b>
-              3 of 5 questions answered
+              <b>Application</b>3 of 5 questions answered
             </div>
             <div className="f">
-              <b>Qualified</b>
-              Budget, timeline and fit confirmed
+              <b>Qualified</b>Budget, timeline and fit confirmed
             </div>
             <div className="f">
-              <b>Book a call</b>
-              Thu 14:30, 30 min reserved
+              <b>Book a call</b>Thu 14:30, 30 min
             </div>
           </>
         );
@@ -34,15 +30,13 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f o">
-              <b>One offer. One action.</b>
-              Headline, proof, CTA aligned
+              <b>One offer. One action.</b>Headline, proof, CTA
             </div>
             <div className="bars">
               <s /><s /><s /><s /><s /><s /><s />
             </div>
             <div className="f">
-              <b>Conversion</b>
-              Single objective tracked
+              <b>Conversion</b>Single objective tracked
             </div>
           </>
         );
@@ -50,12 +44,10 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f o">
-              <b>Video sales letter</b>
-              Prospects educated before the ask
+              <b>Video sales letter</b>Prospects educated before the ask
             </div>
             <div className="f">
-              <b>Watch time</b>
-              Tracked to the second
+              <b>Watch time</b>Tracked to the second
             </div>
           </>
         );
@@ -63,16 +55,13 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f">
-              <b>Sales page</b>
-              Offer stack
+              <b>Sales page</b>Offer stack
             </div>
             <div className="f o">
-              <b>Checkout</b>
-              Order bump, upsell, downsell
+              <b>Checkout</b>Order bump, upsell, downsell
             </div>
             <div className="f">
-              <b>Buyer</b>
-              Follow-up sequence starts
+              <b>Buyer</b>Follow-up sequence starts
             </div>
           </>
         );
@@ -80,16 +69,13 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f">
-              <b>Cold traffic</b>
-              Ad click
+              <b>Cold traffic</b>Ad click
             </div>
             <div className="f o">
-              <b>Bridge page</b>
-              Pre-frame and trust
+              <b>Bridge page</b>Pre-frame and trust
             </div>
             <div className="f">
-              <b>Primary offer</b>
-              Warm arrival
+              <b>Primary offer</b>Warm arrival
             </div>
           </>
         );
@@ -97,12 +83,10 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f o">
-              <b>Application form</b>
-              Information your sales team needs
+              <b>Application form</b>Information your sales team needs
             </div>
             <div className="f">
-              <b>Filter</b>
-              Better-fit prospects only
+              <b>Filter</b>Better-fit prospects only
             </div>
           </>
         );
@@ -110,16 +94,13 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f">
-              <b>Day 0</b>
-              Welcome email &amp; intro SMS
+              <b>Day 0</b>Welcome email
             </div>
             <div className="f o">
-              <b>Day 1</b>
-              Value drop + qualification
+              <b>Day 1</b>SMS reminder
             </div>
             <div className="f">
-              <b>Day 4</b>
-              Reactivation workflow triggered
+              <b>Day 4</b>Reactivation
             </div>
           </>
         );
@@ -127,16 +108,13 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f">
-              <b>New lead</b>
-              Stage 1 (Inbound)
+              <b>New lead</b>Stage 1
             </div>
             <div className="f o">
-              <b>Action: booked</b>
-              Moved to Stage 3 (Sales Calendar)
+              <b>Action: booked</b>Moved to Stage 3
             </div>
             <div className="f">
-              <b>Pipeline</b>
-              Updated automatically
+              <b>Pipeline</b>Updated automatically
             </div>
           </>
         );
@@ -144,16 +122,13 @@ export default function ServicesSection() {
         return (
           <>
             <div className="f o">
-              <b>Confirmed</b>
-              Calendar invite sent with prep doc
+              <b>Confirmed</b>Calendar invite sent
             </div>
             <div className="f">
-              <b>Reminder</b>
-              24h and 1h SMS alerts
+              <b>Reminder</b>24h and 1h before
             </div>
             <div className="f">
-              <b>No-show recovery</b>
-              Instant rescheduling link sent
+              <b>No-show</b>Reschedule link sent
             </div>
           </>
         );
@@ -161,8 +136,7 @@ export default function ServicesSection() {
         return (
           <>
             <div className="chat">
-              Hi, this is the AI assistant from Funnels That Print. Do you have
-              two minutes?
+              Hi, this is the assistant from Funnels That Print. Do you have two minutes?
             </div>
             <div className="chat me">Sure.</div>
             <div className="chat">
@@ -170,8 +144,7 @@ export default function ServicesSection() {
             </div>
             <div className="chat me">Coaching, about 5k.</div>
             <div className="chat">
-              That fits. I can book you with the team on Thursday. Does 14:30
-              work?
+              That fits. I can book you with the team on Thursday. Does 14:30 work?
             </div>
           </>
         );
@@ -193,8 +166,7 @@ export default function ServicesSection() {
         <p className="lead">
           Your funnel is more than a landing page. We build the complete
           conversion journey, from the first click to the booked appointment:
-          strategy, funnel development, automation, qualification and
-          follow-up.
+          strategy, funnel development, automation, qualification and follow-up.
         </p>
       </div>
 
@@ -206,29 +178,26 @@ export default function ServicesSection() {
               <span className="big">Funnel &amp; page builds</span>
               <span className="mono">(service001) Six formats</span>
             </div>
-            <div>
+            <div id="g1">
               {buildServices.map((svc) => (
                 <div
                   key={svc.id}
-                  className={`service-row ${selectedId === svc.id ? "on" : ""}`}
+                  className={`row ${selectedId === svc.id ? "on" : ""}`}
+                  data-i={svc.id}
+                  tabIndex={0}
                   onClick={() => setSelectedId(svc.id)}
                   onMouseEnter={() => setSelectedId(svc.id)}
-                  tabIndex={0}
-                  role="button"
-                  aria-pressed={selectedId === svc.id}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      setSelectedId(svc.id);
-                    }
-                  }}
+                  onFocus={() => setSelectedId(svc.id)}
                 >
                   <span className="n">
                     <b>{svc.badge}</b>
-                    <span>service</span>
+                    service
                   </span>
                   <div>
                     <h3>{svc.title}</h3>
-                    <p>{svc.desc}</p>
+                    <p>
+                      <span>{svc.desc}</span>
+                    </p>
                   </div>
                   <span className="ar">&#8599;</span>
                 </div>
@@ -244,29 +213,26 @@ export default function ServicesSection() {
                 (service002) Turn every lead into a follow-up
               </span>
             </div>
-            <div>
+            <div id="g2">
               {systemServices.map((svc) => (
                 <div
                   key={svc.id}
-                  className={`service-row ${selectedId === svc.id ? "on" : ""}`}
+                  className={`row ${selectedId === svc.id ? "on" : ""}`}
+                  data-i={svc.id}
+                  tabIndex={0}
                   onClick={() => setSelectedId(svc.id)}
                   onMouseEnter={() => setSelectedId(svc.id)}
-                  tabIndex={0}
-                  role="button"
-                  aria-pressed={selectedId === svc.id}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      setSelectedId(svc.id);
-                    }
-                  }}
+                  onFocus={() => setSelectedId(svc.id)}
                 >
                   <span className="n">
                     <b>{svc.badge}</b>
-                    <span>service</span>
+                    service
                   </span>
                   <div>
                     <h3>{svc.title}</h3>
-                    <p>{svc.desc}</p>
+                    <p>
+                      <span>{svc.desc}</span>
+                    </p>
                   </div>
                   <span className="ar">&#8599;</span>
                 </div>
@@ -278,26 +244,31 @@ export default function ServicesSection() {
         {/* Dynamic Interactive Preview Card */}
         <aside
           className="prev"
+          id="prev"
           data-c={selectedId % 4}
           aria-label="Service Visual Preview"
         >
           <div className="pt">
-            <span>{currentService.title}</span>
-            <span style={{ opacity: 0.9 }}>Live System</span>
+            <span id="pvt">{currentService.title}</span>
+            <span>Live</span>
           </div>
 
-          <div className="pb">
-            <div className="pv on">
-              <Image
-                className="pimg"
-                src={`/img/svc/s${selectedId + 1}.webp`}
-                alt={currentService.title}
-                fill
-                sizes="480px"
-                style={{ objectFit: "cover" }}
-              />
-              {renderPreviewContent(selectedId)}
-            </div>
+          <div className="pb" id="pvb">
+            {SERVICES.map((svc) => (
+              <div
+                key={svc.id}
+                className={`pv ${selectedId === svc.id ? "on" : ""}`}
+                data-k={svc.id}
+              >
+                <img
+                  className="pimg"
+                  src={`/img/svc/s${svc.id + 1}.webp`}
+                  alt=""
+                  loading="lazy"
+                />
+                {renderPvContent(svc.id)}
+              </div>
+            ))}
           </div>
         </aside>
       </div>

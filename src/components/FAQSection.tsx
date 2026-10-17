@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { FAQS } from "@/data/siteContent";
 
 export default function FAQSection() {
@@ -14,20 +13,31 @@ export default function FAQSection() {
   return (
     <section className="sec box" id="faq">
       <div className="faq">
-        <div>
-          <div className="eyebrow mono">FAQ</div>
-          <h2 className="h2 d">
-            Got <span className="it">questions?</span>
-          </h2>
-          <p className="lead" style={{ margin: "24px 0 30px" }}>
-            Short answers to what we hear most before a build starts.
+        <div className="sticky">
+          <div>
+            <div className="eyebrow mono">FAQ</div>
+            <h2 className="h2 d">Common questions.</h2>
+          </div>
+          <p className="lead">
+            Everything you want to know about the build, timelines,
+            integrations, traffic and how we work.
           </p>
-          <Link className="btn g" href="/#cta">
-            Ask us directly <i>&#8599;</i>
-          </Link>
+          <div className="fhelp">
+            <b>Still have a question?</b>
+            <p>
+              We are happy to answer via email or on a 15-minute intro call.
+            </p>
+            <a
+              className="btn o"
+              href="#cta"
+              style={{ alignSelf: "flex-start", marginTop: 10 }}
+            >
+              Ask us directly <i>&#8599;</i>
+            </a>
+          </div>
         </div>
 
-        <div className="qs">
+        <div className="qs" id="qs">
           {FAQS.map((faq, index) => {
             const isOpen = openIndex === index;
             const numStr = String(index + 1).padStart(2, "0");
@@ -38,19 +48,13 @@ export default function FAQSection() {
                   type="button"
                   onClick={() => toggleQuestion(index)}
                   aria-expanded={isOpen}
-                  aria-controls={`faq-answer-${index}`}
                 >
                   <span className="n">{numStr}</span>
                   <span>{faq.q}</span>
                   <i />
                 </button>
 
-                <div
-                  id={`faq-answer-${index}`}
-                  className="a"
-                  role="region"
-                  aria-hidden={!isOpen}
-                >
+                <div className="a">
                   <p>{faq.a}</p>
                 </div>
               </div>

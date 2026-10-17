@@ -1,8 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
 import { WHO_ITEMS } from "@/data/siteContent";
 
 export default function WhoSection() {
@@ -26,47 +24,43 @@ export default function WhoSection() {
       </div>
 
       <div className="who">
-        <div className="sect">
+        <div className="sect" id="sect">
           {WHO_ITEMS.map((item, index) => (
-            <button
+            <a
               key={item.num}
-              type="button"
+              href="#cta"
+              data-i={index}
               className={selectedIndex === index ? "on" : ""}
-              onClick={() => setSelectedIndex(index)}
+              onClick={(e) => {
+                e.preventDefault();
+                setSelectedIndex(index);
+                const cta = document.getElementById("cta");
+                if (cta) cta.scrollIntoView({ behavior: "smooth" });
+              }}
               onMouseEnter={() => setSelectedIndex(index)}
-              aria-pressed={selectedIndex === index}
+              onFocus={() => setSelectedIndex(index)}
             >
               <span className="n">{item.num}</span>
               <h3>{item.title}</h3>
               <em>{item.tag}</em>
-            </button>
+            </a>
           ))}
         </div>
 
         {/* Dynamic Audience Detail Card */}
         <aside className="wcard" aria-live="polite">
-          <Image
+          <img
             className="wimg"
             src="/img/gen/who.webp"
-            alt="Audience profile illustration"
-            fill
-            sizes="(max-width: 980px) 100vw, 480px"
-            style={{ objectFit: "cover" }}
+            alt=""
+            loading="lazy"
           />
-          <div className="top">
-            <span className="mono">{currentItem.num}</span>
-            <span className="mono">Fit Matrix</span>
+          <div className="wt">
+            <span className="mono" id="wn">
+              {currentItem.num}
+            </span>
+            <p id="wp">{currentItem.desc}</p>
           </div>
-
-          <p>{currentItem.desc}</p>
-
-          <Link
-            className="btn g"
-            href="/#cta"
-            style={{ alignSelf: "flex-start" }}
-          >
-            Map my funnel <i>&#8599;</i>
-          </Link>
         </aside>
       </div>
     </section>

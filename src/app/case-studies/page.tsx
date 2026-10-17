@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import Image from "next/image";
 import { CASE_STUDIES, CaseStudy } from "@/data/siteContent";
 import CaseStudyModal from "@/components/CaseStudyModal";
 
@@ -39,7 +38,7 @@ export default function CaseStudiesPage() {
       const hashId = window.location.hash.replace("#", "");
       const match = CASE_STUDIES.find((cs) => cs.k === hashId);
       if (match) {
-        setActiveModalStudy(match);
+        setTimeout(() => setActiveModalStudy(match), 400);
       }
     }
   }, []);
@@ -59,11 +58,11 @@ export default function CaseStudiesPage() {
   };
 
   return (
-    <div className="box wh" id="top">
+    <main className="box wh" id="top" style={{ paddingTop: "clamp(100px, 12vw, 140px)" }}>
       {/* Page Header */}
       <div className="head">
         <div>
-          <div className="eyebrow mono">Case studies directory</div>
+          <div className="eyebrow mono">Case studies</div>
           <h1
             className="h1 d"
             style={{ fontSize: "clamp(40px, 6.4vw, 96px)" }}
@@ -101,66 +100,47 @@ export default function CaseStudiesPage() {
         })}
       </div>
 
-      {/* Case Studies Responsive Grid */}
+      {/* Case Studies Grid */}
       <div className="cgrid" id="cgrid">
-        {filteredStudies.map((study) => (
-          <article
-            key={study.k}
-            className="cc"
-            id={study.k}
-            data-category={study.g}
-          >
+        {filteredStudies.map((cs, i) => (
+          <article key={cs.k} className="cc" id={cs.k} data-t={cs.g}>
             <button
               type="button"
               className="ci"
-              onClick={() => openStudy(study)}
-              aria-label={`Open case study: ${study.t}`}
+              data-i={i}
+              onClick={() => openStudy(cs)}
+              aria-label={`Open case study: ${cs.t}`}
             >
-              <Image
-                src={`/img/cs/${study.k}.webp`}
+              <img
+                src={`/img/cs/${cs.k}.webp`}
                 alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 380px"
                 aria-hidden="true"
-                style={{ objectFit: "cover" }}
+                loading="lazy"
               />
-              <Image
+              <img
                 className="mn"
-                src={`/img/cs/${study.k}.webp`}
-                alt={`${study.g} case study results`}
-                fill
-                sizes="(max-width: 768px) 100vw, 380px"
-                style={{ objectFit: "contain" }}
+                src={`/img/cs/${cs.k}.webp`}
+                alt={`${cs.g} case study`}
+                loading="lazy"
               />
             </button>
-
             <div className="cb">
-              <span className="mono">{study.g}</span>
-
-              {study.s && (
-                <b className="st">
-                  {study.s}
-                  <small>Key figure</small>
-                </b>
-              )}
-
-              <h3>{study.t}</h3>
-
+              <span className="mono">{cs.g}</span>
+              <h3>{cs.t}</h3>
               <button
                 type="button"
                 className="rd"
-                onClick={() => openStudy(study)}
+                data-i={i}
+                onClick={() => openStudy(cs)}
               >
-                <span>Read the breakdown</span>
-                <span>&#8599;</span>
+                Read the breakdown &#8599;
               </button>
             </div>
           </article>
         ))}
       </div>
 
-      {/* Case Study Details Modal */}
       <CaseStudyModal study={activeModalStudy} onClose={closeStudy} />
-    </div>
+    </main>
   );
 }

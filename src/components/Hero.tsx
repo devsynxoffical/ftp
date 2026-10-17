@@ -2,20 +2,19 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const heroRef = useRef<HTMLElement>(null);
+  const stageRef = useRef<HTMLDivElement>(null);
 
-  // Typewriter effect
+  // Typewriter effect matching reference
   useEffect(() => {
     const currentWord = HERO_WORDS[wordIndex];
-    const typingSpeed = isDeleting ? 45 : 75;
+    const typingSpeed = isDeleting ? 45 : 70;
 
     const timer = setTimeout(() => {
       if (!isDeleting) {
@@ -35,54 +34,61 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [text, isDeleting, wordIndex]);
 
-  // Interactive parallax for desktop mouse and mobile touch
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const { clientX, clientY } = e;
-    const x = clientX / window.innerWidth - 0.5;
-    const y = clientY / window.innerHeight - 0.5;
-    setMousePos({ x, y });
-  };
+  // Mousemove parallax effect matching reference
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
 
-  const handleTouchMove = (e: React.TouchEvent<HTMLElement>) => {
-    if (e.touches && e.touches[0]) {
-      const { clientX, clientY } = e.touches[0];
-      const x = clientX / window.innerWidth - 0.5;
-      const y = clientY / window.innerHeight - 0.5;
-      setMousePos({ x, y });
-    }
-  };
+    let mx = 0;
+    let my = 0;
+    let tick = false;
 
-  const getParallaxStyle = (multiplier: number, rotateDeg: number) => {
-    const translateX = mousePos.x * multiplier;
-    const translateY = mousePos.y * multiplier * 0.7;
-    return {
-      "--r": `${rotateDeg}deg`,
-      transform: `translate3d(${translateX}px, ${translateY}px, 0) rotate(${rotateDeg}deg)`,
-      transition: "transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1)",
-    } as React.CSSProperties;
-  };
+    const onMouseMove = (e: MouseEvent) => {
+      mx = e.clientX / window.innerWidth - 0.5;
+      my = e.clientY / window.innerHeight - 0.5;
+      if (!tick) {
+        tick = true;
+        requestAnimationFrame(() => {
+          tick = false;
+          const uis = hero.querySelectorAll<HTMLElement>("#stage .ui");
+          const y = window.scrollY;
+          uis.forEach((u) => {
+            const m = parseFloat(u.dataset.m || "0");
+            u.style.transform = `translate3d(${mx * m}px, ${
+              my * m * 0.6 + y * m * 0.01
+            }px, 0)`;
+          });
+        });
+      }
+    };
+
+    window.addEventListener("mousemove", onMouseMove, { passive: true });
+    return () => window.removeEventListener("mousemove", onMouseMove);
+  }, []);
 
   return (
-    <header
-      className="hero"
-      id="top"
-      ref={heroRef}
-      onMouseMove={handleMouseMove}
-      onTouchMove={handleTouchMove}
-    >
-      <span className="blob a" />
-      <span className="blob b" />
-      <span className="blob c" />
+    <header className="hero" id="top" ref={heroRef}>
+      <video
+        className="hbg"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      >
+        <source src="/img/hero/bg.webm" type="video/webm" />
+        <source src="/img/hero/bg.mp4" type="video/mp4" />
+      </video>
 
       <div className="box">
         <span className="tag rise">
-          Funnels, Automation, Follow-up, AI Calling
+          <i>&#10022;</i> Trusted by 50+ businesses, 56 published case studies
         </span>
 
         <h1 className="h1 d rise" style={{ "--rd": "0.1s" } as React.CSSProperties}>
           We build funnels that print{" "}
-          <span className="type">
-            {text}
+          <span className="type" id="type">
+            {text || "booked calls."}
           </span>
         </h1>
 
@@ -90,137 +96,131 @@ export default function Hero() {
           className="lead rise"
           style={{ "--rd": "0.2s" } as React.CSSProperties}
         >
-          Turn your traffic into qualified sales calls with a high-converting
-          funnel built around your offer, audience and sales process.
+          Define the offer, connect your traffic, and let the funnel, the follow-up
+          and the AI agent do the work while you focus on closing.
         </p>
 
         <div
           className="hcta rise"
           style={{ "--rd": "0.3s" } as React.CSSProperties}
         >
-          <Link className="btn o" href="/#cta">
+          <a className="btn grad" href="#cta">
             Build my funnel <i>&#8599;</i>
-          </Link>
-          <Link className="btn g" href="/#services">
-            See what we build
-          </Link>
+          </a>
+          <a className="btn wh" href="#process">
+            See how it works
+          </a>
         </div>
 
-        <div
-          className="hstats rise"
-          style={{ "--rd": "0.4s" } as React.CSSProperties}
-        >
-          <div>
-            <b>5 to 10</b>
-            <span>day builds</span>
-          </div>
-          <div>
-            <b>6</b>
-            <span>funnel types</span>
-          </div>
-          <div>
-            <b>24/7</b>
-            <span>AI follow-up</span>
-          </div>
-          <div>
-            <b>56</b>
-            <span>published case studies</span>
-          </div>
-        </div>
-
-        {/* Interactive Floating Stage with Live UI Cards */}
-        <div className="stage" id="stage">
+        <div className="stage" id="stage" ref={stageRef}>
           <div
-            className="ui chat"
-            style={{
-              left: "2%",
-              top: "4%",
-              ...getParallaxStyle(22, -4),
-            }}
+            className="agent rise"
+            style={{ "--rd": "0.4s" } as React.CSSProperties}
           >
-            <span>
-              My funnel gets clicks but almost no calls. Can you fix the whole
-              journey, not just the page?
-            </span>
-            <span className="me">
-              Yes. Pages, qualification, CRM, follow-up and AI calling, built as
-              one system.
-            </span>
+            <video
+              poster="/img/hero/agent.webp"
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label="AI agent"
+            >
+              <source src="/img/hero/agent.webm" type="video/webm" />
+              <source src="/img/hero/agent.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div
-            className="ui shot"
-            style={{
-              left: "28%",
-              top: "0%",
-              ...getParallaxStyle(-14, -2),
-            }}
+            className="ui lead"
+            style={{ left: 0, top: "18%", "--d": "1s" } as React.CSSProperties}
+            data-m="22"
           >
-            <Image
-              src="/img/cs/DKNahy6TPwg.webp"
-              alt="Client result screenshot"
-              width={340}
-              height={220}
-              priority
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
+            <div className="uh">
+              <b>New lead</b>
+              <span className="pl">AI is qualifying</span>
+            </div>
+            <div className="avs">
+              <img src="/img/team/gaurav.webp" alt="Gaurav" />
+              <em>+</em>
+              <img src="/img/team/rahul.webp" alt="Rahul" />
+              <em>+</em>
+              <span
+                style={{
+                  width: 52,
+                  height: 52,
+                  borderRadius: 12,
+                  background: "var(--or)",
+                  display: "grid",
+                  placeItems: "center",
+                  color: "#fff",
+                  fontWeight: 700,
+                }}
+              >
+                AI
+              </span>
+            </div>
+            <div className="sum">
+              <b>Summary of the call</b>
+              <s>Budget confirmed for a $5K DWY offer</s>
+              <s>Timeline: wants to start this month</s>
+              <s>Booked for Thursday 14:30</s>
+            </div>
           </div>
 
           <div
-            className="ui"
-            style={{
-              left: "24%",
-              top: "62%",
-              ...getParallaxStyle(30, 3),
-            }}
+            className="ui src"
+            style={{ right: 0, top: "8%", "--d": "1.2s" } as React.CSSProperties}
+            data-m="-20"
           >
-            <b>Booked call</b>
-            <span className="num">02:16</span>
-            <span>Thu, 14:30, reminder sent</span>
+            <b style={{ fontSize: 16, marginBottom: 4 }}>Connected</b>
+            <div className="rw">
+              <i>CRM</i>GoHighLevel
+            </div>
+            <div className="rw">
+              <i style={{ background: "#2d4fe6" }}>CAL</i>Calendar + reminders
+            </div>
+            <div className="rw add">+ Add source(s)</div>
           </div>
 
           <div
-            className="ui shot"
+            className="ui chip"
+            style={{
+              left: "10%",
+              bottom: "10%",
+              "--d": "1.5s",
+            } as React.CSSProperties}
+            data-m="14"
+          >
+            <i>&#9679;</i>Qualifies, books, follows up
+          </div>
+
+          <div
+            className="ui tools"
             style={{
               right: "4%",
-              top: "8%",
-              ...getParallaxStyle(-26, 4),
-            }}
+              bottom: "8%",
+              "--d": "1.7s",
+            } as React.CSSProperties}
+            data-m="-14"
           >
-            <Image
-              src="/img/cs/DLidtnUTjXL.webp"
-              alt="Client result screenshot"
-              width={340}
-              height={220}
-              priority
-              style={{ width: "100%", height: "auto", display: "block" }}
-            />
-          </div>
-
-          <div
-            className="ui pill2"
-            style={{
-              right: "26%",
-              top: "70%",
-              ...getParallaxStyle(18, -2),
-            }}
-          >
-            <i />
-            <b style={{ display: "inline" }}>AI agent</b> qualified the lead in 3
-            questions
-          </div>
-
-          <div
-            className="ui"
-            style={{
-              right: "2%",
-              top: "68%",
-              ...getParallaxStyle(-20, 5),
-            }}
-          >
-            <b>Qualified leads</b>
-            <span className="num">1,079</span>
-            <span>at $18.94 each</span>
+            <b>Stack and automations</b>
+            <div className="ic">
+              <span title="HighLevel">
+                <img src="/img/tools/highlevel.webp" alt="HighLevel" />
+              </span>
+              <span title="ClickFunnels">
+                <img src="/img/tools/clickfunnels.webp" alt="ClickFunnels" />
+              </span>
+              <span title="Zapier">
+                <img src="/img/tools/zapier.svg" alt="Zapier" />
+              </span>
+              <span title="OpenAI">
+                <img src="/img/tools/openai.svg" alt="OpenAI" />
+              </span>
+              <span title="Twilio">
+                <img src="/img/tools/twilio.svg" alt="Twilio" />
+              </span>
+            </div>
           </div>
         </div>
       </div>

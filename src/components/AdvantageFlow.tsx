@@ -13,36 +13,29 @@ export default function AdvantageFlow() {
   const pipeRef = useRef<HTMLDivElement>(null);
   const advRef = useRef<HTMLParagraphElement>(null);
 
-  const paragraphWordsPart1 =
-    "A landing page should not operate by itself. Your funnel should not operate separately from your CRM. And your leads should not wait around for someone to follow up."
-      .split(" ")
-      .filter(Boolean);
-
-  const paragraphWordsPart2 =
-    "We connect the moving parts so your acquisition process works as one system."
-      .split(" ")
-      .filter(Boolean);
-
-  const totalWords = paragraphWordsPart1.length + paragraphWordsPart2.length;
+  const text =
+    "Most businesses lose deals between the traffic and the sales conversation. We build each piece of the journey so prospects arrive educated, qualified and ready to talk.";
+  const words = text.split(" ").filter(Boolean);
 
   useEffect(() => {
-    const handleScroll = () => {
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    if (prefersReducedMotion) {
+      setActiveWordCount(words.length);
+      setFillHeight("100%");
+      setActiveNodes(new Array(PIPELINE_NODES.length).fill(true));
+      return;
+    }
+
+    let ticking = false;
+
+    const frame = () => {
+      ticking = false;
       const vh = window.innerHeight;
 
-      // 1. Word-by-word text illuminate effect
-      if (advRef.current) {
-        const advRect = advRef.current.getBoundingClientRect();
-        if (advRect.top < vh && advRect.bottom > 0) {
-          const ratio = Math.max(
-            0,
-            Math.min(1, (vh * 0.8 - advRect.top) / (vh * 0.45))
-          );
-          const activeCount = Math.round(ratio * totalWords);
-          setActiveWordCount(activeCount);
-        }
-      }
-
-      // 2. Liquid pipeline fill effect
+      // 1. Liquid pipeline fill effect
       if (pipeRef.current) {
         const pipeRect = pipeRef.current.getBoundingClientRect();
         if (pipeRect.top < vh && pipeRect.bottom > 0) {
@@ -61,27 +54,52 @@ export default function AdvantageFlow() {
           setActiveNodes(newActive);
         }
       }
+
+      // 2. Word-by-word text illuminate effect
+      if (advRef.current) {
+        const advRect = advRef.current.getBoundingClientRect();
+        if (advRect.top < vh && advRect.bottom > 0) {
+          const ratio = Math.max(
+            0,
+            Math.min(1, (vh * 0.8 - advRect.top) / (vh * 0.45))
+          );
+          const activeCount = Math.round(ratio * words.length);
+          setActiveWordCount(activeCount);
+        }
+      }
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [totalWords]);
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(frame);
+      }
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    frame();
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [words.length]);
 
   return (
     <section className="sec box" id="advantage">
       <div className="flow">
         <div className="sticky">
-          <div className="eyebrow mono">The Funnels That Print advantage</div>
-          <h2 className="h2 d">
-            One strategy.
-            <br />
-            Every piece <span className="it">connected.</span>
-          </h2>
+          <div>
+            <div className="eyebrow mono">Why this works</div>
+            <h2 className="h2 d">
+              The conversion <span className="it">pipeline.</span>
+            </h2>
+          </div>
 
           {/* Word-by-word Illuminated Text */}
-          <p className="d" id="adv" ref={advRef} style={{ marginTop: 28 }}>
-            {paragraphWordsPart1.map((w, idx) => (
+          <p className="lead" id="adv" ref={advRef}>
+            {words.map((w, idx) => (
               <span
                 key={idx}
                 className={`w ${idx < activeWordCount ? "on" : ""}`}
@@ -89,31 +107,18 @@ export default function AdvantageFlow() {
                 {w}{" "}
               </span>
             ))}
-            <b>
-              {paragraphWordsPart2.map((w, idx) => {
-                const globalIdx = paragraphWordsPart1.length + idx;
-                return (
-                  <span
-                    key={idx}
-                    className={`w ${globalIdx < activeWordCount ? "on" : ""}`}
-                  >
-                    {w}{" "}
-                  </span>
-                );
-              })}
-            </b>
           </p>
         </div>
 
         {/* Vertical Liquid Fill Pipeline */}
-        <div className="pipe" ref={pipeRef}>
-          <span className="fill" style={{ height: fillHeight }} />
+        <div className="pipe" id="pipe" ref={pipeRef}>
+          <div className="fill" id="pfill" style={{ height: fillHeight }} />
           {PIPELINE_NODES.map((node, i) => (
             <div
               key={node.title}
-              className={`node ${i === PIPELINE_NODES.length - 1 ? "end" : ""} ${
-                activeNodes[i] ? "on" : ""
-              }`}
+              className={`node ${
+                i === PIPELINE_NODES.length - 1 ? "end" : ""
+              } ${activeNodes[i] ? "on" : ""}`}
             >
               <b>{node.title}</b>
               <small>{node.desc}</small>

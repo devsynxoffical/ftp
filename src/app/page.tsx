@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero";
 import LogoTicker from "@/components/LogoTicker";
+import LiveAutomation from "@/components/LiveAutomation";
 import ServicesSection from "@/components/ServicesSection";
+import RoboSection from "@/components/RoboSection";
 import ProcessSection from "@/components/ProcessSection";
 import WhoSection from "@/components/WhoSection";
 import PortfolioFoldfolio from "@/components/PortfolioFoldfolio";
@@ -17,7 +19,9 @@ export default function Home() {
     <>
       <Hero />
       <LogoTicker />
+      <LiveAutomation />
       <ServicesSection />
+      <RoboSection />
       <ProcessSection />
       <WhoSection />
       <PortfolioFoldfolio />

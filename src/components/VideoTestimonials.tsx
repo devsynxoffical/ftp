@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
 import { TESTIMONIAL_VIDEOS } from "@/data/siteContent";
 
 export default function VideoTestimonials() {
@@ -22,9 +21,7 @@ export default function VideoTestimonials() {
           v.pause();
         }
       });
-      video.play().catch(() => {
-        // Handle autoplay policy gracefully
-      });
+      video.play().catch(() => {});
       setPlayingId(id);
     }
   };
@@ -49,7 +46,7 @@ export default function VideoTestimonials() {
           </p>
         </div>
 
-        <div className="vids">
+        <div className="vids" id="vids">
           {TESTIMONIAL_VIDEOS.map((vid) => (
             <div
               key={vid.id}
@@ -59,7 +56,7 @@ export default function VideoTestimonials() {
               onClick={() => togglePlay(vid.id)}
               tabIndex={0}
               role="button"
-              aria-label={`Play testimonial video ${vid.id}`}
+              aria-label="Play testimonial"
               onKeyDown={(e) => {
                 if (e.key === "Enter" || e.key === " ") {
                   e.preventDefault();
@@ -67,14 +64,12 @@ export default function VideoTestimonials() {
                 }
               }}
             >
-              <Image
+              <img
                 className="bgp"
                 src={`/img/vid/${vid.id}.webp`}
                 alt=""
-                fill
-                sizes="(max-width: 768px) 50vw, 300px"
                 aria-hidden="true"
-                style={{ objectFit: "cover" }}
+                loading="lazy"
               />
 
               <video
@@ -90,20 +85,10 @@ export default function VideoTestimonials() {
 
               <span className="pl">
                 <i>&#9654;</i>
-                <span>{vid.label}</span>
+                <span>Client testimonial</span>
               </span>
             </div>
           ))}
-
-          {/* Testimonials Accent Tile */}
-          <div className="vtile">
-            <b>56+</b>
-            <span>Verified campaigns</span>
-            <p>
-              Direct accounts from founders and media buyers who scale with our
-              systems.
-            </p>
-          </div>
         </div>
       </div>
     </section>

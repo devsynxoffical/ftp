@@ -16,14 +16,9 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       return;
     }
 
-    // Initialize buttery smooth scrolling with Lenis
+    // Initialize Lenis
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      orientation: "vertical",
-      gestureOrientation: "vertical",
-      smoothWheel: true,
-      wheelMultiplier: 0.9,
+      lerp: 0.085,
     });
 
     (window as unknown as { lenis: Lenis }).lenis = lenis;
@@ -35,9 +30,9 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     const rafId = requestAnimationFrame(raf);
 
-    // Staggered scroll-reveal intersection observer (.sr -> .sr.in)
+    // Staggered scroll-reveal intersection observer (.sr -> .sr.in) matching ftp 3
     const sel =
-      ".eyebrow, .h2, .sec .lead, .grp, .prev, .sect, .wcard, .case-card, .q, .vc, .tm, .pbox, .cta .big, .cta .lead, .cta .btn, .fcols > *";
+      ".eyebrow, .h2, .sec .lead, .grp, .prev, .sect, .wcard, .case, .q, .vc, .tm, .pimg, .pmid, .pfeat, .cta .big, .cta .lead, .cta .btn, .fg > *, .freach > *";
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -55,7 +50,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     const elementsToReveal = document.querySelectorAll(sel);
     elementsToReveal.forEach((el) => {
-      if (el.closest("#process, #work")) return;
+      if (el.closest(".proc, .port, #process, #work")) return;
       const parent = el.parentElement;
       if (!parent) return;
       const sib = Array.from(parent.children).filter((c) => c.matches(sel));
@@ -65,6 +60,18 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       io.observe(el);
     });
 
+    // Auto-hide navbar on scroll down
+    const nav = document.getElementById("nav");
+    let lastScrollY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (nav) {
+        nav.classList.toggle("hide", y > lastScrollY && y > 400);
+      }
+      lastScrollY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+
     // Smoothly intercept hash anchor clicks
     const handleAnchorClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a[href*="#"]');
@@ -73,7 +80,6 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       const href = target.getAttribute("href");
       if (!href) return;
 
-      // Extract the hash part
       const hashIndex = href.indexOf("#");
       if (hashIndex === -1) return;
       const hash = href.substring(hashIndex);
@@ -83,8 +89,8 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       if (element) {
         e.preventDefault();
         lenis.scrollTo(element as HTMLElement, {
-          offset: -80,
-          duration: 1.2,
+          offset: -20,
+          duration: 1.4,
         });
       }
     };
@@ -93,6 +99,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     return () => {
       document.removeEventListener("click", handleAnchorClick);
+      window.removeEventListener("scroll", onScroll);
       cancelAnimationFrame(rafId);
       io.disconnect();
       lenis.destroy();
