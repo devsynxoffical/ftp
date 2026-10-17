@@ -1,40 +1,59 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
-  const [wordIndex, setWordIndex] = useState(0);
-  const [text, setText] = useState("");
-  const [isDeleting, setIsDeleting] = useState(false);
   const heroRef = useRef<HTMLElement>(null);
   const stageRef = useRef<HTMLDivElement>(null);
+  const typeRef = useRef<HTMLSpanElement>(null);
 
-  // Typewriter effect matching reference
+  // High-performance DOM-direct typewriter (zero React re-renders to prevent layout thrashing)
   useEffect(() => {
-    const currentWord = HERO_WORDS[wordIndex];
-    const typingSpeed = isDeleting ? 45 : 70;
+    const el = typeRef.current;
+    if (!el) return;
 
-    const timer = setTimeout(() => {
-      if (!isDeleting) {
-        setText(currentWord.substring(0, text.length + 1));
-        if (text.length + 1 === currentWord.length) {
-          setTimeout(() => setIsDeleting(true), 2200);
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    const W = HERO_WORDS;
+    let wi = 0;
+    let ci = W[0].length;
+    let del = true;
+    let timeoutId: NodeJS.Timeout;
+
+    function step() {
+      if (!el) return;
+      const w = W[wi];
+      if (del) {
+        ci--;
+        el.textContent = w.slice(0, ci);
+        if (ci === 0) {
+          del = false;
+          wi = (wi + 1) % W.length;
+          timeoutId = setTimeout(step, 400);
+          return;
         }
+        timeoutId = setTimeout(step, 45);
       } else {
-        setText(currentWord.substring(0, text.length - 1));
-        if (text.length - 1 === 0) {
-          setIsDeleting(false);
-          setWordIndex((prev) => (prev + 1) % HERO_WORDS.length);
+        ci++;
+        el.textContent = W[wi].slice(0, ci);
+        if (ci === W[wi].length) {
+          del = true;
+          timeoutId = setTimeout(step, 2400);
+          return;
         }
+        timeoutId = setTimeout(step, 70);
       }
-    }, typingSpeed);
+    }
 
-    return () => clearTimeout(timer);
-  }, [text, isDeleting, wordIndex]);
+    timeoutId = setTimeout(step, 3200);
 
-
+    return () => clearTimeout(timeoutId);
+  }, []);
 
   return (
     <header className="hero" id="top" ref={heroRef}>
@@ -55,10 +74,14 @@ export default function Hero() {
           <i>&#10022;</i> Trusted by 50+ businesses, 56 published case studies
         </span>
 
-        <h1 className="h1 d rise" style={{ "--rd": "0.1s" } as React.CSSProperties}>
+        <h1
+          className="h1 d rise"
+          style={{ "--rd": "0.1s" } as React.CSSProperties}
+        >
           We build funnels that print{" "}
-          <span className="type" id="type">
-            {text || "booked calls."}
+          <br />
+          <span className="type" id="type" ref={typeRef}>
+            booked calls.
           </span>
         </h1>
 

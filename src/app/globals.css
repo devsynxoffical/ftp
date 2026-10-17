@@ -98,8 +98,8 @@ h1,h2,h3,p{margin:0}
 .hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(255,255,255,.15),rgba(255,255,255,0) 40%,rgba(255,255,255,.6) 82%,#fff)}
 .hero .tag{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;padding:9px 16px;border-radius:999px;background:rgba(255,255,255,.65);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);margin-bottom:26px;color:var(--body)}
 .hero .tag i{font-style:normal;color:var(--or)}
-.hero h1{max-width:13em;margin-inline:auto}
-.type{font-family:var(--disp);font-weight:inherit;color:var(--or);border-right:3px solid var(--or);padding-right:.06em;animation:caret .9s steps(1) infinite;white-space:nowrap}
+.hero h1{max-width:16em;margin-inline:auto;text-wrap:wrap}
+.type{display:inline-block;min-height:1.15em;vertical-align:bottom;font-family:var(--disp);font-weight:inherit;color:var(--or);border-right:3px solid var(--or);padding-right:.06em;animation:caret .9s steps(1) infinite;white-space:nowrap}
 @keyframes caret{50%{border-color:transparent}}
 .hero .lead{margin:18px auto 0;text-align:center;font-size:clamp(16px,1.3vw,19px);max-width:52ch}
 .hcta{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap}
