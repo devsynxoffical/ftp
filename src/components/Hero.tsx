@@ -34,37 +34,7 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [text, isDeleting, wordIndex]);
 
-  // Mousemove parallax effect matching reference
-  useEffect(() => {
-    const hero = heroRef.current;
-    if (!hero) return;
 
-    let mx = 0;
-    let my = 0;
-    let tick = false;
-
-    const onMouseMove = (e: MouseEvent) => {
-      mx = e.clientX / window.innerWidth - 0.5;
-      my = e.clientY / window.innerHeight - 0.5;
-      if (!tick) {
-        tick = true;
-        requestAnimationFrame(() => {
-          tick = false;
-          const uis = hero.querySelectorAll<HTMLElement>("#stage .ui");
-          const y = window.scrollY;
-          uis.forEach((u) => {
-            const m = parseFloat(u.dataset.m || "0");
-            u.style.transform = `translate3d(${mx * m}px, ${
-              my * m * 0.6 + y * m * 0.01
-            }px, 0)`;
-          });
-        });
-      }
-    };
-
-    window.addEventListener("mousemove", onMouseMove, { passive: true });
-    return () => window.removeEventListener("mousemove", onMouseMove);
-  }, []);
 
   return (
     <header className="hero" id="top" ref={heroRef}>

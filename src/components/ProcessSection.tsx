@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
 const CBG = ["#d6ccff", "#c8f54a", "#ffbfe0", "#bfe3ff", "#ffd3c2", "#efece4"];
 
 const STEPS = [
@@ -44,64 +42,8 @@ const STEPS = [
 ];
 
 export default function ProcessSection() {
-  const [activeStep, setActiveStep] = useState(0);
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) return;
-
-    let ticking = false;
-
-    const frame = () => {
-      ticking = false;
-      const pw = wrapRef.current;
-      const track = trackRef.current;
-      if (!pw || !track) return;
-
-      const r = pw.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const vw = window.innerWidth;
-
-      if (r.top < vh && r.bottom > 0) {
-        const totalScrollable = pw.offsetHeight - vh;
-        if (totalScrollable <= 0) return;
-        const p = Math.max(0, Math.min(1, -r.top / totalScrollable));
-
-        const paddingLeft =
-          parseFloat(getComputedStyle(track).paddingLeft) || 20;
-        const max = track.scrollWidth - vw + paddingLeft;
-        track.style.transform = `translate3d(${-p * max}px, 0, 0)`;
-
-        const i = Math.min(STEPS.length - 1, Math.floor(p * STEPS.length));
-        setActiveStep(i);
-      }
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(frame);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    frame();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
   const scrollToStep = (index: number) => {
-    setActiveStep(index);
-    const pw = wrapRef.current;
+    const pw = document.getElementById("procwrap");
     if (pw && window.innerWidth > 980) {
       const top = pw.getBoundingClientRect().top + window.scrollY;
       const totalScrollable = pw.offsetHeight - window.innerHeight;
@@ -117,7 +59,7 @@ export default function ProcessSection() {
   };
 
   return (
-    <div id="procwrap" ref={wrapRef}>
+    <div id="procwrap">
       <section className="proc" id="process">
         <div className="box">
           <div>
@@ -132,11 +74,11 @@ export default function ProcessSection() {
           </p>
         </div>
 
-        <div className="track" id="track" ref={trackRef}>
+        <div className="track" id="track">
           {STEPS.map((step, i) => (
             <article
               key={step.num}
-              className={`card ${activeStep === i ? "on" : ""}`}
+              className={`card ${i === 0 ? "on" : ""}`}
               style={{ "--cbg": CBG[i] } as React.CSSProperties}
               onClick={() => scrollToStep(i)}
             >
@@ -165,7 +107,7 @@ export default function ProcessSection() {
           {STEPS.map((step, i) => (
             <div
               key={step.num}
-              className={activeStep >= i ? "on" : ""}
+              className={i === 0 ? "on" : ""}
               onClick={() => scrollToStep(i)}
               tabIndex={0}
               role="button"

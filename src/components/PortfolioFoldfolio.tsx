@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useState, useCallback } from "react";
 
 const FUNNELS = [
   { name: "100X Productivity", desc: "Coaching program, application funnel" },
@@ -15,19 +15,9 @@ const FUNNELS = [
 
 export default function PortfolioFoldfolio() {
   const [funnelIndex, setFunnelIndex] = useState(0);
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const devRef = useRef<HTMLDivElement>(null);
-  const coverRef = useRef<HTMLDivElement>(null);
-  const pagesRef = useRef<HTMLDivElement>(null);
-  const siteRef = useRef<HTMLDivElement>(null);
-  const glRef = useRef<HTMLSpanElement>(null);
-  const grRef = useRef<HTMLSpanElement>(null);
-
-  const cl = (v: number, min = 0, max = 1) =>
-    Math.max(min, Math.min(max, v));
 
   const goOpen = useCallback(() => {
-    const pw = wrapRef.current;
+    const pw = document.getElementById("portwrap");
     if (!pw) return;
     const top = Math.round(pw.getBoundingClientRect().top + window.scrollY);
     const y = Math.round(top + 0.2 * (pw.offsetHeight - window.innerHeight));
@@ -46,77 +36,8 @@ export default function PortfolioFoldfolio() {
     goOpen();
   };
 
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) return;
-
-    let ticking = false;
-
-    const frame = () => {
-      ticking = false;
-      const pw = wrapRef.current;
-      const dev = devRef.current;
-      const cover = coverRef.current;
-      const pages = pagesRef.current;
-      const site = siteRef.current;
-      const gl = glRef.current;
-      const gr = grRef.current;
-
-      if (!pw || !dev || !cover || !pages || !site || !gl || !gr) return;
-
-      const r = pw.getBoundingClientRect();
-      const vh = window.innerHeight;
-      const vw = window.innerWidth;
-
-      if (r.top < vh && r.bottom > 0) {
-        const p = cl(-r.top / (pw.offsetHeight - vh));
-
-        // Device unfold animation
-        const open = cl((p - 0.03) / 0.12);
-        const e = open * open * (3 - 2 * open);
-        dev.style.width = `calc(var(--W) * ${(0.5 + 0.5 * e).toFixed(4)})`;
-        dev.style.borderRadius = `${36 - e * 8}px`;
-        cover.style.transform = `rotateY(${-180 * e}deg)`;
-        cover.style.visibility = e > 0.5 ? "hidden" : "visible";
-        dev.classList.toggle("open", e > 0.92);
-
-        // Giant background text spread
-        const spread = e * vw * 0.42;
-        gl.style.transform = `translate3d(${-spread}px,0,0)`;
-        gr.style.transform = `translate3d(${spread}px,0,0)`;
-        gl.style.opacity = `${1 - e * 0.85}`;
-        gr.style.opacity = `${1 - e * 0.85}`;
-
-        // Long page scroll within unfolded viewport
-        const sc = cl((p - 0.17) / 0.83);
-        const maxScroll = Math.max(0, site.scrollHeight - pages.clientHeight);
-        const yy = sc * maxScroll;
-        site.style.transform = `translate3d(0,${-yy}px,0)`;
-      }
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(frame);
-      }
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    frame();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
   return (
-    <div id="portwrap" ref={wrapRef}>
+    <div id="portwrap">
       <section className="port" id="work">
         <div className="top">
           <div>
@@ -132,18 +53,14 @@ export default function PortfolioFoldfolio() {
         </div>
 
         <div className="giant" aria-hidden="true">
-          <span id="gl" ref={glRef}>
-            FTP
-          </span>
-          <span id="gr" ref={grRef}>
-            Work
-          </span>
+          <span id="gl">FTP</span>
+          <span id="gr">Work</span>
         </div>
 
-        <div className="dev" id="dev" ref={devRef}>
+        <div className="dev" id="dev">
           <div className="scr">
-            <div className="pages" id="pages" ref={pagesRef}>
-              <div className="site" id="site" ref={siteRef}>
+            <div className="pages" id="pages">
+              <div className="site" id="site">
                 <img
                   className="fimg"
                   id="fimg"
@@ -188,7 +105,7 @@ export default function PortfolioFoldfolio() {
               </div>
             </div>
 
-            <div className="cover" id="cover" ref={coverRef}>
+            <div className="cover" id="cover">
               <div className="ctop">
                 <span className="logo">
                   <i />

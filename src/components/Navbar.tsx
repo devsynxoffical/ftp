@@ -7,29 +7,17 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const pathname = usePathname();
-
-  useEffect(() => {
-    let lastY = 0;
-
-    const handleScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 30);
-      setHidden(y > lastY && y > 400);
-      lastY = y;
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     if (menuOpen) {
       document.body.style.overflow = "hidden";
+      const globalLenis = (window as unknown as { lenis?: { stop: () => void; start: () => void } }).lenis;
+      if (globalLenis) globalLenis.stop();
     } else {
       document.body.style.overflow = "";
+      const globalLenis = (window as unknown as { lenis?: { stop: () => void; start: () => void } }).lenis;
+      if (globalLenis) globalLenis.start();
     }
 
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -48,10 +36,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`nav ${scrolled ? "scrolled" : ""} ${hidden ? "hide" : ""}`}
-        aria-label="Main Navigation"
-      >
+      <nav className="nav" id="nav" aria-label="Main Navigation">
         <Link href="/" className="logo" onClick={closeMenu}>
           <i />
           <span>Funnels That Print</span>
