@@ -79,8 +79,20 @@ export default function Footer() {
       });
     };
 
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches && e.touches[0]) {
+        mx = e.touches[0].clientX;
+        my = e.touches[0].clientY;
+        if (!ticking) {
+          ticking = true;
+          requestAnimationFrame(paint);
+        }
+      }
+    };
+
     footer.addEventListener("pointermove", handlePointerMove);
     footer.addEventListener("pointerleave", handlePointerLeave);
+    footer.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     // Intersection observer for word fade in
     const io = new IntersectionObserver(

@@ -402,10 +402,40 @@ h1,h2,h3,p{margin:0}
   .pr{grid-template-columns:1fr}.pbox.art{min-height:300px}
   .stage{height:clamp(220px,60vw,320px)}.ui.shot{width:48%}
 }
-@media (max-width:560px){.mbrand{grid-template-columns:1fr}.mbrand .yl{width:100%;aspect-ratio:auto;min-height:150px}.mfoot{grid-template-columns:1fr}.nr .btn{display:none}.fcols{grid-template-columns:1fr}.cta .big{font-size:15vw}.tm{width:min(300px,100%)}}
 /* Sticky fallbacks and animated state */
 .proc{position:sticky;top:0;height:100vh;height:100svh}
 .port{position:sticky;top:0;height:100vh;height:100svh}
+
+@media (max-width:980px){
+  #procwrap{height:380vh}
+  .track{padding-top:16px;gap:16px}
+  .card{width:min(84vw,420px);padding:22px}
+  .prog{display:flex;overflow-x:auto;gap:12px;padding-inline:var(--gut);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .prog::-webkit-scrollbar{display:none}
+  .prog div{flex:none;white-space:nowrap;font-size:11px;padding-top:10px}
+  #portwrap{height:520vh}
+  .port{padding-top:84px;--W:min(1180px,92vw);--H:min(480px,58svh)}
+  .dev{will-change:width,transform;border-radius:28px}
+  .stage{height:clamp(260px,68vw,360px)}
+  .ui{animation:uin 1s cubic-bezier(.2,.7,.2,1) forwards,floatMobile 5s ease-in-out infinite alternate}
+  .ui:nth-child(2){animation-delay:var(--d,.9s),1.2s}
+  .ui:nth-child(3){animation-delay:var(--d,1.5s),2.1s}
+  .ui:nth-child(4){animation-delay:var(--d,1.2s),.7s}
+  .ui:nth-child(5){animation-delay:var(--d,1.7s),2.8s}
+  .ui:nth-child(6){animation-delay:var(--d,1.9s),1.6s}
+}
+@keyframes floatMobile{
+  0%,100%{transform:translateY(0) rotate(var(--r,0deg))}
+  50%{transform:translateY(-8px) rotate(calc(var(--r,0deg) + 1.2deg))}
+}
+@media (max-width:560px){
+  .stage{height:320px}
+  .ui.chat{width:68%;font-size:11px;left:2%!important;top:2%!important}
+  .ui.shot{width:44%}
+  .ui.shot:nth-of-type(2){left:auto!important;right:2%!important;top:2%!important}
+  .ui.pill2{font-size:11px;padding:6px 12px;left:2%!important;bottom:8%!important;top:auto!important}
+  .h1{font-size:clamp(34px,9vw,56px)}
+}
 </style>
 </head>
 <body>
@@ -787,6 +817,13 @@ $('#nl').addEventListener('submit',e=>{e.preventDefault();e.target.innerHTML='<s
       my = e.clientY / innerHeight - 0.5;
       req();
     });
+    hero.addEventListener('touchmove', e => {
+      if(e.touches && e.touches[0]){
+        mx = e.touches[0].clientX / innerWidth - 0.5;
+        my = e.touches[0].clientY / innerHeight - 0.5;
+        req();
+      }
+    }, { passive: true });
   }
 
   const prog = el => {

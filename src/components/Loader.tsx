@@ -10,16 +10,6 @@ export default function Loader() {
   const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
-    // Check if reduced motion is requested
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (prefersReducedMotion) {
-      setIsHidden(true);
-      return;
-    }
-
     let current = 0;
     const interval = setInterval(() => {
       current++;

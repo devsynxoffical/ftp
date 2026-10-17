@@ -25,7 +25,6 @@ export default function PortfolioFoldfolio() {
 
     const handleScroll = () => {
       if (
-        prefersReducedMotion ||
         !wrapRef.current ||
         !devRef.current ||
         !coverRef.current ||
@@ -33,8 +32,6 @@ export default function PortfolioFoldfolio() {
         !pagesRef.current
       )
         return;
-
-      if (window.innerWidth <= 980) return; // On mobile, display simplified responsive device
 
       const ptw = wrapRef.current;
       const dev = devRef.current;
@@ -105,28 +102,26 @@ export default function PortfolioFoldfolio() {
     setActiveTab(tabIndex);
     if (!wrapRef.current || !siteRef.current || !pagesRef.current) return;
 
-    if (window.innerWidth > 980) {
-      const ptw = wrapRef.current;
-      const site = siteRef.current;
-      const pages = pagesRef.current;
-      const anchors = site.querySelectorAll("[data-a]");
-      const targetAnchor = anchors[tabIndex] as HTMLElement;
+    const ptw = wrapRef.current;
+    const site = siteRef.current;
+    const pages = pagesRef.current;
+    const anchors = site.querySelectorAll("[data-a]");
+    const targetAnchor = anchors[tabIndex] as HTMLElement;
 
-      if (targetAnchor) {
-        const maxInsideScroll = Math.max(
-          1,
-          site.scrollHeight - pages.clientHeight
-        );
-        const pRatio = 0.17 + 0.83 * Math.min(1, targetAnchor.offsetTop / maxInsideScroll);
-        const top = ptw.getBoundingClientRect().top + window.scrollY;
-        const targetY = top + pRatio * (ptw.offsetHeight - window.innerHeight);
+    if (targetAnchor) {
+      const maxInsideScroll = Math.max(
+        1,
+        site.scrollHeight - pages.clientHeight
+      );
+      const pRatio = 0.17 + 0.83 * Math.min(1, targetAnchor.offsetTop / maxInsideScroll);
+      const top = ptw.getBoundingClientRect().top + window.scrollY;
+      const targetY = top + pRatio * (ptw.offsetHeight - window.innerHeight);
 
-        const globalLenis = (window as unknown as { lenis?: { scrollTo: (y: number, opts: object) => void } }).lenis;
-        if (globalLenis) {
-          globalLenis.scrollTo(targetY, { duration: 1.2 });
-        } else {
-          window.scrollTo({ top: targetY, behavior: "smooth" });
-        }
+      const globalLenis = (window as unknown as { lenis?: { scrollTo: (y: number, opts: object) => void } }).lenis;
+      if (globalLenis) {
+        globalLenis.scrollTo(targetY, { duration: 1.2 });
+      } else {
+        window.scrollTo({ top: targetY, behavior: "smooth" });
       }
     }
   };

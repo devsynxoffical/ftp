@@ -35,22 +35,31 @@ export default function Hero() {
     return () => clearTimeout(timer);
   }, [text, isDeleting, wordIndex]);
 
-  // Subtle interactive mouse parallax for desktop
+  // Interactive parallax for desktop mouse and mobile touch
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    if (window.innerWidth < 980) return;
     const { clientX, clientY } = e;
     const x = clientX / window.innerWidth - 0.5;
     const y = clientY / window.innerHeight - 0.5;
     setMousePos({ x, y });
   };
 
+  const handleTouchMove = (e: React.TouchEvent<HTMLElement>) => {
+    if (e.touches && e.touches[0]) {
+      const { clientX, clientY } = e.touches[0];
+      const x = clientX / window.innerWidth - 0.5;
+      const y = clientY / window.innerHeight - 0.5;
+      setMousePos({ x, y });
+    }
+  };
+
   const getParallaxStyle = (multiplier: number, rotateDeg: number) => {
     const translateX = mousePos.x * multiplier;
     const translateY = mousePos.y * multiplier * 0.7;
     return {
+      "--r": `${rotateDeg}deg`,
       transform: `translate3d(${translateX}px, ${translateY}px, 0) rotate(${rotateDeg}deg)`,
       transition: "transform 0.25s cubic-bezier(0.2, 0.7, 0.2, 1)",
-    };
+    } as React.CSSProperties;
   };
 
   return (
@@ -59,6 +68,7 @@ export default function Hero() {
       id="top"
       ref={heroRef}
       onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
     >
       <span className="blob a" />
       <span className="blob b" />

@@ -15,8 +15,7 @@ export default function ProcessSection() {
     ).matches;
 
     const handleScroll = () => {
-      if (prefersReducedMotion || !wrapRef.current || !trackRef.current) return;
-      if (window.innerWidth <= 980) return; // On mobile, let native touch scroll work smoothly
+      if (!wrapRef.current || !trackRef.current) return;
 
       const pw = wrapRef.current;
       const track = trackRef.current;
@@ -26,10 +25,11 @@ export default function ProcessSection() {
 
       if (rect.top < vh && rect.bottom > 0) {
         const totalScrollable = pw.offsetHeight - vh;
+        if (totalScrollable <= 0) return;
         const progress = Math.max(0, Math.min(1, -rect.top / totalScrollable));
 
-        const paddingLeft = parseFloat(getComputedStyle(track).paddingLeft) || 30;
-        const maxScroll = track.scrollWidth - vw + paddingLeft;
+        const paddingLeft = parseFloat(getComputedStyle(track).paddingLeft) || 20;
+        const maxScroll = Math.max(0, track.scrollWidth - vw + paddingLeft);
 
         track.style.transform = `translate3d(${-progress * maxScroll}px, 0, 0)`;
 
