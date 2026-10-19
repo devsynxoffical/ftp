@@ -67,11 +67,11 @@ export interface ServiceItem {
 export const SERVICES: ServiceItem[] = [
   {
     id: 0,
-    title: "High-Ticket Funnels",
+    title: "AC Funnels",
     desc: "Move prospects from initial interest to application and booked call.",
     category: "build",
     badge: "01",
-    previewTitle: "Application & Qualification",
+    previewTitle: "AC Funnels & Qualification",
     colorIndex: 0,
   },
   {
@@ -397,7 +397,7 @@ export interface FAQItem {
 export const FAQS: FAQItem[] = [
   {
     q: "What does Funnels That Print build?",
-    a: "We build conversion-focused funnels and the supporting systems around them, including landing pages, high-ticket funnels, VSLs, low-ticket funnels, bridge funnels, application flows, automations, CRM workflows and AI calling.",
+    a: "We build conversion-focused funnels and the supporting systems around them, including AC funnels, landing pages, high-ticket funnels, VSLs, low-ticket funnels, bridge funnels, application flows, automations, CRM workflows and AI calling.",
     category: "build",
     tags: ["Funnels", "Pages", "Automation"],
   },

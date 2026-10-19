@@ -3,6 +3,7 @@ import LogoTicker from "@/components/LogoTicker";
 import LiveAutomation from "@/components/LiveAutomation";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
+import WhoSection from "@/components/WhoSection";
 import PortfolioFoldfolio from "@/components/PortfolioFoldfolio";
 import FeaturedCases from "@/components/FeaturedCases";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -21,6 +22,7 @@ export default function Home() {
       <ServicesSection />
       <AdvantageFlow />
       <ProcessSection />
+      <WhoSection />
       <PortfolioFoldfolio />
       <FeaturedCases />
       <VideoTestimonials />
