@@ -19,13 +19,13 @@ export default function Home() {
       <LogoTicker />
       <LiveAutomation />
       <ServicesSection />
+      <AdvantageFlow />
       <ProcessSection />
       <PortfolioFoldfolio />
       <FeaturedCases />
       <VideoTestimonials />
       <TeamSection />
       <PricingSection />
-      <AdvantageFlow />
       <FAQSection />
       <RoboSection />
     </>
