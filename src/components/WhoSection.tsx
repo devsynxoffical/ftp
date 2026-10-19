@@ -28,14 +28,14 @@ export default function WhoSection() {
           {WHO_ITEMS.map((item, index) => (
             <a
               key={item.num}
-              href="#cta"
+              href="#robo"
               data-i={index}
               className={selectedIndex === index ? "on" : ""}
               onClick={(e) => {
                 e.preventDefault();
                 setSelectedIndex(index);
-                const cta = document.getElementById("cta");
-                if (cta) cta.scrollIntoView({ behavior: "smooth" });
+                const robo = document.getElementById("robo");
+                if (robo) robo.scrollIntoView({ behavior: "smooth" });
               }}
               onMouseEnter={() => setSelectedIndex(index)}
               onFocus={() => setSelectedIndex(index)}
@@ -47,20 +47,23 @@ export default function WhoSection() {
           ))}
         </div>
 
-        {/* Dynamic Audience Detail Card */}
-        <aside className="wcard" aria-live="polite">
+        <aside className="wcard">
           <img
             className="wimg"
             src="/img/gen/who.webp"
             alt=""
             loading="lazy"
           />
-          <div className="wt">
+          <div className="top">
             <span className="mono" id="wn">
               {currentItem.num}
             </span>
-            <p id="wp">{currentItem.desc}</p>
+            <span className="mono">Fit</span>
           </div>
+          <p id="wp">{currentItem.desc}</p>
+          <a className="btn g" href="#robo" style={{ alignSelf: "flex-start" }}>
+            Map my funnel <i>&#8599;</i>
+          </a>
         </aside>
       </div>
     </section>

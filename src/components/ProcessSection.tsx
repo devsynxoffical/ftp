@@ -1,53 +1,41 @@
 "use client";
 
+import { useEffect } from "react";
+import { PROCESS_STEPS } from "@/data/siteContent";
+
 const CBG = ["#d6ccff", "#c8f54a", "#ffbfe0", "#bfe3ff", "#ffd3c2", "#efece4"];
 
-const STEPS = [
-  {
-    num: "01",
-    title: "Discover",
-    desc: "We understand your offer, ideal customer, traffic source, sales process and conversion goal.",
-    img: "/img/svc/s1.webp",
-  },
-  {
-    num: "02",
-    title: "Strategize",
-    desc: "We determine what your prospect needs to see, understand and believe before taking the next step.",
-    img: "/img/svc/s8.webp",
-  },
-  {
-    num: "03",
-    title: "Build",
-    desc: "Our team develops the pages, funnel flow, copy, forms and conversion elements.",
-    img: "/img/svc/s2.webp",
-  },
-  {
-    num: "04",
-    title: "Connect",
-    desc: "We integrate your CRM, calendar, email, SMS, workflows, tracking and AI calling where required.",
-    img: "/img/svc/s7.webp",
-  },
-  {
-    num: "05",
-    title: "Test",
-    desc: "We test the complete journey so pages, forms, integrations, notifications and automations work as intended.",
-    img: "/img/svc/s9.webp",
-  },
-  {
-    num: "06",
-    title: "Launch",
-    desc: "Your funnel goes live and is ready to receive traffic.",
-    img: "/img/svc/s5.webp",
-  },
-];
-
 export default function ProcessSection() {
+  // IntersectionObserver to auto play/pause card videos smoothly matching ftp 4
+  useEffect(() => {
+    const pvids = document.querySelectorAll<HTMLVideoElement>(".card video");
+    if (!pvids.length) return;
+
+    const po = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          const v = e.target as HTMLVideoElement;
+          if (e.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { rootMargin: "120px" }
+    );
+
+    pvids.forEach((v) => po.observe(v));
+
+    return () => po.disconnect();
+  }, []);
+
   const scrollToStep = (index: number) => {
     const pw = document.getElementById("procwrap");
     if (pw && window.innerWidth > 980) {
       const top = pw.getBoundingClientRect().top + window.scrollY;
       const totalScrollable = pw.offsetHeight - window.innerHeight;
-      const targetY = top + (index / (STEPS.length - 1)) * totalScrollable;
+      const targetY = top + (index / (PROCESS_STEPS.length - 1)) * totalScrollable;
 
       const globalLenis = (window as unknown as { lenis?: { scrollTo: (y: number, opts: object) => void } }).lenis;
       if (globalLenis) {
@@ -75,7 +63,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="track" id="track">
-          {STEPS.map((step, i) => (
+          {PROCESS_STEPS.map((step, i) => (
             <article
               key={step.num}
               className={`card ${i === 0 ? "on" : ""}`}
@@ -83,12 +71,18 @@ export default function ProcessSection() {
               onClick={() => scrollToStep(i)}
             >
               <div className="ph">
-                <img
+                <video
                   className="bg"
-                  src={step.img}
-                  alt=""
-                  loading="lazy"
-                />
+                  poster={`/img/proc/p${i + 1}.webp`}
+                  muted
+                  loop
+                  playsInline
+                  preload="none"
+                  aria-hidden="true"
+                >
+                  <source src={`/img/proc/p${i + 1}.webm`} type="video/webm" />
+                  <source src={`/img/proc/p${i + 1}.mp4`} type="video/mp4" />
+                </video>
                 <span className="num">{step.num}</span>
               </div>
               <div className="ct">
@@ -104,7 +98,7 @@ export default function ProcessSection() {
         </div>
 
         <div className="prog" id="prog">
-          {STEPS.map((step, i) => (
+          {PROCESS_STEPS.map((step, i) => (
             <div
               key={step.num}
               className={i === 0 ? "on" : ""}

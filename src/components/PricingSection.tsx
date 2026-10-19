@@ -1,171 +1,199 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
-
-interface PlanFeature {
-  title: string;
-  desc: string;
-}
-
-interface Plan {
-  name: string;
-  price: string;
-  dotX: string;
-  dotY: string;
-  features: PlanFeature[];
-}
-
-const PLANS: Plan[] = [
-  {
-    name: "Core Plan",
-    price: "$4,900",
-    dotX: "84%",
-    dotY: "78%",
-    features: [
-      {
-        title: "First funnel in 7 days",
-        desc: "Strategy, copy, design and build of one funnel, live inside a week.",
-      },
-      {
-        title: "Single project queue",
-        desc: "One funnel at a time with focused attention on your offer.",
-      },
-      {
-        title: "Three design iterations",
-        desc: "Three rounds of refinements on pages and flow.",
-      },
-      {
-        title: "Dedicated funnel builder",
-        desc: "One senior builder assigned to your account.",
-      },
-      {
-        title: "Standard automations",
-        desc: "Email, SMS and calendar workflows connected to your CRM.",
-      },
-    ],
-  },
-  {
-    name: "Pro Plan",
-    price: "$9,800",
-    dotX: "62%",
-    dotY: "34%",
-    features: [
-      {
-        title: "First funnel in 5 days",
-        desc: "Immediate kickoff with accelerated delivery.",
-      },
-      {
-        title: "Priority project queue",
-        desc: "Your work moves first, parallel pages when needed.",
-      },
-      {
-        title: "Unlimited iterations",
-        desc: "Refinements until the funnel converts the way it should.",
-      },
-      {
-        title: "Full conversion team",
-        desc: "Strategist, copywriter, designer and automation builder.",
-      },
-      {
-        title: "AI calling agent included",
-        desc: "Leads qualified, answered and booked by the agent, 24/7.",
-      },
-    ],
-  },
-];
+import { useState, useRef, useEffect } from "react";
+import { PLANS_DATA } from "@/data/siteContent";
 
 export default function PricingSection() {
-  const [planIdx, setPlanIdx] = useState(0);
-  const activePlan = PLANS[planIdx];
+  const [planIdx, setPlanIdx] = useState(1);
+  const [isSwitching, setIsSwitching] = useState(false);
+  const pindRef = useRef<HTMLSpanElement>(null);
+  const activeBtnRef = useRef<HTMLButtonElement>(null);
+
+  const activePlan = PLANS_DATA[planIdx];
+
+  const updatePind = (btn: HTMLElement | null) => {
+    if (!btn || !pindRef.current) return;
+    pindRef.current.style.left = `${btn.offsetLeft}px`;
+    pindRef.current.style.width = `${btn.offsetWidth}px`;
+  };
+
+  useEffect(() => {
+    updatePind(activeBtnRef.current);
+    const handleResize = () => updatePind(activeBtnRef.current);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [planIdx]);
+
+  const selectPlan = (index: number) => {
+    if (index === planIdx) return;
+    setIsSwitching(true);
+    setTimeout(() => {
+      setPlanIdx(index);
+      setIsSwitching(false);
+    }, 180);
+  };
 
   return (
     <section className="sec box" id="pricing">
-      <div className="pr2">
-        <div className="pimg">
-          <div className="bx">
-            <img
-              src="/img/x/core.webp"
-              alt="Core plan"
-              className={planIdx === 0 ? "on" : ""}
-            />
-            <img
-              src="/img/x/pro.webp"
-              alt="Pro plan"
-              loading="lazy"
-              className={planIdx === 1 ? "on" : ""}
-            />
+      <div className="head">
+        <div>
+          <div className="eyebrow mono">Packages</div>
+          <h2 className="h2 d">
+            Pick how much we <span className="it">build.</span>
+          </h2>
+        </div>
+        <p className="lead">
+          Three ways to work with us, from design only to the complete
+          done-for-you AC Funnel suite.
+        </p>
+      </div>
+
+      <div className="pr3">
+        {/* Interactive Visual Graphic */}
+        <div className="pvis" id="pvis" data-p={planIdx}>
+          <div className="pv0 ps">
+            <div className="pg">
+              <i className="h" />
+              <i className="sw">
+                <s />
+                <s />
+                <s />
+                <s />
+              </i>
+              <i className="hero">
+                <s />
+              </i>
+              <i className="row">
+                <s />
+                <s />
+                <s />
+              </i>
+              <i className="btn" />
+            </div>
+            <svg className="cur" viewBox="0 0 24 24">
+              <path
+                d="M4 2l16 9-7 2-4 7z"
+                fill="#141414"
+                stroke="#fff"
+                strokeWidth="1.5"
+              />
+            </svg>
+            <span className="chip a">Brand visuals</span>
+            <span className="chip b">Mobile layout</span>
           </div>
-          <div>
-            <span className="pk">Funnels That Print</span>
-            <b id="pname">{activePlan.name}</b>
+
+          <div className="pv1 ps">
+            <div className="pg">
+              <i className="vsl">
+                <s />
+              </i>
+              <i className="t" style={{ "--w": "86%", "--d": ".2s" } as React.CSSProperties} />
+              <i className="t" style={{ "--w": "72%", "--d": ".5s" } as React.CSSProperties} />
+              <i className="t" style={{ "--w": "80%", "--d": ".8s" } as React.CSSProperties} />
+              <i className="t s" style={{ "--w": "60%", "--d": "1.1s" } as React.CSSProperties} />
+            </div>
+            <div className="ck">
+              <b>Checkout</b>
+              <span className="r">
+                <em>Order bump</em>
+                <s />
+              </span>
+              <span className="r">
+                <em>OTO</em>
+                <s />
+              </span>
+              <i />
+            </div>
+            <span className="chip a">Long-form copy</span>
           </div>
-          <small>
-            <i>*</i> Pause or cancel whenever you wish.
-          </small>
+
+          <div className="pv2 ps">
+            <div className="fl">
+              <span className="nd" style={{ "--x": "12%", "--y": "22%" } as React.CSSProperties}>
+                Page
+              </span>
+              <span className="nd" style={{ "--x": "52%", "--y": "12%" } as React.CSSProperties}>
+                Checkout
+              </span>
+              <span className="nd" style={{ "--x": "84%", "--y": "40%" } as React.CSSProperties}>
+                Members
+              </span>
+              <span className="nd" style={{ "--x": "58%", "--y": "66%" } as React.CSSProperties}>
+                Email
+              </span>
+              <span className="nd" style={{ "--x": "18%", "--y": "72%" } as React.CSSProperties}>
+                Booking
+              </span>
+              <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M12 22 L52 12 L84 40 L58 66 L18 72 Z" />
+              </svg>
+              <i className="dot" />
+            </div>
+            <div className="sup">
+              <b>30</b>
+              <span>days post-launch support</span>
+            </div>
+          </div>
+
+          <div className="pcap">
+            <span className="pk" id="ptag">
+              {activePlan.tag}
+            </span>
+            <b id="pname">{activePlan.title}</b>
+          </div>
         </div>
 
-        <div className="pmid">
-          <div className="ptog2" role="group" aria-label="Plan">
-            <button
-              type="button"
-              aria-pressed={planIdx === 0}
-              onClick={() => setPlanIdx(0)}
-            >
-              Core Plan <i>&#9671;</i>
-            </button>
-            <button
-              type="button"
-              aria-pressed={planIdx === 1}
-              onClick={() => setPlanIdx(1)}
-            >
-              Pro Plan <i>&#9889;</i>
-            </button>
+        {/* Center Panel */}
+        <div className={`pmid ${isSwitching ? "sw" : ""}`}>
+          <div className="ptog3" role="tablist" aria-label="Package">
+            {PLANS_DATA.map((plan, i) => {
+              const isSelected = planIdx === i;
+              return (
+                <button
+                  key={plan.title}
+                  ref={isSelected ? activeBtnRef : null}
+                  type="button"
+                  role="tab"
+                  data-p={i}
+                  aria-selected={isSelected}
+                  onClick={() => selectPlan(i)}
+                >
+                  {i === 0 ? "Starter" : i === 1 ? "Most popular" : "Complete"}
+                </button>
+              );
+            })}
+            <span className="pind" id="pind" ref={pindRef} />
           </div>
 
-          <h2 className="pt2">
-            Simple pricing, powerful features, no hidden fees
-            <span
-              className="pdot"
-              id="pdot"
-              style={
-                {
-                  "--dx": activePlan.dotX,
-                  "--dy": activePlan.dotY,
-                } as React.CSSProperties
-              }
-            />
-          </h2>
-
-          <div className="pprice">
-            <b id="pp">{activePlan.price}</b>
-            <span>/month</span>
-          </div>
-
-          <p className="pnote">
-            <i>*</i> Minimal booking period, 2 months.
+          <h3 className="pt3" id="ptitle">
+            {activePlan.title}
+          </h3>
+          <p className="pdesc" id="pdesc">
+            {activePlan.desc}
           </p>
+
+          <a
+            className="btn pcta"
+            id="pcta"
+            href={activePlan.ctaUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span id="pctat">{activePlan.ctaText}</span> <i>&#8599;</i>
+          </a>
 
           <p className="pcall">
-            Schedule a brief call if you need further clarification.
+            Not sure which fits? Book a short call and we will tell you.
           </p>
-
-          <div className="pacts">
-            <a href="#cta">select plan</a>
-            <a href="#cta">quick call</a>
-          </div>
         </div>
 
+        {/* Features List */}
         <ul className="pfeat" id="pf">
           {activePlan.features.map((feat, k) => (
-            <li
-              key={feat.title}
-              style={{ "--i": k } as React.CSSProperties}
-            >
+            <li key={feat} style={{ "--i": k } as React.CSSProperties}>
               <i>&#10003;</i>
               <div>
-                <b>{feat.title}</b>
-                <p>{feat.desc}</p>
+                <b>{feat}</b>
               </div>
             </li>
           ))}

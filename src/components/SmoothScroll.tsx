@@ -16,9 +16,9 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       return;
     }
 
-    // Initialize Lenis buttery smooth scroll
+    // Initialize buttery smooth Lenis matching ftp 4
     const lenis = new Lenis({
-      lerp: 0.085,
+      lerp: 0.11,
       wheelMultiplier: 1,
       touchMultiplier: 1.5,
     });
@@ -32,9 +32,9 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     }
     rafId = requestAnimationFrame(raf);
 
-    // Staggered scroll-reveal intersection observer (.sr -> .sr.in) matching ftp 3
+    // Staggered scroll-reveal intersection observer matching ftp 4
     const sel =
-      ".eyebrow, .h2, .sec .lead, .grp, .prev, .sect, .wcard, .case, .q, .vc, .tm, .pimg, .pmid, .pfeat, .cta .big, .cta .lead, .cta .btn, .fg > *, .freach > *";
+      ".eyebrow,.h2,.sec .lead,.grp,.prev,.sect,.wcard,.q,.bt,.tm,.pvis,.pmid,.pfeat,.ftabs,.fask,.fg>*,.freach>*";
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -62,13 +62,11 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       io.observe(el);
     });
 
-    // Unified 60fps GPU Frame Runner
+    // High performance batched measurement & GPU frame runner
     const cl = (v: number, a = 0, b = 1) => Math.max(a, Math.min(b, v));
     const nav = document.getElementById("nav");
     const hero = document.querySelector<HTMLElement>(".hero");
-    const uis = Array.from(
-      document.querySelectorAll<HTMLElement>("#stage .ui")
-    );
+    const uis = Array.from(document.querySelectorAll<HTMLElement>("#stage .ui"));
     const pw = document.getElementById("procwrap");
     const track = document.getElementById("track");
     const cards = Array.from(
@@ -80,8 +78,13 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     const ptw = document.getElementById("portwrap");
     const dev = document.getElementById("dev");
     const cover = document.getElementById("cover");
-    const site = document.getElementById("site");
-    const pages = document.getElementById("pages");
+    const pl = document.getElementById("pl");
+    const sites = [
+      document.getElementById("site"),
+      document.getElementById("site2"),
+    ].filter(Boolean) as HTMLElement[];
+    const scr = document.querySelector<HTMLElement>("#pl .scr");
+    const fsh = document.getElementById("fsh");
     const gl = document.getElementById("gl");
     const gr = document.getElementById("gr");
     const pipe = document.getElementById("pipe");
@@ -90,11 +93,12 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       document.querySelectorAll<HTMLElement>("#pipe .node")
     );
     const adv = document.getElementById("adv");
-    const words = Array.from(
-      document.querySelectorAll<HTMLElement>("#adv .w")
+    const words = Array.from(document.querySelectorAll<HTMLElement>("#adv .w"));
+    const caseEls = Array.from(
+      document.querySelectorAll<HTMLElement & { _s?: string }>("#caselist .case")
     );
 
-    let lastY = 0;
+    let last = 0;
     let tick = false;
     let pi = -1;
     let mx = 0;
@@ -110,11 +114,62 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       hero.addEventListener("mousemove", onHeroMouseMove, { passive: true });
     }
 
-    const prog = (el: HTMLElement) => {
-      const r = el.getBoundingClientRect();
-      const diff = el.offsetHeight - window.innerHeight;
-      return diff <= 0 ? 0 : cl(-r.top / diff);
+    const caseTop = () =>
+      caseEls[0]
+        ? parseFloat(window.getComputedStyle(caseEls[0]).top || "170") || 170
+        : 170;
+
+    // Measurement cache M to avoid layout thrashing in scroll loop
+    const M: {
+      cst: number;
+      cH: number;
+      heroH: number;
+      pwH: number;
+      ptwH: number;
+      trackMax: number;
+      P: number;
+      siteMax: number;
+    } = {
+      cst: 170,
+      cH: 0,
+      heroH: 0,
+      pwH: 0,
+      ptwH: 0,
+      trackMax: 0,
+      P: 0,
+      siteMax: 0,
     };
+
+    function measure() {
+      M.cst = caseTop();
+      M.cH = caseEls[0] ? caseEls[0].offsetHeight : 0;
+      M.heroH = hero ? hero.offsetHeight : 0;
+      M.pwH = pw ? pw.offsetHeight : 0;
+      M.ptwH = ptw ? ptw.offsetHeight : 0;
+      M.trackMax = track
+        ? track.scrollWidth -
+          window.innerWidth +
+          (parseFloat(window.getComputedStyle(track).paddingLeft) || 0)
+        : 0;
+      M.P = cover ? cover.offsetWidth : 0;
+      M.siteMax =
+        sites[0] && scr ? Math.max(0, sites[0].scrollHeight - scr.clientHeight) : 0;
+    }
+
+    measure();
+    window.addEventListener("load", measure);
+
+    const fimg = document.getElementById("fimg");
+    if (fimg) {
+      fimg.addEventListener("load", () => {
+        measure();
+        req();
+      });
+    }
+
+    let lastE = -1;
+    let lastYY = -1;
+    let lastN = -1;
 
     function frame() {
       tick = false;
@@ -122,84 +177,133 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       const vh = window.innerHeight;
       const vw = window.innerWidth;
 
+      const rp = pw ? pw.getBoundingClientRect() : null;
+      const rt = ptw ? ptw.getBoundingClientRect() : null;
+      const rpi = pipe ? pipe.getBoundingClientRect() : null;
+      const ra = adv ? adv.getBoundingClientRect() : null;
+
+      let nodeTops: number[] | null = null;
+      const cr =
+        vw > 980 && caseEls.length
+          ? caseEls.map((c) => c.getBoundingClientRect().top)
+          : null;
+      const cst = M.cst;
+      const cH = M.cH;
+
+      if (rpi && rpi.top < vh && rpi.bottom > 0 && nodes.length) {
+        nodeTops = nodes.map((n) => {
+          const nr = n.getBoundingClientRect();
+          return nr.top + nr.height * 0.5;
+        });
+      }
+
       // 1. Auto-hide navbar
       if (nav) {
-        nav.classList.toggle("hide", y > lastY && y > 400);
+        nav.classList.toggle("hide", y > last && y > 400);
       }
-      lastY = y;
+      last = y;
 
-      // 2. Hero parallax using independent CSS translate
-      if (hero && y < hero.offsetHeight) {
+      // 2. Hero parallax
+      if (hero && y < M.heroH && vw > 560) {
         uis.forEach((u) => {
           const m = parseFloat(u.dataset.m || "0");
           u.style.translate = `${mx * m}px ${my * m * 0.6 + y * m * 0.01}px`;
         });
       }
 
-      // 3. Process horizontal track
-      if (pw && track) {
-        const r = pw.getBoundingClientRect();
-        if (r.top < vh && r.bottom > 0) {
-          const p = prog(pw);
-          const paddingLeft =
-            parseFloat(window.getComputedStyle(track).paddingLeft || "0") || 20;
-          const max = track.scrollWidth - vw + paddingLeft;
-          track.style.transform = `translate3d(${-p * max}px, 0, 0)`;
-          const i = Math.min(5, Math.floor(p * 6));
-          if (i !== pi) {
-            pi = i;
-            cards.forEach((c, k) => c.classList.toggle("on", k === i));
-            progs.forEach((c, k) => c.classList.toggle("on", k <= i));
+      // 3. Process track horizontal scroll
+      if (rp && rp.top < vh && rp.bottom > 0 && track) {
+        const p = cl(-rp.top / (M.pwH - vh));
+        track.style.transform = `translate3d(${(-p * M.trackMax).toFixed(1)}px,0,0)`;
+        const i = Math.min(5, Math.floor(p * 6));
+        if (i !== pi) {
+          pi = i;
+          cards.forEach((c, k) => c.classList.toggle("on", k === i));
+          progs.forEach((c, k) => c.classList.toggle("on", k <= i));
+        }
+      }
+
+      // 4. Portfolio 3D dual-pane fold & site scroll
+      if (rt && rt.top < vh && rt.bottom > 0 && dev && cover && pl) {
+        const p = cl(-rt.top / (M.ptwH - vh));
+        const open = cl((p - 0.03) / 0.12);
+        const e = open * open * (3 - 2 * open);
+        const P = M.P;
+        const mob = vw <= 980;
+
+        if (e !== lastE) {
+          lastE = e;
+          if (!mob) {
+            dev.style.transform = `translate3d(${(-P / 2 * (1 - e)).toFixed(1)}px,0,0)`;
+          }
+          cover.style.transform = `rotateY(${(-180 * e).toFixed(2)}deg)`;
+          cover.style.visibility = e >= 0.5 ? "hidden" : "visible";
+          cover.style.setProperty("--sh", Math.min(1, e * 1.8).toFixed(2));
+          pl.style.transform = `rotateY(${(180 - 180 * e).toFixed(2)}deg)`;
+          pl.style.visibility = e <= 0.5 ? "hidden" : "visible";
+          if (!mob && fsh) {
+            fsh.style.transform = `translateX(-50%) scaleX(${(0.5 + 0.5 * e).toFixed(3)})`;
+          }
+          dev.classList.toggle("open", e > 0.92);
+          const spread = e * vw * 0.42;
+          if (gl && gr) {
+            gl.style.transform = `translate3d(${-spread}px,0,0)`;
+            gr.style.transform = `translate3d(${spread}px,0,0)`;
+            gl.style.opacity = `${1 - e * 0.85}`;
+            gr.style.opacity = `${1 - e * 0.85}`;
           }
         }
-      }
 
-      // 4. Portfolio 3D device unfold & site scroll
-      if (ptw && dev && cover && site && pages && gl && gr) {
-        const r = ptw.getBoundingClientRect();
-        if (r.top < vh && r.bottom > 0) {
-          const p = prog(ptw);
-          const open = cl((p - 0.03) / 0.12);
-          const e = open * open * (3 - 2 * open);
-          dev.style.width = `calc(var(--W) * ${(0.5 + 0.5 * e).toFixed(4)})`;
-          dev.style.borderRadius = `${36 - e * 8}px`;
-          cover.style.transform = `rotateY(${-180 * e}deg)`;
-          cover.style.visibility = e > 0.5 ? "hidden" : "visible";
-          dev.classList.toggle("open", e > 0.92);
-
-          const spread = e * vw * 0.42;
-          gl.style.transform = `translate3d(${-spread}px, 0, 0)`;
-          gr.style.transform = `translate3d(${spread}px, 0, 0)`;
-          gl.style.opacity = `${1 - e * 0.85}`;
-          gr.style.opacity = `${1 - e * 0.85}`;
-
-          const sc = cl((p - 0.17) / 0.83);
-          const max = Math.max(0, site.scrollHeight - pages.clientHeight);
-          const yy = sc * max;
-          site.style.transform = `translate3d(0, ${-yy}px, 0)`;
-        }
-      }
-
-      // 5. Liquid pipeline fill & nodes
-      if (pipe && fill) {
-        const r = pipe.getBoundingClientRect();
-        if (r.top < vh && r.bottom > 0) {
-          const p = cl((vh * 0.72 - r.top) / r.height);
-          fill.style.height = `${p * 100}%`;
-          nodes.forEach((n) => {
-            const nr = n.getBoundingClientRect();
-            n.classList.toggle("on", nr.top + nr.height * 0.5 < vh * 0.72);
+        const sc = cl((p - 0.17) / 0.83);
+        const yy = Math.round(sc * M.siteMax);
+        if (yy !== lastYY) {
+          lastYY = yy;
+          sites.forEach((x) => {
+            x.style.transform = `translate3d(0,${-yy}px,0)`;
           });
         }
       }
 
-      // 6. Word-by-word reveal
-      if (adv && words.length > 0) {
-        const r = adv.getBoundingClientRect();
-        if (r.top < vh && r.bottom > 0) {
-          const n = Math.round(
-            cl((vh * 0.8 - r.top) / (vh * 0.45)) * words.length
-          );
+      // 5. Case studies stacking scale & dim
+      if (cr && caseEls.length) {
+        const st = cst;
+        const H = cH;
+        caseEls.forEach((c, i) => {
+          let k = 0;
+          if (i < caseEls.length - 1) {
+            k = cl((st + H - cr[i + 1]) / H);
+          } else {
+            k = 0;
+          }
+          const sc = 1 - 0.12 * k;
+          const v = sc.toFixed(4);
+          if (c._s !== v) {
+            c._s = v;
+            const cin = c.firstElementChild as HTMLElement;
+            if (cin) {
+              cin.style.transform = `scale(${v})`;
+              cin.style.setProperty("--dim", (k * 0.35).toFixed(3));
+            }
+          }
+        });
+      }
+
+      // 6. Liquid pipeline fill & nodes
+      if (nodeTops && fill && rpi) {
+        const p = cl((vh * 0.72 - rpi.top) / rpi.height);
+        fill.style.height = `${(p * 100).toFixed(1)}%`;
+        nodes.forEach((n, i) =>
+          n.classList.toggle("on", nodeTops![i] < vh * 0.72)
+        );
+      }
+
+      // 7. Word-by-word text illumination
+      if (ra && ra.top < vh && ra.bottom > 0 && words.length) {
+        const n = Math.round(
+          cl((vh * 0.8 - ra.top) / (vh * 0.45)) * words.length
+        );
+        if (n !== lastN) {
+          lastN = n;
           words.forEach((w, i) => w.classList.toggle("on", i < n));
         }
       }
@@ -214,7 +318,13 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     lenis.on("scroll", req);
     window.addEventListener("scroll", req, { passive: true });
-    window.addEventListener("resize", req);
+    window.addEventListener("resize", () => {
+      measure();
+      lastE = -1;
+      lastYY = -1;
+      req();
+    });
+
     frame();
 
     // Smoothly intercept hash anchor clicks
@@ -246,7 +356,8 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       document.removeEventListener("click", handleAnchorClick);
       if (hero) hero.removeEventListener("mousemove", onHeroMouseMove);
       window.removeEventListener("scroll", req);
-      window.removeEventListener("resize", req);
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("load", measure);
       cancelAnimationFrame(rafId);
       io.disconnect();
       lenis.destroy();

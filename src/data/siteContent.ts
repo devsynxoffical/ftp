@@ -162,37 +162,31 @@ export const PROCESS_STEPS = [
     num: "01",
     title: "Discover",
     desc: "We understand your offer, ideal customer, traffic source, sales process and conversion goal.",
-    img: "/img/gen/p1.webp",
   },
   {
     num: "02",
     title: "Strategize",
     desc: "We determine what your prospect needs to see, understand and believe before taking the next step.",
-    img: "/img/gen/p2.webp",
   },
   {
     num: "03",
     title: "Build",
     desc: "Our team develops the pages, funnel flow, copy, forms and conversion elements.",
-    img: "/img/gen/p3.webp",
   },
   {
     num: "04",
     title: "Connect",
     desc: "We integrate your CRM, calendar, email, SMS, workflows, tracking and AI calling where required.",
-    img: "/img/gen/p4.webp",
   },
   {
     num: "05",
     title: "Test",
     desc: "We test the complete journey so pages, forms, integrations, notifications and automations work as intended.",
-    img: "/img/gen/p5.webp",
   },
   {
     num: "06",
     title: "Launch",
     desc: "Your funnel goes live and is ready to receive traffic.",
-    img: "/img/gen/p6.webp",
   },
 ];
 
@@ -235,61 +229,15 @@ export const WHO_ITEMS = [
   },
 ];
 
-export const PORTFOLIO_PROJECTS = [
-  {
-    num: "01",
-    type: "High-ticket",
-    title: "Application funnel",
-    desc: "Dark, premium application flow with a 3-step progress bar and a calendar booking widget. Built to filter for fit before the call.",
-    color: "#2d4fe6",
-    img: "/img/fun/f1.webp",
-    href: "#services",
-  },
-  {
-    num: "02",
-    type: "VSL",
-    title: "Video sales letter funnel",
-    desc: "One video, one headline, one button. Prospects are educated before they are asked to book.",
-    color: "#e0a848",
-    img: "/img/fun/f2.webp",
-    href: "#services",
-  },
-  {
-    num: "03",
-    type: "Low-ticket",
-    title: "Checkout funnel",
-    desc: "Offer, order bump, upsell, downsell. Cold traffic becomes buyers on the first visit.",
-    color: "#1d3a2e",
-    img: "/img/fun/f3.webp",
-    href: "#services",
-  },
-  {
-    num: "04",
-    type: "Bridge",
-    title: "Pre-frame page",
-    desc: "Editorial long-form page that warms cold traffic before it reaches the primary offer.",
-    color: "#ff5a1f",
-    img: "/img/fun/f4.webp",
-    href: "#services",
-  },
-  {
-    num: "05",
-    type: "Landing page",
-    title: "Single-offer page",
-    desc: "Bold headline, one hero image, three benefits and exactly one action.",
-    color: "#5b3fd6",
-    img: "/img/fun/f5.webp",
-    href: "#services",
-  },
-  {
-    num: "06",
-    type: "Automation",
-    title: "Follow-up system",
-    desc: "Email, SMS, calendar and the AI calling agent connected in one workflow.",
-    color: "#e04f7e",
-    img: "/img/fun/f6.webp",
-    href: "#services",
-  },
+export const FUNNELS_LIST = [
+  { name: "100X Productivity", desc: "Coaching program, application funnel" },
+  { name: "Growth Foundry", desc: "Local SEO audit, lead funnel" },
+  { name: "Funnel Profit System", desc: "Audit offer, booking funnel" },
+  { name: "Bio-Optimization Made Easy", desc: "Long-form VSL sales letter" },
+  { name: "Pluto CRM", desc: "Insurance CRM, free trial funnel" },
+  { name: "Inventiv", desc: "Invention showcase, lead funnel" },
+  { name: "Rowan Security", desc: "Executive protection, high-ticket application" },
+  { name: "Mortgage AI System", desc: "Webinar funnel, mortgage leads" },
 ];
 
 export const FEATURED_CASES = [
@@ -355,61 +303,77 @@ export const FEATURED_CASES = [
   },
 ];
 
-export const TESTIMONIAL_VIDEOS = [
-  { id: "portrait-1", layoutClass: "p1", label: "Client testimonial" },
-  { id: "landscape-1", layoutClass: "l1", label: "Client testimonial" },
-  { id: "square-1", layoutClass: "sq", label: "Client testimonial" },
-  { id: "landscape-2", layoutClass: "l2", label: "Client testimonial" },
-  { id: "portrait-2", layoutClass: "p2", label: "Client testimonial" },
-  { id: "landscape-3", layoutClass: "l3", label: "Client testimonial" },
-];
+export const VNAME: { [key: string]: string } = {
+  "portrait-1": "Coaching client",
+  "landscape-1": "Marie Grace Berg",
+  "portrait-2": "Agency owner",
+  "square-1": "Edgar & Jeremi",
+  "landscape-2": "Consulting client",
+  "landscape-3": "Launch review call",
+};
 
-export const PRICING_PLANS = [
+export const VDUR: { [key: string]: number } = {
+  "portrait-1": 82,
+  "landscape-1": 217,
+  "portrait-2": 116,
+  "square-1": 178,
+  "landscape-2": 129,
+  "landscape-3": 18,
+};
+
+export interface PlanTier {
+  tag: string;
+  title: string;
+  desc: string;
+  features: string[];
+  ctaText: string;
+  ctaUrl: string;
+}
+
+export const PLANS_DATA: PlanTier[] = [
   {
-    title: "Funnel build",
-    price: "Quoted on scope",
-    desc: "Strategy, copy, design and development of one funnel with its pages, forms and conversion elements. Delivered in 5 to 10 business days.",
+    tag: "STARTER",
+    title: "Design Only",
+    desc: "Perfect if you want the strategy and visual funnel assets, but not the full copy and implementation.",
     features: [
-      {
-        title: "Strategy and offer mapping",
-        desc: "Offer, audience, traffic source and conversion goal defined before anything is built.",
-      },
-      {
-        title: "Pages and funnel flow",
-        desc: "Landing, application, VSL, bridge or checkout pages, written and designed.",
-      },
-      {
-        title: "Forms and qualification",
-        desc: "Application questions and filters your sales team actually needs.",
-      },
-      {
-        title: "Tracking and testing",
-        desc: "Every page, form and notification tested end to end before launch.",
-      },
+      "Market Research & Offer Positioning",
+      "Funnel Strategy & Structure",
+      "Premium Conversion Design",
+      "Custom Graphics + Brand Visuals",
+      "Mobile-Optimized Layouts",
     ],
+    ctaText: "Start with design",
+    ctaUrl: "https://milliondollarfunnels.us/book?tier=design-only",
   },
   {
-    title: "Full conversion system",
-    price: "Quoted on scope",
-    desc: "Everything in the Core build plus the systems that keep leads moving: CRM, calendar, email, SMS, appointment workflows and the AI calling agent.",
+    tag: "MOST POPULAR",
+    title: "Design + Copy Build",
+    desc: "Our most recommended package for a launch-ready AC Funnel with both messaging and design handled for you.",
     features: [
-      {
-        title: "Everything in the Core build",
-        desc: "Strategy, pages, forms, tracking and launch.",
-      },
-      {
-        title: "CRM and calendar integration",
-        desc: "Leads move through your pipeline automatically based on their actions.",
-      },
-      {
-        title: "Email and SMS workflows",
-        desc: "New lead, nurture, reminder, no-show and reactivation sequences.",
-      },
-      {
-        title: "AI calling agent",
-        desc: "Engages new leads, asks qualifying questions and books suitable prospects.",
-      },
+      "Front-End Sales Page + Long-Form Copy",
+      "Checkout Page + Order Bump Copy",
+      "OTO Pages + VSL Copy",
+      "Backend Booking Page + VSL Copy",
+      "Thank You Page + Call Show-Up Script",
+      "Premium Custom Graphics + Brand Visuals",
+      "Mobile-Optimized Conversion Design",
     ],
+    ctaText: "Get your AC Funnel now",
+    ctaUrl: "https://milliondollarfunnels.us/book?tier=design-copy-build",
+  },
+  {
+    tag: "COMPLETE",
+    title: "Full AC Funnel Suite",
+    desc: "The complete done-for-you package with full build, systems, integrations and post-launch support.",
+    features: [
+      "Everything in Design + Copy Build",
+      "Full Tech Setup + Integrations",
+      "Membership Area Setup + Organization",
+      "Follow-Up Email Sequences",
+      "30 Days of Post-Launch Support",
+    ],
+    ctaText: "Apply for full funnel suite",
+    ctaUrl: "https://milliondollarfunnels.us/book?tier=full-funnel-suite",
   },
 ];
 
@@ -423,49 +387,78 @@ export const PIPELINE_NODES = [
   { title: "Booked call", desc: "On your calendar" },
 ];
 
-export const FAQS = [
+export interface FAQItem {
+  q: string;
+  a: string;
+  category: "build" | "auto" | "work";
+  tags: string[];
+}
+
+export const FAQS: FAQItem[] = [
   {
     q: "What does Funnels That Print build?",
     a: "We build conversion-focused funnels and the supporting systems around them, including landing pages, high-ticket funnels, VSLs, low-ticket funnels, bridge funnels, application flows, automations, CRM workflows and AI calling.",
+    category: "build",
+    tags: ["Funnels", "Pages", "Automation"],
   },
   {
     q: "Can you build the funnel from scratch?",
     a: "Yes. We can handle the strategy, structure, copy, design, development, integrations and automation required for the build.",
+    category: "build",
+    tags: ["Strategy", "Copy", "Build"],
   },
   {
     q: "Can you work with my existing funnel?",
     a: "Yes. If you already have a funnel, we can improve, rebuild or connect it to the systems you need.",
+    category: "build",
+    tags: ["Audit", "Rebuild", "Integrations"],
   },
   {
     q: "Do you build low-ticket funnels?",
     a: "Yes. We can build the complete customer journey, including sales pages, checkout, upsells, downsells and follow-up sequences.",
+    category: "build",
+    tags: ["Checkout", "Upsell", "Follow-up"],
   },
   {
     q: "What is a bridge funnel?",
     a: "A bridge funnel prepares a prospect before they reach the main offer. It is particularly useful when you are sending cold traffic toward an offer that requires additional education or trust.",
+    category: "build",
+    tags: ["Cold traffic", "Pre-frame"],
   },
   {
     q: "What does the AI Calling Agent do?",
     a: "It can engage leads automatically, have an initial conversation, ask qualifying questions, handle common questions and help move suitable prospects toward booking an appointment.",
+    category: "auto",
+    tags: ["AI calling", "Qualification"],
   },
   {
     q: "Can you set up my automations?",
     a: "Yes. We can build workflows for lead nurturing, email, SMS, appointment reminders, no-shows, reactivation, CRM movement and other parts of your sales process.",
+    category: "auto",
+    tags: ["Email", "SMS", "CRM"],
   },
   {
     q: "Do you integrate with CRMs?",
     a: "Yes. We can connect the funnel with your CRM, calendar, communication tools, tracking and other required platforms.",
+    category: "auto",
+    tags: ["CRM", "Calendar", "Tracking"],
   },
   {
     q: "Do I need paid advertising?",
     a: "No. Your funnel can work with paid traffic, organic traffic, email, referrals or other acquisition channels.",
+    category: "work",
+    tags: ["Traffic", "Organic", "Paid"],
   },
   {
     q: "How long does a funnel take to build?",
     a: "Most projects take approximately 5 to 10 business days, depending on the scope, number of pages, integrations and automation requirements.",
+    category: "work",
+    tags: ["5 to 10 days", "Scope"],
   },
   {
     q: "Do you guarantee results?",
     a: "A funnel's performance depends on several factors, including the offer, market, traffic, sales process and follow-up. We do not promise an arbitrary number of appointments. Our focus is building the infrastructure to give your traffic the best possible path toward becoming a qualified booked call.",
+    category: "work",
+    tags: ["Performance", "Honesty"],
   },
 ];

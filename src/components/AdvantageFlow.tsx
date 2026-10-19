@@ -1,42 +1,63 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import { PIPELINE_NODES } from "@/data/siteContent";
 
 export default function AdvantageFlow() {
-  const text =
-    "Most businesses lose deals between the traffic and the sales conversation. We build each piece of the journey so prospects arrive educated, qualified and ready to talk.";
-  const words = text.split(" ").filter(Boolean);
+  const advRef = useRef<HTMLParagraphElement>(null);
+
+  // Split into word spans on mount matching ftp 4
+  useEffect(() => {
+    const adv = advRef.current;
+    if (!adv) return;
+
+    adv.innerHTML = [...adv.childNodes]
+      .map((n) =>
+        n.nodeType === 3
+          ? (n.textContent || "")
+              .split(/\s+/)
+              .filter(Boolean)
+              .map((w) => `<span class="w">${w}</span>`)
+              .join(" ")
+          : "<b>" +
+            (n.textContent || "")
+              .split(/\s+/)
+              .filter(Boolean)
+              .map((w) => `<span class="w">${w}</span>`)
+              .join(" ") +
+            "</b>"
+      )
+      .join(" ");
+  }, []);
 
   return (
     <section className="sec box" id="advantage">
       <div className="flow">
         <div className="sticky">
-          <div>
-            <div className="eyebrow mono">Why this works</div>
-            <h2 className="h2 d">
-              The conversion <span className="it">pipeline.</span>
-            </h2>
-          </div>
-
-          {/* Word-by-word Illuminated Text */}
-          <p className="lead" id="adv">
-            {words.map((w, idx) => (
-              <span key={idx} className="w">
-                {w}{" "}
-              </span>
-            ))}
+          <div className="eyebrow mono">The Funnels That Print advantage</div>
+          <h2 className="h2 d">
+            One strategy.
+            <br />
+            Every piece <span className="it">connected.</span>
+          </h2>
+          <p className="d" id="adv" ref={advRef}>
+            A landing page should not operate by itself. Your funnel should not
+            operate separately from your CRM. And your leads should not wait
+            around for someone to follow up.{" "}
+            <b>
+              We connect the moving parts so your acquisition process works as
+              one system.
+            </b>
           </p>
         </div>
 
         {/* Vertical Liquid Fill Pipeline */}
         <div className="pipe" id="pipe">
-          <div className="fill" id="pfill" />
+          <span className="fill" id="pfill" />
           {PIPELINE_NODES.map((node, i) => (
             <div
               key={node.title}
-              className={`node ${
-                i === PIPELINE_NODES.length - 1 ? "end" : ""
-              }`}
+              className={`node ${i === PIPELINE_NODES.length - 1 ? "end" : ""}`}
             >
               <b>{node.title}</b>
               <small>{node.desc}</small>

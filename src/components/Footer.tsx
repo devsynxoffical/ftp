@@ -144,7 +144,7 @@ export default function Footer() {
           <a href="#pricing">
             Pricing <i>&#8599;</i>
           </a>
-          <a href="#cta">
+          <a href="#robo">
             Contact <i>&#8599;</i>
           </a>
         </nav>

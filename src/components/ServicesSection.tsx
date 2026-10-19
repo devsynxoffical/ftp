@@ -10,6 +10,231 @@ export default function ServicesSection() {
   const systemServices = SERVICES.filter((s) => s.category === "system");
   const currentService = SERVICES[selectedId] || SERVICES[0];
 
+  const renderMgContent = (id: number) => {
+    switch (id) {
+      case 0:
+        return (
+          <div className="sc">
+            <div className="fun">
+              <i />
+              <i />
+              <i />
+            </div>
+            <span className="dot" style={{ "--d": "0s", "--x": "-70px" } as React.CSSProperties} />
+            <span className="dot" style={{ "--d": "1.4s", "--x": "60px" } as React.CSSProperties} />
+            <span className="dot" style={{ "--d": "2.8s", "--x": "-20px" } as React.CSSProperties} />
+            <span className="ch o">Call booked, Thu 14:30</span>
+          </div>
+        );
+      case 1:
+        return (
+          <div className="sc">
+            <div className="br">
+              <div className="ln" style={{ "--lw": "82%", "--d": "0s" } as React.CSSProperties} />
+              <div className="ln" style={{ "--lw": "60%", "--d": ".15s" } as React.CSSProperties} />
+              <div className="ln s" style={{ "--lw": "90%", "--d": ".4s" } as React.CSSProperties} />
+              <div className="ln s" style={{ "--lw": "74%", "--d": ".5s" } as React.CSSProperties} />
+              <div className="ln s" style={{ "--lw": "84%", "--d": ".6s" } as React.CSSProperties} />
+              <span className="bt">Book a call</span>
+            </div>
+            <svg className="cur" viewBox="0 0 24 24">
+              <path
+                d="M4 2l16 9-7 2-4 7z"
+                fill="#141414"
+                stroke="#fff"
+                strokeWidth="1.5"
+              />
+            </svg>
+          </div>
+        );
+      case 2:
+        return (
+          <div className="sc">
+            <div className="pl">
+              <div className="pg">
+                <i />
+              </div>
+            </div>
+            <div className="wv">
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
+                <i
+                  key={i}
+                  style={{ "--d": `-${(i * 0.13).toFixed(2)}s` } as React.CSSProperties}
+                />
+              ))}
+            </div>
+          </div>
+        );
+      case 3:
+        return (
+          <div className="sc">
+            <div className="cd">
+              <div className="rw">
+                <b>Front-end offer</b>
+                <span>$47</span>
+              </div>
+              <div className="rw a" style={{ "--d": "1.2s" } as React.CSSProperties}>
+                <b>Order bump</b>
+                <span>+$19</span>
+              </div>
+              <div className="rw a" style={{ "--d": "2.4s" } as React.CSSProperties}>
+                <b>Upsell</b>
+                <span>+$197</span>
+              </div>
+              <div className="tot">
+                Total
+                <span>
+                  <s style={{ "--d": "0s" } as React.CSSProperties}>$47</s>
+                  <s style={{ "--d": "1.2s" } as React.CSSProperties}>$66</s>
+                  <s style={{ "--d": "2.4s" } as React.CSSProperties}>$263</s>
+                  <s style={{ "--d": "3.6s" } as React.CSSProperties}>$263</s>
+                  <s style={{ "--d": "4.8s" } as React.CSSProperties}>$263</s>
+                </span>
+              </div>
+            </div>
+            <span className="ch o">Buyer, follow-up started</span>
+          </div>
+        );
+      case 4:
+        return (
+          <div className="sc">
+            <div className="ln" />
+            <div className="nd hot" style={{ left: "8%", "--d": "0s" } as React.CSSProperties}>
+              AD
+            </div>
+            <div className="nd b hot" style={{ left: "50%", "--d": "1.6s" } as React.CSSProperties}>
+              BRIDGE
+            </div>
+            <div className="nd hot" style={{ left: "92%", "--d": "3.4s" } as React.CSSProperties}>
+              OFFER
+            </div>
+            <span className="lb" style={{ left: "8%" }}>
+              Cold click
+            </span>
+            <span className="lb" style={{ left: "50%" }}>
+              Pre-frame
+            </span>
+            <span className="lb" style={{ left: "92%" }}>
+              Warm arrival
+            </span>
+            <div className="dot" />
+            <span className="ch">Trust built before the pitch</span>
+          </div>
+        );
+      case 5:
+        return (
+          <div className="sc">
+            <div className="cd">
+              <div className="fd" data-l="What do you sell?">
+                <i style={{ "--lw": "58%", "--d": "0s" } as React.CSSProperties} />
+              </div>
+              <div className="fd" data-l="Monthly revenue">
+                <i style={{ "--lw": "36%", "--d": "1s" } as React.CSSProperties} />
+              </div>
+              <div className="fd" data-l="Main traffic source">
+                <i style={{ "--lw": "48%", "--d": "2s" } as React.CSSProperties} />
+              </div>
+              <div className="fd" data-l="Start date">
+                <i style={{ "--lw": "42%", "--d": "3s" } as React.CSSProperties} />
+              </div>
+              <div className="pr">
+                Progress
+                <b>
+                  <i />
+                </b>
+                4 / 4
+              </div>
+            </div>
+            <span className="ch o">Qualified, routed to sales</span>
+          </div>
+        );
+      case 6:
+        return (
+          <div className="sc">
+            <div className="ph">
+              <div className="bb" style={{ "--d": "0s" } as React.CSSProperties}>
+                <b>Day 0, email</b>Welcome. Here is what happens next.
+              </div>
+              <div className="bb o" style={{ "--d": "1.3s" } as React.CSSProperties}>
+                <b>Day 1, SMS</b>Reminder: your call is tomorrow 14:30.
+              </div>
+              <div className="bb" style={{ "--d": "2.6s" } as React.CSSProperties}>
+                <b>Day 4, email</b>Still thinking it over? Reply and we will help.
+              </div>
+              <div className="bb o" style={{ "--d": "3.9s" } as React.CSSProperties}>
+                <b>Day 7, SMS</b>Your spot is open until Friday.
+              </div>
+            </div>
+            <div className="env" />
+          </div>
+        );
+      case 7:
+        return (
+          <div className="sc">
+            <div className="col" data-l="NEW" style={{ left: 0 }}>
+              <i />
+              <i />
+            </div>
+            <div className="col" data-l="QUALIFIED" style={{ left: "35%" }}>
+              <i />
+            </div>
+            <div className="col" data-l="BOOKED" style={{ left: "70%" }}>
+              <i />
+              <i />
+              <i />
+            </div>
+            <div className="mv">Sarah M.</div>
+            <span className="ch o">Stage updated automatically</span>
+          </div>
+        );
+      case 8:
+        return (
+          <div className="sc">
+            <div className="cal">
+              {Array.from({ length: 21 }, (_, i) => (
+                <i key={i} className={i === 16 ? "on" : ""} />
+              ))}
+            </div>
+            <div className="bell">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#fff"
+                strokeWidth="2"
+              >
+                <path d="M6 16V11a6 6 0 1 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0" />
+              </svg>
+            </div>
+            <span className="ch">Reminder sent, 24h before</span>
+          </div>
+        );
+      case 9:
+        return (
+          <div className="sc">
+            <span className="lb">AGENT ON THE LINE</span>
+            <div className="ring">
+              <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff">
+                <path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z" />
+              </svg>
+            </div>
+            <div className="wv">
+              {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+                <i
+                  key={i}
+                  style={{ "--d": `-${(i * 0.09).toFixed(2)}s` } as React.CSSProperties}
+                />
+              ))}
+            </div>
+            <span className="ch o">Qualifying: budget, timeline, fit</span>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
   const renderPvContent = (id: number) => {
     switch (id) {
       case 0:
@@ -33,7 +258,13 @@ export default function ServicesSection() {
               <b>One offer. One action.</b>Headline, proof, CTA
             </div>
             <div className="bars">
-              <s /><s /><s /><s /><s /><s /><s />
+              <s />
+              <s />
+              <s />
+              <s />
+              <s />
+              <s />
+              <s />
             </div>
             <div className="f">
               <b>Conversion</b>Single objective tracked
@@ -260,12 +491,9 @@ export default function ServicesSection() {
                 className={`pv ${selectedId === svc.id ? "on" : ""}`}
                 data-k={svc.id}
               >
-                <img
-                  className="pimg"
-                  src={`/img/svc/s${svc.id + 1}.webp`}
-                  alt=""
-                  loading="lazy"
-                />
+                <div className={`mg m${svc.id}`}>
+                  {renderMgContent(svc.id)}
+                </div>
                 {renderPvContent(svc.id)}
               </div>
             ))}

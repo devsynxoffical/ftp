@@ -1,15 +1,25 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-  const stageRef = useRef<HTMLDivElement>(null);
   const typeRef = useRef<HTMLSpanElement>(null);
+  const leadRef = useRef<HTMLParagraphElement>(null);
 
-  // High-performance DOM-direct typewriter (zero React re-renders to prevent layout thrashing)
+  // Word-by-word reveal for lead text matching ftp 4
+  useEffect(() => {
+    const hl = leadRef.current;
+    if (!hl) return;
+    const text = hl.textContent || "";
+    hl.innerHTML = text
+      .split(/\s+/)
+      .map((w, i) => `<span style="--i:${i}">${w}</span>`)
+      .join(" ");
+  }, []);
+
+  // High-performance DOM-direct typewriter (zero React state updates, zero layout shifts)
   useEffect(() => {
     const el = typeRef.current;
     if (!el) return;
@@ -34,7 +44,7 @@ export default function Hero() {
         if (ci === 0) {
           del = false;
           wi = (wi + 1) % W.length;
-          timeoutId = setTimeout(step, 400);
+          timeoutId = setTimeout(step, 300);
           return;
         }
         timeoutId = setTimeout(step, 45);
@@ -43,14 +53,14 @@ export default function Hero() {
         el.textContent = W[wi].slice(0, ci);
         if (ci === W[wi].length) {
           del = true;
-          timeoutId = setTimeout(step, 2400);
+          timeoutId = setTimeout(step, 2200);
           return;
         }
         timeoutId = setTimeout(step, 70);
       }
     }
 
-    timeoutId = setTimeout(step, 3200);
+    timeoutId = setTimeout(step, 3800);
 
     return () => clearTimeout(timeoutId);
   }, []);
@@ -70,34 +80,26 @@ export default function Hero() {
       </video>
 
       <div className="box">
-        <span className="tag rise">
-          <i>&#10022;</i> Trusted by 50+ businesses, 56 published case studies
-        </span>
-
         <h1
           className="h1 d rise"
-          style={{ "--rd": "0.1s" } as React.CSSProperties}
+          style={{ "--rd": ".1s" } as React.CSSProperties}
         >
           We build funnels that print{" "}
-          <br />
           <span className="type" id="type" ref={typeRef}>
             booked calls.
           </span>
         </h1>
 
-        <p
-          className="lead rise"
-          style={{ "--rd": "0.2s" } as React.CSSProperties}
-        >
+        <p className="lead hl" id="hlead" ref={leadRef}>
           Define the offer, connect your traffic, and let the funnel, the follow-up
           and the AI agent do the work while you focus on closing.
         </p>
 
         <div
           className="hcta rise"
-          style={{ "--rd": "0.3s" } as React.CSSProperties}
+          style={{ "--rd": ".3s" } as React.CSSProperties}
         >
-          <a className="btn grad" href="#cta">
+          <a className="btn grad" href="#robo">
             Build my funnel <i>&#8599;</i>
           </a>
           <a className="btn wh" href="#process">
@@ -105,10 +107,10 @@ export default function Hero() {
           </a>
         </div>
 
-        <div className="stage" id="stage" ref={stageRef}>
+        <div className="stage" id="stage">
           <div
             className="agent rise"
-            style={{ "--rd": "0.4s" } as React.CSSProperties}
+            style={{ "--rd": ".4s" } as React.CSSProperties}
           >
             <video
               poster="/img/hero/agent.webp"
@@ -125,38 +127,72 @@ export default function Hero() {
 
           <div
             className="ui lead"
-            style={{ left: 0, top: "18%", "--d": "1s" } as React.CSSProperties}
+            style={{ left: 0, top: "14%", "--d": "1s" } as React.CSSProperties}
             data-m="22"
           >
             <div className="uh">
-              <b>New lead</b>
-              <span className="pl">AI is qualifying</span>
-            </div>
-            <div className="avs">
-              <img src="/img/team/gaurav.webp" alt="Gaurav" />
-              <em>+</em>
-              <img src="/img/team/rahul.webp" alt="Rahul" />
-              <em>+</em>
-              <span
-                style={{
-                  width: 52,
-                  height: 52,
-                  borderRadius: 12,
-                  background: "var(--or)",
-                  display: "grid",
-                  placeItems: "center",
-                  color: "#fff",
-                  fontWeight: 700,
-                }}
-              >
-                AI
+              <b>Live funnel</b>
+              <span className="pl">
+                <i>&#9679;</i> Running
               </span>
             </div>
-            <div className="sum">
-              <b>Summary of the call</b>
-              <s>Budget confirmed for a $5K DWY offer</s>
-              <s>Timeline: wants to start this month</s>
-              <s>Booked for Thursday 14:30</s>
+            <div className="fs">
+              <div
+                className="fr"
+                style={{ "--w": "100%", "--d": "0s" } as React.CSSProperties}
+              >
+                <span>Ad clicks</span>
+                <i />
+                <b>1,284</b>
+              </div>
+              <div
+                className="fr"
+                style={{ "--w": "72%", "--d": ".15s" } as React.CSSProperties}
+              >
+                <span>Page views</span>
+                <i />
+                <b>912</b>
+              </div>
+              <div
+                className="fr"
+                style={{ "--w": "40%", "--d": ".3s" } as React.CSSProperties}
+              >
+                <span>Applications</span>
+                <i />
+                <b>163</b>
+              </div>
+              <div
+                className="fr"
+                style={{ "--w": "24%", "--d": ".45s" } as React.CSSProperties}
+              >
+                <span>AI qualified</span>
+                <i />
+                <b>74</b>
+              </div>
+              <div
+                className="fr hot"
+                style={{ "--w": "16%", "--d": ".6s" } as React.CSSProperties}
+              >
+                <span>Booked calls</span>
+                <i />
+                <b>41</b>
+              </div>
+            </div>
+            <div className="fe">
+              <div className="ev1">
+                <i>AI</i>
+                <span>
+                  <b>Lead qualified by the agent</b>Call booked, Thu 14:30
+                </span>
+                <em>now</em>
+              </div>
+              <div className="ev1">
+                <i className="f">&#10003;</i>
+                <span>
+                  <b>Application submitted</b>Coaching offer, $3K
+                </span>
+                <em>2m</em>
+              </div>
             </div>
           </div>
 

@@ -1,61 +1,60 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import Link from "next/link";
 
 export default function RoboSection() {
   const sectionRef = useRef<HTMLElement>(null);
   const robotRef = useRef<HTMLImageElement>(null);
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const robot = robotRef.current;
-    if (!section || !robot) return;
+    const ro = sectionRef.current;
+    const rb = robotRef.current;
+    if (!ro || !rb) return;
 
     // Intersection observer for entering animation
     const io = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          section.classList.add("in");
+          ro.classList.add("in");
           io.disconnect();
         }
       },
       { threshold: 0.2 }
     );
-    io.observe(section);
+    io.observe(ro);
 
-    // Pointer move tilt
+    // Pointer move robot tilt matching ftp 4
     let rx = 0;
     let ry = 0;
-    let ticking = false;
+    let t = false;
 
     const onPointerMove = (e: PointerEvent) => {
-      const rect = section.getBoundingClientRect();
-      rx = (e.clientX - rect.left) / rect.width - 0.5;
-      ry = (e.clientY - rect.top) / rect.height - 0.5;
+      const r = ro.getBoundingClientRect();
+      rx = (e.clientX - r.left) / r.width - 0.5;
+      ry = (e.clientY - r.top) / r.height - 0.5;
 
-      if (!ticking) {
-        ticking = true;
+      if (!t) {
+        t = true;
         requestAnimationFrame(() => {
-          ticking = false;
-          robot.style.transform = `translate3d(${rx * 24}px, ${
-            ry * 20
-          }px, 0) rotate(${rx * 3}deg)`;
+          t = false;
+          rb.style.transform = `translate(${rx * 24}px, ${ry * 20}px) rotate(${
+            rx * 3
+          }deg)`;
         });
       }
     };
 
     const onPointerLeave = () => {
-      robot.style.transform = "";
+      rb.style.transform = "";
     };
 
-    section.addEventListener("pointermove", onPointerMove);
-    section.addEventListener("pointerleave", onPointerLeave);
+    ro.addEventListener("pointermove", onPointerMove);
+    ro.addEventListener("pointerleave", onPointerLeave);
 
     return () => {
       io.disconnect();
-      section.removeEventListener("pointermove", onPointerMove);
-      section.removeEventListener("pointerleave", onPointerLeave);
+      ro.removeEventListener("pointermove", onPointerMove);
+      ro.removeEventListener("pointerleave", onPointerLeave);
     };
   }, []);
 
@@ -82,7 +81,7 @@ export default function RoboSection() {
             <span>Let&apos;s Talk</span>
           </span>
         </h2>
-        <a href="#cta">
+        <a href="mailto:info@funnelsthatprint.com">
           Talk with us <i>&rarr;</i>
         </a>
         <div className="sp" />

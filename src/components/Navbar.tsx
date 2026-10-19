@@ -64,7 +64,7 @@ export default function Navbar() {
         <div className="nr">
           <Link
             className="btn"
-            href="/#cta"
+            href="/#robo"
             style={{ height: 44, padding: "0 18px", fontSize: 13 }}
           >
             Build my funnel <i>&#8599;</i>
@@ -144,7 +144,7 @@ export default function Navbar() {
               <Link href="/#pricing" onClick={closeMenu}>
                 Pricing
               </Link>
-              <Link href="/#cta" className="dim" onClick={closeMenu}>
+              <Link href="/#robo" className="dim" onClick={closeMenu}>
                 Contact
               </Link>
             </nav>
