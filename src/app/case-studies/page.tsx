@@ -1,146 +1,192 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import { CASE_STUDIES, CaseStudy } from "@/data/siteContent";
-import CaseStudyModal from "@/components/CaseStudyModal";
+
+const STEP = 8;
 
 export default function CaseStudiesPage() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const [activeModalStudy, setActiveModalStudy] = useState<CaseStudy | null>(
-    null
-  );
+  const [shownCount, setShownCount] = useState(STEP);
+  const [activeStudy, setActiveStudy] = useState<CaseStudy | null>(null);
 
-  // Extract unique categories and calculate counts
-  const categoriesWithCounts = useMemo(() => {
-    const counts: { [key: string]: number } = { All: CASE_STUDIES.length };
-    CASE_STUDIES.forEach((cs) => {
-      const cat = cs.g.trim();
-      counts[cat] = (counts[cat] || 0) + 1;
-    });
-
-    const list = Object.entries(counts).map(([name, count]) => ({
-      name,
-      count,
-    }));
-
-    return list;
-  }, []);
-
-  // Filtered case studies
-  const filteredStudies = useMemo(() => {
-    if (selectedCategory === "All") return CASE_STUDIES;
-    return CASE_STUDIES.filter((cs) => cs.g.trim() === selectedCategory);
-  }, [selectedCategory]);
+  const displayedStudies = CASE_STUDIES.slice(0, shownCount);
 
   // Handle direct deep-linking via hash (e.g. /case-studies#DLidtnUTjXL)
   useEffect(() => {
     if (typeof window !== "undefined" && window.location.hash) {
       const hashId = window.location.hash.replace("#", "");
-      const match = CASE_STUDIES.find((cs) => cs.k === hashId);
-      if (match) {
-        setTimeout(() => setActiveModalStudy(match), 400);
+      const idx = CASE_STUDIES.findIndex((cs) => cs.k === hashId);
+      if (idx > -1) {
+        if (idx >= shownCount) {
+          setShownCount(Math.min(CASE_STUDIES.length, idx + STEP));
+        }
+        setTimeout(() => setActiveStudy(CASE_STUDIES[idx]), 400);
       }
     }
   }, []);
 
-  const openStudy = (study: CaseStudy) => {
-    setActiveModalStudy(study);
+  const openModal = (cs: CaseStudy) => {
+    setActiveStudy(cs);
     if (typeof window !== "undefined") {
-      window.history.replaceState(null, "", `#${study.k}`);
+      window.history.replaceState(null, "", `#${cs.k}`);
     }
   };
 
-  const closeStudy = () => {
-    setActiveModalStudy(null);
+  const closeModal = () => {
+    setActiveStudy(null);
     if (typeof window !== "undefined") {
       window.history.replaceState(null, "", window.location.pathname);
     }
   };
 
+  const loadMore = () => {
+    setShownCount((prev) => Math.min(CASE_STUDIES.length, prev + STEP));
+  };
+
   return (
-    <main className="box wh" id="top" style={{ paddingTop: "clamp(100px, 12vw, 140px)" }}>
-      {/* Page Header */}
-      <div className="head">
-        <div>
-          <div className="eyebrow mono">Case studies</div>
-          <h1
-            className="h1 d"
-            style={{ fontSize: "clamp(40px, 6.4vw, 96px)" }}
-          >
-            Built for conversion.
-            <br />
-            <span className="it">Proven</span> in the numbers.
-          </h1>
-        </div>
-
+    <main className="box wh" id="top">
+      {/* Header matching ftp 4 case-studies.html */}
+      <header className="cshero">
+        <h1 className="h1 d">
+          Case <span className="it">studies</span>
+        </h1>
         <p className="lead">
-          56 campaigns and funnels across lead gen, low-ticket, coaching, legal,
-          home services and more. Each one posted by the team with the real
-          figures. Open any card for the full breakdown.
+          See how sharper offers, better funnels and automated follow-up turn
+          ad spend into booked calls and sales. 56 campaigns, real numbers.
         </p>
-      </div>
+      </header>
 
-      {/* Filter Chips Bar */}
-      <div className="chips" role="tablist" aria-label="Filter by industry">
-        {categoriesWithCounts.map(({ name, count }) => {
-          const isSelected = selectedCategory === name;
+      {/* 2-Column Grid matching ftp 4 */}
+      <div className="cgrid2" id="cgrid">
+        {displayedStudies.map((cs, i) => {
+          const desc = (cs.b || "").replace(/\s+/g, " ").slice(0, 180);
+          const dl = `${(i % 2) * 0.08 + Math.floor((i % 8) / 2) * 0.06}s`;
+
           return (
             <button
-              key={name}
+              key={cs.k}
               type="button"
-              className={isSelected ? "on" : ""}
-              onClick={() => setSelectedCategory(name)}
-              aria-pressed={isSelected}
-              role="tab"
+              className="ck show"
+              id={cs.k}
+              data-i={i}
+              style={{ "--dl": dl } as React.CSSProperties}
+              onClick={() => openModal(cs)}
+              aria-label={`Open case study: ${cs.t}`}
             >
-              <span>{name}</span>
-              <i>({count})</i>
+              <span className="im">
+                <img
+                  src={`/img/cs/${cs.k}.webp`}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
+                <img
+                  className="mn"
+                  src={`/img/cs/${cs.k}.webp`}
+                  alt={`${cs.g} case study`}
+                  loading="lazy"
+                />
+              </span>
+              <span className="tx">
+                <span className="tg">{cs.g}</span>
+                <h3>{cs.t}</h3>
+                <p>{desc}</p>
+                {cs.s ? (
+                  <span className="fig">
+                    <b>{cs.s.replace(/,$/, "")}</b>
+                    <span>Key figure from the campaign</span>
+                  </span>
+                ) : (
+                  <span className="fig">
+                    <span>Open the full breakdown &#8599;</span>
+                  </span>
+                )}
+              </span>
             </button>
           );
         })}
       </div>
 
-      {/* Case Studies Grid */}
-      <div className="cgrid" id="cgrid">
-        {filteredStudies.map((cs, i) => (
-          <article key={cs.k} className="cc" id={cs.k} data-t={cs.g}>
-            <button
-              type="button"
-              className="ci"
-              data-i={i}
-              onClick={() => openStudy(cs)}
-              aria-label={`Open case study: ${cs.t}`}
-            >
-              <img
-                src={`/img/cs/${cs.k}.webp`}
-                alt=""
-                aria-hidden="true"
-                loading="lazy"
-              />
-              <img
-                className="mn"
-                src={`/img/cs/${cs.k}.webp`}
-                alt={`${cs.g} case study`}
-                loading="lazy"
-              />
-            </button>
-            <div className="cb">
-              <span className="mono">{cs.g}</span>
-              <h3>{cs.t}</h3>
-              <button
-                type="button"
-                className="rd"
-                data-i={i}
-                onClick={() => openStudy(cs)}
-              >
-                Read the breakdown &#8599;
-              </button>
-            </div>
-          </article>
-        ))}
+      {/* Load More & Count */}
+      <div className="cmore">
+        {shownCount < CASE_STUDIES.length && (
+          <button
+            type="button"
+            className="btn lm2"
+            id="lmore"
+            onClick={loadMore}
+          >
+            Load more <i>&#8599;</i>
+          </button>
+        )}
+        <span className="mono" id="lcount">
+          Showing {shownCount} of {CASE_STUDIES.length}
+        </span>
       </div>
 
-      <CaseStudyModal study={activeModalStudy} onClose={closeStudy} />
+      {/* Bottom CTA */}
+      <div
+        style={{
+          textAlign: "center",
+          padding: "clamp(60px, 8vw, 100px) 0 40px",
+        }}
+      >
+        <p
+          className="lead"
+          style={{ margin: "0 auto 24px", textAlign: "center" }}
+        >
+          Want your campaign on this page?
+        </p>
+        <Link className="btn o" href="/#robo">
+          Build my funnel <i>&#8599;</i>
+        </Link>
+      </div>
+
+      {/* Native Dialog Modal matching ftp 4 */}
+      {activeStudy && (
+        <dialog
+          className="cm"
+          id="cm"
+          open
+          onClick={(e) => {
+            if (e.target === e.currentTarget) closeModal();
+          }}
+        >
+          <button
+            className="x"
+            id="cmx"
+            aria-label="Close"
+            onClick={closeModal}
+          >
+            &times;
+          </button>
+          <div className="in">
+            <div className="im">
+              <img
+                id="cmi"
+                src={`/img/cs/${activeStudy.k}.webp`}
+                alt={`${activeStudy.t} proof`}
+              />
+            </div>
+            <div className="tx">
+              <span className="mono" id="cmg">
+                {activeStudy.g}
+              </span>
+              <h2 id="cmt">{activeStudy.t}</h2>
+              <p id="cmb">{activeStudy.b}</p>
+              <Link
+                className="btn o"
+                href="/#robo"
+                style={{ alignSelf: "flex-start", marginTop: "auto" }}
+                onClick={closeModal}
+              >
+                Build something like this <i>&#8599;</i>
+              </Link>
+            </div>
+          </div>
+        </dialog>
+      )}
     </main>
   );
 }

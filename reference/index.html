@@ -156,23 +156,30 @@ h1,h2,h3,p{margin:0}
 .lstats{display:flex;gap:clamp(24px,4vw,70px)}
 .lstats b{display:block;font-family:var(--disp);font-weight:700;font-size:clamp(40px,4.6vw,72px);letter-spacing:-.04em;line-height:1;font-variant-numeric:tabular-nums}
 .lstats span{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-top:8px}
-.ev{position:absolute;z-index:3;left:var(--x);top:var(--y);display:flex;align-items:flex-start;gap:10px;cursor:default}
-.ev.r{flex-direction:row-reverse;translate:-100% 0}
-.ev .dot{flex:none;width:22px;height:22px;border-radius:50%;background:#c9c6bd;border:5px solid rgba(255,255,255,.7);background-clip:padding-box;transition:background .3s,box-shadow .3s}
-.ev .ln{position:absolute;left:11px;bottom:100%;width:1px;height:0;background:linear-gradient(0deg,var(--or),transparent);transition:height .6s cubic-bezier(.2,.7,.2,1);pointer-events:none}
-.ev.r .ln{left:auto;right:11px}
-.ev .bx{background:rgba(255,255,255,.88);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:8px;padding:9px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;color:var(--fg);box-shadow:0 10px 30px rgba(60,30,10,.08);transition:border-radius .4s,padding .4s,background .4s,border-color .4s}
-.ev .bx t{color:var(--or);margin-right:8px}
-.ev .bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1)}
+.evs{position:absolute;inset:0;z-index:3;pointer-events:none}
+.evsvg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:2}
+.evsvg path{fill:none;stroke-linecap:round}
+.evsvg .tr{stroke:rgba(255,90,31,.22);stroke-width:1.5}
+.evsvg .dr{stroke:var(--or);stroke-width:2}
+.evsvg .gl{fill:var(--or);filter:drop-shadow(0 0 6px rgba(255,90,31,.8))}
+.ev{position:absolute;z-index:3;left:var(--x);top:var(--y);width:var(--w,300px);pointer-events:auto;cursor:pointer}
+.ev.r{translate:-100% 0}
+.ev .dot{position:absolute;top:12px;left:-30px;width:20px;height:20px;border-radius:50%;background:#cfccc3;box-shadow:0 0 0 5px rgba(255,255,255,.75);transition:background .4s,box-shadow .4s,transform .4s cubic-bezier(.2,.7,.2,1)}
+.ev.r .dot{left:auto;right:-30px}
+.ev .bx{background:rgba(255,255,255,.9);border:1px solid rgba(20,20,20,.06);border-radius:10px;padding:11px 14px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--fg);box-shadow:0 10px 30px rgba(60,30,10,.07);transition:border-color .5s,background .5s,box-shadow .5s,border-radius .5s}
+.ev .bx t{color:var(--or);margin-right:8px;font-variant-numeric:tabular-nums}
+.ev .bd{display:grid;grid-template-rows:0fr;transition:grid-template-rows .65s cubic-bezier(.65,0,.35,1)}
 .ev .bd>div{overflow:hidden;min-width:0}
-.ev .bd .in{display:flex;gap:16px;align-items:center;justify-content:space-between;padding-top:10px;text-transform:none;letter-spacing:0;font-weight:400;white-space:normal;width:min(330px,70vw)}
+.ev .bd .in{display:flex;gap:14px;align-items:center;justify-content:space-between;padding-top:10px;text-transform:none;letter-spacing:0;font-weight:400;white-space:normal;opacity:0;transform:translateY(-6px);transition:opacity .35s,transform .5s cubic-bezier(.2,.7,.2,1)}
 .ev .bd b{display:block;font-family:var(--disp);font-size:22px;font-weight:600;letter-spacing:-.03em;margin-bottom:4px}
 .ev .bd p{font-size:14px;color:var(--body);line-height:1.4}
-.ev .bd i{flex:none;width:48px;height:48px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font-style:normal}
-.ev.on .dot{background:var(--or);box-shadow:0 0 0 6px rgba(255,90,31,.2)}
-.ev.on .ln{height:var(--lh,200px)}
-.ev.on .bx{border-radius:14px;padding:12px 16px 14px;background:#fff;border-color:rgba(255,90,31,.45)}
-.ev.on .bd{grid-template-rows:1fr}
+.ev .bd i{flex:none;width:46px;height:46px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font-style:normal;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.ev:hover .bd i{transform:rotate(45deg)}
+.ev.on .dot{background:var(--or);box-shadow:0 0 0 6px rgba(255,90,31,.22);transform:scale(1.05);animation:evp 1.8s ease-out infinite}
+@keyframes evp{0%{box-shadow:0 0 0 0 rgba(255,90,31,.45),0 0 0 6px rgba(255,90,31,.22)}100%{box-shadow:0 0 0 16px rgba(255,90,31,0),0 0 0 6px rgba(255,90,31,.22)}}
+.ev.on .bx{background:#fff;border-color:rgba(255,90,31,.5);border-radius:14px;box-shadow:0 20px 50px rgba(60,30,10,.12)}
+.ev.on{z-index:5}.ev.on .bd{grid-template-rows:1fr}
+.ev.on .bd .in{opacity:1;transform:none;transition-delay:.2s}
 
 /* robot (nuestudio) */
 .robo{position:relative;margin-top:clamp(60px,7vw,110px);background:var(--or);color:#fff;overflow:hidden;display:grid;grid-template-columns:1fr 1fr 1fr;min-height:min(100svh,900px)}
@@ -647,7 +654,7 @@ h1,h2,h3,p{margin:0}
   .flow .sticky{position:relative;top:0;margin-bottom:28px}.pt2 .pdot{display:none}.pipe{margin-left:6px}
   .card{width:82vw}.q .a p,.q .a .tg{padding-left:22px}.fsticky{position:relative;top:0}.q button{grid-template-columns:30px 1fr 36px;padding:18px 16px}.q .a p,.q .a .tg{padding-left:16px;padding-right:16px}
   .bento{grid-template-columns:1fr 1fr;grid-auto-rows:150px;grid-auto-flow:dense}.s1 em{display:none}.bt.v .cap span{max-width:70%}.s3{grid-column:span 2!important}.p1,.l1,.s1,.p2,.s2,.sq,.l2,.l3,.s3{grid-column:auto;grid-row:auto}.p1,.p2{grid-row:span 2}.l1,.l2,.l3{grid-column:span 2}.sq{grid-row:span 2}
-  .pr3{grid-template-columns:1fr}.pvis{aspect-ratio:1;max-width:520px;width:100%}.ptog3 button{padding:9px 12px;font-size:13px}.robo{grid-template-columns:1fr}.robo>div{border-right:0}.robo .rl{min-height:300px}.robo .rl img{left:0;top:50%;width:min(300px,62vw)}.robo .rm h2{padding-top:30px}.robo .rr{padding-top:0}.live{padding-top:90px}.live .evs{position:relative;display:grid;gap:8px;margin-bottom:26px}.ev{position:relative;left:auto;top:auto;translate:none;flex-direction:row}.ev .ln{display:none}.fg{grid-template-columns:1fr 1fr}.fnl{grid-column:1/-1}.fbr{min-height:360px}
+  .pr3{grid-template-columns:1fr}.pvis{aspect-ratio:1;max-width:520px;width:100%}.ptog3 button{padding:9px 12px;font-size:13px}.robo{grid-template-columns:1fr}.robo>div{border-right:0}.robo .rl{min-height:300px}.robo .rl img{left:0;top:50%;width:min(300px,62vw)}.robo .rm h2{padding-top:30px}.robo .rr{padding-top:0}.live{padding-top:90px}.live .evs{position:relative;inset:auto;display:grid;gap:8px;margin-bottom:26px}.evsvg{display:none}.ev{width:auto!important}.ev .dot{display:none}.ev{position:relative;left:auto;top:auto;translate:none;flex-direction:row}.ev .ln{display:none}.fg{grid-template-columns:1fr 1fr}.fnl{grid-column:1/-1}.fbr{min-height:360px}
   .stage{height:clamp(220px,60vw,320px)}.ui.shot{width:48%}
 }
 @media (max-width:560px){.fg{grid-template-columns:1fr}.fstart .arr{width:70px}.ev .bd .in{width:min(300px,78vw)}.stage{height:auto;padding-top:20px}.ui{position:relative;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;margin:8px auto;width:min(340px,100%)}.agent{position:relative;left:auto;translate:none;margin:0 auto;width:min(360px,100%)}.mbrand{grid-template-columns:1fr}.mbrand .yl{width:100%;aspect-ratio:auto;min-height:150px}.mfoot{grid-template-columns:1fr}.nr .btn{display:none}.cta .big{font-size:15vw}.tm{width:min(300px,100%)}}
@@ -702,7 +709,7 @@ h1,h2,h3,p{margin:0}
 <div class="stack"><span class="lbl">Trusted by teams who sell through conversation</span><div class="mq"><div class="row" id="stack" aria-hidden="true"></div></div></div>
 <section class="live" id="live">
   <img class="lbg" src="img/x/office.webp" alt="" loading="lazy">
-  <div class="evs" id="evs"></div>
+  <div class="evs" id="evs"><svg class="evsvg" id="evsvg"><path class="tr" id="evtr"/><path class="dr" id="evdr"/><circle class="gl" id="evgl" r="4" cx="-20" cy="-20"/></svg></div>
   <span class="lbadge">Funnel automation agency, since 2019</span>
   <h2>Your funnel, <em>booking itself.</em></h2>
   <div class="lrow">
@@ -929,10 +936,16 @@ $('#nl').addEventListener('submit',e=>{e.preventDefault();e.target.innerHTML='<s
 (function(){const el=$('#type'),W=['booked calls.','qualified leads.','applications.','customers.'];let wi=0,ci=W[0].length,del=true;if(RM)return;
   function step(){const w=W[wi];if(del){ci--;el.textContent=w.slice(0,ci);if(ci===0){del=false;wi=(wi+1)%W.length;setTimeout(step,300);return}setTimeout(step,45)}else{ci++;el.textContent=W[wi].slice(0,ci);if(ci===W[wi].length){del=true;setTimeout(step,2200);return}setTimeout(step,70)}}setTimeout(step,3800)})();
 
-(function(){const EV=[['02:14','Lead captured','Lead capture','Every form fill lands in the CRM with source, score and owner in seconds.',' 34%','18%','',160],['02:15','Lead qualified, CRM updated','Qualification','The AI agent asks three questions, scores the lead and routes it to the right pipeline.',' 36%','40%','',120],['02:16','Call booked','Booking','Calendar slot picked, confirmation sent, reminders queued at 24h and 1h.','92%','28%','r',150],['02:18','Follow-up sequence started','Follow-up','Email and SMS nurture starts without anyone touching it.','70%','52%','',110],['02:20','AI call completed','AI calling','No-shows get a call back, objections answered, the slot rebooked.','96%','76%','r',130]];
-  const box=$('#evs');if(!box)return;box.innerHTML=EV.map((e,i)=>`<div class="ev ${e[6]}" style="--x:${e[4]};--y:${e[5]};--lh:${e[7]}px" data-i="${i}"><span class="dot"></span><span class="ln"></span><div class="bx"><t>${e[0]}</t>${e[1]}<div class="bd"><div><div class="in"><div><b>${e[2]}</b><p>${e[3]}</p></div><i>&#8599;</i></div></div></div></div></div>`).join('');
-  const evs=$$('.ev');let cur=0,timer;function set(i){cur=i;evs.forEach((e,k)=>e.classList.toggle('on',k===i))}function cycle(){timer=setInterval(()=>set((cur+1)%evs.length),3600)}set(1);cycle();
-  evs.forEach(e=>{e.addEventListener('pointerenter',()=>{clearInterval(timer);set(+e.dataset.i)});e.addEventListener('pointerleave',()=>cycle())});
+(function(){const EV=[['02:14','Lead captured','Lead capture','Every form fill lands in the CRM with source, score and owner in seconds.','46%','12%','',330],['02:15','Lead qualified, CRM updated','Qualification','The AI agent asks three questions, scores the lead and routes it to the right pipeline.','46%','40%','',330],['02:16','Call booked','Booking','Calendar slot picked, confirmation sent, reminders queued at 24h and 1h.','95%','18%','r',290],['02:18','Follow-up sequence started','Follow-up','Email and SMS nurture starts without anyone touching it.','95%','47%','r',310],['02:20','AI call completed','AI calling','No-shows get a call back, objections answered, the slot rebooked.','60%','63%','',310]];
+  const box=$('#evs');if(!box)return;box.insertAdjacentHTML('beforeend',EV.map((e,i)=>`<div class="ev ${e[6]}" style="--x:${e[4]};--y:${e[5]};--w:${e[7]}px" data-i="${i}"><span class="dot"></span><div class="bx"><t>${e[0]}</t>${e[1]}<div class="bd"><div><div class="in"><div><b>${e[2]}</b><p>${e[3]}</p></div><i>&#8599;</i></div></div></div></div></div>`).join(''));
+  const evs=$$('.ev'),sv=$('#evsvg'),tr=$('#evtr'),dr=$('#evdr'),gl=$('#evgl');let cur=-1,timer=null,anim=0,vis=false;
+  const pt=e=>{const d=e.querySelector('.dot').getBoundingClientRect(),b=box.getBoundingClientRect();return[d.left+d.width/2-b.left,d.top+d.height/2-b.top]};
+  function link(a,b){if(innerWidth<=980)return;const[x1,y1]=pt(evs[a]),[x2,y2]=pt(evs[b]),mx=(x1+x2)/2,lift=Math.max(80,Math.abs(x2-x1)*.35),my=Math.min(y1,y2)-lift;const d=`M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`;tr.setAttribute('d',d);dr.setAttribute('d',d);const L=dr.getTotalLength();dr.style.strokeDasharray=L;cancelAnimationFrame(anim);const t0=performance.now(),D=900;
+    (function st(t){const k=Math.min(1,(t-t0)/D),e=k<.5?4*k*k*k:1-Math.pow(-2*k+2,3)/2;dr.style.strokeDashoffset=L*(1-e);const p=dr.getPointAtLength(L*e);gl.setAttribute('cx',p.x);gl.setAttribute('cy',p.y);gl.style.opacity=k<1?1:0;if(k<1)anim=requestAnimationFrame(st);else{dr.style.transition='opacity .8s';dr.style.opacity=.0;tr.style.opacity=.6}})(t0);dr.style.transition='none';dr.style.opacity=1;tr.style.opacity=1}
+  function set(i){if(i===cur)return;const prev=cur;cur=i;evs.forEach((e,k)=>e.classList.toggle('on',k===i));if(prev>-1)link(prev,i)}
+  function cycle(){clearInterval(timer);timer=setInterval(()=>{if(vis)set((cur+1)%evs.length)},3800)}
+  set(0);cycle();new IntersectionObserver(es=>es.forEach(e=>vis=e.isIntersecting)).observe($('#live'));
+  evs.forEach(e=>{e.addEventListener('pointerenter',()=>{clearInterval(timer);set(+e.dataset.i)});e.addEventListener('pointerleave',cycle)});
   const lc=$('#lcount');let n=1287;setInterval(()=>{n+=1+Math.floor(Math.random()*3);lc.textContent=n.toLocaleString('en-US')},2600);
   const ro=$('#robo'),rb=$('#robot');if(ro&&rb){const io=new IntersectionObserver(e=>{if(e[0].isIntersecting){ro.classList.add('in');io.disconnect()}},{threshold:.2});io.observe(ro);let rx=0,ry=0,t=false;ro.addEventListener('pointermove',e=>{const r=ro.getBoundingClientRect();rx=(e.clientX-r.left)/r.width-.5;ry=(e.clientY-r.top)/r.height-.5;if(!t){t=true;requestAnimationFrame(()=>{t=false;rb.style.transform=`translate(${rx*24}px,${ry*20}px) rotate(${rx*3}deg)`})}});ro.addEventListener('pointerleave',()=>{rb.style.transform=''})}
 })();
