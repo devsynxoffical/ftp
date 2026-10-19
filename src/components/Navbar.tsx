@@ -50,7 +50,6 @@ export default function Navbar() {
             What we do
           </Link>
           <Link href="/#process">How we do it</Link>
-          <Link href="/#who">Who it&apos;s for</Link>
           <Link href="/#work">Portfolio</Link>
           <Link
             href="/case-studies"
