@@ -6,7 +6,6 @@ import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-  const typeRef = useRef<HTMLSpanElement>(null);
   const leadRef = useRef<HTMLParagraphElement>(null);
 
   // Word-by-word reveal for lead text matching ftp 4
@@ -18,52 +17,6 @@ export default function Hero() {
       .split(/\s+/)
       .map((w, i) => `<span style="--i:${i}">${w}</span>`)
       .join(" ");
-  }, []);
-
-  // High-performance DOM-direct typewriter (zero React state updates, zero layout shifts)
-  useEffect(() => {
-    const el = typeRef.current;
-    if (!el) return;
-
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-    if (prefersReducedMotion) return;
-
-    const W = HERO_WORDS;
-    let wi = 0;
-    let ci = W[0].length;
-    let del = true;
-    let timeoutId: NodeJS.Timeout;
-
-    function step() {
-      if (!el) return;
-      const w = W[wi];
-      if (del) {
-        ci--;
-        el.textContent = w.slice(0, ci);
-        if (ci === 0) {
-          del = false;
-          wi = (wi + 1) % W.length;
-          timeoutId = setTimeout(step, 300);
-          return;
-        }
-        timeoutId = setTimeout(step, 45);
-      } else {
-        ci++;
-        el.textContent = W[wi].slice(0, ci);
-        if (ci === W[wi].length) {
-          del = true;
-          timeoutId = setTimeout(step, 2200);
-          return;
-        }
-        timeoutId = setTimeout(step, 70);
-      }
-    }
-
-    timeoutId = setTimeout(step, 3800);
-
-    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -81,18 +34,8 @@ export default function Hero() {
       </video>
 
       <div className="box">
-        <Link className="tag rise" href="/case-studies">
-          <i>&#9679;</i> Backed by <b>275+</b> case studies{" "}
-          <span className="tg2">See results &#8599;</span>
-        </Link>
-        <h1
-          className="h1 d rise"
-          style={{ "--rd": ".1s" } as React.CSSProperties}
-        >
-          We build funnels that print{" "}
-          <span className="type" id="type" ref={typeRef}>
-            booked calls.
-          </span>
+        <h1 className="h1 d">
+          We build funnels that print
         </h1>
 
         <p className="lead hl" id="hlead" ref={leadRef}>
@@ -110,6 +53,10 @@ export default function Hero() {
           <a className="btn wh" href="#process">
             See how it works
           </a>
+          <Link className="tag" href="/case-studies">
+            <i>&#9679;</i> Backed by <b>275+</b> case studies{" "}
+            <span className="tg2">See results &#8599;</span>
+          </Link>
         </div>
 
         <div className="stage" id="stage">

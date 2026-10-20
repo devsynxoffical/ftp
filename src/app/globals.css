@@ -114,7 +114,9 @@ h1,h2,h3,p{margin:0}
 @keyframes caret{50%{border-color:transparent}}
 .hero .lead{margin:18px auto 0;text-align:center;font-size:clamp(16px,1.3vw,19px);max-width:52ch}
 .hl span{display:inline-block;animation:hlw .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.25s + var(--i)*.035s);transition:color .25s,translate .25s;cursor:default}.hl span:hover{color:var(--or);translate:0 -3px}@keyframes hlw{from{opacity:0;transform:translateY(12px);filter:blur(4px)}}.hl b{font-weight:600;color:var(--fg)}
-.hcta{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap;position:relative;z-index:3}
+.hcta{display:flex;gap:12px;justify-content:center;align-items:center;margin-top:24px;flex-wrap:wrap;position:relative;z-index:3}
+.hcta .tag{margin-bottom:0;height:54px;padding:0 20px;border-radius:999px;border:1px solid var(--line);box-sizing:border-box;background:rgba(255,255,255,.8);backdrop-filter:blur(8px);transition:background .3s,border-color .3s,box-shadow .3s,transform .3s}
+.hcta .tag:hover{background:#fff;border-color:var(--line2);box-shadow:0 6px 20px rgba(0,0,0,.06);transform:translateY(-1px)}
 .btn.grad{background:linear-gradient(90deg,var(--or),#ff3d8a);color:#fff;border-radius:14px;height:54px;padding:0 26px;font-size:15px}
 .btn.grad i{background:#fff;color:var(--or)}
 .btn.grad:hover{background:linear-gradient(90deg,var(--or-d),#e02a73)}
