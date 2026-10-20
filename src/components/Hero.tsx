@@ -6,6 +6,7 @@ import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  const typeRef = useRef<HTMLSpanElement>(null);
   const leadRef = useRef<HTMLParagraphElement>(null);
 
   // Word-by-word reveal for lead text matching ftp 4
@@ -17,6 +18,74 @@ export default function Hero() {
       .split(/\s+/)
       .map((w, i) => `<span style="--i:${i}">${w}</span>`)
       .join(" ");
+  }, []);
+
+  // Typewriter rotation with auto-measured minWidth so "We build funnels that print" remains completely static
+  useEffect(() => {
+    const el = typeRef.current;
+    if (!el) return;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    if (prefersReducedMotion) return;
+
+    const W = HERO_WORDS;
+    let wi = 0;
+    let ci = W[0].length;
+    let del = true;
+    let timeoutId: NodeJS.Timeout;
+
+    const fit = () => {
+      if (!el) return;
+      const cur = el.textContent;
+      el.style.minWidth = "0";
+      let m = 0;
+      W.forEach((w) => {
+        el.textContent = w;
+        m = Math.max(m, el.getBoundingClientRect().width);
+      });
+      el.textContent = cur;
+      el.style.minWidth = Math.ceil(m) + "px";
+    };
+
+    fit();
+    window.addEventListener("resize", fit);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit);
+    }
+
+    function step() {
+      if (!el) return;
+      const w = W[wi];
+      if (del) {
+        ci--;
+        el.textContent = w.slice(0, ci) || "\u200b";
+        if (ci === 0) {
+          del = false;
+          wi = (wi + 1) % W.length;
+          timeoutId = setTimeout(step, 300);
+          return;
+        }
+        timeoutId = setTimeout(step, 45);
+      } else {
+        ci++;
+        el.textContent = W[wi].slice(0, ci);
+        if (ci === W[wi].length) {
+          del = true;
+          timeoutId = setTimeout(step, 2200);
+          return;
+        }
+        timeoutId = setTimeout(step, 70);
+      }
+    }
+
+    timeoutId = setTimeout(step, 3800);
+
+    return () => {
+      window.removeEventListener("resize", fit);
+      clearTimeout(timeoutId);
+    };
   }, []);
 
   return (
@@ -36,7 +105,9 @@ export default function Hero() {
       <div className="box">
         <h1 className="h1 d">
           We build funnels that print{" "}
-          <span style={{ color: "var(--or)" }}>booked calls.</span>
+          <span className="type" id="type" ref={typeRef}>
+            booked calls.
+          </span>
         </h1>
 
         <p className="lead hl" id="hlead" ref={leadRef}>
