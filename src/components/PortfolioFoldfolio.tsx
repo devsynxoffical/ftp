@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { FUNNELS_LIST } from "@/data/siteContent";
 
 export default function PortfolioFoldfolio() {
   const [funnelIndex, setFunnelIndex] = useState(0);
   const [clockTime, setClockTime] = useState("14:32");
+  const slideRef = useRef<HTMLDivElement>(null);
 
   // Keep live clock accurate
   useEffect(() => {
@@ -20,6 +21,71 @@ export default function PortfolioFoldfolio() {
     updateClock();
     const interval = setInterval(updateClock, 20000);
     return () => clearInterval(interval);
+  }, []);
+
+  // Slide-to-talk widget interaction
+  useEffect(() => {
+    const sl = slideRef.current;
+    if (!sl) return;
+    const k = sl.querySelector<HTMLElement>("#sk");
+    if (!k) return;
+
+    let dx = 0;
+    let st = 0;
+    let dr = false;
+
+    const max = () => sl.clientWidth - k.offsetWidth - 12;
+    const go = () => {
+      window.location.href = "/contact";
+    };
+
+    const onPointerDown = (e: PointerEvent) => {
+      dr = true;
+      st = e.clientX - dx;
+      sl.setPointerCapture(e.pointerId);
+      sl.classList.add("drag");
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!dr) return;
+      dx = Math.max(0, Math.min(max(), e.clientX - st));
+      k.style.transform = `translateX(${dx}px)`;
+      sl.setAttribute("aria-valuenow", String(Math.round((dx / max()) * 100)));
+    };
+
+    const end = () => {
+      if (!dr) return;
+      dr = false;
+      sl.classList.remove("drag");
+      if (dx > max() * 0.8) {
+        k.style.transform = `translateX(${max()}px)`;
+        setTimeout(go, 280);
+      } else {
+        dx = 0;
+        k.style.transform = "translateX(0)";
+      }
+    };
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter" || e.key === "ArrowRight") {
+        k.style.transform = `translateX(${max()}px)`;
+        setTimeout(go, 280);
+      }
+    };
+
+    sl.addEventListener("pointerdown", onPointerDown);
+    sl.addEventListener("pointermove", onPointerMove);
+    sl.addEventListener("pointerup", end);
+    sl.addEventListener("pointercancel", end);
+    sl.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      sl.removeEventListener("pointerdown", onPointerDown);
+      sl.removeEventListener("pointermove", onPointerMove);
+      sl.removeEventListener("pointerup", end);
+      sl.removeEventListener("pointercancel", end);
+      sl.removeEventListener("keydown", onKeyDown);
+    };
   }, []);
 
   const goOpen = useCallback(() => {
@@ -59,6 +125,8 @@ export default function PortfolioFoldfolio() {
     goOpen();
   };
 
+  const currentFunnel = FUNNELS_LIST[funnelIndex];
+
   return (
     <div id="portwrap">
       <section className="port" id="work">
@@ -89,7 +157,7 @@ export default function PortfolioFoldfolio() {
                   <img
                     className="fimg"
                     id="fimg2"
-                    src={`/img/funnels/f${funnelIndex + 1}.webp`}
+                    src={`/img/funnels/f${currentFunnel.id}.webp`}
                     alt=""
                     decoding="async"
                   />
@@ -106,8 +174,8 @@ export default function PortfolioFoldfolio() {
                   <img
                     className="fimg"
                     id="fimg"
-                    src={`/img/funnels/f${funnelIndex + 1}.webp`}
-                    alt={`${FUNNELS_LIST[funnelIndex].name} funnel`}
+                    src={`/img/funnels/f${currentFunnel.id}.webp`}
+                    alt={`${currentFunnel.name} funnel`}
                     decoding="async"
                   />
                 </div>
@@ -129,10 +197,10 @@ export default function PortfolioFoldfolio() {
                 <div className="sub">Funnels That Print &middot; Portfolio</div>
                 <div className="notifs">
                   <div className="notif">
-                    <img src="/img/funnels/f1-t.webp" alt="" />
+                    <img src="/img/funnels/f8-t.webp" alt="" />
                     <div>
-                      <b>100X Productivity is live</b>
-                      <span className="mono">APPLICATION FUNNEL &middot; NOW</span>
+                      <b>Mortgage AI System is live</b>
+                      <span className="mono">WEBINAR FUNNEL &middot; NOW</span>
                     </div>
                   </div>
                   <div className="notif">
@@ -173,6 +241,42 @@ export default function PortfolioFoldfolio() {
                     </svg>
                   </a>
                 </div>
+
+                <div className="ccall">
+                  <div className="cn">Funnels That Print</div>
+                  <div className="cs">
+                    Incoming call &middot; about your next funnel
+                  </div>
+                  <div className="cav">
+                    <img src="/img/team/gaurav.webp" alt="Gaurav Kapoor" />
+                  </div>
+                  <div
+                    ref={slideRef}
+                    className="slide"
+                    id="slide"
+                    role="slider"
+                    aria-label="Slide to talk"
+                    aria-valuemin={0}
+                    aria-valuemax={100}
+                    aria-valuenow={0}
+                    tabIndex={0}
+                  >
+                    <span className="sk" id="sk">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="#fff"
+                      >
+                        <path d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.6 3.6a1 1 0 0 1-.25 1z" />
+                      </svg>
+                    </span>
+                    <span className="st">slide to talk</span>
+                  </div>
+                  <a className="cm" href="mailto:info@funnelsthatprint.com">
+                    INFO@FUNNELSTHATPRINT.COM
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -188,7 +292,7 @@ export default function PortfolioFoldfolio() {
               <span>
                 <b id="fnum">{`0${funnelIndex + 1} / 0${FUNNELS_LIST.length}`}</b>
                 <em id="fname" style={{ fontStyle: "normal" }}>
-                  {FUNNELS_LIST[funnelIndex].name}
+                  {currentFunnel.name}
                 </em>
               </span>
               <button
@@ -218,7 +322,7 @@ export default function PortfolioFoldfolio() {
               onClick={() => selectFunnel(i)}
             >
               <img
-                src={`/img/funnels/f${i + 1}-t.webp`}
+                src={`/img/funnels/f${f.id}-t.webp`}
                 alt=""
                 loading="lazy"
               />

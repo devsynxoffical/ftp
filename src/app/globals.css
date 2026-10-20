@@ -359,7 +359,7 @@ h1,h2,h3,p{margin:0}
 .card .sc{display:none}
 .card .num{position:absolute;right:12px;top:4px;font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 82;font-size:clamp(90px,12vw,170px);line-height:1;color:transparent;-webkit-text-stroke:1.5px rgba(20,20,20,.35);transition:color .6s,-webkit-text-stroke-color .6s;pointer-events:none;z-index:1}
 .card.on .num{color:var(--or);-webkit-text-stroke-color:var(--or)}
-.card .ct{position:relative;flex:none}
+.card .ct{position:relative;flex:none;display:block}
 .card .ct .mono{display:flex;gap:10px;margin-bottom:10px;color:var(--body)}.card .ct .mono b{color:var(--or-d);font-weight:600}
 .card h3{font-family:var(--disp);font-size:clamp(28px,3.2vw,48px);font-weight:600;letter-spacing:-.04em;line-height:1}
 .card p{color:var(--body);margin-top:10px;max-width:44ch;font-size:15px}
@@ -738,13 +738,13 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
 @media (max-width:980px){.cgrid{grid-template-columns:1fr 1fr}.cm .in{grid-template-columns:1fr;overflow:auto}.cm .im img{max-height:50vh}}@media (max-width:600px){.cgrid{grid-template-columns:1fr}}
 
 /* === CONTACT PAGE STYLES === */
-.ct{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,5vw,80px);padding:clamp(20px,3vw,50px) 0 clamp(60px,8vw,110px);align-items:start}
-.ct h1{font-size:clamp(48px,7vw,110px);line-height:.95}
-.ct .lead{margin-top:22px;max-width:40ch}
-.ct .info{display:grid;gap:14px;margin-top:36px}
-.ct .info a,.ct .info div{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;background:var(--bg3);font-weight:500;color:var(--fg)}
-.ct .info i{width:40px;height:40px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font-style:normal;flex:none}
-.ct .info span{display:block;font-size:12px;color:var(--mute);font-weight:500}
+section.ct{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(30px,5vw,80px);padding:clamp(20px,3vw,50px) 0 clamp(60px,8vw,110px);align-items:start}
+section.ct h1{font-size:clamp(48px,7vw,110px);line-height:.95}
+section.ct .lead{margin-top:22px;max-width:40ch}
+section.ct .info{display:grid;gap:14px;margin-top:36px}
+section.ct .info a,section.ct .info div{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:18px;background:var(--bg3);font-weight:500;color:var(--fg)}
+section.ct .info i{width:40px;height:40px;border-radius:50%;background:var(--or);color:#fff;display:grid;place-items:center;font-style:normal;flex:none}
+section.ct .info span{display:block;font-size:12px;color:var(--mute);font-weight:500}
 .cf2{background:#fff;border:1px solid var(--line);border-radius:28px;padding:clamp(22px,3vw,40px);display:grid;gap:16px;box-shadow:0 30px 70px rgba(0,0,0,.06)}
 .cf2 .r2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .cf2 label{display:grid;gap:8px;font-size:13px;font-weight:600;color:var(--fg)}
@@ -754,7 +754,7 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
 .cf2 .pk{display:flex;gap:8px;flex-wrap:wrap}.cf2 .pk input{display:none}.cf2 .pk span{display:inline-block;padding:10px 16px;border-radius:999px;border:1px solid var(--line2);font-weight:500;cursor:pointer;transition:all .3s}.cf2 .pk input:checked+span{background:#141414;color:#fff;border-color:#141414}
 .cf2 button{justify-self:start;height:58px;padding:0 8px 0 26px;font-size:15px;background:var(--or);color:#fff;border:0;border-radius:999px;display:inline-flex;align-items:center;gap:16px;cursor:pointer;font-weight:600;transition:background .3s}.cf2 button i{width:42px;height:42px;border-radius:50%;background:#fff;color:var(--or);display:grid;place-items:center;font-style:normal;transition:transform .4s}.cf2 button:hover{background:var(--or-d)}.cf2 button:hover i{transform:rotate(45deg)}
 .cf2 .ok{display:none;padding:14px 16px;border-radius:14px;background:var(--lime);font-weight:600}.cf2.sent .ok{display:block}
-@media (max-width:980px){.ct{grid-template-columns:1fr}}
+@media (max-width:980px){section.ct{grid-template-columns:1fr}}
 @media (max-width:560px){.cf2 .r2{grid-template-columns:1fr}}
 
 /* === CASE STUDIES HUB STYLES === */

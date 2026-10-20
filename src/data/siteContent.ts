@@ -229,15 +229,20 @@ export const WHO_ITEMS = [
   },
 ];
 
-export const FUNNELS_LIST = [
-  { name: "100X Productivity", desc: "Coaching program, application funnel" },
-  { name: "Growth Foundry", desc: "Local SEO audit, lead funnel" },
-  { name: "Funnel Profit System", desc: "Audit offer, booking funnel" },
-  { name: "Bio-Optimization Made Easy", desc: "Long-form VSL sales letter" },
-  { name: "Pluto CRM", desc: "Insurance CRM, free trial funnel" },
-  { name: "Inventiv", desc: "Invention showcase, lead funnel" },
-  { name: "Rowan Security", desc: "Executive protection, high-ticket application" },
-  { name: "Mortgage AI System", desc: "Webinar funnel, mortgage leads" },
+export interface FunnelItem {
+  id: number;
+  name: string;
+  desc: string;
+}
+
+export const FUNNELS_LIST: FunnelItem[] = [
+  { id: 8, name: "Mortgage AI System", desc: "Webinar funnel, mortgage leads" },
+  { id: 7, name: "Rowan Security", desc: "Executive protection, high-ticket application" },
+  { id: 6, name: "Inventiv", desc: "Invention showcase, lead funnel" },
+  { id: 5, name: "Pluto CRM", desc: "Insurance CRM, free trial funnel" },
+  { id: 4, name: "Bio-Optimization Made Easy", desc: "Long-form VSL sales letter" },
+  { id: 3, name: "Funnel Profit System", desc: "Audit offer, booking funnel" },
+  { id: 2, name: "Growth Foundry", desc: "Local SEO audit, lead funnel" },
 ];
 
 export const FEATURED_CASES = [

@@ -77,6 +77,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       document.querySelectorAll<HTMLElement>("#prog div")
     );
     const ptw = document.getElementById("portwrap");
+    const ptop = document.querySelector<HTMLElement>(".port .top");
     const dev = document.getElementById("dev");
     const cover = document.getElementById("cover");
     const pl = document.getElementById("pl");
@@ -227,8 +228,11 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       // 4. Portfolio 3D dual-pane fold & site scroll
       if (rt && rt.top < vh && rt.bottom > 0 && dev && cover && pl) {
         const p = cl(-rt.top / (M.ptwH - vh));
-        const open = cl((p - 0.03) / 0.12);
-        const e = open * open * (3 - 2 * open);
+        const op = cl((p - 0.03) / 0.12);
+        const cs = cl((p - 0.86) / 0.11);
+        const o2 = op * (1 - cs);
+        const e = o2 * o2 * (3 - 2 * o2);
+        cover.classList.toggle("end", p > 0.5);
         const P = M.P;
         const mob = vw <= 980;
 
@@ -242,6 +246,10 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
           cover.style.setProperty("--sh", Math.min(1, e * 1.8).toFixed(2));
           pl.style.transform = `rotateY(${(180 - 180 * e).toFixed(2)}deg)`;
           pl.style.visibility = e <= 0.5 ? "hidden" : "visible";
+          dev.classList.toggle("half", e > 0.5);
+          if (ptop) {
+            ptop.style.opacity = Math.max(0, 1 - e * 1.6).toFixed(3);
+          }
           if (!mob && fsh) {
             fsh.style.transform = `translateX(-50%) scaleX(${(0.5 + 0.5 * e).toFixed(3)})`;
           }
@@ -255,7 +263,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
           }
         }
 
-        const sc = cl((p - 0.17) / 0.83);
+        const sc = cl((p - 0.17) / 0.66);
         const yy = Math.round(sc * M.siteMax);
         if (yy !== lastYY) {
           lastYY = yy;
