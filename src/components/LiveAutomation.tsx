@@ -19,18 +19,18 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Lead captured",
     title: "Lead capture",
     desc: "Every form fill lands in the CRM with source, score and owner in seconds.",
-    x: "46%",
-    y: "12%",
+    x: "38%",
+    y: "13%",
     alignClass: "",
-    width: 330,
+    width: 320,
   },
   {
     time: "02:15",
     label: "Lead qualified, CRM updated",
     title: "Qualification",
     desc: "The AI agent asks three questions, scores the lead and routes it to the right pipeline.",
-    x: "46%",
-    y: "40%",
+    x: "40%",
+    y: "32%",
     alignClass: "",
     width: 330,
   },
@@ -39,7 +39,7 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Call booked",
     title: "Booking",
     desc: "Calendar slot picked, confirmation sent, reminders queued at 24h and 1h.",
-    x: "95%",
+    x: "92%",
     y: "18%",
     alignClass: "r",
     width: 290,
@@ -49,8 +49,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Follow-up sequence started",
     title: "Follow-up",
     desc: "Email and SMS nurture starts without anyone touching it.",
-    x: "95%",
-    y: "47%",
+    x: "92%",
+    y: "44%",
     alignClass: "r",
     width: 310,
   },
@@ -59,8 +59,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "AI call completed",
     title: "AI calling",
     desc: "No-shows get a call back, objections answered, the slot rebooked.",
-    x: "60%",
-    y: "63%",
+    x: "58%",
+    y: "65%",
     alignClass: "",
     width: 310,
   },
@@ -110,8 +110,8 @@ export default function LiveAutomation() {
     const [x1, y1] = pt(elA);
     const [x2, y2] = pt(elB);
     const mx = (x1 + x2) / 2;
-    const lift = Math.max(80, Math.abs(x2 - x1) * 0.35);
-    const my = Math.min(y1, y2) - lift;
+    const lift = Math.max(60, Math.min(180, Math.abs(x2 - x1) * 0.28));
+    const my = Math.max(30, Math.min(y1, y2) - lift);
     const d = `M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`;
 
     tr.setAttribute("d", d);
@@ -187,9 +187,7 @@ export default function LiveAutomation() {
 
     startCycle();
 
-    // Collision avoidance and responsive fit algorithm from index (1).html
-    function fit() {
-      if (typeof window === "undefined") return;
+    const handleResize = () => {
       if (window.innerWidth <= 980) {
         evRefs.current.forEach((e) => {
           if (e) e.style.top = "";
@@ -200,103 +198,15 @@ export default function LiveAutomation() {
           glRef.current.setAttribute("cx", "-20");
           glRef.current.setAttribute("cy", "-20");
         }
-        return;
+      } else {
+        evRefs.current.forEach((e) => {
+          if (e) e.style.top = "";
+        });
       }
-      if (!sec) return;
-      const L = sec.getBoundingClientRect();
-      const H = sec.offsetHeight;
-      const zt = 112;
-      const G = 14;
-      const ROW = 58;
+    };
 
-      const T: { l: number; r: number; t: number }[] = [];
-      const add = (r: DOMRect) => {
-        if (r.width && r.height) {
-          T.push({ l: r.left - L.left, r: r.right - L.left, t: r.top - L.top });
-        }
-      };
-
-      ["h2", ".lead"].forEach((q) => {
-        const e = sec.querySelector(q);
-        if (!e) return;
-        const rg = document.createRange();
-        rg.selectNodeContents(e);
-        Array.from(rg.getClientRects()).forEach(add);
-      });
-
-      [".lbadge", ".lbt > *", ".lstats > *"].forEach((q) => {
-        sec.querySelectorAll(q).forEach((e) => add(e.getBoundingClientRect()));
-      });
-
-      const C = evRefs.current
-        .map((e, k) => {
-          if (!e) return null;
-          const r = e.getBoundingClientRect();
-          const dot = e.querySelector(".dot")?.getBoundingClientRect() || r;
-          const l = Math.min(r.left, dot.left) - L.left - 8;
-          const rr = Math.max(r.right, dot.right) - L.left + 8;
-          const hdEl = e.querySelector(".hd") as HTMLElement | null;
-          const bdDiv = e.querySelector(".bd > div") as HTMLElement | null;
-          const exp =
-            (hdEl?.offsetHeight || 0) + 24 + (bdDiv?.scrollHeight || 0) + 12;
-
-          let ceil = H;
-          T.forEach((t) => {
-            if (l < t.r && rr > t.l) ceil = Math.min(ceil, t.t);
-          });
-          const basePctY =
-            (parseFloat(AUTOMATION_EVENTS[k].y) / 100) * H;
-          return {
-            e,
-            l,
-            r: rr,
-            top: Math.max(zt, Math.min(basePctY, ceil - exp - G)),
-            ceil,
-            exp,
-          };
-        })
-        .filter(Boolean) as {
-        e: HTMLDivElement;
-        l: number;
-        r: number;
-        top: number;
-        ceil: number;
-        exp: number;
-      }[];
-
-      const S = C.slice().sort((a, b) => a.top - b.top);
-      const ov = (a: (typeof S)[0], b: (typeof S)[0]) =>
-        a.l < b.r && a.r > b.l;
-
-      for (let k = 1; k < S.length; k++) {
-        const b = S[k];
-        for (let m = 0; m < k; m++) {
-          const a = S[m];
-          if (ov(a, b) && b.top < a.top + ROW) b.top = a.top + ROW;
-        }
-        const lim = b.ceil - b.exp - G;
-        if (b.top > lim) {
-          b.top = lim;
-          for (let m = k - 1; m >= 0; m--) {
-            const a = S[m];
-            const nx = S.slice(m + 1, k + 1).filter((x) => ov(a, x));
-            nx.forEach((x) => {
-              if (a.top > x.top - ROW) a.top = x.top - ROW;
-            });
-          }
-        }
-      }
-
-      C.forEach((c) => {
-        c.e.style.top = Math.max(zt, c.top).toFixed(0) + "px";
-      });
-    }
-
-    fit();
-    window.addEventListener("resize", fit);
-    if (document.fonts && document.fonts.ready) {
-      document.fonts.ready.then(fit);
-    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
     // Custom interactive cursor logic for #live
     const live = sec;
@@ -396,7 +306,7 @@ export default function LiveAutomation() {
 
     return () => {
       io.disconnect();
-      window.removeEventListener("resize", fit);
+      window.removeEventListener("resize", handleResize);
       removeCursorEvents();
       if (timerRef.current) clearInterval(timerRef.current);
       clearInterval(countTimer);
