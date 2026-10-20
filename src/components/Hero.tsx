@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
@@ -80,6 +81,10 @@ export default function Hero() {
       </video>
 
       <div className="box">
+        <Link className="tag rise" href="/case-studies">
+          <i>&#9679;</i> Backed by <b>275+</b> case studies{" "}
+          <span className="tg2">See results &#8599;</span>
+        </Link>
         <h1
           className="h1 d rise"
           style={{ "--rd": ".1s" } as React.CSSProperties}

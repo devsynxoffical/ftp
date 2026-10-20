@@ -31,24 +31,34 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const nav = document.getElementById("nav");
+    if (!nav) return;
+
+    const handleScroll = () => {
+      const y = window.scrollY;
+      nav.classList.toggle("hide", y > lastY && y > 400);
+      lastY = y;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleMenu = () => setMenuOpen((prev) => !prev);
   const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <nav className="nav" id="nav" aria-label="Main Navigation">
+      <nav className="nav" id="nav" aria-label="Main">
         <Link href="/" className="logo" onClick={closeMenu}>
           <i />
           <span>Funnels That Print</span>
         </Link>
 
         <div className="pill">
-          <Link
-            href="/#services"
-            className={pathname === "/" ? "" : ""}
-          >
-            What we do
-          </Link>
+          <Link href="/#services">What we do</Link>
           <Link href="/#process">How we do it</Link>
           <Link href="/#who">Who it&apos;s for</Link>
           <Link href="/#work">Portfolio</Link>
@@ -58,6 +68,18 @@ export default function Navbar() {
           >
             Case studies
           </Link>
+          <Link
+            className={`feat ${pathname === "/case-1m" ? "active" : ""}`}
+            href="/case-1m"
+          >
+            <b>$1.52M</b> case
+          </Link>
+          <Link
+            className={`feat ${pathname === "/case-847k" ? "active" : ""}`}
+            href="/case-847k"
+          >
+            <b>$847K</b> case
+          </Link>
           <Link href="/#pricing">Pricing</Link>
         </div>
 
@@ -65,7 +87,8 @@ export default function Navbar() {
           <Link
             className="btn"
             href="/#robo"
-            style={{ height: 44, padding: "0 18px", fontSize: 13 }}
+            style={{ height: 44 }}
+            onClick={closeMenu}
           >
             Build my funnel <i>&#8599;</i>
           </Link>
@@ -73,6 +96,7 @@ export default function Navbar() {
           <button
             type="button"
             className="burger"
+            id="mopen"
             onClick={toggleMenu}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
             aria-expanded={menuOpen}
@@ -84,7 +108,13 @@ export default function Navbar() {
       </nav>
 
       {/* Fullscreen Mobile / Tablet Menu */}
-      <div id="menu" className={menuOpen ? "on" : ""} role="dialog" aria-modal="true" aria-label="Menu">
+      <div
+        id="menu"
+        className={menuOpen ? "on" : ""}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Menu"
+      >
         <div className="ml">
           <div className="big">
             Start a project <i>&rarr;</i>
@@ -141,10 +171,16 @@ export default function Navbar() {
               <Link href="/case-studies" onClick={closeMenu}>
                 Case studies
               </Link>
+              <Link href="/case-1m" className="sub" onClick={closeMenu}>
+                $1.52M high-ticket case
+              </Link>
+              <Link href="/case-847k" className="sub" onClick={closeMenu}>
+                $847K coaching LTO case
+              </Link>
               <Link href="/#pricing" onClick={closeMenu}>
                 Pricing
               </Link>
-              <Link href="/#robo" className="dim" onClick={closeMenu}>
+              <Link href="/contact" className="dim" onClick={closeMenu}>
                 Contact
               </Link>
             </nav>
@@ -174,6 +210,7 @@ export default function Navbar() {
           <button
             type="button"
             className="mclose"
+            id="mclose"
             onClick={closeMenu}
             aria-label="Close menu"
           >

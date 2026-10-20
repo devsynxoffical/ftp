@@ -1,9 +1,34 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { FEATURED_CASES } from "@/data/siteContent";
 
 export default function FeaturedCases() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const videos = containerRef.current.querySelectorAll<HTMLVideoElement>(".mv");
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const v = entry.target as HTMLVideoElement;
+          if (entry.isIntersecting) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    videos.forEach((v) => io.observe(v));
+    return () => io.disconnect();
+  }, []);
+
   return (
     <section className="sec box" id="cases">
       <div className="cwrap">
@@ -16,7 +41,7 @@ export default function FeaturedCases() {
           </Link>
         </div>
 
-        <div className="cases" id="caselist">
+        <div className="cases" id="caselist" ref={containerRef}>
           {FEATURED_CASES.map((cs, i) => (
             <article
               key={cs.slug}
@@ -25,19 +50,30 @@ export default function FeaturedCases() {
             >
               <div className="cin">
                 <div className="img">
-                  <img
-                    className="bl"
-                    src={`/img/cs/${cs.slug}.webp`}
-                    alt=""
+                  <video
+                    className="mv"
+                    muted
+                    loop
+                    playsInline
+                    preload="none"
+                    poster={`/img/sw/c${i + 1}.webp`}
                     aria-hidden="true"
-                    loading="lazy"
-                  />
-                  <img
-                    className="mn"
-                    src={`/img/cs/${cs.slug}.webp`}
-                    alt={`${cs.title} results`}
-                    loading="lazy"
-                  />
+                  >
+                    <source src={`/img/sw/c${i + 1}.mp4`} type="video/mp4" />
+                  </video>
+                  <span className="gl" />
+                  <figure className="pf">
+                    <img
+                      className="mn"
+                      src={`/img/cs/${cs.slug}.webp`}
+                      alt={`${cs.title} results`}
+                      loading="lazy"
+                    />
+                    <figcaption>
+                      <i />
+                      Real result
+                    </figcaption>
+                  </figure>
                 </div>
 
                 <div className="inf">
@@ -56,7 +92,7 @@ export default function FeaturedCases() {
                     <span>{cs.metricLabel}</span>
                   </div>
 
-                  <Link className="btn v" href={`/case-studies#${cs.slug}`}>
+                  <Link className="btn v" href={`/case?set=lg&id=${cs.slug}`}>
                     View full case study <i>&#8599;</i>
                   </Link>
                 </div>

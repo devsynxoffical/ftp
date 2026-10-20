@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, type ReactNode } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
@@ -363,6 +364,95 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       lenis.destroy();
     };
   }, []);
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const globalLenis = (window as unknown as { lenis?: Lenis }).lenis;
+    if (globalLenis) {
+      globalLenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+
+    function cnt(el: HTMLElement) {
+      const to = +(el.dataset.to || 0);
+      const dec = +(el.dataset.dec || 0);
+      const pre = el.dataset.pre || "";
+      const suf = el.dataset.suf || "";
+      const t0 = performance.now();
+      const D = 1600;
+      function f(t: number) {
+        const k = Math.min(1, (t - t0) / D);
+        const e = 1 - Math.pow(1 - k, 4);
+        el.textContent =
+          pre +
+          (to * e).toLocaleString("en-US", {
+            minimumFractionDigits: dec,
+            maximumFractionDigits: dec,
+          }) +
+          suf;
+        if (k < 1) requestAnimationFrame(f);
+      }
+      requestAnimationFrame(f);
+    }
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const target = e.target as HTMLElement;
+          target.classList.add("in");
+          io.unobserve(target);
+          target.querySelectorAll<HTMLElement>("[data-to]").forEach(cnt);
+          if (target.hasAttribute("data-to")) {
+            cnt(target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll<HTMLElement>(".rv").forEach((el) => {
+      io.observe(el);
+    });
+
+    if (!prefersReducedMotion) {
+      const srIo = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (!e.isIntersecting) return;
+            const target = e.target as HTMLElement;
+            srIo.unobserve(target);
+            target.classList.add("in");
+            setTimeout(() => target.classList.remove("sr", "in"), 1900);
+          });
+        },
+        { rootMargin: "0px 0px -6% 0px", threshold: 0.05 }
+      );
+
+      document
+        .querySelectorAll<HTMLElement>(
+          ".eyebrow, .lead, .fcols>*, .cf2, .info"
+        )
+        .forEach((el, i) => {
+          el.style.setProperty("--dl", `${(i % 3) * 0.07}s`);
+          el.classList.add("sr");
+          srIo.observe(el);
+        });
+
+      return () => {
+        io.disconnect();
+        srIo.disconnect();
+      };
+    }
+
+    return () => io.disconnect();
+  }, [pathname]);
 
   return <>{children}</>;
 }

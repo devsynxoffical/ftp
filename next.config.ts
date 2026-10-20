@@ -34,6 +34,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https:",
       "media-src 'self' blob: https:",
+      "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com",
       "connect-src 'self' https:",
       "frame-ancestors 'self'",
     ].join("; "),
@@ -51,6 +52,17 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
+    ];
+  },
+  async rewrites() {
+    return [
+      { source: "/case-studies.html", destination: "/case-studies" },
+      { source: "/case-ecom.html", destination: "/case-ecom" },
+      { source: "/case-leadgen.html", destination: "/case-leadgen" },
+      { source: "/case-1m.html", destination: "/case-1m" },
+      { source: "/case-847k.html", destination: "/case-847k" },
+      { source: "/case.html", destination: "/case" },
+      { source: "/contact.html", destination: "/contact" },
     ];
   },
 };

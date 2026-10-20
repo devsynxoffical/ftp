@@ -132,21 +132,21 @@ export default function Footer() {
         </div>
 
         <nav className="flk" aria-label="Footer">
-          <a href="#services">
+          <Link href="/#services">
             Services <i>&#8599;</i>
-          </a>
-          <a href="#process">
+          </Link>
+          <Link href="/#process">
             Process <i>&#8599;</i>
-          </a>
+          </Link>
           <Link href="/case-studies">
             Case studies <i>&#8599;</i>
           </Link>
-          <a href="#pricing">
+          <Link href="/#pricing">
             Pricing <i>&#8599;</i>
-          </a>
-          <a href="#robo">
+          </Link>
+          <Link href="/contact">
             Contact <i>&#8599;</i>
-          </a>
+          </Link>
         </nav>
 
         <div className="ffl">

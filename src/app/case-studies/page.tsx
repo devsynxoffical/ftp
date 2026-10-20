@@ -1,192 +1,127 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { CASE_STUDIES, CaseStudy } from "@/data/siteContent";
 
-const STEP = 8;
+export const metadata: Metadata = {
+  title: "Case Studies | Funnels That Print",
+  description:
+    "Two libraries of real, verified results across Lead Generation and E-commerce. Pick the one that matches your business.",
+};
 
 export default function CaseStudiesPage() {
-  const [shownCount, setShownCount] = useState(STEP);
-  const [activeStudy, setActiveStudy] = useState<CaseStudy | null>(null);
-
-  const displayedStudies = CASE_STUDIES.slice(0, shownCount);
-
-  // Handle direct deep-linking via hash (e.g. /case-studies#DLidtnUTjXL)
-  useEffect(() => {
-    if (typeof window !== "undefined" && window.location.hash) {
-      const hashId = window.location.hash.replace("#", "");
-      const idx = CASE_STUDIES.findIndex((cs) => cs.k === hashId);
-      if (idx > -1) {
-        if (idx >= shownCount) {
-          setShownCount(Math.min(CASE_STUDIES.length, idx + STEP));
-        }
-        setTimeout(() => setActiveStudy(CASE_STUDIES[idx]), 400);
-      }
-    }
-  }, []);
-
-  const openModal = (cs: CaseStudy) => {
-    setActiveStudy(cs);
-    if (typeof window !== "undefined") {
-      window.history.replaceState(null, "", `#${cs.k}`);
-    }
-  };
-
-  const closeModal = () => {
-    setActiveStudy(null);
-    if (typeof window !== "undefined") {
-      window.history.replaceState(null, "", window.location.pathname);
-    }
-  };
-
-  const loadMore = () => {
-    setShownCount((prev) => Math.min(CASE_STUDIES.length, prev + STEP));
-  };
-
   return (
-    <main className="box wh" id="top">
-      {/* Header matching ftp 4 case-studies.html */}
+    <div className="box">
       <header className="cshero">
         <h1 className="h1 d">
           Case <span className="it">studies</span>
         </h1>
         <p className="lead">
-          See how sharper offers, better funnels and automated follow-up turn
-          ad spend into booked calls and sales. 56 campaigns, real numbers.
+          Two libraries of real, verified results. Pick the one that matches your
+          business.
         </p>
       </header>
 
-      {/* 2-Column Grid matching ftp 4 */}
-      <div className="cgrid2" id="cgrid">
-        {displayedStudies.map((cs, i) => {
-          const desc = (cs.b || "").replace(/\s+/g, " ").slice(0, 180);
-          const dl = `${(i % 2) * 0.08 + Math.floor((i % 8) / 2) * 0.06}s`;
+      <div className="hub">
+        <Link className="hc lg" href="/case-leadgen">
+          <div className="fan">
+            <img
+              src="/img/lg/Dd9D3rnSCMT.webp"
+              alt="Lead generation case study proof"
+              loading="lazy"
+              style={{ "--r": "-8deg", "--x": "-30%" } as React.CSSProperties}
+            />
+            <img
+              src="/img/lg/DdN7bs-xSg7.webp"
+              alt="Lead generation case study proof"
+              loading="lazy"
+              style={{ "--r": "0deg", "--x": "0%" } as React.CSSProperties}
+            />
+            <img
+              src="/img/lg/DbHD8X3ksnz.webp"
+              alt="Lead generation case study proof"
+              loading="lazy"
+              style={{ "--r": "8deg", "--x": "30%" } as React.CSSProperties}
+            />
+          </div>
+          <div className="hb">
+            <span className="ht">QualifiedLeadsX&trade;</span>
+            <h2>Lead generation</h2>
+            <div className="hn">
+              <b>125</b>
+              <span>case studies</span>
+            </div>
+            <p>
+              Booked calls, verified leads and lower cost per lead for service
+              businesses, agencies, coaches and local trades.
+            </p>
+            <div className="hch">
+              <span>Roofing</span>
+              <span>Legal / MVA</span>
+              <span>Mortgage</span>
+              <span>MedSpa</span>
+              <span>Coaching</span>
+              <span>Low-ticket</span>
+            </div>
+            <span className="btn hbtn">
+              Explore lead gen cases <i>&#8599;</i>
+            </span>
+          </div>
+        </Link>
 
-          return (
-            <button
-              key={cs.k}
-              type="button"
-              className="ck show"
-              id={cs.k}
-              data-i={i}
-              style={{ "--dl": dl } as React.CSSProperties}
-              onClick={() => openModal(cs)}
-              aria-label={`Open case study: ${cs.t}`}
-            >
-              <span className="im">
-                <img
-                  src={`/img/cs/${cs.k}.webp`}
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                />
-                <img
-                  className="mn"
-                  src={`/img/cs/${cs.k}.webp`}
-                  alt={`${cs.g} case study`}
-                  loading="lazy"
-                />
-              </span>
-              <span className="tx">
-                <span className="tg">{cs.g}</span>
-                <h3>{cs.t}</h3>
-                <p>{desc}</p>
-                {cs.s ? (
-                  <span className="fig">
-                    <b>{cs.s.replace(/,$/, "")}</b>
-                    <span>Key figure from the campaign</span>
-                  </span>
-                ) : (
-                  <span className="fig">
-                    <span>Open the full breakdown &#8599;</span>
-                  </span>
-                )}
-              </span>
-            </button>
-          );
-        })}
+        <Link className="hc ec" href="/case-ecom">
+          <div className="fan">
+            <img
+              src="/img/cs2/C-4VFNmBfUA.webp"
+              alt="E-commerce case study proof"
+              loading="lazy"
+              style={{ "--r": "-8deg", "--x": "-30%" } as React.CSSProperties}
+            />
+            <img
+              src="/img/cs2/DMLC9R1Bn-m.webp"
+              alt="E-commerce case study proof"
+              loading="lazy"
+              style={{ "--r": "0deg", "--x": "0%" } as React.CSSProperties}
+            />
+            <img
+              src="/img/cs2/DCpIoi0hNhx.webp"
+              alt="E-commerce case study proof"
+              loading="lazy"
+              style={{ "--r": "8deg", "--x": "30%" } as React.CSSProperties}
+            />
+          </div>
+          <div className="hb">
+            <span className="ht">Brand Scaling Hacks</span>
+            <h2>Ecom &amp; DTC</h2>
+            <div className="hn">
+              <b>126</b>
+              <span>case studies</span>
+            </div>
+            <p>
+              Revenue and ROAS for direct-response eCommerce and DTC brands scaled
+              with Meta ads and creative engines.
+            </p>
+            <div className="hch">
+              <span>eCommerce</span>
+              <span>DTC brands</span>
+              <span>Beauty &amp; skincare</span>
+              <span>Apparel</span>
+              <span>Fitness</span>
+              <span>Supplements</span>
+            </div>
+            <span className="btn hbtn">
+              Explore ecom cases <i>&#8599;</i>
+            </span>
+          </div>
+        </Link>
       </div>
 
-      {/* Load More & Count */}
-      <div className="cmore">
-        {shownCount < CASE_STUDIES.length && (
-          <button
-            type="button"
-            className="btn lm2"
-            id="lmore"
-            onClick={loadMore}
-          >
-            Load more <i>&#8599;</i>
-          </button>
-        )}
-        <span className="mono" id="lcount">
-          Showing {shownCount} of {CASE_STUDIES.length}
-        </span>
-      </div>
-
-      {/* Bottom CTA */}
-      <div
-        style={{
-          textAlign: "center",
-          padding: "clamp(60px, 8vw, 100px) 0 40px",
-        }}
-      >
-        <p
-          className="lead"
-          style={{ margin: "0 auto 24px", textAlign: "center" }}
-        >
+      <div style={{ textAlign: "center", padding: "clamp(60px,8vw,100px) 0 40px" }}>
+        <p className="lead" style={{ margin: "0 auto 24px", textAlign: "center" }}>
           Want your campaign on this page?
         </p>
         <Link className="btn o" href="/#robo">
           Build my funnel <i>&#8599;</i>
         </Link>
       </div>
-
-      {/* Native Dialog Modal matching ftp 4 */}
-      {activeStudy && (
-        <dialog
-          className="cm"
-          id="cm"
-          open
-          onClick={(e) => {
-            if (e.target === e.currentTarget) closeModal();
-          }}
-        >
-          <button
-            className="x"
-            id="cmx"
-            aria-label="Close"
-            onClick={closeModal}
-          >
-            &times;
-          </button>
-          <div className="in">
-            <div className="im">
-              <img
-                id="cmi"
-                src={`/img/cs/${activeStudy.k}.webp`}
-                alt={`${activeStudy.t} proof`}
-              />
-            </div>
-            <div className="tx">
-              <span className="mono" id="cmg">
-                {activeStudy.g}
-              </span>
-              <h2 id="cmt">{activeStudy.t}</h2>
-              <p id="cmb">{activeStudy.b}</p>
-              <Link
-                className="btn o"
-                href="/#robo"
-                style={{ alignSelf: "flex-start", marginTop: "auto" }}
-                onClick={closeModal}
-              >
-                Build something like this <i>&#8599;</i>
-              </Link>
-            </div>
-          </div>
-        </dialog>
-      )}
-    </main>
+    </div>
   );
 }
