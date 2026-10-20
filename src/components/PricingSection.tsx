@@ -168,6 +168,10 @@ export default function PricingSection() {
           <h3 className="pt3" id="ptitle">
             {activePlan.title}
           </h3>
+          <div className="ppr">
+            <b id="pprice">{activePlan.price}</b>
+            <span>{activePlan.period || "one-time"}</span>
+          </div>
           <p className="pdesc" id="pdesc">
             {activePlan.desc}
           </p>

@@ -329,6 +329,8 @@ export const VDUR: { [key: string]: number } = {
 export interface PlanTier {
   tag: string;
   title: string;
+  price: string;
+  period?: string;
   desc: string;
   features: string[];
   ctaText: string;
@@ -339,6 +341,8 @@ export const PLANS_DATA: PlanTier[] = [
   {
     tag: "STARTER",
     title: "Design Only",
+    price: "$999",
+    period: "one-time",
     desc: "Perfect if you want the strategy and visual funnel assets, but not the full copy and implementation.",
     features: [
       "Market Research & Offer Positioning",
@@ -353,6 +357,8 @@ export const PLANS_DATA: PlanTier[] = [
   {
     tag: "MOST POPULAR",
     title: "Design + Copy Build",
+    price: "$1,499",
+    period: "one-time",
     desc: "Our most recommended package for a launch-ready AC Funnel with both messaging and design handled for you.",
     features: [
       "Front-End Sales Page + Long-Form Copy",
@@ -369,6 +375,8 @@ export const PLANS_DATA: PlanTier[] = [
   {
     tag: "COMPLETE",
     title: "Full AC Funnel Suite",
+    price: "$1,999",
+    period: "one-time",
     desc: "The complete done-for-you package with full build, systems, integrations and post-launch support.",
     features: [
       "Everything in Design + Copy Build",

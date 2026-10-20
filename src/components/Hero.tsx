@@ -35,7 +35,8 @@ export default function Hero() {
 
       <div className="box">
         <h1 className="h1 d">
-          We build funnels that print
+          We build funnels that print{" "}
+          <span style={{ color: "var(--or)" }}>booked calls.</span>
         </h1>
 
         <p className="lead hl" id="hlead" ref={leadRef}>
@@ -49,9 +50,6 @@ export default function Hero() {
         >
           <a className="btn grad" href="#robo">
             Build my funnel <i>&#8599;</i>
-          </a>
-          <a className="btn wh" href="#process">
-            See how it works
           </a>
           <Link className="tag" href="/case-studies">
             <i>&#9679;</i> Backed by <b>275+</b> case studies{" "}
