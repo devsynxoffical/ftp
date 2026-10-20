@@ -56,11 +56,15 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
+      { source: "/milliondollarcasestudy.html", destination: "/milliondollarcasestudy" },
+      { source: "/scalelowticket.html", destination: "/scalelowticket" },
+      { source: "/case-1m", destination: "/milliondollarcasestudy" },
+      { source: "/case-1m.html", destination: "/milliondollarcasestudy" },
+      { source: "/case-847k", destination: "/scalelowticket" },
+      { source: "/case-847k.html", destination: "/scalelowticket" },
       { source: "/case-studies.html", destination: "/case-studies" },
       { source: "/case-ecom.html", destination: "/case-ecom" },
       { source: "/case-leadgen.html", destination: "/case-leadgen" },
-      { source: "/case-1m.html", destination: "/case-1m" },
-      { source: "/case-847k.html", destination: "/case-847k" },
       { source: "/case.html", destination: "/case" },
       { source: "/contact.html", destination: "/contact" },
     ];

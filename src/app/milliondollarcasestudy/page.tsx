@@ -144,7 +144,7 @@ export default function Case1MPage() {
           </Link>
         </div>
 
-        <Link className="knext in" href="/case-847k">
+        <Link className="knext in" href="/scalelowticket">
           <div>
             <span>Next case study</span>
             <b>$847K Coaching LTO at 3.32x ROAS</b>

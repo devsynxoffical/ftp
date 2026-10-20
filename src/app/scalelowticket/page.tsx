@@ -184,7 +184,7 @@ export default function Case847KPage() {
           </Link>
         </div>
 
-        <Link className="knext in" href="/case-1m">
+        <Link className="knext in" href="/milliondollarcasestudy">
           <div>
             <span>Previous case study</span>
             <b>$1.52M High-ticket scaling in 19 months</b>

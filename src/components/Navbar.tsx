@@ -69,14 +69,14 @@ export default function Navbar() {
             Case studies
           </Link>
           <Link
-            className={`feat ${pathname === "/case-1m" ? "active" : ""}`}
-            href="/case-1m"
+            className={`feat ${pathname === "/milliondollarcasestudy" ? "active" : ""}`}
+            href="/milliondollarcasestudy"
           >
             <b>$1.52M</b> case
           </Link>
           <Link
-            className={`feat ${pathname === "/case-847k" ? "active" : ""}`}
-            href="/case-847k"
+            className={`feat ${pathname === "/scalelowticket" ? "active" : ""}`}
+            href="/scalelowticket"
           >
             <b>$847K</b> case
           </Link>
@@ -171,10 +171,10 @@ export default function Navbar() {
               <Link href="/case-studies" onClick={closeMenu}>
                 Case studies
               </Link>
-              <Link href="/case-1m" className="sub" onClick={closeMenu}>
+              <Link href="/milliondollarcasestudy" className="sub" onClick={closeMenu}>
                 $1.52M high-ticket case
               </Link>
-              <Link href="/case-847k" className="sub" onClick={closeMenu}>
+              <Link href="/scalelowticket" className="sub" onClick={closeMenu}>
                 $847K coaching LTO case
               </Link>
               <Link href="/#pricing" onClick={closeMenu}>
