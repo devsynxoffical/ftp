@@ -68,6 +68,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
 
 export default function LiveAutomation() {
   const sectionRef = useRef<HTMLElement>(null);
+  const cursorRef = useRef<HTMLDivElement>(null);
+  const cursorLabelRef = useRef<HTMLSpanElement>(null);
   const boxRef = useRef<HTMLDivElement>(null);
   const trRef = useRef<SVGPathElement>(null);
   const drRef = useRef<SVGPathElement>(null);
@@ -172,30 +174,220 @@ export default function LiveAutomation() {
   };
 
   useEffect(() => {
+    const sec = sectionRef.current;
+    if (!sec) return;
+
     // Visibility observer to pause cycle when offscreen
     const io = new IntersectionObserver((entries) => {
       entries.forEach((e) => {
         visRef.current = e.isIntersecting;
       });
     });
-
-    if (sectionRef.current) {
-      io.observe(sectionRef.current);
-    }
+    io.observe(sec);
 
     startCycle();
 
-    const onResize = () => {
+    // Collision avoidance and responsive fit algorithm from index (1).html
+    function fit() {
+      if (typeof window === "undefined") return;
       if (window.innerWidth <= 980) {
+        evRefs.current.forEach((e) => {
+          if (e) e.style.top = "";
+        });
         if (trRef.current) trRef.current.removeAttribute("d");
         if (drRef.current) drRef.current.removeAttribute("d");
         if (glRef.current) {
           glRef.current.setAttribute("cx", "-20");
           glRef.current.setAttribute("cy", "-20");
         }
+        return;
       }
-    };
-    window.addEventListener("resize", onResize);
+      if (!sec) return;
+      const L = sec.getBoundingClientRect();
+      const H = sec.offsetHeight;
+      const zt = 112;
+      const G = 14;
+      const ROW = 58;
+
+      const T: { l: number; r: number; t: number }[] = [];
+      const add = (r: DOMRect) => {
+        if (r.width && r.height) {
+          T.push({ l: r.left - L.left, r: r.right - L.left, t: r.top - L.top });
+        }
+      };
+
+      ["h2", ".lead"].forEach((q) => {
+        const e = sec.querySelector(q);
+        if (!e) return;
+        const rg = document.createRange();
+        rg.selectNodeContents(e);
+        Array.from(rg.getClientRects()).forEach(add);
+      });
+
+      [".lbadge", ".lbt > *", ".lstats > *"].forEach((q) => {
+        sec.querySelectorAll(q).forEach((e) => add(e.getBoundingClientRect()));
+      });
+
+      const C = evRefs.current
+        .map((e, k) => {
+          if (!e) return null;
+          const r = e.getBoundingClientRect();
+          const dot = e.querySelector(".dot")?.getBoundingClientRect() || r;
+          const l = Math.min(r.left, dot.left) - L.left - 8;
+          const rr = Math.max(r.right, dot.right) - L.left + 8;
+          const hdEl = e.querySelector(".hd") as HTMLElement | null;
+          const bdDiv = e.querySelector(".bd > div") as HTMLElement | null;
+          const exp =
+            (hdEl?.offsetHeight || 0) + 24 + (bdDiv?.scrollHeight || 0) + 12;
+
+          let ceil = H;
+          T.forEach((t) => {
+            if (l < t.r && rr > t.l) ceil = Math.min(ceil, t.t);
+          });
+          const basePctY =
+            (parseFloat(AUTOMATION_EVENTS[k].y) / 100) * H;
+          return {
+            e,
+            l,
+            r: rr,
+            top: Math.max(zt, Math.min(basePctY, ceil - exp - G)),
+            ceil,
+            exp,
+          };
+        })
+        .filter(Boolean) as {
+        e: HTMLDivElement;
+        l: number;
+        r: number;
+        top: number;
+        ceil: number;
+        exp: number;
+      }[];
+
+      const S = C.slice().sort((a, b) => a.top - b.top);
+      const ov = (a: (typeof S)[0], b: (typeof S)[0]) =>
+        a.l < b.r && a.r > b.l;
+
+      for (let k = 1; k < S.length; k++) {
+        const b = S[k];
+        for (let m = 0; m < k; m++) {
+          const a = S[m];
+          if (ov(a, b) && b.top < a.top + ROW) b.top = a.top + ROW;
+        }
+        const lim = b.ceil - b.exp - G;
+        if (b.top > lim) {
+          b.top = lim;
+          for (let m = k - 1; m >= 0; m--) {
+            const a = S[m];
+            const nx = S.slice(m + 1, k + 1).filter((x) => ov(a, x));
+            nx.forEach((x) => {
+              if (a.top > x.top - ROW) a.top = x.top - ROW;
+            });
+          }
+        }
+      }
+
+      C.forEach((c) => {
+        c.e.style.top = Math.max(zt, c.top).toFixed(0) + "px";
+      });
+    }
+
+    fit();
+    window.addEventListener("resize", fit);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fit);
+    }
+
+    // Custom interactive cursor logic for #live
+    const live = sec;
+    const c = cursorRef.current;
+    const lb = cursorLabelRef.current;
+    let removeCursorEvents = () => {};
+
+    if (
+      c &&
+      lb &&
+      !window.matchMedia("(hover:none),(pointer:coarse)").matches
+    ) {
+      let x = 0,
+        y = 0,
+        tx = 0,
+        ty = 0,
+        on = false,
+        raf = 0;
+
+      const lab = (t: HTMLElement | null): [string, boolean] => {
+        const el = t?.closest(".ev, .btn, a, .lstats") as HTMLElement | null;
+        if (!el) return ["Automate this", false];
+        if (el.classList.contains("ev")) return ["", true];
+        if (el.classList.contains("lstats")) return ["Live count", false];
+        return ["Let's go", true];
+      };
+
+      const loop = () => {
+        x += (tx - x) * 0.22;
+        y += (ty - y) * 0.22;
+        c.style.transform = `translate3d(${x.toFixed(1)}px,${y.toFixed(1)}px,0)`;
+        if (Math.abs(tx - x) + Math.abs(ty - y) > 0.3) {
+          raf = requestAnimationFrame(loop);
+        } else {
+          raf = 0;
+        }
+      };
+
+      const handlePointerMove = (e: PointerEvent) => {
+        if (e.pointerType !== "mouse") return;
+        tx = e.clientX;
+        ty = e.clientY;
+        if (!on) {
+          on = true;
+          x = tx;
+          y = ty;
+          c.classList.add("on");
+          live.classList.add("cur");
+        }
+        const [l, h] = lab(e.target as HTMLElement);
+        if (l && lb.textContent !== l) lb.textContent = l;
+        c.classList.toggle("hot", h);
+        c.classList.toggle("mini", !l);
+        if (!raf) raf = requestAnimationFrame(loop);
+      };
+
+      const handlePointerLeave = () => {
+        on = false;
+        c.classList.remove("on", "hot", "mini");
+        live.classList.remove("cur");
+      };
+
+      const handlePointerDown = () => c.classList.add("down");
+      const handlePointerUp = () => c.classList.remove("down");
+
+      const handleScroll = () => {
+        if (on) {
+          const r = live.getBoundingClientRect();
+          if (ty < r.top || ty > r.bottom) {
+            on = false;
+            c.classList.remove("on");
+            live.classList.remove("cur");
+          }
+        }
+      };
+
+      live.addEventListener("pointermove", handlePointerMove);
+      live.addEventListener("pointerleave", handlePointerLeave);
+      live.addEventListener("pointerdown", handlePointerDown);
+      window.addEventListener("pointerup", handlePointerUp);
+      window.addEventListener("scroll", handleScroll, { passive: true });
+
+      removeCursorEvents = () => {
+        live.removeEventListener("pointermove", handlePointerMove);
+        live.removeEventListener("pointerleave", handlePointerLeave);
+        live.removeEventListener("pointerdown", handlePointerDown);
+        window.removeEventListener("pointerup", handlePointerUp);
+        window.removeEventListener("scroll", handleScroll);
+        if (raf) cancelAnimationFrame(raf);
+      };
+    }
 
     // Increment booked calls counter
     const countTimer = setInterval(() => {
@@ -204,7 +396,8 @@ export default function LiveAutomation() {
 
     return () => {
       io.disconnect();
-      window.removeEventListener("resize", onResize);
+      window.removeEventListener("resize", fit);
+      removeCursorEvents();
       if (timerRef.current) clearInterval(timerRef.current);
       clearInterval(countTimer);
       cancelAnimationFrame(animRef.current);
@@ -213,6 +406,11 @@ export default function LiveAutomation() {
 
   return (
     <section className="live" id="live" ref={sectionRef}>
+      <div className="lcur" id="lcur" ref={cursorRef} aria-hidden="true">
+        <i />
+        <span ref={cursorLabelRef}>Automate this</span>
+      </div>
+
       <img
         className="lbg"
         src="/img/x/office.webp"
@@ -256,8 +454,10 @@ export default function LiveAutomation() {
           >
             <span className="dot" />
             <div className="bx">
-              <time className="t">{event.time}</time>
-              {event.label}
+              <span className="hd">
+                <span className="ts">{event.time}</span>
+                <span className="lb">{event.label}</span>
+              </span>
               <div className="bd">
                 <div>
                   <div className="in">
