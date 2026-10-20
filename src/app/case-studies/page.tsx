@@ -2,9 +2,34 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Funnels That Print",
+  title: "Client Case Studies: Lead Gen & eCommerce Funnels",
   description:
-    "Two libraries of real, verified results across Lead Generation and E-commerce. Pick the one that matches your business.",
+    "Browse 250+ verified case studies and proof across high-ticket lead generation and DTC eCommerce funnels built by Funnels That Print.",
+  alternates: {
+    canonical: "https://www.funnelsthatprint.com/case-studies",
+  },
+  openGraph: {
+    title: "Client Case Studies: Lead Gen & eCommerce Funnels | Funnels That Print",
+    description:
+      "Browse 250+ verified client results across service businesses, high-ticket consulting, and high-growth DTC brands.",
+    url: "https://www.funnelsthatprint.com/case-studies",
+    type: "website",
+    images: [
+      {
+        url: "/img/x/office.webp",
+        width: 1200,
+        height: 630,
+        alt: "Funnels That Print Case Studies",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Client Case Studies: Lead Gen & eCommerce Funnels",
+    description:
+      "Browse 250+ verified case studies across Lead Generation and eCommerce.",
+    images: ["/img/x/office.webp"],
+  },
 };
 
 export default function CaseStudiesPage() {
