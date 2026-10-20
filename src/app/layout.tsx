@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     description:
       "Turn traffic into qualified sales calls with bespoke funnels, CRM automations, and AI calling agents.",
   },
+  verification: {
+    google: "eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI",
+  },
 };
 
 export const viewport: Viewport = {
@@ -52,6 +55,10 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="/img/logos/logo-01.webp" />
+        <meta
+          name="google-site-verification"
+          content="eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI"
+        />
       </head>
       <body>
         <Loader />
