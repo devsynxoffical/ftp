@@ -38,15 +38,7 @@ export default function Case847KPage() {
               <Link className="btn o" href="/contact">
                 Build my LTO funnel <i>&#8599;</i>
               </Link>
-              <a
-                className="btn"
-                href="#k2m"
-                style={{
-                  background: "#fff",
-                  color: "var(--fg)",
-                  border: "1px solid var(--line2)",
-                }}
-              >
+              <a className="btn w" href="#k2m">
                 See the numbers
               </a>
             </div>
