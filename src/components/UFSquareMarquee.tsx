@@ -92,7 +92,7 @@ export const RANDOM_PHOTOS: MarqueePhoto[] = [
  */
 export function UFSquareMarquee() {
   return (
-    <section className="marquee-row uf-marquee-section relative w-full overflow-hidden border-y border-white/[0.08] bg-[#020512] mt-24 sm:mt-32 lg:mt-40 py-10 sm:py-14">
+    <section className="marquee-row uf-marquee-section relative w-full overflow-hidden border-y border-white/[0.08] bg-[#020512] mt-0 py-10 sm:py-14">
       {/* Ambient background glow */}
       <div className="uf-ambient-glow pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(18,84,236,0.14),transparent_70%)]" />
 

@@ -5,6 +5,8 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { CASES, CaseItem } from "@/data/cases";
 import { LEADS, LeadItem } from "@/data/leads";
+import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 function CaseDetailContent() {
   const searchParams = useSearchParams();
@@ -197,14 +199,18 @@ function CaseDetailContent() {
 
 export default function CaseDetailPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="box" style={{ padding: "120px 0", textAlign: "center" }}>
-          <p className="lead">Loading case study...</p>
-        </div>
-      }
-    >
-      <CaseDetailContent />
-    </Suspense>
+    <>
+      <Suspense
+        fallback={
+          <div className="box" style={{ padding: "120px 0", textAlign: "center" }}>
+            <p className="lead">Loading case study...</p>
+          </div>
+        }
+      >
+        <CaseDetailContent />
+      </Suspense>
+      <RoboSection />
+      <UFSquareMarquee />
+    </>
   );
 }

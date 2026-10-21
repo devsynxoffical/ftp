@@ -3,6 +3,8 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { CASES, CaseItem } from "@/data/cases";
+import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
 
@@ -61,7 +63,8 @@ export default function CaseEcomPage() {
   };
 
   return (
-    <div className="box">
+    <>
+      <div className="box">
       <header className="cshero">
         <Link
           className="kback"
@@ -206,5 +209,8 @@ export default function CaseEcomPage() {
         </Link>
       </div>
     </div>
+    <RoboSection />
+    <UFSquareMarquee />
+  </>
   );
 }

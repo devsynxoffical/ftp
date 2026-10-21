@@ -656,6 +656,8 @@ h1,h2,h3,p{margin:0}
 
 /* footer (rama, FTP colors) */
 .foot{position:relative;margin-top:clamp(60px,8vw,110px);background:#141414;color:#fff;overflow:hidden;isolation:isolate}
+.uf-marquee-section + .foot,
+main:has(.uf-marquee-section) + .foot{margin-top:0}
 .foot::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--mx,75%) var(--my,25%),rgba(255,90,31,.2),transparent 65%);pointer-events:none}
 .fstart{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:clamp(40px,6vh,80px) var(--gut) clamp(30px,5vh,60px)}
 .fstart .fw{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 82;text-transform:uppercase;line-height:.85;letter-spacing:-.01em;white-space:nowrap;font-size:120px}
@@ -1178,7 +1180,7 @@ section.ct .info span{display:block;font-size:12px;color:var(--mute);font-weight
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   background-color: #020512;
-  margin-top: clamp(80px, 10vw, 150px);
+  margin-top: 0;
   padding: clamp(36px, 5vw, 60px) 0;
   isolation: isolate;
 }

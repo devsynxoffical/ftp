@@ -72,7 +72,9 @@ export default function RoboSection() {
 
       <div className="rm">
         <h2>
-          We build
+          We
+          <br />
+          build
           <br />
           with
           <br />

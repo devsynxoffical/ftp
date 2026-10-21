@@ -2,12 +2,15 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 export default function Case1MPage() {
   const [playing, setPlaying] = useState(false);
 
   return (
-    <div className="box">
+    <>
+      <div className="box">
       <section className="kc">
         <Link className="kback in" href="/">
           &larr; Back to home
@@ -206,5 +209,8 @@ export default function Case1MPage() {
         </Link>
       </section>
     </div>
+    <RoboSection />
+    <UFSquareMarquee />
+  </>
   );
 }

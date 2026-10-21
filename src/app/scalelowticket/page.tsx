@@ -2,6 +2,8 @@
 
 import { useState, useRef } from "react";
 import Link from "next/link";
+import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 export default function Case847KPage() {
   const [playing, setPlaying] = useState(false);
@@ -15,7 +17,8 @@ export default function Case847KPage() {
   };
 
   return (
-    <div className="box">
+    <>
+      <div className="box">
       <section className="kc">
         <Link className="kback in" href="/">
           &larr; Back to home
@@ -185,5 +188,8 @@ export default function Case847KPage() {
         </Link>
       </section>
     </div>
+    <RoboSection />
+    <UFSquareMarquee />
+  </>
   );
 }

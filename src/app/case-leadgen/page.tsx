@@ -3,6 +3,8 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { LEADS, LeadItem } from "@/data/leads";
+import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
 
@@ -61,7 +63,8 @@ export default function CaseLeadgenPage() {
   };
 
   return (
-    <div className="box">
+    <>
+      <div className="box">
       <header className="cshero">
         <Link
           className="kback"
@@ -207,5 +210,8 @@ export default function CaseLeadgenPage() {
         </Link>
       </div>
     </div>
+    <RoboSection />
+    <UFSquareMarquee />
+  </>
   );
 }

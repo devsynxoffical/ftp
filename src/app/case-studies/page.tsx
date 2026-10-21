@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 export const metadata: Metadata = {
   title: "Client Case Studies: Lead Gen & eCommerce Funnels",
@@ -34,7 +36,8 @@ export const metadata: Metadata = {
 
 export default function CaseStudiesPage() {
   return (
-    <div className="box">
+    <>
+      <div className="box">
       <header className="cshero">
         <h1 className="h1 d">
           Case <span className="it">studies</span>
@@ -148,5 +151,8 @@ export default function CaseStudiesPage() {
         </Link>
       </div>
     </div>
+    <RoboSection />
+    <UFSquareMarquee />
+  </>
   );
 }
