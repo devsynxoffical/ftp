@@ -30,7 +30,7 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     title: "Qualification",
     desc: "The AI agent asks three questions, scores the lead and routes it to the right pipeline.",
     x: "46%",
-    y: "40%",
+    y: "36%",
     alignClass: "",
     width: 330,
   },
@@ -59,8 +59,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "AI call completed",
     title: "AI calling",
     desc: "No-shows get a call back, objections answered, the slot rebooked.",
-    x: "60%",
-    y: "63%",
+    x: "62%",
+    y: "65%",
     alignClass: "",
     width: 310,
   },
@@ -500,7 +500,8 @@ export default function LiveAutomation() {
 
       <span className="lbadge">Funnel automation agency, since 2019</span>
       <h2>
-        Your funnel, <em>booking itself.</em>
+        Your funnel,<br />
+        <em>booking itself.</em>
       </h2>
       <div className="lrow">
         <div>

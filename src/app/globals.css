@@ -156,7 +156,7 @@ h1,h2,h3,p{margin:0}
 .live .lbadge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-size:12px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;margin-bottom:22px;align-self:flex-start;color:var(--body)}
 .live .lbadge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--or)}
 .live h2{font-family:var(--disp);font-weight:800;font-size:clamp(46px,8vw,128px);line-height:.95;letter-spacing:-.045em;max-width:9em}
-.live h2 em{font-style:normal;color:var(--or)}
+.live h2 em{display:block;font-style:normal;color:var(--or);white-space:nowrap}
 .live .lrow{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-top:28px}
 .live .lead{color:var(--body);max-width:38ch;font-size:clamp(16px,1.3vw,20px)}
 .live .lbt{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
