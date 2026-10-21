@@ -918,7 +918,36 @@ h1,h2,h3,p{margin:0}
 .tc .tf{transition:opacity .3s}
 @media (max-width:1100px){.tsg{flex-wrap:wrap;gap:16px}.tc{margin:0;width:min(300px,44vw)}}
 @media (max-width:760px){.tsg{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding-bottom:0}.tc{width:auto;margin:0;--o:0px;aspect-ratio:.6}.tc .tag{left:10px;bottom:10px;font-size:12px;padding:5px 10px}.tbk{padding:12px}.tbk .tn{font-size:20px}.tbk .tb{font-size:11.5px;margin-top:6px}.tbk .tsk{margin-top:6px}.tbk .tsk i{font-size:9.5px;padding:3px 7px}.tbk .twk{display:none}.tbk .tso a{padding:5px 10px;font-size:11px}.tlm .tf p,.tdk .tf p{font-size:16px}.tlm .tf,.tdk .tf{padding:14px}}
-@media (prefers-reduced-motion:reduce){.tc,.tbk{transition:none}}
+/* === 3D GLASSMORPHIC PHOTO RIBBON (UFSquareMarquee) === */
+.uf-marquee-section{position:relative;width:100%;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background-color:#020512;margin-top:clamp(80px,10vw,150px);padding:clamp(36px,5vw,60px) 0;isolation:isolate}
+.uf-ambient-glow{pointer-events:none;position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(18,84,236,.16),transparent 70%);z-index:1}
+.uf-vignette-left{pointer-events:none;position:absolute;top:0;bottom:0;left:0;z-index:20;width:clamp(60px,10vw,180px);background:linear-gradient(90deg,#020512,rgba(2,5,18,.8) 60%,transparent)}
+.uf-vignette-right{pointer-events:none;position:absolute;top:0;bottom:0;right:0;z-index:20;width:clamp(60px,10vw,180px);background:linear-gradient(270deg,#020512,rgba(2,5,18,.8) 60%,transparent)}
+.uf-marquee-track{display:flex;width:max-content;animation:uf-marquee-scroll var(--marquee-duration,48s) linear infinite;will-change:transform}
+.uf-marquee-track:hover{animation-play-state:paused}
+@keyframes uf-marquee-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
+.uf-marquee-copy{display:flex;flex-shrink:0;align-items:center;gap:clamp(20px,2.5vw,36px);padding:16px clamp(12px,1.5vw,20px)}
+.uf-card-wrapper{position:relative;flex-shrink:0;transform:rotate(var(--rot,0deg));transition:transform .5s cubic-bezier(.2,.7,.2,1),z-index .3s;cursor:pointer}
+.uf-card-wrapper:hover{z-index:30;transform:scale(1.06) rotate(0deg)!important}
+.uf-glass-card{position:relative;width:clamp(280px,24vw,390px);overflow:hidden;border-radius:20px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(180deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.03) 50%,rgba(255,255,255,.01) 100%);padding:12px;box-shadow:0 16px 40px rgba(0,0,0,.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:border-color .35s ease,box-shadow .35s ease}
+.uf-card-wrapper:hover .uf-glass-card{border-color:rgba(0,232,255,.55);box-shadow:0 20px 50px rgba(0,0,0,.85),0 0 30px rgba(0,232,255,.45)}
+.uf-window-header{margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+.uf-mac-dots{display:flex;align-items:center;gap:6px}
+.uf-mac-dot{width:9px;height:9px;border-radius:50%;display:block}
+.uf-mac-dot.close{background-color:rgba(244,63,94,.85);box-shadow:0 0 6px rgba(244,63,94,.4)}
+.uf-mac-dot.min{background-color:rgba(245,158,11,.85);box-shadow:0 0 6px rgba(245,158,11,.4)}
+.uf-mac-dot.max{background-color:rgba(16,185,129,.85);box-shadow:0 0 6px rgba(16,185,129,.4)}
+.uf-status-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1px solid rgba(0,232,255,.35);background:rgba(0,232,255,.1);padding:3px 9px;font-family:var(--mono);font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#00e8ff}
+.uf-badge-pulse{width:6px;height:6px;border-radius:50%;background-color:#00e8ff;box-shadow:0 0 8px #00e8ff;animation:uf-pulse 1.8s ease-in-out infinite}
+@keyframes uf-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
+.uf-img-frame{position:relative;height:clamp(160px,15vw,230px);width:100%;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:#060816}
+.uf-img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .7s cubic-bezier(.2,.7,.2,1);display:block}
+.uf-card-wrapper:hover .uf-img{transform:scale(1.05)}
+.uf-img-glare{pointer-events:none;position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08) 0%,transparent 50%,rgba(0,232,255,.03) 100%)}
+.uf-caption-row{margin-top:10px;display:flex;align-items:center;justify-content:space-between;padding:0 4px}
+.uf-caption-title{font-family:var(--mono);font-size:11px;font-weight:500;color:#cbd5e1;letter-spacing:.02em;transition:color .3s ease}
+.uf-card-wrapper:hover .uf-caption-title{color:#fff}
+.uf-caption-meta{font-family:var(--mono);font-size:9.5px;font-weight:500;color:#64748b;letter-spacing:.06em;text-transform:uppercase}
 #team{overflow-x:clip}
 </style>
 </head>
@@ -1147,6 +1176,144 @@ h1,h2,h3,p{margin:0}
   <div class="rl"><img src="img/x/robot.webp" alt="FTP automation robot" id="robot" loading="lazy"></div>
   <div class="rm"><h2>We build<br>with<br>Robots.<span class="stk"><span>Let's Talk</span></span></h2><a href="#robo">Talk with us <i>&rarr;</i></a><div class="sp"></div></div>
   <div class="rr"><p>We're a small team of strategists, builders and automation nerds, blending funnels, follow-up and AI calling so your leads turn into booked calls, not cold contacts.</p></div>
+</section>
+
+<section class="marquee-row uf-marquee-section" aria-label="Strategy sessions and client audits">
+  <div class="uf-ambient-glow"></div>
+  <div class="uf-vignette-left"></div>
+  <div class="uf-vignette-right"></div>
+  <div class="marquee-track-left uf-marquee-track" style="--marquee-duration:48s">
+    <div class="uf-marquee-copy">
+      <div class="uf-card-wrapper" style="--rot:-2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Funnel Build</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/anastasia.webp" alt="Client funnel preview" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Client Offer Architecture</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Strategy Session</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/ann.webp" alt="Strategy call with Ann" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Live Growth Breakdown</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-1deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>ROAS Verified</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/analytics.webp" alt="Analytics dashboard proof" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Real-Time Tracking Core</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:1.5deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Scaling Audit</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/george.webp" alt="Team call with George" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Backend Conversion Review</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Deep-Dive</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/edgar_jeermei.webp" alt="Edgar &amp; Jeremi" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Offer &amp; Angle Mapping</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Client Onboarding</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/guilia.webp" alt="Client session with Giulia" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">High-Ticket Pipeline Setup</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-1.5deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Traffic Scale</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/ig_shot.webp" alt="Performance snapshot" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Paid Acquisition Proof</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:1deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Growth Workshop</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/owne.webp" alt="Client session with Owen" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Unit Economics Audit</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Pipeline Review</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/sina.webp" alt="Client session with Sina" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Closing Optimization</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="uf-marquee-copy" aria-hidden="true">
+      <div class="uf-card-wrapper" style="--rot:-2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Funnel Build</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/anastasia.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Client Offer Architecture</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Strategy Session</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/ann.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Live Growth Breakdown</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-1deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>ROAS Verified</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/analytics.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Real-Time Tracking Core</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:1.5deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Scaling Audit</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/george.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Backend Conversion Review</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Deep-Dive</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/edgar_jeermei.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Offer &amp; Angle Mapping</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Client Onboarding</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/guilia.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">High-Ticket Pipeline Setup</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-1.5deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Traffic Scale</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/ig_shot.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Paid Acquisition Proof</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:1deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Growth Workshop</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/owne.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Unit Economics Audit</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+      <div class="uf-card-wrapper" style="--rot:-2deg">
+        <div class="uf-glass-card">
+          <div class="uf-window-header"><div class="uf-mac-dots"><span class="uf-mac-dot close"></span><span class="uf-mac-dot min"></span><span class="uf-mac-dot max"></span></div><div class="uf-status-badge"><span class="uf-badge-pulse"></span>Pipeline Review</div></div>
+          <div class="uf-img-frame"><img src="images/random/cropped/sina.webp" alt="" class="uf-img" loading="lazy"><div class="uf-img-glare"></div></div>
+          <div class="uf-caption-row"><span class="uf-caption-title">Closing Optimization</span><span class="uf-caption-meta">LIVE RECORDING</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer class="foot" id="foot">

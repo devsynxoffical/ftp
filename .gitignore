@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# static media mirror
+/funnels-that-print/img/
+/funnels-that-print/vid/
+/funnels-that-print/images/

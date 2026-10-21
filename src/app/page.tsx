@@ -12,6 +12,7 @@ import PricingSection from "@/components/PricingSection";
 import AdvantageFlow from "@/components/AdvantageFlow";
 import FAQSection from "@/components/FAQSection";
 import RoboSection from "@/components/RoboSection";
+import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 export default function Home() {
   return (
@@ -20,7 +21,6 @@ export default function Home() {
       <LogoTicker />
       <LiveAutomation />
       <ServicesSection />
-      <AdvantageFlow />
       <ProcessSection />
       <WhoSection />
       <PortfolioFoldfolio />
@@ -28,8 +28,10 @@ export default function Home() {
       <VideoTestimonials />
       <TeamSection />
       <PricingSection />
+      <AdvantageFlow />
       <FAQSection />
       <RoboSection />
+      <UFSquareMarquee />
     </>
   );
 }

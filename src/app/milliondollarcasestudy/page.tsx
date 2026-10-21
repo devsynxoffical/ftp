@@ -24,26 +24,13 @@ export default function Case1MPage() {
             From inconsistent cold traffic to $1.52M in 19 months, on a turnkey
             Million Dollar Funnel&trade; stack.
           </h1>
-        </div>
-
-        <div className="k1m in">
-          <div>
-            <span>Gross revenue generated</span>
-            <b>$1,520,000</b>
-          </div>
-          <div>
-            <span>Scaling timeline</span>
-            <b>
-              <em style={{ fontStyle: "normal" }}>19</em> months
-            </b>
-          </div>
-          <div>
-            <span>Niche</span>
-            <b className="sm">High-ticket scaling &amp; consulting</b>
-          </div>
-          <div>
-            <span>System architecture</span>
-            <b className="sm">Turnkey Million Dollar Funnel&trade; stack</b>
+          <div className="hb">
+            <Link className="btn o" href="/contact">
+              Build my funnel <i>&#8599;</i>
+            </Link>
+            <a className="btn w" href="#k1m">
+              See the numbers
+            </a>
           </div>
         </div>
 
@@ -79,6 +66,72 @@ export default function Case1MPage() {
               title="Case study video"
             />
           )}
+        </div>
+
+        <div className="k2g in" id="k1m">
+          <div className="g1">
+            <span>Revenue collected</span>
+            <div className="spark">
+              <s style={{ "--i": 0, "--h": "18%" } as React.CSSProperties} />
+              <s style={{ "--i": 1, "--h": "24%" } as React.CSSProperties} />
+              <s style={{ "--i": 2, "--h": "22%" } as React.CSSProperties} />
+              <s style={{ "--i": 3, "--h": "31%" } as React.CSSProperties} />
+              <s style={{ "--i": 4, "--h": "36%" } as React.CSSProperties} />
+              <s style={{ "--i": 5, "--h": "34%" } as React.CSSProperties} />
+              <s style={{ "--i": 6, "--h": "45%" } as React.CSSProperties} />
+              <s style={{ "--i": 7, "--h": "52%" } as React.CSSProperties} />
+              <s style={{ "--i": 8, "--h": "49%" } as React.CSSProperties} />
+              <s style={{ "--i": 9, "--h": "61%" } as React.CSSProperties} />
+              <s style={{ "--i": 10, "--h": "68%" } as React.CSSProperties} />
+              <s style={{ "--i": 11, "--h": "74%" } as React.CSSProperties} />
+              <s style={{ "--i": 12, "--h": "82%" } as React.CSSProperties} />
+              <s style={{ "--i": 13, "--h": "100%" } as React.CSSProperties} />
+            </div>
+            <b>$1,520,000</b>
+          </div>
+
+          <div className="g2">
+            <span>Scaling timeline &amp; cash collected</span>
+            <div className="bars">
+              <div>
+                Timeline
+                <i>
+                  <s style={{ "--w": "38%" } as React.CSSProperties} />
+                </i>
+                <em>19 months</em>
+              </div>
+              <div>
+                Collected
+                <i>
+                  <s style={{ "--w": "100%" } as React.CSSProperties} />
+                </i>
+                <em>$1,520,000</em>
+              </div>
+            </div>
+          </div>
+
+          <div className="g3">
+            <span>Scaling timeline</span>
+            <b>
+              <em style={{ fontStyle: "normal" }}>19</em> months
+            </b>
+          </div>
+
+          <div className="g4">
+            <span>Niche</span>
+            <b>High-ticket scaling &amp; consulting</b>
+          </div>
+
+          <div className="g5">
+            <div>
+              <span>System architecture</span>
+              <b>Turnkey Million Dollar Funnel&trade; stack</b>
+            </div>
+            <p>
+              VSL acquisition funnel, attribution pipelines, Meta CAPI &amp; dynamic
+              qualification filtering high-ticket appointments
+            </p>
+          </div>
         </div>
 
         <div className="k1b">

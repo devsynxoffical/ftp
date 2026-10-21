@@ -29,8 +29,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Lead qualified, CRM updated",
     title: "Qualification",
     desc: "The AI agent asks three questions, scores the lead and routes it to the right pipeline.",
-    x: "40%",
-    y: "32%",
+    x: "46%",
+    y: "40%",
     alignClass: "",
     width: 330,
   },
@@ -39,7 +39,7 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Call booked",
     title: "Booking",
     desc: "Calendar slot picked, confirmation sent, reminders queued at 24h and 1h.",
-    x: "92%",
+    x: "95%",
     y: "18%",
     alignClass: "r",
     width: 290,
@@ -49,8 +49,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Follow-up sequence started",
     title: "Follow-up",
     desc: "Email and SMS nurture starts without anyone touching it.",
-    x: "92%",
-    y: "44%",
+    x: "95%",
+    y: "47%",
     alignClass: "r",
     width: 310,
   },
@@ -59,8 +59,8 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "AI call completed",
     title: "AI calling",
     desc: "No-shows get a call back, objections answered, the slot rebooked.",
-    x: "58%",
-    y: "65%",
+    x: "60%",
+    y: "63%",
     alignClass: "",
     width: 310,
   },
@@ -439,41 +439,17 @@ export default function LiveAutomation() {
 
       <img
         className="lbg"
-        src="/img/hero/agent.webp"
+        src="/img/x/office.webp"
         alt=""
         loading="lazy"
       />
 
-      <div className="box lin">
-        <span className="lbadge mono">
-          <i />Live system &middot; 24/7
-        </span>
-        <h2 className="h2 d">
-          While you sleep, <br />
-          your funnel is <span className="it">selling.</span>
-        </h2>
-        <p className="lead">
-          Every lead captured, qualified, booked and followed up automatically.
-          No dropped conversations. No missed opportunities.
-        </p>
-
-        <div className="lbt">
-          <div className="lstats">
-            <b id="lcount">{callCount.toLocaleString("en-US")}</b>
-            <span>Automated actions today</span>
-          </div>
-          <a className="btn o" href="#robo">
-            Automate my funnel <i>&#8599;</i>
-          </a>
-        </div>
-      </div>
-
       {/* Events and Dynamic SVG Connecting Line */}
       <div ref={boxRef} className="evs" id="evs">
         <svg className="evsvg" id="evsvg" aria-hidden="true">
-          <path ref={trRef} id="evtr" />
-          <path ref={drRef} id="evdr" />
-          <circle ref={glRef} id="evgl" r="5" />
+          <path ref={trRef} id="evtr" className="tr" />
+          <path ref={drRef} id="evdr" className="dr" />
+          <circle ref={glRef} id="evgl" className="gl" r="4" cx="-20" cy="-20" />
         </svg>
 
         {AUTOMATION_EVENTS.map((event, idx) => {
@@ -520,6 +496,37 @@ export default function LiveAutomation() {
             </div>
           );
         })}
+      </div>
+
+      <span className="lbadge">Funnel automation agency, since 2019</span>
+      <h2>
+        Your funnel, <em>booking itself.</em>
+      </h2>
+      <div className="lrow">
+        <div>
+          <p className="lead">
+            We wire your pages, CRM, calendar, follow-up and AI calling into one
+            flow that keeps booking calls while your team sleeps.
+          </p>
+          <div className="lbt">
+            <a className="btn lm" href="#robo">
+              Book a call <i>&#8599;</i>
+            </a>
+            <a className="btn lo" href="#services">
+              See the workflows
+            </a>
+          </div>
+        </div>
+        <div className="lstats">
+          <div>
+            <b id="lcount">{callCount.toLocaleString("en-US")}</b>
+            <span>Calls booked this month</span>
+          </div>
+          <div>
+            <b>31h</b>
+            <span>Back per week</span>
+          </div>
+        </div>
       </div>
     </section>
   );
