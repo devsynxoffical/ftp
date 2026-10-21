@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 
 interface AutomationEvent {
   time: string;
@@ -19,10 +19,10 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     label: "Lead captured",
     title: "Lead capture",
     desc: "Every form fill lands in the CRM with source, score and owner in seconds.",
-    x: "38%",
-    y: "13%",
+    x: "46%",
+    y: "12%",
     alignClass: "",
-    width: 320,
+    width: 330,
   },
   {
     time: "02:15",
@@ -84,6 +84,127 @@ export default function LiveAutomation() {
   const timerRef = useRef<NodeJS.Timeout | null>(null);
   const visRef = useRef<boolean>(true);
 
+  // Rearrange floating cards so they never cover text across screen sizes
+  const fit = useCallback(() => {
+    if (typeof window === "undefined" || window.innerWidth <= 980) {
+      evRefs.current.forEach((e) => {
+        if (e) e.style.top = "";
+      });
+      return;
+    }
+
+    const sec = sectionRef.current;
+    if (!sec) return;
+
+    const L = sec.getBoundingClientRect();
+    const H = sec.offsetHeight;
+    const zt = 104;
+    const G = 12;
+
+    const T: { l: number; r: number; t: number }[] = [];
+    const add = (r: DOMRect) => {
+      if (r.width && r.height) {
+        T.push({
+          l: r.left - L.left - 16,
+          r: r.right - L.left + 16,
+          t: r.top - L.top,
+        });
+      }
+    };
+
+    ["h2", ".lead"].forEach((q) => {
+      const e = sec.querySelector(q);
+      if (!e) return;
+      const rg = document.createRange();
+      rg.selectNodeContents(e);
+      Array.from(rg.getClientRects()).forEach(add);
+    });
+
+    [".lbadge", ".lbt>*", ".lstats>*"].forEach((q) => {
+      Array.from(sec.querySelectorAll(q)).forEach((e) =>
+        add(e.getBoundingClientRect())
+      );
+    });
+
+    const currentEvs = evRefs.current.filter(Boolean) as HTMLDivElement[];
+    if (currentEvs.length !== AUTOMATION_EVENTS.length) return;
+
+    const C = currentEvs.map((e, k) => {
+      const r = e.getBoundingClientRect();
+      const dot = e.querySelector(".dot")?.getBoundingClientRect() || r;
+      const l = Math.min(r.left, dot.left) - L.left - 10;
+      const rr = Math.max(r.right, dot.right) - L.left + 10;
+      const hd = e.querySelector<HTMLElement>(".hd");
+      const bdDiv = e.querySelector<HTMLElement>(".bd > div");
+      const hc = (hd?.offsetHeight || 30) + 24;
+      const he = hc + (bdDiv?.scrollHeight || 100) + 4;
+      const h = k === curRef.current ? he : hc;
+
+      let ceil = H - 20;
+      T.forEach((t) => {
+        if (l < t.r && rr > t.l) {
+          ceil = Math.min(ceil, t.t);
+        }
+      });
+
+      return {
+        e,
+        l,
+        r: rr,
+        base: Math.max(zt, (parseFloat(AUTOMATION_EVENTS[k].y) / 100) * H),
+        h,
+        ceil,
+        top: 0,
+      };
+    });
+
+    const ov = (
+      a: { l: number; r: number },
+      b: { l: number; r: number }
+    ) => a.l < b.r && a.r > b.l;
+
+    const P: typeof C = [];
+
+    C.slice()
+      .sort((a, b) => a.base - b.base)
+      .forEach((c) => {
+        let top = Math.min(c.base, c.ceil - c.h - G);
+        let moved = true;
+        let n = 0;
+
+        while (moved && n++ < 20) {
+          moved = false;
+          P.forEach((p) => {
+            if (ov(p, c) && top < p.top + p.h + G && top + c.h + G > p.top) {
+              top = p.top + p.h + G;
+              moved = true;
+            }
+          });
+        }
+
+        if (top + c.h + G > c.ceil) {
+          top = c.ceil - c.h - G;
+          let ref = c;
+          let rt = top;
+          for (let m = P.length - 1; m >= 0; m--) {
+            const p = P[m];
+            if (ov(p, ref) && p.top + p.h + G > rt) {
+              p.top = rt - p.h - G;
+              ref = p;
+              rt = p.top;
+            }
+          }
+        }
+
+        c.top = Math.max(zt, top);
+        P.push(c);
+      });
+
+    C.forEach((c) => {
+      c.e.style.top = `${c.top.toFixed(0)}px`;
+    });
+  }, []);
+
   // Link curve animation between dot A and dot B
   const link = (a: number, b: number) => {
     if (typeof window === "undefined" || window.innerWidth <= 980) return;
@@ -98,22 +219,22 @@ export default function LiveAutomation() {
 
     const pt = (el: HTMLElement) => {
       const dot = el.querySelector(".dot");
-      if (!dot) return [0, 0];
-      const d = dot.getBoundingClientRect();
-      const bBox = box.getBoundingClientRect();
+      const d = (dot || el).getBoundingClientRect();
+      const bRect = box.getBoundingClientRect();
       return [
-        d.left + d.width / 2 - bBox.left,
-        d.top + d.height / 2 - bBox.top,
+        d.left + d.width / 2 - bRect.left,
+        d.top + d.height / 2 - bRect.top,
       ];
     };
 
     const [x1, y1] = pt(elA);
     const [x2, y2] = pt(elB);
-    const mx = (x1 + x2) / 2;
-    const lift = Math.max(60, Math.min(180, Math.abs(x2 - x1) * 0.28));
-    const my = Math.max(30, Math.min(y1, y2) - lift);
-    const d = `M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`;
 
+    const mx = (x1 + x2) / 2;
+    const lift = Math.max(80, Math.abs(x2 - x1) * 0.35);
+    const my = Math.min(y1, y2) - lift;
+
+    const d = `M${x1} ${y1} Q ${mx} ${my} ${x2} ${y2}`;
     tr.setAttribute("d", d);
     dr.setAttribute("d", d);
 
@@ -158,8 +279,9 @@ export default function LiveAutomation() {
     evRefs.current.forEach((el, k) => {
       if (el) el.classList.toggle("on", k === i);
     });
+    fit();
     if (prev > -1) {
-      link(prev, i);
+      setTimeout(() => link(prev, i), 620);
     }
   };
 
@@ -187,26 +309,11 @@ export default function LiveAutomation() {
 
     startCycle();
 
-    const handleResize = () => {
-      if (window.innerWidth <= 980) {
-        evRefs.current.forEach((e) => {
-          if (e) e.style.top = "";
-        });
-        if (trRef.current) trRef.current.removeAttribute("d");
-        if (drRef.current) drRef.current.removeAttribute("d");
-        if (glRef.current) {
-          glRef.current.setAttribute("cx", "-20");
-          glRef.current.setAttribute("cy", "-20");
-        }
-      } else {
-        evRefs.current.forEach((e) => {
-          if (e) e.style.top = "";
-        });
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
+    fit();
+    window.addEventListener("resize", fit);
+    if (document.fonts) {
+      document.fonts.ready.then(fit);
+    }
 
     // Custom interactive cursor logic for #live
     const live = sec;
@@ -219,18 +326,18 @@ export default function LiveAutomation() {
       lb &&
       !window.matchMedia("(hover:none),(pointer:coarse)").matches
     ) {
-      let x = 0,
-        y = 0,
-        tx = 0,
-        ty = 0,
-        on = false,
-        raf = 0;
+      let x = 0;
+      let y = 0;
+      let tx = 0;
+      let ty = 0;
+      let on = false;
+      let raf = 0;
 
-      const lab = (t: HTMLElement | null): [string, boolean] => {
-        const el = t?.closest(".ev, .btn, a, .lstats") as HTMLElement | null;
-        if (!el) return ["Automate this", false];
-        if (el.classList.contains("ev")) return ["", true];
-        if (el.classList.contains("lstats")) return ["Live count", false];
+      const lab = (t: HTMLElement): [string, boolean] => {
+        const e = t.closest<HTMLElement>(".ev, .btn, a, .lstats");
+        if (!e) return ["Automate this", false];
+        if (e.classList.contains("ev")) return ["", true];
+        if (e.classList.contains("lstats")) return ["Live count", false];
         return ["Let's go", true];
       };
 
@@ -245,7 +352,7 @@ export default function LiveAutomation() {
         }
       };
 
-      const handlePointerMove = (e: PointerEvent) => {
+      const onPointerMove = (e: PointerEvent) => {
         if (e.pointerType !== "mouse") return;
         tx = e.clientX;
         ty = e.clientY;
@@ -263,16 +370,16 @@ export default function LiveAutomation() {
         if (!raf) raf = requestAnimationFrame(loop);
       };
 
-      const handlePointerLeave = () => {
+      const onPointerLeave = () => {
         on = false;
         c.classList.remove("on", "hot", "mini");
         live.classList.remove("cur");
       };
 
-      const handlePointerDown = () => c.classList.add("down");
-      const handlePointerUp = () => c.classList.remove("down");
+      const onPointerDown = () => c.classList.add("down");
+      const onPointerUp = () => c.classList.remove("down");
 
-      const handleScroll = () => {
+      const onScroll = () => {
         if (on) {
           const r = live.getBoundingClientRect();
           if (ty < r.top || ty > r.bottom) {
@@ -283,138 +390,136 @@ export default function LiveAutomation() {
         }
       };
 
-      live.addEventListener("pointermove", handlePointerMove);
-      live.addEventListener("pointerleave", handlePointerLeave);
-      live.addEventListener("pointerdown", handlePointerDown);
-      window.addEventListener("pointerup", handlePointerUp);
-      window.addEventListener("scroll", handleScroll, { passive: true });
+      live.addEventListener("pointermove", onPointerMove);
+      live.addEventListener("pointerleave", onPointerLeave);
+      live.addEventListener("pointerdown", onPointerDown);
+      window.addEventListener("pointerup", onPointerUp);
+      window.addEventListener("scroll", onScroll, { passive: true });
 
       removeCursorEvents = () => {
-        live.removeEventListener("pointermove", handlePointerMove);
-        live.removeEventListener("pointerleave", handlePointerLeave);
-        live.removeEventListener("pointerdown", handlePointerDown);
-        window.removeEventListener("pointerup", handlePointerUp);
-        window.removeEventListener("scroll", handleScroll);
+        live.removeEventListener("pointermove", onPointerMove);
+        live.removeEventListener("pointerleave", onPointerLeave);
+        live.removeEventListener("pointerdown", onPointerDown);
+        window.removeEventListener("pointerup", onPointerUp);
+        window.removeEventListener("scroll", onScroll);
         if (raf) cancelAnimationFrame(raf);
       };
     }
 
-    // Increment booked calls counter
-    const countTimer = setInterval(() => {
-      setCallCount((prev) => prev + 1 + Math.floor(Math.random() * 3));
-    }, 2600);
-
     return () => {
       io.disconnect();
-      window.removeEventListener("resize", handleResize);
-      removeCursorEvents();
       if (timerRef.current) clearInterval(timerRef.current);
-      clearInterval(countTimer);
-      cancelAnimationFrame(animRef.current);
+      if (animRef.current) cancelAnimationFrame(animRef.current);
+      window.removeEventListener("resize", fit);
+      removeCursorEvents();
     };
+  }, [fit]);
+
+  // Live counter simulation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCallCount((prev) => prev + 1 + Math.floor(Math.random() * 3));
+    }, 2600);
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="live" id="live" ref={sectionRef}>
-      <div className="lcur" id="lcur" ref={cursorRef} aria-hidden="true">
+    <section ref={sectionRef} className="live" id="live">
+      {/* Interactive Cursor */}
+      <div
+        ref={cursorRef}
+        className="lcur"
+        id="lcur"
+        aria-hidden="true"
+        style={{ pointerEvents: "none" }}
+      >
         <i />
         <span ref={cursorLabelRef}>Automate this</span>
       </div>
 
       <img
         className="lbg"
-        src="/img/x/office.webp"
+        src="/img/hero/agent.webp"
         alt=""
         loading="lazy"
       />
 
-      <div className="evs" id="evs" ref={boxRef}>
-        <svg className="evsvg" id="evsvg">
-          <path className="tr" id="evtr" ref={trRef} />
-          <path className="dr" id="evdr" ref={drRef} />
-          <circle className="gl" id="evgl" ref={glRef} r="4" cx="-20" cy="-20" />
+      <div className="box lin">
+        <span className="lbadge mono">
+          <i />Live system &middot; 24/7
+        </span>
+        <h2 className="h2 d">
+          While you sleep, <br />
+          your funnel is <span className="it">selling.</span>
+        </h2>
+        <p className="lead">
+          Every lead captured, qualified, booked and followed up automatically.
+          No dropped conversations. No missed opportunities.
+        </p>
+
+        <div className="lbt">
+          <div className="lstats">
+            <b id="lcount">{callCount.toLocaleString("en-US")}</b>
+            <span>Automated actions today</span>
+          </div>
+          <a className="btn o" href="#robo">
+            Automate my funnel <i>&#8599;</i>
+          </a>
+        </div>
+      </div>
+
+      {/* Events and Dynamic SVG Connecting Line */}
+      <div ref={boxRef} className="evs" id="evs">
+        <svg className="evsvg" id="evsvg" aria-hidden="true">
+          <path ref={trRef} id="evtr" />
+          <path ref={drRef} id="evdr" />
+          <circle ref={glRef} id="evgl" r="5" />
         </svg>
 
-        {AUTOMATION_EVENTS.map((event, i) => (
-          <div
-            key={event.title}
-            ref={(el) => {
-              evRefs.current[i] = el;
-            }}
-            className={`ev ${event.alignClass} ${
-              activeIdx === i ? "on" : ""
-            }`}
-            style={
-              {
-                "--x": event.x,
-                "--y": event.y,
-                "--w": `${event.width}px`,
-              } as React.CSSProperties
-            }
-            data-i={i}
-            onPointerEnter={() => {
-              if (timerRef.current) clearInterval(timerRef.current);
-              setIndex(i);
-            }}
-            onPointerLeave={startCycle}
-            onClick={() => {
-              if (timerRef.current) clearInterval(timerRef.current);
-              setIndex(i);
-            }}
-          >
-            <span className="dot" />
-            <div className="bx">
-              <span className="hd">
-                <span className="ts">{event.time}</span>
-                <span className="lb">{event.label}</span>
-              </span>
-              <div className="bd">
-                <div>
-                  <div className="in">
-                    <div>
-                      <b>{event.title}</b>
-                      <p>{event.desc}</p>
+        {AUTOMATION_EVENTS.map((event, idx) => {
+          const isActive = activeIdx === idx;
+          return (
+            <div
+              key={event.title}
+              ref={(el) => {
+                evRefs.current[idx] = el;
+              }}
+              className={`ev ${event.alignClass} ${isActive ? "on" : ""}`}
+              style={
+                {
+                  "--x": event.x,
+                  "--y": event.y,
+                  "--w": `${event.width}px`,
+                } as React.CSSProperties
+              }
+              data-i={idx}
+              onPointerEnter={() => {
+                if (timerRef.current) clearInterval(timerRef.current);
+                setIndex(idx);
+              }}
+              onPointerLeave={startCycle}
+            >
+              <span className="dot" />
+              <div className="bx">
+                <span className="hd">
+                  <span className="ts">{event.time}</span>
+                  <span className="lb">{event.label}</span>
+                </span>
+                <div className="bd">
+                  <div>
+                    <div className="in">
+                      <div>
+                        <b>{event.title}</b>
+                        <p>{event.desc}</p>
+                      </div>
+                      <i>&#8599;</i>
                     </div>
-                    <i>&#8599;</i>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
-
-      <span className="lbadge">Funnel automation agency, since 2019</span>
-      <h2>
-        Your funnel, <em>booking itself.</em>
-      </h2>
-
-      <div className="lrow">
-        <div>
-          <p className="lead">
-            We wire your pages, CRM, calendar, follow-up and AI calling into one
-            flow that keeps booking calls while your team sleeps.
-          </p>
-          <div className="lbt">
-            <a className="btn lm" href="#robo">
-              Book a call <i>&#8599;</i>
-            </a>
-            <a className="btn lo" href="#services">
-              See the workflows
-            </a>
-          </div>
-        </div>
-
-        <div className="lstats">
-          <div>
-            <b id="lcount">{callCount.toLocaleString("en-US")}</b>
-            <span>Calls booked this month</span>
-          </div>
-          <div>
-            <b>31h</b>
-            <span>Back per week</span>
-          </div>
-        </div>
+          );
+        })}
       </div>
     </section>
   );

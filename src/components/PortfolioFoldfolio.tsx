@@ -6,7 +6,18 @@ import { FUNNELS_LIST } from "@/data/siteContent";
 export default function PortfolioFoldfolio() {
   const [funnelIndex, setFunnelIndex] = useState(0);
   const [clockTime, setClockTime] = useState("14:32");
+  const [isTalking, setIsTalking] = useState(false);
+  const [callTime, setCallTime] = useState("00:00");
+  const [formDone, setFormDone] = useState(false);
+  const [formError, setFormError] = useState("");
+  const [selectedNeeds, setSelectedNeeds] = useState<string[]>(["AC Funnel"]);
+
   const slideRef = useRef<HTMLDivElement>(null);
+  const knobRef = useRef<HTMLSpanElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  const nameInputRef = useRef<HTMLInputElement>(null);
+  const timerIntervalRef = useRef<NodeJS.Timeout | null>(null);
+  const timerStartRef = useRef<number>(0);
 
   // Keep live clock accurate
   useEffect(() => {
@@ -23,43 +34,114 @@ export default function PortfolioFoldfolio() {
     return () => clearInterval(interval);
   }, []);
 
+  // Connected call timer
+  useEffect(() => {
+    if (isTalking) {
+      timerStartRef.current = Date.now();
+      setCallTime("00:00");
+      if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
+      timerIntervalRef.current = setInterval(() => {
+        const s = Math.floor((Date.now() - timerStartRef.current) / 1000);
+        const mins = String(Math.floor(s / 60)).padStart(2, "0");
+        const secs = String(s % 60).padStart(2, "0");
+        setCallTime(`${mins}:${secs}`);
+      }, 1000);
+
+      // Focus name input if not done
+      setTimeout(() => {
+        if (!formDone && nameInputRef.current) {
+          nameInputRef.current.focus({ preventScroll: true });
+        }
+      }, 400);
+    } else {
+      if (timerIntervalRef.current) {
+        clearInterval(timerIntervalRef.current);
+        timerIntervalRef.current = null;
+      }
+    }
+
+    return () => {
+      if (timerIntervalRef.current) {
+        clearInterval(timerIntervalRef.current);
+      }
+    };
+  }, [isTalking, formDone]);
+
+  // Handle open call
+  const openCall = useCallback(() => {
+    setIsTalking(true);
+  }, []);
+
+  // Hang up
+  const hangUp = useCallback(() => {
+    setIsTalking(false);
+    if (knobRef.current) {
+      knobRef.current.style.transform = "translateX(0)";
+    }
+    if (slideRef.current) {
+      slideRef.current.setAttribute("aria-valuenow", "0");
+    }
+    setTimeout(() => {
+      setFormDone(false);
+      setFormError("");
+    }, 700);
+  }, []);
+
   // Slide-to-talk widget interaction
   useEffect(() => {
     const sl = slideRef.current;
-    if (!sl) return;
-    const k = sl.querySelector<HTMLElement>("#sk");
-    if (!k) return;
+    const k = knobRef.current;
+    if (!sl || !k) return;
 
     let dx = 0;
     let st = 0;
     let dr = false;
+    let done = false;
+    let moved = false;
 
     const max = () => sl.clientWidth - k.offsetWidth - 12;
+
     const go = () => {
-      window.location.href = "/contact";
+      if (done) return;
+      done = true;
+      dr = false;
+      sl.classList.remove("drag");
+      k.style.transform = `translateX(${max()}px)`;
+      openCall();
+      setTimeout(() => {
+        done = false;
+        dx = 0;
+      }, 900);
     };
 
     const onPointerDown = (e: PointerEvent) => {
+      e.preventDefault();
       dr = true;
+      moved = false;
       st = e.clientX - dx;
-      sl.setPointerCapture(e.pointerId);
+      try {
+        sl.setPointerCapture(e.pointerId);
+      } catch (_) {}
       sl.classList.add("drag");
     };
 
     const onPointerMove = (e: PointerEvent) => {
       if (!dr) return;
       dx = Math.max(0, Math.min(max(), e.clientX - st));
+      if (dx > 4) moved = true;
       k.style.transform = `translateX(${dx}px)`;
       sl.setAttribute("aria-valuenow", String(Math.round((dx / max()) * 100)));
+      if (dx > max() * 0.6) {
+        go();
+      }
     };
 
     const end = () => {
       if (!dr) return;
       dr = false;
       sl.classList.remove("drag");
-      if (dx > max() * 0.8) {
-        k.style.transform = `translateX(${max()}px)`;
-        setTimeout(go, 280);
+      if (!moved || dx > max() * 0.35) {
+        go();
       } else {
         dx = 0;
         k.style.transform = "translateX(0)";
@@ -67,9 +149,9 @@ export default function PortfolioFoldfolio() {
     };
 
     const onKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Enter" || e.key === "ArrowRight") {
-        k.style.transform = `translateX(${max()}px)`;
-        setTimeout(go, 280);
+      if (e.key === "Enter" || e.key === " " || e.key === "ArrowRight") {
+        e.preventDefault();
+        go();
       }
     };
 
@@ -77,6 +159,7 @@ export default function PortfolioFoldfolio() {
     sl.addEventListener("pointermove", onPointerMove);
     sl.addEventListener("pointerup", end);
     sl.addEventListener("pointercancel", end);
+    sl.addEventListener("lostpointercapture", end);
     sl.addEventListener("keydown", onKeyDown);
 
     return () => {
@@ -84,14 +167,19 @@ export default function PortfolioFoldfolio() {
       sl.removeEventListener("pointermove", onPointerMove);
       sl.removeEventListener("pointerup", end);
       sl.removeEventListener("pointercancel", end);
+      sl.removeEventListener("lostpointercapture", end);
       sl.removeEventListener("keydown", onKeyDown);
     };
-  }, []);
+  }, [openCall]);
 
   const goOpen = useCallback(() => {
     const pw = document.getElementById("portwrap");
     if (!pw) return;
-    const top = Math.round(pw.getBoundingClientRect().top + window.scrollY);
+    const top = Math.round(
+      pw.getBoundingClientRect().top +
+        window.scrollY +
+        0.17 * (pw.offsetHeight - window.innerHeight)
+    );
     const from = window.scrollY;
     const inside =
       from > top && from < top + pw.offsetHeight - window.innerHeight;
@@ -123,6 +211,52 @@ export default function PortfolioFoldfolio() {
     const nextIdx = (i + FUNNELS_LIST.length) % FUNNELS_LIST.length;
     setFunnelIndex(nextIdx);
     goOpen();
+  };
+
+  const handleNeedToggle = (value: string) => {
+    setSelectedNeeds((prev) =>
+      prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
+    );
+  };
+
+  const handleFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    const name = (formData.get("name") as string)?.trim() || "";
+    const email = (formData.get("email") as string)?.trim() || "";
+    const site = (formData.get("site") as string)?.trim() || "";
+    const spend = (formData.get("spend") as string) || "";
+    const msg = (formData.get("msg") as string)?.trim() || "";
+
+    const nameInput = form.elements.namedItem("name") as HTMLElement;
+    const emailInput = form.elements.namedItem("email") as HTMLElement;
+
+    nameInput?.classList.remove("bad");
+    emailInput?.classList.remove("bad");
+
+    let bad = "";
+    if (!name) {
+      nameInput?.classList.add("bad");
+      bad = "Please add your name.";
+    }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      emailInput?.classList.add("bad");
+      bad = bad || "Please add a valid email.";
+    }
+
+    setFormError(bad);
+    if (bad) return;
+
+    const body = `Name: ${name}\nEmail: ${email}\nWebsite: ${site}\nMonthly ad spend: ${spend}\nNeeds: ${selectedNeeds.join(
+      ", "
+    )}\n\n${msg}`;
+
+    window.location.href = `mailto:info@funnelsthatprint.com?subject=${encodeURIComponent(
+      "New funnel enquiry from " + name
+    )}&body=${encodeURIComponent(body)}`;
+
+    setFormDone(true);
   };
 
   const currentFunnel = FUNNELS_LIST[funnelIndex];
@@ -183,7 +317,7 @@ export default function PortfolioFoldfolio() {
               </div>
             </div>
 
-            <div className="cover" id="cover">
+            <div className={`cover ${isTalking ? "talk" : ""}`} id="cover">
               <div className="cin">
                 <img
                   className="cph"
@@ -261,7 +395,7 @@ export default function PortfolioFoldfolio() {
                     aria-valuenow={0}
                     tabIndex={0}
                   >
-                    <span className="sk" id="sk">
+                    <span ref={knobRef} className="sk" id="sk">
                       <svg
                         width="20"
                         height="20"
@@ -276,6 +410,155 @@ export default function PortfolioFoldfolio() {
                   <a className="cm" href="mailto:info@funnelsthatprint.com">
                     INFO@FUNNELSTHATPRINT.COM
                   </a>
+                </div>
+
+                {/* In-Phone Contact Form */}
+                <div
+                  className="cform"
+                  id="pcall"
+                  data-lenis-prevent
+                  aria-hidden={!isTalking}
+                >
+                  <div className="cfh">
+                    <span className="cfl">
+                      <i />Connected <b id="ctime">{callTime}</b>
+                    </span>
+                    <button
+                      type="button"
+                      className="cend"
+                      id="cend"
+                      aria-label="End call"
+                      onClick={hangUp}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff">
+                        <path d="M12 9c-1.6 0-3.15.25-4.6.72v3.1c0 .39-.23.74-.56.9-.98.49-1.87 1.12-2.66 1.85a1 1 0 0 1-1.41-.02L.29 13.08a1 1 0 0 1 0-1.4C3.34 8.78 7.46 7 12 7s8.66 1.78 11.71 4.68a1 1 0 0 1 0 1.4l-2.48 2.48a1 1 0 0 1-1.41.02 11.2 11.2 0 0 0-2.67-1.85 1 1 0 0 1-.56-.9v-3.1A15 15 0 0 0 12 9z" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div className="cfw">
+                    <div className="cfa">
+                      <img src="/img/team/gaurav.webp" alt="Gaurav Kapoor" />
+                      <div>
+                        <b>Gaurav Kapoor</b>
+                        <span>Founder &middot; on the line</span>
+                      </div>
+                      <span className="wave" aria-hidden="true">
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                      </span>
+                    </div>
+                    <h3>Tell me about your funnel.</h3>
+                    <form
+                      ref={formRef}
+                      id="pform"
+                      className="pform"
+                      noValidate
+                      onSubmit={handleFormSubmit}
+                      hidden={formDone}
+                    >
+                      <fieldset>
+                        <legend>What do you need?</legend>
+                        <div className="pch">
+                          {[
+                            "AC Funnel",
+                            "VSL Funnel",
+                            "Landing page",
+                            "Automation",
+                            "AI calling",
+                          ].map((item) => (
+                            <label key={item}>
+                              <input
+                                type="checkbox"
+                                name="need"
+                                value={item}
+                                checked={selectedNeeds.includes(item)}
+                                onChange={() => handleNeedToggle(item)}
+                              />
+                              <span>{item}</span>
+                            </label>
+                          ))}
+                        </div>
+                      </fieldset>
+                      <div className="pg2">
+                        <label>
+                          <span>Name</span>
+                          <input
+                            ref={nameInputRef}
+                            name="name"
+                            autoComplete="name"
+                            placeholder="Jane Smith"
+                            required
+                          />
+                        </label>
+                        <label>
+                          <span>Email</span>
+                          <input
+                            name="email"
+                            type="email"
+                            autoComplete="email"
+                            placeholder="jane@company.com"
+                            required
+                          />
+                        </label>
+                      </div>
+                      <div className="pg2">
+                        <label>
+                          <span>Website</span>
+                          <input name="site" placeholder="company.com" />
+                        </label>
+                        <label>
+                          <span>Monthly ad spend</span>
+                          <select name="spend" defaultValue="Not running ads yet">
+                            <option value="Not running ads yet">
+                              Not running ads yet
+                            </option>
+                            <option value="Under $5K">Under $5K</option>
+                            <option value="$5K to $20K">$5K to $20K</option>
+                            <option value="$20K to $50K">$20K to $50K</option>
+                            <option value="$50K+">$50K+</option>
+                          </select>
+                        </label>
+                      </div>
+                      <label>
+                        <span>What are you selling?</span>
+                        <textarea
+                          name="msg"
+                          rows={3}
+                          placeholder="Offer, price point, audience, and what is not working right now."
+                        />
+                      </label>
+                      <button type="submit" className="psend">
+                        Send to Gaurav <i>&#8599;</i>
+                      </button>
+                      {formError && (
+                        <p className="perr" id="perr" role="alert">
+                          {formError}
+                        </p>
+                      )}
+                    </form>
+
+                    {formDone && (
+                      <div className="pdone" id="pdone">
+                        <span className="ok">&#10003;</span>
+                        <b>Message ready to send</b>
+                        <p>
+                          Your email app opened with everything filled in. Press
+                          send and we reply within one business day.
+                        </p>
+                        <button
+                          type="button"
+                          className="psend"
+                          id="pagain"
+                          onClick={() => setFormDone(false)}
+                        >
+                          Back to the call
+                        </button>
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
             </div>

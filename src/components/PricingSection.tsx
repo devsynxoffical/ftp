@@ -1,7 +1,61 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { PLANS_DATA } from "@/data/siteContent";
+
+const PLANS = [
+  {
+    tag: "STARTER",
+    title: "Design Only",
+    price: "$999",
+    period: "one-time",
+    desc: "We design your funnel pages, brand visuals and assets ready for your dev team or builder.",
+    ctaText: "Start with Design",
+    ctaUrl: "#robo",
+    features: [
+      "Complete custom Figma design system",
+      "Desktop & mobile responsive layouts",
+      "Custom branding, typography & graphics",
+      "Conversion wireframes & user flows",
+      "Developer handoff file with CSS tokens",
+    ],
+  },
+  {
+    tag: "MOST POPULAR",
+    title: "Design + Copy Build",
+    price: "$1,499",
+    period: "one-time",
+    desc: "Complete done-for-you AC Funnel with persuasive direct-response copy and full responsive build.",
+    ctaText: "Get your AC Funnel now",
+    ctaUrl: "#robo",
+    features: [
+      "Everything in Design Only",
+      "High-converting sales copy (headline, body, CTAs)",
+      "Video Sales Letter (VSL) script or outline",
+      "Complete ClickFunnels or HighLevel build",
+      "Order bumps, upsells & thank you pages",
+      "Mobile-first responsive optimization",
+      "14-day post-launch QA & bug fixes",
+    ],
+  },
+  {
+    tag: "COMPLETE",
+    title: "Full AC Funnel Suite",
+    price: "$1,999",
+    period: "one-time",
+    desc: "End-to-end acquisition system: pages, copy, automations, CRM pipelines and AI follow-up built and connected.",
+    ctaText: "Build the Complete Suite",
+    ctaUrl: "#robo",
+    features: [
+      "Everything in Design + Copy Build",
+      "Complete CRM setup & custom pipelines",
+      "Email & SMS nurture workflows",
+      "Appointment scheduling & reminder engine",
+      "AI voice booking agent integration",
+      "UTM tracking & analytics dashboard",
+      "30 days direct Slack support & optimization",
+    ],
+  },
+];
 
 export default function PricingSection() {
   const [planIdx, setPlanIdx] = useState(1);
@@ -9,7 +63,7 @@ export default function PricingSection() {
   const pindRef = useRef<HTMLSpanElement>(null);
   const activeBtnRef = useRef<HTMLButtonElement>(null);
 
-  const activePlan = PLANS_DATA[planIdx];
+  const activePlan = PLANS[planIdx];
 
   const updatePind = (btn: HTMLElement | null) => {
     if (!btn || !pindRef.current) return;
@@ -143,10 +197,10 @@ export default function PricingSection() {
           </div>
         </div>
 
-        {/* Center Panel */}
+        {/* Center Toggle and Plan Details */}
         <div className={`pmid ${isSwitching ? "sw" : ""}`}>
           <div className="ptog3" role="tablist" aria-label="Package">
-            {PLANS_DATA.map((plan, i) => {
+            {PLANS.map((plan, i) => {
               const isSelected = planIdx === i;
               return (
                 <button
@@ -170,19 +224,13 @@ export default function PricingSection() {
           </h3>
           <div className="ppr">
             <b id="pprice">{activePlan.price}</b>
-            <span>{activePlan.period || "one-time"}</span>
+            <span>{activePlan.period}</span>
           </div>
           <p className="pdesc" id="pdesc">
             {activePlan.desc}
           </p>
 
-          <a
-            className="btn pcta"
-            id="pcta"
-            href={activePlan.ctaUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a className="btn pcta" id="pcta" href={activePlan.ctaUrl}>
             <span id="pctat">{activePlan.ctaText}</span> <i>&#8599;</i>
           </a>
 
@@ -191,17 +239,22 @@ export default function PricingSection() {
           </p>
         </div>
 
-        {/* Features List */}
-        <ul className="pfeat" id="pf">
-          {activePlan.features.map((feat, k) => (
-            <li key={feat} style={{ "--i": k } as React.CSSProperties}>
-              <i>&#10003;</i>
-              <div>
+        {/* Stable "What you get" Deliverables Panel */}
+        <div className="pfc">
+          <div className="pfh">
+            <span>What you get</span>
+            <b id="pfn">{activePlan.features.length} deliverables</b>
+          </div>
+          <ul className="pfeat" id="pf">
+            {activePlan.features.map((feat, k) => (
+              <li key={feat} style={{ "--i": k } as React.CSSProperties}>
+                <i>&#10003;</i>
                 <b>{feat}</b>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+          <p className="pff">One-time build. No retainers, no lock-in.</p>
+        </div>
       </div>
     </section>
   );
