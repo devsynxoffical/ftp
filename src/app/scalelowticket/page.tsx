@@ -197,8 +197,8 @@ export default function Case847KPage() {
         </Link>
       </section>
     </div>
-    <RoboSection />
     <UFSquareMarquee />
+    <RoboSection />
   </>
   );
 }

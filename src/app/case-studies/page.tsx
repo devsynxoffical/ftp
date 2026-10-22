@@ -151,8 +151,8 @@ export default function CaseStudiesPage() {
         </Link>
       </div>
     </div>
-    <RoboSection />
     <UFSquareMarquee />
+    <RoboSection />
   </>
   );
 }

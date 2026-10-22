@@ -209,8 +209,8 @@ export default function CaseEcomPage() {
         </Link>
       </div>
     </div>
-    <RoboSection />
     <UFSquareMarquee />
+    <RoboSection />
   </>
   );
 }

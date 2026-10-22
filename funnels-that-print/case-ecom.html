@@ -745,36 +745,36 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
 .cstag{display:inline-flex;align-items:center;gap:8px;background:#141414;color:#fff;font-size:12px;font-weight:600;padding:8px 14px;border-radius:999px}.cstag::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--or)}
 
 /* === 3D GLASSMORPHIC PHOTO RIBBON (UFSquareMarquee) === */
-.uf-marquee-section{position:relative;width:100%;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background-color:#020512;margin-top:0;padding:clamp(36px,5vw,60px) 0;isolation:isolate}
-.uf-marquee-section + .foot{margin-top:0!important}
-.uf-ambient-glow{pointer-events:none;position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(18,84,236,.16),transparent 70%);z-index:1}
-.uf-vignette-left{pointer-events:none;position:absolute;top:0;bottom:0;left:0;z-index:20;width:clamp(60px,10vw,180px);background:linear-gradient(90deg,#020512,rgba(2,5,18,.8) 60%,transparent)}
-.uf-vignette-right{pointer-events:none;position:absolute;top:0;bottom:0;right:0;z-index:20;width:clamp(60px,10vw,180px);background:linear-gradient(270deg,#020512,rgba(2,5,18,.8) 60%,transparent)}
+.uf-marquee-section{position:relative;width:100%;overflow:hidden;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background-color:#141414;margin-top:clamp(60px,8vw,110px);padding:clamp(36px,5vw,56px) 0;isolation:isolate}
+.uf-marquee-section + .robo{margin-top:0}
+.uf-ambient-glow{pointer-events:none;position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(255,90,31,.10),transparent 70%);z-index:1}
+.uf-vignette-left{pointer-events:none;position:absolute;top:0;bottom:0;left:0;z-index:20;width:clamp(60px,10vw,180px);background:linear-gradient(90deg,#141414,rgba(20,20,20,.85) 60%,transparent)}
+.uf-vignette-right{pointer-events:none;position:absolute;top:0;bottom:0;right:0;z-index:20;width:clamp(60px,10vw,180px);background:linear-gradient(270deg,#141414,rgba(20,20,20,.85) 60%,transparent)}
 .uf-marquee-track{display:flex;width:max-content;animation:uf-marquee-scroll var(--marquee-duration,48s) linear infinite;will-change:transform}
 .uf-marquee-track:hover{animation-play-state:paused}
 @keyframes uf-marquee-scroll{from{transform:translate3d(0,0,0)}to{transform:translate3d(-50%,0,0)}}
 .uf-marquee-copy{display:flex;flex-shrink:0;align-items:center;gap:clamp(20px,2.5vw,36px);padding:16px clamp(12px,1.5vw,20px)}
 .uf-card-wrapper{position:relative;flex-shrink:0;transform:rotate(var(--rot,0deg));transition:transform .5s cubic-bezier(.2,.7,.2,1),z-index .3s;cursor:pointer}
 .uf-card-wrapper:hover{z-index:30;transform:scale(1.06) rotate(0deg)!important}
-.uf-glass-card{position:relative;width:clamp(280px,24vw,390px);overflow:hidden;border-radius:20px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(180deg,rgba(255,255,255,.09) 0%,rgba(255,255,255,.03) 50%,rgba(255,255,255,.01) 100%);padding:12px;box-shadow:0 16px 40px rgba(0,0,0,.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:border-color .35s ease,box-shadow .35s ease}
-.uf-card-wrapper:hover .uf-glass-card{border-color:rgba(0,232,255,.55);box-shadow:0 20px 50px rgba(0,0,0,.85),0 0 30px rgba(0,232,255,.45)}
+.uf-glass-card{position:relative;width:clamp(280px,24vw,390px);overflow:hidden;border-radius:20px;border:1px solid rgba(255,255,255,.15);background:linear-gradient(180deg,rgba(255,255,255,.08) 0%,rgba(255,255,255,.03) 50%,rgba(255,255,255,.01) 100%);padding:12px;box-shadow:0 16px 40px rgba(0,0,0,.65);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);transition:border-color .35s ease,box-shadow .35s ease}
+.uf-card-wrapper:hover .uf-glass-card{border-color:rgba(255,90,31,.65);box-shadow:0 20px 50px rgba(0,0,0,.85),0 0 28px rgba(255,90,31,.35)}
 .uf-window-header{margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;padding:0 4px}
 .uf-mac-dots{display:flex;align-items:center;gap:6px}
 .uf-mac-dot{width:9px;height:9px;border-radius:50%;display:block}
 .uf-mac-dot.close{background-color:rgba(244,63,94,.85);box-shadow:0 0 6px rgba(244,63,94,.4)}
 .uf-mac-dot.min{background-color:rgba(245,158,11,.85);box-shadow:0 0 6px rgba(245,158,11,.4)}
 .uf-mac-dot.max{background-color:rgba(16,185,129,.85);box-shadow:0 0 6px rgba(16,185,129,.4)}
-.uf-status-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1px solid rgba(0,232,255,.35);background:rgba(0,232,255,.1);padding:3px 9px;font-family:var(--mono);font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#00e8ff}
-.uf-badge-pulse{width:6px;height:6px;border-radius:50%;background-color:#00e8ff;box-shadow:0 0 8px #00e8ff;animation:uf-pulse 1.8s ease-in-out infinite}
+.uf-status-badge{display:inline-flex;align-items:center;gap:6px;border-radius:999px;border:1px solid rgba(200,245,74,.35);background:rgba(200,245,74,.12);padding:3px 9px;font-family:var(--mono);font-size:9.5px;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:#c8f54a}
+.uf-badge-pulse{width:6px;height:6px;border-radius:50%;background-color:#c8f54a;box-shadow:0 0 8px #c8f54a;animation:uf-pulse 1.8s ease-in-out infinite}
 @keyframes uf-pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.85)}}
-.uf-img-frame{position:relative;height:clamp(160px,15vw,230px);width:100%;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:#060816}
+.uf-img-frame{position:relative;height:clamp(160px,15vw,230px);width:100%;overflow:hidden;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:#0d0d10}
 .uf-img{width:100%;height:100%;object-fit:contain;object-position:center;transition:transform .7s cubic-bezier(.2,.7,.2,1);display:block}
 .uf-card-wrapper:hover .uf-img{transform:scale(1.05)}
-.uf-img-glare{pointer-events:none;position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08) 0%,transparent 50%,rgba(0,232,255,.03) 100%)}
+.uf-img-glare{pointer-events:none;position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,.08) 0%,transparent 50%,rgba(255,90,31,.04) 100%)}
 .uf-caption-row{margin-top:10px;display:flex;align-items:center;justify-content:space-between;padding:0 4px}
-.uf-caption-title{font-family:var(--mono);font-size:11px;font-weight:500;color:#cbd5e1;letter-spacing:.02em;transition:color .3s ease}
+.uf-caption-title{font-family:var(--mono);font-size:11px;font-weight:500;color:#e5e5e7;letter-spacing:.02em;transition:color .3s ease}
 .uf-card-wrapper:hover .uf-caption-title{color:#fff}
-.uf-caption-meta{font-family:var(--mono);font-size:9.5px;font-weight:500;color:#64748b;letter-spacing:.06em;text-transform:uppercase}
+.uf-caption-meta{font-family:var(--mono);font-size:9.5px;font-weight:600;color:#ff5a1f;letter-spacing:.06em;text-transform:uppercase}
 </style>
 </head><body>
 <nav class="nav" id="nav" aria-label="Main">
@@ -809,13 +809,16 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
   <div style="text-align:center;padding:clamp(60px,8vw,100px) 0 40px"><p class="lead" style="margin:0 auto 24px;text-align:center">Want your campaign on this page?</p><a class="btn o" href="index.html#robo">Build my funnel <i>&#8599;</i></a></div>
 </main>
 
-<section class="robo" id="robo">
-  <div class="rl"><img src="img/x/robot.webp" alt="FTP automation robot" id="robot" loading="lazy"></div>
-  <div class="rm"><h2>We<br>build<br>with<br>Robots.<span class="stk"><span>Let's Talk</span></span></h2><a href="mailto:info@funnelsthatprint.com">Talk with us <i>&rarr;</i></a><div class="sp"></div></div>
-  <div class="rr"><p>We're a small team of strategists, builders and automation nerds, blending funnels, follow-up and AI calling so your leads turn into booked calls, not cold contacts.</p></div>
-</section>
-
 <section class="marquee-row uf-marquee-section" aria-label="Strategy sessions and client audits">
+  <div class="box uf-header-box" style="margin-bottom:24px;display:flex;align-items:center;justify-content:space-between">
+    <div style="display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.7)">
+      <span style="width:7px;height:7px;border-radius:50%;background:#c8f54a;box-shadow:0 0 8px #c8f54a;display:inline-block"></span>
+      Unfiltered Strategy Sprints &amp; Live Client Audits
+    </div>
+    <span style="font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.4)">
+      Hover to inspect &bull; 60fps
+    </span>
+  </div>
   <div class="uf-ambient-glow"></div>
   <div class="uf-vignette-left"></div>
   <div class="uf-vignette-right"></div>
@@ -952,6 +955,13 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
     </div>
   </div>
 </section>
+
+<section class="robo" id="robo">
+  <div class="rl"><img src="img/x/robot.webp" alt="FTP automation robot" id="robot" loading="lazy"></div>
+  <div class="rm"><h2>We<br>build<br>with<br>Robots.<span class="stk"><span>Let's Talk</span></span></h2><a href="mailto:info@funnelsthatprint.com">Talk with us <i>&rarr;</i></a><div class="sp"></div></div>
+  <div class="rr"><p>We're a small team of strategists, builders and automation nerds, blending funnels, follow-up and AI calling so your leads turn into booked calls, not cold contacts.</p></div>
+</section>
+
 <footer class="foot" id="foot">
   <a class="fstart" href="mailto:info@funnelsthatprint.com" id="fstart"><div class="fw" id="fw">Start a project</div><svg class="arr" viewBox="0 0 100 100" aria-hidden="true"><path d="M30 70 L70 30 M40 30 H70 V60"/></svg></a>
   <div class="fg">

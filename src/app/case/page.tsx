@@ -209,8 +209,8 @@ export default function CaseDetailPage() {
       >
         <CaseDetailContent />
       </Suspense>
-      <RoboSection />
       <UFSquareMarquee />
+      <RoboSection />
     </>
   );
 }

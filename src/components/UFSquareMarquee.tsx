@@ -92,13 +92,24 @@ export const RANDOM_PHOTOS: MarqueePhoto[] = [
  */
 export function UFSquareMarquee() {
   return (
-    <section className="marquee-row uf-marquee-section relative w-full overflow-hidden border-y border-white/[0.08] bg-[#020512] mt-0 py-10 sm:py-14">
-      {/* Ambient background glow */}
-      <div className="uf-ambient-glow pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(18,84,236,0.14),transparent_70%)]" />
+    <section className="marquee-row uf-marquee-section relative w-full overflow-hidden border-y border-white/[0.08] bg-[#141414] mt-0 py-10 sm:py-14">
+      {/* Top Header Label in standard FTP .box */}
+      <div className="box uf-header-box mb-6 sm:mb-8 flex items-center justify-between">
+        <div className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.12em] text-white/70">
+          <span className="h-2 w-2 rounded-full bg-[#c8f54a] shadow-[0_0_8px_#c8f54a]" />
+          Unfiltered Strategy Sprints &amp; Live Client Audits
+        </div>
+        <span className="hidden sm:inline-block font-mono text-[10.5px] uppercase tracking-wider text-white/40">
+          Hover to inspect &bull; 60fps
+        </span>
+      </div>
 
-      {/* Left and Right Edge Fade Vignettes */}
-      <div className="uf-vignette-left pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-gradient-to-r from-[#020512] via-[#020512]/80 to-transparent sm:w-36 md:w-52" />
-      <div className="uf-vignette-right pointer-events-none absolute inset-y-0 right-0 z-20 w-20 bg-gradient-to-l from-[#020512] via-[#020512]/80 to-transparent sm:w-36 md:w-52" />
+      {/* Ambient background glow - Warm brand orange accent */}
+      <div className="uf-ambient-glow pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_50%,rgba(255,90,31,0.10),transparent_70%)]" />
+
+      {/* Left and Right Edge Fade Vignettes - Seamless blend to #141414 */}
+      <div className="uf-vignette-left pointer-events-none absolute inset-y-0 left-0 z-20 w-20 bg-gradient-to-r from-[#141414] via-[#141414]/80 to-transparent sm:w-36 md:w-52" />
+      <div className="uf-vignette-right pointer-events-none absolute inset-y-0 right-0 z-20 w-20 bg-gradient-to-l from-[#141414] via-[#141414]/80 to-transparent sm:w-36 md:w-52" />
 
       <div
         className="marquee-track-left uf-marquee-track flex w-max hover:[animation-play-state:paused]"
@@ -117,7 +128,7 @@ export function UFSquareMarquee() {
                 style={{ "--rot": `${p.deg ?? 0}deg` } as React.CSSProperties}
               >
                 {/* Outer Glass Frame */}
-                <div className="uf-glass-card relative w-[280px] sm:w-[340px] md:w-[400px] overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-b from-white/[0.09] via-white/[0.03] to-white/[0.01] p-2.5 sm:p-3 shadow-[0_16px_40px_rgba(0,0,0,0.65)] backdrop-blur-xl transition-all duration-300 group-hover:border-sky/50 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.8),0_0_25px_rgba(56,189,248,0.25)]">
+                <div className="uf-glass-card relative w-[280px] sm:w-[340px] md:w-[400px] overflow-hidden rounded-2xl border border-white/15 bg-gradient-to-b from-white/[0.08] via-white/[0.03] to-white/[0.01] p-2.5 sm:p-3 shadow-[0_16px_40px_rgba(0,0,0,0.65)] backdrop-blur-xl transition-all duration-300 group-hover:border-[#ff5a1f]/60 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_28px_rgba(255,90,31,0.32)]">
                   {/* Top Window Header with Mac Dots & Status Badge */}
                   <div className="uf-window-header mb-2.5 flex items-center justify-between px-1">
                     <div className="uf-mac-dots flex items-center gap-1.5">
@@ -125,14 +136,15 @@ export function UFSquareMarquee() {
                       <span className="uf-mac-dot min h-2 w-2 rounded-full bg-amber-500/80" />
                       <span className="uf-mac-dot max h-2 w-2 rounded-full bg-emerald-500/80" />
                     </div>
-                    <div className="uf-status-badge inline-flex items-center gap-1.5 rounded-full border border-sky/30 bg-sky/10 px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-sky">
-                      <span className="uf-badge-pulse h-1.5 w-1.5 animate-pulse rounded-full bg-sky" />
+                    {/* Live Status Badge in FTP Electric Lime */}
+                    <div className="uf-status-badge inline-flex items-center gap-1.5 rounded-full border border-[#c8f54a]/35 bg-[#c8f54a]/10 px-2 py-0.5 font-mono text-[9px] font-semibold uppercase tracking-wider text-[#c8f54a]">
+                      <span className="uf-badge-pulse h-1.5 w-1.5 animate-pulse rounded-full bg-[#c8f54a] shadow-[0_0_8px_#c8f54a]" />
                       {p.tag}
                     </div>
                   </div>
 
                   {/* Image Display Area */}
-                  <div className="uf-img-frame relative h-[155px] sm:h-[190px] md:h-[225px] w-full overflow-hidden rounded-xl border border-white/10 bg-[#060816]">
+                  <div className="uf-img-frame relative h-[155px] sm:h-[190px] md:h-[225px] w-full overflow-hidden rounded-xl border border-white/10 bg-[#0d0d10]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={p.src}
@@ -148,10 +160,10 @@ export function UFSquareMarquee() {
 
                   {/* Bottom Caption Pill */}
                   <div className="uf-caption-row mt-2 flex items-center justify-between px-1">
-                    <span className="uf-caption-title font-mono text-[10.5px] font-medium text-slate-300 group-hover:text-white transition-colors">
+                    <span className="uf-caption-title font-mono text-[10.5px] font-medium text-stone-200 group-hover:text-white transition-colors">
                       {p.title}
                     </span>
-                    <span className="uf-caption-meta font-mono text-[9.5px] text-slate-500">
+                    <span className="uf-caption-meta font-mono text-[9.5px] font-semibold text-[#ff5a1f] tracking-wider">
                       LIVE RECORDING
                     </span>
                   </div>

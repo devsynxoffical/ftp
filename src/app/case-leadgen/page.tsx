@@ -210,8 +210,8 @@ export default function CaseLeadgenPage() {
         </Link>
       </div>
     </div>
-    <RoboSection />
     <UFSquareMarquee />
+    <RoboSection />
   </>
   );
 }

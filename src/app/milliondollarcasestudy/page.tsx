@@ -221,8 +221,8 @@ export default function Case1MPage() {
         </Link>
       </section>
     </div>
-    <RoboSection />
     <UFSquareMarquee />
+    <RoboSection />
   </>
   );
 }
