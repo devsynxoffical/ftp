@@ -16,12 +16,14 @@ export default function Case1MPage() {
           &larr; Back to home
         </Link>
 
-        <div className="k1h in">
+        <div className="k1h rv">
           <span className="tag">
             Case study 01 &middot; High-ticket scaling &amp; consulting
           </span>
           <div className="big">
-            <span>$1.52M</span>
+            <span data-to={1.52} data-dec={2} data-pre="$" data-suf="M">
+              $1.52M
+            </span>
           </div>
           <h1>
             From inconsistent cold traffic to $1.52M in 19 months, on a turnkey
@@ -37,7 +39,7 @@ export default function Case1MPage() {
           </div>
         </div>
 
-        <div className="vid k1v in">
+        <div className="vid k1v rv">
           {!playing ? (
             <div
               className="po"
@@ -71,7 +73,7 @@ export default function Case1MPage() {
           )}
         </div>
 
-        <div className="k2g in" id="k1m">
+        <div className="k2g rv" id="k1m">
           <div className="g1">
             <span>Revenue collected</span>
             <div className="spark">
@@ -90,7 +92,9 @@ export default function Case1MPage() {
               <s style={{ "--i": 12, "--h": "82%" } as React.CSSProperties} />
               <s style={{ "--i": 13, "--h": "100%" } as React.CSSProperties} />
             </div>
-            <b>$1,520,000</b>
+            <b data-to={1520000} data-pre="$">
+              $1,520,000
+            </b>
           </div>
 
           <div className="g2">
@@ -101,14 +105,16 @@ export default function Case1MPage() {
                 <i>
                   <s style={{ "--w": "38%" } as React.CSSProperties} />
                 </i>
-                <em>19 months</em>
+                <em data-to={19} data-suf=" months">19 months</em>
               </div>
               <div>
                 Collected
                 <i>
                   <s style={{ "--w": "100%" } as React.CSSProperties} />
                 </i>
-                <em>$1,520,000</em>
+                <em data-to={1520000} data-pre="$">
+                  $1,520,000
+                </em>
               </div>
             </div>
           </div>
@@ -116,7 +122,13 @@ export default function Case1MPage() {
           <div className="g3">
             <span>Scaling timeline</span>
             <b>
-              <em style={{ fontStyle: "normal" }}>19</em> months
+              <em
+                style={{ fontStyle: "normal" }}
+                data-to={19}
+              >
+                19
+              </em>{" "}
+              months
             </b>
           </div>
 
@@ -138,7 +150,7 @@ export default function Case1MPage() {
         </div>
 
         <div className="k1b">
-          <div className="prob in">
+          <div className="prob rv">
             <span className="lbl">The problem, before MDF&trade;</span>
             <h2>A strong offer leaking on cold traffic.</h2>
             <p>
@@ -153,7 +165,7 @@ export default function Case1MPage() {
             </div>
           </div>
 
-          <div className="in">
+          <div className="rv">
             <span className="lbl">The solution, what we did</span>
             <h2>An institutional-grade acquisition system.</h2>
             <ol className="tl">
@@ -193,14 +205,14 @@ export default function Case1MPage() {
           </div>
         </div>
 
-        <div className="kcta in">
+        <div className="kcta rv">
           <h2>Want the same stack behind your offer?</h2>
           <Link className="btn" href="/contact">
             Book a strategy call <i>&#8599;</i>
           </Link>
         </div>
 
-        <Link className="knext in" href="/scalelowticket">
+        <Link className="knext rv" href="/scalelowticket">
           <div>
             <span>Next case study</span>
             <b>$847K Coaching LTO at 3.32x ROAS</b>

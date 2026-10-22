@@ -377,10 +377,28 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const globalLenis = (window as unknown as { lenis?: Lenis }).lenis;
-    if (globalLenis) {
-      globalLenis.scrollTo(0, { immediate: true });
+    
+    // Resize Lenis after DOM updates on route transition
+    const resizeTimer1 = setTimeout(() => globalLenis?.resize(), 80);
+    const resizeTimer2 = setTimeout(() => globalLenis?.resize(), 300);
+
+    if (window.location.hash) {
+      const targetEl = document.querySelector(window.location.hash);
+      if (targetEl) {
+        setTimeout(() => {
+          if (globalLenis) {
+            globalLenis.scrollTo(targetEl as HTMLElement, { offset: -20, duration: 1.2 });
+          } else {
+            targetEl.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 120);
+      }
     } else {
-      window.scrollTo(0, 0);
+      if (globalLenis) {
+        globalLenis.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo(0, 0);
+      }
     }
 
     const prefersReducedMotion = window.matchMedia(
@@ -388,6 +406,8 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     ).matches;
 
     function cnt(el: HTMLElement) {
+      if (el.dataset.counted === "true") return;
+      el.dataset.counted = "true";
       const to = +(el.dataset.to || 0);
       const dec = +(el.dataset.dec || 0);
       const pre = el.dataset.pre || "";
@@ -425,7 +445,8 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       { threshold: 0.15 }
     );
 
-    document.querySelectorAll<HTMLElement>(".rv").forEach((el) => {
+    document.querySelectorAll<HTMLElement>(".rv, [data-to]").forEach((el) => {
+      if (el.matches("[data-to]") && el.closest(".rv")) return;
       io.observe(el);
     });
 

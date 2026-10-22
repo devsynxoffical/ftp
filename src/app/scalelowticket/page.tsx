@@ -25,12 +25,12 @@ export default function Case847KPage() {
         </Link>
 
         <div className="k2h">
-          <div className="in">
+          <div className="rv">
             <span className="tag">
               Case study 02 &middot; Coaching &amp; info-product backend
             </span>
             <h1>
-              <em>$847,307</em> collected from a low-ticket front door.
+              <em data-to={847307} data-pre="$">$847,307</em> collected from a low-ticket front door.
             </h1>
             <p>
               A coaching client stuck in high-ticket hype, with no front end to
@@ -48,7 +48,7 @@ export default function Case847KPage() {
           </div>
         </div>
 
-        <div className="vid k2v in">
+        <div className="vid k2v rv">
           <video
             ref={videoRef}
             src="https://storage.googleapis.com/msgsndr/HWyar6Z3u3aF6ydghkCx/media/695da2543a532d67105ad96c.mp4#t=0.5"
@@ -78,7 +78,7 @@ export default function Case847KPage() {
           )}
         </div>
 
-        <div className="k2g in" id="k2m">
+        <div className="k2g rv" id="k2m">
           <div className="g1">
             <span>Revenue collected</span>
             <div className="spark">
@@ -97,7 +97,9 @@ export default function Case847KPage() {
               <s style={{ "--i": 12, "--h": "82%" } as React.CSSProperties} />
               <s style={{ "--i": 13, "--h": "100%" } as React.CSSProperties} />
             </div>
-            <b>$847,307</b>
+            <b data-to={847307} data-pre="$">
+              $847,307
+            </b>
           </div>
 
           <div className="g2">
@@ -108,14 +110,14 @@ export default function Case847KPage() {
                 <i>
                   <s style={{ "--w": "30.1%" } as React.CSSProperties} />
                 </i>
-                <em>$255,130</em>
+                <em data-to={255130} data-pre="$">$255,130</em>
               </div>
               <div>
                 Collected
                 <i>
                   <s style={{ "--w": "100%" } as React.CSSProperties} />
                 </i>
-                <em>$847,307</em>
+                <em data-to={847307} data-pre="$">$847,307</em>
               </div>
             </div>
           </div>
@@ -123,7 +125,14 @@ export default function Case847KPage() {
           <div className="g3">
             <span>Verified ROAS</span>
             <b>
-              <em style={{ fontStyle: "normal" }}>3.32</em>x
+              <em
+                style={{ fontStyle: "normal" }}
+                data-to={3.32}
+                data-dec={2}
+              >
+                3.32
+              </em>
+              x
             </b>
           </div>
 
@@ -135,7 +144,7 @@ export default function Case847KPage() {
           <div className="g5">
             <div>
               <span>LTO sales through the front door</span>
-              <b>13,630</b>
+              <b data-to={13630}>13,630</b>
             </div>
             <p>
               buyers feeding an endless qualified pipeline for high-ticket
@@ -145,7 +154,7 @@ export default function Case847KPage() {
         </div>
 
         <div className="k2ba">
-          <div className="bf in">
+          <div className="bf rv">
             <span className="lbl">Before MDF&trade;</span>
             <h2>High-ticket hype, no profitable front end.</h2>
             <p>
@@ -155,7 +164,7 @@ export default function Case847KPage() {
               with zero compounding momentum.
             </p>
           </div>
-          <div className="af in">
+          <div className="af rv">
             <span className="lbl">What we did</span>
             <h2>A front door that pays for itself.</h2>
             <ul>
@@ -170,7 +179,7 @@ export default function Case847KPage() {
           </div>
         </div>
 
-        <div className="kcta in" style={{ background: "#141414" }}>
+        <div className="kcta rv" style={{ background: "#141414" }}>
           <h2>
             Make your front end <span style={{ color: "var(--lime)" }}>pay for itself.</span>
           </h2>
@@ -179,7 +188,7 @@ export default function Case847KPage() {
           </Link>
         </div>
 
-        <Link className="knext in" href="/milliondollarcasestudy">
+        <Link className="knext rv" href="/milliondollarcasestudy">
           <div>
             <span>Previous case study</span>
             <b>$1.52M High-ticket scaling in 19 months</b>
