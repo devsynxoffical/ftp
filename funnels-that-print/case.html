@@ -616,8 +616,9 @@ h1,h2,h3,p{margin:0}
 .cta .lead{position:relative;margin:30px auto 34px;text-align:center;color:#fff}
 .cta .btn{position:relative;background:#fff;color:var(--fg)}.cta .btn i{background:var(--or);color:#fff}.cta .btn:hover{background:var(--fg);color:#fff}
 
-/* footer (rama, FTP colors) */
 .foot{position:relative;margin-top:clamp(60px,8vw,110px);background:#141414;color:#fff;overflow:hidden;isolation:isolate}
+.robo + .foot,.uf-marquee-section + .foot{margin-top:0 !important}
+.robo{margin-bottom:0 !important}
 .foot::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(520px circle at var(--mx,75%) var(--my,25%),rgba(255,90,31,.2),transparent 65%);pointer-events:none}
 .fstart{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:clamp(40px,6vh,80px) var(--gut) clamp(30px,5vh,60px)}
 .fstart .fw{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 82;text-transform:uppercase;line-height:.85;letter-spacing:-.01em;white-space:nowrap;font-size:120px}
