@@ -54,16 +54,6 @@ const AUTOMATION_EVENTS: AutomationEvent[] = [
     alignClass: "r",
     width: 310,
   },
-  {
-    time: "02:20",
-    label: "AI call completed",
-    title: "AI calling",
-    desc: "No-shows get a call back, objections answered, the slot rebooked.",
-    x: "62%",
-    y: "65%",
-    alignClass: "",
-    width: 310,
-  },
 ];
 
 export default function LiveAutomation() {
