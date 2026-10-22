@@ -118,11 +118,142 @@ h1,h2,h3,p{margin:0}
 @keyframes caret{50%{border-color:transparent}}
 .hero .lead{margin:18px auto 0;text-align:center;font-size:clamp(16px,1.3vw,19px);max-width:52ch}
 .hl span{display:inline-block;animation:hlw .7s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(.25s + var(--i)*.035s);transition:color .25s,translate .25s;cursor:default}.hl span:hover{color:var(--or);translate:0 -3px}@keyframes hlw{from{opacity:0;transform:translateY(12px);filter:blur(4px)}}.hl b{font-weight:600;color:var(--fg)}
-.hcta{display:flex;gap:10px;justify-content:center;margin-top:24px;flex-wrap:wrap;position:relative;z-index:3}
-.btn.grad{background:linear-gradient(90deg,var(--or),#ff3d8a);color:#fff;border-radius:14px;height:54px;padding:0 26px;font-size:15px}
-.btn.grad i{background:#fff;color:var(--or)}
-.btn.grad:hover{background:linear-gradient(90deg,var(--or-d),#e02a73)}
-.btn.wh{background:rgba(255,255,255,.8);color:var(--fg);border:1px solid var(--line);border-radius:14px;height:54px;padding:0 26px;font-size:15px;backdrop-filter:blur(8px)}
+.hcta{display:flex;gap:14px;justify-content:center;align-items:center;margin-top:28px;flex-wrap:wrap;position:relative;z-index:3}
+
+/* Primary Hero CTA: Build my funnel ↗ */
+.btn.grad{
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  height:52px;
+  padding:0 8px 0 24px;
+  border-radius:999px;
+  background:linear-gradient(135deg,#ff6b32 0%,var(--or) 52%,#ee460b 100%);
+  color:#fff;
+  font-family:var(--sans);
+  font-size:15px;
+  font-weight:600;
+  letter-spacing:-.01em;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.28);
+  box-shadow:0 1px 2px rgba(0,0,0,.05),0 8px 24px -4px rgba(255,90,31,.42),inset 0 1px 0 rgba(255,255,255,.35);
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s cubic-bezier(.2,.7,.2,1),background .3s ease;
+  box-sizing:border-box;
+  cursor:pointer;
+}
+.btn.grad:hover{
+  transform:translateY(-2px);
+  background:linear-gradient(135deg,#ff793f 0%,#ff632a 52%,#f54f12 100%);
+  box-shadow:0 4px 12px rgba(0,0,0,.08),0 14px 32px -4px rgba(255,90,31,.55),inset 0 1px 0 rgba(255,255,255,.45);
+}
+.btn.grad:active{transform:translateY(0);box-shadow:0 2px 8px rgba(255,90,31,.4),inset 0 1px 0 rgba(255,255,255,.2)}
+.btn.grad i{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#fff;
+  color:var(--or);
+  display:grid;
+  place-items:center;
+  font-style:normal;
+  font-size:15px;
+  font-weight:700;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),background .25s ease,color .25s ease;
+  flex-shrink:0;
+}
+.btn.grad:hover i{transform:translate(2px,-2px);background:#fff;color:#ee460b}
+
+/* Secondary Hero CTA: Backed by 275+ case studies [See results ↗] */
+.hcta .tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  height:52px;
+  padding:0 6px 0 20px;
+  border-radius:999px;
+  border:1px solid rgba(20,20,20,.1);
+  box-sizing:border-box;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 2px 6px rgba(0,0,0,.03),0 10px 24px -8px rgba(0,0,0,.06),inset 0 1px 0 rgba(255,255,255,.95);
+  font-family:var(--sans);
+  font-size:14px;
+  font-weight:500;
+  color:var(--body);
+  letter-spacing:-.01em;
+  margin-bottom:0;
+  text-decoration:none;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),background .3s ease,border-color .3s ease,box-shadow .3s cubic-bezier(.2,.7,.2,1);
+  cursor:pointer;
+  white-space:nowrap;
+}
+.hcta .tag:hover{
+  transform:translateY(-2px);
+  background:#fff;
+  border-color:rgba(20,20,20,.18);
+  box-shadow:0 4px 16px rgba(0,0,0,.06),0 14px 30px -6px rgba(0,0,0,.08),inset 0 1px 0 #fff;
+}
+.hcta .tag:active{transform:translateY(0)}
+.hcta .tag>i{
+  font-style:normal;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--or);
+  box-shadow:0 0 0 3px rgba(255,90,31,.22);
+  flex-shrink:0;
+  font-size:0;
+  animation:hctaPulse 2.4s ease-in-out infinite;
+}
+@keyframes hctaPulse{
+  0%,100%{box-shadow:0 0 0 3px rgba(255,90,31,.22);transform:scale(1)}
+  50%{box-shadow:0 0 0 6px rgba(255,90,31,.08);transform:scale(1.15)}
+}
+.hcta .tag b{color:var(--fg);font-weight:700}
+.hcta .tag .tg2{
+  display:inline-flex;
+  align-items:center;
+  gap:5px;
+  height:40px;
+  padding:0 16px;
+  margin-left:4px;
+  border-radius:999px;
+  background:#141414;
+  color:#fff;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:-.01em;
+  box-shadow:0 2px 6px rgba(0,0,0,.12);
+  transition:all .25s cubic-bezier(.2,.7,.2,1);
+  flex-shrink:0;
+}
+.hcta .tag:hover .tg2{
+  background:var(--or);
+  color:#fff;
+  box-shadow:0 4px 14px rgba(255,90,31,.4);
+}
+.hcta .tag .tg2 i{
+  font-style:normal;
+  display:inline-block;
+  transition:transform .25s cubic-bezier(.2,.7,.2,1);
+}
+.hcta .tag:hover .tg2 i{
+  transform:translate(2px,-2px);
+}
+@media (max-width:560px){
+  .hcta{gap:10px;margin-top:20px}
+  .btn.grad{height:48px;padding:0 6px 0 20px;font-size:14px}
+  .btn.grad i{width:34px;height:34px;font-size:14px}
+  .hcta .tag{height:48px;padding:0 5px 0 14px;font-size:13px;gap:8px}
+  .hcta .tag .tg2{height:38px;padding:0 12px;font-size:12px}
+}
+
+.btn.wh{background:rgba(255,255,255,.8);color:var(--fg);border:1px solid var(--line);border-radius:999px;height:52px;padding:0 24px;font-size:15px;backdrop-filter:blur(8px)}
 .btn.wh:hover{background:var(--fg);color:#fff}
 .stage{position:relative;max-width:1240px;margin:0 auto;height:clamp(350px,38vw,515px)}
 .agent{position:absolute;left:50%;bottom:-2%;translate:-50% 0;width:clamp(320px,44vw,600px);aspect-ratio:1;-webkit-mask-image:radial-gradient(ellipse 62% 70% at 50% 55%,#000 55%,transparent 82%);mask-image:radial-gradient(ellipse 62% 70% at 50% 55%,#000 55%,transparent 82%)}
@@ -983,10 +1114,9 @@ h1,h2,h3,p{margin:0}
 <header class="hero" id="top">
   <video class="hbg" autoplay muted loop playsinline aria-hidden="true"><source src="img/hero/bg.webm" type="video/webm"><source src="img/hero/bg.mp4" type="video/mp4"></video>
   <div class="box">
-    <a class="tag rise" href="case-studies.html"><i>&#9679;</i> Backed by <b>275+</b> case studies <span class="tg2">See results &#8599;</span></a>
     <h1 class="h1 d rise" style="--rd:.1s">We build funnels that print <span class="type" id="type">booked calls.</span></h1>
     <p class="lead hl" id="hlead">Define the offer, connect your traffic, and let the funnel, the follow-up and the AI agent do the work while you focus on closing.</p>
-    <div class="hcta rise" style="--rd:.3s"><a class="btn grad" href="#robo">Build my funnel <i>&#8599;</i></a><a class="btn wh" href="#process">See how it works</a></div>
+    <div class="hcta rise" style="--rd:.3s"><a class="btn grad" href="#robo">Build my funnel <i>&#8599;</i></a><a class="tag" href="case-studies.html"><i>&#9679;</i> Backed by <b>275+</b> case studies <span class="tg2">See results <i>&#8599;</i></span></a></div>
     <div class="stage" id="stage">
       <div class="agent rise" style="--rd:.4s"><video poster="img/hero/agent.webp" autoplay muted loop playsinline aria-label="AI agent"><source src="img/hero/agent.webm" type="video/webm"><source src="img/hero/agent.mp4" type="video/mp4"></video></div>
       <div class="ui lead" style="left:0;top:14%;--d:1s" data-m="22"><div class="uh"><b>Live funnel</b><span class="pl"><i>&#9679;</i> Running</span></div><div class="fs"><div class="fr" style="--w:100%;--d:0s"><span>Ad clicks</span><i></i><b>1,284</b></div><div class="fr" style="--w:72%;--d:.15s"><span>Page views</span><i></i><b>912</b></div><div class="fr" style="--w:40%;--d:.3s"><span>Applications</span><i></i><b>163</b></div><div class="fr" style="--w:24%;--d:.45s"><span>AI qualified</span><i></i><b>74</b></div><div class="fr hot" style="--w:16%;--d:.6s"><span>Booked calls</span><i></i><b>41</b></div></div><div class="fe"><div class="ev1"><i>AI</i><span><b>Lead qualified by the agent</b>Call booked, Thu 14:30</span><em>now</em></div><div class="ev1"><i class="f">&#10003;</i><span><b>Application submitted</b>Coaching offer, $3K</span><em>2m</em></div></div></div>

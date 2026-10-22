@@ -124,7 +124,9 @@ export default function Hero() {
           </a>
           <Link className="tag" href="/case-studies">
             <i>&#9679;</i> Backed by <b>275+</b> case studies{" "}
-            <span className="tg2">See results &#8599;</span>
+            <span className="tg2">
+              See results <i>&#8599;</i>
+            </span>
           </Link>
         </div>
 
