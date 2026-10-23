@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
+import RealClientResults from "@/components/RealClientResults";
+import VideoTestimonials from "@/components/VideoTestimonials";
 
 export default function Case1MPage() {
   const [playing, setPlaying] = useState(false);
@@ -221,6 +223,8 @@ export default function Case1MPage() {
         </Link>
       </section>
     </div>
+    <RealClientResults />
+    <VideoTestimonials />
     <UFSquareMarquee />
     <RoboSection />
   </>

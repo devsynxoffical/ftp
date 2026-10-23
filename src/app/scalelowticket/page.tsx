@@ -4,6 +4,8 @@ import { useState, useRef } from "react";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
+import RealClientResults from "@/components/RealClientResults";
+import VideoTestimonials from "@/components/VideoTestimonials";
 
 export default function Case847KPage() {
   const [playing, setPlaying] = useState(false);
@@ -197,6 +199,8 @@ export default function Case847KPage() {
         </Link>
       </section>
     </div>
+    <RealClientResults />
+    <VideoTestimonials />
     <UFSquareMarquee />
     <RoboSection />
   </>
