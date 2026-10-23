@@ -30,19 +30,56 @@ export default function ProcessSection() {
     return () => po.disconnect();
   }, []);
 
+  // Allow horizontal swipe/wheel gesture inside track to smoothly scroll the section
+  useEffect(() => {
+    const proc = document.getElementById("process");
+    if (!proc) return;
+
+    const handleWheel = (e: WheelEvent) => {
+      // If horizontal gesture on trackpad or shift+wheel
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY) && Math.abs(e.deltaX) > 3) {
+        const globalLenis = (window as unknown as {
+          lenis?: { scrollTo: (y: number, opts?: object) => void; scroll: number };
+        }).lenis;
+        if (globalLenis) {
+          globalLenis.scrollTo(globalLenis.scroll + e.deltaX * 1.5, { immediate: true });
+        } else {
+          window.scrollBy({ top: e.deltaX * 1.5 });
+        }
+      }
+    };
+
+    proc.addEventListener("wheel", handleWheel, { passive: true });
+    return () => proc.removeEventListener("wheel", handleWheel);
+  }, []);
+
   const scrollToStep = (index: number) => {
     const pw = document.getElementById("procwrap");
-    if (pw && window.innerWidth > 980) {
-      const top = pw.getBoundingClientRect().top + window.scrollY;
-      const totalScrollable = pw.offsetHeight - window.innerHeight;
-      const targetY = top + (index / (PROCESS_STEPS.length - 1)) * totalScrollable;
+    if (!pw) return;
 
-      const globalLenis = (window as unknown as { lenis?: { scrollTo: (y: number, opts: object) => void } }).lenis;
-      if (globalLenis) {
-        globalLenis.scrollTo(targetY, { duration: 1.2 });
-      } else {
-        window.scrollTo({ top: targetY, behavior: "smooth" });
-      }
+    let top = 0;
+    let curr: HTMLElement | null = pw;
+    while (curr) {
+      top += curr.offsetTop;
+      curr = curr.offsetParent as HTMLElement | null;
+    }
+
+    const totalScrollable = Math.max(1, pw.offsetHeight - window.innerHeight);
+    const targetY = top + (index / (PROCESS_STEPS.length - 1)) * totalScrollable;
+
+    // Immediately update active card class for instant visual response
+    const cards = document.querySelectorAll<HTMLElement>("#track .card");
+    const progs = document.querySelectorAll<HTMLElement>("#prog div");
+    cards.forEach((c, k) => c.classList.toggle("on", k === index));
+    progs.forEach((c, k) => c.classList.toggle("on", k <= index));
+
+    const globalLenis = (window as unknown as {
+      lenis?: { scrollTo: (y: number, opts: object) => void };
+    }).lenis;
+    if (globalLenis) {
+      globalLenis.scrollTo(targetY, { duration: 1.0 });
+    } else {
+      window.scrollTo({ top: targetY, behavior: "smooth" });
     }
   };
 

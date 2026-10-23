@@ -490,7 +490,7 @@ h1,h2,h3,p{margin:0}
 .pv .chat{align-self:flex-start;background:#fff;border-radius:14px 14px 14px 4px;padding:10px 14px;font-size:13px;max-width:82%}.pv .chat.me{align-self:flex-end;background:var(--fg);color:#fff;border-radius:14px 14px 4px 14px}
 
 /* process (runbook horizontal pin) */
-#procwrap{height:520vh;background:var(--bg)}
+#procwrap{height:360vh;background:var(--bg)}
 .proc{position:sticky;top:0;height:100svh;overflow:hidden;display:flex;flex-direction:column}
 .proc .box{padding-top:clamp(90px,10vh,120px);display:flex;justify-content:space-between;align-items:end;gap:20px}
 .track{flex:1;display:flex;align-items:stretch;gap:14px;padding:30px var(--gut) 0;will-change:transform;min-height:0}

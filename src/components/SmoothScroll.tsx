@@ -65,40 +65,29 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     // High performance batched measurement & GPU frame runner
     const cl = (v: number, a = 0, b = 1) => Math.max(a, Math.min(b, v));
-    const nav = document.getElementById("nav");
-    const hero = document.querySelector<HTMLElement>(".hero");
-    const uis = Array.from(document.querySelectorAll<HTMLElement>("#stage .ui"));
-    const pw = document.getElementById("procwrap");
-    const track = document.getElementById("track");
-    const cards = Array.from(
-      document.querySelectorAll<HTMLElement>("#track .card")
-    );
-    const progs = Array.from(
-      document.querySelectorAll<HTMLElement>("#prog div")
-    );
-    const ptw = document.getElementById("portwrap");
-    const ptop = document.querySelector<HTMLElement>(".port .top");
-    const dev = document.getElementById("dev");
-    const cover = document.getElementById("cover");
-    const pl = document.getElementById("pl");
-    const sites = [
-      document.getElementById("site"),
-      document.getElementById("site2"),
-    ].filter(Boolean) as HTMLElement[];
-    const scr = document.querySelector<HTMLElement>("#pl .scr");
-    const fsh = document.getElementById("fsh");
-    const gl = document.getElementById("gl");
-    const gr = document.getElementById("gr");
-    const pipe = document.getElementById("pipe");
-    const fill = document.getElementById("pfill");
-    const nodes = Array.from(
-      document.querySelectorAll<HTMLElement>("#pipe .node")
-    );
-    const adv = document.getElementById("adv");
-    const words = Array.from(document.querySelectorAll<HTMLElement>("#adv .w"));
-    const caseEls = Array.from(
-      document.querySelectorAll<HTMLElement & { _s?: string }>("#caselist .case")
-    );
+    let nav: HTMLElement | null = null;
+    let hero: HTMLElement | null = null;
+    let uis: HTMLElement[] = [];
+    let pw: HTMLElement | null = null;
+    let track: HTMLElement | null = null;
+    let cards: HTMLElement[] = [];
+    let progs: HTMLElement[] = [];
+    let ptw: HTMLElement | null = null;
+    let ptop: HTMLElement | null = null;
+    let dev: HTMLElement | null = null;
+    let cover: HTMLElement | null = null;
+    let pl: HTMLElement | null = null;
+    let sites: HTMLElement[] = [];
+    let scr: HTMLElement | null = null;
+    let fsh: HTMLElement | null = null;
+    let gl: HTMLElement | null = null;
+    let gr: HTMLElement | null = null;
+    let pipe: HTMLElement | null = null;
+    let fill: HTMLElement | null = null;
+    let nodes: HTMLElement[] = [];
+    let adv: HTMLElement | null = null;
+    let words: HTMLElement[] = [];
+    let caseEls: (HTMLElement & { _s?: string })[] = [];
 
     let last = 0;
     let tick = false;
@@ -112,9 +101,43 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       req();
     };
 
-    if (hero) {
-      hero.addEventListener("mousemove", onHeroMouseMove, { passive: true });
+    function bindElements() {
+      nav = document.getElementById("nav");
+      const nextHero = document.querySelector<HTMLElement>(".hero");
+      if (nextHero !== hero) {
+        if (hero) hero.removeEventListener("mousemove", onHeroMouseMove);
+        hero = nextHero;
+        if (hero) hero.addEventListener("mousemove", onHeroMouseMove, { passive: true });
+      }
+      uis = Array.from(document.querySelectorAll<HTMLElement>("#stage .ui"));
+      pw = document.getElementById("procwrap");
+      track = document.getElementById("track");
+      cards = Array.from(document.querySelectorAll<HTMLElement>("#track .card"));
+      progs = Array.from(document.querySelectorAll<HTMLElement>("#prog div"));
+      ptw = document.getElementById("portwrap");
+      ptop = document.querySelector<HTMLElement>(".port .top");
+      dev = document.getElementById("dev");
+      cover = document.getElementById("cover");
+      pl = document.getElementById("pl");
+      sites = [
+        document.getElementById("site"),
+        document.getElementById("site2"),
+      ].filter(Boolean) as HTMLElement[];
+      scr = document.querySelector<HTMLElement>("#pl .scr");
+      fsh = document.getElementById("fsh");
+      gl = document.getElementById("gl");
+      gr = document.getElementById("gr");
+      pipe = document.getElementById("pipe");
+      fill = document.getElementById("pfill");
+      nodes = Array.from(document.querySelectorAll<HTMLElement>("#pipe .node"));
+      adv = document.getElementById("adv");
+      words = Array.from(document.querySelectorAll<HTMLElement>("#adv .w"));
+      caseEls = Array.from(
+        document.querySelectorAll<HTMLElement & { _s?: string }>("#caselist .case")
+      );
     }
+
+    bindElements();
 
     const caseTop = () =>
       caseEls[0]
@@ -143,15 +166,25 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     };
 
     function measure() {
+      if (
+        !pw || !pw.isConnected ||
+        !track || !track.isConnected ||
+        (document.getElementById("procwrap") && !pw)
+      ) {
+        bindElements();
+      }
       M.cst = caseTop();
       M.cH = caseEls[0] ? caseEls[0].offsetHeight : 0;
       M.heroH = hero ? hero.offsetHeight : 0;
       M.pwH = pw ? pw.offsetHeight : 0;
       M.ptwH = ptw ? ptw.offsetHeight : 0;
       M.trackMax = track
-        ? track.scrollWidth -
-          window.innerWidth +
-          (parseFloat(window.getComputedStyle(track).paddingLeft) || 0)
+        ? Math.max(
+            0,
+            track.scrollWidth -
+              window.innerWidth +
+              (parseFloat(window.getComputedStyle(track).paddingLeft) || 0)
+          )
         : 0;
       M.P = cover ? cover.offsetWidth : 0;
       M.siteMax =
@@ -175,6 +208,18 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
     function frame() {
       tick = false;
+
+      // Re-bind dynamically if elements got unmounted or replaced during page navigation
+      if (
+        (pw && !pw.isConnected) ||
+        (track && !track.isConnected) ||
+        (ptw && !ptw.isConnected) ||
+        (!pw && document.getElementById("procwrap"))
+      ) {
+        bindElements();
+        measure();
+      }
+
       const y = window.scrollY;
       const vh = window.innerHeight;
       const vw = window.innerWidth;
@@ -215,10 +260,20 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
 
       // 3. Process track horizontal scroll
       if (rp && rp.top < vh && rp.bottom > 0 && track) {
-        const p = cl(-rp.top / (M.pwH - vh));
-        track.style.transform = `translate3d(${(-p * M.trackMax).toFixed(1)}px,0,0)`;
-        const i = Math.min(5, Math.floor(p * 6));
-        if (i !== pi) {
+        const scrollRange = Math.max(1, (M.pwH || pw?.offsetHeight || 0) - vh);
+        const p = cl(-rp.top / scrollRange);
+        const trackMax =
+          M.trackMax ||
+          Math.max(
+            0,
+            track.scrollWidth -
+              vw +
+              (parseFloat(window.getComputedStyle(track).paddingLeft) || 0)
+          );
+        track.style.transform = `translate3d(${(-p * trackMax).toFixed(1)}px,0,0)`;
+        const count = cards.length || 6;
+        const i = Math.min(count - 1, Math.floor(p * count));
+        if (i !== pi && i >= 0) {
           pi = i;
           cards.forEach((c, k) => c.classList.toggle("on", k === i));
           progs.forEach((c, k) => c.classList.toggle("on", k <= i));
@@ -334,6 +389,13 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       req();
     });
 
+    // Expose rebind hook for navigation events
+    (window as unknown as { __rebindSmoothScroll?: () => void }).__rebindSmoothScroll = () => {
+      bindElements();
+      measure();
+      req();
+    };
+
     frame();
 
     // Smoothly intercept hash anchor clicks
@@ -362,6 +424,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     document.addEventListener("click", handleAnchorClick);
 
     return () => {
+      delete (window as unknown as { __rebindSmoothScroll?: () => void }).__rebindSmoothScroll;
       document.removeEventListener("click", handleAnchorClick);
       if (hero) hero.removeEventListener("mousemove", onHeroMouseMove);
       window.removeEventListener("scroll", req);
@@ -378,9 +441,16 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
   useEffect(() => {
     const globalLenis = (window as unknown as { lenis?: Lenis }).lenis;
     
-    // Resize Lenis after DOM updates on route transition
-    const resizeTimer1 = setTimeout(() => globalLenis?.resize(), 80);
-    const resizeTimer2 = setTimeout(() => globalLenis?.resize(), 300);
+    // Rebind elements and resize Lenis after DOM updates on route transition
+    const rebindAll = () => {
+      globalLenis?.resize();
+      const rebind = (window as unknown as { __rebindSmoothScroll?: () => void }).__rebindSmoothScroll;
+      if (rebind) rebind();
+      window.dispatchEvent(new Event("resize"));
+    };
+
+    const resizeTimer1 = setTimeout(rebindAll, 80);
+    const resizeTimer2 = setTimeout(rebindAll, 300);
 
     if (window.location.hash) {
       const targetEl = document.querySelector(window.location.hash);
