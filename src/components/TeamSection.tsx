@@ -181,6 +181,22 @@ export default function TeamSection() {
 
                 {/* Back Face (3D Flipped) */}
                 <div className="team-card-back">
+                  <span className="team-card-flip-btn back" title="Flip back">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.4"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    >
+                      <polyline points="23 4 23 10 17 10" />
+                      <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                    </svg>
+                  </span>
+
                   <div className="team-card-back-header">
                     <span className="team-card-back-name">{member.name}</span>
                     <span className="team-card-back-role">{member.role}</span>
