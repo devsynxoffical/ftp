@@ -39,6 +39,7 @@ export default function Navbar() {
     const handleScroll = () => {
       const y = window.scrollY;
       nav.classList.toggle("hide", y > lastY && y > 400);
+      nav.classList.toggle("scrolled", y > 15);
       lastY = y;
     };
 

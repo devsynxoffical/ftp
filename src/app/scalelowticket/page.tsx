@@ -155,7 +155,7 @@ export default function Case847KPage() {
 
         <div className="k2ba">
           <div className="bf rv">
-            <span className="lbl">Before MDF&trade;</span>
+            <span className="lbl">The problem, before Funnels That Print&trade;</span>
             <h2>High-ticket hype, no profitable front end.</h2>
             <p>
               The client was stuck in &quot;high-ticket hype&quot; without a

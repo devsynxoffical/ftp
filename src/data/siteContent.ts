@@ -352,7 +352,7 @@ export const PLANS_DATA: PlanTier[] = [
       "Mobile-Optimized Layouts",
     ],
     ctaText: "Start with design",
-    ctaUrl: "https://milliondollarfunnels.us/book?tier=design-only",
+    ctaUrl: "/contact",
   },
   {
     tag: "MOST POPULAR",
@@ -370,7 +370,7 @@ export const PLANS_DATA: PlanTier[] = [
       "Mobile-Optimized Conversion Design",
     ],
     ctaText: "Get your AC Funnel now",
-    ctaUrl: "https://milliondollarfunnels.us/book?tier=design-copy-build",
+    ctaUrl: "/contact",
   },
   {
     tag: "COMPLETE",
@@ -386,7 +386,7 @@ export const PLANS_DATA: PlanTier[] = [
       "30 Days of Post-Launch Support",
     ],
     ctaText: "Apply for full funnel suite",
-    ctaUrl: "https://milliondollarfunnels.us/book?tier=full-funnel-suite",
+    ctaUrl: "/contact",
   },
 ];
 

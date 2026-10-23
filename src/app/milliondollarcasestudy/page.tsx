@@ -27,7 +27,7 @@ export default function Case1MPage() {
           </div>
           <h1>
             From inconsistent cold traffic to $1.52M in 19 months, on a turnkey
-            Million Dollar Funnel&trade; stack.
+            Funnels That Print&trade; acquisition stack.
           </h1>
           <div className="hb">
             <Link className="btn o" href="/contact">
@@ -140,7 +140,7 @@ export default function Case1MPage() {
           <div className="g5">
             <div>
               <span>System architecture</span>
-              <b>Turnkey Million Dollar Funnel&trade; stack</b>
+              <b>Turnkey Funnels That Print&trade; acquisition stack</b>
             </div>
             <p>
               VSL acquisition funnel, attribution pipelines, Meta CAPI &amp; dynamic
@@ -151,7 +151,7 @@ export default function Case1MPage() {
 
         <div className="k1b">
           <div className="prob rv">
-            <span className="lbl">The problem, before MDF&trade;</span>
+            <span className="lbl">The problem, before Funnels That Print&trade;</span>
             <h2>A strong offer leaking on cold traffic.</h2>
             <p>
               The client had a strong offer but suffered from inconsistent

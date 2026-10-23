@@ -5,14 +5,14 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 export const metadata: Metadata = {
   title: "$1.52M High-Ticket Consulting Case Study",
   description:
-    "How we scaled an inconsistent high-ticket consulting offer to $1,520,000 in 19 months using a turnkey Million Dollar Funnel™ architecture.",
+    "How we scaled an inconsistent high-ticket consulting offer to $1,520,000 in 19 months using a turnkey Funnels That Print™ architecture.",
   alternates: {
     canonical: `${BASE_URL}/milliondollarcasestudy`,
   },
   openGraph: {
     title: "$1.52M in 19 Months Case Study | Funnels That Print",
     description:
-      "From inconsistent cold traffic to $1.52M in 19 months on a turnkey Million Dollar Funnel™ stack. Watch the full walkthrough.",
+      "From inconsistent cold traffic to $1.52M in 19 months on a turnkey Funnels That Print™ stack. Watch the full walkthrough.",
     url: `${BASE_URL}/milliondollarcasestudy`,
     type: "article",
     images: [
@@ -37,7 +37,7 @@ const caseSchema = {
   "@context": "https://schema.org",
   "@type": "Article",
   headline:
-    "From inconsistent cold traffic to $1.52M in 19 months, on a turnkey Million Dollar Funnel™ stack",
+    "From inconsistent cold traffic to $1.52M in 19 months, on a turnkey Funnels That Print™ acquisition stack",
   description:
     "Comprehensive case study breakdown of scaling a high-ticket consulting firm to $1,520,000 revenue in 19 months.",
   author: {
