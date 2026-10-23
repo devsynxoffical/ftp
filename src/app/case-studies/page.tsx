@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
+import RealClientResults from "@/components/RealClientResults";
+import VideoTestimonials from "@/components/VideoTestimonials";
 
 export const metadata: Metadata = {
   title: "Client Case Studies: Lead Gen & eCommerce Funnels",
@@ -151,6 +153,8 @@ export default function CaseStudiesPage() {
         </Link>
       </div>
     </div>
+    <RealClientResults />
+    <VideoTestimonials />
     <UFSquareMarquee />
     <RoboSection />
   </>

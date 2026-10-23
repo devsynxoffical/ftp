@@ -7,6 +7,8 @@ import { CASES, CaseItem } from "@/data/cases";
 import { LEADS, LeadItem } from "@/data/leads";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
+import RealClientResults from "@/components/RealClientResults";
+import VideoTestimonials from "@/components/VideoTestimonials";
 
 function CaseDetailContent() {
   const searchParams = useSearchParams();
@@ -209,6 +211,8 @@ export default function CaseDetailPage() {
       >
         <CaseDetailContent />
       </Suspense>
+      <RealClientResults />
+      <VideoTestimonials />
       <UFSquareMarquee />
       <RoboSection />
     </>

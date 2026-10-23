@@ -241,7 +241,6 @@ export const FUNNELS_LIST: FunnelItem[] = [
   { id: 6, name: "Inventiv", desc: "Invention showcase, lead funnel" },
   { id: 5, name: "Pluto CRM", desc: "Insurance CRM, free trial funnel" },
   { id: 4, name: "Bio-Optimization Made Easy", desc: "Long-form VSL sales letter" },
-  { id: 3, name: "Funnel Profit System", desc: "Audit offer, booking funnel" },
   { id: 2, name: "Growth Foundry", desc: "Local SEO audit, lead funnel" },
 ];
 

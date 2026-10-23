@@ -273,7 +273,7 @@ export default function PortfolioFoldfolio() {
             className="mono"
             style={{ textAlign: "right", maxWidth: "30ch" }}
           >
-            Scroll to unfold, then pick any of the 8 funnels below.
+            Scroll to unfold, then pick any of the {FUNNELS_LIST.length} funnels below.
           </span>
         </div>
 
