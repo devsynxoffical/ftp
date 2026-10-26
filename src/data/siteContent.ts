@@ -34,7 +34,6 @@ export const LOADER_WORDS = [
 export const LOGOS = [
   "logo-01.webp",
   "logo-02.webp",
-  "logo-03.webp",
   "logo-04.webp",
   "logo-05.webp",
   "logo-06.webp",
