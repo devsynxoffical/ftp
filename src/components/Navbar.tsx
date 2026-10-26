@@ -124,6 +124,12 @@ export default function Navbar() {
             </div>
           </div>
           <Link href="/#pricing">Pricing</Link>
+          <Link
+            href="/blog"
+            className={pathname.startsWith("/blog") ? "active" : ""}
+          >
+            Blog
+          </Link>
         </div>
 
         <div className="nr">
@@ -222,6 +228,9 @@ export default function Navbar() {
               </Link>
               <Link href="/#pricing" onClick={closeMenu}>
                 Pricing
+              </Link>
+              <Link href="/blog" onClick={closeMenu}>
+                Blog
               </Link>
               <Link href="/contact" className="dim" onClick={closeMenu}>
                 Contact
