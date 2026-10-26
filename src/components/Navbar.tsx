@@ -61,24 +61,68 @@ export default function Navbar() {
         <div className="pill">
           <Link href="/#services">What we do</Link>
           <Link href="/#process">How we do it</Link>
-          <Link
-            href="/case-studies"
-            className={pathname === "/case-studies" ? "active" : ""}
-          >
-            Case studies
-          </Link>
-          <Link
-            className={`feat ${pathname === "/milliondollarcasestudy" ? "active" : ""}`}
-            href="/milliondollarcasestudy"
-          >
-            <b>$1.52M</b> case
-          </Link>
-          <Link
-            className={`feat ${pathname === "/scalelowticket" ? "active" : ""}`}
-            href="/scalelowticket"
-          >
-            <b>$847K</b> case
-          </Link>
+          <div className="dd">
+            <Link
+              href="/case-studies"
+              className={
+                pathname === "/case-studies" ||
+                pathname === "/milliondollarcasestudy" ||
+                pathname === "/scalelowticket"
+                  ? "active"
+                  : ""
+              }
+            >
+              Case studies
+              <svg
+                width="10"
+                height="6"
+                viewBox="0 0 10 6"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true"
+              >
+                <path
+                  d="M1 1.25L5 4.75L9 1.25"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </Link>
+            <div className="ddm" role="menu" aria-label="Case studies submenu">
+              <Link
+                href="/milliondollarcasestudy"
+                className={`dd-item ${pathname === "/milliondollarcasestudy" ? "active" : ""}`}
+                role="menuitem"
+              >
+                <div className="dd-head">
+                  <span className="dd-title">High-Ticket Consulting</span>
+                  <span className="dd-badge">$1.52M</span>
+                </div>
+                <span className="dd-sub">
+                  From cold traffic to $1.52M in 19 months &middot; Turnkey stack
+                </span>
+              </Link>
+              <Link
+                href="/scalelowticket"
+                className={`dd-item ${pathname === "/scalelowticket" ? "active" : ""}`}
+                role="menuitem"
+              >
+                <div className="dd-head">
+                  <span className="dd-title">Low-Ticket Scaling System</span>
+                  <span className="dd-badge">$847K</span>
+                </div>
+                <span className="dd-sub">
+                  $847,307 collected with self-liquidating front door
+                </span>
+              </Link>
+              <Link href="/case-studies" className="dd-all" role="menuitem">
+                <span>View all case studies (275+)</span>
+                <i aria-hidden="true">&rarr;</i>
+              </Link>
+            </div>
+          </div>
           <Link href="/#pricing">Pricing</Link>
         </div>
 
@@ -171,10 +215,10 @@ export default function Navbar() {
                 Case studies
               </Link>
               <Link href="/milliondollarcasestudy" className="sub" onClick={closeMenu}>
-                $1.52M high-ticket case
+                High-Ticket Consulting <span className="sub-tag">$1.52M</span>
               </Link>
               <Link href="/scalelowticket" className="sub" onClick={closeMenu}>
-                $847K coaching LTO case
+                Low-Ticket Scaling System <span className="sub-tag">$847K</span>
               </Link>
               <Link href="/#pricing" onClick={closeMenu}>
                 Pricing

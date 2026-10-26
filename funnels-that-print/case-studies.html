@@ -54,18 +54,40 @@ h1,h2,h3,p{margin:0}
 .logo{display:flex;align-items:center;gap:10px;font-family:var(--disp);font-weight:700;letter-spacing:-.04em;font-size:18px}
 .logo i{width:30px;height:30px;background:var(--or);clip-path:polygon(0 0,100% 0,100% 40%,60% 40%,60% 100%,0 100%);display:block}
 .pill{display:flex;gap:2px;padding:4px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.7);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
-.pill a{font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;color:var(--body);transition:background .25s,color .25s}
-.pill a:hover{background:var(--fg);color:#fff}
-.dd{position:relative;display:flex}.dd>a{display:inline-flex;align-items:center;gap:6px}.dd>a svg{transition:transform .3s}
-.ddm{position:absolute;top:calc(100% + 10px);left:50%;translate:-50% 0;width:280px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:8px;box-shadow:0 24px 60px rgba(0,0,0,.12);display:grid;gap:4px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .25s,transform .35s cubic-bezier(.2,.7,.2,1),visibility .25s;z-index:20}
+.pill a{font-size:13px;font-weight:500;padding:8px 14px;border-radius:999px;color:var(--body);transition:background .25s,color .25s;white-space:nowrap}
+.pill a:hover,
+.pill a.active,
+.dd:hover > a,
+.dd:focus-within > a{background:var(--fg);color:#fff}
+.dd{position:relative;display:flex}
+.dd>a{display:inline-flex;align-items:center;gap:6px}
+.dd>a svg{transition:transform .3s ease}
+.dd:hover>a svg,.dd:focus-within>a svg{transform:rotate(180deg)}
+.ddm{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%) translateY(-6px);width:clamp(300px,24vw,340px);background:#fff;border:1px solid var(--line);border-radius:18px;padding:8px;box-shadow:0 24px 60px rgba(0,0,0,.12),0 4px 16px rgba(0,0,0,.04);display:grid;gap:4px;opacity:0;visibility:hidden;transition:opacity .25s,transform .35s cubic-bezier(.2,.7,.2,1),visibility .25s;z-index:90;text-align:left}
 .ddm::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
-.dd:hover .ddm,.dd:focus-within .ddm{opacity:1;visibility:visible;transform:none}.dd:hover>a svg,.dd:focus-within>a svg{transform:rotate(180deg)}
+.dd:hover .ddm,.dd:focus-within .ddm{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
 .ddm a{display:grid!important;gap:2px;padding:12px 14px!important;border-radius:14px!important;color:var(--fg)!important}
 .ddm a b{font-family:var(--disp);font-size:22px;font-weight:700;letter-spacing:-.03em;color:var(--or);line-height:1}.ddm a span{font-size:12px;color:var(--body)}
 .ddm a:hover{background:var(--bg3)!important;color:var(--fg)!important}.ddm a:hover span{color:var(--fg)}
 .ddm a.all{display:flex!important;justify-content:space-between;font-size:13px;font-weight:600;background:var(--fg);color:#fff!important}.ddm a.all:hover{background:var(--or)!important;color:#fff!important}
-.pill a.feat b{color:var(--or);font-weight:700}.pill a{white-space:nowrap}.nav .logo,.nav .btn{white-space:nowrap}@media (max-width:1300px){.pill a{padding:8px 10px;font-size:12.5px}}@media (max-width:1180px){.pill a[href="#process"],.pill a[href="#who"],.pill a[href="index.html#process"],.pill a[href="index.html#who"]{display:none}}.pill a.feat:hover b{color:var(--lime)}
-.mnav nav a.sub{font-size:clamp(18px,min(2.2vw,4vh),34px);color:#9a9a9a;padding-left:.6em;font-variation-settings:"wdth" 90}
+.ddm .dd-item{display:flex!important;flex-direction:column!important;gap:4px!important;padding:11px 13px!important;border-radius:12px!important;color:var(--fg)!important;background:transparent;text-decoration:none;transition:background .2s ease,transform .15s ease;white-space:normal!important}
+.ddm .dd-item:hover{background:var(--bg3)!important;color:var(--fg)!important;transform:translateX(2px)}
+.ddm .dd-item.active{background:var(--bg2)!important}
+.dd-head{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%}
+.dd-title{font-family:var(--sans);font-size:13.5px;font-weight:700;color:var(--fg);line-height:1.25;letter-spacing:-.01em}
+.dd-badge{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--or);background:rgba(255,77,0,.08);border:1px solid rgba(255,77,0,.2);padding:2px 7px;border-radius:999px;letter-spacing:-.01em;white-space:nowrap;transition:background .2s,color .2s}
+.ddm .dd-item:hover .dd-badge{background:var(--or);color:#fff;border-color:var(--or)}
+.dd-sub{font-size:11.5px;color:#666;line-height:1.35;font-weight:400;display:block}
+.ddm .dd-item:hover .dd-sub{color:var(--fg)}
+.ddm .dd-all{display:flex!important;justify-content:space-between!important;align-items:center!important;padding:10px 14px!important;border-radius:12px!important;font-size:12.5px!important;font-weight:600!important;background:var(--fg)!important;color:#fff!important;margin-top:2px;text-decoration:none;transition:background .2s ease}
+.ddm .dd-all:hover{background:var(--or)!important;color:#fff!important}
+.ddm .dd-all i{font-style:normal;font-size:13px;transition:transform .2s ease}
+.ddm .dd-all:hover i{transform:translateX(3px)}
+.pill a.feat b{color:var(--or);font-weight:700}.nav .logo,.nav .btn{white-space:nowrap}@media (max-width:1300px){.pill a{padding:8px 10px;font-size:12.5px}}@media (max-width:1180px){.pill a[href="#process"],.pill a[href="#who"],.pill a[href="index.html#process"],.pill a[href="index.html#who"]{display:none}}.pill a.feat:hover b{color:var(--lime)}
+.mnav nav a.sub{font-size:clamp(16px,min(2vw,3.5vh),28px);color:#9a9a9a;padding-left:.6em;font-variation-settings:"wdth" 90;display:inline-flex;align-items:center;gap:12px;white-space:normal}
+.mnav nav a.sub:hover{color:#fff;transform:translateX(8px)}
+.mnav nav a.sub .sub-tag{font-family:var(--mono);font-size:clamp(11px,min(1.3vw,2vh),15px);font-weight:700;color:var(--or);background:rgba(255,77,0,.15);border:1px solid rgba(255,77,0,.3);padding:2px 9px;border-radius:999px;letter-spacing:0;text-transform:none;transition:background .2s,color .2s}
+.mnav nav a.sub:hover .sub-tag{background:var(--or);color:#fff;border-color:var(--or)}
 .nr{display:flex;gap:8px;align-items:center}
 .burger{width:48px;height:48px;border-radius:50%;border:1px solid var(--line2);background:rgba(255,255,255,.7);backdrop-filter:blur(14px);display:grid;place-items:center;gap:5px;padding:0}
 .burger s{display:block;width:18px;height:1.5px;background:var(--fg);text-decoration:none}
@@ -795,7 +817,7 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
 </head><body>
 <nav class="nav" id="nav" aria-label="Main">
   <a class="logo" href="index.html#top"><i></i>Funnels That Print</a>
-  <div class="pill"><a href="index.html#services">What we do</a><a href="index.html#process">How we do it</a><a href="index.html#who">Who it's for</a><a href="index.html#work">Portfolio</a><a href="case-studies.html">Case studies</a><a class="feat" href="case-1m.html"><b>$1.52M</b> case</a><a class="feat" href="case-847k.html"><b>$847K</b> case</a><a href="index.html#pricing">Pricing</a></div>
+  <div class="pill"><a href="index.html#services">What we do</a><a href="index.html#process">How we do it</a><a href="index.html#who">Who it's for</a><a href="index.html#work">Portfolio</a><div class="dd"><a href="case-studies.html">Case studies <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M1 1.25L5 4.75L9 1.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="ddm" role="menu" aria-label="Case studies submenu"><a href="case-1m.html" class="dd-item" role="menuitem"><div class="dd-head"><span class="dd-title">High-Ticket Consulting</span><span class="dd-badge">$1.52M</span></div><span class="dd-sub">From cold traffic to $1.52M in 19 months · Turnkey stack</span></a><a href="case-847k.html" class="dd-item" role="menuitem"><div class="dd-head"><span class="dd-title">Low-Ticket Scaling System</span><span class="dd-badge">$847K</span></div><span class="dd-sub">$847,307 collected with self-liquidating front door</span></a><a href="case-studies.html" class="dd-all" role="menuitem"><span>View all case studies (275+)</span><i aria-hidden="true">&rarr;</i></a></div></div><a href="index.html#pricing">Pricing</a></div>
   <div class="nr"><a class="btn" href="index.html#robo" style="height:44px">Build my funnel <i>&#8599;</i></a><button class="burger" id="mopen" aria-label="Open menu" aria-expanded="false"><s></s><s></s></button></div>
 </nav>
 <div id="menu" role="dialog" aria-label="Menu">
@@ -809,7 +831,7 @@ dialog.cm::backdrop{background:rgba(20,20,20,.85);backdrop-filter:blur(8px)}
   <div class="mr">
     <div class="pic"><img src="img/gen/menu.webp" alt="" loading="lazy"></div>
     <div class="mnav">
-      <nav><a href="index.html#top">Home</a><a href="index.html#services">Services</a><a href="index.html#process">Process</a><a href="case-studies.html">Case studies</a><a href="case-1m.html" class="sub">$1.52M high-ticket case</a><a href="case-847k.html" class="sub">$847K coaching LTO case</a><a href="index.html#pricing">Pricing</a><a href="contact.html" class="dim">Contact</a></nav>
+      <nav><a href="index.html#top">Home</a><a href="index.html#services">Services</a><a href="index.html#process">Process</a><a href="case-studies.html">Case studies</a><a href="case-1m.html" class="sub">High-Ticket Consulting <span class="sub-tag">$1.52M</span></a><a href="case-847k.html" class="sub">Low-Ticket Scaling System <span class="sub-tag">$847K</span></a><a href="index.html#pricing">Pricing</a><a href="contact.html" class="dim">Contact</a></nav>
       <div class="mfoot"><div><span class="mono">Follow us</span><a href="index.html#top">LinkedIn</a><br><a href="index.html#top">Instagram</a><br><a href="index.html#top">X</a></div><div><span class="mono">Reach out</span><span>info@funnelsthatprint.com</span></div></div>
     </div>
     <button class="mclose" id="mclose" aria-label="Close menu">&times;</button>

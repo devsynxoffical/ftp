@@ -44,3 +44,7 @@ next-env.d.ts
 /funnels-that-print/img/
 /funnels-that-print/vid/
 /funnels-that-print/images/
+
+# exported bundles
+*.zip
+/ftp-sections-bundle/

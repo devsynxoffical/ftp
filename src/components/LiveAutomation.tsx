@@ -434,6 +434,12 @@ export default function LiveAutomation() {
         loading="lazy"
       />
 
+      <span className="lbadge">Funnel automation agency, since 2019</span>
+      <h2>
+        Your funnel,<br />
+        <em>booking itself.</em>
+      </h2>
+
       {/* Events and Dynamic SVG Connecting Line */}
       <div ref={boxRef} className="evs" id="evs">
         <svg className="evsvg" id="evsvg" aria-hidden="true">
@@ -441,6 +447,35 @@ export default function LiveAutomation() {
           <path ref={drRef} id="evdr" className="dr" />
           <circle ref={glRef} id="evgl" className="gl" r="4" cx="-20" cy="-20" />
         </svg>
+
+        {/* Mobile step progress tracker (visible on mobile/tablet) */}
+        <div className="ev-mobile-bar" aria-hidden="true">
+          <div className="ev-mobile-meta">
+            <span className="ev-meta-left">
+              <span className="ev-pulse-dot" />
+              <span>Live Automation Flow</span>
+            </span>
+            <span className="ev-step-num">
+              Step {activeIdx + 1} of {AUTOMATION_EVENTS.length}
+            </span>
+          </div>
+          <div className="ev-seg-track">
+            {AUTOMATION_EVENTS.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                className={`ev-seg ${i === activeIdx ? "active" : i < activeIdx ? "passed" : ""}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  if (timerRef.current) clearInterval(timerRef.current);
+                  setIndex(i);
+                  startCycle();
+                }}
+                aria-label={`Jump to step ${i + 1}`}
+              />
+            ))}
+          </div>
+        </div>
 
         {AUTOMATION_EVENTS.map((event, idx) => {
           const isActive = activeIdx === idx;
@@ -459,6 +494,22 @@ export default function LiveAutomation() {
                 } as React.CSSProperties
               }
               data-i={idx}
+              role="button"
+              tabIndex={0}
+              aria-expanded={isActive}
+              onClick={() => {
+                if (timerRef.current) clearInterval(timerRef.current);
+                setIndex(idx);
+                startCycle();
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  if (timerRef.current) clearInterval(timerRef.current);
+                  setIndex(idx);
+                  startCycle();
+                }
+              }}
               onPointerEnter={() => {
                 if (timerRef.current) clearInterval(timerRef.current);
                 setIndex(idx);
@@ -470,6 +521,7 @@ export default function LiveAutomation() {
                 <span className="hd">
                   <span className="ts">{event.time}</span>
                   <span className="lb">{event.label}</span>
+                  <span className="hd-arrow" aria-hidden="true">&#8250;</span>
                 </span>
                 <div className="bd">
                   <div>
@@ -488,13 +540,8 @@ export default function LiveAutomation() {
         })}
       </div>
 
-      <span className="lbadge">Funnel automation agency, since 2019</span>
-      <h2>
-        Your funnel,<br />
-        <em>booking itself.</em>
-      </h2>
       <div className="lrow">
-        <div>
+        <div className="lcol-main">
           <p className="lead">
             We wire your pages, CRM, calendar, follow-up and AI calling into one
             flow that keeps booking calls while your team sleeps.
