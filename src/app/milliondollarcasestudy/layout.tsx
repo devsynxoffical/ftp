@@ -33,30 +33,68 @@ export const metadata: Metadata = {
   },
 };
 
-const caseSchema = {
+const caseSchemaGraph = {
   "@context": "https://schema.org",
-  "@type": "Article",
-  headline:
-    "From inconsistent cold traffic to $1.52M in 19 months, on a turnkey Funnels That Print™ acquisition stack",
-  description:
-    "Comprehensive case study breakdown of scaling a high-ticket consulting firm to $1,520,000 revenue in 19 months.",
-  author: {
-    "@type": "Organization",
-    name: "Funnels That Print",
-    url: BASE_URL,
-  },
-  publisher: {
-    "@type": "Organization",
-    name: "Funnels That Print",
-    logo: {
-      "@type": "ImageObject",
-      url: `${BASE_URL}/img/logos/logo-01.webp`,
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Case Studies",
+          item: `${BASE_URL}/case-studies`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "$1.52M High-Ticket Consulting Case Study",
+          item: `${BASE_URL}/milliondollarcasestudy`,
+        },
+      ],
     },
-  },
-  mainEntityOfPage: {
-    "@type": "WebPage",
-    "@id": `${BASE_URL}/milliondollarcasestudy`,
-  },
+    {
+      "@type": "Article",
+      "@id": `${BASE_URL}/milliondollarcasestudy#article`,
+      headline:
+        "From inconsistent cold traffic to $1.52M in 19 months, on a turnkey Funnels That Print™ acquisition stack",
+      alternativeHeadline:
+        "High-Ticket Consulting Offer Scaled to $1,520,000",
+      description:
+        "Comprehensive case study breakdown of scaling a high-ticket consulting firm to $1,520,000 revenue in 19 months using direct-response acquisition funnels.",
+      image: `${BASE_URL}/img/x/office.webp`,
+      datePublished: "2024-01-15T08:00:00+00:00",
+      dateModified: "2026-01-10T12:00:00+00:00",
+      author: {
+        "@type": "Organization",
+        name: "Funnels That Print",
+        url: BASE_URL,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: "Funnels That Print",
+        logo: {
+          "@type": "ImageObject",
+          url: `${BASE_URL}/img/logos/logo-01.webp`,
+        },
+      },
+      about: [
+        { "@type": "Thing", name: "High-Ticket Consulting" },
+        { "@type": "Thing", name: "Sales Funnel Architecture" },
+        { "@type": "Thing", name: "Paid Advertising Acquisition" },
+      ],
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": `${BASE_URL}/milliondollarcasestudy`,
+      },
+    },
+  ],
 };
 
 export default function Case1MLayout({
@@ -68,7 +106,7 @@ export default function Case1MLayout({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchemaGraph) }}
       />
       {children}
     </>

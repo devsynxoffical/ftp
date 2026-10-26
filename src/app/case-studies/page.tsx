@@ -36,9 +36,73 @@ export const metadata: Metadata = {
   },
 };
 
+const BASE_URL = "https://www.funnelsthatprint.com";
+
+const caseStudiesSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Case Studies",
+          item: `${BASE_URL}/case-studies`,
+        },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${BASE_URL}/case-studies/#collection`,
+      url: `${BASE_URL}/case-studies`,
+      name: "Funnels That Print Client Case Studies & Proofs",
+      description:
+        "275+ verified case studies across high-ticket B2B consulting, service businesses, and high-growth DTC eCommerce funnels.",
+      publisher: {
+        "@type": "Organization",
+        name: "Funnels That Print",
+        url: BASE_URL,
+      },
+      hasPart: [
+        {
+          "@type": "Article",
+          name: "High-Ticket Consulting ($1.52M in 19 Months)",
+          url: `${BASE_URL}/milliondollarcasestudy`,
+        },
+        {
+          "@type": "Article",
+          name: "Low-Ticket Scaling System ($847,307 Collected)",
+          url: `${BASE_URL}/scalelowticket`,
+        },
+        {
+          "@type": "CollectionPage",
+          name: "125+ Lead Generation Case Studies",
+          url: `${BASE_URL}/case-leadgen`,
+        },
+        {
+          "@type": "CollectionPage",
+          name: "126+ eCommerce & DTC Funnel Case Studies",
+          url: `${BASE_URL}/case-ecom`,
+        },
+      ],
+    },
+  ],
+};
+
 export default function CaseStudiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesSchema) }}
+      />
       <div className="box">
       <header className="cshero">
         <h1 className="h1 d">

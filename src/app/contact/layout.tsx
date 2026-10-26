@@ -33,24 +33,47 @@ export const metadata: Metadata = {
   },
 };
 
-const contactSchema = {
+const contactSchemaGraph = {
   "@context": "https://schema.org",
-  "@type": "ContactPage",
-  name: "Contact Funnels That Print",
-  url: `${BASE_URL}/contact`,
-  description:
-    "Schedule a strategy call or enquire about building high-converting funnels.",
-  mainEntity: {
-    "@type": "Organization",
-    name: "Funnels That Print",
-    url: BASE_URL,
-    email: "info@funnelsthatprint.com",
-    contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer service",
-      email: "info@funnelsthatprint.com",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Book a Strategy Call",
+          item: `${BASE_URL}/contact`,
+        },
+      ],
     },
-  },
+    {
+      "@type": "ContactPage",
+      "@id": `${BASE_URL}/contact#contact`,
+      name: "Book a Strategy Call | Funnels That Print",
+      url: `${BASE_URL}/contact`,
+      description:
+        "Schedule a 1-on-1 strategy call or enquire about building high-converting funnels.",
+      mainEntity: {
+        "@type": "Organization",
+        name: "Funnels That Print",
+        url: BASE_URL,
+        email: "info@funnelsthatprint.com",
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "sales and customer service",
+          email: "info@funnelsthatprint.com",
+          availableLanguage: ["English"],
+        },
+      },
+    },
+  ],
 };
 
 export default function ContactLayout({
@@ -62,7 +85,7 @@ export default function ContactLayout({
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchemaGraph) }}
       />
       {children}
     </>

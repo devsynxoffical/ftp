@@ -33,10 +33,60 @@ export const metadata: Metadata = {
   },
 };
 
+const leadgenSchemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Case Studies",
+          item: `${BASE_URL}/case-studies`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Lead Generation Case Studies",
+          item: `${BASE_URL}/case-leadgen`,
+        },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${BASE_URL}/case-leadgen#collection`,
+      name: "125+ Lead Generation Funnel Case Studies",
+      url: `${BASE_URL}/case-leadgen`,
+      description:
+        "Verified booked calls, qualified lead flow, and CPL metrics for service businesses, agencies, and high-ticket coaches.",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Funnels That Print",
+        url: BASE_URL,
+      },
+    },
+  ],
+};
+
 export default function CaseLeadgenLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(leadgenSchemaGraph) }}
+      />
+      {children}
+    </>
+  );
 }

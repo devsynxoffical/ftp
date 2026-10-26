@@ -10,8 +10,35 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/"],
       },
+      // Search engine indexers
       {
-        userAgent: "Googlebot",
+        userAgent: [
+          "Googlebot",
+          "Bingbot",
+          "Applebot",
+          "DuckDuckBot",
+          "YandexBot",
+          "Baiduspider",
+          "Slurp",
+        ],
+        allow: "/",
+        disallow: ["/api/"],
+      },
+      // AI Search & Answer Engine crawlers (GEO / AEO)
+      {
+        userAgent: [
+          "GPTBot",
+          "OAI-SearchBot",
+          "ChatGPT-User",
+          "PerplexityBot",
+          "ClaudeBot",
+          "anthropic-ai",
+          "Google-Extended",
+          "Applebot-Extended",
+          "cohere-ai",
+          "Meta-ExternalAgent",
+          "Bytespider",
+        ],
         allow: "/",
         disallow: ["/api/"],
       },
@@ -20,3 +47,4 @@ export default function robots(): MetadataRoute.Robots {
     host: baseUrl,
   };
 }
+

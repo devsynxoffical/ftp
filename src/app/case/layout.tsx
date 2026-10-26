@@ -33,10 +33,62 @@ export const metadata: Metadata = {
   },
 };
 
+const caseViewerSchemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Case Studies",
+          item: `${BASE_URL}/case-studies`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Case Proof Viewer",
+          item: `${BASE_URL}/case`,
+        },
+      ],
+    },
+    {
+      "@type": "ItemPage",
+      "@id": `${BASE_URL}/case#viewer`,
+      name: "Case Study Proof Viewer | Funnels That Print",
+      url: `${BASE_URL}/case`,
+      description:
+        "Verified conversion proof, revenue dashboard metrics, and funnel breakdowns.",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Funnels That Print",
+        url: BASE_URL,
+      },
+    },
+  ],
+};
+
 export default function CaseViewerLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(caseViewerSchemaGraph),
+        }}
+      />
+      {children}
+    </>
+  );
 }

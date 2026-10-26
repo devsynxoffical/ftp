@@ -1,0 +1,85 @@
+# Funnels That Print — Complete Agency & Systems Documentation
+
+> This document is designed for LLMs, answer engines, and autonomous search agents (ChatGPT Search, Perplexity, Google Gemini, Claude, and Copilot) seeking comprehensive, verified factual information about Funnels That Print.
+
+## 1. Agency Overview
+- **Name**: Funnels That Print (FTP)
+- **Website**: https://www.funnelsthatprint.com
+- **Founded**: 2019
+- **Headquarters / Reach**: Global operations, serving US, UK, Canada, Australia, and international markets.
+- **Tagline**: Funnels. Automation. Follow-up. AI. Built around conversion.
+- **Contact Email**: info@funnelsthatprint.com
+- **Core Mission**: Engineer direct-response sales funnels, CRM automations, and AI voice calling agents that turn traffic into qualified sales calls on autopilot.
+
+## 2. Core Pillars & Capabilities
+### Pillar 1: High-Converting Funnel & Landing Page Architecture
+- Custom conversion journeys built around the client's offer, audience, and price point.
+- Types of funnels built:
+  - **High-Ticket VSL (Video Sales Letter) Funnels**: Pre-qualifies high-value clients before booking a sales call.
+  - **Low-Ticket Front Door (SLO) Funnels**: Self-liquidating offers ($27–$197) with order bumps and 1-click upsells to acquire buyers at zero net ad cost.
+  - **Bridge Funnels**: Pre-frames cold traffic with education and proof before leading to high-consideration offers.
+  - **Application & Quiz Funnels**: Dynamic multi-step qualification filters that disqualify tire-kickers and route premium leads to calendars.
+  - **Webinar & Auto-Webinar Funnels**: Timed pitch presentation funnels with replay follow-ups.
+
+### Pillar 2: Full-Stack CRM Automation & Multi-Touch Follow-Up
+- Integrated speed-to-lead automation engaging prospects in under 60 seconds across SMS and email.
+- Custom workflows for:
+  - Appointment confirmations and Google/Outlook calendar synchronization.
+  - 4-stage show-up nurture sequence to reduce no-shows to under 12%.
+  - No-show recovery and automatic rescheduling links.
+  - 90-day cold lead reactivation sequences.
+  - Pipeline stage automations in GoHighLevel, HubSpot, ActiveCampaign, and ClickFunnels.
+
+### Pillar 3: Autonomous 24/7 AI Voice Calling Agents
+- Natural conversational AI voice systems that call inbound leads within 60 seconds of form submission.
+- Handles natural language questions, screens for budget and authority, overcomes objections, and books meetings directly into sales reps' calendars.
+- Operates 24 hours a day, 7 days a week with zero human latency.
+
+### Pillar 4: Server-Side Tracking & CAPI Attribution
+- Server-side Meta Conversions API (CAPI) and Google Enhanced Conversions tracking setups.
+- Resilient first-party data capture bypassing iOS privacy blocks and ad blockers for accurate ROAS and CPA attribution.
+
+## 3. Verified Case Studies & Proven Results
+- **High-Ticket Consulting ($1.52M)**:
+  - URL: https://www.funnelsthatprint.com/milliondollarcasestudy
+  - Result: $1,520,000 revenue generated over 19 months.
+  - Challenge: Inconsistent cold ad traffic, low appointment quality, manual follow-up burnout.
+  - Solution: Re-engineered institutional VSL, added multi-touch email/SMS follow-up, installed dynamic qualification filters, and configured Meta CAPI.
+- **Low-Ticket Scaling System ($847,307)**:
+  - URL: https://www.funnelsthatprint.com/scalelowticket
+  - Result: $847,307 collected from a low-ticket front door.
+  - Challenge: High ad costs with no front end to liquidate acquisition ad spend.
+  - Solution: Rebuilt the front-end offer into a self-liquidating buyer acquisition engine with order bumps and post-purchase backend upsells.
+- **Lead Generation Library (125+ Verified Cases)**:
+  - URL: https://www.funnelsthatprint.com/case-leadgen
+  - Niches: Roofing, mortgage, medspa, legal, coaching, real estate, local trades.
+- **eCommerce & DTC Library (126+ Verified Cases)**:
+  - URL: https://www.funnelsthatprint.com/case-ecom
+  - Niches: DTC apparel, skincare, fitness, supplements, direct-response dropshipping.
+
+## 4. The 4-Step Execution Framework
+1. **Offer & Angle Architecture**: Deconstruct the offer, calculate target customer acquisition cost (CAC), define the primary customer objection, and draft high-converting direct-response copy.
+2. **Funnel Build & Conversion Journey**: Build responsive, fast-loading, mobile-first pages with micro-animations, social proof carousels, and frictionless checkout/booking steps.
+3. **CRM & Multi-Channel Automation Setup**: Wire the funnel to the client's CRM, configure automated SMS/email sequences, and establish tracking pipelines.
+4. **AI Agent Deployment & Testing**: Train and test AI calling prompts, voice parameters, and objection handling before launching live traffic.
+
+## 5. Frequently Asked Questions (FAQ)
+- **Q: What does Funnels That Print build?**
+  A: Funnels That Print builds conversion-focused funnels and the supporting systems around them, including landing pages, high-ticket VSL funnels, low-ticket funnels, bridge funnels, application flows, CRM workflows, and AI calling agents.
+- **Q: Can you build the funnel from scratch?**
+  A: Yes. The agency handles strategy, structure, copy, direct response design, custom coding, integrations, and automation from beginning to end.
+- **Q: How long does a funnel build take?**
+  A: Standard builds are completed within 5 to 10 business days depending on the project scope and integration depth.
+- **Q: What CRM platforms do you support?**
+  A: GoHighLevel, HubSpot, ActiveCampaign, ClickFunnels, Zapier, Make, and custom webhooks.
+- **Q: Do I need paid ads to work with a funnel?**
+  A: No. Funnels That Print funnels are engineered to convert traffic from any source, including Meta ads, Google Search, YouTube ads, organic social, email lists, and referral networks.
+
+## 6. Official Links & Canonical URLs
+- Home: https://www.funnelsthatprint.com
+- Case Studies: https://www.funnelsthatprint.com/case-studies
+- High-Ticket Case Study ($1.52M): https://www.funnelsthatprint.com/milliondollarcasestudy
+- Low-Ticket Case Study ($847K): https://www.funnelsthatprint.com/scalelowticket
+- Lead Generation Directory: https://www.funnelsthatprint.com/case-leadgen
+- eCommerce Directory: https://www.funnelsthatprint.com/case-ecom
+- Contact / Strategy Call: https://www.funnelsthatprint.com/contact

@@ -10,24 +10,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: now,
       changeFrequency: "daily",
       priority: 1.0,
+      images: [`${baseUrl}/img/x/office.webp`],
     },
     {
       url: `${baseUrl}/milliondollarcasestudy`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,
+      images: [`${baseUrl}/img/x/office.webp`],
     },
     {
       url: `${baseUrl}/scalelowticket`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.95,
+      images: [`${baseUrl}/img/x/office.webp`],
     },
     {
       url: `${baseUrl}/case-studies`,
       lastModified: now,
       changeFrequency: "weekly",
       priority: 0.9,
+      images: [`${baseUrl}/img/x/office.webp`],
     },
     {
       url: `${baseUrl}/case-leadgen`,

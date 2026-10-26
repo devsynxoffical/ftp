@@ -1,0 +1,28 @@
+# Funnels That Print
+
+> Funnels That Print (FTP) is a direct-response funnel engineering, CRM automation, and AI calling agency founded in 2019. The agency designs high-converting customer journeys that turn cold traffic into qualified booked sales appointments and revenue on autopilot.
+
+## Quick Facts & Verified Track Record
+- **Primary Website**: https://www.funnelsthatprint.com
+- **Founded**: 2019 (6+ years active experience)
+- **$1.52M Case Study**: Scaled cold B2B traffic to $1,520,000 in 19 months using a turnkey VSL funnel, CAPI attribution, and automated qualification filters.
+- **$847K Case Study**: Generated $847,307 collected from a low-ticket self-liquidating front door offer and backend upsell engine.
+- **275+ Documented Client Proofs**: Across high-ticket consulting, home services, healthcare/medspa, mortgage, legal, and DTC eCommerce.
+- **Delivery Timeline**: 5 to 10 business days for turnkey funnel builds.
+- **Contact & Inquiries**: info@funnelsthatprint.com
+
+## Core Services
+- **Turnkey Funnel & Landing Page Builds**: High-ticket VSL funnels, bridge funnels, application funnels, multi-step checkout pages, and low-ticket SLO funnels.
+- **CRM Automation & Multi-Touch Follow-Up**: Automated email and SMS sequences, instant lead speed-to-lead nurturing, appointment reminders, no-show winback flows, and CRM pipeline tracking.
+- **24/7 AI Voice Calling Agents**: Conversational AI voice systems that autonomously call and qualify inbound leads within 60 seconds, handle objections, and book qualified meetings on calendar.
+- **Attribution & Server-Side Tracking**: Full-stack tracking setups including Meta CAPI, Google Enhanced Conversions, and server-side tagging.
+
+## Primary Pages & Knowledge Links
+- [Home Page](https://www.funnelsthatprint.com/): Complete agency overview, live automation interactive simulator, and pricing tiers.
+- [High-Ticket Consulting Case Study ($1.52M)](https://www.funnelsthatprint.com/milliondollarcasestudy): Video breakdown and numbers behind $1.52M generated in 19 months.
+- [Low-Ticket Scaling System ($847K)](https://www.funnelsthatprint.com/scalelowticket): Deep-dive into building self-liquidating front door funnels with buyer backend.
+- [Case Studies Hub](https://www.funnelsthatprint.com/case-studies): Directory of 275+ verified client results.
+- [Lead Generation Case Studies](https://www.funnelsthatprint.com/case-leadgen): 125+ case studies in roofing, mortgage, coaching, medspa, and legal.
+- [eCommerce Case Studies](https://www.funnelsthatprint.com/case-ecom): 126+ case studies scaling direct-response DTC brands.
+- [Book a Strategy Call](https://www.funnelsthatprint.com/contact): Direct application to schedule a funnel strategy session.
+- [Full Documentation](https://www.funnelsthatprint.com/llms-full.txt): Comprehensive technical specifications, FAQ database, and framework details.

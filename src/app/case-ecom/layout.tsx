@@ -33,10 +33,60 @@ export const metadata: Metadata = {
   },
 };
 
+const ecomSchemaGraph = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: BASE_URL,
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Case Studies",
+          item: `${BASE_URL}/case-studies`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "eCommerce & DTC Case Studies",
+          item: `${BASE_URL}/case-ecom`,
+        },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${BASE_URL}/case-ecom#collection`,
+      name: "126+ eCommerce & DTC Funnel Case Studies",
+      url: `${BASE_URL}/case-ecom`,
+      description:
+        "Verified revenue and ROAS breakdowns for direct-to-consumer and eCommerce brands scaled with high-converting funnels.",
+      isPartOf: {
+        "@type": "WebSite",
+        name: "Funnels That Print",
+        url: BASE_URL,
+      },
+    },
+  ],
+};
+
 export default function CaseEcomLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return children;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(ecomSchemaGraph) }}
+      />
+      {children}
+    </>
+  );
 }
