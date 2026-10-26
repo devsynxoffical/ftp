@@ -26,6 +26,6 @@
 - [eCommerce Case Studies](https://www.funnelsthatprint.com/case-ecom): 126+ case studies scaling direct-response DTC brands.
 - [Performance Marketing & AI Funnel Journal](https://www.funnelsthatprint.com/blog): Engineering guides, direct-response benchmarks, and AI funnel telemetry.
 - [2026 AI Sales Funnel Architecture Masterclass](https://www.funnelsthatprint.com/blog/ai-sales-funnels-voice-lead-qualification-2026): Blueprint on replacing static VSLs with sub-second AI voice qualification and speed-to-lead automation.
-- [Server-Side Meta CAPI Guide](https://www.funnelsthatprint.com/blog/server-side-tracking-meta-capi-guide-2026): Complete server-to-server attribution guide for 100% data fidelity.
+- [High-Ticket VSL vs. Multi-Step Quiz Application](https://www.funnelsthatprint.com/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026): Split-test data and psychology across 275+ funnels.
 - [Book a Strategy Call](https://www.funnelsthatprint.com/contact): Direct application to schedule a funnel strategy session.
 - [Full Documentation](https://www.funnelsthatprint.com/llms-full.txt): Comprehensive technical specifications, FAQ database, and framework details.

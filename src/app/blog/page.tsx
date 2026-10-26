@@ -11,7 +11,6 @@ import RealClientResults from "@/components/RealClientResults";
 const CATEGORIES = [
   "All Articles",
   "AI & Automation",
-  "Tracking & Attribution",
   "Funnel Architecture",
 ];
 
@@ -170,7 +169,7 @@ export default function BlogIndexPage() {
         </section>
 
         {/* Newsletter & Funnel Audit Callout */}
-        <section className="blog-newsletter-box in dark">
+        <section className="blog-newsletter-box in">
           <div className="blog-nl-left">
             <span className="tag" style={{ background: "rgba(255,255,255,0.1)", color: "#fff" }}>
               Private Dispatches
@@ -180,14 +179,14 @@ export default function BlogIndexPage() {
             </h2>
             <p className="lead" style={{ color: "rgba(255,255,255,0.8)", marginTop: "12px" }}>
               Every two weeks, we break down our latest $1M+ customer acquisition
-              funnels, voice AI prompt scripts, and server-side tracking wins.
+              funnels, voice AI prompt scripts, and direct-response split tests.
               Zero spam. Pure direct-response telemetry.
             </p>
           </div>
           <div className="blog-nl-right">
             {submitted ? (
               <div className="blog-nl-success">
-                <span className="tag" style={{ background: "var(--lime)", color: "var(--fg)" }}>
+                <span className="tag" style={{ background: "var(--or)", color: "#fff" }}>
                   ✓ You are subscribed
                 </span>
                 <p style={{ marginTop: "12px", color: "#fff", fontSize: "15px" }}>

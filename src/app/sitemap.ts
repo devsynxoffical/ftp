@@ -66,13 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: [`${baseUrl}/img/blog/ai-sales-funnels-2026.jpg`],
     },
     {
-      url: `${baseUrl}/blog/server-side-tracking-meta-capi-guide-2026`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.85,
-      images: [`${baseUrl}/img/blog/server-side-capi-tracking.jpg`],
-    },
-    {
       url: `${baseUrl}/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026`,
       lastModified: now,
       changeFrequency: "weekly",
