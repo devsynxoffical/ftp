@@ -6,6 +6,7 @@ import ProcessSection from "@/components/ProcessSection";
 import WhoSection from "@/components/WhoSection";
 import PortfolioFoldfolio from "@/components/PortfolioFoldfolio";
 import FeaturedCases from "@/components/FeaturedCases";
+import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import TeamSection from "@/components/TeamSection";
 import PricingSection from "@/components/PricingSection";
@@ -25,6 +26,7 @@ export default function Home() {
       <WhoSection />
       <PortfolioFoldfolio />
       <FeaturedCases />
+      <RealClientResults />
       <VideoTestimonials />
       <TeamSection />
       <PricingSection />

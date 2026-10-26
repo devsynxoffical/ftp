@@ -1,153 +1,41 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
-
-export interface ClientResult {
-  id: string;
-  name: string;
-  niche: string;
-  image: string;
-  liveStatus: string;
-  highlight: string;
-  highlightColor: string;
-  subtext: string;
-  alt: string;
-}
-
-export const CLIENT_RESULTS_DATA: ClientResult[] = [
-  {
-    id: "charles",
-    name: "Charles",
-    niche: "Solar & Home Services",
-    image: "/screenshots/Charles.webp",
-    liveStatus: "Live",
-    highlight: "$18K Cash (14X ROI)",
-    highlightColor: "#ff5a1f",
-    subtext: "7 New Deals Closed",
-    alt: "Charles - Solar & Home Services funnel screenshot",
-  },
-  {
-    id: "daniel",
-    name: "Daniel",
-    niche: "Solar Installation",
-    image: "/screenshots/Daniel.webp",
-    liveStatus: "Live",
-    highlight: "Calendar Fully Booked",
-    highlightColor: "#059669",
-    subtext: "$1.28 CPL",
-    alt: "Daniel - Solar Installation funnel screenshot",
-  },
-  {
-    id: "alexander",
-    name: "Alexander",
-    niche: "Agency Growth",
-    image: "/screenshots/Alexander.webp",
-    liveStatus: "Live",
-    highlight: "$16.5K in Single Day",
-    highlightColor: "#ff5a1f",
-    subtext: "8 Sales in 24 Hours",
-    alt: "Alexander - Agency Growth funnel screenshot",
-  },
-  {
-    id: "henry",
-    name: "Henry",
-    niche: "High-Ticket B2B",
-    image: "/screenshots/Henry.webp",
-    liveStatus: "Live",
-    highlight: "$105,000 Month",
-    highlightColor: "#059669",
-    subtext: "$80K Cash Collected",
-    alt: "Henry - High-Ticket B2B funnel screenshot",
-  },
-  {
-    id: "mateo",
-    name: "Mateo",
-    niche: "Sales & Closers",
-    image: "/screenshots/Mateo.webp",
-    liveStatus: "Live",
-    highlight: "$51.2K Cash Collected",
-    highlightColor: "#ff5a1f",
-    subtext: "15 New Customers",
-    alt: "Mateo - Sales & Closers funnel screenshot",
-  },
-  {
-    id: "jason",
-    name: "Jason",
-    niche: "Roofing Ads",
-    image: "/screenshots/Jason.webp",
-    liveStatus: "Live",
-    highlight: "50k +",
-    highlightColor: "#059669",
-    subtext: "Qualified Campaign",
-    alt: "Jason - Roofing Ads funnel screenshot",
-  },
-  {
-    id: "justin",
-    name: "Justin",
-    niche: "Roofing Installs",
-    image: "/screenshots/Justin.webp",
-    liveStatus: "Live",
-    highlight: "$133k Revenue",
-    highlightColor: "#ff5a1f",
-    subtext: "7 Leads",
-    alt: "Justin - Roofing Installs funnel screenshot",
-  },
-  {
-    id: "aiden",
-    name: "Aiden",
-    niche: "Meta Ads Scaling",
-    image: "/screenshots/Parker.webp",
-    liveStatus: "Live",
-    highlight: "50.9k",
-    highlightColor: "#059669",
-    subtext: "Next Month Target 100k",
-    alt: "Aiden - Meta Ads Scaling funnel screenshot",
-  },
-  {
-    id: "stan",
-    name: "Stan",
-    niche: "Roofing Agency",
-    image: "/screenshots/Stan.webp",
-    liveStatus: "Live",
-    highlight: "100k%",
-    highlightColor: "#ff5a1f",
-    subtext: "Return On Ad Spend",
-    alt: "Stan - Roofing Agency funnel screenshot",
-  },
-  {
-    id: "adam",
-    name: "Adam",
-    niche: "Home Services",
-    image: "/screenshots/Adam.webp",
-    liveStatus: "Live",
-    highlight: "8 Leads (1 Closed Day 1)",
-    highlightColor: "#059669",
-    subtext: "$1,500+ Net Profit",
-    alt: "Adam - Home Services funnel screenshot",
-  },
-];
+import { useState, useEffect, useMemo } from "react";
+import Link from "next/link";
+import { REAL_PROOF_DATA, RealProofItem } from "@/data/realClientResults";
 
 export default function RealClientResults() {
-  const [selectedIdx, setSelectedIdx] = useState<number | null>(null);
+  const [activeFilter, setActiveFilter] = useState<"all" | "lead-gen" | "ecom">("all");
+  const [visibleCount, setVisibleCount] = useState<number>(12);
+  const [selectedProof, setSelectedProof] = useState<RealProofItem | null>(null);
 
+  const filteredProofs = useMemo(() => {
+    if (activeFilter === "all") return REAL_PROOF_DATA;
+    return REAL_PROOF_DATA.filter((item) => item.type === activeFilter);
+  }, [activeFilter]);
+
+  const displayedProofs = useMemo(() => {
+    return filteredProofs.slice(0, visibleCount);
+  }, [filteredProofs, visibleCount]);
+
+  // Handle keyboard navigation for modal lightbox
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (selectedIdx === null) return;
-      if (e.key === "Escape") setSelectedIdx(null);
-      if (e.key === "ArrowLeft") {
-        setSelectedIdx((prev) =>
-          prev === null ? null : (prev - 1 + CLIENT_RESULTS_DATA.length) % CLIENT_RESULTS_DATA.length
-        );
-      }
-      if (e.key === "ArrowRight") {
-        setSelectedIdx((prev) =>
-          prev === null ? null : (prev + 1) % CLIENT_RESULTS_DATA.length
-        );
+      if (!selectedProof) return;
+      if (e.key === "Escape") {
+        setSelectedProof(null);
+      } else if (e.key === "ArrowLeft") {
+        const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
+        const prevIdx = (curIdx - 1 + filteredProofs.length) % filteredProofs.length;
+        setSelectedProof(filteredProofs[prevIdx]);
+      } else if (e.key === "ArrowRight") {
+        const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
+        const nextIdx = (curIdx + 1) % filteredProofs.length;
+        setSelectedProof(filteredProofs[nextIdx]);
       }
     };
 
-    if (selectedIdx !== null) {
+    if (selectedProof) {
       document.body.style.overflow = "hidden";
       window.addEventListener("keydown", handleKeyDown);
     } else {
@@ -158,60 +46,141 @@ export default function RealClientResults() {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedIdx]);
+  }, [selectedProof, filteredProofs]);
+
+  const counts = useMemo(() => {
+    return {
+      all: REAL_PROOF_DATA.length,
+      leadGen: REAL_PROOF_DATA.filter((i) => i.type === "lead-gen").length,
+      ecom: REAL_PROOF_DATA.filter((i) => i.type === "ecom").length,
+    };
+  }, []);
 
   return (
-    <section className="rcr-section" id="results" aria-label="Real client results">
+    <section className="rcr-section" id="results" aria-label="Real client output">
       <div className="box">
-        {/* Header Block */}
+        {/* Header Block Matching Reference Layout & Brand Theme */}
         <div className="rcr-header">
           <div className="rcr-badge">
             <span className="rcr-badge-pulse" />
-            <span>Real client results</span>
+            <span>Verified Proof &amp; Live Telemetry</span>
           </div>
 
           <h2 className="rcr-title">
-            Don&apos;t take our word for it... see{" "}
-            <span className="rcr-highlight">what our clients achieved.</span>
+            Booked calendars, paid invoices, closed deals.{" "}
+            <span className="rcr-highlight">Every screenshot below is real client output.</span>
           </h2>
 
           <p className="rcr-desc">
-            Revenue screenshots, Meta Ads dashboards, case studies and success
-            stories from funnels we&apos;ve installed across different niches - the
-            same system, proven over and over.
+            Raw Meta Ads dashboards, Shopify revenue systems, and booked client calendars from funnels we&apos;ve installed
+            across eCommerce and Lead Generation — 100% verified results, not marketing mockups.
           </p>
 
-          {/* Stat Pillars */}
-          <div className="rcr-stats">
-            <div className="rcr-stat-card">
-              <b className="rcr-stat-num">6–8 Figure</b>
-              <span className="rcr-stat-label">Clients Under Our Belt</span>
-            </div>
-            <div className="rcr-stat-card">
-              <b className="rcr-stat-num">30+</b>
-              <span className="rcr-stat-label">Niches Proven</span>
-            </div>
-            <div className="rcr-stat-card">
-              <b className="rcr-stat-num">12+ Years</b>
-              <span className="rcr-stat-label">Experience</span>
-            </div>
+          {/* Filter Pills */}
+          <div className="rcr-tabs" role="tablist" aria-label="Filter client output">
+            <button
+              type="button"
+              className={`rcr-tab ${activeFilter === "all" ? "active" : ""}`}
+              onClick={() => {
+                setActiveFilter("all");
+                setVisibleCount(12);
+              }}
+              role="tab"
+              aria-selected={activeFilter === "all"}
+            >
+              <span>All Verified Proofs</span>
+              <span className="rcr-tab-count">{counts.all}</span>
+            </button>
+
+            <button
+              type="button"
+              className={`rcr-tab ${activeFilter === "lead-gen" ? "active" : ""}`}
+              onClick={() => {
+                setActiveFilter("lead-gen");
+                setVisibleCount(12);
+              }}
+              role="tab"
+              aria-selected={activeFilter === "lead-gen"}
+            >
+              <span className="rcr-tab-dot" />
+              <span>Lead Generation</span>
+              <span className="rcr-tab-tag">CPL &amp; Bookings</span>
+            </button>
+
+            <button
+              type="button"
+              className={`rcr-tab ${activeFilter === "ecom" ? "active" : ""}`}
+              onClick={() => {
+                setActiveFilter("ecom");
+                setVisibleCount(12);
+              }}
+              role="tab"
+              aria-selected={activeFilter === "ecom"}
+            >
+              <span className="rcr-tab-dot" />
+              <span>eCommerce &amp; DTC</span>
+              <span className="rcr-tab-tag">ROAS &amp; Revenue</span>
+            </button>
           </div>
         </div>
 
-        {/* 10-Item Results Grid */}
+        {/* Proof Cards Grid */}
         <div className="rcr-grid">
-          {CLIENT_RESULTS_DATA.map((item, idx) => (
-            <div
+          {displayedProofs.map((item) => (
+            <article
               key={item.id}
               className="rcr-card"
+              onClick={() => setSelectedProof(item)}
               role="button"
               tabIndex={0}
-              onClick={() => setSelectedIdx(idx)}
               onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") setSelectedIdx(idx);
+                if (e.key === "Enter" || e.key === " ") {
+                  e.preventDefault();
+                  setSelectedProof(item);
+                }
               }}
-              aria-label={`View screenshot for ${item.name}`}
+              aria-label={`Inspect verified proof: ${item.headline}`}
             >
+              {/* Card Header (Author & Meta Bar) */}
+              <div className="rcr-card-top">
+                <div className="rcr-author-meta">
+                  <div className="rcr-avatar" aria-hidden="true">
+                    {item.avatar}
+                  </div>
+                  <div className="rcr-author-info">
+                    <div className="rcr-author-name-row">
+                      <span className="rcr-author-name">{item.author}</span>
+                      <svg
+                        className="rcr-verified-icon"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-label="Verified Client Result"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      </svg>
+                    </div>
+                    <span className="rcr-post-date">
+                      {item.date} &middot; {item.tag}
+                    </span>
+                  </div>
+                </div>
+
+                <span className="rcr-card-type-pill">
+                  {item.type === "lead-gen" ? "Lead Gen" : "eCommerce"}
+                </span>
+              </div>
+
+              {/* Card Headline / Snippet */}
+              <div className="rcr-card-snippet">
+                <p>
+                  {item.headline.length > 115 ? `${item.headline.slice(0, 115)}...` : item.headline}
+                  <span className="rcr-see-more"> See more</span>
+                </p>
+              </div>
+
+              {/* Screenshot Frame with Centered Magnifying Glass Overlay */}
               <div className="rcr-thumb-wrap">
                 <img
                   src={item.image}
@@ -219,124 +188,183 @@ export default function RealClientResults() {
                   className="rcr-thumb-img"
                   loading="lazy"
                 />
+
+                {/* Hover Overlay with Centered Inspect Icon */}
                 <div className="rcr-thumb-overlay">
-                  <span className="rcr-inspect-btn">
-                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4">
-                      <circle cx="11" cy="11" r="8" />
-                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  <div className="rcr-inspect-circle">
+                    <svg
+                      width="26"
+                      height="26"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <circle cx="10.5" cy="10.5" r="7" />
+                      <line x1="21" y1="21" x2="15.5" y2="15.5" />
+                      <line x1="10.5" y1="7.5" x2="10.5" y2="13.5" />
+                      <line x1="7.5" y1="10.5" x2="13.5" y2="10.5" />
                     </svg>
-                    Tap to inspect
-                  </span>
+                  </div>
+                  <span className="rcr-inspect-label">Tap to inspect</span>
                 </div>
               </div>
 
-              <div className="rcr-card-info">
-                <div className="rcr-client-row">
-                  <span className="rcr-client-name">{item.name}</span>
-                  <span className="rcr-live-tag">
-                    <i className="rcr-live-dot" />
-                    Live
-                  </span>
+              {/* Card Bottom Metrics Bar */}
+              <div className="rcr-card-metrics">
+                <div className="rcr-metric-badge primary">
+                  <span className="rcr-metric-val">{item.metricMain}</span>
+                  <span className="rcr-metric-sub">{item.metricMainLabel}</span>
                 </div>
 
-                <div
-                  className="rcr-metric"
-                  style={{ color: item.highlightColor }}
-                >
-                  {item.highlight}
-                </div>
-
-                <div className="rcr-subtext">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                    <polyline points="17 6 23 6 23 12" />
-                  </svg>
-                  <span>{item.subtext}</span>
+                <div className="rcr-metric-badge secondary">
+                  <span className="rcr-metric-val">{item.metricSub}</span>
+                  <span className="rcr-metric-sub">{item.metricSubLabel}</span>
                 </div>
               </div>
-            </div>
+            </article>
           ))}
         </div>
+
+        {/* Load More Button */}
+        {visibleCount < filteredProofs.length && (
+          <div className="rcr-load-more-wrap">
+            <button
+              type="button"
+              className="btn hbtn rcr-load-more-btn"
+              onClick={() => setVisibleCount((prev) => Math.min(prev + 12, filteredProofs.length))}
+            >
+              Load more verified proofs ({filteredProofs.length - visibleCount} remaining) <i>&#8595;</i>
+            </button>
+          </div>
+        )}
       </div>
 
-      {/* Lightbox Modal */}
-      {selectedIdx !== null && (
+      {/* Lightbox Modal (Tap to Inspect) */}
+      {selectedProof && (
         <div
           className="rcr-modal-backdrop"
-          onClick={() => setSelectedIdx(null)}
+          onClick={() => setSelectedProof(null)}
           role="dialog"
           aria-modal="true"
+          aria-label={`Inspecting proof: ${selectedProof.headline}`}
         >
-          <div
-            className="rcr-modal-container"
-            onClick={(e) => e.stopPropagation()}
-          >
+          <div className="rcr-modal-container" onClick={(e) => e.stopPropagation()}>
             <button
+              type="button"
               className="rcr-modal-close"
-              onClick={() => setSelectedIdx(null)}
-              aria-label="Close modal"
+              onClick={() => setSelectedProof(null)}
+              aria-label="Close proof inspection"
             >
               &times;
             </button>
 
             <button
+              type="button"
               className="rcr-modal-nav prev"
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedIdx(
-                  (prev) =>
-                    prev !== null
-                      ? (prev - 1 + CLIENT_RESULTS_DATA.length) % CLIENT_RESULTS_DATA.length
-                      : 0
-                );
+                const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
+                const prevIdx = (curIdx - 1 + filteredProofs.length) % filteredProofs.length;
+                setSelectedProof(filteredProofs[prevIdx]);
               }}
-              aria-label="Previous screenshot"
+              aria-label="Previous proof"
             >
               &#8592;
             </button>
 
             <button
+              type="button"
               className="rcr-modal-nav next"
               onClick={(e) => {
                 e.stopPropagation();
-                setSelectedIdx(
-                  (prev) =>
-                    prev !== null
-                      ? (prev + 1) % CLIENT_RESULTS_DATA.length
-                      : 0
-                );
+                const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
+                const nextIdx = (curIdx + 1) % filteredProofs.length;
+                setSelectedProof(filteredProofs[nextIdx]);
               }}
-              aria-label="Next screenshot"
+              aria-label="Next proof"
             >
               &#8594;
             </button>
 
             <div className="rcr-modal-content">
+              {/* Left Column: Full Uncropped High-Res Screenshot */}
               <div className="rcr-modal-img-wrap">
                 <img
-                  src={CLIENT_RESULTS_DATA[selectedIdx].image}
-                  alt={CLIENT_RESULTS_DATA[selectedIdx].alt}
+                  src={selectedProof.image}
+                  alt={selectedProof.alt}
                   className="rcr-modal-img"
                 />
               </div>
 
+              {/* Right Column: Verified Meta & Breakdown */}
               <div className="rcr-modal-meta">
-                <div className="rcr-modal-badge">
-                  <span className="rcr-live-dot" />
-                  <span>Verified Client Result</span>
+                <div className="rcr-modal-header-row">
+                  <div className="rcr-modal-badge">
+                    <span className="rcr-modal-pulse-dot" />
+                    <span>Verified Telemetry</span>
+                  </div>
+                  <span className="rcr-modal-tag">{selectedProof.niche}</span>
                 </div>
-                <h3>{CLIENT_RESULTS_DATA[selectedIdx].name} &middot; {CLIENT_RESULTS_DATA[selectedIdx].niche}</h3>
-                <div
-                  className="rcr-modal-highlight"
-                  style={{ color: CLIENT_RESULTS_DATA[selectedIdx].highlightColor }}
-                >
-                  {CLIENT_RESULTS_DATA[selectedIdx].highlight}
+
+                <div className="rcr-modal-author-row">
+                  <div className="rcr-avatar small" aria-hidden="true">
+                    {selectedProof.avatar}
+                  </div>
+                  <div>
+                    <h3 className="rcr-modal-author-name">
+                      {selectedProof.author}
+                      <svg
+                        className="rcr-verified-icon"
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-label="Verified"
+                      >
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      </svg>
+                    </h3>
+                    <span className="rcr-modal-date">
+                      {selectedProof.date} &middot; {selectedProof.tag}
+                    </span>
+                  </div>
                 </div>
-                <p className="rcr-modal-sub">
-                  📈 {CLIENT_RESULTS_DATA[selectedIdx].subtext}
-                </p>
-                <div className="rcr-modal-index">
-                  {selectedIdx + 1} of {CLIENT_RESULTS_DATA.length}
+
+                {/* Modal Big Stats */}
+                <div className="rcr-modal-stats-grid">
+                  <div className="rcr-modal-stat-box">
+                    <span className="rcr-modal-stat-label">{selectedProof.metricMainLabel}</span>
+                    <strong className="rcr-modal-stat-num">{selectedProof.metricMain}</strong>
+                  </div>
+                  <div className="rcr-modal-stat-box">
+                    <span className="rcr-modal-stat-label">{selectedProof.metricSubLabel}</span>
+                    <strong className="rcr-modal-stat-num">{selectedProof.metricSub}</strong>
+                  </div>
+                </div>
+
+                {/* Verbatim Breakdown Body */}
+                <div className="rcr-modal-body-scroll">
+                  <h4 className="rcr-modal-breakdown-title">Campaign Breakdown &amp; Funnel Output</h4>
+                  <div className="rcr-modal-caption-text">
+                    {selectedProof.caption.split("\n").map((line, idx) => {
+                      if (!line.trim()) return <br key={idx} />;
+                      return <p key={idx}>{line}</p>;
+                    })}
+                  </div>
+                </div>
+
+                {/* CTA Action */}
+                <div className="rcr-modal-actions">
+                  <Link href="/#robo" className="btn o rcr-modal-cta" onClick={() => setSelectedProof(null)}>
+                    Install this funnel into your business <i>&#8599;</i>
+                  </Link>
+                  <div className="rcr-modal-counter">
+                    Proof {filteredProofs.findIndex((p) => p.id === selectedProof.id) + 1} of {filteredProofs.length}
+                  </div>
                 </div>
               </div>
             </div>
