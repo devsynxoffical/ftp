@@ -1837,11 +1837,11 @@ main:has(> .robo:last-child) + .foot {
 .rcr-card {
   background: #141417;
   border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 18px;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 13px;
   cursor: pointer;
   transition: transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1), border-color 0.35s ease, box-shadow 0.35s ease;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -1954,10 +1954,8 @@ main:has(> .robo:last-child) + .foot {
   position: relative;
   width: 100%;
   aspect-ratio: 16 / 10;
-  border-radius: 14px;
   overflow: hidden;
   background: #08080a;
-  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .rcr-thumb-img {

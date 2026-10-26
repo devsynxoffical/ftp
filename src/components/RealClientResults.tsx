@@ -130,45 +130,6 @@ export default function RealClientResults() {
               }}
               aria-label={`Inspect verified proof: ${item.headline}`}
             >
-              {/* Card Header (Author & Meta Bar) */}
-              <div className="rcr-card-top">
-                <div className="rcr-author-meta">
-                  <div className="rcr-avatar" aria-hidden="true">
-                    {item.avatar}
-                  </div>
-                  <div className="rcr-author-info">
-                    <div className="rcr-author-name-row">
-                      <span className="rcr-author-name">{item.author}</span>
-                      <svg
-                        className="rcr-verified-icon"
-                        width="14"
-                        height="14"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-label="Verified Client Result"
-                      >
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                    </div>
-                    <span className="rcr-post-date">
-                      {item.date} &middot; {item.tag}
-                    </span>
-                  </div>
-                </div>
-
-                <span className="rcr-card-type-pill">
-                  {item.type === "lead-gen" ? "Lead Gen" : "eCommerce"}
-                </span>
-              </div>
-
-              {/* Card Headline / Snippet */}
-              <div className="rcr-card-snippet">
-                <p>
-                  {item.headline.length > 115 ? `${item.headline.slice(0, 115)}...` : item.headline}
-                  <span className="rcr-see-more"> See more</span>
-                </p>
-              </div>
-
               {/* Screenshot Frame with Centered Magnifying Glass Overlay */}
               <div className="rcr-thumb-wrap">
                 <img
@@ -198,20 +159,6 @@ export default function RealClientResults() {
                       <line x1="7.5" y1="10.5" x2="13.5" y2="10.5" />
                     </svg>
                   </div>
-                  <span className="rcr-inspect-label">Tap to inspect</span>
-                </div>
-              </div>
-
-              {/* Card Bottom Metrics Bar */}
-              <div className="rcr-card-metrics">
-                <div className="rcr-metric-badge primary">
-                  <span className="rcr-metric-val">{item.metricMain}</span>
-                  <span className="rcr-metric-sub">{item.metricMainLabel}</span>
-                </div>
-
-                <div className="rcr-metric-badge secondary">
-                  <span className="rcr-metric-val">{item.metricSub}</span>
-                  <span className="rcr-metric-sub">{item.metricSubLabel}</span>
                 </div>
               </div>
             </article>
