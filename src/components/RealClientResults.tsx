@@ -59,21 +59,10 @@ export default function RealClientResults() {
   return (
     <section className="rcr-section" id="results" aria-label="Real client output">
       <div className="box">
-        {/* Header Block Matching Reference Layout & Brand Theme */}
+        {/* Clean Header Matching Reference Layout */}
         <div className="rcr-header">
-          <div className="rcr-badge">
-            <span className="rcr-badge-pulse" />
-            <span>Verified Proof &amp; Live Telemetry</span>
-          </div>
-
-          <h2 className="rcr-title">
-            Booked calendars, paid invoices, closed deals.{" "}
-            <span className="rcr-highlight">Every screenshot below is real client output.</span>
-          </h2>
-
-          <p className="rcr-desc">
-            Raw Meta Ads dashboards, Shopify revenue systems, and booked client calendars from funnels we&apos;ve installed
-            across eCommerce and Lead Generation — 100% verified results, not marketing mockups.
+          <p className="rcr-reference-title">
+            Booked calendars, paid invoices, closed deals. Every screenshot below is real client output &mdash; not marketing mockups.
           </p>
 
           {/* Filter Pills */}
