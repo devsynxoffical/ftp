@@ -220,12 +220,6 @@ export default function Navbar() {
               <Link href="/case-studies" onClick={closeMenu}>
                 Case studies
               </Link>
-              <Link href="/milliondollarcasestudy" onClick={closeMenu}>
-                High-Ticket Consulting <span className="sub-tag">$1.52M</span>
-              </Link>
-              <Link href="/scalelowticket" onClick={closeMenu}>
-                Low-Ticket Scaling System <span className="sub-tag">$847K</span>
-              </Link>
               <Link href="/#pricing" onClick={closeMenu}>
                 Pricing
               </Link>
