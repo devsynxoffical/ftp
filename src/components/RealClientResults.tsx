@@ -6,17 +6,12 @@ import { REAL_PROOF_DATA, RealProofItem } from "@/data/realClientResults";
 
 export default function RealClientResults() {
   const [activeFilter, setActiveFilter] = useState<"all" | "lead-gen" | "ecom" | "wins">("all");
-  const [visibleCount, setVisibleCount] = useState<number>(12);
   const [selectedProof, setSelectedProof] = useState<RealProofItem | null>(null);
 
-  const filteredProofs = useMemo(() => {
+  const displayedProofs = useMemo(() => {
     if (activeFilter === "all") return REAL_PROOF_DATA;
     return REAL_PROOF_DATA.filter((item) => item.type === activeFilter);
   }, [activeFilter]);
-
-  const displayedProofs = useMemo(() => {
-    return filteredProofs.slice(0, visibleCount);
-  }, [filteredProofs, visibleCount]);
 
   // Handle keyboard navigation for modal lightbox
   useEffect(() => {
@@ -25,13 +20,13 @@ export default function RealClientResults() {
       if (e.key === "Escape") {
         setSelectedProof(null);
       } else if (e.key === "ArrowLeft") {
-        const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
-        const prevIdx = (curIdx - 1 + filteredProofs.length) % filteredProofs.length;
-        setSelectedProof(filteredProofs[prevIdx]);
+        const curIdx = displayedProofs.findIndex((p) => p.id === selectedProof.id);
+        const prevIdx = (curIdx - 1 + displayedProofs.length) % displayedProofs.length;
+        setSelectedProof(displayedProofs[prevIdx]);
       } else if (e.key === "ArrowRight") {
-        const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
-        const nextIdx = (curIdx + 1) % filteredProofs.length;
-        setSelectedProof(filteredProofs[nextIdx]);
+        const curIdx = displayedProofs.findIndex((p) => p.id === selectedProof.id);
+        const nextIdx = (curIdx + 1) % displayedProofs.length;
+        setSelectedProof(displayedProofs[nextIdx]);
       }
     };
 
@@ -46,16 +41,7 @@ export default function RealClientResults() {
       document.body.style.overflow = "";
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [selectedProof, filteredProofs]);
-
-  const counts = useMemo(() => {
-    return {
-      all: REAL_PROOF_DATA.length,
-      leadGen: REAL_PROOF_DATA.filter((i) => i.type === "lead-gen").length,
-      ecom: REAL_PROOF_DATA.filter((i) => i.type === "ecom").length,
-      wins: REAL_PROOF_DATA.filter((i) => i.type === "wins").length,
-    };
-  }, []);
+  }, [selectedProof, displayedProofs]);
 
   return (
     <section className="rcr-section" id="results" aria-label="Real client output">
@@ -78,57 +64,41 @@ export default function RealClientResults() {
             <button
               type="button"
               className={`rcr-tab ${activeFilter === "all" ? "active" : ""}`}
-              onClick={() => {
-                setActiveFilter("all");
-                setVisibleCount(12);
-              }}
+              onClick={() => setActiveFilter("all")}
               role="tab"
               aria-selected={activeFilter === "all"}
             >
               <span>Show All</span>
-              <span className="rcr-tab-count">{counts.all}</span>
             </button>
 
             <button
               type="button"
               className={`rcr-tab ${activeFilter === "lead-gen" ? "active" : ""}`}
-              onClick={() => {
-                setActiveFilter("lead-gen");
-                setVisibleCount(12);
-              }}
+              onClick={() => setActiveFilter("lead-gen")}
               role="tab"
               aria-selected={activeFilter === "lead-gen"}
             >
               <span>Lead Generation</span>
-              <span className="rcr-tab-count">{counts.leadGen}</span>
             </button>
 
             <button
               type="button"
               className={`rcr-tab ${activeFilter === "ecom" ? "active" : ""}`}
-              onClick={() => {
-                setActiveFilter("ecom");
-                setVisibleCount(12);
-              }}
+              onClick={() => setActiveFilter("ecom")}
               role="tab"
               aria-selected={activeFilter === "ecom"}
             >
               <span>eCommerce &amp; Sales</span>
-              <span className="rcr-tab-count">{counts.ecom}</span>
             </button>
 
             <button
               type="button"
               className={`rcr-tab ${activeFilter === "wins" ? "active" : ""}`}
-              onClick={() => {
-                setActiveFilter("wins");
-                setVisibleCount(12);
-              }}
+              onClick={() => setActiveFilter("wins")}
               role="tab"
               aria-selected={activeFilter === "wins"}
             >
               <span>Client Wins &amp; Reviews</span>
-              <span className="rcr-tab-count">{counts.wins}</span>
             </button>
           </div>
         </div>
@@ -184,41 +154,6 @@ export default function RealClientResults() {
             </article>
           ))}
         </div>
-
-        {/* Proper Action Buttons: Load More & Show All */}
-        <div className="rcr-load-actions">
-          {visibleCount < filteredProofs.length ? (
-            <>
-              <button
-                type="button"
-                className="btn hbtn rcr-load-more-btn"
-                onClick={() => setVisibleCount((prev) => Math.min(prev + 8, filteredProofs.length))}
-              >
-                Load more results ({filteredProofs.length - visibleCount} remaining) <i>&#8595;</i>
-              </button>
-              <button
-                type="button"
-                className="rcr-btn-secondary"
-                onClick={() => setVisibleCount(filteredProofs.length)}
-              >
-                Show All ({filteredProofs.length}) <i>&rarr;</i>
-              </button>
-            </>
-          ) : filteredProofs.length > 12 ? (
-            <div className="rcr-all-loaded-wrap">
-              <span className="rcr-all-loaded-text">
-                ✓ Showing all {filteredProofs.length} verified results
-              </span>
-              <button
-                type="button"
-                className="rcr-btn-secondary small"
-                onClick={() => setVisibleCount(12)}
-              >
-                Show Less
-              </button>
-            </div>
-          ) : null}
-        </div>
       </div>
 
       {/* Lightbox Modal (Tap to Inspect) */}
@@ -245,9 +180,9 @@ export default function RealClientResults() {
               className="rcr-modal-nav prev"
               onClick={(e) => {
                 e.stopPropagation();
-                const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
-                const prevIdx = (curIdx - 1 + filteredProofs.length) % filteredProofs.length;
-                setSelectedProof(filteredProofs[prevIdx]);
+                const curIdx = displayedProofs.findIndex((p) => p.id === selectedProof.id);
+                const prevIdx = (curIdx - 1 + displayedProofs.length) % displayedProofs.length;
+                setSelectedProof(displayedProofs[prevIdx]);
               }}
               aria-label="Previous proof"
             >
@@ -259,9 +194,9 @@ export default function RealClientResults() {
               className="rcr-modal-nav next"
               onClick={(e) => {
                 e.stopPropagation();
-                const curIdx = filteredProofs.findIndex((p) => p.id === selectedProof.id);
-                const nextIdx = (curIdx + 1) % filteredProofs.length;
-                setSelectedProof(filteredProofs[nextIdx]);
+                const curIdx = displayedProofs.findIndex((p) => p.id === selectedProof.id);
+                const nextIdx = (curIdx + 1) % displayedProofs.length;
+                setSelectedProof(displayedProofs[nextIdx]);
               }}
               aria-label="Next proof"
             >
@@ -341,7 +276,7 @@ export default function RealClientResults() {
                     Install this funnel into your business <i>&#8599;</i>
                   </Link>
                   <div className="rcr-modal-counter">
-                    Proof {filteredProofs.findIndex((p) => p.id === selectedProof.id) + 1} of {filteredProofs.length}
+                    Proof {displayedProofs.findIndex((p) => p.id === selectedProof.id) + 1} of {displayedProofs.length}
                   </div>
                 </div>
               </div>
