@@ -3,10 +3,9 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import {
-  BLOG_POSTS,
   getBlogPostBySlug,
   getAllBlogSlugs,
-  BlogPost,
+  getRelatedPosts,
 } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
 import RealClientResults from "@/components/RealClientResults";
@@ -36,15 +35,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `${BASE_URL}/blog/${post.slug}`;
 
   return {
-    title: `${post.title} | Funnels That Print`,
-    description: post.excerpt,
+    title: post.metaTitle,
+    description: post.metaDescription,
     keywords: post.keywords,
     alternates: {
       canonical: url,
     },
     openGraph: {
-      title: post.title,
-      description: post.excerpt,
+      title: post.metaTitle,
+      description: post.metaDescription,
       url,
       type: "article",
       publishedTime: post.publishedAt,
@@ -61,8 +60,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.excerpt,
+      title: post.metaTitle,
+      description: post.metaDescription,
       images: [post.image],
     },
   };
@@ -110,7 +109,7 @@ export default async function BlogPostPage({ params }: PageProps) {
         "@id": `${postUrl}#article`,
         headline: post.title,
         alternativeHeadline: post.headline,
-        description: post.excerpt,
+        description: post.metaDescription,
         image: `${BASE_URL}${post.image}`,
         datePublished: `${post.publishedAt}T08:00:00+00:00`,
         dateModified: `${post.updatedAt}T12:00:00+00:00`,
@@ -128,6 +127,10 @@ export default async function BlogPostPage({ params }: PageProps) {
           },
         },
         keywords: post.keywords.join(", "),
+        articleSection: post.category,
+        inLanguage: "en-US",
+        isAccessibleForFree: true,
+        wordCount: post.contentHtml.replace(/<[^>]+>/g, " ").split(/\s+/).filter(Boolean).length,
         mainEntityOfPage: {
           "@type": "WebPage",
           "@id": postUrl,
@@ -151,7 +154,7 @@ export default async function BlogPostPage({ params }: PageProps) {
     ],
   };
 
-  const otherPosts = BLOG_POSTS.filter((p) => p.slug !== post.slug);
+  const otherPosts = getRelatedPosts(post, 3);
 
   return (
     <>
@@ -232,6 +235,21 @@ export default async function BlogPostPage({ params }: PageProps) {
                 className="post-prose"
                 dangerouslySetInnerHTML={{ __html: post.contentHtml }}
               />
+
+              {/* Related Reading (internal linking) */}
+              {otherPosts.length > 0 && (
+                <nav className="post-related-links" aria-label="Related articles">
+                  <span className="tag">Related reading</span>
+                  <ul>
+                    {otherPosts.map((r) => (
+                      <li key={r.slug}>
+                        <Link href={`/blog/${r.slug}`}>{r.metaTitle}</Link>
+                        <span className="mono">{r.category} &middot; {r.readTime}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              )}
 
               {/* In-Article Strategy CTA Card */}
               <div className="post-cta-banner">

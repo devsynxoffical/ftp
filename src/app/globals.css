@@ -3075,6 +3075,57 @@ main:has(> .robo:last-child) + .foot {
   color: var(--fg);
   font-weight: 700;
 }
+.post-prose a {
+  color: var(--or);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.post-prose a:hover {
+  color: var(--fg);
+}
+.post-prose code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 1px 6px;
+}
+.post-related-links {
+  margin: 36px 0 8px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--bg2);
+}
+.post-related-links ul {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.post-related-links li {
+  display: grid;
+  gap: 2px;
+}
+.post-related-links li a {
+  font-weight: 600;
+  color: var(--fg);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--or);
+}
+.post-related-links li a:hover {
+  color: var(--or);
+}
+.post-related-links .mono {
+  font-size: 11px;
+  color: var(--mute);
+}
 
 /* Callout Box */
 .callout-box {
