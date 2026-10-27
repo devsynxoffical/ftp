@@ -125,7 +125,10 @@ export default function Navbar() {
               }`}
               onClick={(e) => {
                 e.preventDefault();
-                setDdOpen((prev) => !prev);
+                // On hover-capable devices the menu is already open from
+                // mouseenter, so a click must not toggle it closed again.
+                const canHover = window.matchMedia("(hover: hover)").matches;
+                setDdOpen((prev) => (canHover ? true : !prev));
               }}
               aria-expanded={ddOpen}
               aria-haspopup="menu"
