@@ -3619,6 +3619,13 @@ main {
     padding: 14px 16px !important;
     border-radius: 18px !important;
   }
+  /* Mobile only: hide the Connected, Qualifies and Stack cards; keep the
+     Live funnel card. Desktop (>768px) is untouched. */
+  .stage .ui.src,
+  .stage .ui.chip,
+  .stage .ui.tools {
+    display: none !important;
+  }
   .stage .ui.src {
     right: 0 !important;
     left: auto !important;
