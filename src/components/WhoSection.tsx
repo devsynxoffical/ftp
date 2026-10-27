@@ -195,7 +195,8 @@ export default function WhoSection() {
           <p key={`p-${animKey}`} className="go" id="wp">
             {current.desc.split(" ").map((w, k) => (
               <span key={k} style={{ "--k": k } as React.CSSProperties}>
-                {w}{" "}
+                {w}
+                {k < current.desc.split(" ").length - 1 ? "\u00A0" : ""}
               </span>
             ))}
           </p>

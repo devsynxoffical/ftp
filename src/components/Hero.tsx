@@ -38,6 +38,10 @@ export default function Hero() {
 
     const fit = () => {
       if (!el) return;
+      if (window.innerWidth <= 640) {
+        el.style.minWidth = "0";
+        return;
+      }
       const cur = el.textContent;
       el.style.minWidth = "0";
       let m = 0;
