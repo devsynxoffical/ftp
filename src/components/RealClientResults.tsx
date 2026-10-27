@@ -5,7 +5,7 @@ import Link from "next/link";
 import { REAL_PROOF_DATA, RealProofItem } from "@/data/realClientResults";
 
 export default function RealClientResults() {
-  const [activeFilter, setActiveFilter] = useState<"all" | "lead-gen" | "ecom">("all");
+  const [activeFilter, setActiveFilter] = useState<"all" | "lead-gen" | "ecom" | "wins">("all");
   const [visibleCount, setVisibleCount] = useState<number>(12);
   const [selectedProof, setSelectedProof] = useState<RealProofItem | null>(null);
 
@@ -53,19 +53,27 @@ export default function RealClientResults() {
       all: REAL_PROOF_DATA.length,
       leadGen: REAL_PROOF_DATA.filter((i) => i.type === "lead-gen").length,
       ecom: REAL_PROOF_DATA.filter((i) => i.type === "ecom").length,
+      wins: REAL_PROOF_DATA.filter((i) => i.type === "wins").length,
     };
   }, []);
 
   return (
     <section className="rcr-section" id="results" aria-label="Real client output">
       <div className="box">
-        {/* Clean Header Matching Reference Layout */}
+        {/* Generic Professional Header */}
         <div className="rcr-header">
-          <p className="rcr-reference-title">
-            Booked calendars, paid invoices, closed deals. Every screenshot below is real client output &mdash; not marketing mockups.
+          <div className="rcr-badge">
+            <span className="rcr-tab-dot" />
+            <span>VERIFIED TRACK RECORD</span>
+          </div>
+          <h2 className="rcr-title">
+            Real Client Results &amp; Live Proof
+          </h2>
+          <p className="rcr-subtitle">
+            Live ad manager dashboards, verified campaign metrics, and closed revenue across client accounts.
           </p>
 
-          {/* Filter Pills */}
+          {/* Proper Filter Buttons */}
           <div className="rcr-tabs" role="tablist" aria-label="Filter client output">
             <button
               type="button"
@@ -77,7 +85,7 @@ export default function RealClientResults() {
               role="tab"
               aria-selected={activeFilter === "all"}
             >
-              <span>All Verified Proofs</span>
+              <span>Show All</span>
               <span className="rcr-tab-count">{counts.all}</span>
             </button>
 
@@ -91,9 +99,8 @@ export default function RealClientResults() {
               role="tab"
               aria-selected={activeFilter === "lead-gen"}
             >
-              <span className="rcr-tab-dot" />
               <span>Lead Generation</span>
-              <span className="rcr-tab-tag">CPL &amp; Bookings</span>
+              <span className="rcr-tab-count">{counts.leadGen}</span>
             </button>
 
             <button
@@ -106,9 +113,22 @@ export default function RealClientResults() {
               role="tab"
               aria-selected={activeFilter === "ecom"}
             >
-              <span className="rcr-tab-dot" />
-              <span>eCommerce &amp; DTC</span>
-              <span className="rcr-tab-tag">ROAS &amp; Revenue</span>
+              <span>eCommerce &amp; Sales</span>
+              <span className="rcr-tab-count">{counts.ecom}</span>
+            </button>
+
+            <button
+              type="button"
+              className={`rcr-tab ${activeFilter === "wins" ? "active" : ""}`}
+              onClick={() => {
+                setActiveFilter("wins");
+                setVisibleCount(12);
+              }}
+              role="tab"
+              aria-selected={activeFilter === "wins"}
+            >
+              <span>Client Wins &amp; Reviews</span>
+              <span className="rcr-tab-count">{counts.wins}</span>
             </button>
           </div>
         </div>
@@ -165,18 +185,40 @@ export default function RealClientResults() {
           ))}
         </div>
 
-        {/* Load More Button */}
-        {visibleCount < filteredProofs.length && (
-          <div className="rcr-load-more-wrap">
-            <button
-              type="button"
-              className="btn hbtn rcr-load-more-btn"
-              onClick={() => setVisibleCount((prev) => Math.min(prev + 12, filteredProofs.length))}
-            >
-              Load more verified proofs ({filteredProofs.length - visibleCount} remaining) <i>&#8595;</i>
-            </button>
-          </div>
-        )}
+        {/* Proper Action Buttons: Load More & Show All */}
+        <div className="rcr-load-actions">
+          {visibleCount < filteredProofs.length ? (
+            <>
+              <button
+                type="button"
+                className="btn hbtn rcr-load-more-btn"
+                onClick={() => setVisibleCount((prev) => Math.min(prev + 8, filteredProofs.length))}
+              >
+                Load more results ({filteredProofs.length - visibleCount} remaining) <i>&#8595;</i>
+              </button>
+              <button
+                type="button"
+                className="rcr-btn-secondary"
+                onClick={() => setVisibleCount(filteredProofs.length)}
+              >
+                Show All ({filteredProofs.length}) <i>&rarr;</i>
+              </button>
+            </>
+          ) : filteredProofs.length > 12 ? (
+            <div className="rcr-all-loaded-wrap">
+              <span className="rcr-all-loaded-text">
+                ✓ Showing all {filteredProofs.length} verified results
+              </span>
+              <button
+                type="button"
+                className="rcr-btn-secondary small"
+                onClick={() => setVisibleCount(12)}
+              >
+                Show Less
+              </button>
+            </div>
+          ) : null}
+        </div>
       </div>
 
       {/* Lightbox Modal (Tap to Inspect) */}
