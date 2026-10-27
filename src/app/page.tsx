@@ -14,10 +14,15 @@ import AdvantageFlow from "@/components/AdvantageFlow";
 import FAQSection from "@/components/FAQSection";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
+import { HOME_FAQ_SCHEMA } from "@/data/homeFaqSchema";
 
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_FAQ_SCHEMA) }}
+      />
       <Hero />
       <LogoTicker />
       <LiveAutomation />

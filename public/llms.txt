@@ -27,5 +27,9 @@
 - [Performance Marketing & AI Funnel Journal](https://www.funnelsthatprint.com/blog): Engineering guides, direct-response benchmarks, and AI funnel telemetry.
 - [2026 AI Sales Funnel Architecture Masterclass](https://www.funnelsthatprint.com/blog/ai-sales-funnels-voice-lead-qualification-2026): Blueprint on replacing static VSLs with sub-second AI voice qualification and speed-to-lead automation.
 - [High-Ticket VSL vs. Multi-Step Quiz Application](https://www.funnelsthatprint.com/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026): Split-test data and psychology across 275+ funnels.
+- [Meta Conversions API (CAPI) Setup for Lead Gen Funnels](https://www.funnelsthatprint.com/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026): Server-side tracking, CRM event ladder (Lead, QualifiedLead, Schedule, Purchase) and Event Match Quality.
+- [Speed-to-Lead Automation: 60-Second Follow-Up System](https://www.funnelsthatprint.com/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up): SMS, AI call and email inside one minute, missed-call text-back, 5-day nurture, GoHighLevel build steps.
+- [Self-Liquidating Offer Funnel: $847K Low-Ticket Breakdown](https://www.funnelsthatprint.com/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown): $27 front door, order bump and upsell economics, backend ascension, value-based tracking.
+- [How to Reduce Sales Call No-Show Rates to Under 12%](https://www.funnelsthatprint.com/blog/reduce-sales-call-no-show-rate-reminder-automation): Booking page fixes, 7-touch reminder sequence, pre-call video, confirmation gate, no-show reactivation loop.
 - [Book a Strategy Call](https://www.funnelsthatprint.com/contact): Direct application to schedule a funnel strategy session.
 - [Full Documentation](https://www.funnelsthatprint.com/llms-full.txt): Comprehensive technical specifications, FAQ database, and framework details.

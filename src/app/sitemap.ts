@@ -1,8 +1,17 @@
 import { MetadataRoute } from "next";
+import { BLOG_POSTS } from "@/data/blogPosts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.funnelsthatprint.com";
   const now = new Date();
+
+  const blogEntries: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: "weekly",
+    priority: 0.85,
+    images: [`${baseUrl}${post.image}`],
+  }));
 
   return [
     {
@@ -58,20 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
       images: [`${baseUrl}/img/blog/ai-sales-funnels-2026.jpg`],
     },
-    {
-      url: `${baseUrl}/blog/ai-sales-funnels-voice-lead-qualification-2026`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.95,
-      images: [`${baseUrl}/img/blog/ai-sales-funnels-2026.jpg`],
-    },
-    {
-      url: `${baseUrl}/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.85,
-      images: [`${baseUrl}/img/blog/high-ticket-vsl-architecture.jpg`],
-    },
+    ...blogEntries,
     {
       url: `${baseUrl}/contact`,
       lastModified: now,

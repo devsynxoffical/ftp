@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BLOG_POSTS, BlogPost } from "@/data/blogPosts";
+import { BLOG_POSTS } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
@@ -12,6 +12,8 @@ const CATEGORIES = [
   "All Articles",
   "AI & Automation",
   "Funnel Architecture",
+  "Tracking & Attribution",
+  "Case Breakdowns",
 ];
 
 export default function BlogIndexPage() {
@@ -19,13 +21,18 @@ export default function BlogIndexPage() {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const featuredPost = BLOG_POSTS[0];
-  const otherPosts = BLOG_POSTS.slice(1);
+  const sortedPosts = [...BLOG_POSTS].sort((a, b) =>
+    b.publishedAt.localeCompare(a.publishedAt)
+  );
+  // Keep the flagship architecture guide as the featured card.
+  const featuredPost =
+    sortedPosts.find((p) => p.slug === "ai-sales-funnels-voice-lead-qualification-2026") ??
+    sortedPosts[0];
 
   const filteredPosts =
     activeCategory === "All Articles"
-      ? BLOG_POSTS
-      : BLOG_POSTS.filter((post) => post.category === activeCategory);
+      ? sortedPosts
+      : sortedPosts.filter((post) => post.category === activeCategory);
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
