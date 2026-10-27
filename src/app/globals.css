@@ -4240,14 +4240,15 @@ main {
     min-height: 220px !important;
     position: relative !important;
   }
+  /* Robot sits at the LEFT edge on mobile (slides in from off-screen left) */
   .robo .rl img {
-    left: 50% !important;
+    left: 0 !important;
     top: 50% !important;
-    width: min(240px, 66vw) !important;
-    translate: -50% -50% !important;
+    width: min(240px, 60vw) !important;
+    translate: -30% -50% !important;
   }
   .robo.in .rl img {
-    translate: -50% -50% !important;
+    translate: 0 -50% !important;
   }
   .robo .rm {
     padding: 0 20px 24px !important;

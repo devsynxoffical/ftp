@@ -79,6 +79,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
     let pl: HTMLElement | null = null;
     let sites: HTMLElement[] = [];
     let scr: HTMLElement | null = null;
+    let scr2: HTMLElement | null = null;
     let fsh: HTMLElement | null = null;
     let gl: HTMLElement | null = null;
     let gr: HTMLElement | null = null;
@@ -124,6 +125,7 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
         document.getElementById("site2"),
       ].filter(Boolean) as HTMLElement[];
       scr = document.querySelector<HTMLElement>("#pl .scr");
+      scr2 = document.querySelector<HTMLElement>("#pr .scr");
       fsh = document.getElementById("fsh");
       gl = document.getElementById("gl");
       gr = document.getElementById("gr");
@@ -187,24 +189,38 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
           )
         : 0;
       M.P = cover ? cover.offsetWidth : 0;
-      M.siteMax =
-        sites[0] && scr ? Math.max(0, sites[0].scrollHeight - scr.clientHeight) : 0;
+      // Scroll distance of the funnel screenshot inside the phone. On mobile
+      // the left pane (#pl) is display:none, so measure from whichever pane
+      // is actually laid out; otherwise siteMax is 0 and nothing scrolls.
+      M.siteMax = 0;
+      [
+        [sites[0], scr],
+        [sites[1], scr2],
+      ].forEach(([site, screen]) => {
+        if (site && screen && screen.clientHeight > 0) {
+          M.siteMax = Math.max(M.siteMax, site.scrollHeight - screen.clientHeight);
+        }
+      });
     }
 
     measure();
     window.addEventListener("load", measure);
 
-    const fimg = document.getElementById("fimg");
-    if (fimg) {
-      fimg.addEventListener("load", () => {
-        measure();
-        req();
-      });
-    }
-
     let lastE = -1;
     let lastYY = -1;
     let lastN = -1;
+
+    ["fimg", "fimg2"].forEach((id) => {
+      const img = document.getElementById(id);
+      if (img) {
+        img.addEventListener("load", () => {
+          measure();
+          lastYY = -1;
+          req();
+        });
+      }
+    });
+
 
     function frame() {
       tick = false;
