@@ -3619,8 +3619,9 @@ main {
     padding: 14px 16px !important;
     border-radius: 18px !important;
   }
-  /* Mobile only: hide the Connected, Qualifies and Stack cards; keep the
-     Live funnel card. Desktop (>768px) is untouched. */
+  /* Mobile only: hide all four floating UI cards (Live funnel, Connected,
+     Qualifies, Stack); the hero shows just the agent. Desktop is untouched. */
+  .stage .ui.lead,
   .stage .ui.src,
   .stage .ui.chip,
   .stage .ui.tools {
@@ -4571,3 +4572,56 @@ main {
   }
 }
 
+
+/* ==========================================================================
+   Real Client Results: horizontal swipe scroller on MOBILE ONLY (<= 768px).
+   Desktop keeps the masonry grid. Placed last so it wins the cascade.
+   ========================================================================== */
+@media (max-width: 768px) {
+  .rcr-grid {
+    columns: auto !important;
+    column-gap: 0 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 12px !important;
+    width: auto !important;
+    margin: 0 calc(-1 * var(--gut)) !important;
+    padding: 4px var(--gut) 18px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .rcr-grid::-webkit-scrollbar {
+    display: none;
+  }
+  .rcr-card {
+    flex: 0 0 min(78vw, 320px) !important;
+    width: min(78vw, 320px) !important;
+    margin: 0 !important;
+    scroll-snap-align: start !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .rcr-thumb-wrap {
+    flex: none !important;
+    height: min(62vw, 260px) !important;
+    overflow: hidden !important;
+  }
+  .rcr-thumb-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-height: none !important;
+    object-fit: cover !important;
+    object-position: top center !important;
+  }
+  .rcr-card-snippet p {
+    display: -webkit-box !important;
+    -webkit-line-clamp: 3 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+  }
+}
