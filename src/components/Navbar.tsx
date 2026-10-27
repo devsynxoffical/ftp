@@ -1,13 +1,60 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [ddOpen, setDdOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const pathname = usePathname();
+
+  // Close dropdown on route change
+  useEffect(() => {
+    setDdOpen(false);
+  }, [pathname]);
+
+  // Close dropdown on click outside or escape key
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent | TouchEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setDdOpen(false);
+      }
+    };
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setDdOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setDdOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setDdOpen(false);
+    }, 180);
+  };
 
   useEffect(() => {
     if (menuOpen) {
@@ -61,16 +108,28 @@ export default function Navbar() {
         <div className="pill">
           <Link href="/#services">What we do</Link>
           <Link href="/#process">How we do it</Link>
-          <div className="dd">
-            <Link
-              href="/case-studies"
-              className={
+          <div
+            className={`dd ${ddOpen ? "open" : ""}`}
+            ref={dropdownRef}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <button
+              type="button"
+              className={`dd-trigger ${
                 pathname === "/case-studies" ||
                 pathname === "/milliondollarcasestudy" ||
                 pathname === "/scalelowticket"
-                  ? "active"
+                  ? "active-page"
                   : ""
-              }
+              }`}
+              onClick={(e) => {
+                e.preventDefault();
+                setDdOpen((prev) => !prev);
+              }}
+              aria-expanded={ddOpen}
+              aria-haspopup="menu"
+              aria-label="Case studies menu"
             >
               Case studies
               <svg
@@ -89,12 +148,13 @@ export default function Navbar() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Link>
+            </button>
             <div className="ddm" role="menu" aria-label="Case studies submenu">
               <Link
                 href="/milliondollarcasestudy"
                 className={`dd-item ${pathname === "/milliondollarcasestudy" ? "active" : ""}`}
                 role="menuitem"
+                onClick={() => setDdOpen(false)}
               >
                 <div className="dd-head">
                   <span className="dd-title">High-Ticket Consulting</span>
@@ -108,6 +168,7 @@ export default function Navbar() {
                 href="/scalelowticket"
                 className={`dd-item ${pathname === "/scalelowticket" ? "active" : ""}`}
                 role="menuitem"
+                onClick={() => setDdOpen(false)}
               >
                 <div className="dd-head">
                   <span className="dd-title">Low-Ticket Scaling System</span>
@@ -117,7 +178,12 @@ export default function Navbar() {
                   $847,307 collected with self-liquidating front door
                 </span>
               </Link>
-              <Link href="/case-studies" className="dd-all" role="menuitem">
+              <Link
+                href="/case-studies"
+                className="dd-all"
+                role="menuitem"
+                onClick={() => setDdOpen(false)}
+              >
                 <span>View all case studies (275+)</span>
                 <i aria-hidden="true">&rarr;</i>
               </Link>
