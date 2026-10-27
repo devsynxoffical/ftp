@@ -149,8 +149,8 @@ h1,h2,h3,p{margin:0}
 .ddm .dd-item:hover .dd-badge{background:var(--or);color:#fff;border-color:var(--or)}
 .dd-sub{font-size:11.5px;color:#666;line-height:1.35;font-weight:400;display:block}
 .ddm .dd-item:hover .dd-sub{color:var(--fg)}
-.ddm .dd-all{display:flex!important;justify-content:space-between!important;align-items:center!important;padding:10px 14px!important;border-radius:12px!important;font-size:12.5px!important;font-weight:600!important;background:var(--fg)!important;color:#fff!important;margin-top:2px;text-decoration:none;transition:background .2s ease}
-.ddm .dd-all:hover{background:var(--or)!important;color:#fff!important}
+.ddm .dd-all{display:flex!important;justify-content:space-between!important;align-items:center!important;padding:10px 14px!important;border-radius:12px!important;font-size:12.5px!important;font-weight:600!important;background:var(--or)!important;color:#fff!important;margin-top:2px;text-decoration:none;transition:background .2s ease}
+.ddm .dd-all:hover{background:var(--fg)!important;color:#fff!important}
 .ddm .dd-all span,.ddm .dd-all:hover span{color:#fff;font-size:inherit}
 .ddm .dd-all i{font-style:normal;font-size:13px;transition:transform .2s ease}
 .ddm .dd-all:hover i{transform:translateX(3px)}
