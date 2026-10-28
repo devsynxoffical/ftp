@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { BLOG_POSTS } from "@/data/blogPosts";
 
 export default function Footer() {
   const footRef = useRef<HTMLElement>(null);
@@ -144,10 +145,25 @@ export default function Footer() {
           <Link href="/#pricing">
             Pricing <i>&#8599;</i>
           </Link>
+          <Link href="/blog">
+            Journal <i>&#8599;</i>
+          </Link>
           <Link href="/contact">
             Contact <i>&#8599;</i>
           </Link>
         </nav>
+
+        <div className="ffl fjournal">
+          <span className="fh">Latest guides</span>
+          {[...BLOG_POSTS]
+            .sort((a, b) => b.publishedAt.localeCompare(a.publishedAt))
+            .slice(0, 4)
+            .map((post) => (
+              <Link key={post.slug} href={`/blog/${post.slug}`}>
+                {post.metaTitle}
+              </Link>
+            ))}
+        </div>
 
         <div className="ffl">
           <span className="fh">Follow Us</span>

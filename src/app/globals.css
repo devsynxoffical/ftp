@@ -4677,3 +4677,11 @@ main {
     overflow: hidden !important;
   }
 }
+
+/* Journal preview block (internal linking into the blog) */
+.journal-preview .journal-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:clamp(28px,4vw,44px)}
+.journal-preview .blog-card h3{font-size:clamp(18px,1.4vw,21px)}
+.journal-all{display:flex;justify-content:center}
+.fjournal a{display:block;font-size:14px;line-height:1.35;margin-bottom:10px;max-width:34ch}
+@media (max-width:980px){.journal-preview .journal-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.journal-preview .journal-grid{grid-template-columns:1fr}}

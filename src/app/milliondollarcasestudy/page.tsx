@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
+import JournalPreview from "@/components/JournalPreview";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -223,6 +224,17 @@ export default function Case1MPage() {
         </Link>
       </section>
     </div>
+    <JournalPreview
+      id="journal"
+      eyebrow="How this stack works"
+      title={<>The playbooks behind the <span className="it">$1.52M</span>.</>}
+      lead="The AI qualification, speed-to-lead and tracking frameworks used on this build, written up step by step."
+      slugs={[
+        "ai-sales-funnels-voice-lead-qualification-2026",
+        "high-ticket-vsl-vs-interactive-quiz-funnel-2026",
+        "reduce-sales-call-no-show-rate-reminder-automation",
+      ]}
+    />
     <RealClientResults />
     <VideoTestimonials />
     <UFSquareMarquee />

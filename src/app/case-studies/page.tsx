@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
+import JournalPreview from "@/components/JournalPreview";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -218,6 +219,12 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
+      <JournalPreview
+        id="journal"
+        eyebrow="From the journal"
+        title={<>How we get these <span className="it">results</span>.</>}
+        slugs={["ai-sales-funnels-voice-lead-qualification-2026", "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "low-ticket-self-liquidating-offer-funnel-847k-breakdown"]}
+      />
       <RealClientResults />
       <VideoTestimonials />
       <UFSquareMarquee />

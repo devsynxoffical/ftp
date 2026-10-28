@@ -15,6 +15,7 @@ import FAQSection from "@/components/FAQSection";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import { HOME_FAQ_SCHEMA } from "@/data/homeFaqSchema";
+import JournalPreview from "@/components/JournalPreview";
 
 export default function Home() {
   return (
@@ -36,6 +37,13 @@ export default function Home() {
       <TeamSection />
       <PricingSection />
       <AdvantageFlow />
+      <JournalPreview
+        slugs={[
+          "ai-sales-funnels-voice-lead-qualification-2026",
+          "speed-to-lead-automation-gohighlevel-60-second-follow-up",
+          "high-ticket-vsl-vs-interactive-quiz-funnel-2026",
+        ]}
+      />
       <FAQSection />
       <UFSquareMarquee />
       <RoboSection />

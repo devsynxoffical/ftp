@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { CASES, CaseItem } from "@/data/cases";
 import RoboSection from "@/components/RoboSection";
+import JournalPreview from "@/components/JournalPreview";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
@@ -210,6 +211,12 @@ export default function CaseEcomPage() {
       </div>
     </div>
     <UFSquareMarquee />
+      <JournalPreview
+        id="journal"
+        eyebrow="From the journal"
+        title={<>eCommerce funnel playbooks behind the <span className="it">ROAS</span>.</>}
+        slugs={["low-ticket-self-liquidating-offer-funnel-847k-breakdown", "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "high-ticket-vsl-vs-interactive-quiz-funnel-2026"]}
+      />
     <RoboSection />
   </>
   );
