@@ -3,6 +3,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
+import JournalPreview from "@/components/JournalPreview";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -199,6 +200,17 @@ export default function Case847KPage() {
         </Link>
       </section>
     </div>
+    <JournalPreview
+      id="journal"
+      eyebrow="How this stack works"
+      title={<>The playbooks behind the <span className="it">$847K</span>.</>}
+      lead="The self-liquidating offer economics, tracking and follow-up frameworks used on this build."
+      slugs={[
+        "low-ticket-self-liquidating-offer-funnel-847k-breakdown",
+        "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
+        "speed-to-lead-automation-gohighlevel-60-second-follow-up",
+      ]}
+    />
     <RealClientResults />
     <VideoTestimonials />
     <UFSquareMarquee />

@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "eCommerce & DTC Funnel Case Studies (126+ Verified Proofs)",
+  title: "eCommerce Funnel Case Studies (126+)",
   description:
-    "Discover 126+ eCommerce case studies scaling direct-response DTC brands across beauty, apparel, supplements, and fitness with creative funnels.",
+    "126+ eCommerce and DTC funnel case studies: ROAS, average order value and scaling results for beauty, apparel, supplement and fitness brands on Meta ads.",
   alternates: {
     canonical: `${BASE_URL}/case-ecom`,
   },
   openGraph: {
-    title: "126+ eCommerce & DTC Funnel Case Studies | Funnels That Print",
+    title: "126+ eCommerce & DTC Funnel Case Studies",
     description:
-      "Revenue and ROAS breakdowns for direct-response eCommerce and DTC brands scaled with high-converting funnels.",
+      "Verified ROAS and scaling results from direct-response eCommerce funnels built by Funnels That Print.",
     url: `${BASE_URL}/case-ecom`,
     type: "website",
     images: [
       {
-        url: "/img/x/office.webp",
+        url: "/img/og/funnels-that-print-og.jpg",
         width: 1200,
         height: 630,
         alt: "eCommerce & DTC Funnel Case Studies",
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "eCommerce & DTC Funnel Case Studies (126+ Verified Proofs)",
+    title: "126+ eCommerce & DTC Funnel Case Studies",
     description:
-      "Revenue and ROAS breakdowns for direct-response eCommerce and DTC brands.",
-    images: ["/img/x/office.webp"],
+      "Verified ROAS and scaling results from direct-response eCommerce funnels built by Funnels That Print.",
+    images: ["/img/og/funnels-that-print-og.jpg"],
   },
 };
 

@@ -688,7 +688,7 @@ export const BLOG_POSTS: BlogPost[] = [
     updatedAt: "2026-10-27",
     readTime: "11 min read",
     image: "/img/blog/speed-to-lead-automation.jpg",
-    imageAlt: "Speed-to-lead automation workflow showing SMS, email and AI call triggered within 60 seconds of a new lead",
+    imageAlt: "Sales rep answering a new lead call on her phone next to a CRM pipeline dashboard with a 42-second response timer",
     keywords: [
       "speed to lead",
       "speed to lead automation",
@@ -876,7 +876,7 @@ export const BLOG_POSTS: BlogPost[] = [
     updatedAt: "2026-10-27",
     readTime: "9 min read",
     image: "/img/blog/low-ticket-slo-funnel.jpg",
-    imageAlt: "Self-liquidating offer funnel breakdown cover showing the $847K low-ticket front door result",
+    imageAlt: "Laptop showing a $27 low-ticket checkout page with an order bump, next to a phone confirming payment received",
     keywords: [
       "self-liquidating offer funnel",
       "SLO funnel",
@@ -1041,7 +1041,7 @@ export const BLOG_POSTS: BlogPost[] = [
     updatedAt: "2026-10-27",
     readTime: "8 min read",
     image: "/img/blog/sales-call-no-show-rate.jpg",
-    imageAlt: "Sales call no-show rate reduction guide cover showing the reminder stack that lifted show-ups to 88%",
+    imageAlt: "Tablet showing a booked consultation calendar beside a phone with an appointment reminder text asking the client to reply YES",
     keywords: [
       "sales call no-show rate",
       "reduce no-shows",

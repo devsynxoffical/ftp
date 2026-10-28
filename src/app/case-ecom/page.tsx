@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { CASES, CaseItem } from "@/data/cases";
 import RoboSection from "@/components/RoboSection";
+import JournalPreview from "@/components/JournalPreview";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
@@ -85,7 +86,7 @@ export default function CaseEcomPage() {
         </Link>
         <span className="cstag">Brand Scaling Hacks &middot; 126 case studies</span>
         <h1 className="h1 d">
-          Ecom <span className="it">case studies</span>
+          eCommerce funnel <span className="it">case studies</span>
         </h1>
         <p className="lead">
           126 direct-response eCommerce and DTC brands scaled with Meta ads,
@@ -210,6 +211,12 @@ export default function CaseEcomPage() {
       </div>
     </div>
     <UFSquareMarquee />
+      <JournalPreview
+        id="journal"
+        eyebrow="From the journal"
+        title={<>eCommerce funnel playbooks behind the <span className="it">ROAS</span>.</>}
+        slugs={["low-ticket-self-liquidating-offer-funnel-847k-breakdown", "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "high-ticket-vsl-vs-interactive-quiz-funnel-2026"]}
+      />
     <RoboSection />
   </>
   );

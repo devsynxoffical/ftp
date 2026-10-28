@@ -4,6 +4,7 @@ import { useState, useMemo } from "react";
 import Link from "next/link";
 import { LEADS, LeadItem } from "@/data/leads";
 import RoboSection from "@/components/RoboSection";
+import JournalPreview from "@/components/JournalPreview";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
@@ -85,7 +86,7 @@ export default function CaseLeadgenPage() {
         </Link>
         <span className="cstag">QualifiedLeadsX&trade; &middot; 125 case studies</span>
         <h1 className="h1 d">
-          Lead gen <span className="it">case studies</span>
+          Lead generation funnel <span className="it">case studies</span>
         </h1>
         <p className="lead">
           125 QualifiedLeadsX&trade; campaigns across roofing, legal, mortgage,
@@ -211,6 +212,12 @@ export default function CaseLeadgenPage() {
       </div>
     </div>
     <UFSquareMarquee />
+      <JournalPreview
+        id="journal"
+        eyebrow="From the journal"
+        title={<>Lead gen playbooks behind the <span className="it">numbers</span>.</>}
+        slugs={["speed-to-lead-automation-gohighlevel-60-second-follow-up", "reduce-sales-call-no-show-rate-reminder-automation", "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026"]}
+      />
     <RoboSection />
   </>
   );

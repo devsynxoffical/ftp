@@ -35,7 +35,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `${BASE_URL}/blog/${post.slug}`;
 
   return {
-    title: post.metaTitle,
+    // Absolute: the root template would append " | Funnels That Print" and push
+    // these past the ~60 characters Google displays.
+    title: { absolute: post.metaTitle },
     description: post.metaDescription,
     keywords: post.keywords,
     alternates: {
