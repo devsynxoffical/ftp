@@ -85,7 +85,7 @@ export default function CaseLeadgenPage() {
         </Link>
         <span className="cstag">QualifiedLeadsX&trade; &middot; 125 case studies</span>
         <h1 className="h1 d">
-          Lead gen <span className="it">case studies</span>
+          Lead generation funnel <span className="it">case studies</span>
         </h1>
         <p className="lead">
           125 QualifiedLeadsX&trade; campaigns across roofing, legal, mortgage,

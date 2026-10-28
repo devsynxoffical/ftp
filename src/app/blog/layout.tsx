@@ -3,16 +3,16 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "The Performance Marketing & AI Funnel Journal | Funnels That Print",
+  title: "AI Sales Funnel & Automation Blog",
   description:
-    "Engineering insights, real-world case breakdowns, AI sales funnel architectures, and conversion rate optimization strategies from Funnels That Print.",
+    "Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnel strategy.",
   alternates: {
     canonical: `${BASE_URL}/blog`,
   },
   openGraph: {
-    title: "The Performance Marketing & AI Funnel Journal | Funnels That Print",
+    title: "AI Sales Funnel & Automation Blog | Funnels That Print",
     description:
-      "Deep-dive guides on AI voice agents, speed-to-lead automation, server-side Meta CAPI tracking, and direct-response customer acquisition.",
+      "Actionable guides on AI voice agents, speed-to-lead, server-side tracking and high-converting funnel architecture.",
     url: `${BASE_URL}/blog`,
     type: "website",
     images: [
@@ -26,9 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Performance Marketing & AI Funnel Journal",
+    title: "AI Sales Funnel & Automation Blog | Funnels That Print",
     description:
-      "Actionable engineering insights on AI sales funnels, CRM speed-to-lead, and high-converting acquisition stacks.",
+      "Actionable guides on AI voice agents, speed-to-lead, server-side tracking and high-converting funnel architecture.",
     images: ["/img/blog/ai-sales-funnels-2026.jpg"],
   },
 };

@@ -85,7 +85,7 @@ export default function CaseEcomPage() {
         </Link>
         <span className="cstag">Brand Scaling Hacks &middot; 126 case studies</span>
         <h1 className="h1 d">
-          Ecom <span className="it">case studies</span>
+          eCommerce funnel <span className="it">case studies</span>
         </h1>
         <p className="lead">
           126 direct-response eCommerce and DTC brands scaled with Meta ads,

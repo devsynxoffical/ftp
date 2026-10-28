@@ -6,21 +6,21 @@ import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
 
 export const metadata: Metadata = {
-  title: "Client Case Studies: Lead Gen & eCommerce Funnels",
+  title: "Sales Funnel Case Studies (275+)",
   description:
-    "Browse 250+ verified case studies and proof across high-ticket lead generation and DTC eCommerce funnels built by Funnels That Print.",
+    "Browse 275+ verified sales funnel case studies: lead generation funnels for roofing, mortgage, medspa, legal and coaching, plus eCommerce and DTC brand results.",
   alternates: {
     canonical: "https://www.funnelsthatprint.com/case-studies",
   },
   openGraph: {
-    title: "Client Case Studies: Lead Gen & eCommerce Funnels | Funnels That Print",
+    title: "Sales Funnel Case Studies: 275+ Verified Client Results",
     description:
-      "Browse 250+ verified client results across service businesses, high-ticket consulting, and high-growth DTC brands.",
+      "Real screenshots and numbers from 275+ lead generation and eCommerce funnels built by Funnels That Print.",
     url: "https://www.funnelsthatprint.com/case-studies",
     type: "website",
     images: [
       {
-        url: "/img/x/office.webp",
+        url: "/img/og/funnels-that-print-og.jpg",
         width: 1200,
         height: 630,
         alt: "Funnels That Print Case Studies",
@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Client Case Studies: Lead Gen & eCommerce Funnels",
+    title: "Sales Funnel Case Studies: 275+ Verified Client Results",
     description:
-      "Browse 250+ verified case studies across Lead Generation and eCommerce.",
-    images: ["/img/x/office.webp"],
+      "Real screenshots and numbers from 275+ lead generation and eCommerce funnels built by Funnels That Print.",
+    images: ["/img/og/funnels-that-print-og.jpg"],
   },
 };
 
@@ -107,7 +107,7 @@ export default function CaseStudiesPage() {
       <div className="box">
         <header className="cshero">
           <h1 className="h1 d">
-            Case <span className="it">studies</span>
+            Sales funnel <span className="it">case studies</span>
           </h1>
           <p className="lead">
             Two libraries of real, verified results. Pick the one that matches your

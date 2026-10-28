@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "Book a Strategy Call & Build Your Funnel",
+  title: "Book a Funnel Strategy Call",
   description:
-    "Ready to scale your conversions and turn traffic into booked sales calls? Contact Funnels That Print or book your funnel strategy session.",
+    "Book a free funnel strategy call with Funnels That Print. Tell us your offer and goals and get a custom sales funnel, CRM automation and AI calling plan.",
   alternates: {
     canonical: `${BASE_URL}/contact`,
   },
   openGraph: {
-    title: "Book a Strategy Call | Funnels That Print",
+    title: "Book a Funnel Strategy Call | Funnels That Print",
     description:
-      "Tell us about your offer, ad spend, and goals. We will build a conversion journey engineered to print calls and revenue.",
+      "Get a custom plan for your sales funnel, follow-up automation and AI calling agent. Built in 5 to 10 business days.",
     url: `${BASE_URL}/contact`,
     type: "website",
     images: [
       {
-        url: "/img/x/office.webp",
+        url: "/img/og/funnels-that-print-og.jpg",
         width: 1200,
         height: 630,
         alt: "Contact Funnels That Print",
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book a Strategy Call | Funnels That Print",
+    title: "Book a Funnel Strategy Call | Funnels That Print",
     description:
-      "Ready to scale your conversions and turn traffic into booked sales calls? Contact Funnels That Print.",
-    images: ["/img/x/office.webp"],
+      "Get a custom plan for your sales funnel, follow-up automation and AI calling agent. Built in 5 to 10 business days.",
+    images: ["/img/og/funnels-that-print-og.jpg"],
   },
 };
 

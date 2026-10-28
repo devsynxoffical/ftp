@@ -9,6 +9,10 @@ export const metadata: Metadata = {
   alternates: {
     canonical: `${BASE_URL}/case`,
   },
+  // Client-rendered viewer driven by ?set=&id= query params. Googlebot sees an
+  // empty shell per URL, which produces "Crawled, currently not indexed" noise
+  // and dilutes the hub pages. Keep it crawlable (follow) but out of the index.
+  robots: { index: false, follow: true },
   openGraph: {
     title: "Case Study Viewer | Funnels That Print",
     description:
@@ -17,7 +21,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/img/x/office.webp",
+        url: "/img/og/funnels-that-print-og.jpg",
         width: 1200,
         height: 630,
         alt: "Funnels That Print Case Study Proof",
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
     title: "Case Study Viewer & Conversion Proof",
     description:
       "Verified conversion proof, revenue stats, and funnel breakdowns.",
-    images: ["/img/x/office.webp"],
+    images: ["/img/og/funnels-that-print-og.jpg"],
   },
 };
 

@@ -3,21 +3,21 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "Lead Generation Funnel Case Studies (125+ Verified Proofs)",
+  title: "Lead Gen Funnel Case Studies (125+)",
   description:
-    "Explore 125+ verified lead-gen case studies across roofing, mortgage, coaching, medspa, and legal. See real booked calls, lead flow, and CPL numbers.",
+    "125+ lead generation funnel case studies with real cost per lead, booked calls and ad spend across roofing, mortgage, medspa, legal, solar and coaching.",
   alternates: {
     canonical: `${BASE_URL}/case-leadgen`,
   },
   openGraph: {
-    title: "125+ Lead Gen Case Studies | Funnels That Print",
+    title: "125+ Lead Generation Funnel Case Studies",
     description:
-      "Booked calls, verified leads and lower cost per lead for service businesses, agencies, coaches and local trades.",
+      "Verified lead gen funnel results: cost per lead, booked calls and pipeline across home services, finance, healthcare and coaching.",
     url: `${BASE_URL}/case-leadgen`,
     type: "website",
     images: [
       {
-        url: "/img/x/office.webp",
+        url: "/img/og/funnels-that-print-og.jpg",
         width: 1200,
         height: 630,
         alt: "Lead Generation Funnel Case Studies",
@@ -26,10 +26,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Lead Generation Funnel Case Studies (125+ Verified Proofs)",
+    title: "125+ Lead Generation Funnel Case Studies",
     description:
-      "Booked calls, verified leads and lower CPL for service businesses and coaches.",
-    images: ["/img/x/office.webp"],
+      "Verified lead gen funnel results: cost per lead, booked calls and pipeline across home services, finance, healthcare and coaching.",
+    images: ["/img/og/funnels-that-print-og.jpg"],
   },
 };
 

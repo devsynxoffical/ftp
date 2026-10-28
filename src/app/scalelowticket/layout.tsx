@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "$847,307 Low-Ticket Front Door Case Study",
+  title: "$847K Low-Ticket SLO Funnel Case Study",
   description:
-    "How we turned an ad-bleeding coaching offer into a self-liquidating $847,307 buyer engine with an optimized low-ticket acquisition front door.",
+    "How a $27 self-liquidating offer funnel collected $847,307: front-end offer, order bump and upsell economics, buyer-list backend and value-based ad tracking.",
   alternates: {
     canonical: `${BASE_URL}/scalelowticket`,
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "/img/x/office.webp",
+        url: "/img/og/funnels-that-print-og.jpg",
         width: 1200,
         height: 630,
         alt: "$847K Case Study — Funnels That Print",
@@ -27,10 +27,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "$847,307 Low-Ticket Front Door Case Study",
+    title: "$847,307 Self-Liquidating Offer Funnel Case Study",
     description:
-      "How we built a self-liquidating $847,307 buyer machine with an optimized low-ticket acquisition front door.",
-    images: ["/img/x/office.webp"],
+      "Page-by-page breakdown of the low-ticket front door funnel that paid for its own ads and built a buyer list.",
+    images: ["/img/og/funnels-that-print-og.jpg"],
   },
 };
 
@@ -68,7 +68,7 @@ const caseSchemaGraph = {
         "Self-Liquidating Low-Ticket Front-End System Case Study",
       description:
         "How we rebuilt the offer, fixed tracking, and turned an ad-bleeding coaching funnel into a self-liquidating $847,307 buyer engine.",
-      image: `${BASE_URL}/img/x/office.webp`,
+      image: `${BASE_URL}/img/og/funnels-that-print-og.jpg`,
       datePublished: "2024-03-20T08:00:00+00:00",
       dateModified: "2026-01-10T12:00:00+00:00",
       author: {
