@@ -925,12 +925,13 @@ main:has(.uf-marquee-section){margin-bottom:0 !important;padding-bottom:0 !impor
 .fstart{display:flex;justify-content:space-between;align-items:center;gap:30px;padding:clamp(40px,6vh,80px) var(--gut) clamp(30px,5vh,60px)}
 .fstart .fw{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 82;text-transform:uppercase;line-height:.85;letter-spacing:-.01em;white-space:nowrap;font-size:120px}
 .fstart .fw span{display:inline-block;transition:color .3s,transform .4s cubic-bezier(.2,.7,.2,1)}
+.fstart .fw .fwrd{white-space:nowrap;transition:none}
 .fstart:hover .fw span{color:var(--or)}
 .fstart .arr{flex:none;width:clamp(90px,11vw,200px);aspect-ratio:1}
 .fstart .arr path{fill:none;stroke:#fff;stroke-width:3;transition:fill .4s,stroke .4s}
 .fstart:hover .arr path{fill:var(--or);stroke:var(--or)}
 .fstart .arr{transition:transform .5s cubic-bezier(.2,.7,.2,1)}.fstart:hover .arr{transform:translate(8px,-8px)}
-.fg{display:grid;grid-template-columns:1fr 1.1fr .9fr 2fr;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
+.fg{display:grid;grid-template-columns:1.1fr 1.05fr .95fr .8fr 1.6fr;border-top:1px solid var(--line-d);border-bottom:1px solid var(--line-d)}
 .fg>*{border-right:1px solid var(--line-d);min-width:0}.fg>*:last-child{border-right:0}
 .fbr{background:var(--or);color:#111;padding:clamp(24px,3vw,44px) clamp(18px,2vw,30px);display:flex;flex-direction:column;justify-content:space-between;gap:40px;min-height:clamp(420px,56vh,620px)}
 .fbr .mk{font-family:var(--disp);font-weight:800;font-variation-settings:"wdth" 82;font-size:clamp(90px,9vw,150px);line-height:.8;letter-spacing:-.02em}
@@ -4682,6 +4683,7 @@ main {
 .journal-preview .journal-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin-bottom:clamp(28px,4vw,44px)}
 .journal-preview .blog-card h3{font-size:clamp(18px,1.4vw,21px)}
 .journal-all{display:flex;justify-content:center}
-.fjournal a{display:block;font-size:14px;line-height:1.35;margin-bottom:10px;max-width:34ch}
+.fjournal a{display:block;font-size:15px;line-height:1.35;margin-bottom:12px;max-width:30ch;width:auto}
+@media (max-width:980px){.fjournal a{font-size:16px}}
 @media (max-width:980px){.journal-preview .journal-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.journal-preview .journal-grid{grid-template-columns:1fr}}

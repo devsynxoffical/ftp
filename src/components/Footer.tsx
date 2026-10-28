@@ -18,9 +18,17 @@ export default function Footer() {
 
     // Split text into spans for staggered hover effect
     const text = "Start a project";
-    fw.innerHTML = [...text]
-      .map((c) => (c === " " ? " " : `<span>${c}</span>`))
-      .join("");
+    // Each word is wrapped so a line break can only happen between words,
+    // never between the letter spans of one word.
+    fw.innerHTML = text
+      .split(" ")
+      .map(
+        (word) =>
+          `<span class="fwrd">${[...word]
+            .map((c) => `<span>${c}</span>`)
+            .join("")}</span>`
+      )
+      .join(" ");
 
     const fit = () => {
       fw.style.fontSize = "100px";
