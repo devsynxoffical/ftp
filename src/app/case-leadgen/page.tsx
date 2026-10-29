@@ -5,6 +5,8 @@ import Link from "next/link";
 import { LEADS, LeadItem } from "@/data/leads";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
+import PageFaq from "@/components/PageFaq";
+import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
@@ -212,6 +214,7 @@ export default function CaseLeadgenPage() {
       </div>
     </div>
     <UFSquareMarquee />
+      <PageFaq faqs={PAGE_FAQS["case-leadgen"]} path="/case-leadgen" eyebrow="About these results" />
       <JournalPreview
         id="journal"
         eyebrow="From the journal"

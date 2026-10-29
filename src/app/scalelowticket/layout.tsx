@@ -70,20 +70,9 @@ const caseSchemaGraph = {
         "How we rebuilt the offer, fixed tracking, and turned an ad-bleeding coaching funnel into a self-liquidating $847,307 buyer engine.",
       image: `${BASE_URL}/img/og/funnels-that-print-og.jpg`,
       datePublished: "2024-03-20T08:00:00+00:00",
-      dateModified: "2026-01-10T12:00:00+00:00",
-      author: {
-        "@type": "Organization",
-        name: "Funnels That Print",
-        url: BASE_URL,
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "Funnels That Print",
-        logo: {
-          "@type": "ImageObject",
-          url: `${BASE_URL}/img/logos/logo-01.webp`,
-        },
-      },
+      dateModified: "2026-10-29T12:00:00+00:00",
+      author: { "@id": `${BASE_URL}/#person-gaurav` },
+      publisher: { "@id": `${BASE_URL}/#organization` },
       about: [
         { "@type": "Thing", name: "Low-Ticket Acquisition Funnel" },
         { "@type": "Thing", name: "Coaching and Info Products" },

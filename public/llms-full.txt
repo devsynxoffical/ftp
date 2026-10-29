@@ -83,3 +83,11 @@
 - Lead Generation Directory: https://www.funnelsthatprint.com/case-leadgen
 - eCommerce Directory: https://www.funnelsthatprint.com/case-ecom
 - Contact / Strategy Call: https://www.funnelsthatprint.com/contact
+
+## People
+- **Gaurav Kapoor**, Founder & Funnel Strategist. Since 2019: high-ticket and low-ticket acquisition funnels for coaching, consulting, home services, finance and DTC brands, including the $1.52M high-ticket consulting funnel and the $847K self-liquidating offer funnel.
+- **Rahul Kapoor**, Co-founder & Automation Lead. CRM automation, speed-to-lead systems, AI voice calling agents, Meta Conversions API pipelines and reminder automations behind 275+ client funnels.
+
+## Document metadata
+- Last updated: 2026-10-29
+- Short version: https://www.funnelsthatprint.com/llms.txt

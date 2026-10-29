@@ -60,18 +60,7 @@ const contactSchemaGraph = {
       url: `${BASE_URL}/contact`,
       description:
         "Schedule a 1-on-1 strategy call or enquire about building high-converting funnels.",
-      mainEntity: {
-        "@type": "Organization",
-        name: "Funnels That Print",
-        url: BASE_URL,
-        email: "info@funnelsthatprint.com",
-        contactPoint: {
-          "@type": "ContactPoint",
-          contactType: "sales and customer service",
-          email: "info@funnelsthatprint.com",
-          availableLanguage: ["English"],
-        },
-      },
+      mainEntity: { "@id": `${BASE_URL}/#organization` },
     },
   ],
 };

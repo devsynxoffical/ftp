@@ -115,18 +115,22 @@ export default async function BlogPostPage({ params }: PageProps) {
         image: `${BASE_URL}${post.image}`,
         datePublished: `${post.publishedAt}T08:00:00+00:00`,
         dateModified: `${post.updatedAt}T12:00:00+00:00`,
+        abstract: post.keyTakeaways.join(" "),
         author: {
-          "@type": "Organization",
+          "@type": "Person",
+          "@id": `${BASE_URL}/#person-${post.author.id}`,
           name: post.author.name,
-          url: BASE_URL,
+          jobTitle: post.author.role,
+          description: post.author.bio,
+          image: `${BASE_URL}${post.author.avatar}`,
+          url: `${BASE_URL}/#team`,
+          knowsAbout: post.author.expertise,
+          worksFor: { "@id": `${BASE_URL}/#organization` },
         },
-        publisher: {
-          "@type": "Organization",
-          name: "Funnels That Print",
-          logo: {
-            "@type": "ImageObject",
-            url: `${BASE_URL}/img/logos/logo-01.webp`,
-          },
+        publisher: { "@id": `${BASE_URL}/#organization` },
+        speakable: {
+          "@type": "SpeakableSpecification",
+          cssSelector: [".post-h1", ".post-takeaways"],
         },
         keywords: post.keywords.join(", "),
         articleSection: post.category,
@@ -204,6 +208,18 @@ export default async function BlogPostPage({ params }: PageProps) {
             </div>
           </header>
 
+          {/* Answer-first summary (AEO): quotable without the rest of the page */}
+          {post.keyTakeaways.length > 0 && (
+            <aside className="post-takeaways in" aria-label="Key takeaways">
+              <span className="tag">Key takeaways</span>
+              <ul>
+                {post.keyTakeaways.map((t) => (
+                  <li key={t}>{t}</li>
+                ))}
+              </ul>
+            </aside>
+          )}
+
           {/* Metrics Highlight Banner */}
           {post.metrics && post.metrics.length > 0 && (
             <div className="post-metrics-banner in">
@@ -279,7 +295,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <div className="post-faq-list">
                     {post.faqs.map((faq, idx) => (
                       <div key={idx} className="post-faq-item">
-                        <h4>{faq.question}</h4>
+                        <h3>{faq.question}</h3>
                         <p>{faq.answer}</p>
                       </div>
                     ))}
@@ -301,12 +317,10 @@ export default async function BlogPostPage({ params }: PageProps) {
                 <div>
                   <span className="tag">Written By</span>
                   <h4>{post.author.name}</h4>
-                  <p>
-                    Direct-response funnel engineers, AI telephony architects,
-                    and conversion optimization specialists at Funnels That
-                    Print. Responsible for over $28M in verified client pipeline
-                    revenue.
-                  </p>
+                  <p>{post.author.bio}</p>
+                  <Link className="post-author-link" href="/#team">
+                    Meet the team <i>&#8599;</i>
+                  </Link>
                 </div>
               </div>
             </div>

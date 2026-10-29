@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
+import PageFaq from "@/components/PageFaq";
+import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -66,19 +68,15 @@ const caseStudiesSchema = {
       name: "Funnels That Print Client Case Studies & Proofs",
       description:
         "275+ verified case studies across high-ticket B2B consulting, service businesses, and high-growth DTC eCommerce funnels.",
-      publisher: {
-        "@type": "Organization",
-        name: "Funnels That Print",
-        url: BASE_URL,
-      },
+      publisher: { "@id": `${BASE_URL}/#organization` },
       hasPart: [
         {
-          "@type": "Article",
+          "@type": "WebPage",
           name: "High-Ticket Consulting ($1.52M in 19 Months)",
           url: `${BASE_URL}/milliondollarcasestudy`,
         },
         {
-          "@type": "Article",
+          "@type": "WebPage",
           name: "Low-Ticket Scaling System ($847,307 Collected)",
           url: `${BASE_URL}/scalelowticket`,
         },
@@ -219,6 +217,7 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
+      <PageFaq faqs={PAGE_FAQS["case-studies"]} path="/case-studies" eyebrow="About these results" />
       <JournalPreview
         id="journal"
         eyebrow="From the journal"

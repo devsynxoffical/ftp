@@ -130,10 +130,10 @@ export default function Footer() {
             </div>
           </div>
           <div>
-            <h4>
+            <p className="fbrh">
               Funnels, automation, follow-up and AI calling, built around booked
               calls.
-            </h4>
+            </p>
             <div className="cp">
               &copy; 2026 Funnels That Print. All rights reserved.
             </div>
