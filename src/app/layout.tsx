@@ -44,6 +44,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    types: {
+      "application/rss+xml": `${BASE_URL}/feed.xml`,
+    },
   },
   openGraph: {
     title: "Sales Funnel Agency: AI Funnels, CRM Automation & AI Calling",
