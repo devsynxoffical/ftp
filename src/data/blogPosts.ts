@@ -1,8 +1,6 @@
-export interface BlogAuthor {
-  name: string;
-  role: string;
-  avatar: string;
-}
+import { AUTHORS, type Author } from "./authors";
+
+export type BlogAuthor = Author;
 
 export interface BlogMetric {
   label: string;
@@ -26,6 +24,12 @@ export interface BlogPost {
   metaTitle: string;
   /** Meta description for search (keep under ~160 chars). `excerpt` is for cards. */
   metaDescription: string;
+  /**
+   * Answer-first summary shown at the top of the article and exposed as the
+   * BlogPosting `abstract`. Three or four self-contained sentences that an
+   * answer engine can quote without the rest of the page.
+   */
+  keyTakeaways: string[];
   title: string;
   headline: string;
   excerpt: string;
@@ -50,17 +54,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "ai-sales-funnels-voice-lead-qualification-2026",
     metaTitle: "AI Sales Funnels 2026: Voice Agents & Speed-to-Lead",
     metaDescription: "How 2026 AI sales funnels pair interactive front ends with sub-second voice agents, 60-second speed-to-lead and Meta CAPI to cut cost per booked call by 42%.",
+    keyTakeaways: [
+      "Static VSL-first funnels lose most cold traffic before the pitch. Interactive front ends that ask four to six qualifying questions turn more clicks into leads.",
+      "Calling a new lead within 60 seconds with a sub-700ms voice agent cut cost per qualified booked call by 42.6% across 275+ funnels, with no change to ads or landing pages.",
+      "Sending qualified-call and sale events back to Meta through the Conversions API shifts ad delivery toward buyers within about 14 days.",
+      "The full stack is an interactive qualification page, instant SMS plus AI voice call, CRM routing, 3-channel reminders and server-side attribution.",
+    ],
     title: "The 2026 AI Sales Funnel Architecture: Why Autonomous Voice Agents & Sub-Second Speed-to-Lead Are Crushing Traditional VSLs",
     headline: "How high-ticket B2B consultants, service brands, and direct-response agencies use real-time conversational AI voice agents, automated CRM routing, and server-side CAPI to cut cost-per-appointment by 42%.",
     excerpt: "Traditional static Video Sales Letters (VSLs) and multi-step forms are suffering severe drop-offs. Discover the 2026 autonomous sales funnel framework pairing interactive front-ends with sub-700ms voice AI qualification and instant CRM speed-to-lead.",
     category: "AI & Automation",
-    author: {
-      name: "Funnels That Print Architecture Team",
-      role: "Performance Funnel & AI Systems Engineering",
-      avatar: "/img/x/office.webp",
-    },
+    author: AUTHORS.rahul,
     publishedAt: "2026-03-15",
-    updatedAt: "2026-10-26",
+    updatedAt: "2026-10-29",
     readTime: "9 min read",
     image: "/img/blog/ai-sales-funnels-2026.jpg",
     imageAlt: "AI Sales Funnel Architecture and Autonomous Voice Lead Qualification Dashboard",
@@ -282,17 +288,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "high-ticket-vsl-vs-interactive-quiz-funnel-2026",
     metaTitle: "High-Ticket VSL vs Quiz Funnel: Which Converts Better?",
     metaDescription: "VSL or quiz funnel for your high-ticket offer? Conversion data from 275+ split-tested funnels, the psychology behind each, and the hybrid stack that wins.",
+    keyTakeaways: [
+      "Across 275+ split-tested funnels, four-to-six step quiz front ends completed at 64.8% against an 18% VSL view-through rate and cut cost per lead by 34%.",
+      "VSLs still close better once a prospect is qualified. The loss happens when a long video is the first thing cold traffic sees.",
+      "The winning 2026 format is hybrid: a diagnostic quiz first, then a four-to-six minute mechanism video on the results page before the calendar.",
+      "Route unqualified quiz respondents to a low-ticket or resource path so closers' calendars stay full of the right people.",
+    ],
     title: "High-Ticket VSL vs. Multi-Step Quiz Application: Which Funnel Converts Higher in 2026?",
     headline: "An analytical breakdown of 275+ split-tested funnels across coaching, legal, B2B services, and home trades.",
     excerpt: "Should your high-ticket offer use a traditional Video Sales Letter (VSL) or a multi-step interactive diagnostic quiz? Here are the conversion stats, psychology, and optimal architectures.",
     category: "Funnel Architecture",
-    author: {
-      name: "Funnels That Print Architecture Team",
-      role: "Performance Funnel & AI Systems Engineering",
-      avatar: "/img/x/office.webp",
-    },
+    author: AUTHORS.gaurav,
     publishedAt: "2026-01-20",
-    updatedAt: "2026-10-26",
+    updatedAt: "2026-10-29",
     readTime: "10 min read",
     image: "/img/blog/high-ticket-vsl-architecture.jpg",
     imageAlt: "Isometric 3D blueprint of sales funnel conversion flow stages",
@@ -466,17 +474,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
     metaTitle: "Meta Conversions API (CAPI) Setup for Lead Gen Funnels",
     metaDescription: "Step-by-step Meta Conversions API setup for lead gen: CRM event ladder, deduplication, Event Match Quality above 8, and Google Enhanced Conversions mirroring.",
+    keyTakeaways: [
+      "Browser pixels alone now miss roughly a third of conversions. Adding the Conversions API recovered 31% more events in our lead gen accounts.",
+      "Map CRM stages to an event ladder (Lead, QualifiedLead, Schedule, Purchase) and send them server-side with the Meta click ID plus hashed email and phone.",
+      "Deduplicate browser and server events with a shared event ID, and push Event Match Quality above 8 so Meta optimizes for booked calls instead of form fills.",
+      "Expect a learning reset of about 14 days. Cost per qualified lead dropped 37% after 21 days of offline events.",
+    ],
     title: "Meta Conversions API for Lead Gen Funnels: The 2026 Server-Side Tracking Setup That Fixes Your Cost Per Lead",
     headline: "How to send qualified-lead, booked-call and closed-won events from your CRM back to Meta and Google so the algorithms stop optimizing for form-fillers and start finding buyers.",
     excerpt: "Browser pixels now miss up to a third of conversions. This step-by-step Meta CAPI guide shows lead gen businesses how to set up server-side tracking, map CRM pipeline stages to conversion events, and improve Event Match Quality so Meta optimizes for booked calls, not clicks.",
     category: "Tracking & Attribution",
-    author: {
-      name: "Funnels That Print Architecture Team",
-      role: "Performance Funnel & AI Systems Engineering",
-      avatar: "/img/x/office.webp",
-    },
+    author: AUTHORS.rahul,
     publishedAt: "2026-05-12",
-    updatedAt: "2026-10-27",
+    updatedAt: "2026-10-29",
     readTime: "10 min read",
     image: "/img/blog/server-side-capi-tracking.jpg",
     imageAlt: "Server-side Meta Conversions API tracking diagram showing CRM events flowing back to Meta Ads",
@@ -675,17 +685,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "speed-to-lead-automation-gohighlevel-60-second-follow-up",
     metaTitle: "Speed-to-Lead Automation: The 60-Second Follow-Up System",
     metaDescription: "Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and a 5-day nurture, with copy-paste templates.",
+    keyTakeaways: [
+      "Leads contacted within 60 seconds are far more likely to qualify. At a one-hour delay, contact rate falls from 84% to 27%.",
+      "Minute one fires three channels in parallel, an SMS, an AI voice call and an email, all triggered by the form submission inside GoHighLevel.",
+      "Missed-call text-back, round-robin assignment and a 5-day nurture sequence catch the leads the first minute misses.",
+      "Across 60+ deployments the median response time is 38 seconds and lead-to-booking rate lifted 2.4x on the same ads and landing page.",
+    ],
     title: "Speed-to-Lead Automation: How to Build a 60-Second Follow-Up System With SMS, Email and AI Calling in GoHighLevel",
     headline: "The exact workflow, timing and message templates we deploy so every new lead is called, texted and emailed inside one minute, 24 hours a day, without adding headcount.",
     excerpt: "Leads contacted within 60 seconds are up to 391% more likely to qualify. This guide walks through the complete speed-to-lead automation stack in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back, round-robin assignment and the 5-day nurture sequence, with copy-paste templates.",
     category: "AI & Automation",
-    author: {
-      name: "Funnels That Print Architecture Team",
-      role: "Performance Funnel & AI Systems Engineering",
-      avatar: "/img/x/office.webp",
-    },
+    author: AUTHORS.rahul,
     publishedAt: "2026-06-23",
-    updatedAt: "2026-10-27",
+    updatedAt: "2026-10-29",
     readTime: "11 min read",
     image: "/img/blog/speed-to-lead-automation.jpg",
     imageAlt: "Sales rep answering a new lead call on her phone next to a CRM pipeline dashboard with a 42-second response timer",
@@ -863,17 +875,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "low-ticket-self-liquidating-offer-funnel-847k-breakdown",
     metaTitle: "Self-Liquidating Offer Funnel: $847K Low-Ticket Breakdown",
     metaDescription: "Inside the $27 self-liquidating offer funnel that collected $847,307: page sequence, order bump and upsell math, backend ascension and value-based tracking.",
+    keyTakeaways: [
+      "A self-liquidating offer funnel sells a $27 product with a $17 order bump and a one-click upsell so the front end pays for the ads on day zero. This one recovered 112% of ad spend.",
+      "Average order value of $68.40 against cost per buyer is the number that decides whether the funnel scales.",
+      "The front end built a buyer list. The backend ascension sequence is where most of the $847,307 came from.",
+      "Send purchase value back to Meta so the algorithm optimizes for buyers rather than cheap opt-ins. SLO funnels are the wrong choice for most high-ticket local service offers.",
+    ],
     title: "The Self-Liquidating Offer Funnel: How a $27 Front Door Collected $847,307 and Paid for Its Own Ads",
     headline: "A full breakdown of the low-ticket funnel structure, order bump and upsell economics, email backend, and attribution setup behind one of our most profitable eCommerce-style builds.",
     excerpt: "A self-liquidating offer (SLO) funnel uses a low-priced front-end product to cover ad spend while building a buyer list. This case breakdown shows the page sequence, pricing ladder, average order value math, and backend sequence that generated $847,307 collected.",
     category: "Case Breakdowns",
-    author: {
-      name: "Funnels That Print Architecture Team",
-      role: "Performance Funnel & AI Systems Engineering",
-      avatar: "/img/x/office.webp",
-    },
+    author: AUTHORS.gaurav,
     publishedAt: "2026-08-04",
-    updatedAt: "2026-10-27",
+    updatedAt: "2026-10-29",
     readTime: "9 min read",
     image: "/img/blog/low-ticket-slo-funnel.jpg",
     imageAlt: "Laptop showing a $27 low-ticket checkout page with an order bump, next to a phone confirming payment received",
@@ -1028,17 +1042,19 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "reduce-sales-call-no-show-rate-reminder-automation",
     metaTitle: "How to Reduce Sales Call No-Show Rates to Under 12%",
     metaDescription: "Cut sales call no-shows from 38% to under 12%: booking page fixes, a 7-touch reminder sequence, pre-call video, confirmation gate and no-show reactivation.",
+    keyTakeaways: [
+      "Booked sales calls no-show at 30% to 40% on average. This system took the show-up rate from 62% to 88.4% on the same bookings.",
+      "Fix the booking page first: shorter lead time, a visible agenda and a confirmation gate before the slot is held.",
+      "A 7-touch reminder sequence across SMS, email and an AI voice confirmation the evening before does most of the work.",
+      "Automated reactivation rebooked 34% of no-shows and cut cost per attended call by 41%.",
+    ],
     title: "How to Reduce Sales Call No-Show Rates: The Reminder and Reactivation Stack That Lifted Show-Ups From 62% to 88%",
     headline: "Every no-show is a lead you already paid for. Here is the exact pre-call sequence, booking page changes and reactivation loop that cut no-shows by more than half across our client funnels.",
     excerpt: "The average booked sales call has a 30% to 40% no-show rate. This guide covers the 3-channel reminder sequence, booking page friction fixes, pre-call video, confirmation gates and no-show reactivation automation that took show-up rates to 88% across our high-ticket client funnels.",
     category: "Funnel Architecture",
-    author: {
-      name: "Funnels That Print Architecture Team",
-      role: "Performance Funnel & AI Systems Engineering",
-      avatar: "/img/x/office.webp",
-    },
+    author: AUTHORS.gaurav,
     publishedAt: "2026-09-16",
-    updatedAt: "2026-10-27",
+    updatedAt: "2026-10-29",
     readTime: "8 min read",
     image: "/img/blog/sales-call-no-show-rate.jpg",
     imageAlt: "Tablet showing a booked consultation calendar beside a phone with an appointment reminder text asking the client to reply YES",

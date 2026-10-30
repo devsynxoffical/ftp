@@ -70,20 +70,9 @@ const caseSchemaGraph = {
         "Comprehensive case study breakdown of scaling a high-ticket consulting firm to $1,520,000 revenue in 19 months using direct-response acquisition funnels.",
       image: `${BASE_URL}/img/og/funnels-that-print-og.jpg`,
       datePublished: "2024-01-15T08:00:00+00:00",
-      dateModified: "2026-01-10T12:00:00+00:00",
-      author: {
-        "@type": "Organization",
-        name: "Funnels That Print",
-        url: BASE_URL,
-      },
-      publisher: {
-        "@type": "Organization",
-        name: "Funnels That Print",
-        logo: {
-          "@type": "ImageObject",
-          url: `${BASE_URL}/img/logos/logo-01.webp`,
-        },
-      },
+      dateModified: "2026-10-29T12:00:00+00:00",
+      author: { "@id": `${BASE_URL}/#person-gaurav` },
+      publisher: { "@id": `${BASE_URL}/#organization` },
       about: [
         { "@type": "Thing", name: "High-Ticket Consulting" },
         { "@type": "Thing", name: "Sales Funnel Architecture" },

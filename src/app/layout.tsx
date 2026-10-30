@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import { AUTHORS } from "@/data/authors";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -43,6 +44,9 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: BASE_URL,
+    types: {
+      "application/rss+xml": `${BASE_URL}/feed.xml`,
+    },
   },
   openGraph: {
     title: "Sales Funnel Agency: AI Funnels, CRM Automation & AI Calling",
@@ -72,6 +76,9 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    "max-snippet": -1,
+    "max-image-preview": "large",
+    "max-video-preview": -1,
     googleBot: {
       index: true,
       follow: true,
@@ -145,13 +152,16 @@ const jsonLd = {
         "Meta Conversion API (CAPI)",
         "Direct Response Copywriting",
       ],
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.98",
-        reviewCount: "275",
-        bestRating: "5",
-        worstRating: "1",
+      founder: [
+        { "@id": `${BASE_URL}/#person-gaurav` },
+        { "@id": `${BASE_URL}/#person-rahul` },
+      ],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dubai",
+        addressCountry: "AE",
       },
+      areaServed: ["US", "GB", "CA", "AU", "AE", "Worldwide"],
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Funnel Systems & Automations",
@@ -206,15 +216,18 @@ const jsonLd = {
         "@id": `${BASE_URL}/#organization`,
       },
       inLanguage: "en-US",
-      potentialAction: {
-        "@type": "SearchAction",
-        target: {
-          "@type": "EntryPoint",
-          urlTemplate: `${BASE_URL}/case-studies?q={search_term_string}`,
-        },
-        "query-input": "required name=search_term_string",
-      },
     },
+    ...Object.values(AUTHORS).map((a) => ({
+      "@type": "Person",
+      "@id": `${BASE_URL}/#person-${a.id}`,
+      name: a.name,
+      jobTitle: a.role,
+      description: a.bio,
+      image: `${BASE_URL}${a.avatar}`,
+      url: `${BASE_URL}/#team`,
+      knowsAbout: a.expertise,
+      worksFor: { "@id": `${BASE_URL}/#organization` },
+    })),
     {
       "@type": "ProfessionalService",
       "@id": `${BASE_URL}/#service`,
@@ -224,10 +237,13 @@ const jsonLd = {
       priceRange: "$$$",
       description:
         "Custom conversion journeys built around your offer, audience, and sales process. From first click to booked call.",
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Global",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Dubai",
+        addressCountry: "AE",
       },
+      areaServed: ["US", "GB", "CA", "AU", "AE", "Worldwide"],
+      parentOrganization: { "@id": `${BASE_URL}/#organization` },
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: [

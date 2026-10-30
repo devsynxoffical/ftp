@@ -5,6 +5,8 @@ import Link from "next/link";
 import { CASES, CaseItem } from "@/data/cases";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
+import PageFaq from "@/components/PageFaq";
+import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
@@ -211,6 +213,7 @@ export default function CaseEcomPage() {
       </div>
     </div>
     <UFSquareMarquee />
+      <PageFaq faqs={PAGE_FAQS["case-ecom"]} path="/case-ecom" eyebrow="About these results" />
       <JournalPreview
         id="journal"
         eyebrow="From the journal"

@@ -4,6 +4,8 @@ import { useState } from "react";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
+import PageFaq from "@/components/PageFaq";
+import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -224,6 +226,7 @@ export default function Case1MPage() {
         </Link>
       </section>
     </div>
+    <PageFaq faqs={PAGE_FAQS["milliondollarcasestudy"]} path="/milliondollarcasestudy" eyebrow="About the $1.52M build" />
     <JournalPreview
       id="journal"
       eyebrow="How this stack works"
