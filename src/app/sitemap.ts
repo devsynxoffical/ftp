@@ -10,13 +10,13 @@ const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
  * which the previous `new Date()` on all entries effectively was.
  */
 const PAGE_LASTMOD: Record<string, string> = {
-  "": "2026-10-29",
+  "": "2026-11-02",
   "/case-studies": "2026-10-29",
-  "/case-leadgen": "2026-10-29",
+  "/case-leadgen": "2026-11-02",
   "/case-ecom": "2026-10-29",
   "/milliondollarcasestudy": "2026-10-29",
   "/scalelowticket": "2026-10-29",
-  "/blog": "2026-10-29",
+  "/blog": "2026-11-02",
   "/contact": "2026-10-28",
 };
 

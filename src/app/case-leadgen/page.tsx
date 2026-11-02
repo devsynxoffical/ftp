@@ -219,7 +219,7 @@ export default function CaseLeadgenPage() {
         id="journal"
         eyebrow="From the journal"
         title={<>Lead gen playbooks behind the <span className="it">numbers</span>.</>}
-        slugs={["speed-to-lead-automation-gohighlevel-60-second-follow-up", "reduce-sales-call-no-show-rate-reminder-automation", "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026"]}
+        slugs={["roofing-lead-generation-funnel-cost-per-lead-playbook", "speed-to-lead-automation-gohighlevel-60-second-follow-up", "ai-appointment-setter-voice-agent-cost-setup-results"]}
       />
     <RoboSection />
   </>
