@@ -1,0 +1,687 @@
+/**
+ * Turns the raw case datasets (cases.ts = eCommerce, leads.ts = lead gen)
+ * into indexable pages at /case-studies/<slug>.
+ *
+ * The raw data is Instagram captions: emojis, hashtags, "comment X below"
+ * calls to action and truncated titles. Titles, descriptions and slugs here
+ * are generated from the structured metrics instead, and only state a number
+ * when its label says unambiguously what it is.
+ *
+ * No server-only imports: the client-side hub grids import getCaseHref so
+ * their links always match the generated URLs.
+ */
+import { CASES } from "./cases";
+import { LEADS } from "./leads";
+import {
+  CASE_INDUSTRIES,
+  getIndustryForNiche,
+  type CaseIndustry,
+  type CaseSet,
+} from "./caseIndustries";
+
+type RawCase = {
+  id: string;
+  i: number;
+  t: string;
+  type: string;
+  nic: string;
+  rev: string;
+  revl: string;
+  ro: string;
+  rol: string;
+  sys: string;
+  cap: string;
+  pts: string[];
+  ig?: string;
+};
+
+export interface CaseFact {
+  label: string;
+  value: string;
+}
+
+export interface CaseIndexEntry {
+  id: string;
+  set: CaseSet;
+  slug: string;
+  industry: string;
+  niche: string;
+  /** Position in the original dataset, used for stable ordering. */
+  order: number;
+}
+
+export interface CasePage extends CaseIndexEntry {
+  raw: RawCase;
+  isVideo: boolean;
+  nicheLabel: string;
+  title: string;
+  /** True when `title` already fits with the brand suffix (use the template). */
+  titleUsesTemplate: boolean;
+  description: string;
+  h1: string;
+  /** The original post's opening line, cleaned. Shown under the H1. */
+  headline: string;
+  noindex: boolean;
+  phrase: string | null;
+  published: string;
+  publishedLabel: string;
+  primary: { value: string; label: string };
+  secondary: { value: string; label: string };
+  facts: CaseFact[];
+  summary: string;
+  blocks: { type: "p" | "ul"; items: string[] }[];
+  image: string;
+  video: string | null;
+  igUrl: string | null;
+}
+
+const BRAND_SUFFIX = " | Funnels That Print";
+
+/* ---------------------------------------------------------------- labels */
+
+const NICHE_LABEL: Record<string, string> = {
+  // lead gen
+  Roofing: "Roofing",
+  "Legal / MVA": "MVA",
+  "Mortgage & Refinance": "Mortgage",
+  "Final Expense & Insurance": "Final Expense",
+  MedSpa: "Med Spa",
+  HVAC: "HVAC",
+  "Home Services": "Home Services",
+  Solar: "Solar",
+  "Real Estate": "Real Estate",
+  "Coaching & Consulting": "Coaching",
+  Webinar: "Webinar",
+  "Agency Scaling": "Agency",
+  "Lead Generation": "Lead Gen",
+  SaaS: "SaaS",
+  "Low-Ticket Offers": "Low-Ticket Funnel",
+  // eCommerce
+  "DTC Performance Brand": "DTC Brand",
+  "Direct-Response eCommerce": "Shopify Store",
+  "Beauty & Skincare": "Skincare Brand",
+  "DTC Fitness & Health": "Fitness Brand",
+  "Apparel & Fashion DTC": "Fashion Brand",
+  "DTC Supplements & Nutrition": "Supplement Brand",
+};
+
+const nicheLabel = (nic: string) => NICHE_LABEL[nic] ?? nic.replace(/[^\w &-]/g, "").trim();
+
+/* -------------------------------------------------------------- overrides */
+
+type Override = {
+  title: string;
+  primary: { value: string; label: string };
+  secondary?: { value: string; label: string };
+  /** Promotional posts with no result: page exists but stays out of the index. */
+  noindex?: boolean;
+};
+
+/**
+ * Hand-written titles for the cases whose primary metric is ambiguous
+ * (a competitor's spend, "video breakdown", "dashboard proof"). Every number
+ * here is stated in the original post.
+ */
+const OVERRIDES: Record<string, Override> = {
+  "C4qlCg-BGeu": { title: "Agency Case Study: Done-With-You Client Acquisition Program", primary: { value: "Video", label: "Program breakdown" } },
+  DdrANhmycDu: { title: "Coaching Case Study: 15,958 Summit Registrations at $7.48", primary: { value: "15,958+", label: "Registrations" }, secondary: { value: "$7.48", label: "Cost per registration" } },
+  DXBWqork2wC: { title: "Coaching Case Study: $1,850 Sale From $2.10 in Ad Spend", primary: { value: "$1,850", label: "Sale closed" }, secondary: { value: "$2.10", label: "Ad spend" } },
+  DUlWy4pEo0m: { title: "Agency Case Study: $15,900 Closed in 10 Days", primary: { value: "$15,900", label: "Closed in 10 days" } },
+  DTLiCG_En3K: { title: "Summit Case Study: 2,000+ Investor Summit Registrations", primary: { value: "2,000+", label: "Registrations" } },
+  DRPJcNXEp2B: { title: "Agency Case Study: 77 Cold-Traffic Registrations at $5.76", primary: { value: "77", label: "Registrations" }, secondary: { value: "$5.76", label: "Cost per registration" } },
+  DQ6KmbLEsJJ: { title: "Low-Ticket Funnel Case Study: $1,061 Profit at 28.23 ROAS", primary: { value: "$1,061", label: "Profit" }, secondary: { value: "28.23x", label: "Return on ad spend" } },
+  DQl6sBlEsCi: { title: "Agency Case Study: 1,261 Registrations for $5,900", primary: { value: "1,261", label: "Registrations" }, secondary: { value: "$5,900", label: "Ad spend" } },
+  DQapbVREnJ4: { title: "Webinar Case Study: Live Summit and Webinar Ads Breakdown", primary: { value: "Live", label: "Ads breakdown" } },
+  DQXUnRNkjR3: { title: "Roofing Case Study: OTP-Verified Lead Forms Strategy Session", primary: { value: "Video", label: "Strategy session" } },
+  "DQH-ld1EiFv": { title: "Agency Case Study: $850 From One Ad at 295x ROAS", primary: { value: "$850", label: "From one ad" }, secondary: { value: "295.14x", label: "Return on ad spend" } },
+  DP74WvtkkIj: { title: "Low-Ticket Funnel Case Study: 63.98 ROAS on an LTO Campaign", primary: { value: "63.98x", label: "Return on ad spend" } },
+  DMgZ9YRSuz5: { title: "Coaching Case Study: Agency Client at $85K in a Month", primary: { value: "$85K", label: "Revenue last month" } },
+  DL0r43yScHo: { title: "Mortgage Case Study: Offer and Ad Copy Strategy Session", primary: { value: "Video", label: "Strategy session" } },
+  DLsy3BWy_w3: { title: "Coaching Case Study: Full-Funnel Retargeting Strategy", primary: { value: "Video", label: "Strategy breakdown" } },
+  DK9ep4iyeZ2: { title: "Coaching Case Study: $256 Ad Spend to $4K in Deals", primary: { value: "$4K", label: "In deals" }, secondary: { value: "$256", label: "Ad spend" } },
+  DZcFQ2OkqTO: { title: "Low-Ticket Funnel Case Study: $58,108 in One Day at 4.52x", primary: { value: "$58,108", label: "Revenue in one day" }, secondary: { value: "4.52x", label: "Return on ad spend" } },
+  DWuNG1bErnO: { title: "Roofing Case Study: 18% CTR Creatives in a Live Ads Audit", primary: { value: "18%", label: "Click-through rate" } },
+  DWEsLr9GJ29: { title: "Webinar Case Study: 835 Paid Registrations at $4.57", primary: { value: "835", label: "Paid registrations" }, secondary: { value: "$4.57", label: "Cost per registration" } },
+  DT4yHdFkXhM: { title: "SaaS Case Study: $71,934 in 24 Days for an AI SaaS", primary: { value: "$71,934", label: "Revenue in 24 days" }, secondary: { value: "320", label: "New customers" } },
+  DRcaexWkg1p: { title: "Coaching Case Study: $60,912 Front-End Sales in One Day", primary: { value: "$60,912", label: "Front-end revenue" }, secondary: { value: "$21K", label: "Ad spend" } },
+  DQEz9MREt5m: { title: "Low-Ticket Funnel Case Study: $17,200 in One Day", primary: { value: "$17,200", label: "Revenue in one day" }, secondary: { value: "293", label: "Low-ticket sales" } },
+  DM_M_qxz6xo: { title: "MVA Case Study: 276 OTP-Verified Calls in 5 Days", primary: { value: "276+", label: "Verified calls" }, secondary: { value: "$5,453", label: "Ad spend" } },
+  DLKmOPoS2IM: { title: "Low-Ticket Funnel Case Study: $4,394 Revenue at 2.15x ROAS", primary: { value: "$4,394", label: "Revenue" }, secondary: { value: "$2,043", label: "Ad spend" } },
+  "DK-ZkImzyri": { title: "Low-Ticket Funnel Case Study: 166 Courses Sold in a Day", primary: { value: "$14,646", label: "Revenue" }, secondary: { value: "$7,334", label: "Ad spend" } },
+  DK2tpecTDVQ: { title: "Low-Ticket Funnel Case Study: $69,652 in 8 Days at 3.65x", primary: { value: "$69,652", label: "Revenue in 8 days" }, secondary: { value: "$19,104", label: "Ad spend" } },
+  DHn8TyTygLd: { title: "Coaching Case Study: Offer Tweak Lifts CTR to 4 to 6%", primary: { value: "4-6%", label: "Click-through rate" } },
+  DBG7MvJSbqr: { title: "Mortgage Case Study: 5 Offers That Book More Appointments", primary: { value: "5", label: "Proven offers" } },
+  DBG2Iz3SXV5: { title: "HVAC Case Study: Custom Offer Creation for HVAC Businesses", primary: { value: "Offer", label: "Strategy" }, noindex: true },
+};
+
+/**
+ * Posts that appear in both datasets. The alias gets no page of its own; links
+ * and the old /case viewer resolve it to the canonical copy.
+ */
+const ALIASES: Record<string, string> = {
+  DZXZSYykvpC: "DZXZSkyAU7x", // lead gen copy has no image; eCommerce copy has the metrics
+};
+
+/**
+ * Source-data niche tags that contradict the post itself (checked by reading
+ * each one). Corrected here so the case lands in the right industry hub.
+ */
+const NICHE_FIX: Record<string, string> = {
+  DTLiCG_En3K: "Webinar", // investor summit registrations
+  "DTAB1YGEr1-": "Home Services", // 12-month home services lead gen at $4.90 CPL
+  "DRRR-IHEpc-": "Mortgage & Refinance", // 492 mortgage-ready registrations
+  DQpQXvxEkF4: "Home Services", // garage door and kitchen remodeling company
+  DMTbiLhy45r: "Low-Ticket Offers", // coaching membership launch
+  DMOUbBhywzQ: "Low-Ticket Offers", // $97 mid-ticket product
+  DSkbQyzkvbL: "Low-Ticket Offers", // 689 buyers, online business offer
+};
+
+/* --------------------------------------------------------------- cleaning */
+
+// Pictographs, dingbats, misc symbols, variation selectors and joiners.
+// Arrows (U+2190-21FF) are kept: they carry meaning ("208 leads → 37 closings").
+const EMOJI =
+  /[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{2B00}-\u{2BFF}\u{2300}-\u{23FF}\u{25A0}-\u{25FF}\u{FE0F}\u{200D}\u{20E3}\u{3030}\u{303D}\u{3297}\u{3299}\u{E0020}-\u{E007F}]/gu;
+
+export function cleanInline(s: string): string {
+  return s
+    .replace(EMOJI, "")
+    .replace(/(^|\s)#[\p{L}\p{N}_]+/gu, " ")
+    .replace(/(^|\s)@[\w.]+/g, " ")
+    .replace(/\bf\*ck(?:ing|in)?\b\s*/gi, "")
+    .replace(/\s+([,.!?;:])/g, "$1")
+    .replace(/[ \t]+/g, " ")
+    .trim();
+}
+
+const CTA_LINE =
+  /comment\s*[“"'‘]|comment\b.*\b(below|down|and i|& i|i'll|i will)\b|in the comments|\bdm\s*[“"'‘]|\bdm me\b|\bmessage me\b|\bsend me a (dm|message)\b|link in (my )?bio|check (out )?my profile|follow (me|us)\b|tag (a|your) friend|\bsee ya\b|your ecom guy|^\s*hashtags?\b|^\s*p\.?s\.?\s*$/i;
+
+const HASHTAG_ONLY = /^\s*(?:#[\p{L}\p{N}_]+\s*)+$/u;
+
+function captionLines(cap: string): string[] {
+  return cap.split("\n").map((l) => l.trimEnd());
+}
+
+/* ----------------------------------------------------------------- dates */
+
+const SC_ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_";
+
+/** Instagram media IDs encode their creation time; the shortcode is that ID in base64. */
+export function shortcodeDate(shortcode: string): string {
+  let id = BigInt(0);
+  for (const ch of shortcode.slice(0, 11)) {
+    const v = SC_ALPHABET.indexOf(ch);
+    if (v < 0) return "2025-01-01";
+    id = id * BigInt(64) + BigInt(v);
+  }
+  const ms = Number(id >> BigInt(23)) + 1314220021721;
+  const d = new Date(ms);
+  if (Number.isNaN(d.getTime()) || d.getUTCFullYear() < 2015 || d.getUTCFullYear() > 2030) return "2025-01-01";
+  return d.toISOString().slice(0, 10);
+}
+
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const monthYear = (iso: string) => `${MONTHS[Number(iso.slice(5, 7)) - 1]} ${iso.slice(0, 4)}`;
+
+/* --------------------------------------------------------------- metrics */
+
+function parseFacts(pts: string[]): CaseFact[] {
+  const out: CaseFact[] = [];
+  for (const p of pts || []) {
+    const m = p.match(/^([A-Za-z][A-Za-z ]{1,24}):\s*(.+)$/);
+    if (!m) continue;
+    const value = cleanInline(m[2]).replace(/[\s,.;:]+$/, "");
+    if (!/\d/.test(value)) continue;
+    out.push({ label: m[1].trim(), value });
+  }
+  return out;
+}
+
+const fact = (facts: CaseFact[], label: string) =>
+  facts.find((f) => f.label.toLowerCase() === label.toLowerCase())?.value;
+
+/** "$148,000" -> "$148K", "$1,000,000+" -> "$1M+"; other values unchanged. */
+export function compactMoney(v: string): string {
+  const m = v.match(/^\$([\d,]+(?:\.\d+)?)(\+?)$/);
+  if (!m) return v;
+  const n = Number(m[1].replace(/,/g, ""));
+  if (!Number.isFinite(n)) return v;
+  if (n >= 1_000_000) {
+    const x = n / 1_000_000;
+    return `$${x >= 10 || Number.isInteger(x) ? Math.round(x) : x.toFixed(1)}M${m[2]}`;
+  }
+  if (n >= 10_000) return `$${Math.round(n / 1000)}K${m[2]}`;
+  return v;
+}
+
+const UNHELPFUL_PRIMARY = new Set(["Headline result", "Video breakdown", "Dashboard proof", "Ad spend"]);
+
+/** A headline result phrase, or null when the data does not state one unambiguously. */
+function leadPhrase(r: RawCase, facts: CaseFact[]): { phrase: string; short: string } | null {
+  const rev = cleanInline(r.rev);
+  const cpl = fact(facts, "Cost per lead");
+  const spend = fact(facts, "Ad spend");
+  const money = (v: string) => compactMoney(v);
+  const withCpl = (base: string) => (cpl ? { phrase: `${base} at ${cpl} CPL`, short: base } : { phrase: base, short: base });
+
+  if (!UNHELPFUL_PRIMARY.has(r.revl) && /\d/.test(rev)) {
+    switch (r.revl) {
+      case "Leads generated":
+        return withCpl(`${rev} Leads`);
+      case "Revenue":
+        return spend
+          ? { phrase: `${money(rev)} Revenue on ${money(spend)} Ad Spend`, short: `${money(rev)} Revenue` }
+          : { phrase: `${money(rev)} in Revenue`, short: `${money(rev)} in Revenue` };
+      case "Sales":
+        return rev.startsWith("$")
+          ? { phrase: `${money(rev)} in Sales`, short: `${money(rev)} in Sales` }
+          : { phrase: `${rev} Sales`, short: `${rev} Sales` };
+      case "Appointments":
+        return { phrase: `${rev} Appointments Booked`, short: `${rev} Appointments` };
+      case "Calls":
+        return { phrase: `${rev} Booked Calls`, short: `${rev} Booked Calls` };
+      case "Clients":
+        return { phrase: `${rev} New Clients Signed`, short: `${rev} New Clients` };
+      case "Buyers":
+        return { phrase: `${rev} Buyers`, short: `${rev} Buyers` };
+      case "Memberships":
+        return { phrase: `${rev} Memberships Sold`, short: `${rev} Memberships` };
+      case "Cost per lead": {
+        const leads = fact(facts, "Leads");
+        return leads
+          ? { phrase: `${leads} Leads at ${rev} CPL`, short: `${rev} Cost per Lead` }
+          : { phrase: `${rev} Cost per Lead`, short: `${rev} Cost per Lead` };
+      }
+      case "ROAS":
+        return { phrase: `${rev} ROAS`, short: `${rev} ROAS` };
+    }
+  }
+  // Primary value is ambiguous: fall back to the labelled facts, best first.
+  const revenue = fact(facts, "Revenue");
+  if (revenue) return { phrase: `${money(revenue)} in Revenue`, short: `${money(revenue)} in Revenue` };
+  const leads = fact(facts, "Leads");
+  if (leads) return withCpl(`${leads} Leads`);
+  const appts = fact(facts, "Appointments");
+  if (appts) return { phrase: `${appts} Appointments Booked`, short: `${appts} Appointments` };
+  const sales = fact(facts, "Sales");
+  if (sales) return { phrase: `${sales} Sales`, short: `${sales} Sales` };
+  const clients = fact(facts, "Clients");
+  if (clients) return { phrase: `${clients} New Clients`, short: `${clients} New Clients` };
+  return null;
+}
+
+function ecomPhrase(r: RawCase): { phrase: string; short: string } | null {
+  const rev = cleanInline(r.rev);
+  if (!/^\$[\d,.]+\+?$/.test(rev)) return null;
+  const m = compactMoney(rev);
+  const l = r.revl.trim();
+  let base: string;
+  if (/^\/ ?Day/i.test(l)) base = `${m}/Day in Sales`;
+  else if (/^\/ ?Month/i.test(l)) base = `${m}/Month in Sales`;
+  else if (/^in /i.test(l)) base = `${m} ${l.replace(/\bDays\b/, "Days").replace(/^in/, "in")}`;
+  else if (/Q4/i.test(l)) base = `${m} in Q4`;
+  else if (/BFCM/i.test(l)) base = `${m} in BFCM`;
+  else base = `${m} in Sales`;
+  const roas = r.ro && /roas/i.test(r.rol) ? ` at ${cleanInline(r.ro)} ROAS` : "";
+  const margin = r.ro && /margin/i.test(r.rol) ? ` at ${cleanInline(r.ro)} Margin` : "";
+  return { phrase: base + (roas || margin), short: base };
+}
+
+/* ------------------------------------------------------------ headlines */
+
+function firstMeaningfulLine(r: RawCase): string {
+  const lines = captionLines(r.cap).map(cleanInline).filter((l) => l && !CTA_LINE.test(l));
+  const fromCap = lines[0] || "";
+  const fromTitle = cleanInline(r.t).replace(/\.{3}$|…$/, "").trim();
+  // The caption's first line is the untruncated version of `t`.
+  return fromCap.length >= fromTitle.length ? fromCap : fromTitle;
+}
+
+function cutAtBoundary(s: string, max: number): string {
+  if (s.length <= max) return s;
+  const slice = s.slice(0, max + 1);
+  const sentence = Math.max(slice.lastIndexOf(". "), slice.lastIndexOf("! "), slice.lastIndexOf("? "));
+  if (sentence > max * 0.5) return slice.slice(0, sentence + 1).trim();
+  const sp = slice.lastIndexOf(" ");
+  return slice.slice(0, sp > 0 ? sp : max).replace(/[\s,;:–—-]+$/, "").trim();
+}
+
+function fallbackPhrase(r: RawCase, budget: number): string {
+  let s = firstMeaningfulLine(r).replace(/[“”"]/g, "").replace(/\s*\.{2,}\s*/g, ". ");
+  const m = s.match(/^(.{18,}?)(?:[.!?](?:\s|$)|\s[–—-]\s|\s\()/);
+  if (m) s = m[1];
+  s = cutAtBoundary(s, budget).replace(/[.!?]+$/, "");
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+export function slugify(s: string): string {
+  return s
+    .normalize("NFKD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/\$/g, "")
+    .replace(/(\d)\.(\d)/g, "$1-$2")
+    .replace(/(\d),(\d)/g, "$1$2")
+    .replace(/\+/g, "-plus")
+    .replace(/%/g, "-percent")
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
+function limitSlug(slug: string, max = 72): string {
+  if (slug.length <= max) return slug;
+  const cut = slug.slice(0, max);
+  return cut.slice(0, cut.lastIndexOf("-") > 30 ? cut.lastIndexOf("-") : max).replace(/-+$/, "");
+}
+
+/* ------------------------------------------------------------ the index */
+
+interface Draft {
+  r: RawCase;
+  set: CaseSet;
+  order: number;
+  industry: CaseIndustry;
+  label: string;
+  facts: CaseFact[];
+  phrase: { phrase: string; short: string } | null;
+  override?: Override;
+  published: string;
+  title: string;
+  slug: string;
+}
+
+function buildDrafts(): Draft[] {
+  const drafts: Draft[] = [];
+  const seenIds = new Set<string>();
+  const push = (raw: RawCase, set: CaseSet) => {
+    if (seenIds.has(raw.id) || ALIASES[raw.id]) return; // the eCommerce data repeats three posts
+    const r = NICHE_FIX[raw.id] ? { ...raw, nic: NICHE_FIX[raw.id] } : raw;
+    seenIds.add(r.id);
+    const facts = set === "lg" ? parseFacts(r.pts) : [];
+    const override = OVERRIDES[r.id];
+    const label = override ? override.title.split(" Case Study:")[0] : nicheLabel(r.nic);
+    drafts.push({
+      r,
+      set,
+      order: drafts.length,
+      industry: getIndustryForNiche(set, r.nic),
+      label,
+      facts,
+      phrase: override
+        ? { phrase: override.title.split(": ").slice(1).join(": "), short: override.title.split(": ").slice(1).join(": ") }
+        : set === "lg"
+          ? leadPhrase(r, facts)
+          : ecomPhrase(r),
+      override,
+      published: shortcodeDate(r.id),
+      title: "",
+      slug: "",
+    });
+  };
+  (LEADS as unknown as RawCase[]).forEach((r) => push(r, "lg"));
+  (CASES as unknown as RawCase[]).forEach((r) => push(r, "ec"));
+
+  // Titles: "<Niche> Case Study: <result>", kept to 60 characters.
+  const usedTitles = new Set<string>();
+  const usedSlugs = new Set<string>(CASE_INDUSTRIES.map((i) => i.slug));
+  for (const d of drafts) {
+    const stem = `${d.label} Case Study: `;
+    let title: string;
+    if (d.override) {
+      title = d.override.title;
+    } else if (d.phrase) {
+      title = stem + d.phrase.phrase;
+      if (title.length > 60) title = stem + d.phrase.short;
+    } else {
+      title = stem + fallbackPhrase(d.r, 60 - stem.length);
+    }
+    if (title.length > 60) title = cutAtBoundary(title, 60);
+    if (usedTitles.has(title.toLowerCase())) {
+      const dated = `${cutAtBoundary(title, 60 - 11)} (${monthYear(d.published).replace(/^(\w{3})\w*/, "$1")})`;
+      title = usedTitles.has(dated.toLowerCase()) ? `${cutAtBoundary(title, 54)} #${d.r.i}` : dated;
+    }
+    usedTitles.add(title.toLowerCase());
+    d.title = title;
+
+    let slug = limitSlug(slugify(title.replace(/ Case Study:/, "")));
+    if (!slug) slug = `case-${d.r.id.toLowerCase()}`;
+    let n = 2;
+    const base = slug;
+    while (usedSlugs.has(slug)) slug = `${base}-${n++}`;
+    usedSlugs.add(slug);
+    d.slug = slug;
+  }
+  return drafts;
+}
+
+const DRAFTS = buildDrafts();
+const BY_SLUG = new Map(DRAFTS.map((d) => [d.slug, d]));
+const BY_ID = new Map(DRAFTS.map((d) => [d.r.id, d]));
+for (const [alias, target] of Object.entries(ALIASES)) {
+  const d = BY_ID.get(target);
+  if (d) BY_ID.set(alias, d);
+}
+
+export const CASE_INDEX: CaseIndexEntry[] = DRAFTS.map((d) => ({
+  id: d.r.id,
+  set: d.set,
+  slug: d.slug,
+  industry: d.industry.slug,
+  niche: d.r.nic,
+  order: d.order,
+}));
+
+export function getCaseHref(id: string): string {
+  const d = BY_ID.get(id);
+  return d ? `/case-studies/${d.slug}` : "/case-studies";
+}
+
+export function getCaseSlugById(id: string): string | undefined {
+  return BY_ID.get(id)?.slug;
+}
+
+export function getCasesForIndustry(industrySlug: string): CaseIndexEntry[] {
+  return CASE_INDEX.filter((c) => c.industry === industrySlug);
+}
+
+/* ------------------------------------------------------------ full page */
+
+function bodyBlocks(r: RawCase, h1: string): CasePage["blocks"] {
+  const blocks: CasePage["blocks"] = [];
+  let current: string[] = [];
+  const flush = () => {
+    if (!current.length) return;
+    const allShort = current.length >= 2 && current.every((l) => l.length <= 140);
+    if (allShort) blocks.push({ type: "ul", items: current });
+    else blocks.push({ type: "p", items: [current.join(" ")] });
+    current = [];
+  };
+  const h1Key = h1.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 60);
+  let skippedHeadline = false;
+  for (const rawLine of captionLines(r.cap)) {
+    if (!rawLine.trim()) {
+      flush();
+      continue;
+    }
+    if (HASHTAG_ONLY.test(rawLine) || CTA_LINE.test(rawLine)) continue;
+    const line = cleanInline(rawLine).replace(/^[-–—•*]\s*/, "");
+    if (!line || line.length < 3) continue;
+    const key = line.toLowerCase().replace(/[^a-z0-9]/g, "").slice(0, 60);
+    if (!skippedHeadline && key && h1Key.startsWith(key.slice(0, 40))) {
+      skippedHeadline = true;
+      continue;
+    }
+    current.push(line);
+  }
+  flush();
+  return blocks;
+}
+
+function describe(d: Draft, h1: string, blocks: CasePage["blocks"]): string {
+  const lead = d.phrase
+    ? `${d.label} case study: ${d.phrase.phrase}.`
+    : `${d.label} case study: ${fallbackPhrase(d.r, 90)}.`;
+  const tail =
+    d.set === "lg"
+      ? " See the funnel, ads and follow-up system behind the result, with verified screenshots."
+      : " See the Meta ads, offer and scaling system behind the result, with verified screenshots.";
+  // Prefer a real sentence from the breakdown when it fits; it makes each description unique.
+  const firstPara = blocks.find((b) => b.type === "p")?.items[0] ?? "";
+  const sentence = (firstPara.match(/^[^.!?]{40,150}[.!?]/)?.[0] ?? "").trim();
+  if (sentence && !/comment|dm |message me/i.test(sentence) && (lead + " " + sentence).length <= 160) {
+    return `${lead} ${sentence}`;
+  }
+  if ((lead + tail).length <= 160) return lead + tail;
+  const shortTail = d.set === "lg" ? " Funnel, ads and follow-up with verified results." : " Ads, offer and scaling with verified results.";
+  if ((lead + shortTail).length <= 160) return lead + shortTail;
+  return cutAtBoundary(lead + shortTail, 157) + ".";
+}
+
+let DESCRIPTIONS: Map<string, string> | null = null;
+
+/** Final, site-unique descriptions for every case, computed once. */
+function allDescriptions(): Map<string, string> {
+  if (DESCRIPTIONS) return DESCRIPTIONS;
+  DESCRIPTIONS = new Map();
+  const used = new Set<string>();
+  for (const d of DRAFTS) {
+    const headline = cutAtBoundary(firstMeaningfulLine(d.r).replace(/\s*\.{3}$/, ""), 160);
+    const blocks = bodyBlocks(d.r, headline);
+    let desc = describe(d, headline, blocks);
+    if (used.has(desc.toLowerCase())) {
+      // Try the other sentences of this post's own breakdown first.
+      const lead = desc.split(". ")[0] + ".";
+      const sentences = blocks
+        .flatMap((b) => b.items)
+        .join(" ")
+        .match(/[^.!?]{30,140}[.!?]/g) ?? [];
+      const alt = sentences
+        .map((x) => `${lead} ${x.trim()}`)
+        .find((c) => c.length <= 160 && !used.has(c.toLowerCase()) && !/comment|dm |message me/i.test(c));
+      desc = alt ?? cutAtBoundary(`${lead} Published ${monthYear(d.published)}, ${d.r.type === "video" ? "video" : "screenshot"} breakdown.`, 160);
+    }
+    used.add(desc.toLowerCase());
+    DESCRIPTIONS.set(d.slug, desc);
+  }
+  return DESCRIPTIONS;
+}
+
+export function getCasePage(slug: string): CasePage | undefined {
+  const d = BY_SLUG.get(slug);
+  if (!d) return undefined;
+  const r = d.r;
+  const isVideo = r.type === "video";
+  const folder = d.set === "ec" ? "cs2" : "lg";
+
+  const headline = cutAtBoundary(firstMeaningfulLine(r).replace(/\s*\.{3}$/, ""), 160);
+  const blocks = bodyBlocks(r, headline);
+
+  const ambiguous = d.set === "lg" && (UNHELPFUL_PRIMARY.has(r.revl) || !/\d/.test(r.rev));
+  const primary = d.override
+    ? d.override.primary
+    : d.set === "lg" && ambiguous
+      ? d.phrase
+        ? { value: d.phrase.short.split(" ")[0], label: d.phrase.short.split(" ").slice(1).join(" ") || "Result" }
+        : { value: isVideo ? "Video" : "Proof", label: isVideo ? "Video breakdown" : "Results breakdown" }
+      : { value: cleanInline(r.rev), label: cleanInline(r.revl) };
+
+  let secondary: { value: string; label: string };
+  if (d.override?.secondary) {
+    secondary = d.override.secondary;
+  } else if (r.ro && r.rol) {
+    const lbl = /roas/i.test(r.rol) ? "Return on ad spend" : r.rol.replace(/^./, (m) => m.toUpperCase());
+    secondary = { value: cleanInline(r.ro), label: lbl };
+  } else if (fact(d.facts, "Ad spend")) {
+    secondary = { value: fact(d.facts, "Ad spend")!, label: "Ad spend" };
+  } else {
+    secondary = { value: isVideo ? "Video" : "Dashboard", label: "Proof type" };
+  }
+
+  const published = d.published;
+  const factsLine = d.facts.length
+    ? ` Reported figures: ${d.facts.map((f) => `${f.label.toLowerCase()} ${f.value}`).join(", ")}.`
+    : "";
+  const KEEP = /^(CPL|ROAS|BFCM|Q4|LTO|OTP|SaaS|AI|CTR|DWY|MVA|HVAC|SKOOL|Skool|DTC)$/;
+  const sentencePhrase = (x: string) => x.split(" ").map((w) => (KEEP.test(w) || /\d/.test(w) ? w : w.toLowerCase())).join(" ");
+  const summary = d.phrase
+    ? `This ${r.nic.toLowerCase()} campaign produced ${sentencePhrase(d.phrase.phrase)}.${factsLine} It ran on ${cleanInline(r.sys).toLowerCase()}, and the original breakdown was published in ${monthYear(published)}.`
+    : `This ${r.nic.toLowerCase()} result was documented in ${monthYear(published)} and ran on ${cleanInline(r.sys).toLowerCase()}.${factsLine}`;
+
+  return {
+    id: r.id,
+    set: d.set,
+    slug: d.slug,
+    industry: d.industry.slug,
+    niche: r.nic,
+    order: d.order,
+    raw: r,
+    isVideo,
+    nicheLabel: d.label,
+    title: d.title,
+    titleUsesTemplate: d.title.length + BRAND_SUFFIX.length <= 60,
+    description: allDescriptions().get(d.slug)!,
+    h1: d.title,
+    headline,
+    noindex: Boolean(d.override?.noindex),
+    phrase: d.phrase?.phrase ?? null,
+    published,
+    publishedLabel: monthYear(published),
+    primary,
+    secondary,
+    facts: d.facts,
+    summary,
+    blocks,
+    image: `/img/${folder}/${r.id}.webp`,
+    video: isVideo ? `/vid/${folder}/${r.id}.mp4` : null,
+    igUrl: r.ig ?? null,
+  };
+}
+
+export function getAllCaseSlugs(): string[] {
+  return DRAFTS.map((d) => d.slug);
+}
+
+/** Up to `limit` other cases from the same industry, nearest in the list first. */
+export function getRelatedCases(slug: string, limit = 6): CaseIndexEntry[] {
+  const self = CASE_INDEX.find((c) => c.slug === slug);
+  if (!self) return [];
+  const peers = CASE_INDEX.filter((c) => c.industry === self.industry);
+  const at = peers.findIndex((c) => c.slug === slug);
+  const out: CaseIndexEntry[] = [];
+  for (let step = 1; out.length < limit && step < peers.length; step++) {
+    for (const k of [at + step, at - step]) {
+      const c = peers[(k + peers.length) % peers.length];
+      if (c && c.slug !== slug && !out.includes(c)) out.push(c);
+      if (out.length >= limit) break;
+    }
+  }
+  return out;
+}
+
+/** Previous and next case within the same industry (wrapping). */
+export function getAdjacentCases(slug: string): { prev: CaseIndexEntry; next: CaseIndexEntry } | null {
+  const self = CASE_INDEX.find((c) => c.slug === slug);
+  if (!self) return null;
+  const peers = CASE_INDEX.filter((c) => c.industry === self.industry);
+  if (peers.length < 2) return null;
+  const at = peers.findIndex((c) => c.slug === slug);
+  return { prev: peers[(at - 1 + peers.length) % peers.length], next: peers[(at + 1) % peers.length] };
+}
+
+/** Lightweight card data for grids and related lists. */
+export function getCaseCard(slug: string) {
+  const p = getCasePage(slug);
+  if (!p) return undefined;
+  return {
+    slug: p.slug,
+    href: `/case-studies/${p.slug}`,
+    title: p.title,
+    niche: p.niche,
+    image: p.image,
+    isVideo: p.isVideo,
+    primary: p.primary,
+    secondary: p.secondary,
+  };
+}

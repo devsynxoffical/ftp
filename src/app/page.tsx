@@ -38,11 +38,7 @@ export default function Home() {
       <PricingSection />
       <AdvantageFlow />
       <JournalPreview
-        slugs={[
-          "ai-sales-funnels-voice-lead-qualification-2026",
-          "speed-to-lead-automation-gohighlevel-60-second-follow-up",
-          "high-ticket-vsl-vs-interactive-quiz-funnel-2026",
-        ]}
+        slugs={["ai-sales-funnels-voice-lead-qualification-2026", "ai-appointment-setter-voice-agent-cost-setup-results", "gohighlevel-vs-clickfunnels-lead-generation-2026"]}
       />
       <FAQSection />
       <UFSquareMarquee />

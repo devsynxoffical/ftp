@@ -1,5 +1,10 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/data/blogPosts";
+import { CASE_INDUSTRIES } from "@/data/caseIndustries";
+import { getAllCaseSlugs, getCasePage } from "@/data/casePages";
+import VIDEO_DURATIONS from "@/data/videoDurations.json";
+
+const DURATIONS = VIDEO_DURATIONS as Record<string, number>;
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
@@ -10,13 +15,13 @@ const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
  * which the previous `new Date()` on all entries effectively was.
  */
 const PAGE_LASTMOD: Record<string, string> = {
-  "": "2026-10-29",
-  "/case-studies": "2026-10-29",
-  "/case-leadgen": "2026-10-29",
-  "/case-ecom": "2026-10-29",
+  "": "2026-11-03",
+  "/case-studies": "2026-11-03",
+  "/case-leadgen": "2026-11-03",
+  "/case-ecom": "2026-11-03",
   "/milliondollarcasestudy": "2026-10-29",
   "/scalelowticket": "2026-10-29",
-  "/blog": "2026-10-29",
+  "/blog": "2026-11-02",
   "/contact": "2026-10-28",
 };
 
@@ -46,6 +51,43 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [`${BASE_URL}${post.image}`],
   }));
 
-  // /case (query-param viewer) is intentionally excluded: it is noindex.
-  return [...staticEntries, ...blogEntries];
+  const industryEntries: MetadataRoute.Sitemap = CASE_INDUSTRIES.map((i) => ({
+    url: `${BASE_URL}/case-studies/${i.slug}`,
+    lastModified: new Date("2026-11-03"),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+    images: [OG],
+  }));
+
+  // One page per case study. Promotional posts without a result are noindex
+  // and stay out of the sitemap.
+  const caseEntries: MetadataRoute.Sitemap = getAllCaseSlugs()
+    .map((slug) => getCasePage(slug)!)
+    .filter((p) => !p.noindex)
+    .map((p) => ({
+      url: `${BASE_URL}/case-studies/${p.slug}`,
+      lastModified: new Date("2026-11-03"),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+      images: [`${BASE_URL}${p.image}`],
+      // Video sitemap entry: only for cases whose video file exists (it has a measured duration).
+      ...(p.video && DURATIONS[p.id]
+        ? {
+            videos: [
+              {
+                title: p.title,
+                thumbnail_loc: `${BASE_URL}${p.image}`,
+                description: p.description,
+                content_loc: `${BASE_URL}${p.video}`,
+                duration: DURATIONS[p.id],
+                publication_date: `${p.published}T09:00:00+00:00`,
+                family_friendly: "yes" as const,
+              },
+            ],
+          }
+        : {}),
+    }));
+
+  // /case (old query-param viewer) now 308-redirects to these pages.
+  return [...staticEntries, ...blogEntries, ...industryEntries, ...caseEntries];
 }

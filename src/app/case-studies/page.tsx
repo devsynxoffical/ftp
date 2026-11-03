@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
+import IndustryLinks from "@/components/case/IndustryLinks";
 import PageFaq from "@/components/PageFaq";
 import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
@@ -68,7 +70,7 @@ const caseStudiesSchema = {
       name: "Funnels That Print Client Case Studies & Proofs",
       description:
         "275+ verified case studies across high-ticket B2B consulting, service businesses, and high-growth DTC eCommerce funnels.",
-      publisher: { "@id": `${BASE_URL}/#organization` },
+      publisher: ORG_PUBLISHER,
       hasPart: [
         {
           "@type": "WebPage",
@@ -217,6 +219,7 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
+      <IndustryLinks />
       <PageFaq faqs={PAGE_FAQS["case-studies"]} path="/case-studies" eyebrow="About these results" />
       <JournalPreview
         id="journal"

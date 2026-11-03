@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import BlogIndexSchema from "@/components/BlogIndexSchema";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -33,42 +34,6 @@ export const metadata: Metadata = {
   },
 };
 
-const blogCollectionSchema = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "BreadcrumbList",
-      itemListElement: [
-        {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
-          item: BASE_URL,
-        },
-        {
-          "@type": "ListItem",
-          position: 2,
-          name: "Journal",
-          item: `${BASE_URL}/blog`,
-        },
-      ],
-    },
-    {
-      "@type": "CollectionPage",
-      "@id": `${BASE_URL}/blog#collection`,
-      name: "The Funnels That Print Performance Marketing & AI Funnel Journal",
-      url: `${BASE_URL}/blog`,
-      description:
-        "Comprehensive guides on AI sales funnels, voice calling agents, server-side CAPI tracking, and conversion rate optimization.",
-      isPartOf: {
-        "@type": "WebSite",
-        name: "Funnels That Print",
-        url: BASE_URL,
-      },
-    },
-  ],
-};
-
 export default function BlogLayout({
   children,
 }: {
@@ -76,12 +41,7 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(blogCollectionSchema),
-        }}
-      />
+      <BlogIndexSchema />
       {children}
     </>
   );
