@@ -57,6 +57,7 @@ export default function Case847KPage() {
           <video
             ref={videoRef}
             src="https://storage.googleapis.com/msgsndr/HWyar6Z3u3aF6ydghkCx/media/695da2543a532d67105ad96c.mp4#t=0.5"
+            poster="/img/x/scalelowticket-video.jpg"
             preload="metadata"
             playsInline
             controls={playing}

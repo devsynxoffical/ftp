@@ -114,7 +114,12 @@ export default async function BlogPostPage({ params }: PageProps) {
         headline: post.metaTitle,
         alternativeHeadline: post.title,
         description: post.metaDescription,
-        image: `${BASE_URL}${post.image}`,
+        // 16:9, 4:3 and 1:1 versions, as Google recommends for Article results and Discover.
+        image: [
+          `${BASE_URL}${post.image}`,
+          `${BASE_URL}${post.image.replace("/img/blog/", "/img/blog/4x3/")}`,
+          `${BASE_URL}${post.image.replace("/img/blog/", "/img/blog/1x1/")}`,
+        ],
         datePublished: `${post.publishedAt}T08:00:00+00:00`,
         dateModified: `${post.updatedAt}T12:00:00+00:00`,
         abstract: post.keyTakeaways.join(" "),
@@ -125,9 +130,10 @@ export default async function BlogPostPage({ params }: PageProps) {
           jobTitle: post.author.role,
           description: post.author.bio,
           image: `${BASE_URL}${post.author.avatar}`,
-          url: `${BASE_URL}/#team`,
+          url: `${BASE_URL}/team/${post.author.slug}`,
           knowsAbout: post.author.expertise,
           worksFor: { "@id": `${BASE_URL}/#organization` },
+          ...(post.author.sameAs.length ? { sameAs: post.author.sameAs } : {}),
         },
         publisher: ORG_PUBLISHER,
         speakable: {
@@ -204,7 +210,11 @@ export default async function BlogPostPage({ params }: PageProps) {
                 />
               </div>
               <div>
-                <b>{post.author.name}</b>
+                <b>
+                  <Link href={`/team/${post.author.slug}`} rel="author">
+                    {post.author.name}
+                  </Link>
+                </b>
                 <span className="mono">{post.author.role}</span>
               </div>
             </div>
@@ -320,8 +330,8 @@ export default async function BlogPostPage({ params }: PageProps) {
                   <span className="tag">Written By</span>
                   <h4>{post.author.name}</h4>
                   <p>{post.author.bio}</p>
-                  <Link className="post-author-link" href="/#team">
-                    Meet the team <i>&#8599;</i>
+                  <Link className="post-author-link" href={`/team/${post.author.slug}`} rel="author">
+                    More from {post.author.name.split(" ")[0]} <i>&#8599;</i>
                   </Link>
                 </div>
               </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AUTHORS } from "@/data/authors";
 
 export interface TeamMember {
   id: string;
@@ -223,13 +224,23 @@ export default function TeamSection() {
                     >
                       Book a call
                     </a>
-                    <a
-                      className="team-btn-secondary"
-                      href={`mailto:${member.email}`}
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      Email
-                    </a>
+                    {AUTHORS[member.id] ? (
+                      <a
+                        className="team-btn-secondary"
+                        href={`/team/${AUTHORS[member.id].slug}`}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Profile
+                      </a>
+                    ) : (
+                      <a
+                        className="team-btn-secondary"
+                        href={`mailto:${member.email}`}
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        Email
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

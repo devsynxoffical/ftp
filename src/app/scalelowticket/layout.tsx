@@ -62,8 +62,26 @@ const caseSchemaGraph = {
       ],
     },
     {
+      "@type": "VideoObject",
+      "@id": `${BASE_URL}/scalelowticket#video`,
+      name: "$847,307 Low-Ticket Funnel Case Study: Full Video Breakdown",
+      description:
+        "Video walkthrough of how a $27 self-liquidating front-end offer, order bump, upsells and buyer backend collected $847,307 for a coaching business.",
+      thumbnailUrl: [`${BASE_URL}/img/x/scalelowticket-video.jpg`],
+      // Upload date from the hosted file's Last-Modified header; duration measured with ffprobe (451.9s).
+      uploadDate: "2026-01-07T00:17:38+00:00",
+      duration: "PT7M32S",
+      contentUrl:
+        "https://storage.googleapis.com/msgsndr/HWyar6Z3u3aF6ydghkCx/media/695da2543a532d67105ad96c.mp4",
+      embedUrl: `${BASE_URL}/scalelowticket`,
+      isFamilyFriendly: true,
+      inLanguage: "en-US",
+      publisher: ORG_PUBLISHER,
+    },
+    {
       "@type": "Article",
       "@id": `${BASE_URL}/scalelowticket#article`,
+      video: { "@id": `${BASE_URL}/scalelowticket#video` },
       headline: "$847,307 collected from a low-ticket front door",
       alternativeHeadline:
         "Self-Liquidating Low-Ticket Front-End System Case Study",

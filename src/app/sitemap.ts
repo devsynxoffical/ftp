@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/data/blogPosts";
+import { AUTHORS } from "@/data/authors";
 import { CASE_INDUSTRIES } from "@/data/caseIndustries";
 import { getAllCaseSlugs, getCasePage } from "@/data/casePages";
 import VIDEO_DURATIONS from "@/data/videoDurations.json";
@@ -88,6 +89,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
         : {}),
     }));
 
+  const authorEntries: MetadataRoute.Sitemap = Object.values(AUTHORS).map((a) => ({
+    url: `${BASE_URL}/team/${a.slug}`,
+    lastModified: new Date("2026-11-03"),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+    images: [`${BASE_URL}${a.avatar}`],
+  }));
+
   // /case (old query-param viewer) now 308-redirects to these pages.
-  return [...staticEntries, ...blogEntries, ...industryEntries, ...caseEntries];
+  return [...staticEntries, ...blogEntries, ...authorEntries, ...industryEntries, ...caseEntries];
 }
