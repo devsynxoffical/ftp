@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
+import IndustryLinks from "@/components/case/IndustryLinks";
 import PageFaq from "@/components/PageFaq";
 import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
@@ -217,6 +218,7 @@ export default function CaseStudiesPage() {
           </Link>
         </div>
       </div>
+      <IndustryLinks />
       <PageFaq faqs={PAGE_FAQS["case-studies"]} path="/case-studies" eyebrow="About these results" />
       <JournalPreview
         id="journal"

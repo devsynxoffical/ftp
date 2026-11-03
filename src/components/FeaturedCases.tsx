@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { FEATURED_CASES } from "@/data/siteContent";
+import { getCaseHref } from "@/data/casePages";
 
 export default function FeaturedCases() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -161,7 +162,7 @@ export default function FeaturedCases() {
                     <span>{cs.metricLabel}</span>
                   </div>
 
-                  <Link className="btn v" href={`/case?set=lg&id=${cs.slug}`}>
+                  <Link className="btn v" href={getCaseHref(cs.slug)}>
                     View full case study <i>&#8599;</i>
                   </Link>
                 </div>
@@ -202,7 +203,7 @@ export default function FeaturedCases() {
                 </div>
                 <Link
                   className="btn v case-modal-btn"
-                  href={`/case?set=lg&id=${FEATURED_CASES[activeModalIndex].slug}`}
+                  href={getCaseHref(FEATURED_CASES[activeModalIndex].slug)}
                   onClick={() => setActiveModalIndex(null)}
                 >
                   Full Case Study <i>&#8599;</i>

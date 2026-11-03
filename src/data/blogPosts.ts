@@ -436,6 +436,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="decision-matrix">
   <h2>6. Decision Matrix: Which Format for Which Offer</h2>
+  <p>You can see both formats in practice across our <a href="/case-studies/coaching-consulting-funnels">coaching, consulting and webinar funnel case studies</a>.</p>
   <p>The hybrid stack is the default, but the weighting between video and diagnostic shifts with the offer. This is the matrix we use when scoping a new build:</p>
   <div class="table-wrap">
     <table class="data-table">
@@ -572,6 +573,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="event-map">
   <h2>3. The Lead Gen Event Map: Lead, Qualified, Scheduled, Won</h2>
+  <p>This is the setup behind the <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury</a> and <a href="/case-studies/mortgage-insurance-lead-generation">mortgage lead generation</a> case studies, where verified leads and signed cases are sent back to Meta.</p>
   <p>For a worked example of this ladder in home services (estimator completed, inspection booked, contract signed), see the <a href="/blog/roofing-lead-generation-funnel-cost-per-lead-playbook">roofing lead generation playbook</a>.</p>
   <p>Most lead gen accounts send one event. High-performing accounts send a ladder of events that mirror the CRM pipeline. This is the map we deploy on every <a href="/#services">funnel and automation build</a>:</p>
   <div class="table-wrap">
@@ -967,6 +969,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="page-sequence">
   <h2>3. The 5-Page Sequence</h2>
+  <p>More low-ticket results, from $7 offers to Skool communities, are on the <a href="/case-studies/low-ticket-funnels">low-ticket funnel case studies</a> page.</p>
   <p>Platform note: this checkout ran on ClickFunnels with the follow-up in GoHighLevel, the split we recommend for product funnels in our <a href="/blog/gohighlevel-vs-clickfunnels-lead-generation-2026">GoHighLevel vs ClickFunnels comparison</a>.</p>
   <div class="step-card">
     <div class="step-badge">Page 1</div>
@@ -1130,6 +1133,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="booking-page">
   <h2>2. Fix the Booking Page First</h2>
+  <p>The same booking and reminder rules protect consultation show rates in our <a href="/case-studies/med-spa-marketing">med spa marketing case studies</a>.</p>
   <p>Most of the no-show problem is created before the reminder sequence starts. On the booking page itself:</p>
   <ol>
     <li><strong>Limit availability to the next 72 hours</strong> where capacity allows. Calls booked more than 3 days out no-show at nearly twice the rate.</li>
@@ -1369,6 +1373,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="decision">
   <h2>8. Decision Table by Business Type</h2>
+  <p>Results for each row are grouped by industry, for example <a href="/case-studies/agency-saas-lead-generation">agency and SaaS lead generation</a>, <a href="/case-studies/solar-home-services-lead-generation">solar and home services</a> and <a href="/case-studies/shopify-dtc-ecommerce">Shopify and DTC eCommerce</a>.</p>
   <div class="table-wrap">
     <table class="data-table">
       <thead><tr><th>Business</th><th>Funnel ends in</th><th>Our pick</th><th>Why</th></tr></thead>
@@ -1617,7 +1622,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <section id="why-roofing-is-hard">
   <h2>1. Why Roofing Leads Are Expensive (and Shared Leads Make It Worse)</h2>
   <p><strong>Roofing lead generation</strong> is one of the most competitive corners of home services. A replacement job is worth $10,000 to $40,000, so every roofer in the area bids on the same clicks, and the lead marketplaces sell the same homeowner to three to five companies at once. That is why a shared replacement lead can cost well over $100 and still close at single-digit rates.</p>
-  <p>The way out is to own the funnel. A page you control, ads you run, and a follow-up system that reaches the homeowner before anyone else does. The result is an <strong>exclusive lead</strong>: one homeowner, one roofer, one conversation. We have built this funnel for roofing, solar, HVAC and other trades across our <a href="/case-leadgen">125+ lead generation case studies</a>, and the structure is the same every time.</p>
+  <p>The way out is to own the funnel. A page you control, ads you run, and a follow-up system that reaches the homeowner before anyone else does. The result is an <strong>exclusive lead</strong>: one homeowner, one roofer, one conversation. We have built this funnel for roofing, solar, HVAC and other trades across our <a href="/case-leadgen">125+ lead generation case studies</a>, and the structure is the same every time. Every roofing result is collected on the <a href="/case-studies/roofing-lead-generation">roofing lead generation case studies</a> page, and the same system for heating and cooling is on the <a href="/case-studies/hvac-lead-generation">HVAC case studies</a> page.</p>
 </section>
 
 <section id="estimator-page">

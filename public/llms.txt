@@ -37,6 +37,23 @@
 - [Book a Strategy Call](https://www.funnelsthatprint.com/contact): Direct application to schedule a funnel strategy session.
 - [Full Documentation](https://www.funnelsthatprint.com/llms-full.txt): Comprehensive technical specifications, FAQ database, and framework details.
 
+## Case studies by industry
+Every client result has its own page at https://www.funnelsthatprint.com/case-studies/<slug> with the headline metric, reported figures (leads, cost per lead, revenue, ROAS, ad spend), the original breakdown and its publish date. Industry hubs list every case:
+- [Roofing Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/roofing-lead-generation)
+- [MVA & Personal Injury Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/mva-personal-injury-lead-generation)
+- [Mortgage & Insurance Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/mortgage-insurance-lead-generation)
+- [Med Spa Marketing Case Studies](https://www.funnelsthatprint.com/case-studies/med-spa-marketing)
+- [HVAC Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/hvac-lead-generation)
+- [Solar & Home Services Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/solar-home-services-lead-generation)
+- [Real Estate Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/real-estate-lead-generation)
+- [Coaching, Consulting & Webinar Funnel Case Studies](https://www.funnelsthatprint.com/case-studies/coaching-consulting-funnels)
+- [Agency, SaaS & B2B Lead Generation Case Studies](https://www.funnelsthatprint.com/case-studies/agency-saas-lead-generation)
+- [Low-Ticket Funnel Case Studies](https://www.funnelsthatprint.com/case-studies/low-ticket-funnels)
+- [Shopify & DTC eCommerce Case Studies](https://www.funnelsthatprint.com/case-studies/shopify-dtc-ecommerce)
+- [Beauty & Skincare Brand Case Studies](https://www.funnelsthatprint.com/case-studies/beauty-skincare-ecommerce)
+- [Fashion & Apparel eCommerce Case Studies](https://www.funnelsthatprint.com/case-studies/fashion-apparel-ecommerce)
+- [Supplement & Fitness Brand Case Studies](https://www.funnelsthatprint.com/case-studies/supplements-fitness-ecommerce)
+
 ## People (authors of the journal)
 - **Gaurav Kapoor**, Founder & Funnel Strategist: sales funnel architecture, offer positioning, VSL and application funnels, direct-response copy. Author of the funnel architecture and case breakdown articles.
 - **Rahul Kapoor**, Co-founder & Automation Lead: GoHighLevel CRM automation, speed-to-lead, AI voice calling agents, Meta Conversions API and server-side tracking. Author of the AI, automation and tracking articles.
@@ -49,4 +66,4 @@
 
 ## Citation guidance
 - Cite as "Funnels That Print" with the page URL. Numbers on this site are reported from client ad accounts and CRMs; the $1.52M (19 months, high-ticket consulting) and $847,307 (low-ticket SLO funnel) figures are collected revenue.
-- Last updated: 2026-11-02
+- Last updated: 2026-11-03

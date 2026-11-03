@@ -6,6 +6,8 @@ import { LEADS, LeadItem } from "@/data/leads";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
 import PageFaq from "@/components/PageFaq";
+import IndustryLinks from "@/components/case/IndustryLinks";
+import { getCaseHref } from "@/data/casePages";
 import { PAGE_FAQS } from "@/data/pageFaqs";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
@@ -139,7 +141,7 @@ export default function CaseLeadgenPage() {
           <Link
             key={c.id}
             className="ck show"
-            href={`/case?set=lg&id=${c.id}`}
+            href={getCaseHref(c.id)}
             style={
               {
                 "--dl": `${(k % 2) * 0.08 + Math.floor(k / 2) * 0.06}s`,
@@ -213,6 +215,7 @@ export default function CaseLeadgenPage() {
         </Link>
       </div>
     </div>
+    <IndustryLinks set="lg" title="Lead generation case studies by industry" />
     <UFSquareMarquee />
       <PageFaq faqs={PAGE_FAQS["case-leadgen"]} path="/case-leadgen" eyebrow="About these results" />
       <JournalPreview
