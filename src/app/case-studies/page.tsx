@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
@@ -69,7 +70,7 @@ const caseStudiesSchema = {
       name: "Funnels That Print Client Case Studies & Proofs",
       description:
         "275+ verified case studies across high-ticket B2B consulting, service businesses, and high-growth DTC eCommerce funnels.",
-      publisher: { "@id": `${BASE_URL}/#organization` },
+      publisher: ORG_PUBLISHER,
       hasPart: [
         {
           "@type": "WebPage",

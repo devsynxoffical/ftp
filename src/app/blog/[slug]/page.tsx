@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -109,8 +110,9 @@ export default async function BlogPostPage({ params }: PageProps) {
       {
         "@type": "BlogPosting",
         "@id": `${postUrl}#article`,
-        headline: post.title,
-        alternativeHeadline: post.headline,
+        // Google truncates Article headlines over 110 characters; the meta title is 60.
+        headline: post.metaTitle,
+        alternativeHeadline: post.title,
         description: post.metaDescription,
         image: `${BASE_URL}${post.image}`,
         datePublished: `${post.publishedAt}T08:00:00+00:00`,
@@ -127,7 +129,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           knowsAbout: post.author.expertise,
           worksFor: { "@id": `${BASE_URL}/#organization` },
         },
-        publisher: { "@id": `${BASE_URL}/#organization` },
+        publisher: ORG_PUBLISHER,
         speakable: {
           "@type": "SpeakableSpecification",
           cssSelector: [".post-h1", ".post-takeaways"],

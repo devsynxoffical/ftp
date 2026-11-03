@@ -2,6 +2,9 @@ import { MetadataRoute } from "next";
 import { BLOG_POSTS } from "@/data/blogPosts";
 import { CASE_INDUSTRIES } from "@/data/caseIndustries";
 import { getAllCaseSlugs, getCasePage } from "@/data/casePages";
+import VIDEO_DURATIONS from "@/data/videoDurations.json";
+
+const DURATIONS = VIDEO_DURATIONS as Record<string, number>;
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
@@ -67,6 +70,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.6,
       images: [`${BASE_URL}${p.image}`],
+      // Video sitemap entry: only for cases whose video file exists (it has a measured duration).
+      ...(p.video && DURATIONS[p.id]
+        ? {
+            videos: [
+              {
+                title: p.title,
+                thumbnail_loc: `${BASE_URL}${p.image}`,
+                description: p.description,
+                content_loc: `${BASE_URL}${p.video}`,
+                duration: DURATIONS[p.id],
+                publication_date: `${p.published}T09:00:00+00:00`,
+                family_friendly: "yes" as const,
+              },
+            ],
+          }
+        : {}),
     }));
 
   // /case (old query-param viewer) now 308-redirects to these pages.

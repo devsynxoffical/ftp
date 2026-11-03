@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import path from "node:path";
 import Link from "next/link";
 import {
@@ -11,6 +12,10 @@ import {
 import { getIndustryBySlug } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
+import VIDEO_DURATIONS from "@/data/videoDurations.json";
+
+/** Seconds -> ISO 8601 duration, e.g. 75 -> "PT1M15S". */
+const isoDuration = (s: number) => `PT${Math.floor(s / 60) ? `${Math.floor(s / 60)}M` : ""}${s % 60}S`;
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 const OG_FALLBACK = "/img/og/funnels-that-print-og.jpg";
@@ -23,6 +28,7 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
   const url = `${BASE_URL}/case-studies/${page.slug}`;
   const image = publicFileExists(page.image) ? page.image : OG_FALLBACK;
   const video = page.video && publicFileExists(page.video) ? page.video : null;
+  const durationSec = (VIDEO_DURATIONS as Record<string, number>)[page.id];
   const related = getRelatedCases(page.slug, 6)
     .map((c) => getCaseCard(c.slug))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
@@ -56,8 +62,8 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
         image: `${BASE_URL}${image}`,
         datePublished: `${page.published}T09:00:00+00:00`,
         dateModified: "2026-11-03T09:00:00+00:00",
-        author: { "@id": `${BASE_URL}/#organization` },
-        publisher: { "@id": `${BASE_URL}/#organization` },
+        author: ORG_PUBLISHER,
+        publisher: ORG_PUBLISHER,
         mainEntityOfPage: { "@type": "WebPage", "@id": url },
         isPartOf: { "@id": `${BASE_URL}/case-studies/${industry.slug}#collection` },
         about: { "@type": "Thing", name: page.niche },
@@ -77,7 +83,10 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               uploadDate: `${page.published}T09:00:00+00:00`,
               contentUrl: `${BASE_URL}${video}`,
               embedUrl: url,
-              publisher: { "@id": `${BASE_URL}/#organization` },
+              ...(durationSec ? { duration: isoDuration(durationSec) } : {}),
+              isFamilyFriendly: true,
+              inLanguage: "en-US",
+              publisher: ORG_PUBLISHER,
             },
           ]
         : []),

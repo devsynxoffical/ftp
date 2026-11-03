@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import path from "node:path";
 import Link from "next/link";
 import { getCaseCard, getCasesForIndustry } from "@/data/casePages";
@@ -42,7 +43,7 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
         name: industry.hubTitle,
         description: industry.hubDescription,
         isPartOf: { "@id": `${BASE_URL}/#website` },
-        publisher: { "@id": `${BASE_URL}/#organization` },
+        publisher: ORG_PUBLISHER,
         inLanguage: "en-US",
         mainEntity: {
           "@type": "ItemList",

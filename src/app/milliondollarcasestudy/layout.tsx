@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { ORG_PUBLISHER, personSchema } from "@/data/schemaOrg";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -71,8 +72,8 @@ const caseSchemaGraph = {
       image: `${BASE_URL}/img/og/funnels-that-print-og.jpg`,
       datePublished: "2024-01-15T08:00:00+00:00",
       dateModified: "2026-10-29T12:00:00+00:00",
-      author: { "@id": `${BASE_URL}/#person-gaurav` },
-      publisher: { "@id": `${BASE_URL}/#organization` },
+      author: personSchema("gaurav"),
+      publisher: ORG_PUBLISHER,
       about: [
         { "@type": "Thing", name: "High-Ticket Consulting" },
         { "@type": "Thing", name: "Sales Funnel Architecture" },
