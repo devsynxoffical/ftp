@@ -29,7 +29,8 @@ export function personSchema(id: keyof typeof AUTHORS) {
     name: a.name,
     jobTitle: a.role,
     image: `${BASE_URL}${a.avatar}`,
-    url: `${BASE_URL}/#team`,
+    url: `${BASE_URL}/team/${a.slug}`,
     worksFor: { "@id": `${BASE_URL}/#organization` },
+    ...(a.sameAs.length ? { sameAs: a.sameAs } : {}),
   };
 }

@@ -12,6 +12,7 @@ import {
 import { getIndustryBySlug } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
+import CaseVideo from "@/components/case/CaseVideo";
 import VIDEO_DURATIONS from "@/data/videoDurations.json";
 
 /** Seconds -> ISO 8601 duration, e.g. 75 -> "PT1M15S". */
@@ -84,6 +85,16 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               contentUrl: `${BASE_URL}${video}`,
               embedUrl: url,
               ...(durationSec ? { duration: isoDuration(durationSec) } : {}),
+              // Key moments: Google may link to a timestamp; CaseVideo seeks to ?t=<seconds>.
+              ...(durationSec && durationSec >= 30
+                ? {
+                    potentialAction: {
+                      "@type": "SeekToAction",
+                      target: `${url}?t={seek_to_second_number}`,
+                      "startOffset-input": "required name=seek_to_second_number",
+                    },
+                  }
+                : {}),
               isFamilyFriendly: true,
               inLanguage: "en-US",
               publisher: ORG_PUBLISHER,
@@ -111,7 +122,7 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               {video ? (
                 <>
                   <span className="mb">Video proof</span>
-                  <video src={video} poster={image} controls playsInline preload="none" aria-label={`Video breakdown: ${page.title}`} />
+                  <CaseVideo src={video} poster={image} label={`Video breakdown: ${page.title}`} />
                 </>
               ) : (
                 <>

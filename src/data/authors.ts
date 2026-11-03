@@ -5,6 +5,12 @@
  */
 export interface Author {
   id: string;
+  /** URL slug of the author profile page at /team/<slug>. */
+  slug: string;
+  /** Verified external profiles only (the person's own accounts). */
+  sameAs: string[];
+  /** Meta description for the profile page (max 160 characters). */
+  metaDescription: string;
   name: string;
   role: string;
   avatar: string;
@@ -15,6 +21,11 @@ export interface Author {
 export const AUTHORS: Record<string, Author> = {
   gaurav: {
     id: "gaurav",
+    slug: "gaurav-kapoor",
+    // @gauravecomm is the handle signed on his own eCommerce case study posts.
+    sameAs: ["https://www.instagram.com/gauravecomm/"],
+    metaDescription:
+      "Gaurav Kapoor, founder of Funnels That Print. Sales funnel strategist behind the $1.52M high-ticket and $847K low-ticket funnels, writing on funnels and offers.",
     name: "Gaurav Kapoor",
     role: "Founder & Funnel Strategist, Funnels That Print",
     avatar: "/img/team/gaurav.webp",
@@ -29,6 +40,10 @@ export const AUTHORS: Record<string, Author> = {
   },
   rahul: {
     id: "rahul",
+    slug: "rahul-kapoor",
+    sameAs: [],
+    metaDescription:
+      "Rahul Kapoor, co-founder of Funnels That Print. Leads GoHighLevel CRM automation, speed-to-lead, AI calling agents and Meta Conversions API tracking builds.",
     name: "Rahul Kapoor",
     role: "Co-founder & Automation Lead, Funnels That Print",
     avatar: "/img/team/rahul.webp",

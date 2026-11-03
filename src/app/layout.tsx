@@ -133,11 +133,8 @@ const jsonLd = {
       description:
         "Funnel automation and direct-response engineering agency since 2019. We build high-converting sales funnels, CRM automations, and AI voice calling systems.",
       foundingDate: "2019",
-      sameAs: [
-        "https://www.linkedin.com/company/funnelsthatprint",
-        "https://instagram.com/funnelsthatprint",
-        "https://x.com/funnelsthatprint",
-      ],
+      // sameAs intentionally omitted: linkedin.com/company/funnelsthatprint and
+      // x.com/funnelsthatprint return 404. Add real profile URLs here once they exist.
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "sales & client strategy",
@@ -211,8 +208,9 @@ const jsonLd = {
     {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
-      url: BASE_URL,
+      url: `${BASE_URL}/`,
       name: "Funnels That Print",
+      alternateName: ["FTP", "FunnelsThatPrint", "funnelsthatprint.com"],
       description:
         "Turn traffic into qualified sales calls with high-converting funnels, CRM automations, and AI calling agents.",
       publisher: {
@@ -227,9 +225,10 @@ const jsonLd = {
       jobTitle: a.role,
       description: a.bio,
       image: `${BASE_URL}${a.avatar}`,
-      url: `${BASE_URL}/#team`,
+      url: `${BASE_URL}/team/${a.slug}`,
       knowsAbout: a.expertise,
       worksFor: { "@id": `${BASE_URL}/#organization` },
+      ...(a.sameAs.length ? { sameAs: a.sameAs } : {}),
     })),
     {
       "@type": "ProfessionalService",
