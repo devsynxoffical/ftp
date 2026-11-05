@@ -12,6 +12,7 @@ import TeamSection from "@/components/TeamSection";
 import PricingSection from "@/components/PricingSection";
 import AdvantageFlow from "@/components/AdvantageFlow";
 import FAQSection from "@/components/FAQSection";
+import IndustryLinks from "@/components/case/IndustryLinks";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import { HOME_FAQ_SCHEMA } from "@/data/homeFaqSchema";
@@ -40,6 +41,7 @@ export default function Home() {
       <JournalPreview
         slugs={["ai-sales-funnels-voice-lead-qualification-2026", "ai-appointment-setter-voice-agent-cost-setup-results", "gohighlevel-vs-clickfunnels-lead-generation-2026"]}
       />
+      <IndustryLinks title="Case studies by industry" />
       <FAQSection />
       <UFSquareMarquee />
       <RoboSection />

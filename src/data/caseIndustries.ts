@@ -75,7 +75,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "How is lead quality controlled?", a: "A multi-step form screens for accident date, injury and existing representation, and OTP phone verification confirms the number before the lead is created." },
       { q: "What cost per lead do MVA campaigns reach?", a: "Our documented MVA campaigns range from about $5 to $25 per verified lead depending on state and volume; each case shows its real numbers." },
     ],
-    guides: ["speed-to-lead-automation-gohighlevel-60-second-follow-up", "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026"],
+    guides: ["personal-injury-mva-lead-generation-exclusive-leads", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
   },
   {
     slug: "mortgage-insurance-lead-generation",
@@ -101,7 +101,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "How are mortgage leads verified?", a: "Through OTP phone verification on submission and qualifying questions on loan type, value and timeline." },
       { q: "Can this be used for insurance agents?", a: "Yes. The final expense cases on this page use the same funnel structure with insurance-specific qualifying questions." },
     ],
-    guides: ["speed-to-lead-automation-gohighlevel-60-second-follow-up", "reduce-sales-call-no-show-rate-reminder-automation"],
+    guides: ["mortgage-lead-generation-meta-ads-otp-verified", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
   },
   {
     slug: "med-spa-marketing",
@@ -390,6 +390,17 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     guides: ["meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "low-ticket-self-liquidating-offer-funnel-847k-breakdown"],
   },
 ];
+
+/**
+ * Lowercase for use mid-sentence, keeping acronyms and brand casing intact:
+ * "MVA & Personal Injury" -> "MVA & personal injury", "SaaS" stays "SaaS".
+ */
+export function midSentence(s: string): string {
+  return s
+    .split(" ")
+    .map((w) => (/^[A-Z0-9&]{2,}$|[a-z][A-Z]|^B2B$|^DTC$|^eCommerce$|^Shopify$/.test(w) ? w : w.toLowerCase()))
+    .join(" ");
+}
 
 export function getIndustryBySlug(slug: string): CaseIndustry | undefined {
   return CASE_INDUSTRIES.find((i) => i.slug === slug);

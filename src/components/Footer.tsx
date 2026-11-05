@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { BLOG_POSTS } from "@/data/blogPosts";
+import { CASE_INDUSTRIES } from "@/data/caseIndustries";
 
 export default function Footer() {
   const footRef = useRef<HTMLElement>(null);
@@ -217,6 +218,20 @@ export default function Footer() {
           </form>
         </div>
       </div>
+
+      <nav className="find" aria-label="Case studies by industry">
+        <span className="fh">Case studies by industry</span>
+        <ul>
+          {CASE_INDUSTRIES.map((i) => (
+            <li key={i.slug}>
+              <Link href={`/case-studies/${i.slug}`}>{i.hubTitle.replace(/ Case Studies$/, "")}</Link>
+            </li>
+          ))}
+          <li>
+            <Link href="/case-studies/all">All case studies</Link>
+          </li>
+        </ul>
+      </nav>
 
       <div className="freach">
         <div>

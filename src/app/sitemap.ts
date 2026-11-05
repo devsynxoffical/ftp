@@ -7,6 +7,14 @@ import VIDEO_DURATIONS from "@/data/videoDurations.json";
 
 const DURATIONS = VIDEO_DURATIONS as Record<string, number>;
 
+/**
+ * Next.js writes video sitemap fields verbatim, without XML escaping. A bare
+ * "&" in one description made the whole sitemap invalid XML (Search Console
+ * reported 1 error on 2026-11-03), so every text field is escaped here.
+ */
+const xml = (s: string) =>
+  s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
+
 const BASE_URL = "https://www.funnelsthatprint.com";
 const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
 
@@ -22,7 +30,7 @@ const PAGE_LASTMOD: Record<string, string> = {
   "/case-ecom": "2026-11-03",
   "/milliondollarcasestudy": "2026-10-29",
   "/scalelowticket": "2026-10-29",
-  "/blog": "2026-11-02",
+  "/blog": "2026-11-05",
   "/contact": "2026-10-28",
 };
 
@@ -52,6 +60,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [`${BASE_URL}${post.image}`],
   }));
 
+  const allCasesEntry: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/case-studies/all`, lastModified: new Date("2026-11-05"), changeFrequency: "weekly" as const, priority: 0.7 },
+  ];
+
   const industryEntries: MetadataRoute.Sitemap = CASE_INDUSTRIES.map((i) => ({
     url: `${BASE_URL}/case-studies/${i.slug}`,
     lastModified: new Date("2026-11-03"),
@@ -76,9 +88,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? {
             videos: [
               {
-                title: p.title,
+                title: xml(p.title),
                 thumbnail_loc: `${BASE_URL}${p.image}`,
-                description: p.description,
+                description: xml(p.description),
                 content_loc: `${BASE_URL}${p.video}`,
                 duration: DURATIONS[p.id],
                 publication_date: `${p.published}T09:00:00+00:00`,
@@ -98,5 +110,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // /case (old query-param viewer) now 308-redirects to these pages.
-  return [...staticEntries, ...blogEntries, ...authorEntries, ...industryEntries, ...caseEntries];
+  return [...staticEntries, ...blogEntries, ...authorEntries, ...allCasesEntry, ...industryEntries, ...caseEntries];
 }
