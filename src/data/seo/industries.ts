@@ -526,4 +526,286 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     parent: HUB,
     updated: U,
   },
+  {
+    path: "/funnels-for/personal-injury-lawyers",
+    kind: "industry",
+    keyword: "personal injury lead funnel",
+    serviceType: "Personal injury lead funnel",
+    title: "Personal Injury Lead Funnel for MVA Cases",
+    description: "A personal injury lead funnel for motor vehicle accident cases: case qualifier, verified calls and instant intake. $388K revenue on $20,324 spend.",
+    eyebrow: "Funnels for personal injury law firms",
+    h1: "A personal injury lead funnel that delivers signable accident cases",
+    intro:
+      "A <strong>personal injury lead funnel</strong> is measured by signed cases, not form fills. Motor vehicle accident claimants are stressed, often injured and contacted by several firms. The funnel has to screen for case viability, prove the phone number is real, and put the claimant on the phone with intake while they are still deciding. One of our MVA campaigns turned $20,324 of ad spend into $388,000 in revenue.",
+    quick: {
+      q: "What does a personal injury lead funnel ask claimants?",
+      a: "When the accident happened, whether they were at fault, whether they received medical treatment, whether police were called, and whether they already have an attorney. Those five answers predict case viability. The phone number is OTP-verified, consent is captured, and intake calls within a minute or the claimant calls in directly.",
+    },
+    sections: [
+      {
+        h2: "The case qualifier",
+        html: `<p>The quiz is framed as "see if you may have a case" and stays under six questions:</p>
+<ol>
+<li>Type of accident (car, truck, motorcycle, rideshare, pedestrian).</li>
+<li>When did it happen? Recent accidents are within the statute of limitations and easier to document.</li>
+<li>Were you at fault?</li>
+<li>Did you receive medical treatment?</li>
+<li>Do you already have a lawyer?</li>
+<li>Name, state and verified phone number.</li>
+</ol>
+<p>Claimants who already have counsel or were clearly at fault get a respectful exit instead of an intake call. Our <a href="/templates/lead-qualification-questions">lead qualification questions</a> template covers wording for each step.</p>`,
+      },
+      {
+        h2: "Verified calls and intake speed",
+        html: `<p>Personal injury is the clearest case for <a href="/speed-to-lead">speed-to-lead automation</a>: the first firm to have a real conversation usually signs the case. Our builds verify the phone by one-time code, then either connect the claimant straight to intake or ring intake staff with the quiz answers on screen. One campaign produced <a href="/case-studies/mva-276-otp-verified-calls-in-5-days">276+ OTP-verified calls in five days</a>. After hours, an <a href="/ai-voice-agents">AI voice agent</a> collects accident details and books a callback without giving legal advice.</p>`,
+      },
+      {
+        h2: "Attorney advertising and consent",
+        html: `<p>Follow your state bar's advertising rules: label ads and pages as attorney advertising where required, do not promise outcomes or settlement amounts, and identify the responsible attorney or firm. Past results need the disclaimers your jurisdiction requires. Automated calls and texts need prior express written consent naming the firm, captured beside the submit button and stored with the lead. Avoid buying shared leads whose consent and origin you cannot document.</p>`,
+      },
+      {
+        h2: "MVA lead costs and revenue in our cases",
+        html: `<p>Our <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury case studies</a> are the largest data set we have: 8,810 leads at $7.61 on $67,013.43, 6,275 leads at $4.38, 1,865 leads at $5.24, and 530 leads at $27. The <a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">$388K revenue case</a> paid $18.94 per lead across 1,079 leads for a 19.09x return. Another program booked 387 appointments. We go deeper in <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">exclusive MVA leads explained</a>.</p>`,
+      },
+      {
+        h2: "Where firms lose signable cases",
+        html: `<ul>
+<li>Intake that works 9 to 5 while most accident searches happen evenings and weekends.</li>
+<li>Optimizing for cheap leads instead of signed retainers.</li>
+<li>No follow-up after the first unanswered call.</li>
+<li>Creative that sounds like every other firm's billboard.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/mortgage">mortgage</a>, <a href="/funnels-for/insurance">insurance</a> and <a href="/funnels-for/consultants">consultants</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$388K", label: "Revenue on $20,324 ad spend, 19.09x", href: "/case-studies/mva-388k-revenue-on-20k-ad-spend" },
+        { value: "8,810", label: "MVA leads at $7.61", href: "/case-studies/mva-8810-leads-at-7-61-cpl" },
+        { value: "$4.38", label: "Cost per lead across 6,275 leads", href: "/case-studies/mva-6275-leads-at-4-38-cpl" },
+        { value: "276+", label: "OTP-verified calls in 5 days", href: "/case-studies/mva-276-otp-verified-calls-in-5-days" },
+      ],
+      more: { label: "All MVA and personal injury cases", href: "/case-studies/mva-personal-injury-lead-generation" },
+    },
+    faqs: [
+      { q: "How much does a personal injury lead cost?", a: "Our documented MVA campaigns ranged from $4.38 to $27 per lead. The $388K revenue case paid $18.94 per lead across 1,079 leads. Cheaper leads are not automatically better; stricter qualification on fault, treatment and representation raises cost per lead and lowers cost per signed case." },
+      { q: "Are funnel leads exclusive to my firm?", a: "Yes. Leads from your own funnel and ad account go only to your firm, unlike shared leads sold to several firms at once. You also control the qualifying questions, the consent language and the speed of contact, which are the three biggest drivers of signed cases." },
+      { q: "What is an OTP-verified call?", a: "The claimant receives a one-time code by text and enters it before submitting, which proves the number is real and theirs. They are then connected to intake or called immediately. Verified calls remove fake and mistyped numbers, which matters when each conversation is a potential five-figure case." },
+      { q: "Can an AI agent do personal injury intake?", a: "An AI agent can make first contact after hours, gather accident type, date, injuries and treatment, and book a callback with intake. It must not give legal advice, evaluate the case or promise outcomes. A licensed attorney or trained intake specialist should handle the substantive conversation." },
+      { q: "Which case types work best with this funnel?", a: "Motor vehicle accidents are where our results come from: car, truck, motorcycle and rideshare collisions. The structure adapts to slip-and-fall or workplace injury, but those claimants search and qualify differently, so the questions and creative change. Mass tort campaigns require a separate build." },
+    ],
+    related: ["/case-studies/mva-personal-injury-lead-generation", "/speed-to-lead", "/ai-voice-agents", "/funnels-for/mortgage", "/funnels-for/insurance", "/funnels-for/consultants", "/templates/lead-qualification-questions"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/funnels-for/coaches",
+    kind: "industry",
+    keyword: "coaching funnel",
+    serviceType: "Coaching funnel",
+    title: "Coaching Funnel That Books Qualified Sales Calls",
+    description: "A coaching funnel built on a VSL or webinar, an application and a booked call. Real cases include $680K on $15,483 and $115,500 on $2,214 of spend.",
+    eyebrow: "Funnels for coaches",
+    h1: "A coaching funnel that books calls with people ready to invest",
+    intro:
+      "A <strong>coaching funnel</strong> sells a transformation that costs thousands, so the buyer needs time with your thinking before they get on a call. That is why the best coaching funnels teach first and ask second. Our coaching results include $680,125 from 34 sales on $15,483 of ad spend, and $115,500 from 174 appointments on $2,214.",
+    quick: {
+      q: "What is the best coaching funnel structure?",
+      a: "For offers over about $2,000, an ad leads to a VSL or webinar that teaches one core idea, then an application with qualifying questions, then a booked sales call. Reminders protect the show rate, and buyers who are not ready receive a nurture sequence and retargeting until they reapply.",
+    },
+    sections: [
+      {
+        h2: "Choosing the front end: VSL, webinar or summit",
+        html: `<div class="table-wrap"><table><thead><tr><th>Front end</th><th>Best for</th><th>Example from our cases</th></tr></thead><tbody>
+<tr><td><a href="/vsl-funnels">VSL</a></td><td>Clear offer, evergreen traffic</td><td>$115,500 on $2,214 of spend, 174 appointments</td></tr>
+<tr><td><a href="/webinar-funnels">Webinar</a></td><td>New ideas that need teaching</td><td>$64,960 on $2,184, 140 appointments</td></tr>
+<tr><td>Summit</td><td>List building, launches</td><td>15,958+ registrations at $7.48</td></tr>
+</tbody></table></div>
+<p>The <a href="/templates/vsl-script-template">VSL script template</a> covers the structure we use for coaching offers.</p>`,
+      },
+      {
+        h2: "The application filters the calendar",
+        html: `<p>The application is where a coaching funnel protects the closer's time. Typical questions: current situation in numbers (revenue, weight, income, depending on niche), the goal and timeline, what they have tried, and whether they can invest at the level the program requires. Applicants who do not qualify go to a lower-priced product or a nurture sequence rather than a call. One coaching client booked <a href="/case-studies/coaching-40-appointments-booked">40 appointments at $35 per lead</a> with exactly this filter.</p>`,
+      },
+      {
+        h2: "Show rate and follow-up",
+        html: `<p>Booked calls get a confirmation video, a short pre-call questionnaire and three-channel reminders. Applicants who do not book receive a call through <a href="/speed-to-lead">speed-to-lead automation</a>. Prospects who take the call but do not buy enter a retargeting and email nurture, which we break down in the <a href="/case-studies/coaching-full-funnel-retargeting-strategy">full-funnel retargeting strategy</a>.</p>`,
+      },
+      {
+        h2: "Numbers from our coaching clients",
+        html: `<p>From our <a href="/case-studies/coaching-consulting-funnels">coaching and consulting case studies</a>: $680,125 from 34 sales on $15,483, $115,500 on $2,214 at 52x, $56,646 on $21,159, and lead costs from $5.50 to $13.81. Revenue per call varies more than cost per lead, which is why we optimize ads for booked calls rather than opt-ins.</p>`,
+      },
+      {
+        h2: "Coaching funnel mistakes",
+        html: `<ul>
+<li>A free strategy call with no application, which fills the calendar with people who cannot afford the program.</li>
+<li>Generic positioning that could belong to any coach.</li>
+<li>Webinars with no replay sequence.</li>
+<li>No offer for applicants who are not ready for the main program.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/consultants">consultants</a>, <a href="/funnels-for/saas">SaaS</a> and <a href="/funnels-for/ecommerce">eCommerce</a> for coaches selling low-ticket products.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$680K", label: "Coaching revenue from 34 sales on $15,483", href: "/case-studies/coaching-680k-revenue-on-15k-ad-spend" },
+        { value: "52x", label: "$115,500 on $2,214 ad spend", href: "/case-studies/coaching-116k-revenue-on-2214-ad-spend" },
+        { value: "$64,960", label: "Webinar revenue on $2,184", href: "/case-studies/webinar-65k-revenue-on-2184-ad-spend" },
+        { value: "15,958+", label: "Summit registrations at $7.48", href: "/case-studies/coaching-15958-summit-registrations-at-7-48" },
+      ],
+      more: { label: "Coaching and consulting case studies", href: "/case-studies/coaching-consulting-funnels" },
+    },
+    faqs: [
+      { q: "Should a coaching funnel use a VSL or a webinar?", a: "Use a VSL when the offer is easy to explain and you want evergreen traffic to book calls daily. Use a webinar when buyers need a new idea taught before they see the value. Our coaching cases include strong results from both, so the choice follows the offer, not a trend." },
+      { q: "How much does a coaching lead cost?", a: "Our documented coaching campaigns ranged from $5.50 to $35 per lead, depending on how much qualification happens before the opt-in. Higher-cost leads often produce cheaper sales. The $680K case closed 34 sales on $15,483 of spend, so cost per sale is the number to watch." },
+      { q: "Do coaches need an application before the call?", a: "For programs above a few thousand dollars, yes. The application filters people who cannot invest, gives the closer context, and raises commitment so more people show up. Applicants who do not qualify can be offered a lower-priced product or added to a nurture sequence." },
+      { q: "Can a coaching funnel sell without calls?", a: "Lower-priced programs and courses can sell directly through a checkout with an order bump and upsell. Our $847K low-ticket front end is an example. High-ticket coaching usually still needs a conversation, but a low-ticket product can fund ad spend and build the buyer list for the high-ticket offer." },
+      { q: "How do coaches reduce call no-shows?", a: "Send a confirmation video right after booking, ask a few pre-call questions so the prospect invests effort, and use reminders by text, email and call. Our three-channel reminder setup has lifted show rates as high as 88%. Rebook no-shows automatically instead of letting them disappear." },
+    ],
+    related: ["/case-studies/coaching-consulting-funnels", "/vsl-funnels", "/webinar-funnels", "/funnels-for/consultants", "/funnels-for/saas", "/funnels-for/ecommerce", "/templates/vsl-script-template"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/funnels-for/consultants",
+    kind: "industry",
+    keyword: "consulting funnel",
+    serviceType: "Consulting funnel",
+    title: "Consulting Funnel for High-Ticket Engagements",
+    description: "A consulting funnel built on authority content, a diagnostic application and booked strategy calls. Includes our $1.52M high-ticket consulting case.",
+    eyebrow: "Funnels for consultants",
+    h1: "A consulting funnel that replaces referrals with predictable pipeline",
+    intro:
+      "A <strong>consulting funnel</strong> has to earn trust with buyers who usually hire through referrals. Most consultants rely on word of mouth until it dries up. A well-built funnel gives decision-makers enough of your thinking to want a conversation, then filters for budget and fit. Our flagship example is a high-ticket consulting funnel that produced $1.52M over 19 months.",
+    quick: {
+      q: "How does a consulting funnel generate clients?",
+      a: "Targeted ads lead decision-makers to a short training or case-study video that shows how you solve one expensive problem. An application asks about company size, the problem, budget and timeline. Qualified applicants book a strategy call; the rest get a nurture of case studies and insights until the timing is right.",
+    },
+    sections: [
+      {
+        h2: "Authority first, then the diagnostic",
+        html: `<p>Consulting buyers want evidence that you understand their specific problem. The front end is usually a 10 to 20 minute <a href="/vsl-funnels">VSL</a> or a mini-training that walks through one engagement: the situation, the diagnosis, what changed and the result. The application that follows works like a diagnostic, asking about revenue or team size, the bottleneck, what they have tried and when they need it solved.</p>
+<p>This is the structure behind our <a href="/milliondollarcasestudy">$1.52M consulting case study</a>.</p>`,
+      },
+      {
+        h2: "Fit questions that protect your calendar",
+        html: `<ul>
+<li>Company revenue or headcount range.</li>
+<li>Role: decision-maker, influencer or researcher.</li>
+<li>The problem in their words (open text).</li>
+<li>Budget range for solving it.</li>
+<li>Timeline: this quarter, next quarter, later.</li>
+</ul>
+<p>Our <a href="/templates/lead-qualification-questions">lead qualification questions</a> template has B2B variations. Decision-makers in budget get the calendar straight away; others get a resource and a follow-up.</p>`,
+      },
+      {
+        h2: "Long sales cycles need patient follow-up",
+        html: `<p>Consulting decisions can take weeks or months. Booked calls get reminders and a pre-call brief. Applicants who are not ready go into <a href="/crm-automation">CRM automation</a> that sends a case study every week or two and asks once a month whether priorities have changed. Retargeting keeps your thinking in front of them. If outbound is part of your mix, <a href="https://qualifiedleadsx.com">QualifiedLeadsX</a> runs high-ticket B2B lead generation.</p>`,
+      },
+      {
+        h2: "Proof from consulting and expert offers",
+        html: `<p>Beyond the $1.52M case, our <a href="/case-studies/coaching-consulting-funnels">coaching and consulting case studies</a> include an agency client at <a href="/case-studies/coaching-agency-client-at-85k-in-a-month">$85K in a month</a>, $4K in deals from $256 of ad spend, and a $1,850 sale closed from $2.10 of spend. Cost per qualified call matters far more than cost per lead here.</p>`,
+      },
+      {
+        h2: "What not to do",
+        html: `<ul>
+<li>Lead with credentials instead of the client's problem.</li>
+<li>Offer a vague "free consultation" with no filter.</li>
+<li>Drop leads after one email because they were not ready this month.</li>
+<li>Send a generic proposal without referencing the application answers.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/coaches">coaches</a>, <a href="/funnels-for/saas">SaaS</a> and <a href="/funnels-for/personal-injury-lawyers">law firms</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$1.52M", label: "High-ticket consulting funnel in 19 months", href: "/milliondollarcasestudy" },
+        { value: "$85K", label: "Agency client revenue in one month", href: "/case-studies/coaching-agency-client-at-85k-in-a-month" },
+        { value: "$4K", label: "In deals from $256 ad spend", href: "/case-studies/coaching-256-ad-spend-to-4k-in-deals" },
+        { value: "$1,850", label: "Sale closed from $2.10 ad spend", href: "/case-studies/coaching-1850-sale-from-2-10-in-ad-spend" },
+      ],
+      more: { label: "Coaching and consulting case studies", href: "/case-studies/coaching-consulting-funnels" },
+    },
+    faqs: [
+      { q: "Do paid ads work for consultants?", a: "Yes, when the funnel teaches before it asks. Cold decision-makers rarely book a call from an ad alone, but they will watch a focused case-study video and apply if the problem matches theirs. Our $1.52M consulting case was built on paid traffic to that exact structure." },
+      { q: "What should a consulting application ask?", a: "Company size, role, the problem in their own words, budget range and timeline. Keep it to five to seven questions. The answers filter out poor fits and let you open the call with specifics, which shortens the sales cycle and makes the prospect feel understood from the first minute." },
+      { q: "How long is the sales cycle from a consulting funnel?", a: "It varies from days to several months depending on deal size and buyer. Some applicants book and buy within a week; others need several touches. That is why the nurture sequence and retargeting matter as much as the funnel itself, and why we track pipeline over at least a quarter." },
+      { q: "Should consultants use LinkedIn or Meta ads?", a: "Both can work. LinkedIn targets by job title and company precisely but costs more per click. Meta is cheaper and often reaches the same owners and executives through interest and lookalike audiences. Many consultants test both and keep whichever produces cheaper qualified calls, not cheaper leads." },
+      { q: "Can a consulting funnel run without a sales team?", a: "Yes. Many consultants take every call themselves. The funnel's job is to make sure each call is with a qualified decision-maker who has already watched your thinking. Automation handles reminders, follow-up and nurture, so your time goes only to conversations that can close." },
+    ],
+    related: ["/case-studies/coaching-consulting-funnels", "/vsl-funnels", "/crm-automation", "/funnels-for/coaches", "/funnels-for/saas", "/funnels-for/personal-injury-lawyers", "/templates/lead-qualification-questions"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/funnels-for/ecommerce",
+    kind: "industry",
+    keyword: "ecommerce funnel",
+    serviceType: "Ecommerce funnel",
+    title: "Ecommerce Funnel With Bumps, Upsells and CAPI",
+    description: "An ecommerce funnel that lifts average order value with bundles, order bumps and post-purchase upsells. Cases include $2.3M in sales at 11.6x ROAS.",
+    eyebrow: "Funnels for eCommerce brands",
+    h1: "An ecommerce funnel that raises order value, not just traffic",
+    intro:
+      "An <strong>ecommerce funnel</strong> is how a brand turns a scroll into a first order and a first order into a customer. Most stores send paid traffic to a product page and hope. The brands in our case studies use dedicated landing pages, bundles, order bumps, post-purchase upsells and server-side tracking, which is how one Shopify store reached $2.3M in sales at an 11.6x return on ad spend.",
+    quick: {
+      q: "What is an ecommerce funnel?",
+      a: "It is the path from ad to purchase and repeat purchase: a focused landing or advertorial page, a product page with bundles, a checkout with an order bump, a one-click post-purchase upsell, then email and SMS flows for abandoned carts and replenishment. Every step is tracked through the Conversions API.",
+    },
+    sections: [
+      {
+        h2: "From ad to checkout",
+        html: `<p>Cold traffic converts better on a page built for the ad's promise than on a generic product page. The funnel we build for most DTC brands:</p>
+<ol>
+<li><strong>Landing page or advertorial</strong> that continues the ad's story and handles objections.</li>
+<li><strong>Offer page</strong> with bundles (one, two or three units) so the default choice raises order value.</li>
+<li><strong>Checkout</strong> with a relevant <a href="/glossary/order-bump">order bump</a>.</li>
+<li><strong>Post-purchase upsell</strong> offered once, with one click.</li>
+</ol>
+<p>For digital products and info offers, the same idea becomes a <a href="/scalelowticket">low-ticket funnel</a>: our $847K front end sold a $27 product with a $17 bump and recovered 112% of ad spend on day zero.</p>`,
+      },
+      {
+        h2: "Tracking that feeds the algorithm",
+        html: `<p>Browser pixels miss a growing share of purchases. Our <a href="/meta-conversions-api-setup">Meta Conversions API setup</a> sends purchases, values and add-to-carts from the server and recovered 31% more events in our audits. With accurate purchase values, Meta can optimize for revenue rather than clicks, which is the difference between a store that scales and one that stalls.</p>`,
+      },
+      {
+        h2: "Retention flows",
+        html: `<p>The first order rarely makes the profit; the second and third do. Abandoned cart and browse flows, a post-purchase education sequence, replenishment reminders timed to how long the product lasts, and win-back offers all run automatically. The <a href="/templates/email-nurture-sequence">email nurture sequence</a> template is a good starting structure.</p>`,
+      },
+      {
+        h2: "ROAS ranges from our store clients",
+        html: `<p>Our <a href="/case-studies/shopify-dtc-ecommerce">Shopify and DTC case studies</a> mostly land between 4x and 5x return on ad spend at scale: $1M+ at 4.6x, <a href="/case-studies/shopify-store-449k-in-49-days-at-4-2x-roas">$449,221 in 49 days at 4.2x</a>, and $1.6M at 4.2x. Outliers include $2.3M at 11.6x. A summary of the store results is on the <a href="/case-ecom">eCommerce case page</a>.</p>`,
+      },
+      {
+        h2: "Ecommerce funnel mistakes",
+        html: `<ul>
+<li>Sending all ads to the homepage.</li>
+<li>Upsells unrelated to the first purchase.</li>
+<li>Judging ads on the pixel alone when server events are missing.</li>
+<li>Discount-led creative that trains customers to wait for sales.</li>
+</ul>
+<p>If you want the whole path built and tested for you, that is what our <a href="/sales-funnel-agency">sales funnel agency</a> service covers.</p>
+<p>Related builds: <a href="/funnels-for/coaches">coaches</a> selling products, <a href="/funnels-for/med-spas">med spas</a> with retail lines, and <a href="/funnels-for/gyms">gyms</a> selling memberships online.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$2.3M", label: "Shopify sales at 11.6x ROAS", href: "/case-studies/shopify-store-2-3m-in-sales-at-11-6x-roas" },
+        { value: "$1M+", label: "DTC sales at 4.6x ROAS", href: "/case-studies/dtc-brand-1m-plus-in-sales-at-4-6x-roas" },
+        { value: "$449K", label: "Shopify sales in 49 days at 4.2x", href: "/case-studies/shopify-store-449k-in-49-days-at-4-2x-roas" },
+        { value: "$847K", label: "Low-ticket front end, $27 product", href: "/scalelowticket" },
+      ],
+      more: { label: "All Shopify and DTC case studies", href: "/case-studies/shopify-dtc-ecommerce" },
+    },
+    faqs: [
+      { q: "What ROAS should an ecommerce funnel hit?", a: "It depends on margins. Most of our Shopify and DTC clients scaled at 4x to 5x return on ad spend, with outliers such as $2.3M at 11.6x. A brand with thin margins may need 3x to break even, while high-margin products can scale profitably below that. Calculate your break-even first." },
+      { q: "Do I need a landing page or is the product page enough?", a: "For warm and returning traffic, the product page is often fine. For cold traffic, a landing page or advertorial that matches the ad's angle usually converts better because it answers objections before showing the price. Test both on the same ad and compare cost per purchase." },
+      { q: "What is an order bump in ecommerce?", a: "An order bump is a small, related add-on offered with a checkbox on the checkout page, such as a second unit, a refill or a protection plan. It adds to order value without an extra step. Combined with a one-click post-purchase upsell, it can noticeably raise average order value." },
+      { q: "Why does ecommerce need the Conversions API?", a: "Ad blockers, browser privacy changes and app tracking limits mean the browser pixel misses purchases. Sending purchases from the server through the Conversions API gives Meta more complete data. In our audits, server-side setup recovered 31% more events, which improves optimization and reporting." },
+      { q: "Do you build on Shopify?", a: "Most of our store clients run on Shopify, and we build landing pages, bundles, bumps, upsells and tracking around it. Digital products and low-ticket offers often run on ClickFunnels or GoHighLevel for the checkout flexibility. We choose the platform based on what the offer needs." },
+    ],
+    related: ["/case-studies/shopify-dtc-ecommerce", "/meta-conversions-api-setup", "/sales-funnel-agency", "/funnels-for/coaches", "/funnels-for/med-spas", "/funnels-for/gyms", "/templates/email-nurture-sequence"],
+    parent: HUB,
+    updated: U,
+  },
 ];

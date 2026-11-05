@@ -1,0 +1,79 @@
+FUNNEL KPI DASHBOARD TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/funnel-kpi-dashboard
+
+Paste into Google Sheets or Excel. One row per week. Columns A to T below.
+Fill the INPUT columns from your ad manager, funnel builder and CRM.
+CALCULATED columns use the formulas shown (row 2 shown; copy down).
+
+============================================================
+TAB 1. WEEKLY FUNNEL (one row per week)
+============================================================
+Col | Metric                         | Type       | Source / formula
+A   | Week starting                  | INPUT      | Monday date
+B   | Ad spend                       | INPUT      | Ad manager
+C   | Impressions                    | INPUT      | Ad manager
+D   | Link clicks                    | INPUT      | Ad manager
+E   | Landing page visitors          | INPUT      | Funnel analytics
+F   | Leads                          | INPUT      | CRM (new contacts from ads)
+G   | Verified / qualified leads     | INPUT      | CRM tag or score
+H   | Calls booked                   | INPUT      | Calendar
+I   | Calls attended                 | INPUT      | Calendar / CRM
+J   | Sales                          | INPUT      | CRM or payments
+K   | Revenue (cash collected)       | INPUT      | Payments
+L   | CTR                            | CALC       | =D2/C2
+M   | Opt-in rate                    | CALC       | =F2/E2
+N   | Cost per lead                  | CALC       | =B2/F2
+O   | Qualified lead rate            | CALC       | =G2/F2
+P   | Booking rate                   | CALC       | =H2/F2
+Q   | Show rate                      | CALC       | =I2/H2
+R   | Close rate                     | CALC       | =J2/I2
+S   | Cost per sale                  | CALC       | =B2/J2
+T   | ROAS                           | CALC       | =K2/B2
+
+Wrap each formula in IFERROR(...,"") so empty weeks do not show errors.
+
+============================================================
+TAB 2. SPEED AND FOLLOW-UP (one row per week)
+============================================================
+A   | Week starting                  | INPUT
+B   | Median time to first contact   | INPUT  | CRM report (seconds or minutes)
+C   | % leads contacted < 1 minute   | INPUT  | CRM report
+D   | % leads contacted < 5 minutes  | INPUT  | CRM report
+E   | Leads never contacted          | INPUT  | CRM report
+F   | Calls confirmed before start   | INPUT  | CRM tag
+G   | Confirmation rate              | CALC   | =F2/'Weekly funnel'!H2
+H   | No-shows rebooked              | INPUT  | CRM
+
+============================================================
+TAB 3. TARGETS (set once, review monthly)
+============================================================
+Metric              | Your target | Red if
+Cost per lead       | {target}    | above break-even CPL
+Booking rate        | {target}%   | down 20% vs 4-week average
+Show rate           | 80%+        | below 70%
+Close rate          | {target}%   | down 20% vs 4-week average
+Cost per sale       | {target}    | above gross profit per sale
+ROAS                | {target}x   | below break-even ROAS (1 / gross margin)
+Time to first contact | under 60 seconds | over 5 minutes
+
+Break-even CPL = revenue per customer x gross margin x lead-to-customer rate.
+Break-even ROAS = 1 / gross margin.
+
+============================================================
+CONDITIONAL FORMATTING
+============================================================
+Green: at or better than target. Amber: within 10% of target. Red: worse than the "Red if" rule.
+Apply to columns L to T on Tab 1 and B to D on Tab 2.
+
+============================================================
+WEEKLY REVIEW (15 minutes, same time every week)
+============================================================
+1. Which metric turned red this week?
+2. Is it a volume problem (spend, CTR, opt-in) or a follow-up problem (booking, show, close)?
+3. What is the one change we will make this week? Owner: {name}. Due: {date}.
+4. Did last week's change move its metric? Keep, adjust or roll back.
+
+Notes:
+ - Use cash collected for revenue, not contract value, unless you track both.
+ - Count leads only once, even if they opt in twice.
+ - Compare 4-week rolling averages before reacting to a single week.

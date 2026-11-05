@@ -301,8 +301,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Funnel Architecture",
     author: AUTHORS.gaurav,
     publishedAt: "2026-01-20",
-    updatedAt: "2026-11-02",
-    readTime: "10 min read",
+    updatedAt: "2026-11-05",
+    readTime: "13 min read",
     image: "/img/blog/high-ticket-vsl-architecture.jpg",
     imageAlt: "Isometric 3D blueprint of sales funnel conversion flow stages",
     keywords: [
@@ -327,7 +327,9 @@ export const BLOG_POSTS: BlogPost[] = [
       { id: "hybrid-approach", title: "5. The Winner: The 2026 Hybrid 'Video Diagnostic' Stack" },
       { id: "decision-matrix", title: "6. Decision Matrix: Which Format for Which Offer" },
       { id: "build-notes", title: "7. Build Notes: Questions, Logic and Page Speed" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "offer-scorecard", title: "8. Offer Scorecard: Score Your Offer Before You Choose" },
+      { id: "hybrid-build-walkthrough", title: "9. Hybrid Build Walkthrough, Step by Step" },
+      { id: "faq", title: "10. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -470,6 +472,42 @@ export const BLOG_POSTS: BlogPost[] = [
   <h3>Speed and tracking</h3>
   <p>Every step should load in under a second. We build the quiz as a single server-rendered page with client-side step transitions, so there is no network round trip between questions. Fire a tracked event per step so you can see exactly where drop-off happens, and capture the Meta click ID on step one so the booked-call event can be matched later, as described in the <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide</a>.</p>
   <p>Once the diagnostic is live, the two highest-leverage follow-ons are <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">60-second speed-to-lead automation</a> and the <a href="/blog/reduce-sales-call-no-show-rate-reminder-automation">no-show reduction sequence</a>. Together they are the difference between a funnel that generates leads and one that generates attended sales calls.</p>
+</section>
+
+<section id="offer-scorecard">
+  <h2>8. Offer Scorecard: Score Your Offer Before You Choose</h2>
+  <p>The decision matrix above groups offers by industry. When an offer does not fit neatly into a row, we score it on five questions instead. Give each factor the points in the column that best describes your offer, then add them up.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Factor</th><th>Leans quiz (1 point)</th><th>Neutral (2 points)</th><th>Leans VSL (3 points)</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>How new is the mechanism to the buyer?</td><td>Familiar service, buyer knows what they want</td><td>Known category, new angle</td><td>New idea that needs explaining</td></tr>
+        <tr><td>Traffic temperature</td><td>Cold paid social</td><td>Mixed cold and retargeting</td><td>Warm list, referrals, YouTube viewers</td></tr>
+        <tr><td>Qualification needed before a call</td><td>Several hard filters (budget, location, timeline)</td><td>One or two filters</td><td>Almost anyone who watches is a fit</td></tr>
+        <tr><td>Market skepticism</td><td>Low; buyers mostly compare price and speed</td><td>Moderate</td><td>High; buyers have been burned before</td></tr>
+        <tr><td>Lead volume you need</td><td>High volume to fill several reps' calendars</td><td>Steady volume for one or two closers</td><td>Fewer, highly convinced prospects</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p><strong>5 to 8 points:</strong> lead with a quiz and keep video short or after the form. Our <a href="/quiz-funnels">quiz funnel builds</a> start here. <strong>9 to 11 points:</strong> build the hybrid in section 5, with a diagnostic first and a bridge video on the results page. <strong>12 to 15 points:</strong> a <a href="/vsl-funnels">VSL funnel</a> can lead, but add a short application after the video so the calendar is still filtered.</p>
+  <p>Score honestly. Most founders overrate how new their mechanism is and underrate how cold their traffic is, which pushes them toward a long VSL that cold traffic will not watch. If you score within a point of a boundary, build the hybrid; it is the lowest-risk option because it can be tuned toward either side once real data arrives.</p>
+</section>
+
+<section id="hybrid-build-walkthrough">
+  <h2>9. Hybrid Build Walkthrough, Step by Step</h2>
+  <p>This is the order we build the hybrid video diagnostic in, so each piece is tested before the next one depends on it.</p>
+  <ol>
+    <li><strong>Write the qualification questions first.</strong> Decide what makes someone a good fit (budget, timeline, role, current situation) and turn each into one easy multiple-choice question. Our <a href="/templates/lead-qualification-questions">lead qualification questions template</a> has the question bank we start from. Put the most interesting question first and contact details last.</li>
+    <li><strong>Define the routing rules.</strong> Write down which answer combinations go to the calendar, which go to a low-ticket or resource path, and which get a follow-up call only. Keep it to two or three paths; more than that is hard to maintain and harder to measure.</li>
+    <li><strong>Script the bridge video.</strong> Four to six minutes, built around the result the prospect just saw: name their situation, show the mechanism, prove it with one case, and tell them exactly what happens on the call. The <a href="/templates/vsl-script-template">VSL script template</a> covers the structure; cut it down to the mechanism and proof sections for a bridge video.</li>
+    <li><strong>Build the results page.</strong> Personalize the headline with their answers, place the video above the fold, and put the calendar directly below it so nobody has to click away to book.</li>
+    <li><strong>Connect follow-up.</strong> Every completed diagnostic triggers an instant SMS and call. Leads who finish the quiz but do not book get the bridge video by text plus a short reminder sequence.</li>
+    <li><strong>Wire tracking per step.</strong> Fire an event on each question, on results-page view, on video play and on booking, and send booked calls back to the ad platform as a conversion.</li>
+    <li><strong>Launch, then read the drop-off.</strong> After the first few hundred visitors, fix the step with the biggest loss first: a question that stalls people, a results page where nobody presses play, or a calendar with too few slots.</li>
+  </ol>
+  <p>Before you build, model what each improvement is worth with the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a>. A small lift in quiz completion or booking rate often matters more than a large lift in video watch time, and the calculator shows which step to prioritize for your traffic and close rate.</p>
 </section>
 `
   },
@@ -1376,8 +1414,86 @@ export const BLOG_POSTS: BlogPost[] = [
   <p>Once the extras are added, the ClickFunnels stack usually costs the same or more per month and takes longer to maintain. The exception is a pure product funnel with no sales calls, where ClickFunnels alone plus an email tool is enough.</p>
 </section>
 
+<section id="builder-quality">
+  <h2>8. Funnel Builder Quality in Practice</h2>
+  <p>Feature lists make the two builders look closer than they feel day to day. In <strong>ClickFunnels</strong>, a designer can take a sales page from blank to launch-ready in an afternoon: global colors and fonts carry across every step, sections can be saved and reused, and the checkout, order bump and upsell steps are designed to match the sales page without workarounds. Mobile layouts need less manual fixing, and split tests are set up from the funnel view in a few clicks.</p>
+  <p><strong>GoHighLevel</strong>'s builder gets the job done but takes more care. Spacing and responsive behavior need checking on every breakpoint, heavy pages with several videos load slower, and the template library is uneven. Where it pulls ahead is anything interactive: multi-step forms, surveys with conditional logic and quiz-style qualifiers write their answers straight into contact fields, so the answers can drive tags, pipeline stages and the first SMS. That is why a GoHighLevel front end often beats a prettier page on cost per booked call.</p>
+  <p>Our working rule: if a page is the main conversion point for a large ad budget, we build it for speed (custom code or ClickFunnels) and send the form data into GoHighLevel. If the page is a qualifier in front of a calendar, GoHighLevel's native forms are usually the better choice. The broader field, including Systeme.io, Kajabi and custom stacks, is ranked in our <a href="/blog/best-funnel-builder-2026">best funnel builder guide for 2026</a>.</p>
+</section>
+
+<section id="automation-depth">
+  <h2>9. Automation Depth: What Each Platform Can Run</h2>
+  <p>Both platforms say they have "automation," but the depth differs a lot. ClickFunnels workflows cover the product side well: tag a buyer, start an email sequence, grant course access, fire a webhook after a purchase. That is enough for a self-liquidating offer that sells by email.</p>
+  <p>GoHighLevel workflows run the sales side. A single workflow can wait for a reply, branch on what the lead said, assign an owner by round-robin, move a pipeline stage, send an SMS, place a call, create a task for a rep, pause when an appointment is booked and restart if it is cancelled. Triggers include form submissions, appointment status, pipeline changes, missed calls, inbound messages, payments and tags.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Automation job</th><th>ClickFunnels</th><th>GoHighLevel</th></tr></thead>
+      <tbody>
+        <tr><td>Email sequences after opt-in or purchase</td><td>Yes</td><td>Yes</td></tr>
+        <tr><td>SMS and voice steps in the same workflow</td><td>No, needs external tools</td><td>Yes</td></tr>
+        <tr><td>Branch on a lead's reply</td><td>No</td><td>Yes</td></tr>
+        <tr><td>Appointment-based reminders and no-show recovery</td><td>Via calendar tool</td><td>Yes, tied to appointment status</td></tr>
+        <tr><td>Pipeline stage changes and rep tasks</td><td>No real pipeline</td><td>Yes</td></tr>
+        <tr><td>Webhooks to AI voice agents and ad platforms</td><td>Yes, outbound</td><td>Yes, inbound and outbound</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>If you are weighing GoHighLevel against a heavier CRM instead, our <a href="/compare/gohighlevel-vs-hubspot">GoHighLevel vs HubSpot comparison</a> covers where HubSpot's sequences and reporting go further.</p>
+</section>
+
+<section id="list-prices">
+  <h2>10. 2026 List Prices, Plan by Plan</h2>
+  <p>Here are the published list prices as of November 2026. Both vendors change plans and run promotions, so confirm on their pricing pages before you buy.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Plan</th><th>Monthly list price</th><th>What it is for</th></tr></thead>
+      <tbody>
+        <tr><td>GoHighLevel Starter</td><td>$97</td><td>One business or a small agency (up to 3 sub-accounts)</td></tr>
+        <tr><td>GoHighLevel Unlimited</td><td>$297</td><td>Agencies with unlimited sub-accounts; usage rebilled at cost</td></tr>
+        <tr><td>GoHighLevel Agency Pro</td><td>$497</td><td>Agencies reselling the platform with SaaS mode and markup</td></tr>
+        <tr><td>ClickFunnels Launch</td><td>$97</td><td>One workspace, a single brand</td></tr>
+        <tr><td>ClickFunnels Scale</td><td>$197</td><td>More workspaces, contacts and team seats</td></tr>
+        <tr><td>ClickFunnels Optimize</td><td>$297</td><td>Higher limits and advanced features for larger operations</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Annual billing lowers both: GoHighLevel Starter is $970 a year, and ClickFunnels discounts its monthly plans by roughly 16 to 17 percent on annual terms. Usage sits on top. GoHighLevel bills SMS, calls, email sending and AI features by volume, and ClickFunnels charges for email sends beyond the plan. Budget for usage from day one rather than treating the list price as the total.</p>
+</section>
+
+<section id="twelve-month-cost">
+  <h2>11. Cost Over 12 Months</h2>
+  <p>The fair comparison is a year of the complete lead generation stack, not one month of the headline plan. The example below assumes a single business booking sales calls, monthly billing, and one funnel built once. Usage and add-on tool costs vary with volume, so treat those rows as ranges to fill in with your own quotes.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>12-month cost line</th><th>ClickFunnels stack</th><th>GoHighLevel stack</th></tr></thead>
+      <tbody>
+        <tr><td>Platform subscription (entry plan, monthly)</td><td>$1,164 (Launch)</td><td>$1,164 (Starter)</td></tr>
+        <tr><td>CRM, SMS, calendar and automation tools</td><td>Separate subscriptions; our FAQ estimate is $100 to $300 a month, so $1,200 to $3,600</td><td>Included</td></tr>
+        <tr><td>SMS, call and email usage</td><td>Billed by the SMS and email tools</td><td>Billed by GoHighLevel by volume</td></tr>
+        <tr><td>One-time funnel build (our pricing)</td><td>$1,499 to $1,999</td><td>$1,499 to $1,999</td></tr>
+        <tr class="highlight-row"><td><strong>Year-one total before usage</strong></td><td><strong>$3,863 to $6,763</strong></td><td><strong>$2,663 to $3,163</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Two things this table leaves out matter more than the gap. First, time: four or five tools means more integrations to maintain and more places for a lead to fall through. Second, revenue: one extra closed deal a quarter from faster follow-up usually outweighs the whole software bill. Plug your own numbers into the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> before deciding on price alone.</p>
+</section>
+
+<section id="migration">
+  <h2>12. Migrating Between ClickFunnels and GoHighLevel</h2>
+  <p>Most migrations we run go from ClickFunnels to GoHighLevel when a business adds sales calls. The move is manageable if you plan it in this order:</p>
+  <ol>
+    <li><strong>Export contacts and tags</strong> from ClickFunnels as CSV and map tags to GoHighLevel tags and pipeline stages before importing.</li>
+    <li><strong>Rebuild pages, don't copy them.</strong> There is no clean page import between the two, so this is the moment to fix the weakest page rather than recreate it pixel for pixel.</li>
+    <li><strong>Rebuild email sequences as workflows</strong> and add the SMS, call and reminder steps that ClickFunnels could not run.</li>
+    <li><strong>Leave active subscriptions alone</strong> until they renew, or move them deliberately with your payment processor. Breaking a recurring payment costs more than running two tools for a month.</li>
+    <li><strong>Move domains and tracking last.</strong> Repoint the domain, reinstall the pixel and server-side events, and test a full lead from ad click to booked call before switching traffic.</li>
+  </ol>
+  <p>Done in that order, a single-funnel migration fits inside our usual 5 to 10 business day build. Our <a href="/gohighlevel-agency">GoHighLevel agency service</a> covers the full move. Coming from a simpler tool instead? See <a href="/compare/gohighlevel-vs-systeme-io">GoHighLevel vs Systeme.io</a>, and for the platform on its own, our <a href="/blog/gohighlevel-review">GoHighLevel review</a>.</p>
+</section>
+
 <section id="decision">
-  <h2>8. Decision Table by Business Type</h2>
+  <h2>13. Which to Choose by Business Type</h2>
+  <p>The short version: if a person has to speak to the lead before money changes hands, choose GoHighLevel. If the buyer pays on the page and the product is delivered automatically, choose ClickFunnels, and add GoHighLevel only when you start selling a backend offer on the phone. Agencies serving several local clients should look at GoHighLevel Unlimited for the sub-accounts and snapshots; solo coaches can start on Starter.</p>
   <p>Results for each row are grouped by industry, for example <a href="/case-studies/agency-saas-lead-generation">agency and SaaS lead generation</a>, <a href="/case-studies/solar-home-services-lead-generation">solar and home services</a> and <a href="/case-studies/shopify-dtc-ecommerce">Shopify and DTC eCommerce</a>.</p>
   <div class="table-wrap">
     <table class="data-table">
