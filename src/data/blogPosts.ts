@@ -52,7 +52,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "ai-sales-funnels-voice-lead-qualification-2026",
-    metaTitle: "AI Sales Funnels 2026: Voice Agents & Speed-to-Lead",
+    metaTitle: "AI Lead Qualification: Voice Agents and Speed-to-Lead",
     metaDescription: "How 2026 AI sales funnels pair interactive front ends with sub-second voice agents, 60-second speed-to-lead and Meta CAPI to cut cost per booked call by 42%.",
     keyTakeaways: [
       "Static VSL-first funnels lose most cold traffic before the pitch. Interactive front ends that ask four to six qualifying questions turn more clicks into leads.",
@@ -71,7 +71,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/ai-sales-funnels-2026.jpg",
     imageAlt: "AI Sales Funnel Architecture and Autonomous Voice Lead Qualification Dashboard",
     keywords: [
-      "AI sales funnels",
+      "AI lead qualification", "AI sales funnels",
       "autonomous AI sales agents",
       "real-time voice AI agents",
       "sub-second latency voice bots",
@@ -513,7 +513,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
-    metaTitle: "Meta Conversions API (CAPI) Setup for Lead Gen Funnels",
+    metaTitle: "Conversions API for Lead Gen: Server-Side Event Guide",
     metaDescription: "Step-by-step Meta Conversions API setup for lead gen: CRM event ladder, deduplication, Event Match Quality above 8, and Google Enhanced Conversions mirroring.",
     keyTakeaways: [
       "Browser pixels alone now miss roughly a third of conversions. Adding the Conversions API recovered 31% more events in our lead gen accounts.",
@@ -532,7 +532,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/server-side-capi-tracking.jpg",
     imageAlt: "Server-side Meta Conversions API tracking diagram showing CRM events flowing back to Meta Ads",
     keywords: [
-      "Meta Conversions API",
+      "conversions API for lead gen", "Meta Conversions API",
       "Meta CAPI setup",
       "server-side tracking for lead generation",
       "offline conversion events Facebook ads",
@@ -726,7 +726,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "speed-to-lead-automation-gohighlevel-60-second-follow-up",
-    metaTitle: "Speed-to-Lead Automation: The 60-Second Follow-Up System",
+    metaTitle: "GoHighLevel Speed-to-Lead Workflow: 60-Second Follow-Up",
     metaDescription: "Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and a 5-day nurture, with copy-paste templates.",
     keyTakeaways: [
       "Leads contacted within 60 seconds are far more likely to qualify. At a one-hour delay, contact rate falls from 84% to 27%.",
@@ -745,7 +745,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/speed-to-lead-automation.jpg",
     imageAlt: "Sales rep answering a new lead call on her phone next to a CRM pipeline dashboard with a 42-second response timer",
     keywords: [
-      "speed to lead",
+      "GoHighLevel speed-to-lead workflow", "speed to lead",
       "speed to lead automation",
       "lead response time",
       "GoHighLevel workflow automation",
@@ -1514,7 +1514,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "ai-appointment-setter-voice-agent-cost-setup-results",
-    metaTitle: "AI Appointment Setter: Cost, Setup and Results (2026 Guide)",
+    metaTitle: "AI Appointment Setter Cost: Pricing, Setup and Results",
     metaDescription: "What an AI appointment setter does, what it costs per call and per booking, how to set it up with your CRM and calendar, and results from 60+ live deployments.",
     keyTakeaways: [
       "An AI appointment setter is a voice agent that calls a new lead within about 60 seconds, asks two to four qualifying questions, handles objections from a knowledge base and books a slot directly on a rep's calendar.",
@@ -1533,7 +1533,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/ai-appointment-setter.jpg",
     imageAlt: "Smartphone on a desk showing an active AI voice call with an appointment booked notification, next to a headset and a laptop calendar",
     keywords: [
-      "AI appointment setter",
+      "AI appointment setter cost", "AI appointment setter",
       "AI appointment setting",
       "AI voice agent for lead qualification",
       "AI calling agent cost",
@@ -1671,7 +1671,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "roofing-lead-generation-funnel-cost-per-lead-playbook",
-    metaTitle: "Roofing Lead Generation Funnel: The Cost-Per-Lead Playbook",
+    metaTitle: "Roofing Cost Per Lead: Funnel Playbook and Benchmarks",
     metaDescription: "How to build a roofing lead generation funnel: quote estimator page, Meta and Google ad angles, 60-second follow-up and real cost-per-lead benchmarks.",
     keyTakeaways: [
       "The highest-converting roofing funnel is a 4-step quote estimator (roof type, issue, timeline, address) on a fast page, not a contact form. It converts two to three times better on cold traffic.",
@@ -1690,7 +1690,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/roofing-lead-generation-funnel.jpg",
     imageAlt: "Roofing contractor in a driveway holding a tablet with a submitted free roof estimate request, work truck and shingle roofs in the background",
     keywords: [
-      "roofing lead generation",
+      "roofing cost per lead", "roofing lead generation",
       "roofing leads",
       "roofing lead generation funnel",
       "exclusive roofing leads",
@@ -1831,7 +1831,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "personal-injury-mva-lead-generation-exclusive-leads",
-    metaTitle: "Personal Injury Lead Generation: Exclusive MVA Leads",
+    metaTitle: "Exclusive MVA Leads for Personal Injury Firms",
     metaDescription: "How personal injury firms get exclusive, OTP-verified MVA leads from Meta ads at $5 to $27 per lead instead of $150+ shared leads, with real campaign numbers.",
     keyTakeaways: [
       "Shared MVA leads cost personal injury firms $150 to $300 each and are sold to several firms at once. Exclusive leads from a firm-owned Meta funnel cost $4.38 to $27 per lead in our campaigns.",
@@ -1850,7 +1850,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/mva-personal-injury-lead-generation.jpg",
     imageAlt: "Meta Ads Manager table for an MVA campaign showing 1,865 leads at $5.24 cost per lead on $9,770.25 spent",
     keywords: [
-      "personal injury lead generation",
+      "exclusive MVA leads", "personal injury lead generation",
       "MVA leads",
       "motor vehicle accident leads",
       "exclusive personal injury leads",
@@ -1983,7 +1983,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "mortgage-lead-generation-meta-ads-otp-verified",
-    metaTitle: "Mortgage Lead Generation on Meta: OTP-Verified Leads",
+    metaTitle: "Facebook Ads for Mortgage Leads: OTP-Verified Funnels",
     metaDescription: "How loan officers get OTP-verified mortgage and refinance leads from Meta ads at $4 to $25 per lead, five offers that book appointments, and real results.",
     keyTakeaways: [
       "Mortgage leads from portals are shared and often unreachable. Firm-owned Meta campaigns with OTP verification produced mortgage and refinance leads at $4.31 to $25.48 per lead in our accounts.",
@@ -2002,7 +2002,7 @@ export const BLOG_POSTS: BlogPost[] = [
     image: "/img/blog/mortgage-lead-generation-meta-ads.jpg",
     imageAlt: "Meta Ads Manager on a laptop showing 208 mortgage leads at $25.48 per lead on $5,300.22 spent in June 2025",
     keywords: [
-      "mortgage lead generation",
+      "Facebook ads for mortgage leads", "mortgage lead generation",
       "mortgage leads",
       "refinance leads",
       "mortgage Facebook ads",
