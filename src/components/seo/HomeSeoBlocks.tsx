@@ -64,7 +64,7 @@ export function HomeMostSearched() {
   );
 }
 
-/** Service + BreadcrumbList structured data for the home page. */
+/** Service structured data for the home page. */
 export const HOME_SERVICE_SCHEMA = {
   "@context": "https://schema.org",
   "@graph": [
@@ -83,11 +83,6 @@ export const HOME_SERVICE_SCHEMA = {
         { "@type": "Offer", name: "Design, copy and full build", price: "1499", priceCurrency: "USD" },
         { "@type": "Offer", name: "Complete suite with CRM, automation, AI booking and tracking", price: "1999", priceCurrency: "USD" },
       ],
-    },
-    {
-      "@type": "BreadcrumbList",
-      "@id": `${BASE_URL}/#breadcrumb`,
-      itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: `${BASE_URL}/` }],
     },
   ],
 };

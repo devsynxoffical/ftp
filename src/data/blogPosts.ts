@@ -1,4 +1,6 @@
 import { AUTHORS, type Author } from "./authors";
+import { PLAN_POSTS_A } from "./blogPostsPlanA";
+import { PLAN_POSTS_B } from "./blogPostsPlanB";
 
 export type BlogAuthor = Author;
 
@@ -2120,6 +2122,8 @@ export const BLOG_POSTS: BlogPost[] = [
 </section>
 `
   },
+  ...PLAN_POSTS_A,
+  ...PLAN_POSTS_B,
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

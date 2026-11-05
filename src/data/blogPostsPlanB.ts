@@ -541,7 +541,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
   {
     slug: "facebook-lead-ads-vs-funnels",
     metaTitle: "Facebook Lead Ads vs Funnels: Which Gets Better Leads?",
-    metaDescription: "Facebook lead ads vs funnels compared: cost per lead, lead quality, OTP verification, follow-up and when instant forms or landing pages win, with real cases.",
+    metaDescription: "Facebook lead ads vs funnels compared: cost per lead, lead quality, OTP verification, follow-up and when instant forms or landing pages win, with cases.",
     keyTakeaways: [
       "In the Facebook lead ads vs funnels debate, instant forms usually win on cost per lead and landing-page funnels usually win on lead quality, contact rate and cost per sale.",
       "Instant forms prefill name, email and phone, which makes submitting effortless and also makes accidental, low-intent and unreachable leads common.",
@@ -579,9 +579,10 @@ export const PLAN_POSTS_B: BlogPost[] = [
       { id: "lead-quality", title: "3. Why Instant Form Leads Are Cheap and Often Weak" },
       { id: "otp", title: "4. Qualifying Questions and OTP Verification" },
       { id: "case-numbers", title: "5. What Our MVA, Roofing and Mortgage Campaigns Show" },
-      { id: "when-instant-forms-win", title: "6. When Instant Forms Are the Right Call" },
-      { id: "decision", title: "7. How to Decide, and How to Measure It" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "follow-up", title: "6. Follow-Up Works Differently for Each Format" },
+      { id: "when-instant-forms-win", title: "7. When Instant Forms Are the Right Call" },
+      { id: "decision", title: "8. How to Decide, and How to Measure It" },
+      { id: "faq", title: "9. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -681,8 +682,16 @@ export const PLAN_POSTS_B: BlogPost[] = [
   <p>Two things stand out. First, verified funnel leads are not necessarily expensive: several campaigns landed in the $4 to $6 range. Second, the campaigns that show revenue, not just leads, are the ones where quality was built into the funnel. The MVA firm's $18.94 lead looks pricey next to a $4 lead until you see 19.09x return on ad spend. For a roofing view of the same approach, see our <a href="/case-studies/roofing-otp-verified-lead-forms-strategy-session">strategy session on OTP-verified lead forms</a>, and for mortgage, our breakdown of <a href="/blog/mortgage-lead-generation-meta-ads-otp-verified">OTP-verified mortgage leads on Meta</a>.</p>
 </section>
 
+<section id="follow-up">
+  <h2>6. Follow-Up Works Differently for Each Format</h2>
+  <p>The format you choose changes what your follow-up has to do. Most teams run the same sequence for both and wonder why instant form leads underperform.</p>
+  <p><strong>Instant form leads need context first.</strong> Many of these people submitted in a few seconds and may not remember your company name. The first SMS and the first sentence of the call should restate exactly what they asked for: "Hi Lisa, it's Dan from [company]. You asked about a free roof inspection on Facebook a minute ago." Speed matters even more here, because the memory of tapping submit fades within minutes. Expect a lower contact rate and plan more attempts across the first two days.</p>
+  <p><strong>Funnel leads arrive pre-qualified.</strong> They answered your questions and verified their number, so the call can skip basic screening and go straight to the specifics they gave you. Their answers should route them: urgent or high-value leads to a human setter or an <a href="/ai-voice-agents">AI voice agent</a> calling inside 60 seconds, early-stage leads to a nurture sequence. The thank-you page can show a booking calendar, so some leads book before anyone calls at all.</p>
+  <p>Either way, the CRM should tag each lead with its format and ad set, so contact rate, booking rate and show rate can be compared side by side. Without that tag, the comparison in the next sections is guesswork. The same instant SMS, call and reminder workflow can serve both formats, with only the first message and the qualification step changed.</p>
+</section>
+
 <section id="when-instant-forms-win">
-  <h2>6. When Instant Forms Are the Right Call</h2>
+  <h2>7. When Instant Forms Are the Right Call</h2>
   <p>Instant forms are not a mistake. They are a tool with a specific job. They tend to win when:</p>
   <ul>
     <li><strong>The offer is simple and low-commitment</strong>, such as a free guide, a waitlist or an event registration, where reach matters more than qualification.</li>
@@ -694,7 +703,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
 </section>
 
 <section id="decision">
-  <h2>7. How to Decide, and How to Measure It</h2>
+  <h2>8. How to Decide, and How to Measure It</h2>
   <p>The honest answer is to test, with the right scoreboard. Run both formats against the same audience, offer and creative, with separate ad sets and equal budgets for at least two weeks. Then compare:</p>
   <ol>
     <li>Cost per lead (the number everyone looks at)</li>
@@ -711,7 +720,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
   {
     slug: "sales-funnel-stages",
     metaTitle: "Sales Funnel Stages: The 6 Stages and What to Measure",
-    metaDescription: "The six sales funnel stages explained: what happens at each, the assets and automation you need, the KPIs to track and how to map stages to your CRM pipeline.",
+    metaDescription: "The six sales funnel stages explained: what happens at each, the assets and automation you need, the KPIs to track and how to map them to your CRM.",
     keyTakeaways: [
       "The six sales funnel stages are awareness, interest, evaluation, decision, purchase and retention. Each one has its own job, assets and conversion rate.",
       "Every stage should map to a CRM pipeline stage so you can see exactly where leads stall, not just how many came in and how many bought.",
@@ -750,8 +759,9 @@ export const PLAN_POSTS_B: BlogPost[] = [
       { id: "purchase-retention", title: "5. Stages 5 and 6: Purchase and Retention" },
       { id: "crm-mapping", title: "6. Mapping Stages to Your CRM Pipeline" },
       { id: "by-model", title: "7. How the Stages Change by Business Model" },
-      { id: "measure", title: "8. Measuring Every Stage on One Dashboard" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "mistakes", title: "8. Common Mistakes at Each Stage" },
+      { id: "measure", title: "9. Measuring Every Stage on One Dashboard" },
+      { id: "faq", title: "10. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -853,8 +863,22 @@ export const PLAN_POSTS_B: BlogPost[] = [
   <p>If you want to see these structures in real builds, our <a href="/blog/sales-funnel-examples">sales funnel examples</a> walk through each model.</p>
 </section>
 
+<section id="mistakes">
+  <h2>8. Common Mistakes at Each Stage</h2>
+  <p>When we audit funnels, the same mistakes show up stage after stage:</p>
+  <ul>
+    <li><strong>Awareness: talking about yourself.</strong> Ads that lead with the company name, years in business or a logo lose to ads that lead with the buyer's problem and a specific promise.</li>
+    <li><strong>Interest: asking for too much too soon.</strong> A ten-field contact form on the first screen scares off cold traffic. Ask easy questions first and contact details last.</li>
+    <li><strong>Evaluation: waiting to follow up.</strong> A lead called the next morning has usually spoken to a competitor already. If no one can call within a minute, automate the first contact.</li>
+    <li><strong>Decision: booking too far out.</strong> Calls booked a week away no-show far more than calls booked within 72 hours. Limit availability and run reminders on every channel.</li>
+    <li><strong>Purchase: one offer and nothing else.</strong> No bump, no upsell, no payment plan. Average order value stays flat, and so does what you can afford to pay for traffic.</li>
+    <li><strong>Retention: no plan at all.</strong> Customers who never hear from you after delivery rarely buy again or refer, and you end up paying ads to win them back.</li>
+  </ul>
+  <p>Most of these are fixed with automation rather than more staff. Our <a href="/templates/email-nurture-sequence">email nurture sequence template</a> covers the evaluation stage, and the reminder template above covers decision.</p>
+</section>
+
 <section id="measure">
-  <h2>8. Measuring Every Stage on One Dashboard</h2>
+  <h2>9. Measuring Every Stage on One Dashboard</h2>
   <p>Put one primary KPI per stage, plus cost per stage, on a single weekly dashboard split by traffic source. Our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a> has the layout, and the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> shows how a change at one stage flows through to revenue.</p>
   <p>Three rules keep the dashboard honest. Pull stage counts from the CRM, not from memory. Compare each stage with its own history, not with a generic benchmark. And judge every change by the stage after it: a landing page that lifts opt-ins but lowers booked calls has made the funnel worse. When you know which stage is leaking, our guide on <a href="/blog/how-to-increase-funnel-conversion-rate">how to increase funnel conversion rate</a> lists the fixes in priority order.</p>
   <p>We build the full stack, from pages to pipeline to reporting, in 5 to 10 business days. <a href="/contact">Book a strategy call</a> and we will map your current funnel against these six stages.</p>
@@ -864,7 +888,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
   {
     slug: "how-to-reduce-cost-per-lead",
     metaTitle: "How to Reduce Cost Per Lead: 8 Fixes From Real Campaigns",
-    metaDescription: "How to reduce cost per lead without wrecking lead quality: the CPL formula, offer, creative, landing page and tracking fixes, with real campaign benchmarks.",
+    metaDescription: "How to reduce cost per lead without wrecking lead quality: the CPL formula, offer, creative, landing page and tracking fixes, plus real benchmarks.",
     keyTakeaways: [
       "To reduce cost per lead, work on the three numbers that make it up: cost per thousand impressions, click-through rate and landing page conversion rate. Click-through and conversion are the ones you control most.",
       "The offer and the first screen of the landing page usually move cost per lead more than targeting tweaks or bid strategies.",
@@ -899,12 +923,14 @@ export const PLAN_POSTS_B: BlogPost[] = [
     toc: [
       { id: "the-formula", title: "1. The Formula Behind Cost Per Lead" },
       { id: "benchmarks", title: "2. What Real Campaigns Achieved" },
-      { id: "offer", title: "3. Fix 1: Change the Offer" },
-      { id: "creative", title: "4. Fixes 2 and 3: Creative and Message Match" },
-      { id: "landing-page", title: "5. Fixes 4 and 5: Landing Page and Form" },
-      { id: "signal", title: "6. Fixes 6 and 7: Tracking, Signal and Targeting" },
-      { id: "quality", title: "7. Fix 8: Protect Quality While You Cut Cost" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "diagnose", title: "3. Diagnose Which Number Is Broken" },
+      { id: "offer", title: "4. Fix 1: Change the Offer" },
+      { id: "creative", title: "5. Fixes 2 and 3: Creative and Message Match" },
+      { id: "landing-page", title: "6. Fixes 4 and 5: Landing Page and Form" },
+      { id: "signal", title: "7. Fixes 6 and 7: Tracking, Signal and Targeting" },
+      { id: "scaling", title: "8. What Happens to Cost Per Lead When You Scale" },
+      { id: "quality", title: "9. Fix 8: Protect Quality While You Cut Cost" },
+      { id: "faq", title: "10. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -966,8 +992,26 @@ export const PLAN_POSTS_B: BlogPost[] = [
   <p>Higher figures exist in the same accounts, such as roofing at $24 on a $24,902 budget, because cost per lead usually rises as you scale spend and exhaust the cheapest audiences. That is normal. The goal is not the lowest possible number, it is the lowest number that still produces customers at a profit. The full set of roofing figures and the funnel behind them are in our <a href="/blog/roofing-lead-generation-funnel-cost-per-lead-playbook">roofing cost-per-lead playbook</a>.</p>
 </section>
 
+<section id="diagnose">
+  <h2>3. Diagnose Which Number Is Broken</h2>
+  <p>Before you change anything, find out which part of the formula is dragging cost per lead up. Pull the last 14 to 30 days for each campaign and compare three numbers against that campaign's own best period:</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>What you see</th><th>Likely cause</th><th>Where to start</th></tr></thead>
+      <tbody>
+        <tr><td>Cost per 1,000 impressions up, click-through steady</td><td>Auction pressure, season, narrow audience</td><td>Broaden targeting, consolidate ad sets</td></tr>
+        <tr><td>Click-through falling, frequency rising</td><td>Creative fatigue</td><td>New hooks and formats (fix 2)</td></tr>
+        <tr><td>Click-through low from launch</td><td>Weak offer or unclear promise</td><td>Rewrite the offer (fix 1)</td></tr>
+        <tr class="highlight-row"><td><strong>Click-through fine, landing conversion low</strong></td><td><strong>Page, form or message mismatch</strong></td><td><strong>Fixes 3 to 5</strong></td></tr>
+        <tr><td>Leads in CRM higher than leads in Ads Manager</td><td>Tracking gaps</td><td>Server-side events (fix 6)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Fixing the wrong number wastes weeks. A new landing page will not help if the real problem is that nobody clicks the ad, and fresh creative will not help if visitors leave a slow page before it loads.</p>
+</section>
+
 <section id="offer">
-  <h2>3. Fix 1: Change the Offer</h2>
+  <h2>4. Fix 1: Change the Offer</h2>
   <p>The offer is the single biggest lever because it moves click-through and conversion at the same time. "Contact us for a quote" asks for effort and promises nothing. Compare it with offers that lower risk and name a specific outcome:</p>
   <ul>
     <li>Roofing: "Free roof inspection after the storm, quote in 24 hours, no sales visit."</li>
@@ -979,25 +1023,37 @@ export const PLAN_POSTS_B: BlogPost[] = [
 </section>
 
 <section id="creative">
-  <h2>4. Fixes 2 and 3: Creative and Message Match</h2>
+  <h2>5. Fixes 2 and 3: Creative and Message Match</h2>
   <p><strong>Fix 2: Refresh creative on a schedule.</strong> Creative fatigue is the most common reason cost per lead creeps up. As frequency rises, click-through falls and cost per lead follows. Run three to five creatives per ad set, retire anything whose click-through has dropped well below its first-week level, and keep a pipeline of new hooks. Native-looking images and simple talking-head videos often beat polished brand ads. In a live roofing ads audit, the strongest creatives hit an 18% click-through rate (<a href="/case-studies/roofing-18-percent-ctr-creatives-in-a-live-ads-audit">see the audit</a>), which shows how much room creative alone can open up.</p>
   <p><strong>Fix 3: Match the landing page to the ad.</strong> If the ad promises a free inspection after a hailstorm, the page headline should say exactly that. Every mismatch between ad and page costs conversion rate, and conversion rate is half of the formula. Build one page variant per main ad angle rather than sending every ad to the same generic page.</p>
 </section>
 
 <section id="landing-page">
-  <h2>5. Fixes 4 and 5: Landing Page and Form</h2>
+  <h2>6. Fixes 4 and 5: Landing Page and Form</h2>
   <p><strong>Fix 4: Make the page fast and focused.</strong> Paid social traffic arrives on phones, often on mobile data. Compress images, remove heavy scripts and chat widgets, cut the navigation menu and put the first form step on the first screen. Each second of load time loses visitors you already paid for.</p>
   <p><strong>Fix 5: Replace the contact form with a short multi-step form.</strong> Three to six easy multiple-choice questions, one per screen, then contact details last. Small answers build commitment, so more people finish than on one long form, and the answers qualify the lead for sales. This is the structure behind our <a href="/quiz-funnels">quiz funnels</a> and the quote estimators in our roofing and home services builds. If you are weighing this against Meta's instant forms, read <a href="/blog/facebook-lead-ads-vs-funnels">Facebook lead ads vs funnels</a> first: instant forms often post a lower cost per lead and a higher cost per customer.</p>
 </section>
 
 <section id="signal">
-  <h2>6. Fixes 6 and 7: Tracking, Signal and Targeting</h2>
+  <h2>7. Fixes 6 and 7: Tracking, Signal and Targeting</h2>
   <p><strong>Fix 6: Fix tracking before you trust the number.</strong> If your pixel misses conversions, your reported cost per lead is too high and the ad platform is optimizing on incomplete data. Server-side tracking closes the gap: on our builds, the <a href="/meta-conversions-api-setup">Meta Conversions API</a> recovered 31% more events than the pixel alone. More events means more signal, and more signal usually means the algorithm finds converters more cheaply over the following weeks.</p>
   <p><strong>Fix 7: Give the algorithm room and the right goal.</strong> With good signal, broader targeting often beats narrow interest stacks, because the system can find pockets of cheap converters you would never have guessed. Consolidate small ad sets so each exits learning faster, avoid editing campaigns daily, and optimize for the lead event, or better, a qualified lead or booked call event sent back from your CRM. Our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide</a> shows how to send those downstream events.</p>
 </section>
 
+<section id="scaling">
+  <h2>8. What Happens to Cost Per Lead When You Scale</h2>
+  <p>Cost per lead almost always rises as budget rises. The first dollars reach the people most likely to convert; each extra dollar reaches people a little less likely. Our own accounts reflect this: larger-budget campaigns in the same industries that produced $4 to $6 leads tend to sit higher, such as <a href="/case-studies/roofing-1068-leads-at-17-40-cpl">1,068 roofing leads at $17.40</a> and <a href="/case-studies/hvac-630-leads-at-23-09-cpl">630 HVAC leads at $23.09</a>.</p>
+  <p>That is not failure. What matters is whether the marginal lead is still profitable. To keep the rise slow:</p>
+  <ul>
+    <li><strong>Increase budget in steps</strong> of roughly 20% to 30% every few days rather than doubling overnight.</li>
+    <li><strong>Add new creative angles as you scale</strong>, because one winning ad cannot carry a much larger audience for long.</li>
+    <li><strong>Expand geography or offers</strong> instead of squeezing the same small audience harder.</li>
+    <li><strong>Set a ceiling</strong> based on your close rate and job value, and scale until the marginal cost per customer hits it.</li>
+  </ul>
+</section>
+
 <section id="quality">
-  <h2>7. Fix 8: Protect Quality While You Cut Cost</h2>
+  <h2>9. Fix 8: Protect Quality While You Cut Cost</h2>
   <p>The easiest way to reduce cost per lead is also the most dangerous: remove every qualifying question and make submitting effortless. Cost per lead drops. Booked calls, show rate and sales drop further. Guard against it with three rules:</p>
   <ol>
     <li><strong>Keep the filters that matter.</strong> Two or three qualifying questions and OTP phone verification cost a little conversion and save your team hours of calling fake or unqualified leads. Several of the verified campaigns above still landed between $4 and $6 per lead.</li>
