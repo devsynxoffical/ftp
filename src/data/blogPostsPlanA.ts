@@ -44,8 +44,10 @@ export const PLAN_POSTS_A: BlogPost[] = [
       { id: "our-pricing", title: "4. Our Pricing, Line by Line" },
       { id: "hidden-costs", title: "5. The Monthly Costs Nobody Quotes" },
       { id: "payback-math", title: "6. Payback Math: Will the Funnel Pay for Itself?" },
-      { id: "how-to-choose", title: "7. How to Choose the Right Budget Level" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "build-timeline", title: "7. What Happens During a 5 to 10 Day Build" },
+      { id: "red-flags", title: "8. Red Flags in Funnel Quotes" },
+      { id: "how-to-choose", title: "9. How to Choose the Right Budget Level" },
+      { id: "faq", title: "10. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -177,8 +179,33 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>If your current cost per lead is the problem, the <a href="/tools/cost-per-lead-calculator">cost per lead calculator</a> shows how much a lower CPL is worth at your close rate.</p>
 </section>
 
+<section id="build-timeline">
+  <h2>7. What Happens During a 5 to 10 Day Build</h2>
+  <p>Part of what you pay for is speed and certainty. A slow build costs money too, because every week without a working funnel is a week of ad spend going to a weaker page or no campaign at all. Here is how a typical build runs on our side:</p>
+  <ol>
+    <li><strong>Day 1: strategy call and scope.</strong> We confirm the offer, the audience, the funnel type and where the funnel ends: a call, an appointment or a checkout.</li>
+    <li><strong>Days 2 to 4: copy and page build.</strong> Headlines, proof, forms or quiz logic, checkout or calendar. You review one draft instead of five rounds of feedback.</li>
+    <li><strong>Days 4 to 7: CRM and automation.</strong> Pipeline stages, instant SMS and email, call attempts, reminders and handoff rules to your team.</li>
+    <li><strong>Days 6 to 9: tracking and testing.</strong> Pixel and server-side events, test leads through every branch, and a check that each stage fires the right event.</li>
+    <li><strong>Day 10 at the latest: launch.</strong> You get logins, a walkthrough and full ownership of every account.</li>
+  </ol>
+  <p>When a quote says six to eight weeks for a similar scope, most of that time is usually waiting on copy, approvals or integrations. Ask what the timeline depends on before you accept it, and get it in writing.</p>
+</section>
+
+<section id="red-flags">
+  <h2>8. Red Flags in Funnel Quotes</h2>
+  <p>Whether you hire us or anyone else, these are the signs that a low quote will turn into a high cost later:</p>
+  <ul>
+    <li><strong>No mention of follow-up.</strong> If the quote covers pages but says nothing about what happens after someone opts in, leads will sit in an inbox.</li>
+    <li><strong>The agency keeps the accounts.</strong> If you cannot export your contacts, funnels and workflows when you leave, you are renting, not buying.</li>
+    <li><strong>Guaranteed results with no numbers behind them.</strong> Ask for case studies with ad spend, leads and revenue, not just testimonials.</li>
+    <li><strong>Tracking described as "pixel installed".</strong> Browser-only tracking misses a large share of conversions. Ask about server-side events.</li>
+    <li><strong>Unlimited revisions with no defined scope.</strong> It sounds generous but usually means the project has no end date.</li>
+  </ul>
+</section>
+
 <section id="how-to-choose">
-  <h2>7. How to Choose the Right Budget Level</h2>
+  <h2>9. How to Choose the Right Budget Level</h2>
   <ul>
     <li><strong>You are pre-revenue and testing an idea:</strong> start DIY on an inexpensive builder and validate the offer with a small ad budget.</li>
     <li><strong>You have proven copy and a CRM you like:</strong> a design-only build is enough.</li>
@@ -232,8 +259,10 @@ export const PLAN_POSTS_A: BlogPost[] = [
       { id: "local-lead-funnels", title: "5. Local Lead Funnels: Roofing and Med Spa" },
       { id: "mva-intake-funnel", title: "6. MVA Intake Funnel: $388K on $20K" },
       { id: "summit-and-saas", title: "7. Summit and SaaS Launch Funnels" },
-      { id: "patterns", title: "8. The Patterns Behind Every Example" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "which-fits", title: "8. Which Example Fits Your Business?" },
+      { id: "copy-mistakes", title: "9. Mistakes When Copying a Funnel Example" },
+      { id: "patterns", title: "10. The Patterns Behind Every Example" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -271,6 +300,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <div class="callout-badge">Read this first</div>
     <p>Numbers vary with industry, price, market and creative. Treat each example as proof that a structure can work, not as a forecast for your business. Model your own numbers in the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> before you copy anything.</p>
   </div>
+  <p>A quick note on the metrics. <strong>Cost per lead</strong> is ad spend divided by leads, and it only means something next to lead quality. <strong>Return on ad spend</strong> is revenue divided by ad spend; a 19x return on a small budget is not the same as 4x on a large one, so look at both numbers. <strong>Cost per booked call</strong> matters most for high-ticket offers, because a cheap lead that never books is not cheap. Where a case shows only one of these figures, that is the one the client documented, and we have not filled in the gaps with estimates.</p>
 </section>
 
 <section id="high-ticket-vsl">
@@ -328,8 +358,34 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p><strong>Lesson:</strong> summits trade revenue today for audience size, so they need a backend. SaaS funnels win when the product can be shown, not described. Our <a href="/funnels-for/saas">SaaS funnels</a> page covers the trial and demo variants.</p>
 </section>
 
+<section id="which-fits">
+  <h2>8. Which Example Fits Your Business?</h2>
+  <p>Start with your price and how people buy, not with the example that made the most money. A quick way to match:</p>
+  <ul>
+    <li><strong>You sell a product under about $50 online:</strong> copy the low-ticket structure. Your success depends on the checkout, the <a href="/glossary/order-bump">order bump</a> and the upsell, not on a sales team.</li>
+    <li><strong>You sell a program or service that needs a conversation:</strong> copy the high-ticket or webinar structure, depending on how much teaching the prospect needs before they are ready to talk.</li>
+    <li><strong>You serve a local area:</strong> copy the roofing or med spa structure. Keep the form short, verify phone numbers and call within a minute.</li>
+    <li><strong>Your leads need screening:</strong> copy the MVA quiz structure. Let qualification questions do the filtering before your team picks up the phone.</li>
+    <li><strong>You need an audience before you can sell:</strong> a summit or free event builds one quickly, as long as there is a backend offer waiting.</li>
+  </ul>
+  <p>Browse <a href="/funnels-for">funnels by industry</a> to see the version we build for your market, including <a href="/funnels-for/coaches">coaches</a>, <a href="/funnels-for/home-services">home services</a> and <a href="/funnels-for/ecommerce">eCommerce</a>.</p>
+</section>
+
+<section id="copy-mistakes">
+  <h2>9. Mistakes When Copying a Funnel Example</h2>
+  <p>We see the same errors whenever a business tries to clone a funnel it saw online:</p>
+  <ul>
+    <li><strong>Copying the pages and skipping the follow-up.</strong> Every example above relied on contact within seconds and reminders before calls. The pages alone would not have produced these numbers.</li>
+    <li><strong>Copying the offer instead of the structure.</strong> A $27 template pack works for one audience and fails for another. Keep the mechanics, rewrite the offer for your buyer.</li>
+    <li><strong>Judging too early.</strong> High-ticket and webinar funnels need weeks of data because calls and closes lag behind ad spend. Decide your test budget and timeline before launch.</li>
+    <li><strong>Ignoring tracking.</strong> If your ad platform only sees opt-ins, it will find more people who opt in, not more people who buy. Send qualified, booked and purchase events back server-side.</li>
+    <li><strong>Changing five things at once.</strong> Test the headline, the offer or the follow-up timing one at a time, or you will never know what worked.</li>
+  </ul>
+  <p>Use the <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a> to track the same metrics we used to judge each example.</p>
+</section>
+
 <section id="patterns">
-  <h2>8. The Patterns Behind Every Example</h2>
+  <h2>10. The Patterns Behind Every Example</h2>
   <div class="table-wrap">
     <table class="data-table">
       <thead>
@@ -347,7 +403,9 @@ export const PLAN_POSTS_A: BlogPost[] = [
       </tbody>
     </table>
   </div>
+  <p>Notice what the table does not show: page design. None of these results came from a particularly clever layout. They came from matching the funnel type to the offer and then running the follow-up and tracking properly.</p>
   <p>Three patterns show up in all eight. First, the funnel type matched the price and buying process. Second, follow-up started in seconds: across 60+ speed-to-lead deployments we measured a median first contact of 38 seconds and a 2.4x lift in lead-to-booking. Third, conversions were sent back to the ad platform server-side, which recovered 31% more events and gave the algorithm better data.</p>
+  <p>The booked-call examples also shared a reminder layer. With three-channel reminders by SMS, email and call, we have seen show-up rates of up to 88%, which is often the difference between a funnel that looks expensive and one that pays back. The <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> is the template we start from.</p>
   <p>If you want one of these structures built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> builds them in 5 to 10 business days. Pricing is covered in <a href="/blog/how-much-does-a-sales-funnel-cost">how much does a sales funnel cost</a>, or you can <a href="/contact">book a strategy call</a> and we will tell you which example is closest to your business.</p>
 </section>
 `,
@@ -395,8 +453,10 @@ export const PLAN_POSTS_A: BlogPost[] = [
       { id: "systeme-io", title: "5. Systeme.io: Best Value for Solo Creators" },
       { id: "kajabi", title: "6. Kajabi: Best for Course Businesses" },
       { id: "hubspot-and-page-builders", title: "7. HubSpot, Leadpages and Unbounce" },
-      { id: "decision-table", title: "8. Decision Table by Business Type" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "true-cost", title: "8. What Each Stack Really Costs per Month" },
+      { id: "choosing-mistakes", title: "9. Mistakes When Choosing a Funnel Builder" },
+      { id: "decision-table", title: "10. Decision Table by Business Type" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -468,6 +528,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <h2>3. GoHighLevel: Best for Booked-Call Lead Gen</h2>
   <p>GoHighLevel combines funnels, websites, forms, CRM, pipelines, two-way SMS, email, calendars, workflows and reputation tools in one account. As of November 2026 plans start at $97 a month for Starter, $297 for Unlimited and $497 for SaaS Pro, with a free trial and usage fees for SMS, calls and email on top.</p>
   <p><strong>Why we use it:</strong> the funnel and the follow-up live together. A form submission can trigger an SMS, an AI call and an email inside the first minute without any third-party glue. Across 60+ speed-to-lead deployments we measured a median first contact of 38 seconds, 84% of leads reached inside the first minute, and a 2.4x lift in lead-to-booking.</p>
+  <p>It also suits agencies. Sub-accounts, snapshots and white-labeling let one team manage many client accounts from a single login, which is why so many marketing agencies standardize on it.</p>
   <p><strong>Where it falls short:</strong> the interface is dense, the page builder is good rather than great, and a poorly planned account becomes messy quickly. Our full <a href="/blog/gohighlevel-review">GoHighLevel review</a> covers the pros and cons in detail, and our <a href="/gohighlevel-agency">GoHighLevel agency</a> page shows what we build on it.</p>
 </section>
 
@@ -489,7 +550,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <h2>6. Kajabi: Best for Course Businesses</h2>
   <p>Kajabi is a course and membership platform with funnels, email and a checkout built in. As of November 2026 its public plans are Basic at $179 a month, Growth at $249 and Pro at $499, with lower rates on annual billing. The older entry plan is no longer offered to new customers.</p>
   <p><strong>Why it is worth a look:</strong> delivery is excellent. Students get a polished experience, and creators manage content, community and payments in one place.</p>
-  <p><strong>Where it falls short:</strong> it is expensive if all you need is lead generation, and it is not built for appointment-driven sales. Many course businesses pair a front-end funnel elsewhere with Kajabi for delivery.</p>
+  <p><strong>Where it falls short:</strong> it is expensive if all you need is lead generation, and it is not built for appointment-driven sales. Many course businesses pair a front-end funnel elsewhere with Kajabi for delivery. Check transaction fees and contact limits on each tier too, since those change the real cost as the business grows.</p>
 </section>
 
 <section id="hubspot-and-page-builders">
@@ -504,8 +565,33 @@ export const PLAN_POSTS_A: BlogPost[] = [
   </div>
 </section>
 
+<section id="true-cost">
+  <h2>8. What Each Stack Really Costs per Month</h2>
+  <p>The plan price is the starting point, not the total. To compare fairly, list every job the funnel needs done and price the tool that does it:</p>
+  <ul>
+    <li><strong>Pages and checkout.</strong> Every platform here covers this, with different levels of polish.</li>
+    <li><strong>CRM and pipeline.</strong> Included in GoHighLevel and HubSpot. Light or missing in ClickFunnels, Systeme.io, Kajabi and landing page builders.</li>
+    <li><strong>SMS and calling.</strong> Usage-billed in GoHighLevel. Usually a separate tool with the others.</li>
+    <li><strong>Calendar and reminders.</strong> Built into GoHighLevel and HubSpot. Often a separate scheduler elsewhere.</li>
+    <li><strong>Automation glue.</strong> If tools do not talk to each other natively, you pay for a connector and the time to maintain it.</li>
+  </ul>
+  <p>For a booked-call business, a cheaper page builder plus four add-ons often costs as much as an all-in-one and breaks more often. For a product seller, a strong checkout and an email tool may be all you need. Run the numbers for your funnel with our <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> before you decide that software price is the deciding factor. It rarely is.</p>
+</section>
+
+<section id="choosing-mistakes">
+  <h2>9. Mistakes When Choosing a Funnel Builder</h2>
+  <ul>
+    <li><strong>Choosing on templates.</strong> Templates are the easiest thing to replace. The CRM, automation and tracking are what you will live with.</li>
+    <li><strong>Choosing for today's volume.</strong> A tool that works at 50 leads a month may not work at 2,000. Think a year ahead.</li>
+    <li><strong>Forgetting the team.</strong> If closers or front-desk staff work leads, the platform needs a usable inbox, pipeline and mobile app.</li>
+    <li><strong>Ignoring data ownership.</strong> Keep your domain, ad account and contact list in your own name, whatever you build on.</li>
+    <li><strong>Assuming the tool will fix the offer.</strong> No builder rescues a weak offer. Switching platforms is rarely the fix when the funnel is not converting.</li>
+  </ul>
+  <p>If you are still unsure, our <a href="/compare">comparison hub</a> has head-to-head pages for the most common choices.</p>
+</section>
+
 <section id="decision-table">
-  <h2>8. Decision Table by Business Type</h2>
+  <h2>10. Decision Table by Business Type</h2>
   <div class="table-wrap">
     <table class="data-table">
       <thead>
@@ -567,9 +653,12 @@ export const PLAN_POSTS_A: BlogPost[] = [
       { id: "pros", title: "3. Pros: Where It Earns Its Place" },
       { id: "cons", title: "4. Cons: What Frustrates Real Users" },
       { id: "pricing", title: "5. Pricing as of November 2026" },
-      { id: "who-its-for", title: "6. Who It Is For, and Who Should Skip It" },
-      { id: "getting-started", title: "7. Getting Started Without the Mess" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "scorecard", title: "6. Our Verdict, Feature by Feature" },
+      { id: "who-its-for", title: "7. Who It Is For, and Who Should Skip It" },
+      { id: "in-practice", title: "8. What It Looks Like in Practice" },
+      { id: "alternatives", title: "9. GoHighLevel Alternatives Worth Considering" },
+      { id: "getting-started", title: "10. Getting Started Without the Mess" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -681,8 +770,30 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>Plan names and inclusions change, so confirm the details on HighLevel's own pricing page before you sign up.</p>
 </section>
 
+<section id="scorecard">
+  <h2>6. Our Verdict, Feature by Feature</h2>
+  <p>These ratings reflect how each area performs for the businesses we build for, which are mostly booked-call and appointment offers. They are our opinion from daily use, not a lab benchmark.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Area</th><th>Our rating</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Follow-up automation</td><td>Excellent</td><td>The core reason to choose it; SMS, email and calls trigger in seconds</td></tr>
+        <tr><td>CRM and pipeline</td><td>Very good</td><td>Clean for small teams; less depth than enterprise CRMs</td></tr>
+        <tr><td>Calendars and reminders</td><td>Very good</td><td>Round-robin, buffers and multi-channel reminders built in</td></tr>
+        <tr><td>Page builder</td><td>Good</td><td>Capable and fast; dedicated builders feel smoother for complex designs</td></tr>
+        <tr><td>Checkout and upsells</td><td>Fair</td><td>Works, but less polished than checkout-first tools</td></tr>
+        <tr><td>Ease of learning</td><td>Fair</td><td>Steep for beginners; much easier from a well-built snapshot</td></tr>
+        <tr class="highlight-row"><td><strong>Value for money</strong></td><td><strong>Excellent</strong></td><td><strong>Replaces several tools for booked-call businesses</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>If the areas you care most about are near the bottom of this table, consider one of the alternatives below before committing.</p>
+</section>
+
 <section id="who-its-for">
-  <h2>6. Who It Is For, and Who Should Skip It</h2>
+  <h2>7. Who It Is For, and Who Should Skip It</h2>
   <div class="table-wrap">
     <table class="data-table">
       <thead>
@@ -699,8 +810,39 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>If you are weighing it against a traditional CRM, our <a href="/compare/gohighlevel-vs-hubspot">GoHighLevel vs HubSpot comparison</a> goes deeper. If you are weighing it against a budget all-in-one, see <a href="/compare/gohighlevel-vs-systeme-io">GoHighLevel vs Systeme.io</a>.</p>
 </section>
 
+<section id="in-practice">
+  <h2>8. What It Looks Like in Practice</h2>
+  <p>Features lists only tell you so much. Here is what a typical GoHighLevel lead funnel does in the first day after someone fills in a form, the way we set it up for clients:</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Time after opt-in</th><th>What happens</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>0 to 15 seconds</td><td>Contact created, tagged by source, placed in the New Lead stage, personal SMS sent</td></tr>
+        <tr><td>15 to 45 seconds</td><td>AI or human call attempt; the lead can book directly on the calendar</td></tr>
+        <tr><td>Under 60 seconds</td><td>Email with proof and a booking link</td></tr>
+        <tr><td>Hours 2 to 24</td><td>Further call and SMS attempts if not reached; stops instantly on booking</td></tr>
+        <tr class="highlight-row"><td><strong>After booking</strong></td><td><strong>Three-channel reminders and a server-side booked event sent to Meta</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>This is the system behind the results on our <a href="/case-leadgen">lead generation case studies</a> page. Fast, consistent follow-up is what lets cheap leads, such as <a href="/case-studies/roofing-537-leads-at-4-27-cpl">537 roofing leads at $4.27</a>, become booked jobs instead of an unread list.</p>
+</section>
+
+<section id="alternatives">
+  <h2>9. GoHighLevel Alternatives Worth Considering</h2>
+  <ul>
+    <li><strong>ClickFunnels:</strong> better for checkout-led product funnels with order bumps and one-click upsells. Many sellers pair it with GoHighLevel for follow-up.</li>
+    <li><strong>HubSpot:</strong> better for larger B2B teams that need deep reporting and complex permissions, at a significantly higher price.</li>
+    <li><strong>Systeme.io:</strong> much cheaper and simpler for solo creators who do not need SMS, calling or a sales pipeline.</li>
+    <li><strong>Kajabi:</strong> better for course and membership delivery, but not designed for appointment-driven sales.</li>
+  </ul>
+  <p>Each has a place. The question is whether your revenue depends on what happens after the opt-in. If it does, an all-in-one with follow-up built in usually wins. If it does not, a simpler or cheaper tool may serve you better. Our <a href="/blog/gohighlevel-vs-clickfunnels-lead-generation-2026">GoHighLevel vs ClickFunnels breakdown</a> goes into the most common head-to-head.</p>
+</section>
+
 <section id="getting-started">
-  <h2>7. Getting Started Without the Mess</h2>
+  <h2>10. Getting Started Without the Mess</h2>
   <div class="step-card">
     <div class="step-badge">Step 1</div>
     <h4>Design the pipeline before the pages</h4>
@@ -768,8 +910,10 @@ export const PLAN_POSTS_A: BlogPost[] = [
       { id: "step-application", title: "5. Step 5: The Application" },
       { id: "step-follow-up", title: "6. Steps 6 and 7: Speed-to-Lead and Reminders" },
       { id: "step-tracking", title: "7. Step 8: Tracking and Sales Feedback" },
-      { id: "case-example", title: "8. The $1.52M Funnel, Step by Step" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "common-mistakes", title: "8. Common Mistakes That Kill High-Ticket Funnels" },
+      { id: "launch-checklist", title: "9. Launch Checklist" },
+      { id: "case-example", title: "10. The $1.52M Funnel, Step by Step" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -814,6 +958,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <h2>2. Steps 1 and 2: Offer and Ad Angle</h2>
   <h3>Step 1: Make the offer specific</h3>
   <p>A high-ticket offer has to promise a specific outcome for a specific person within a believable timeframe. "Business coaching" is not an offer. "A done-with-you client acquisition system for agency owners stuck below their next revenue milestone" is closer. Write down who it is for, who it is not for, the outcome, the mechanism and the proof you have.</p>
+  <p>Then set the economics. Work backwards from your price and close rate to the most you can pay for a booked call and still be profitable. If you close one in four calls on a $6,000 offer, each booked call is worth $1,500 in revenue, which tells you how much room you have for ad spend, follow-up and sales time.</p>
   <h3>Step 2: Pick one ad angle per audience</h3>
   <p>Your ad needs one sharp angle: a problem the prospect recognizes, a reason the usual fixes fail, and a reason to click now. Proof-led angles work well cold. The ad should promise exactly what the next page delivers, whether that is a short diagnostic or a training video.</p>
   <div class="callout-box">
@@ -876,8 +1021,36 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>Close the loop with the sales team, too. Every week, review which ad angles and quiz answers produced calls that closed. Feed that back into the ads and the application. Track everything on one view, such as the <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a>.</p>
 </section>
 
+<section id="common-mistakes">
+  <h2>8. Common Mistakes That Kill High-Ticket Funnels</h2>
+  <ul>
+    <li><strong>Sending cold traffic straight to a long video.</strong> A locked 30-minute video is a big ask from someone who saw your ad ten seconds ago. Lead with a short diagnostic or a tighter video.</li>
+    <li><strong>An application that does not filter.</strong> If every applicant gets a calendar, your closers will spend half their week on calls that were never going to buy.</li>
+    <li><strong>Waiting hours to follow up.</strong> Applicants who are not contacted quickly book with someone else or forget why they applied. The first minute matters most.</li>
+    <li><strong>No reminder sequence.</strong> Before our rebuild, the $1.52M client lost 38% of booked calls to no-shows. Reminders are the cheapest fix in the whole funnel.</li>
+    <li><strong>Optimizing ads for opt-ins.</strong> Cheap opt-ins are not the goal. Train the ad platform on qualified and booked calls once you have the volume.</li>
+    <li><strong>Changing everything at once.</strong> Change one variable per test so you know what caused the result.</li>
+  </ul>
+</section>
+
+<section id="launch-checklist">
+  <h2>9. Launch Checklist</h2>
+  <p>Before you turn on ads, run through this list. Every item is something we have seen break a launch.</p>
+  <ul>
+    <li>The ad promise matches the first page headline word for word in meaning.</li>
+    <li>The quiz or VSL page loads fast on mobile, with the call to action visible without hunting.</li>
+    <li>The application asks only questions your closer uses, and the phone number is verified.</li>
+    <li>A test application triggers SMS, call and email inside 60 seconds.</li>
+    <li>Booking stops every follow-up workflow and starts the reminder sequence.</li>
+    <li>Each pipeline stage fires a server-side event, and you can see them arriving in Events Manager.</li>
+    <li>Closers have a short call script and see the application answers before the call.</li>
+    <li>You have a weekly review on the calendar to compare ad angles with closed deals.</li>
+  </ul>
+  <p>If you sell to a specific market, our <a href="/funnels-for/coaches">funnels for coaches</a> and <a href="/funnels-for/consultants">funnels for consultants</a> pages show the variations we use.</p>
+</section>
+
 <section id="case-example">
-  <h2>8. The $1.52M Funnel, Step by Step</h2>
+  <h2>10. The $1.52M Funnel, Step by Step</h2>
   <p>Before the rebuild, the consulting client had spent heavily driving cold traffic to a generic VSL. Cost per booked call averaged $280 and 38% of booked calls did not show. We changed three things:</p>
   <ol>
     <li>Replaced the static page with an interactive diagnostic front end that led into a shorter VSL.</li>
@@ -930,9 +1103,12 @@ export const PLAN_POSTS_A: BlogPost[] = [
       { id: "pricing", title: "3. Pricing: Why $7 to $47" },
       { id: "page-sequence", title: "4. The Page Sequence" },
       { id: "aov-math", title: "5. The Math: AOV vs Cost Per Buyer" },
-      { id: "tracking-and-scaling", title: "6. Tracking and Scaling" },
-      { id: "backend", title: "7. The Backend That Makes It Profitable" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "worked-example", title: "6. A Worked Example: 100 Buyers" },
+      { id: "tracking-and-scaling", title: "7. Tracking and Scaling" },
+      { id: "numbers-to-watch", title: "8. The Numbers to Watch Every Day" },
+      { id: "wrong-choice", title: "9. When a Low Ticket Funnel Is the Wrong Choice" },
+      { id: "backend", title: "10. The Backend That Makes It Profitable" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -979,6 +1155,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <li><strong>Provable in an ad.</strong> One screenshot, result or before-and-after should make the price feel obvious.</li>
   </ul>
   <p>Communities and memberships can also work as front ends. Several of our <a href="/case-studies/low-ticket-funnels">low-ticket funnel case studies</a> sold memberships, including one that sold <a href="/case-studies/low-ticket-funnel-1566-memberships-sold">1,566 memberships</a>. A low monthly price lowers the barrier, and retention becomes the backend.</p>
+  <p>A simple way to test product ideas before building anything: write the ad first. If you cannot describe the product, the result it delivers and why it is worth the price in a short ad, cold buyers will not understand it either. Then ask a handful of past customers or followers whether they would pay for it today. If the answers are lukewarm, change the problem the product solves rather than lowering the price. Cheaper rarely fixes an offer nobody wants; a sharper promise usually does. Finally, decide the backend offer at the same time, because the front-end product should lead straight into it.</p>
 </section>
 
 <section id="pricing">
@@ -1039,8 +1216,28 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>Use the <a href="/tools/roas-calculator">ROAS calculator</a> to see what return you need at your price points, and the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> to test how bump and upsell take rates change the outcome.</p>
 </section>
 
+<section id="worked-example">
+  <h2>6. A Worked Example: 100 Buyers</h2>
+  <p>Here is how the take rates from our published <a href="/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown">$847K breakdown</a> turn into revenue for every 100 front-end buyers:</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Offer</th><th>Price</th><th>Take rate</th><th>Revenue per 100 buyers</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Front end</td><td>$27</td><td>100%</td><td>$2,700</td></tr>
+        <tr><td>Order bump</td><td>$17</td><td>41%</td><td>$697</td></tr>
+        <tr><td>Upsell</td><td>$97</td><td>22%</td><td>$2,134</td></tr>
+        <tr><td>Downsell</td><td>$47</td><td>14% of decliners</td><td>$513</td></tr>
+        <tr class="highlight-row"><td><strong>Total</strong></td><td></td><td></td><td><strong>$6,044, or $60.44 average order value at launch</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Notice that the front-end product produced less than half of the revenue. The bump and upsells did the rest. That is why we spend as much time on the offers after the checkout button as on the sales page itself, and why a funnel with no bump or upsell almost never liquidates on cold traffic.</p>
+</section>
+
 <section id="tracking-and-scaling">
-  <h2>6. Tracking and Scaling</h2>
+  <h2>7. Tracking and Scaling</h2>
   <p>A low ticket funnel lives or dies on how well the ad platform understands who is buying. Send every purchase, including bumps and upsells, as a server-side purchase event with its value. That lets Meta optimize for buyers with higher order values rather than the cheapest sale. Our <a href="/meta-conversions-api-setup">Conversions API setups</a> recovered 31% more events than the pixel alone.</p>
   <p>Scale in steps once the funnel is liquidating. Results from our clients show what is possible when the math holds:</p>
   <ul>
@@ -1051,8 +1248,39 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>Watch front-end conversion rate, bump take rate and cost per buyer daily as you scale. When cost per buyer climbs past AOV, refresh creative before raising budget again.</p>
 </section>
 
+<section id="numbers-to-watch">
+  <h2>8. The Numbers to Watch Every Day</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr><th>Metric</th><th>What it tells you</th><th>If it is off</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sales page conversion rate</td><td>Whether the offer and page work for cold traffic</td><td>Test the headline, proof and price anchor</td></tr>
+        <tr><td>Order bump take rate</td><td>Whether the bump feels like an obvious add-on</td><td>Rewrite the bump headline or make it more complementary</td></tr>
+        <tr><td>Upsell take rate</td><td>Whether the upsell is the logical next step</td><td>Add a short video or change the offer angle</td></tr>
+        <tr><td>Cost per buyer</td><td>What each customer costs in ads</td><td>Refresh creative before raising budget</td></tr>
+        <tr class="highlight-row"><td><strong>AOV minus cost per buyer</strong></td><td><strong>Whether the funnel self-liquidates</strong></td><td><strong>Fix this before scaling anything</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Check these daily during the first two weeks and weekly after that. Most problems show up in one number long before they show up in revenue.</p>
+</section>
+
+<section id="wrong-choice">
+  <h2>9. When a Low Ticket Funnel Is the Wrong Choice</h2>
+  <p>This model is powerful but not universal. It tends to struggle when:</p>
+  <ul>
+    <li><strong>There is no backend.</strong> Without a next offer, the best case is break-even and the worst case is a slow loss.</li>
+    <li><strong>The product needs a conversation.</strong> If buyers need questions answered before they trust you, a booked-call funnel will usually work better.</li>
+    <li><strong>You sell local services.</strong> Roofers, HVAC companies and clinics generally do better with a short lead form and instant follow-up than with a paid digital product.</li>
+    <li><strong>Cash flow cannot wait.</strong> If the funnel liquidates at less than 100%, the backend has to close the gap, and that can take weeks.</li>
+  </ul>
+  <p>If one of these describes you, look at our <a href="/sales-funnel-agency">sales funnel agency</a> options for booked-call and lead funnels instead.</p>
+</section>
+
 <section id="backend">
-  <h2>7. The Backend That Makes It Profitable</h2>
+  <h2>10. The Backend That Makes It Profitable</h2>
   <p>A low ticket funnel without a backend is a break-even machine at best. The buyer list is the asset. In the $847K build, the majority of collected revenue came after the first purchase, from an email sequence, a buyers-only workshop and a high-ticket offer sold on calls.</p>
   <ul>
     <li><strong>Email sequence:</strong> teach with the product, then invite buyers to the next offer. Our <a href="/templates/email-nurture-sequence">email nurture sequence template</a> is a good starting point.</li>
