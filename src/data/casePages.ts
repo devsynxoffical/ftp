@@ -622,7 +622,9 @@ export function getCasePage(slug: string): CasePage | undefined {
     secondary = d.override.secondary;
   } else if (r.ro && r.rol) {
     const lbl = /roas/i.test(r.rol) ? "Return on ad spend" : r.rol.replace(/^./, (m) => m.toUpperCase());
-    secondary = { value: cleanInline(r.ro), label: lbl };
+    // Use the reconciled figure when the raw source value was corrected (see reconcileCpl).
+    const reconciled = /cost per lead/i.test(r.rol) ? fact(d.facts, "Cost per lead") : undefined;
+    secondary = { value: reconciled ?? cleanInline(r.ro), label: lbl };
   } else if (fact(d.facts, "Ad spend")) {
     secondary = { value: fact(d.facts, "Ad spend")!, label: "Ad spend" };
   } else {

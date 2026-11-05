@@ -51,6 +51,21 @@ const nextConfig: NextConfig = {
       // 2026-11-05: corrected cost-per-lead figures changed these case slugs.
       { source: "/case-studies/mva-6275-leads-at-50-cpl", destination: "/case-studies/mva-6275-leads-at-4-38-cpl", permanent: true },
       { source: "/case-studies/mva-126-leads-at-150-cpl", destination: "/case-studies/mva-126-leads-at-17-16-cpl", permanent: true },
+      // Legacy .html and short URLs from the old static site. These used to be
+      // rewrites, which served duplicate copies of each page (e.g. /contact.html
+      // returned 200 with the contact page). Permanent redirects instead.
+      { source: "/milliondollarcasestudy.html", destination: "/milliondollarcasestudy", permanent: true },
+      { source: "/scalelowticket.html", destination: "/scalelowticket", permanent: true },
+      { source: "/case-1m", destination: "/milliondollarcasestudy", permanent: true },
+      { source: "/case-1m.html", destination: "/milliondollarcasestudy", permanent: true },
+      { source: "/case-847k", destination: "/scalelowticket", permanent: true },
+      { source: "/case-847k.html", destination: "/scalelowticket", permanent: true },
+      { source: "/case-studies.html", destination: "/case-studies", permanent: true },
+      { source: "/case-ecom.html", destination: "/case-ecom", permanent: true },
+      { source: "/case-leadgen.html", destination: "/case-leadgen", permanent: true },
+      { source: "/case.html", destination: "/case-studies", permanent: true },
+      { source: "/contact.html", destination: "/contact", permanent: true },
+      { source: "/index.html", destination: "/", permanent: true },
     ];
   },
   async headers() {
@@ -59,21 +74,6 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         headers: securityHeaders,
       },
-    ];
-  },
-  async rewrites() {
-    return [
-      { source: "/milliondollarcasestudy.html", destination: "/milliondollarcasestudy" },
-      { source: "/scalelowticket.html", destination: "/scalelowticket" },
-      { source: "/case-1m", destination: "/milliondollarcasestudy" },
-      { source: "/case-1m.html", destination: "/milliondollarcasestudy" },
-      { source: "/case-847k", destination: "/scalelowticket" },
-      { source: "/case-847k.html", destination: "/scalelowticket" },
-      { source: "/case-studies.html", destination: "/case-studies" },
-      { source: "/case-ecom.html", destination: "/case-ecom" },
-      { source: "/case-leadgen.html", destination: "/case-leadgen" },
-      { source: "/case.html", destination: "/case" },
-      { source: "/contact.html", destination: "/contact" },
     ];
   },
 };

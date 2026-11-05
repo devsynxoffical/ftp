@@ -100,3 +100,6 @@ export const PAGE_FAQS: Record<string, PageFaqItem[]> = {
     },
   ],
 };
+
+/** Quick answer under the hero of the main hub pages (SEO plan). 40-60 words. */
+export const PAGE_QUICK: Record<string, PageFaqItem> = {};

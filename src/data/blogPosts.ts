@@ -1217,8 +1217,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Funnel Architecture",
     author: AUTHORS.rahul,
     publishedAt: "2026-11-02",
-    updatedAt: "2026-11-02",
-    readTime: "11 min read",
+    updatedAt: "2026-11-05",
+    readTime: "16 min read",
     image: "/img/blog/gohighlevel-vs-clickfunnels.jpg",
     imageAlt: "Two laptops on a desk, one showing a CRM pipeline board and the other a landing page funnel builder, with a handwritten comparison checklist",
     keywords: [
@@ -1247,8 +1247,13 @@ export const BLOG_POSTS: BlogPost[] = [
       { id: "calendar-ai", title: "5. Calendars, AI Calling and Reminders" },
       { id: "checkout-tracking", title: "6. Checkout, Upsells and Tracking" },
       { id: "pricing", title: "7. Real Monthly Cost Once the Stack Is Complete" },
-      { id: "decision", title: "8. Decision Table by Business Type" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "builder-quality", title: "8. Funnel Builder Quality in Practice" },
+      { id: "automation-depth", title: "9. Automation Depth: What Each Platform Can Run" },
+      { id: "list-prices", title: "10. 2026 List Prices, Plan by Plan" },
+      { id: "twelve-month-cost", title: "11. Cost Over 12 Months" },
+      { id: "migration", title: "12. Migrating Between ClickFunnels and GoHighLevel" },
+      { id: "decision", title: "13. Which to Choose by Business Type" },
+      { id: "faq", title: "14. Frequently Asked Questions" },
     ],
     faqs: [
       {

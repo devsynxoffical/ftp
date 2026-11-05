@@ -1,11 +1,13 @@
 import fs from "node:fs";
 import { ORG_PUBLISHER } from "@/data/schemaOrg";
+import ServiceSchema from "@/components/ServiceSchema";
 import path from "node:path";
 import Link from "next/link";
 import { getCaseCard, getCasesForIndustry } from "@/data/casePages";
 import { CASE_INDUSTRIES, type CaseIndustry, midSentence } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import PageFaq from "@/components/PageFaq";
+import QuickAnswer from "@/components/QuickAnswer";
 import RoboSection from "@/components/RoboSection";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
@@ -62,6 +64,7 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <ServiceSchema path={`/case-studies/${industry.slug}`} name={`${industry.label} funnels and lead generation`} serviceType={`${industry.label} sales funnel and lead generation`} description={industry.hubDescription} />
       <div className="box">
         <section className="kc industry-hub">
           <nav className="crumbs" aria-label="Breadcrumb">
@@ -95,6 +98,8 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
               </div>
             </div>
           </div>
+
+          <QuickAnswer q={industry.quick.q} a={industry.quick.a} id="ih-quick-h" />
 
           <h2 className="ih-h2">All {midSentence(industry.label)} results</h2>
           <div className="cgrid2 ih-grid">

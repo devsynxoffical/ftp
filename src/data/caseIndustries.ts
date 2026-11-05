@@ -19,6 +19,8 @@ export interface CaseIndustry {
   hubDescription: string;
   intro: string[];
   build: { title: string; body: string }[];
+  /** Quick answer under the hero: main question + 40-60 word answer. */
+  quick: { q: string; a: string };
   faqs: { q: string; a: string }[];
   /** Journal slugs most relevant to this industry. */
   guides: string[];

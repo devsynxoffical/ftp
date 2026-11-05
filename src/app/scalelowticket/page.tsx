@@ -5,7 +5,8 @@ import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
 import PageFaq from "@/components/PageFaq";
-import { PAGE_FAQS } from "@/data/pageFaqs";
+import { PAGE_FAQS, PAGE_QUICK } from "@/data/pageFaqs";
+import QuickAnswer from "@/components/QuickAnswer";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -35,12 +36,13 @@ export default function Case847KPage() {
               Case study 02 &middot; Coaching &amp; info-product backend
             </span>
             <h1>
-              <em data-to={847307} data-pre="$">$847,307</em> collected from a low-ticket front door.
+              Low ticket funnel agency case study: <em data-to={847307} data-pre="$">$847,307</em> from a low-ticket front door.
             </h1>
             <p>
-              A coaching client stuck in high-ticket hype, with no front end to
-              pay for its ads. We rebuilt the offer, fixed the tracking and turned
-              the funnel into a self-liquidating buyer machine.
+              As a low ticket funnel agency, we took a coaching client stuck in
+              high-ticket hype, with no front end to pay for its ads, rebuilt the
+              offer around a $27 product, fixed the tracking and turned the funnel
+              into a self-liquidating buyer machine.
             </p>
             <div className="hb">
               <Link className="btn o" href="/contact">
@@ -52,6 +54,8 @@ export default function Case847KPage() {
             </div>
           </div>
         </div>
+
+        <QuickAnswer q={PAGE_QUICK["scalelowticket"].q} a={PAGE_QUICK["scalelowticket"].a} className="cs-quick" />
 
         <div className="vid k2v rv">
           <video

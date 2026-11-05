@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ServiceSchema";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -82,6 +83,7 @@ export default function CaseEcomLayout({
 }) {
   return (
     <>
+      <ServiceSchema path="/case-ecom" name="eCommerce funnels and scaling" serviceType="eCommerce funnel and Meta ads scaling" description="eCommerce and DTC funnels, offers and creative engines that scale Meta ads profitably, with value-based server-side tracking." />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(ecomSchemaGraph) }}

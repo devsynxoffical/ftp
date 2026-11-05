@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ServiceSchema from "@/components/ServiceSchema";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -82,6 +83,7 @@ export default function CaseLeadgenLayout({
 }) {
   return (
     <>
+      <ServiceSchema path="/case-leadgen" name="Lead generation funnels" serviceType="Lead generation funnel and automation" description="Lead generation funnels with OTP-verified forms, 60-second follow-up, AI booking and Conversions API tracking for service businesses." />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(leadgenSchemaGraph) }}

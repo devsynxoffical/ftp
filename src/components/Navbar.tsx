@@ -106,7 +106,7 @@ export default function Navbar() {
         </Link>
 
         <div className="pill">
-          <Link href="/#services">What we do</Link>
+          <Link href="/services">What we do</Link>
           <Link href="/#process">How we do it</Link>
           <div
             className={`dd ${ddOpen ? "open" : ""}`}
@@ -250,13 +250,13 @@ export default function Navbar() {
             </div>
 
             <div className="mlinks">
-              <Link href="/#services" onClick={closeMenu}>
+              <Link href="/sales-funnel-agency" onClick={closeMenu}>
                 Funnel &amp; page builds
               </Link>
-              <Link href="/#services" onClick={closeMenu}>
+              <Link href="/crm-automation" onClick={closeMenu}>
                 Automation &amp; follow-up
               </Link>
-              <Link href="/#services" onClick={closeMenu}>
+              <Link href="/ai-voice-agents" onClick={closeMenu}>
                 AI calling agent
               </Link>
             </div>
@@ -280,7 +280,7 @@ export default function Navbar() {
               <Link href="/" onClick={closeMenu}>
                 Home
               </Link>
-              <Link href="/#services" onClick={closeMenu}>
+              <Link href="/services" onClick={closeMenu}>
                 Services
               </Link>
               <Link href="/#process" onClick={closeMenu}>

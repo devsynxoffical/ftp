@@ -1,0 +1,100 @@
+SALES FUNNEL COPY TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/funnel-copy-template
+
+Covers: opt-in or landing page, application or quiz page, booking page, thank-you page.
+Replace everything in {braces}. Keep sentences short. One idea per line on mobile.
+
+============================================================
+PAGE 1. LANDING PAGE
+============================================================
+
+PRE-HEADLINE (call out the audience)
+For {audience} who {qualifier, e.g. already do $30K a month / own a home in {city}}
+
+HEADLINE (the outcome + time frame or mechanism)
+Option A: How {audience} {get result} in {time frame} without {pain}
+Option B: Get {specific result} with our {named method}, or {risk reversal}
+Option C: {Number} {audience} {got result} last {period}. Here is how.
+
+SUBHEADLINE (who it is for, what happens next)
+{One sentence explaining the method}. Answer {3} quick questions to see {what they get, e.g. your estimate / if you qualify / your custom plan}.
+
+PRIMARY BUTTON
+{Action verb} + {what they get}: "Check My Eligibility", "Get My Free Estimate", "See If I Qualify"
+Under button: Takes {30 seconds}. No {thing they fear, e.g. sales pressure, credit check}.
+
+PROOF BAR
+{Number} {customers/projects/clients} | {rating} average rating | {years} years
+
+PROBLEM SECTION
+Heading: Sound familiar?
+ - {Pain point 1 in their words}
+ - {Pain point 2}
+ - {Pain point 3}
+Line: It is not you. It is {the old approach}.
+
+HOW IT WORKS
+Step 1: {Action}. {One line on what happens}.
+Step 2: {Action}. {One line}.
+Step 3: {Result}. {One line}.
+
+BENEFITS (outcomes, not features)
+ - {Feature} so you can {outcome}
+ - {Feature} so you can {outcome}
+ - {Feature} so you can {outcome}
+
+TESTIMONIALS (name, location or business, specific result)
+"{Quote with a specific number or change}." - {Name}, {business or city}
+
+OBJECTION FAQ
+Q: How much does it cost?  A: {Honest range or how pricing is decided}.
+Q: How long does it take?  A: {Real time frame}.
+Q: What if {main fear}?    A: {Direct answer}.
+
+FINAL CALL TO ACTION
+Heading: Ready to {result}?
+Button: {same as primary}
+
+============================================================
+PAGE 2. QUIZ OR APPLICATION
+============================================================
+
+Intro line: Answer {number} quick questions so we can {benefit to them}.
+
+Question 1 (easy, no personal data): What best describes you? {option A} / {option B} / {option C}
+Question 2: What is your biggest challenge right now? {options}
+Question 3: How soon do you want to {result}? Right away / Within 3 months / Just researching
+Question 4 (qualifier): {budget, revenue, property type, injury date, etc.} {options}
+Contact step heading: Where should we send your {result/estimate/plan}?
+Fields: First name, Email, Mobile phone
+Consent line: By submitting, you agree to receive calls and texts from {Company} about your request, including automated and AI-assisted messages. Consent is not a condition of purchase. Msg and data rates may apply. Reply STOP to opt out.
+
+============================================================
+PAGE 3. BOOKING PAGE
+============================================================
+
+Headline: Great news, {first_name}. You qualify for a {call name}.
+Subheadline: Pick a time below. The call takes {length} minutes and you will leave with {specific takeaway}.
+Bullets under calendar:
+ - We will review {their situation}.
+ - You will see {deliverable}.
+ - No obligation. If it is not a fit, we will tell you.
+
+============================================================
+PAGE 4. THANK-YOU PAGE
+============================================================
+
+Headline: You are booked for {day} at {time}.
+Step 1: Add it to your calendar. {button}
+Step 2: Watch this {length}-minute video so the call is useful. {video}
+Step 3: Reply to the text we just sent with "YES" to confirm.
+Line: Need to reschedule? Use the link in your confirmation email.
+
+============================================================
+FINAL CHECK
+============================================================
+[ ] Headline names a result a buyer would pay for.
+[ ] The button says what they get, not "Submit".
+[ ] Every testimonial includes a specific detail.
+[ ] Consent and opt-out language is on every form that collects a phone number.
+[ ] Page reads cleanly on a phone with no zooming.

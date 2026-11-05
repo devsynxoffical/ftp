@@ -219,6 +219,41 @@ export default function Footer() {
         </div>
       </div>
 
+      <nav className="find" aria-label="Explore">
+        <span className="fh">Explore</span>
+        <ul>
+          {[
+            ["/services", "Services"],
+            ["/funnels-for", "Funnels by industry"],
+            ["/case-studies", "Case studies"],
+            ["/compare", "Comparisons"],
+            ["/tools", "Free calculators"],
+            ["/templates", "Free templates"],
+            ["/glossary", "Glossary"],
+            ["/blog", "Journal"],
+          ].map(([href, label]) => (
+            <li key={href}>
+              <Link href={href}>{label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <nav className="find" aria-label="Partner sites">
+        <span className="fh">Partner sites</span>
+        <ul>
+          <li>
+            <a href="https://qualifiedleadsx.com" target="_blank" rel="noopener">QualifiedLeadsX: high-ticket B2B lead generation</a>
+          </li>
+          <li>
+            <a href="https://contractorleads.us" target="_blank" rel="noopener">ContractorLeads: verified contractor leads</a>
+          </li>
+          <li>
+            <a href="https://rankempire.us" target="_blank" rel="noopener">Rank Empire: SEO, AEO and GEO agency</a>
+          </li>
+        </ul>
+      </nav>
+
       <nav className="find" aria-label="Case studies by industry">
         <span className="fh">Case studies by industry</span>
         <ul>
