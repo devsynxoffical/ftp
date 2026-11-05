@@ -219,54 +219,81 @@ export default function Footer() {
         </div>
       </div>
 
-      <nav className="find" aria-label="Explore">
-        <span className="fh">Explore</span>
-        <ul>
-          {[
-            ["/services", "Services"],
-            ["/funnels-for", "Funnels by industry"],
-            ["/case-studies", "Case studies"],
-            ["/compare", "Comparisons"],
-            ["/tools", "Free calculators"],
-            ["/templates", "Free templates"],
-            ["/glossary", "Glossary"],
-            ["/blog", "Journal"],
-          ].map(([href, label]) => (
-            <li key={href}>
-              <Link href={href}>{label}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="fdir">
+        <nav aria-label="Services">
+          <span className="fdh">Services</span>
+          <ul>
+            {[
+              ["/sales-funnel-agency", "Sales funnel agency"],
+              ["/gohighlevel-agency", "GoHighLevel agency"],
+              ["/ai-voice-agents", "AI voice agents"],
+              ["/ai-appointment-setter", "AI appointment setter"],
+              ["/speed-to-lead", "Speed to lead"],
+              ["/vsl-funnels", "VSL funnels"],
+              ["/meta-conversions-api-setup", "Meta CAPI setup"],
+              ["/services", "All services"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <nav className="find" aria-label="Partner sites">
-        <span className="fh">Partner sites</span>
-        <ul>
-          <li>
-            <a href="https://qualifiedleadsx.com" target="_blank" rel="noopener">QualifiedLeadsX: high-ticket B2B lead generation</a>
-          </li>
-          <li>
-            <a href="https://contractorleads.us" target="_blank" rel="noopener">ContractorLeads: verified contractor leads</a>
-          </li>
-          <li>
-            <a href="https://rankempire.us" target="_blank" rel="noopener">Rank Empire: SEO, AEO and GEO agency</a>
-          </li>
-        </ul>
-      </nav>
+        <nav aria-label="Resources">
+          <span className="fdh">Resources</span>
+          <ul>
+            {[
+              ["/funnels-for", "Funnels by industry"],
+              ["/case-studies", "Case studies"],
+              ["/tools", "Free calculators"],
+              ["/templates", "Free templates"],
+              ["/compare", "Comparisons"],
+              ["/glossary", "Glossary"],
+              ["/blog", "Journal"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <nav className="find" aria-label="Case studies by industry">
-        <span className="fh">Case studies by industry</span>
-        <ul>
-          {CASE_INDUSTRIES.map((i) => (
-            <li key={i.slug}>
-              <Link href={`/case-studies/${i.slug}`}>{i.hubTitle.replace(/ Case Studies$/, "")}</Link>
+        <nav aria-label="Case studies by industry" className="fdir-wide">
+          <span className="fdh">Case studies by industry</span>
+          <ul>
+            {CASE_INDUSTRIES.map((i) => (
+              <li key={i.slug}>
+                <Link href={`/case-studies/${i.slug}`}>{i.hubTitle.replace(/ Case Studies$/, "").replace(/ Lead Generation$/, "")}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/case-studies/all">All case studies</Link>
             </li>
-          ))}
-          <li>
-            <Link href="/case-studies/all">All case studies</Link>
-          </li>
-        </ul>
-      </nav>
+          </ul>
+        </nav>
+
+        <nav aria-label="Partner sites">
+          <span className="fdh">Partner sites</span>
+          <ul className="fdir-partners">
+            <li>
+              <a href="https://qualifiedleadsx.com" target="_blank" rel="noopener">
+                QualifiedLeadsX<small>High-ticket B2B lead generation</small>
+              </a>
+            </li>
+            <li>
+              <a href="https://contractorleads.us" target="_blank" rel="noopener">
+                ContractorLeads<small>Verified contractor leads</small>
+              </a>
+            </li>
+            <li>
+              <a href="https://rankempire.us" target="_blank" rel="noopener">
+                Rank Empire<small>SEO, AEO and GEO agency</small>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
       <div className="freach">
         <div>
