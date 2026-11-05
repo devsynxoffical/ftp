@@ -138,6 +138,10 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 </ul>
 <p>Our <a href="/sales-funnel-agency">sales funnel agency</a> builds the full system, from page to pipeline, in 5 to 10 business days.</p>`,
       },
+      {
+        h2: "Related terms",
+        html: `<p>A sales funnel usually starts with a <a href="/glossary/lead-magnet">lead magnet</a>, often converts first with a <a href="/glossary/tripwire-offer">tripwire offer</a> or a booked call, and is managed day to day in a <a href="/glossary/crm-pipeline">CRM pipeline</a>.</p>`,
+      },
     ],
     proof: {
       items: [
@@ -213,6 +217,10 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 </ul>
 <p>Our <a href="/sales-funnel-agency">sales funnel agency</a> plans the full offer stack before building the checkout. The <a href="/blog/low-ticket-funnel-guide">low-ticket funnel guide</a> covers pricing in depth.</p>`,
       },
+      {
+        h2: "Related terms",
+        html: `<p>A tripwire offer becomes a <a href="/glossary/self-liquidating-offer">self-liquidating offer</a> once the checkout covers its ad spend. It is almost always paired with an <a href="/glossary/order-bump">order bump</a> and followed by <a href="/glossary/upsell-and-downsell">upsells and downsells</a>.</p>`,
+      },
     ],
     proof: {
       items: [
@@ -281,6 +289,10 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Scaling before the numbers hold.</strong> Liquidation rates usually drop as budgets rise, so scale in steps.</li>
 </ul>
 <p>We plan the offer stack and build the checkout through our <a href="/sales-funnel-agency">sales funnel agency</a>.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>The front end of a self-liquidating offer is usually a <a href="/glossary/tripwire-offer">tripwire offer</a>. The <a href="/glossary/order-bump">order bump</a> and <a href="/glossary/upsell-and-downsell">upsells and downsells</a> provide the extra order value that makes it liquidate.</p>`,
       },
     ],
     proof: {
@@ -356,6 +368,10 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 </ul>
 <p>We write and build checkouts, bumps and upsells as part of our <a href="/sales-funnel-agency">sales funnel agency</a> service. See more checkout results in <a href="/case-studies/low-ticket-funnels">low-ticket funnels</a>.</p>`,
       },
+      {
+        h2: "Related terms",
+        html: `<p>An order bump usually sits on the checkout of a <a href="/glossary/tripwire-offer">tripwire offer</a>, comes before the <a href="/glossary/upsell-and-downsell">upsells and downsells</a>, and is often the difference between a front end that loses money and a <a href="/glossary/self-liquidating-offer">self-liquidating offer</a>.</p>`,
+      },
     ],
     proof: {
       items: [
@@ -427,6 +443,10 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Not tracking each page.</strong> Measure take rate per offer so you know which one to fix.</li>
 </ul>
 <p>We plan and build upsell paths in our <a href="/sales-funnel-agency">sales funnel agency</a> service.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>Upsells and downsells follow the <a href="/glossary/order-bump">order bump</a> on a <a href="/glossary/tripwire-offer">tripwire offer</a> checkout, and together they decide whether the front end becomes a <a href="/glossary/self-liquidating-offer">self-liquidating offer</a>.</p>`,
       },
     ],
     proof: {
@@ -751,6 +771,462 @@ export const GLOSSARY_PAGES: SeoPage[] = [
       { q: "Is show rate the same as close rate?", a: "No. Show rate measures how many booked calls happen. Close rate measures how many held calls turn into sales. A funnel can have a strong close rate and still lose revenue if many people never show, so track both and fix whichever has the larger gap first." },
     ],
     related: ["/ai-appointment-setter", "/tools/no-show-cost-calculator", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/glossary/crm-pipeline", "/templates/no-show-reminder-sequence"],
+    parent: G,
+    updated: U,
+  },
+  {
+    path: "/glossary/conversions-api",
+    kind: "glossary",
+    term: "Conversions API",
+    keyword: "what is conversions api",
+    title: "What Is Conversions API? Meta CAPI Explained Simply",
+    description: "What is Conversions API? Meta's server-side tracking explained: how it works with the Pixel, which events to send, deduplication, and a 31% event lift.",
+    eyebrow: "Glossary",
+    h1: "What is Conversions API? Definition and how it works",
+    intro:
+      "<strong>What is Conversions API</strong>? Meta's Conversions API, usually called CAPI, is a server-to-server connection that sends conversion events, such as leads, booked calls and purchases, from your website server or CRM directly to Meta. It does not depend on the visitor's browser, so it records events the browser-based Pixel misses.",
+    quick: {
+      q: "What is Conversions API?",
+      a: "Conversions API is Meta's server-side tracking method. Instead of relying only on browser code, your server or CRM sends events like Lead, Schedule and Purchase straight to Meta with matching customer data. It recovers events lost to ad blockers and browser privacy limits and lets you send offline outcomes such as booked calls.",
+    },
+    sections: [
+      {
+        h2: "How Conversions API works",
+        html: `<ol>
+<li>A visitor converts on your funnel, and the <a href="/glossary/meta-pixel">Meta Pixel</a> fires a browser event.</li>
+<li>Your server or CRM sends the same event to Meta through the API, with hashed customer details such as email and phone.</li>
+<li>Both events carry the same event ID, so Meta deduplicates them and counts the conversion once.</li>
+<li>Later outcomes, such as a booked call or closed sale in the <a href="/glossary/crm-pipeline">CRM pipeline</a>, are sent as additional events.</li>
+<li>Meta uses the fuller data to report results and optimize delivery toward people likely to convert.</li>
+</ol>`,
+      },
+      {
+        h2: "Pixel vs Conversions API",
+        html: `<div class="table-wrap"><table>
+<thead><tr><th></th><th>Meta Pixel</th><th>Conversions API</th></tr></thead>
+<tbody>
+<tr><td>Runs in</td><td>Visitor's browser</td><td>Your server or CRM</td></tr>
+<tr><td>Affected by ad blockers</td><td>Yes</td><td>No</td></tr>
+<tr><td>Offline events (calls, sales)</td><td>No</td><td>Yes</td></tr>
+<tr><td>Setup effort</td><td>Low</td><td>Moderate</td></tr>
+</tbody></table></div>
+<p>Use both together, with deduplication, rather than choosing one.</p>`,
+      },
+      {
+        h2: "Example: 31% more events recovered",
+        html: `<p>On funnels where we added Conversions API alongside the Pixel, Meta recorded <strong>31% more conversion events</strong> than with the Pixel alone. Just as important, sending booked calls and closed deals lets the campaign optimize for buyers instead of form fillers, which is how lead funnels keep a low <a href="/glossary/cost-per-lead">cost per lead</a> while lead quality rises.</p>
+<p>The step-by-step setup is in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API setup guide</a>.</p>`,
+      },
+      {
+        h2: "Common mistakes",
+        html: `<ul>
+<li><strong>No deduplication.</strong> Without a shared event ID, every conversion counts twice.</li>
+<li><strong>Weak customer matching.</strong> Sending events without hashed email or phone lowers match quality.</li>
+<li><strong>Sending only the Lead event.</strong> The value comes from sending deeper events such as Schedule and Purchase.</li>
+<li><strong>Never checking Events Manager.</strong> Match quality and duplicate warnings show problems quickly.</li>
+</ul>
+<p>We configure Pixel, CAPI and CRM events together in our <a href="/meta-conversions-api-setup">Meta Conversions API setup</a> service.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>Conversions API works alongside the <a href="/glossary/meta-pixel">Meta Pixel</a>, reads outcomes from your <a href="/glossary/crm-pipeline">CRM pipeline</a> and directly affects <a href="/glossary/cost-per-lead">cost per lead</a> by improving what Meta optimizes for.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "31%", label: "More conversion events recorded with CAPI", href: "/meta-conversions-api-setup" },
+        { value: "$4.38", label: "Cost per lead across 6,275 MVA leads", href: "/case-studies/mva-6275-leads-at-4-38-cpl" },
+        { value: "$6.72", label: "Cost per lead across 1,890 agency leads", href: "/case-studies/agency-1890-leads-at-6-72-cpl" },
+      ],
+      more: { label: "See 275+ results", href: "/case-studies" },
+    },
+    faqs: [
+      { q: "Do I still need the Meta Pixel if I use Conversions API?", a: "Yes. Meta recommends running both, and we do too. The Pixel captures browser behavior such as page views quickly, while Conversions API fills the gaps and adds offline events. With a shared event ID on both, Meta deduplicates them and counts each conversion once." },
+      { q: "Which events should I send through Conversions API?", a: "For lead generation, send Lead when the form is submitted, Schedule when a call is booked, and Purchase or a custom event when a deal closes, with the deal value. For eCommerce, send the full checkout path. Deeper events help Meta find people who buy, not just people who fill in forms." },
+      { q: "Is Conversions API hard to set up?", a: "It ranges from simple to technical. Platforms like Shopify and GoHighLevel offer built-in connections for common events. Custom funnels, CRM stage events and deduplication need more work, often through a server-side tag manager or webhooks. Testing in Events Manager before relying on the data is essential." },
+      { q: "Does Conversions API lower cost per lead?", a: "It can, indirectly. More complete data gives Meta more signals to optimize on, which often stabilizes performance. The bigger gain comes from sending booked calls and sales, so Meta targets people who become customers. Lead cost may stay similar while cost per booked call or sale falls." },
+      { q: "Is Conversions API compliant with privacy rules?", a: "It can be, when customer data is hashed before sending, your privacy policy discloses the tracking, and consent rules for your region are respected. It does not bypass a visitor's choices; it changes where events are sent from. Review your consent setup with your legal adviser." },
+    ],
+    related: ["/meta-conversions-api-setup", "/glossary/meta-pixel", "/glossary/cost-per-lead", "/glossary/crm-pipeline", "/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026"],
+    parent: G,
+    updated: U,
+  },
+  {
+    path: "/glossary/meta-pixel",
+    kind: "glossary",
+    term: "Meta Pixel",
+    keyword: "meta pixel",
+    title: "Meta Pixel: Definition, Events and Setup Basics",
+    description: "The Meta Pixel is browser code that reports funnel events to Meta. Definition, standard events, how it pairs with Conversions API, and setup mistakes.",
+    eyebrow: "Glossary",
+    h1: "Meta Pixel: what it is and how it tracks your funnel",
+    intro:
+      "The <strong>Meta Pixel</strong>, formerly the Facebook Pixel, is a small piece of JavaScript placed on your website that reports what visitors do, such as viewing a page, submitting a lead form or buying, back to Meta. Those events power ad reporting, optimization and retargeting audiences.",
+    quick: {
+      q: "What is the Meta Pixel?",
+      a: "The Meta Pixel is browser-based tracking code from Meta that fires events when visitors take actions on your site, such as PageView, Lead, Schedule and Purchase. Meta uses those events to report ad results, optimize campaigns toward people likely to convert, and build retargeting and lookalike audiences.",
+    },
+    sections: [
+      {
+        h2: "How the Meta Pixel works",
+        html: `<ol>
+<li>The base code loads on every page and records a PageView.</li>
+<li>Standard events fire on key actions: Lead on the thank-you page, Schedule after a booking, Purchase after checkout.</li>
+<li>Each event is matched to a Meta user where possible and attributed to the ad they saw or clicked.</li>
+<li>Campaigns optimized for an event, such as Lead, use that data to find similar people.</li>
+</ol>
+<p>Because the Pixel runs in the browser, ad blockers and privacy settings stop some events from reaching Meta. That gap is why it is paired with the <a href="/glossary/conversions-api">Conversions API</a>.</p>`,
+      },
+      {
+        h2: "Standard events for a lead funnel",
+        html: `<div class="table-wrap"><table>
+<thead><tr><th>Event</th><th>Fires when</th></tr></thead>
+<tbody>
+<tr><td>PageView</td><td>Any page loads</td></tr>
+<tr><td>ViewContent</td><td>Key page, such as a VSL page, loads</td></tr>
+<tr><td>Lead</td><td>Form or quiz is submitted</td></tr>
+<tr><td>Schedule</td><td>A call is booked</td></tr>
+<tr><td>Purchase</td><td>Payment completes</td></tr>
+</tbody></table></div>
+<p>Track the same events in your <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard</a> so platform and CRM numbers can be compared.</p>`,
+      },
+      {
+        h2: "Example from our builds",
+        html: `<p>The Pixel alone undercounts. On funnels where we added Conversions API alongside it, Meta recorded <strong>31% more conversion events</strong>. Clean Pixel and CAPI events are part of how lead funnels such as <a href="/case-studies/mva-8810-leads-at-7-61-cpl">8,810 MVA leads at $7.61</a> and <a href="/case-studies/roofing-537-leads-at-4-27-cpl">537 roofing leads at $4.27</a> kept a low <a href="/glossary/cost-per-lead">cost per lead</a> at volume.</p>`,
+      },
+      {
+        h2: "Common mistakes",
+        html: `<ul>
+<li><strong>Lead firing on page load.</strong> Put the Lead event on the thank-you page or form submit, not the landing page.</li>
+<li><strong>Duplicate pixels.</strong> Two base codes or a plugin plus a manual install double-count events.</li>
+<li><strong>Optimizing on the wrong event.</strong> A PageView campaign brings viewers, not leads.</li>
+<li><strong>Pixel only.</strong> Without server events and CRM outcomes, Meta optimizes for cheap form fills.</li>
+</ul>
+<p>We install and test Pixel and CAPI together in our <a href="/meta-conversions-api-setup">Meta Conversions API setup</a> service.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>The Meta Pixel is the browser half of tracking; the <a href="/glossary/conversions-api">Conversions API</a> is the server half. Both feed the <a href="/glossary/cost-per-lead">cost per lead</a> you see in Ads Manager, and both should track every key step of your <a href="/glossary/sales-funnel">sales funnel</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "31%", label: "More events recorded with CAPI added", href: "/meta-conversions-api-setup" },
+        { value: "8,810", label: "MVA leads at $7.61", href: "/case-studies/mva-8810-leads-at-7-61-cpl" },
+        { value: "$4.27", label: "Cost per lead on 537 roofing leads", href: "/case-studies/roofing-537-leads-at-4-27-cpl" },
+      ],
+      more: { label: "See 275+ results", href: "/case-studies" },
+    },
+    faqs: [
+      { q: "Is the Meta Pixel the same as the Facebook Pixel?", a: "Yes. Meta renamed the Facebook Pixel to the Meta Pixel after the company rebrand. It is the same tracking code and works across Facebook, Instagram and the rest of Meta's ad network. Older guides and plugins still use the Facebook Pixel name, but the setup is the same." },
+      { q: "Where should the Meta Pixel be installed?", a: "The base code goes in the head of every page on your funnel, including checkout and thank-you pages. Event codes go where the action happens: Lead on form submit or thank-you page, Schedule after booking, Purchase after payment. Most funnel builders have a field for the Pixel ID." },
+      { q: "Why does my Meta Pixel show fewer leads than my CRM?", a: "Browsers block some events, people close the page before it loads, and attribution windows differ. A gap is normal with the Pixel alone. Adding Conversions API, with deduplication, closes much of it; we saw 31% more events recorded after adding server-side tracking." },
+      { q: "Can one Meta Pixel be used on several websites?", a: "Technically yes, but separate pixels or datasets per business are cleaner for reporting and audiences. For agencies, each client should have their own Pixel inside their own ad account, so data and ownership stay with the client if the relationship ends." },
+      { q: "How do I test if the Meta Pixel works?", a: "Use the Test Events tool in Meta Events Manager or the Meta Pixel Helper browser extension, then complete your funnel yourself. Check that each event fires once, on the right page, with the right parameters, and that browser and server events are deduplicated." },
+    ],
+    related: ["/meta-conversions-api-setup", "/glossary/conversions-api", "/glossary/cost-per-lead", "/glossary/sales-funnel", "/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026"],
+    parent: G,
+    updated: U,
+  },
+  {
+    path: "/glossary/crm-pipeline",
+    kind: "glossary",
+    term: "CRM pipeline",
+    keyword: "crm pipeline",
+    title: "CRM Pipeline: Definition, Stages and Examples",
+    description: "A CRM pipeline tracks every lead from new to won. Definition, stages for a booked-call funnel, conversion math between stages, and the mistakes to avoid.",
+    eyebrow: "Glossary",
+    h1: "CRM pipeline: definition, stages and examples",
+    intro:
+      "A <strong>CRM pipeline</strong> is the set of stages inside your customer relationship management software that every lead moves through, from new lead to won or lost. It shows where each deal stands, triggers the right automation at each step and tells you exactly where your funnel leaks.",
+    quick: {
+      q: "What is a CRM pipeline?",
+      a: "A CRM pipeline is a visual sequence of stages, such as new lead, contacted, booked, showed, proposal, won and lost, that tracks each contact's progress toward a sale. Moving a lead between stages can trigger texts, calls, tasks and tracking events, and the count in each stage reveals your conversion rates.",
+    },
+    sections: [
+      {
+        h2: "How a CRM pipeline works",
+        html: `<p>A typical pipeline for a booked-call funnel:</p>
+<ol>
+<li><strong>New lead</strong>: form submitted, <a href="/glossary/speed-to-lead">speed-to-lead</a> automation starts.</li>
+<li><strong>Contacted</strong>: first conversation by phone or text.</li>
+<li><strong>Qualified</strong>: meets your criteria for budget, need and timing.</li>
+<li><strong>Booked</strong>: call scheduled, reminders begin.</li>
+<li><strong>Showed</strong> or <strong>No-show</strong>: the basis of your <a href="/glossary/show-rate">show rate</a>.</li>
+<li><strong>Won</strong> or <strong>Lost</strong>: closed with value and reason.</li>
+</ol>
+<p>Each stage change can trigger automations and send events to Meta through the Conversions API.</p>`,
+      },
+      {
+        h2: "Pipeline math",
+        html: `<p><strong>Stage conversion rate = leads entering the next stage / leads in this stage x 100</strong></p>
+<p><em>Illustration:</em> 200 new leads, 150 contacted, 60 booked, 48 showed and 12 won gives contact 75%, booking 40% of contacted, show 80% and close 25%. The weakest ratio is where to work first. A <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard</a> keeps these visible weekly.</p>`,
+      },
+      {
+        h2: "Example from our builds",
+        html: `<p>Pipelines are how high-volume clients stay organized. An HVAC client tracked <a href="/case-studies/hvac-5628-appointments-booked">5,628 booked appointments</a> through stage-based automation, and an agency client moved <a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">180 appointments to $14,040 in revenue</a> on $2,824 of spend. In both, automations fired on stage changes so no lead waited on a person to remember it.</p>`,
+      },
+      {
+        h2: "Common mistakes",
+        html: `<ul>
+<li><strong>Too many stages.</strong> If reps skip stages, the data is useless. Six to eight is usually enough.</li>
+<li><strong>Stages without actions.</strong> Each stage should trigger something: a text, a task, a reminder or a tracking event.</li>
+<li><strong>No lost reasons.</strong> Without them, you cannot tell bad leads from bad follow-up.</li>
+<li><strong>Manual updates only.</strong> Automate stage moves from bookings, calendar outcomes and payments.</li>
+</ul>
+<p>We design pipelines and their automation in our <a href="/crm-automation">CRM automation</a> and <a href="/gohighlevel-agency">GoHighLevel agency</a> services.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>A pipeline is often packaged inside a <a href="/glossary/gohighlevel-snapshot">GoHighLevel snapshot</a>. Its first stages depend on <a href="/glossary/speed-to-lead">speed to lead</a>, and its booked and showed stages produce your <a href="/glossary/show-rate">show rate</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "5,628", label: "HVAC appointments booked", href: "/case-studies/hvac-5628-appointments-booked" },
+        { value: "180", label: "Appointments on $2,824 spend", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
+        { value: "337", label: "Home services appointments on $1,621", href: "/case-studies/home-services-337-appointments-booked" },
+      ],
+      more: { label: "See agency and SaaS results", href: "/case-studies/agency-saas-lead-generation" },
+    },
+    faqs: [
+      { q: "What stages should a CRM pipeline have?", a: "Match stages to how you actually sell. For booked-call funnels, new lead, contacted, qualified, booked, showed, no-show, won and lost covers most businesses. Add a proposal or contract stage for longer B2B sales. Keep the list short enough that every stage is used consistently by the whole team." },
+      { q: "What is the difference between a CRM and a pipeline?", a: "The CRM is the software that stores contacts, conversations and deals. A pipeline is one view inside the CRM showing deals moving through stages. Many CRMs support several pipelines, for example one for new sales and another for renewals or referrals." },
+      { q: "Which CRM is best for pipelines?", a: "For businesses that book appointments, GoHighLevel works well because forms, calendars, texts, calls and pipelines live in one account. HubSpot is strong for larger B2B teams with longer sales cycles. We compare both side by side in our GoHighLevel vs HubSpot guide." },
+      { q: "Should pipeline stages trigger automation?", a: "Yes. Stage changes are the most reliable triggers in a CRM. Booking a call should start reminders, a no-show should start a rebooking sequence, and a won deal should send a purchase event to Meta and start onboarding. Automation keeps the pipeline accurate and the follow-up consistent." },
+      { q: "How often should I review my pipeline?", a: "Weekly for conversion rates between stages and daily for leads stuck too long in early stages. A lead sitting in new for more than a few minutes, or in booked without a reminder, is a sign that an automation failed or a stage is not being used." },
+    ],
+    related: ["/crm-automation", "/gohighlevel-agency", "/glossary/gohighlevel-snapshot", "/glossary/speed-to-lead", "/glossary/show-rate", "/compare/gohighlevel-vs-hubspot"],
+    parent: G,
+    updated: U,
+  },
+  {
+    path: "/glossary/ai-voice-agent",
+    kind: "glossary",
+    term: "AI voice agent",
+    keyword: "what is an ai voice agent",
+    title: "What Is an AI Voice Agent? Definition, Costs, Examples",
+    description: "What is an AI voice agent? Software that calls, qualifies and books leads by phone. How it works, real costs per booking, and the mistakes to avoid.",
+    eyebrow: "Glossary",
+    h1: "What is an AI voice agent? Definition and examples",
+    intro:
+      "<strong>What is an AI voice agent</strong>? It is software that holds natural phone conversations using speech recognition, a language model and a synthetic voice. In sales funnels, it calls new leads within seconds, asks qualifying questions, answers common objections and books appointments straight onto a calendar.",
+    quick: {
+      q: "What is an AI voice agent?",
+      a: "An AI voice agent is an automated caller that talks like a person. It listens, understands, replies in under a second and takes actions such as booking a slot or updating the CRM. In funnels it handles first contact and qualification at roughly $0.10 to $0.25 per minute, around the clock.",
+    },
+    sections: [
+      {
+        h2: "How an AI voice agent works",
+        html: `<ol>
+<li>A new lead triggers a webhook from the CRM.</li>
+<li>The agent calls within seconds, introduces itself as an AI assistant and confirms the enquiry.</li>
+<li>Speech is transcribed, the language model decides the reply from an approved script and knowledge base, and a synthetic voice speaks it.</li>
+<li>Qualified leads are offered two specific slots and booked on the live calendar.</li>
+<li>The outcome, answers and a summary are written back to the <a href="/glossary/crm-pipeline">CRM pipeline</a>.</li>
+</ol>
+<p>Because it calls instantly at any hour, it is the most common way we deliver sub-minute <a href="/glossary/speed-to-lead">speed to lead</a>.</p>`,
+      },
+      {
+        h2: "Costs and example numbers",
+        html: `<div class="table-wrap"><table>
+<thead><tr><th>Metric</th><th>AI voice agent</th><th>Human setter</th></tr></thead>
+<tbody>
+<tr><td>Cost basis</td><td>About $0.10 to $0.25 per minute</td><td>Salary or commission</td></tr>
+<tr><td>Cost per booked appointment</td><td>About $3 to $9</td><td>About $40 to $120</td></tr>
+<tr><td>Availability</td><td>24/7, instant</td><td>Business hours</td></tr>
+</tbody></table></div>
+<p><strong>Cost per booking formula:</strong> (minutes per call x calls per booking x price per minute). <em>Illustration:</em> 3 minutes x 10 calls x $0.20 = $6 per booking. Check yours in the <a href="/tools/ai-voice-agent-roi-calculator">AI voice agent ROI calculator</a>.</p>`,
+      },
+      {
+        h2: "Example from our cases",
+        html: `<p>In personal injury, instant AI-assisted contact helped one campaign book <a href="/case-studies/mva-387-appointments-booked">387 appointments in 24 days</a>, and AI qualification ran in the <a href="/milliondollarcasestudy">$1.52M consulting funnel</a>. Across 60+ speed-to-lead deployments, contacting leads inside a minute lifted lead-to-booking 2.4x. The full comparison is in <a href="/compare/ai-voice-agent-vs-human-setter">AI voice agent vs human setter</a>.</p>`,
+      },
+      {
+        h2: "Common mistakes",
+        html: `<ul>
+<li><strong>Hiding that it is AI.</strong> Disclose it in the first sentence; trust and compliance both depend on it.</li>
+<li><strong>Slow replies.</strong> Latency over a second makes calls feel robotic and raises hang-ups.</li>
+<li><strong>No knowledge base.</strong> An agent that cannot answer simple questions loses the lead.</li>
+<li><strong>No human handoff.</strong> Let callers reach a person when they ask.</li>
+<li><strong>Calling without consent.</strong> Collect call and text consent on the form and respect calling hours.</li>
+</ul>
+<p>We build, script and connect agents in our <a href="/ai-voice-agents">AI voice agents</a> service. A starting script is in the <a href="/templates/ai-voice-agent-script">AI voice agent script template</a>.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>An AI voice agent delivers <a href="/glossary/speed-to-lead">speed to lead</a>, protects <a href="/glossary/show-rate">show rate</a> through confirmation and reminder calls, and logs every outcome into the <a href="/glossary/crm-pipeline">CRM pipeline</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$3-$9", label: "AI cost per booked appointment", href: "/ai-voice-agents" },
+        { value: "387", label: "MVA appointments booked in 24 days", href: "/case-studies/mva-387-appointments-booked" },
+        { value: "$1.52M", label: "Consulting funnel with AI qualification", href: "/milliondollarcasestudy" },
+        { value: "$388K", label: "Revenue from 1,079 verified MVA leads", href: "/case-studies/mva-388k-revenue-on-20k-ad-spend" },
+      ],
+      more: { label: "See MVA and personal injury results", href: "/case-studies/mva-personal-injury-lead-generation" },
+    },
+    faqs: [
+      { q: "Do AI voice agents sound like real people?", a: "Modern agents sound natural, with realistic voices and replies in under a second. Callers can usually still tell it is AI over a longer conversation, which is why we disclose it at the start. In practice, prospects care more about fast, useful answers and easy booking than about who is calling." },
+      { q: "How much does an AI voice agent cost?", a: "Running costs are typically $0.10 to $0.25 per minute of talk time. With normal contact and booking rates that comes to roughly $3 to $9 per booked appointment, compared with $40 to $120 per booking from human setters. Setup and scripting are separate one-time costs." },
+      { q: "Can an AI voice agent replace my sales team?", a: "No. It replaces the repetitive first-contact work: calling new leads, qualifying, booking, confirming and rebooking no-shows. Your closers keep the sales conversation and spend their time only on leads who already meet your criteria, which usually makes the team more productive, not smaller." },
+      { q: "What can an AI voice agent connect to?", a: "Most agents connect by webhook or API to CRMs such as GoHighLevel and HubSpot, to calendars for live booking, and to SMS for follow-up texts. They write call outcomes, transcripts, answers and booked times back to the contact record so your team sees everything." },
+      { q: "Is it legal to call leads with an AI voice agent?", a: "It can be, when the lead consented to calls and texts on your form, the agent discloses that it is AI, and you respect calling hours, do-not-call lists and opt-outs. Rules vary by country and state, so have scripts and consent language reviewed before launch." },
+    ],
+    related: ["/ai-voice-agents", "/ai-appointment-setter", "/glossary/speed-to-lead", "/glossary/show-rate", "/glossary/crm-pipeline", "/compare/ai-voice-agent-vs-human-setter"],
+    parent: G,
+    updated: U,
+  },
+  {
+    path: "/glossary/gohighlevel-snapshot",
+    kind: "glossary",
+    term: "GoHighLevel snapshot",
+    keyword: "gohighlevel snapshot",
+    title: "GoHighLevel Snapshot: What It Is and How to Use It",
+    description: "A GoHighLevel snapshot copies a full account setup into a new sub-account. What it includes, how agencies use it, a real example and common mistakes.",
+    eyebrow: "Glossary",
+    h1: "GoHighLevel snapshot: definition and how agencies use it",
+    intro:
+      "A <strong>GoHighLevel snapshot</strong> is a saved template of a HighLevel sub-account's setup, including funnels, forms, pipelines, workflows, calendars and message templates, that can be loaded into another sub-account in one step. Agencies use snapshots to launch new clients with a proven system instead of rebuilding it each time.",
+    quick: {
+      q: "What is a GoHighLevel snapshot?",
+      a: "A GoHighLevel snapshot is a reusable copy of a sub-account's configuration: funnels, websites, forms, surveys, pipelines, workflows, calendars, custom fields and email and SMS templates. It does not copy contacts or conversations. Agencies on the agency plan load a snapshot into each new client account to start with a working system.",
+    },
+    sections: [
+      {
+        h2: "How a GoHighLevel snapshot works",
+        html: `<ol>
+<li>Build and test the full system in one sub-account.</li>
+<li>Create a snapshot from that sub-account in the agency view.</li>
+<li>Load the snapshot into a new or existing client sub-account, or share it by link with another agency.</li>
+<li>Customize the client's details: domain, phone number, calendar, branding and integrations.</li>
+<li>Push updates later by re-loading the snapshot or individual assets.</li>
+</ol>
+<p>The quality of the snapshot decides the quality of every account built from it, so it should include a tested <a href="/glossary/crm-pipeline">CRM pipeline</a> and <a href="/glossary/speed-to-lead">speed-to-lead</a> workflows.</p>`,
+      },
+      {
+        h2: "What a snapshot includes and excludes",
+        html: `<div class="table-wrap"><table>
+<thead><tr><th>Included</th><th>Not included</th></tr></thead>
+<tbody>
+<tr><td>Funnels, websites, forms, surveys</td><td>Contacts and conversations</td></tr>
+<tr><td>Pipelines and stages</td><td>Phone numbers</td></tr>
+<tr><td>Workflows and triggers</td><td>Connected payment and ad accounts</td></tr>
+<tr><td>Calendars, custom fields, templates</td><td>Domain connections</td></tr>
+</tbody></table></div>
+<p>Integrations such as an <a href="/glossary/ai-voice-agent">AI voice agent</a> webhook need reconnecting per account.</p>`,
+      },
+      {
+        h2: "Example from our cases",
+        html: `<p>Agency clients use our systems as snapshots for their own customers. One home services agency <a href="/case-studies/agency-15900-closed-in-10-days">closed $15,900 in 10 days</a> on a system we built, and another agency client generated <a href="/case-studies/agency-1890-leads-at-6-72-cpl">1,890 leads at $6.72</a>. Because the funnel, pipeline and follow-up came preloaded, each new client launch was a configuration task rather than a rebuild.</p>`,
+      },
+      {
+        h2: "Common mistakes",
+        html: `<ul>
+<li><strong>Snapshotting an untested account.</strong> Every broken workflow is copied into every client.</li>
+<li><strong>Hard-coded details.</strong> Use custom values for names, links and phone numbers so each client is customized in one place.</li>
+<li><strong>Overwriting live accounts.</strong> Loading a snapshot onto a working account can replace assets; test on a blank sub-account first.</li>
+<li><strong>No version notes.</strong> Keep a changelog so you know which clients run which version.</li>
+</ul>
+<p>We build and package snapshots in our <a href="/gohighlevel-agency">GoHighLevel agency</a> service, with the automation designed in <a href="/crm-automation">CRM automation</a>.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>A snapshot usually packages a <a href="/glossary/crm-pipeline">CRM pipeline</a>, <a href="/glossary/speed-to-lead">speed-to-lead</a> workflows and the booking flow for an <a href="/glossary/ai-voice-agent">AI voice agent</a>. Compare platforms in our <a href="/blog/gohighlevel-review">GoHighLevel review</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$15,900", label: "Closed in 10 days by an agency client", href: "/case-studies/agency-15900-closed-in-10-days" },
+        { value: "1,890", label: "Agency leads at $6.72 each", href: "/case-studies/agency-1890-leads-at-6-72-cpl" },
+        { value: "235", label: "New clients signed by an agency", href: "/case-studies/agency-235-new-clients-signed" },
+      ],
+      more: { label: "See agency and SaaS results", href: "/case-studies/agency-saas-lead-generation" },
+    },
+    faqs: [
+      { q: "Do I need the agency plan to use snapshots?", a: "To create and load snapshots across sub-accounts, you need a HighLevel agency plan, since snapshots are managed from the agency view. A business on a single-account plan can still receive a system built for them, but the snapshot itself is created and shared by an agency account." },
+      { q: "Does a GoHighLevel snapshot copy contacts?", a: "No. Snapshots copy the setup, not the data. Contacts, conversations, opportunities and phone numbers stay in the original account. That is what makes snapshots safe to share with clients and other agencies, and why each new account starts empty but fully configured." },
+      { q: "Can I buy a GoHighLevel snapshot?", a: "Yes. Many agencies and consultants sell niche snapshots for industries like roofing, med spas or real estate. Quality varies widely, so check that the workflows are tested, custom values are used and the funnels convert. A snapshot is only as good as the system it was taken from." },
+      { q: "How do I update clients who already have a snapshot?", a: "Edit the master sub-account, create a new snapshot version, then push the changed assets to client accounts. Push selectively, since loading everything can overwrite customizations a client made. Keep notes on what changed in each version so you can roll forward safely." },
+      { q: "How long does it take to build a good snapshot?", a: "A single-funnel snapshot with pipeline, calendar, speed-to-lead and reminder workflows can be built and tested in 5 to 10 business days. Multi-niche snapshots with several funnels, AI calling and reporting take longer and are scoped first. Testing every path before snapshotting saves far more time later." },
+    ],
+    related: ["/gohighlevel-agency", "/crm-automation", "/glossary/crm-pipeline", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/blog/gohighlevel-review"],
+    parent: G,
+    updated: U,
+  },
+  {
+    path: "/glossary/cost-per-lead",
+    kind: "glossary",
+    term: "Cost per lead",
+    keyword: "what is cost per lead",
+    title: "What Is Cost per Lead? CPL Formula and Real Benchmarks",
+    description: "What is cost per lead? The CPL formula, real benchmarks from $4.27 roofing leads to $24 at volume, and why the cheapest lead is not always the best lead.",
+    eyebrow: "Glossary",
+    h1: "What is cost per lead? Formula, benchmarks and examples",
+    intro:
+      "<strong>What is cost per lead</strong>? Cost per lead, or CPL, is the amount you spend on advertising to generate one lead. It is the first number most funnels are judged on, but on its own it can mislead: the real goal is the lowest cost per booked call, customer or sale.",
+    quick: {
+      q: "What is cost per lead?",
+      a: "Cost per lead is total ad spend divided by the number of leads generated in the same period. If you spend $2,292 and get 537 leads, your CPL is $4.27. It measures how efficiently ads and pages turn traffic into contacts, and it should always be read alongside lead quality.",
+    },
+    sections: [
+      {
+        h2: "The cost per lead formula",
+        html: `<p><strong>CPL = ad spend / leads</strong></p>
+<p>Related metrics take the same form: <strong>cost per booked call = ad spend / booked calls</strong>, and <strong>cost per acquisition = ad spend / customers</strong>. Track all three; a funnel with a higher CPL can still win on cost per customer.</p>
+<p>Run your own numbers in the <a href="/tools/cost-per-lead-calculator">cost per lead calculator</a>.</p>`,
+      },
+      {
+        h2: "Real CPL examples from our cases",
+        html: `<div class="table-wrap"><table>
+<thead><tr><th>Campaign</th><th>Spend</th><th>Leads</th><th>CPL</th></tr></thead>
+<tbody>
+<tr><td><a href="/case-studies/roofing-537-leads-at-4-27-cpl">Roofing</a></td><td>$2,292</td><td>537</td><td>$4.27</td></tr>
+<tr><td><a href="/case-studies/mva-6275-leads-at-4-38-cpl">MVA personal injury</a></td><td>$27,467.70</td><td>6,275</td><td>$4.38</td></tr>
+<tr><td><a href="/case-studies/mortgage-492-leads-at-5-23-cpl">Mortgage</a></td><td>$2,573</td><td>492</td><td>$5.23</td></tr>
+<tr><td><a href="/case-studies/agency-1890-leads-at-6-72-cpl">Agency</a></td><td>$12,707.55</td><td>1,890</td><td>$6.72</td></tr>
+<tr><td><a href="/case-studies/roofing-1024-leads-at-24-cpl">Roofing at volume</a></td><td>$24,902</td><td>1,024</td><td>$24</td></tr>
+</tbody></table></div>
+<p>CPL varies by industry, offer, geography and lead definition. A phone-verified lead costs more than an unverified one and is usually worth it.</p>`,
+      },
+      {
+        h2: "How cost per lead works in practice",
+        html: `<p>CPL depends on three things: the cost of reaching people (CPM), how many click (CTR), and how many of those convert on the page (opt-in rate). The page and offer usually move CPL more than ad tweaks, which is why a quiz or <a href="/glossary/lead-magnet">lead magnet</a> often halves it. Accurate CPL also depends on tracking: the <a href="/glossary/meta-pixel">Meta Pixel</a> and <a href="/glossary/conversions-api">Conversions API</a> decide which leads Meta counts and learns from.</p>
+<p>Example: a mortgage campaign with <a href="/case-studies/mortgage-65k-plus-revenue-on-5300-ad-spend">208 leads at $25.48</a> produced $65K+ in revenue, far more value than many cheaper lead campaigns.</p>`,
+      },
+      {
+        h2: "Common mistakes",
+        html: `<ul>
+<li><strong>Chasing the lowest CPL.</strong> Cheap leads that never answer cost more per sale.</li>
+<li><strong>Different lead definitions.</strong> Compare like with like: verified vs unverified, form vs call.</li>
+<li><strong>Ignoring follow-up.</strong> A slow response wastes leads you already paid for.</li>
+<li><strong>Judging on two days of data.</strong> Let campaigns exit learning before cutting them.</li>
+</ul>
+<p>Our <a href="/sales-funnel-agency">sales funnel agency</a> optimizes for cost per booked call and sale, not just CPL. More tactics are in <a href="/blog/how-to-reduce-cost-per-lead">how to reduce cost per lead</a>.</p>`,
+      },
+      {
+        h2: "Related terms",
+        html: `<p>Cost per lead is shaped by your <a href="/glossary/lead-magnet">lead magnet</a>, measured through the <a href="/glossary/meta-pixel">Meta Pixel</a> and improved by the <a href="/glossary/conversions-api">Conversions API</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$4.27", label: "Cost per lead on 537 roofing leads", href: "/case-studies/roofing-537-leads-at-4-27-cpl" },
+        { value: "$4.38", label: "Cost per lead across 6,275 MVA leads", href: "/case-studies/mva-6275-leads-at-4-38-cpl" },
+        { value: "$5.23", label: "Cost per lead on 492 mortgage leads", href: "/case-studies/mortgage-492-leads-at-5-23-cpl" },
+        { value: "$6.72", label: "Cost per lead on 1,890 agency leads", href: "/case-studies/agency-1890-leads-at-6-72-cpl" },
+      ],
+      more: { label: "See 275+ results", href: "/case-studies" },
+    },
+    faqs: [
+      { q: "What is a good cost per lead?", a: "It depends on the industry and what a customer is worth. In our cases, home services and legal leads have ranged from about $4 to $27, and mortgage from about $4 to $26. A good CPL is one where cost per customer stays well below customer value, not a fixed number." },
+      { q: "How do I calculate cost per lead?", a: "Divide total ad spend by the number of leads in the same period and from the same campaigns. If you spent $9,770 and generated 1,865 leads, your CPL is $5.24. Use the leads recorded in your CRM rather than the ad platform alone, since platforms can over or under count." },
+      { q: "Why is my cost per lead rising?", a: "Common causes are ad fatigue, a narrower audience, seasonal competition, a broken form or tracking, and slow pages. Check tracking first, since a missing Lead event looks like rising CPL. Then refresh creative, review the offer and test a shorter or more interactive form." },
+      { q: "Is a lower cost per lead always better?", a: "No. A lower CPL can come from looser targeting, unverified forms or incentives that attract people who never buy. Judge campaigns on cost per booked call and cost per customer. A $25 lead that books and closes often beats a $5 lead that never answers the phone." },
+      { q: "How can I reduce cost per lead?", a: "Improve the offer and page first: a clearer promise, a quiz or estimator instead of a long form, and fast-loading mobile pages. Then refresh creative, send deeper conversion events through the Conversions API, and test broader audiences. Our guide on reducing cost per lead covers each step." },
+    ],
+    related: ["/tools/cost-per-lead-calculator", "/sales-funnel-agency", "/glossary/lead-magnet", "/glossary/meta-pixel", "/glossary/conversions-api", "/blog/how-to-reduce-cost-per-lead"],
     parent: G,
     updated: U,
   },

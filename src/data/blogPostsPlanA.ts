@@ -220,7 +220,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     ],
     metrics: [
       { label: "High-Ticket Funnel", value: "$1.52M", sub: "collected in 19 months" },
-      { label: "Low-Ticket Front End", value: "$847K", sub: "$27 product + $17 bump" },
+      { label: "Low-Ticket Funnel", value: "$847K", sub: "$27 product + $17 bump" },
       { label: "Webinar ROAS", value: "29.7x", sub: "$64,960 on $2,184 spend" },
       { label: "MVA Funnel Revenue", value: "$388K", sub: "on $20,324 ad spend" },
     ],
@@ -919,7 +919,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
       "low ticket digital product",
     ],
     metrics: [
-      { label: "Front-End Revenue", value: "$847K", sub: "$27 product + $17 bump" },
+      { label: "Collected Revenue", value: "$847K", sub: "$27 product + $17 bump front end" },
       { label: "Ad Spend Recovered", value: "112%", sub: "on day zero" },
       { label: "One-Day Result", value: "$58,108", sub: "at 4.52x return on ad spend" },
       { label: "Small-Budget Test", value: "11.7x", sub: "132 sales on $1,214.35" },

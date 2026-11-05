@@ -808,4 +808,282 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     parent: HUB,
     updated: U,
   },
+  {
+    path: "/funnels-for/dentists",
+    kind: "industry",
+    keyword: "dental patient funnel",
+    serviceType: "Dental patient funnel",
+    title: "Dental Patient Funnel for New Patient Bookings",
+    description: "A dental patient funnel for new-patient exams, implants and Invisalign-style consults, with booking, reminders and HIPAA-aware tracking.",
+    eyebrow: "Funnels for dental practices",
+    h1: "A dental patient funnel that fills the new-patient schedule",
+    intro:
+      "A <strong>dental patient funnel</strong> needs to do two different jobs: fill hygiene chairs with new-patient exams and book consultations for high-value treatments such as implants or clear aligners. To be upfront, we do not have published dental case studies. The structure below comes from our work with comparable appointment-based local health businesses, chiefly med spas, and the proof on this page comes from those clients.",
+    quick: {
+      q: "How does a dental patient funnel work?",
+      a: "An ad offers either a new-patient exam or a free consultation for a specific treatment. A short page explains the offer, insurance acceptance and location, then a booking calendar or callback request captures the patient. Instant confirmation, three-channel reminders and recall automation protect the schedule and bring patients back every six months.",
+    },
+    sections: [
+      {
+        h2: "Two funnels, not one",
+        html: `<div class="table-wrap"><table><thead><tr><th></th><th>New-patient funnel</th><th>Treatment consult funnel</th></tr></thead><tbody>
+<tr><td>Offer</td><td>New-patient exam, cleaning and X-rays</td><td>Free implant or aligner consultation</td></tr>
+<tr><td>Questions</td><td>Insurance or self-pay, preferred times, location</td><td>Treatment interest, timeline, financing interest</td></tr>
+<tr><td>Next step</td><td>Self-book on the calendar</td><td>Call from treatment coordinator</td></tr>
+<tr><td>Value</td><td>Lifetime hygiene and restorative revenue</td><td>Large single case value</td></tr>
+</tbody></table></div>
+<p>Keeping them separate lets each ad speak to one motivation and lets the practice judge each on its own economics.</p>`,
+      },
+      {
+        h2: "Booking, reminders and recall",
+        html: `<p>Patients who request a callback get one within a minute through <a href="/speed-to-lead">speed-to-lead automation</a>, or an <a href="/ai-appointment-setter">AI appointment setter</a> after hours. Booked patients receive a confirmation, new-patient paperwork and reminders by text, email and call. Our <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> is the template we start from. After the visit, recall reminders keep hygiene patients on a six-month cycle.</p>`,
+      },
+      {
+        h2: "Privacy-conscious wording and tracking",
+        html: `<p>Dental practices are HIPAA covered entities, so the funnel collects only what is needed to book: name, contact details, preferred time and general treatment interest. Do not ask about symptoms or medical history on an ad landing page. Never send treatment interest, appointment type or any health information to Meta or Google in event names, parameters or URLs; track a generic "booked" event instead. Any form, CRM or call recording that touches patient information should run under a business associate agreement, and your compliance advisor should review the setup before launch.</p>`,
+      },
+      {
+        h2: "Proof from comparable appointment businesses",
+        html: `<p>Because we have no dental case studies, we point to the closest match: med spas, which share the same appointment economics and local, health-adjacent buyer. From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>, one clinic generated <a href="/case-studies/med-spa-74k-revenue-on-10k-ad-spend">$74,100 from 303 clients on $10K of spend</a>, another produced 1,011 leads on $4,703, and a third turned $590 into $11,700. Expect dental costs to differ, and treat these as directional rather than a dental benchmark.</p>`,
+      },
+      {
+        h2: "Mistakes that leave chairs empty",
+        html: `<ul>
+<li>Advertising "free" care that does not match what the practice can honor.</li>
+<li>Making new patients call during business hours only.</li>
+<li>No reminders beyond a single text the day before.</li>
+<li>Mixing new-patient and implant leads in one pipeline.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/med-spas">med spas</a>, <a href="/funnels-for/gyms">gyms</a> and <a href="/funnels-for/home-services">home services</a>.</p>`,
+      },
+    ],
+    proof: {
+      heading: "Proof from comparable appointment-based businesses (not dental)",
+      items: [
+        { value: "$74,100", label: "Med spa revenue from 303 clients on $10K", href: "/case-studies/med-spa-74k-revenue-on-10k-ad-spend" },
+        { value: "1,011", label: "Med spa leads on $4,703 ad spend", href: "/case-studies/med-spa-1011-leads" },
+        { value: "19.8x", label: "Med spa: $11,700 on $590", href: "/case-studies/med-spa-12k-revenue-on-590-ad-spend" },
+      ],
+      more: { label: "Med spa case studies", href: "/case-studies/med-spa-marketing" },
+    },
+    faqs: [
+      { q: "Do you have dental case studies?", a: "Not yet, and we will not invent them. Our closest proof comes from med spas, which are appointment-based, local and health-adjacent, with similar booking and no-show challenges. We show those results as a comparable reference and set expectations accordingly on a strategy call before any dental build." },
+      { q: "Should a dental funnel advertise a new-patient special?", a: "A clear new-patient offer works well for filling hygiene schedules, provided it is something the practice can honor for every patient and complies with your state dental board's advertising rules. For implants and aligners, a free consultation usually performs better than a price-led offer." },
+      { q: "Is it safe to use the Meta pixel on a dental website?", a: "It requires care. Keep the pixel and Conversions API events generic, never sending treatment names, appointment types or health details, and avoid tracking on pages where patients enter health information. Your compliance advisor should review the setup, since dental practices are covered entities under HIPAA." },
+      { q: "How do you reduce dental no-shows?", a: "Confirm the booking instantly, send reminders by text, email and call at set intervals, and make rescheduling easy with a link. Across our appointment businesses, three-channel reminders have lifted show rates as high as 88%. A small deposit for long consultation slots can also help." },
+      { q: "Can an AI agent book dental appointments?", a: "Yes, for scheduling. The agent calls back within seconds, checks preferred times and insurance or self-pay status, and books the slot. It should not discuss symptoms, diagnose or give clinical advice, and any call recordings should be stored in a system covered by a business associate agreement." },
+    ],
+    related: ["/case-studies/med-spa-marketing", "/speed-to-lead", "/ai-appointment-setter", "/funnels-for/med-spas", "/funnels-for/gyms", "/funnels-for/home-services", "/templates/no-show-reminder-sequence"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/funnels-for/home-services",
+    kind: "industry",
+    keyword: "home services funnel",
+    serviceType: "Home services funnel",
+    title: "Home Services Funnel That Books Estimates Fast",
+    description: "A home services funnel for remodeling, plumbing, windows and more: job-type quiz, verified phones and instant booking. 337 appointments on $1,621.",
+    eyebrow: "Funnels for home service companies",
+    h1: "A home services funnel that books estimates before competitors call back",
+    intro:
+      "A <strong>home services funnel</strong> covers a wide range of trades, from plumbing and electrical to windows, gutters, remodeling and landscaping. The common thread is a homeowner with a specific job, a short attention span and several companies to choose from. Our home services builds have produced 337 booked appointments on $1,621 of spend and leads as low as $5.10.",
+    quick: {
+      q: "What makes a home services funnel convert?",
+      a: "A job-specific offer, a short quiz on job type, scope, timeline and zip code, a verified phone number, then an instant call or text that books an estimate. Speed decides most jobs, because homeowners often contact three companies. Reviews, license details and clear service areas build the trust that closes.",
+    },
+    sections: [
+      {
+        h2: "Designing the job-type quiz",
+        html: `<p>Each trade gets its own questions, but the skeleton stays the same:</p>
+<ol>
+<li>What do you need? (repair, replacement, new installation)</li>
+<li>Project scope, such as number of windows, square footage or rooms.</li>
+<li>When do you want it done?</li>
+<li>Zip code, to confirm the service area.</li>
+<li>Homeowner or not.</li>
+<li>Name and OTP-verified phone.</li>
+</ol>
+<p>Scope and timeline questions let the business prioritize the biggest, soonest jobs. More examples are in the <a href="/templates/lead-qualification-questions">lead qualification questions</a> template.</p>`,
+      },
+      {
+        h2: "Winning the callback race",
+        html: `<p>Most home service companies lose jobs in the gap between the form and the first call. Our <a href="/speed-to-lead">speed-to-lead automation</a> texts and calls within seconds, and an <a href="/ai-appointment-setter">AI appointment setter</a> books the estimate when the office is busy or closed. A two-week follow-up sequence reaches homeowners who did not answer, and a seasonal reactivation campaign brings old estimates back when demand picks up.</p>`,
+      },
+      {
+        h2: "Cost per lead and booking data",
+        html: `<p>From our <a href="/case-studies/solar-home-services-lead-generation">solar and home services case studies</a>: <a href="/case-studies/home-services-337-appointments-booked">337 appointments on $1,621</a>, a $5.10 cost per lead on video, 49 leads at $13.03, 180 leads at $14.25, and 542 leads at $23.82. Another campaign produced 1,811 leads. Small repair jobs sit at the low end; remodeling and replacement projects cost more and pay more.</p>`,
+      },
+      {
+        h2: "Trust signals homeowners look for",
+        html: `<p>Homeowners are letting a stranger into their house. Show license and insurance details, recent local reviews, real photos of your crew and work, and a clear service area. Keep pricing claims honest: "estimates from" ranges are fine, but bait prices that change at the door create complaints. Agencies that want verified home service leads rather than a funnel can use <a href="https://contractorleads.us">ContractorLeads</a>.</p>`,
+      },
+      {
+        h2: "Home services funnel mistakes",
+        html: `<ul>
+<li>One generic "contact us" form for every service.</li>
+<li>No zip filter, so out-of-area leads eat budget.</li>
+<li>Calling back once and marking the lead dead.</li>
+<li>Not sending booked estimates back to Meta as conversions.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/roofing">roofing</a>, <a href="/funnels-for/hvac">HVAC</a> and <a href="/funnels-for/solar">solar</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "337", label: "Appointments booked on $1,621", href: "/case-studies/home-services-337-appointments-booked" },
+        { value: "$5.10", label: "Home services cost per lead", href: "/case-studies/home-services-5-10-cost-per-lead" },
+        { value: "1,811", label: "Home services leads generated", href: "/case-studies/home-services-1811-leads" },
+        { value: "180", label: "Leads at $14.25 on $2,665.70", href: "/case-studies/home-services-180-leads-at-14-25-cpl" },
+      ],
+      more: { label: "Solar and home services case studies", href: "/case-studies/solar-home-services-lead-generation" },
+    },
+    faqs: [
+      { q: "How much does a home services lead cost?", a: "Our documented home services campaigns ranged from $5.10 to $23.82 per lead. Smaller repair and maintenance jobs cost less; remodeling, windows and larger projects cost more but carry higher ticket values. Cost per booked estimate and close rate tell you far more than cost per lead alone." },
+      { q: "Which trades does this funnel work for?", a: "Plumbing, electrical, windows and doors, gutters, painting, flooring, remodeling, pest control, landscaping and similar local services. Each trade gets its own questions and offer. Roofing, HVAC and solar have dedicated pages because their buying patterns and qualification are distinct enough to need separate builds." },
+      { q: "Should home service companies use AI to call leads?", a: "If the office cannot call every lead within a minute, yes. An AI agent calls immediately, confirms the job, address and timeline, and books an estimate slot. AI calling typically costs about $3 to $9 per booked appointment, compared with $40 to $120 for human setters." },
+      { q: "How long should we follow up with a home services lead?", a: "At least 14 days with a mix of calls and texts, then a monthly or seasonal check-in. Many homeowners are collecting quotes or waiting on budget. A lead that went cold in spring often books in the fall when the follow-up references their original request." },
+      { q: "Do home services funnels need TCPA consent?", a: "If you use automated dialing, AI voice calls or marketing texts, yes. Put clear consent language next to the submit button naming your company, and store it with the lead. Manual calls to a number the homeowner just provided are lower risk, but consent protects both approaches." },
+    ],
+    related: ["/case-studies/solar-home-services-lead-generation", "/speed-to-lead", "/ai-appointment-setter", "/funnels-for/roofing", "/funnels-for/hvac", "/funnels-for/solar", "/templates/lead-qualification-questions"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/funnels-for/gyms",
+    kind: "industry",
+    keyword: "gym membership funnel",
+    serviceType: "Gym membership funnel",
+    title: "Gym Membership Funnel for Trials and Sign-Ups",
+    description: "A gym membership funnel built on a trial offer, booked visits and show-up reminders. Proof comes from fitness brands and online membership funnels.",
+    eyebrow: "Funnels for gyms and fitness studios",
+    h1: "A gym membership funnel that turns trial passes into paying members",
+    intro:
+      "A <strong>gym membership funnel</strong> sells a first visit, then a membership. Plainly: we do not have published case studies from physical gyms. What we do have is proof from fitness eCommerce brands, online membership funnels and local appointment businesses, which together cover the pieces a gym funnel needs: a low-friction offer, a booked visit and a strong show-up rate.",
+    quick: {
+      q: "What does a gym membership funnel look like?",
+      a: "An ad offers a trial pass, a short challenge or an intro class pack. A short page explains what happens on the first visit, then the prospect books a time and answers a few goal questions. Reminders protect attendance, and staff or automation present the membership offer during or right after the visit.",
+    },
+    sections: [
+      {
+        h2: "The trial offer and booked first visit",
+        html: `<p>Open-ended "come in anytime" passes have weak attendance. Booking a specific time for an intro session or class creates commitment. The page should name what the visitor will do, who will meet them and what it costs afterward. Goal questions (strength, weight loss, a sport, general fitness) give the coach something to work with. A paid challenge, such as a short program for a small fee, filters casual sign-ups much like a <a href="/glossary/tripwire-offer">tripwire offer</a>.</p>`,
+      },
+      {
+        h2: "Show-up and conversion sequence",
+        html: `<ol>
+<li>Instant text confirmation with address, parking and what to bring.</li>
+<li>Reminders by text, email and call before the session, using our <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a>.</li>
+<li>A call from an <a href="/ai-appointment-setter">AI appointment setter</a> to anyone who opted in but did not book.</li>
+<li>Membership offer at the end of the visit, with a short deadline.</li>
+<li><a href="/crm-automation">CRM automation</a> that follows up with visitors who did not join and reactivates lapsed members.</li>
+</ol>`,
+      },
+      {
+        h2: "Honest proof from comparable models",
+        html: `<p>None of the figures here come from a physical gym. From our <a href="/case-studies/supplements-fitness-ecommerce">supplements and fitness eCommerce cases</a>, a fitness brand reached $156,000 at 4.8x and another $102,000 at 4.2x, which shows the fitness audience responds to well-built offers. From our <a href="/case-studies/low-ticket-funnels">low-ticket funnel cases</a>, online membership offers sold <a href="/case-studies/low-ticket-funnel-1566-memberships-sold">1,566 memberships</a> in one program and 537 memberships for $57,577 in another. For local booking, our home services builds booked 337 appointments on $1,621. A gym's numbers will differ, so we treat these as directional.</p>`,
+      },
+      {
+        h2: "Ad policy notes and mistakes to avoid",
+        html: `<p>Meta's personal health policies limit before-and-after imagery and copy that implies something is wrong with the viewer's body, so lead with what members gain and how the first session works. Common mistakes:</p>
+<ul>
+<li>Free passes with no booked time, so most never show.</li>
+<li>No follow-up after a trial visit that did not convert.</li>
+<li>Discount-heavy offers that attract people who cancel after a month.</li>
+<li>Judging ads on leads instead of members who stay 90 days.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/med-spas">med spas</a>, <a href="/funnels-for/dentists">dentists</a> and <a href="/funnels-for/ecommerce">eCommerce</a> for gyms selling supplements or apparel.</p>`,
+      },
+    ],
+    proof: {
+      heading: "Proof from comparable fitness and membership funnels (not physical gyms)",
+      items: [
+        { value: "$156K", label: "Fitness eCommerce brand at 4.8x ROAS", href: "/case-studies/fitness-brand-156k-in-sales-at-4-8x-roas" },
+        { value: "1,566", label: "Online memberships sold via low-ticket funnel", href: "/case-studies/low-ticket-funnel-1566-memberships-sold" },
+        { value: "537", label: "Memberships, $57,577 revenue", href: "/case-studies/low-ticket-funnel-58k-revenue-on-23k-ad-spend" },
+        { value: "337", label: "Local appointments booked on $1,621", href: "/case-studies/home-services-337-appointments-booked" },
+      ],
+      more: { label: "Supplements and fitness case studies", href: "/case-studies/supplements-fitness-ecommerce" },
+    },
+    faqs: [
+      { q: "Do you have case studies from gyms?", a: "No, and we do not present other results as gym results. Our proof comes from fitness eCommerce brands, online membership funnels and local appointment businesses, which share the offer, booking and attendance mechanics a gym funnel relies on. We set expectations on that basis before building." },
+      { q: "Should a gym offer a free trial or a paid challenge?", a: "Free trials generate more sign-ups but weaker attendance. A small paid challenge or intro pack filters for people who are serious and often converts to membership at a higher rate. Many gyms run both and compare cost per member who stays at least three months." },
+      { q: "How do you get trial members to actually show up?", a: "Book a specific time rather than offering open access, confirm instantly, and remind by text, email and call before the session. Tell them exactly what will happen and who they will meet. Across our appointment businesses, three-channel reminders have lifted show rates as high as 88%." },
+      { q: "Can a gym sell memberships online without a visit?", a: "Some can, especially studios with online programming or well-known brands. Our low-ticket funnel cases sold online memberships at scale. For most local gyms, though, a booked first visit converts better because the space, coaches and community are what people are actually buying." },
+      { q: "What should a gym track in its funnel?", a: "Leads, booked visits, show rate, trial-to-member conversion, and members still active after 90 days. Sending booked visits and new memberships back to Meta through the Conversions API helps the algorithm find people who join, not just people who fill in a form." },
+    ],
+    related: ["/case-studies/supplements-fitness-ecommerce", "/ai-appointment-setter", "/crm-automation", "/funnels-for/med-spas", "/funnels-for/dentists", "/funnels-for/ecommerce", "/templates/no-show-reminder-sequence"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/funnels-for/saas",
+    kind: "industry",
+    keyword: "saas demo funnel",
+    serviceType: "SaaS demo funnel",
+    title: "SaaS Demo Funnel That Books Qualified Demos",
+    description: "A SaaS demo funnel with firmographic qualification, instant routing and demo reminders. Cases include $71,934 in 24 days for an AI SaaS.",
+    eyebrow: "Funnels for SaaS companies",
+    h1: "A SaaS demo funnel that routes qualified buyers straight to a calendar",
+    intro:
+      "A <strong>SaaS demo funnel</strong> exists to put the right buyers in front of a salesperson quickly while sending everyone else to self-serve or nurture. The usual failure is a long demo form, a two-day wait for an email and a calendar link nobody uses. Our SaaS and B2B results include $71,934 in 24 days with 320 new customers for an AI SaaS, and $64,571 on $19,768 of spend.",
+    quick: {
+      q: "How should a SaaS demo funnel work?",
+      a: "An ad or content piece leads to a page with one clear outcome and a short demo request: work email, company size, role and main use case. Qualified accounts see a calendar immediately and book; smaller accounts go to a trial or self-serve path. Reminders and a pre-demo email keep show rates high.",
+    },
+    sections: [
+      {
+        h2: "Qualify on the form, route instantly",
+        html: `<p>The demo form should ask only what decides the next step:</p>
+<ul>
+<li><strong>Work email</strong>, which reveals the company domain.</li>
+<li><strong>Company size</strong> or seats needed.</li>
+<li><strong>Role</strong>, to see if a buyer or a researcher is asking.</li>
+<li><strong>Use case or current tool</strong>, so the demo starts in the right place.</li>
+</ul>
+<p>Accounts that match your ideal customer profile see a calendar on the next screen. Everyone else gets a trial, a recorded demo or a nurture sequence. Our <a href="/templates/lead-qualification-questions">lead qualification questions</a> template includes B2B examples.</p>`,
+      },
+      {
+        h2: "Demo show rate and follow-up",
+        html: `<p>Booked demos get a confirmation with the agenda, a short pre-demo question and reminders. Requests that do not book get a call within a minute through <a href="/speed-to-lead">speed-to-lead automation</a>, or an <a href="/ai-voice-agents">AI voice agent</a> that confirms the use case and books the slot. After the demo, <a href="/crm-automation">CRM automation</a> sends the recording, pricing and a case study, then alerts the rep if the prospect revisits the pricing page.</p>`,
+      },
+      {
+        h2: "Not every SaaS needs a demo",
+        html: `<p>Low-priced, self-serve products often sell better through a trial or a low-ticket entry offer than a demo. The AI SaaS in our <a href="/case-studies/saas-71934-in-24-days-for-an-ai-saas">$71,934 in 24 days case</a> added 320 new customers through a direct purchase path, and another product reached 237 buyers. The demo funnel suits higher contract values where a conversation shortens the cycle. Many companies run both paths and route by company size.</p>`,
+      },
+      {
+        h2: "B2B and SaaS numbers from our cases",
+        html: `<p>From our <a href="/case-studies/agency-saas-lead-generation">agency, SaaS and lead gen case studies</a>: $64,571 revenue on $19,768 of SaaS spend, B2B lead generation at $24.37 per lead across 1,131 leads and $40 per lead across 501 leads, and an agency program that booked 180 appointments for $14,040 on $2,824. For outbound pipeline alongside the funnel, <a href="https://qualifiedleadsx.com">QualifiedLeadsX</a> specializes in high-ticket B2B lead generation.</p>`,
+      },
+      {
+        h2: "SaaS funnel mistakes",
+        html: `<ul>
+<li>Ten-field demo forms that ask for budget and phone before value is shown.</li>
+<li>Making qualified buyers wait for an SDR email to get a time.</li>
+<li>Optimizing ads for demo requests instead of held demos or opportunities.</li>
+<li>No self-serve option for small accounts, which clogs the sales calendar.</li>
+</ul>
+<p>Related builds: <a href="/funnels-for/consultants">consultants</a>, <a href="/funnels-for/coaches">coaches</a> and <a href="/funnels-for/ecommerce">eCommerce</a>.</p>`,
+      },
+    ],
+    proof: {
+      items: [
+        { value: "$71,934", label: "AI SaaS revenue in 24 days, 320 customers", href: "/case-studies/saas-71934-in-24-days-for-an-ai-saas" },
+        { value: "$64,571", label: "SaaS revenue on $19,768 ad spend", href: "/case-studies/saas-65k-revenue-on-20k-ad-spend" },
+        { value: "1,131", label: "B2B leads at $24.37", href: "/case-studies/lead-gen-1131-leads-at-24-37-cpl" },
+        { value: "180", label: "Appointments, $14,040 on $2,824", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
+      ],
+      more: { label: "Agency and SaaS case studies", href: "/case-studies/agency-saas-lead-generation" },
+    },
+    faqs: [
+      { q: "How much does a SaaS demo lead cost?", a: "It depends heavily on the market and contract value. Our B2B lead generation campaigns have ranged from $24.37 to $40 per lead, and well-qualified demo requests often cost more. Measure cost per held demo and cost per opportunity, because a cheap demo request that never shows is worth nothing." },
+      { q: "Should the calendar appear right after the demo form?", a: "For qualified accounts, yes. Showing the calendar immediately removes the delay where most demo requests go cold. Route by company size or role so only accounts that fit your ideal customer profile see sales availability, while smaller accounts get a trial or recorded demo." },
+      { q: "Is a demo funnel or a free trial better?", a: "Demo funnels suit higher contract values and complex products where a conversation speeds the decision. Free trials and direct purchase suit low-priced, simple products. Our AI SaaS case added 320 customers in 24 days without demos. Many companies run both and route visitors by size." },
+      { q: "How do you improve demo show rates?", a: "Send a confirmation with a clear agenda, ask one pre-demo question about their goal, and remind by email and text before the call. A short personal video from the rep also helps. Rebook no-shows automatically the same day instead of waiting for them to reply." },
+      { q: "Can an AI voice agent qualify SaaS leads?", a: "Yes, for first contact. The agent calls demo requests that did not book, confirms company size, role and use case, and books a slot with the right rep. It should hand off detailed product and pricing questions to a person. AI calling costs about $0.10 to $0.25 per minute." },
+    ],
+    related: ["/case-studies/agency-saas-lead-generation", "/speed-to-lead", "/ai-voice-agents", "/funnels-for/consultants", "/funnels-for/coaches", "/funnels-for/ecommerce", "/templates/lead-qualification-questions"],
+    parent: HUB,
+    updated: U,
+  },
 ];
