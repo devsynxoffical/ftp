@@ -31,7 +31,6 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_SERVICE_SCHEMA) }}
       />
       <Hero />
-      <HomeQuickAnswer />
       <LogoTicker />
       <LiveAutomation />
       <ServicesSection />
@@ -47,6 +46,7 @@ export default function Home() {
       <JournalPreview
         slugs={["ai-sales-funnels-voice-lead-qualification-2026", "ai-appointment-setter-voice-agent-cost-setup-results", "gohighlevel-vs-clickfunnels-lead-generation-2026"]}
       />
+      <HomeQuickAnswer />
       <HomeMostSearched />
       <IndustryLinks title="Case studies by industry" />
       <FAQSection />
