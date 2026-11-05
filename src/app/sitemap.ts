@@ -3,6 +3,7 @@ import { BLOG_POSTS } from "@/data/blogPosts";
 import { AUTHORS } from "@/data/authors";
 import { CASE_INDUSTRIES } from "@/data/caseIndustries";
 import { getAllCaseSlugs, getCasePage } from "@/data/casePages";
+import { SEO_PAGES } from "@/data/seo";
 import VIDEO_DURATIONS from "@/data/videoDurations.json";
 
 const DURATIONS = VIDEO_DURATIONS as Record<string, number>;
@@ -24,12 +25,12 @@ const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
  * which the previous `new Date()` on all entries effectively was.
  */
 const PAGE_LASTMOD: Record<string, string> = {
-  "": "2026-11-03",
-  "/case-studies": "2026-11-03",
-  "/case-leadgen": "2026-11-03",
-  "/case-ecom": "2026-11-03",
-  "/milliondollarcasestudy": "2026-10-29",
-  "/scalelowticket": "2026-10-29",
+  "": "2026-11-05",
+  "/case-studies": "2026-11-05",
+  "/case-leadgen": "2026-11-05",
+  "/case-ecom": "2026-11-05",
+  "/milliondollarcasestudy": "2026-11-05",
+  "/scalelowticket": "2026-11-05",
   "/blog": "2026-11-05",
   "/contact": "2026-10-28",
 };
@@ -66,7 +67,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const industryEntries: MetadataRoute.Sitemap = CASE_INDUSTRIES.map((i) => ({
     url: `${BASE_URL}/case-studies/${i.slug}`,
-    lastModified: new Date("2026-11-03"),
+    lastModified: new Date("2026-11-05"),
     changeFrequency: "weekly" as const,
     priority: 0.8,
     images: [OG],
@@ -109,6 +110,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     images: [`${BASE_URL}${a.avatar}`],
   }));
 
+  // SEO page plan: services, industry funnels, comparisons, tools, templates, glossary.
+  const seoEntries: MetadataRoute.Sitemap = SEO_PAGES.map((p) => ({
+    url: `${BASE_URL}${p.path}`,
+    lastModified: new Date(p.updated),
+    changeFrequency: p.kind === "hub" ? ("weekly" as const) : ("monthly" as const),
+    priority: p.kind === "hub" || p.kind === "service" ? 0.9 : p.kind === "industry" ? 0.8 : 0.7,
+    images: [OG],
+  }));
+
   // /case (old query-param viewer) now 308-redirects to these pages.
-  return [...staticEntries, ...blogEntries, ...authorEntries, ...allCasesEntry, ...industryEntries, ...caseEntries];
+  return [...staticEntries, ...seoEntries, ...blogEntries, ...authorEntries, ...allCasesEntry, ...industryEntries, ...caseEntries];
 }

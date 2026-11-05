@@ -8,7 +8,8 @@ import JournalPreview from "@/components/JournalPreview";
 import PageFaq from "@/components/PageFaq";
 import IndustryLinks from "@/components/case/IndustryLinks";
 import { getCaseHref } from "@/data/casePages";
-import { PAGE_FAQS } from "@/data/pageFaqs";
+import { PAGE_FAQS, PAGE_QUICK } from "@/data/pageFaqs";
+import QuickAnswer from "@/components/QuickAnswer";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 
 const STEP = 8;
@@ -97,6 +98,7 @@ export default function CaseEcomPage() {
           creative engines and funnels. Revenue and ROAS behind each one.
         </p>
       </header>
+      <QuickAnswer q={PAGE_QUICK["case-ecom"].q} a={PAGE_QUICK["case-ecom"].a} className="cs-quick" />
 
       <div className="cfil">
         <div className="cchips">

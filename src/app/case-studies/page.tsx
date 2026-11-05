@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { ORG_PUBLISHER } from "@/data/schemaOrg";
+import ServiceSchema from "@/components/ServiceSchema";
 import Link from "next/link";
 import RoboSection from "@/components/RoboSection";
 import JournalPreview from "@/components/JournalPreview";
 import IndustryLinks from "@/components/case/IndustryLinks";
 import PageFaq from "@/components/PageFaq";
-import { PAGE_FAQS } from "@/data/pageFaqs";
+import { PAGE_FAQS, PAGE_QUICK } from "@/data/pageFaqs";
+import QuickAnswer from "@/components/QuickAnswer";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -100,6 +102,7 @@ const caseStudiesSchema = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <ServiceSchema path="/case-studies" name="Sales funnel build and optimization" serviceType="Sales funnel design, build and automation" description="Done-for-you lead generation and eCommerce funnels with CRM automation, AI follow-up and tracking, backed by 275+ documented client results." />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseStudiesSchema) }}
@@ -115,6 +118,7 @@ export default function CaseStudiesPage() {
             business.
           </p>
         </header>
+        <QuickAnswer q={PAGE_QUICK["case-studies"].q} a={PAGE_QUICK["case-studies"].a} className="cs-quick" />
 
         <div className="hub">
           <Link className="hc lg" href="/case-leadgen">

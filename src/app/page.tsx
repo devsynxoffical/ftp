@@ -17,6 +17,7 @@ import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import { HOME_FAQ_SCHEMA } from "@/data/homeFaqSchema";
 import JournalPreview from "@/components/JournalPreview";
+import { HomeMostSearched, HomeQuickAnswer, HOME_SERVICE_SCHEMA } from "@/components/seo/HomeSeoBlocks";
 
 export default function Home() {
   return (
@@ -25,7 +26,12 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_FAQ_SCHEMA) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_SERVICE_SCHEMA) }}
+      />
       <Hero />
+      <HomeQuickAnswer />
       <LogoTicker />
       <LiveAutomation />
       <ServicesSection />
@@ -41,6 +47,7 @@ export default function Home() {
       <JournalPreview
         slugs={["ai-sales-funnels-voice-lead-qualification-2026", "ai-appointment-setter-voice-agent-cost-setup-results", "gohighlevel-vs-clickfunnels-lead-generation-2026"]}
       />
+      <HomeMostSearched />
       <IndustryLinks title="Case studies by industry" />
       <FAQSection />
       <UFSquareMarquee />

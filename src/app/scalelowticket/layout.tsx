@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
 import CaseResultsBlock from "@/components/case/CaseResultsBlock";
+import ServiceSchema from "@/components/ServiceSchema";
 import { ORG_PUBLISHER, personSchema } from "@/data/schemaOrg";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "$847K Low-Ticket SLO Funnel Case Study",
+  title: { absolute: "Low Ticket Funnel Agency: $847K SLO Case Study" },
   description:
-    "How a $27 self-liquidating offer funnel collected $847,307: front-end offer, order bump and upsell economics, buyer-list backend and value-based ad tracking.",
+    "Low ticket funnel agency case study: a $27 self-liquidating offer with a $17 order bump and upsell that paid for its own ads and collected $847,307.",
   alternates: {
     canonical: `${BASE_URL}/scalelowticket`,
   },
@@ -113,6 +114,7 @@ export default function ScaleLowTicketLayout({
 }) {
   return (
     <>
+      <ServiceSchema path="/scalelowticket" name="Low ticket funnel agency" serviceType="Low ticket self-liquidating offer funnel build" description="Low ticket funnel agency building self-liquidating offer funnels with order bumps, one-click upsells and value-based Conversions API tracking." />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchemaGraph) }}
