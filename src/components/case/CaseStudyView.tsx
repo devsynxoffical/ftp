@@ -9,7 +9,7 @@ import {
   getRelatedCases,
   type CasePage,
 } from "@/data/casePages";
-import { getIndustryBySlug } from "@/data/caseIndustries";
+import { getIndustryBySlug, midSentence } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
 import CaseVideo from "@/components/case/CaseVideo";
@@ -211,7 +211,7 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               <p>{page.summary}</p>
             </section>
             <section className="case-card">
-              <h2>How {industry.label === "Shopify" ? "this eCommerce" : `this ${industry.label.toLowerCase()}`} system is built</h2>
+              <h2>How {industry.label === "Shopify" ? "this eCommerce" : `this ${midSentence(industry.label)}`} system is built</h2>
               <ol className="tl">
                 {industry.build.map((step) => (
                   <li key={step.title}>
@@ -226,9 +226,9 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
           {related.length > 0 && (
             <section className="case-related" aria-labelledby="case-related-h">
               <div className="case-related-head">
-                <h2 id="case-related-h">More {industry.hubTitle.replace(/ Case Studies$/, "").toLowerCase()} case studies</h2>
+                <h2 id="case-related-h">More {midSentence(industry.hubTitle.replace(/ Case Studies$/, ""))} case studies</h2>
                 <Link className="btn g" href={`/case-studies/${industry.slug}`}>
-                  All {industryCount} {industry.label.toLowerCase()} results <i>&#8599;</i>
+                  All {industryCount} {midSentence(industry.label)} results <i>&#8599;</i>
                 </Link>
               </div>
               <ul className="case-rel-grid">
@@ -272,14 +272,14 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
             <nav className="kpn" aria-label="More case studies">
               <Link className="knext" href={`/case-studies/${adjacent.prev.slug}`}>
                 <div>
-                  <span>Previous {industry.label.toLowerCase()} case</span>
+                  <span>Previous {midSentence(industry.label)} case</span>
                   <b>{getCaseCard(adjacent.prev.slug)?.title.split(": ").slice(1).join(": ")}</b>
                 </div>
                 <i style={{ transform: "scaleX(-1)" }}>&#8599;</i>
               </Link>
               <Link className="knext" href={`/case-studies/${adjacent.next.slug}`}>
                 <div>
-                  <span>Next {industry.label.toLowerCase()} case</span>
+                  <span>Next {midSentence(industry.label)} case</span>
                   <b>{getCaseCard(adjacent.next.slug)?.title.split(": ").slice(1).join(": ")}</b>
                 </div>
                 <i>&#8599;</i>

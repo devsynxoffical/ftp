@@ -3,7 +3,7 @@ import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import path from "node:path";
 import Link from "next/link";
 import { getCaseCard, getCasesForIndustry } from "@/data/casePages";
-import { CASE_INDUSTRIES, type CaseIndustry } from "@/data/caseIndustries";
+import { CASE_INDUSTRIES, type CaseIndustry, midSentence } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import PageFaq from "@/components/PageFaq";
 import RoboSection from "@/components/RoboSection";
@@ -96,7 +96,7 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
             </div>
           </div>
 
-          <h2 className="ih-h2">All {industry.label.toLowerCase()} results</h2>
+          <h2 className="ih-h2">All {midSentence(industry.label)} results</h2>
           <div className="cgrid2 ih-grid">
             {cards.map((c) => {
               const img = publicFileExists(c.image) ? c.image : OG_FALLBACK;
@@ -135,7 +135,7 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
           </div>
 
           <section className="case-card ih-build">
-            <h2>How we build {industry.label === "Shopify" ? "eCommerce" : industry.label.toLowerCase()} {industry.set === "ec" ? "growth systems" : "funnels"}</h2>
+            <h2>How we build {industry.label === "Shopify" ? "eCommerce" : midSentence(industry.label)} {industry.set === "ec" ? "growth systems" : "funnels"}</h2>
             <ol className="tl">
               {industry.build.map((step) => (
                 <li key={step.title}>
@@ -180,7 +180,7 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
       <PageFaq
         faqs={industry.faqs}
         path={`/case-studies/${industry.slug}`}
-        eyebrow={`About ${industry.label.toLowerCase()} results`}
+        eyebrow={`About ${midSentence(industry.label)} results`}
       />
       <RoboSection />
     </>

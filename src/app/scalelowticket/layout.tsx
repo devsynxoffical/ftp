@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CaseResultsBlock from "@/components/case/CaseResultsBlock";
 import { ORG_PUBLISHER, personSchema } from "@/data/schemaOrg";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
@@ -117,6 +118,9 @@ export default function ScaleLowTicketLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchemaGraph) }}
       />
       {children}
+      <div className="box">
+        <CaseResultsBlock industries={["low-ticket-funnels", "coaching-consulting-funnels"]} perIndustry={3} title="More low-ticket funnel results" className="crb-standalone" />
+      </div>
     </>
   );
 }

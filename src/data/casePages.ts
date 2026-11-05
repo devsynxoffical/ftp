@@ -238,6 +238,35 @@ function parseFacts(pts: string[]): CaseFact[] {
   return out;
 }
 
+const money = (v: string) => {
+  const m = v.replace(/,/g, "").match(/\$?\s*([\d.]+)\s*([kKmM])?/);
+  return m ? parseFloat(m[1]) * (m[2] ? (/k/i.test(m[2]) ? 1e3 : 1e6) : 1) : NaN;
+};
+
+/**
+ * The source "Cost per lead" is sometimes a different number from the post: a
+ * resale price, the client's old cost, or an industry benchmark (found on
+ * 2026-11-05 by checking spend / leads on every case). When leads, spend and
+ * CPL disagree by more than 25%, use the CPL the caption itself states if one
+ * is close to spend / leads, otherwise the computed value.
+ */
+function reconcileCpl(facts: CaseFact[], caption: string): CaseFact[] {
+  const get = (l: string) => facts.find((f) => f.label === l)?.value;
+  const leads = money(get("Leads") ?? "");
+  const spend = money(get("Ad spend") ?? "");
+  const cpl = money(get("Cost per lead") ?? "");
+  if (!(leads > 0 && spend > 0 && cpl > 0)) return facts;
+  const calc = spend / leads;
+  if (Math.abs(calc - cpl) / calc <= 0.25) return facts;
+  // Read whole amounts ("$20,324" is 20324, not 20) and take the one closest to spend / leads.
+  const stated = [...caption.matchAll(/\$\s?(\d{1,3}(?:,\d{3})+|\d+)(\.\d{1,2})?(?![\d,])/g)]
+    .map((m) => parseFloat(m[1].replace(/,/g, "") + (m[2] ?? "")))
+    .filter((x) => Math.abs(x - calc) / calc <= 0.15)
+    .sort((a, b) => Math.abs(a - calc) - Math.abs(b - calc))[0];
+  const value = `$${(stated ?? calc).toFixed(2)}`;
+  return facts.map((f) => (f.label === "Cost per lead" ? { ...f, value } : f));
+}
+
 const fact = (facts: CaseFact[], label: string) =>
   facts.find((f) => f.label.toLowerCase() === label.toLowerCase())?.value;
 
@@ -399,7 +428,7 @@ function buildDrafts(): Draft[] {
     if (seenIds.has(raw.id) || ALIASES[raw.id]) return; // the eCommerce data repeats three posts
     const r = NICHE_FIX[raw.id] ? { ...raw, nic: NICHE_FIX[raw.id] } : raw;
     seenIds.add(r.id);
-    const facts = set === "lg" ? parseFacts(r.pts) : [];
+    const facts = set === "lg" ? reconcileCpl(parseFacts(r.pts), r.cap) : [];
     const override = OVERRIDES[r.id];
     const label = override ? override.title.split(" Case Study:")[0] : nicheLabel(r.nic);
     drafts.push({
@@ -530,7 +559,8 @@ function describe(d: Draft, h1: string, blocks: CasePage["blocks"]): string {
   // Prefer a real sentence from the breakdown when it fits; it makes each description unique.
   const firstPara = blocks.find((b) => b.type === "p")?.items[0] ?? "";
   const sentence = (firstPara.match(/^[^.!?]{40,150}[.!?]/)?.[0] ?? "").trim();
-  if (sentence && !/comment|dm |message me/i.test(sentence) && (lead + " " + sentence).length <= 160) {
+  const chatty = /^(hey|hi|hello|yo|what is going on|what's up|whats up|happy (monday|tuesday|wednesday|thursday|friday|saturday|sunday)|good (morning|evening))\b/i;
+  if (sentence && !chatty.test(sentence) && !/comment|dm |message me/i.test(sentence) && (lead + " " + sentence).length <= 160) {
     return `${lead} ${sentence}`;
   }
   if ((lead + tail).length <= 160) return lead + tail;

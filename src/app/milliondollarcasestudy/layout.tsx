@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import CaseResultsBlock from "@/components/case/CaseResultsBlock";
 import { ORG_PUBLISHER, personSchema } from "@/data/schemaOrg";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
@@ -99,6 +100,9 @@ export default function Case1MLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(caseSchemaGraph) }}
       />
       {children}
+      <div className="box">
+        <CaseResultsBlock industries={["coaching-consulting-funnels", "agency-saas-lead-generation"]} perIndustry={3} title="More high-ticket and agency results" className="crb-standalone" />
+      </div>
     </>
   );
 }

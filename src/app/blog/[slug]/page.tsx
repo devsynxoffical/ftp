@@ -10,6 +10,8 @@ import {
 } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
 import RealClientResults from "@/components/RealClientResults";
+import CaseResultsBlock from "@/components/case/CaseResultsBlock";
+import { BLOG_CASE_INDUSTRIES } from "@/data/blogCaseLinks";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -265,6 +267,14 @@ export default async function BlogPostPage({ params }: PageProps) {
                 className="post-prose"
                 dangerouslySetInnerHTML={{ __html: post.contentHtml }}
               />
+
+              {/* Real case studies from the industries this article covers */}
+              {BLOG_CASE_INDUSTRIES[post.slug] && (
+                <CaseResultsBlock
+                  industries={BLOG_CASE_INDUSTRIES[post.slug]}
+                  intro="Verified client results built on the system in this article, with the numbers from the ad account and CRM."
+                />
+              )}
 
               {/* Related Reading (internal linking) */}
               {otherPosts.length > 0 && (

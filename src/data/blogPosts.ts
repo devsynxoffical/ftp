@@ -573,7 +573,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="event-map">
   <h2>3. The Lead Gen Event Map: Lead, Qualified, Scheduled, Won</h2>
-  <p>This is the setup behind the <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury</a> and <a href="/case-studies/mortgage-insurance-lead-generation">mortgage lead generation</a> case studies, where verified leads and signed cases are sent back to Meta.</p>
+  <p>This is the setup behind the <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury</a> and <a href="/case-studies/mortgage-insurance-lead-generation">mortgage lead generation</a> case studies, where verified leads and signed cases are sent back to Meta. The full funnels are broken down in our guides to <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">personal injury lead generation</a> and <a href="/blog/mortgage-lead-generation-meta-ads-otp-verified">mortgage lead generation on Meta</a>.</p>
   <p>For a worked example of this ladder in home services (estimator completed, inspection booked, contract signed), see the <a href="/blog/roofing-lead-generation-funnel-cost-per-lead-playbook">roofing lead generation playbook</a>.</p>
   <p>Most lead gen accounts send one event. High-performing accounts send a ladder of events that mirror the CRM pipeline. This is the map we deploy on every <a href="/#services">funnel and automation build</a>:</p>
   <div class="table-wrap">
@@ -1541,6 +1541,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <section id="results">
   <h2>7. Results and Where It Fails</h2>
+  <p>Personal injury intake is one of the strongest use cases, because accident victims call several firms at once and often enquire at night; see how it fits into the full system in our <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">personal injury lead generation guide</a>.</p>
   <p>Across 60+ live deployments on the <a href="/case-leadgen">lead generation funnels</a> we run: median first contact at 38 seconds, 84% of leads reached inside the first minute, a 2.4x lift in lead-to-booking on the same ads and landing pages, and 100% of after-hours leads worked rather than waiting for the morning. On the <a href="/milliondollarcasestudy">$1.52M consulting funnel</a>, AI qualification was one of the four changes that cut cost per booked call from $280 to $112.</p>
   <p>Where it fails: leads from very low-intent sources (giveaways, broad lead-form ads with no qualifying question) produce short, annoyed calls. Offers that need a long consultative first conversation suit a human setter. And an agent launched without a tested knowledge base will say something wrong in week one; test with 50 internal calls before it touches a real lead.</p>
   <p>If you want this built and connected to your CRM, it ships as part of our <a href="/#services">AI calling and automation builds</a>. <a href="/contact">Book a strategy call</a> and we will map the script and routing to your offer.</p>
@@ -1704,6 +1705,297 @@ export const BLOG_POSTS: BlogPost[] = [
   <h2>7. Tracking Jobs, Not Form Fills</h2>
   <p>If the ads optimize for form submissions, Meta and Google will find you cheap, low-intent leads. Send the events that matter back instead: estimator completed, inspection booked, inspection attended, contract signed, with the job value. That is the CRM event ladder from our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Meta Conversions API guide</a>, and after about two weeks the ad platforms start delivering homeowners who look like the ones who signed.</p>
   <p>Every piece of this playbook, the estimator page, the ads, the follow-up automation and the tracking, is what we build for roofing and home services clients in 5 to 10 business days. Browse the <a href="/case-leadgen">home services results</a>, or <a href="/contact">book a strategy call</a> and we will model the cost per job for your market.</p>
+</section>
+`
+  },
+  {
+    slug: "personal-injury-mva-lead-generation-exclusive-leads",
+    metaTitle: "Personal Injury Lead Generation: Exclusive MVA Leads",
+    metaDescription: "How personal injury firms get exclusive, OTP-verified MVA leads from Meta ads at $5 to $27 per lead instead of $150+ shared leads, with real campaign numbers.",
+    keyTakeaways: [
+      "Shared MVA leads cost personal injury firms $150 to $300 each and are sold to several firms at once. Exclusive leads from a firm-owned Meta funnel cost $4.38 to $27 per lead in our campaigns.",
+      "Quality comes from the funnel, not the ad: a multi-step form that screens accident date, injury and representation, plus OTP phone verification, removes fake numbers before intake sees them.",
+      "Targeting accidents from the last 30 days keeps leads case-ready. One national campaign produced 8,810 leads at $7.61 over 11 weeks on that rule.",
+      "The number that matters is cost per signed case. One Texas firm spent $20,324, got 1,079 verified leads at $18.94, 62% showed up, 29% signed, and collected $388,000.",
+    ],
+    title: "Personal Injury Lead Generation: How Law Firms Get Exclusive MVA Leads at $5 to $27 Instead of $150+",
+    headline: "Most personal injury firms rent their pipeline from lead vendors. Here is the funnel, verification and follow-up system that produces exclusive motor vehicle accident leads from the firm's own ad account, with the real numbers from our campaigns.",
+    excerpt: "Personal injury firms pay $150 to $300 for shared MVA leads that four other firms also call. This guide shows the exclusive alternative: a Meta ads funnel with multi-step qualification and OTP verification, 60-second intake follow-up and signed-case tracking, with cost-per-lead and revenue figures from 13 documented MVA campaigns.",
+    category: "Case Breakdowns",
+    author: AUTHORS.rahul,
+    publishedAt: "2026-11-05",
+    updatedAt: "2026-11-05",
+    readTime: "10 min read",
+    image: "/img/blog/mva-personal-injury-lead-generation.jpg",
+    imageAlt: "Meta Ads Manager table for an MVA campaign showing 1,865 leads at $5.24 cost per lead on $9,770.25 spent",
+    keywords: [
+      "personal injury lead generation",
+      "MVA leads",
+      "motor vehicle accident leads",
+      "exclusive personal injury leads",
+      "personal injury leads cost",
+      "car accident leads for attorneys",
+      "personal injury Facebook ads",
+      "OTP verified leads",
+      "law firm lead generation",
+      "pay per lead MVA",
+    ],
+    metrics: [
+      { label: "Lowest Cost Per Lead", value: "$4.38", sub: "6,275 MVA leads, 19 days" },
+      { label: "Largest Campaign", value: "8,810", sub: "leads at $7.61, 11 weeks" },
+      { label: "Revenue From $20K Spend", value: "$388K", sub: "194 signed clients" },
+      { label: "Documented MVA Cases", value: "13", sub: "with ad account proof" },
+    ],
+    toc: [
+      { id: "shared-vs-exclusive", title: "1. Shared vs Exclusive MVA Leads" },
+      { id: "the-numbers", title: "2. What Exclusive MVA Leads Actually Cost" },
+      { id: "funnel", title: "3. The Qualification Funnel" },
+      { id: "otp", title: "4. OTP Verification: Why Every Lead Is a Real Person" },
+      { id: "targeting", title: "5. Targeting and Creative That Work in Personal Injury" },
+      { id: "intake", title: "6. Intake Speed and the Show-Up Problem" },
+      { id: "measure", title: "7. Measuring Cost per Signed Case" },
+      { id: "faq", title: "8. Frequently Asked Questions" },
+    ],
+    faqs: [
+      {
+        question: "How much do personal injury leads cost?",
+        answer: "Shared MVA leads from vendors usually cost $150 to $300 each. Exclusive leads from a firm-owned Meta ads funnel cost between $4.38 and $27 per lead across our documented campaigns, depending on state, volume and how strict the qualification is.",
+      },
+      {
+        question: "Are Facebook leads good for personal injury firms?",
+        answer: "They are when the funnel does the qualifying. Plain lead forms produce cheap but weak leads. A multi-step form that asks about accident date, injuries and existing representation, followed by OTP phone verification, produces leads that intake can actually sign.",
+      },
+      {
+        question: "What is an OTP-verified lead?",
+        answer: "A lead who confirmed their phone number by entering a one-time code sent by text before the form submitted. It removes fake numbers, typos and bots, so every lead reaches a real person who asked to be contacted.",
+      },
+      {
+        question: "How fast should intake call an MVA lead?",
+        answer: "Within 60 seconds. Accident victims often submit several requests, and the first firm to reach them usually signs them. Instant SMS plus an immediate call, with an AI agent covering nights and weekends, is the standard we build to.",
+      },
+      {
+        question: "Can lead sellers use this system too?",
+        answer: "Yes. Several of our MVA campaigns run for pay-per-lead agencies that resell verified leads to firms. One generated 126 leads at $17.16 each and resold them at $150; another delivered 276 verified calls in five days in New York.",
+      },
+    ],
+    related: [
+      "mortgage-lead-generation-meta-ads-otp-verified",
+      "speed-to-lead-automation-gohighlevel-60-second-follow-up",
+      "ai-appointment-setter-voice-agent-cost-setup-results",
+    ],
+    contentHtml: `
+<section id="shared-vs-exclusive">
+  <h2>1. Shared vs Exclusive MVA Leads</h2>
+  <p><strong>Personal injury lead generation</strong> usually means buying leads. A vendor runs ads, collects motor vehicle accident (MVA) inquiries and sells each one to three to five firms at $150 to $300 apiece. Every firm calls the same claimant within minutes, and the claimant signs with whoever sounds most convincing first. The rest of the firms paid for a phone call that went nowhere.</p>
+  <p>An <strong>exclusive MVA lead</strong> comes from a funnel and ad account the firm owns. The claimant only ever spoke to one firm. Across the <a href="/case-studies/mva-personal-injury-lead-generation">13 MVA campaigns we have documented</a>, that model produces leads at a fraction of vendor pricing, and the firm keeps the audience data, the retargeting pool and the learning inside its own ad account.</p>
+</section>
+
+<div class="callout-box">
+  <div class="callout-badge">The difference in one campaign</div>
+  <h3>From $150 to $180 per lead to $18.94</h3>
+  <p>A Texas firm was buying leads from PPL agencies at $150 to $180 each and struggling to close them. In its first 30 days on a firm-owned funnel it spent $20,324, generated 1,079 OTP-verified leads at $18.94, and signed 194 clients worth $388,000. <a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">See the full case</a>.</p>
+</div>
+
+<section id="the-numbers">
+  <h2>2. What Exclusive MVA Leads Actually Cost</h2>
+  <p>These are real campaigns, taken from the ad accounts. Cost per lead varies with the state, the volume and how strict the qualification is, which is why the range is wide.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Campaign</th><th>Ad spend</th><th>Leads</th><th>Cost per lead</th></tr></thead>
+      <tbody>
+        <tr><td><a href="/case-studies/mva-6275-leads-at-4-38-cpl">National, 19 days</a></td><td>$27,467.70</td><td>6,275</td><td>$4.38</td></tr>
+        <tr><td><a href="/case-studies/mva-1865-leads-at-5-24-cpl">Texas firm, multi-step verification</a></td><td>$9,770</td><td>1,865</td><td>$5.24</td></tr>
+        <tr><td><a href="/case-studies/mva-8810-leads-at-7-61-cpl">PPL agency, last-30-day accidents, Jul to Sep 2026</a></td><td>$67,013.43</td><td>8,810</td><td>$7.61</td></tr>
+        <tr><td><a href="/case-studies/mva-465-leads-at-14-21-cpl">Firm previously paying $150 to $180, 17 days</a></td><td>$6,608</td><td>465</td><td>$14.21</td></tr>
+        <tr><td><a href="/case-studies/mva-126-leads-at-17-16-cpl">Lead seller, 14 days, resold at $150</a></td><td>$2,162</td><td>126</td><td>$17.16</td></tr>
+        <tr class="highlight-row"><td><strong><a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">Texas firm, 30 days, 194 clients signed</a></strong></td><td><strong>$20,324</strong></td><td><strong>1,079</strong></td><td><strong>$18.94</strong></td></tr>
+        <tr><td><a href="/case-studies/mva-530-leads-at-27-cpl">Texas personal injury firm, 7 days</a></td><td>$14,270</td><td>530</td><td>$27</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Even the most expensive of these is a fraction of shared-lead pricing, and every one of them is exclusive to the firm or the agency that owns the account.</p>
+</section>
+
+<section id="funnel">
+  <h2>3. The Qualification Funnel</h2>
+  <p>Cheap MVA leads are easy. Signable ones are not. The difference is what happens between the ad click and the form submission. A plain Meta lead form converts well and fills intake with people who were never in an accident, already have a lawyer, or were injured years ago.</p>
+  <p>We replace it with a short multi-step form on a fast landing page, one question per screen:</p>
+  <ol>
+    <li><strong>When did the accident happen?</strong> Recent accidents are the ones a firm can take.</li>
+    <li><strong>Were you injured, and did you get treatment?</strong> Injury and treatment drive case value.</li>
+    <li><strong>Who was at fault?</strong> Screens out claimants who caused the accident.</li>
+    <li><strong>Do you already have an attorney?</strong> Removes represented claimants before intake spends time on them.</li>
+    <li><strong>Name, mobile number and verification code.</strong></li>
+  </ol>
+  <p>This is the same diagnostic principle that beats static pages in our <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">quiz vs VSL split tests</a>: small answers first, contact details last. One client's <a href="/case-studies/mva-203-leads">203 verified leads in 21 days</a> came through exactly this kind of multi-step validation, after months of leads who said "I never filled out that form".</p>
+</section>
+
+<section id="otp">
+  <h2>4. OTP Verification: Why Every Lead Is a Real Person</h2>
+  <p>The single most effective quality filter is a one-time password (OTP). Before the form submits, the claimant receives a code by text and types it in. If the number is fake, mistyped or a bot, the lead never exists.</p>
+  <p>It costs some conversion rate on the last step and pays for itself many times over at intake. On the <a href="/case-studies/mva-530-leads-at-27-cpl">Texas firm's 530 leads in 7 days</a>, every lead was a person who picked up their phone, entered a code and confirmed they exist. For lead sellers it is what makes leads resellable: one New York campaign delivered <a href="/case-studies/mva-276-otp-verified-calls-in-5-days">276 OTP-verified inbound calls in five days</a> on $5,453 of spend, each resold to vendors at $150.</p>
+</section>
+
+<section id="targeting">
+  <h2>5. Targeting and Creative That Work in Personal Injury</h2>
+  <ul>
+    <li><strong>Recency beats breadth.</strong> Focusing on accidents from the last 30 days keeps leads case-ready. The <a href="/case-studies/mva-8810-leads-at-7-61-cpl">8,810-lead campaign</a> ran on that rule for 11 weeks at $7.61 per lead.</li>
+    <li><strong>Plain language over legal language.</strong> "Hurt in a car accident in the last 30 days?" outperforms anything with "litigation" or "representation" in it.</li>
+    <li><strong>Pattern-breaking creative.</strong> One account pulled a 4.21% click-through rate in a niche where most ads barely reach 1%, at <a href="/case-studies/mva-25-94-cost-per-lead">$25.94 per verified lead</a>.</li>
+    <li><strong>State-by-state budgets.</strong> Cost per lead differs sharply by state; budgets move toward the states where cost per signed case is lowest, not cost per lead.</li>
+  </ul>
+  <p>Ad platform rules for legal services change, so check current Meta advertising policies and your state bar's rules on attorney advertising before launch.</p>
+</section>
+
+<section id="intake">
+  <h2>6. Intake Speed and the Show-Up Problem</h2>
+  <p>A verified lead that waits an hour is a lead another firm signs. Every MVA funnel we build runs the <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">60-second speed-to-lead stack</a>: an instant SMS from the firm, an immediate call from intake, and an <a href="/blog/ai-appointment-setter-voice-agent-cost-setup-results">AI appointment setter</a> covering nights and weekends, when a large share of accident inquiries arrive.</p>
+  <p>Then protect the consultation. On the <a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">$388K campaign</a>, 62% of booked claimants showed up and 29% of those signed. The reminder sequence that drives show-up rates is covered in our guide to <a href="/blog/reduce-sales-call-no-show-rate-reminder-automation">reducing no-shows</a>; one campaign booked <a href="/case-studies/mva-387-appointments-booked">387 exclusive appointments in 24 days at $19.62 each</a>.</p>
+</section>
+
+<section id="measure">
+  <h2>7. Measuring Cost per Signed Case</h2>
+  <p>Cost per lead is the wrong scoreboard. Track the full ladder: lead, verified lead, consultation booked, consultation attended, retainer signed. On the $388K campaign that ladder read 1,079 verified leads, 669 show-ups, 194 signed clients, at an average of $2,000 per client, which is a 19.09x return on $20,324 of spend.</p>
+  <p>Send those stages back to Meta as server-side events, as described in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide</a>, so the algorithm learns which claimants sign rather than which ones fill in forms. Every result in this article is on the <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury case studies</a> page. If you want this built for your firm or your lead business, <a href="/contact">book a strategy call</a>.</p>
+</section>
+`
+  },
+  {
+    slug: "mortgage-lead-generation-meta-ads-otp-verified",
+    metaTitle: "Mortgage Lead Generation on Meta: OTP-Verified Leads",
+    metaDescription: "How loan officers get OTP-verified mortgage and refinance leads from Meta ads at $4 to $25 per lead, five offers that book appointments, and real results.",
+    keyTakeaways: [
+      "Mortgage leads from portals are shared and often unreachable. Firm-owned Meta campaigns with OTP verification produced mortgage and refinance leads at $4.31 to $25.48 per lead in our accounts.",
+      "One campaign turned $5,300 of ad spend into 208 verified leads, 160+ conversations, 37 closed loans, $9.2M funded and $65K+ in commission in 21 days.",
+      "The offer does most of the work. Five offers that consistently book appointments: 5-minute pre-qualification, monthly-savings refinance, 24-hour pre-approval, mortgage protection and home equity cash-out.",
+      "The same funnel works for insurance: a final expense campaign produced 2,440 leads at $7.79 in one month.",
+    ],
+    title: "Mortgage Lead Generation on Meta Ads: OTP-Verified Leads, Five Offers That Book Appointments, and Real Results",
+    headline: "Portal leads are shared, recycled and often unreachable. Here is how loan officers and brokers generate their own verified purchase and refinance leads on Meta, the offers that get borrowers to book, and the numbers from our campaigns.",
+    excerpt: "Loan officers and mortgage brokers waste most of their lead budget on shared portal leads that never answer. This guide covers the firm-owned alternative: Meta ads, eligibility-style funnels, OTP verification, the five offers that book appointments, and results from our mortgage, refinance and final expense campaigns.",
+    category: "Case Breakdowns",
+    author: AUTHORS.gaurav,
+    publishedAt: "2026-11-05",
+    updatedAt: "2026-11-05",
+    readTime: "9 min read",
+    image: "/img/blog/mortgage-lead-generation-meta-ads.jpg",
+    imageAlt: "Meta Ads Manager on a laptop showing 208 mortgage leads at $25.48 per lead on $5,300.22 spent in June 2025",
+    keywords: [
+      "mortgage lead generation",
+      "mortgage leads",
+      "refinance leads",
+      "mortgage Facebook ads",
+      "loan officer lead generation",
+      "exclusive mortgage leads",
+      "mortgage leads cost",
+      "OTP verified mortgage leads",
+      "mortgage ad offers",
+      "final expense leads",
+    ],
+    metrics: [
+      { label: "Lowest Cost Per Lead", value: "$4.31", sub: "142 leads, testing phase" },
+      { label: "Closed Loans", value: "37", sub: "from 208 leads, 21 days" },
+      { label: "Funded Volume", value: "$9.2M", sub: "$65K+ commission" },
+      { label: "Final Expense Leads", value: "2,440", sub: "at $7.79 in one month" },
+    ],
+    toc: [
+      { id: "portal-problem", title: "1. The Problem With Portal Leads" },
+      { id: "results", title: "2. What Verified Mortgage Leads Cost" },
+      { id: "offers", title: "3. Five Offers That Book Mortgage Appointments" },
+      { id: "funnel", title: "4. The Funnel: Eligibility Questions and OTP" },
+      { id: "follow-up", title: "5. Follow-Up: From Lead to Conversation" },
+      { id: "insurance", title: "6. The Same System for Insurance Agents" },
+      { id: "measure", title: "7. What to Measure" },
+      { id: "faq", title: "8. Frequently Asked Questions" },
+    ],
+    faqs: [
+      {
+        question: "How much do mortgage leads cost on Facebook?",
+        answer: "In our documented campaigns, OTP-verified mortgage and refinance leads cost between $4.31 and $25.48 each. The low end came from a small testing budget; at larger budgets in competitive states, $15 to $25 is a realistic range.",
+      },
+      {
+        question: "Are Facebook mortgage leads good quality?",
+        answer: "They are when the funnel qualifies and verifies. Eligibility questions on loan type, value, credit band and timeline, plus OTP phone verification, mean every lead is a real borrower who asked to be contacted. One campaign's 208 leads produced 160+ conversations and 37 closed loans.",
+      },
+      {
+        question: "What is the best offer for mortgage ads?",
+        answer: "It depends on the borrower's temperature. Fast pre-qualification without a hard credit check works for cold purchase traffic, monthly savings works for refinance, and home equity cash-out works for owners with equity. Test two or three at once.",
+      },
+      {
+        question: "Do I need to follow mortgage advertising rules on Meta?",
+        answer: "Yes. Meta treats housing and credit as special ad categories with limited targeting options, and mortgage advertising is regulated. Have offers and disclosures reviewed for compliance before launch.",
+      },
+    ],
+    related: [
+      "speed-to-lead-automation-gohighlevel-60-second-follow-up",
+      "personal-injury-mva-lead-generation-exclusive-leads",
+      "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
+    ],
+    contentHtml: `
+<section id="portal-problem">
+  <h2>1. The Problem With Portal Leads</h2>
+  <p>Most loan officers start <strong>mortgage lead generation</strong> by buying leads from portals. The borrower fills in one form and receives calls from four lenders within minutes. Many numbers are wrong, many borrowers are months away from applying, and the officer who calls fastest wins whatever is left.</p>
+  <p>The alternative is generating your own leads on Meta with a funnel that qualifies and verifies every borrower. The leads are exclusive, the data stays in your ad account, and the campaign gets better as it learns who actually funds. Every number below comes from our <a href="/case-studies/mortgage-insurance-lead-generation">mortgage and insurance case studies</a>.</p>
+</section>
+
+<section id="results">
+  <h2>2. What Verified Mortgage Leads Cost</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Campaign</th><th>Ad spend</th><th>Leads</th><th>Cost per lead</th></tr></thead>
+      <tbody>
+        <tr><td><a href="/case-studies/mortgage-142-leads-at-4-31-cpl">Mortgage, 11-day testing phase</a></td><td>$612</td><td>142</td><td>$4.31</td></tr>
+        <tr><td><a href="/case-studies/mortgage-492-leads-at-5-23-cpl">Mortgage-ready registrations, 1.72% CTR</a></td><td>$2,573</td><td>492</td><td>$5.23</td></tr>
+        <tr><td><a href="/case-studies/mortgage-154-leads-at-14-58-cpl">Refinance, 9 days</a></td><td>n/a</td><td>154</td><td>$14.58</td></tr>
+        <tr><td><a href="/case-studies/mortgage-823-leads-at-23-97-cpl">Texas mortgage client</a></td><td>$19,725</td><td>823</td><td>$23.97</td></tr>
+        <tr class="highlight-row"><td><strong><a href="/case-studies/mortgage-65k-plus-revenue-on-5300-ad-spend">Mortgage, 21 days, 37 closings</a></strong></td><td><strong>$5,300</strong></td><td><strong>208</strong></td><td><strong>$25.48</strong></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>The highlighted campaign is the one to study. Its cost per lead was the highest in the table, and it produced 160+ real conversations, 37 closed loans, over $9.2M in funded loans and more than $65,000 in commission in 21 days. Lead quality decided the outcome, not lead price.</p>
+</section>
+
+<div class="callout-box">
+  <div class="callout-badge">Quality over price</div>
+  <h3>208 leads, 37 closed loans, $9.2M funded</h3>
+  <p>Every lead on that campaign verified their phone number before the form submitted. No fake numbers, no ghosting. <a href="/case-studies/mortgage-65k-plus-revenue-on-5300-ad-spend">Read the case</a>.</p>
+</div>
+
+<section id="offers">
+  <h2>3. Five Offers That Book Mortgage Appointments</h2>
+  <p>The offer is the biggest lever in a mortgage ad. Each of these targets a different motivation, and we documented them as the offers that consistently <a href="/case-studies/mortgage-5-offers-that-book-more-appointments">boost appointments</a>:</p>
+  <ol>
+    <li><strong>Get pre-qualified in 5 minutes, no hard credit check.</strong> Removes the fear of a credit hit for cold purchase traffic.</li>
+    <li><strong>Refinance and save up to $500 a month, no closing costs.</strong> A concrete monthly number for owners with higher-rate loans.</li>
+    <li><strong>Get pre-approved in 24 hours.</strong> Speed for buyers who are already house hunting.</li>
+    <li><strong>Mortgage protection.</strong> Pays the mortgage if the borrower dies; a bridge between mortgage and insurance offers.</li>
+    <li><strong>Tap into your home's value, no fees.</strong> Cash-out for owners with equity and a specific need.</li>
+  </ol>
+  <p>Match the offer to the audience's temperature. Cold audiences respond to low-commitment offers like the 5-minute pre-qualification; warm and retargeting audiences respond to pre-approval and refinance savings. The same thinking is covered in a recorded <a href="/case-studies/mortgage-offer-and-ad-copy-strategy-session">mortgage offer and ad copy strategy session</a>.</p>
+</section>
+
+<section id="funnel">
+  <h2>4. The Funnel: Eligibility Questions and OTP</h2>
+  <p>The landing page works like a short eligibility check, one question per screen: purchase or refinance, property value, current balance or down payment, credit band, timeline, then contact details. The answers route the lead: ready-now borrowers go straight to a loan officer, longer timelines go into a nurture sequence.</p>
+  <p>The final step sends a one-time code by text. The borrower types it in before the form submits, which removes fake and mistyped numbers. On the <a href="/case-studies/mortgage-823-leads-at-23-97-cpl">Texas campaign's 823 leads</a> and the <a href="/case-studies/mortgage-154-leads-at-14-58-cpl">154 refinance leads in 9 days</a>, every lead was OTP-verified, so loan officers stopped wasting dials on numbers that never connect.</p>
+  <p>Meta treats housing and credit as special ad categories, which limits targeting by age, gender and location radius. The funnel's questions do the qualification the targeting no longer can.</p>
+</section>
+
+<section id="follow-up">
+  <h2>5. Follow-Up: From Lead to Conversation</h2>
+  <p>A verified borrower who does not hear back for an hour is shopping elsewhere. Run the <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">60-second follow-up stack</a>: an instant text from the loan officer, an immediate call, and a voice agent for after-hours leads. Then book the consultation and protect it with the reminder sequence from our <a href="/blog/reduce-sales-call-no-show-rate-reminder-automation">no-show guide</a>.</p>
+  <p>Borrowers with longer timelines get a nurture sequence with rate updates and educational content, so they come back to you rather than a portal when they are ready.</p>
+</section>
+
+<section id="insurance">
+  <h2>6. The Same System for Insurance Agents</h2>
+  <p>Final expense and life insurance follow the same pattern: a short qualifying funnel, verification and fast follow-up. One pay-per-lead client generated <a href="/case-studies/final-expense-2440-leads-at-7-79-cpl">2,440 final expense leads at $7.79</a> on $19,011.31 in a single month, and a smaller life insurance test produced <a href="/case-studies/final-expense-55-leads">55 qualified leads from $990</a>.</p>
+</section>
+
+<section id="measure">
+  <h2>7. What to Measure</h2>
+  <p>Track the ladder, not the lead: verified lead, conversation, application, approval, funded loan and commission. Send applications and fundings back to Meta through the <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API</a> so the algorithm finds more borrowers who fund. The same discipline drives the results in our <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">personal injury lead generation guide</a>, where cost per signed case matters more than cost per lead.</p>
+  <p>All the campaigns above are on the <a href="/case-studies/mortgage-insurance-lead-generation">mortgage and insurance case studies</a> page. If you want this funnel built for your branch or brokerage, <a href="/contact">book a strategy call</a>.</p>
 </section>
 `
   },

@@ -46,6 +46,13 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  async redirects() {
+    return [
+      // 2026-11-05: corrected cost-per-lead figures changed these case slugs.
+      { source: "/case-studies/mva-6275-leads-at-50-cpl", destination: "/case-studies/mva-6275-leads-at-4-38-cpl", permanent: true },
+      { source: "/case-studies/mva-126-leads-at-150-cpl", destination: "/case-studies/mva-126-leads-at-17-16-cpl", permanent: true },
+    ];
+  },
   async headers() {
     return [
       {
