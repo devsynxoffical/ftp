@@ -193,7 +193,7 @@ export default function Case847KPage() {
           <h2>
             Make your front end <span style={{ color: "var(--lime)" }}>pay for itself.</span>
           </h2>
-          <Link className="btn" href="/contact">
+          <Link className="btn" href="/book-a-call">
             Book a strategy call <i>&#8599;</i>
           </Link>
         </div>

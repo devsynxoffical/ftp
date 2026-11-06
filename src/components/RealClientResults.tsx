@@ -272,7 +272,7 @@ export default function RealClientResults() {
 
                 {/* CTA Action */}
                 <div className="rcr-modal-actions">
-                  <Link href="/#robo" className="btn o rcr-modal-cta" onClick={() => setSelectedProof(null)}>
+                  <Link href="/book-a-call" className="btn o rcr-modal-cta" onClick={() => setSelectedProof(null)}>
                     Install this funnel into your business <i>&#8599;</i>
                   </Link>
                   <div className="rcr-modal-counter">

@@ -547,7 +547,7 @@ export default function LiveAutomation() {
             flow that keeps booking calls while your team sleeps.
           </p>
           <div className="lbt">
-            <a className="btn lm" href="#robo">
+            <a className="btn lm" href="/book-a-call">
               Book a call <i>&#8599;</i>
             </a>
             <a className="btn lo" href="#services">

@@ -4956,7 +4956,7 @@ main {
 .sx-toc ol a:hover{color:var(--fg);border-left-color:var(--or)}
 .sx-toc-cta{justify-self:start;margin-top:6px;white-space:nowrap}
 .sx-main{display:grid;gap:18px;min-width:0}
-.sx-sec{position:relative;background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(26px,3.2vw,44px);scroll-margin-top:100px}
+.sx-sec{position:relative;min-width:0;background:#fff;border:1px solid var(--line);border-radius:26px;padding:clamp(26px,3.2vw,44px);scroll-margin-top:100px}
 .sx-sec .sx-n{display:inline-grid;place-items:center;min-width:38px;height:28px;padding:0 10px;border-radius:999px;background:rgba(255,90,31,.1);color:var(--or);font-weight:700;font-size:12px}
 .sx-sec h2{font-family:var(--disp);font-size:clamp(24px,2.4vw,34px);font-weight:700;letter-spacing:-.03em;line-height:1.12;margin:14px 0 4px}
 .sx-sec .seo-prose{margin-top:10px}
@@ -4986,5 +4986,48 @@ main {
 .wa-float .wa-label{max-width:0;overflow:hidden;white-space:nowrap;font-weight:700;font-size:14.5px;transition:max-width .4s ease,margin .4s ease}
 .wa-float:hover .wa-label,.wa-float:focus-visible .wa-label{max-width:180px;margin-right:4px}
 @media (max-width:1100px){.sx-proof ul{grid-template-columns:repeat(2,minmax(0,1fr))}.sx-cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (max-width:980px){.sx-hero-grid,.bk-grid{grid-template-columns:1fr}.sx-body{grid-template-columns:1fr}.sx-toc{position:relative;top:auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px}}
+@media (max-width:980px){.sx-hero-grid,.bk-grid{grid-template-columns:minmax(0,1fr)}.sx-body{grid-template-columns:minmax(0,1fr)}.sx-toc{position:relative;top:auto;background:#fff;border:1px solid var(--line);border-radius:22px;padding:20px}}
 @media (max-width:640px){.sx-cards,.sx-proof ul{grid-template-columns:1fr}.sx-proof li a{min-height:0}.sx-sec{border-radius:20px}.wa-float{height:54px;padding:0 13px}.bk-cal iframe{min-height:700px}}
+
+/* Compact booking band (links to /book-a-call) */
+.bcta-wrap{padding-block:clamp(56px,7vw,100px)}
+.bcta{position:relative;display:grid;grid-template-columns:minmax(0,1.3fr) auto;gap:clamp(24px,4vw,56px);align-items:center;background:#141414;color:#fff;border-radius:28px;padding:clamp(28px,4vw,56px);overflow:hidden;isolation:isolate}
+.bcta::before{content:"";position:absolute;right:-120px;top:-140px;width:420px;height:420px;border-radius:50%;background:radial-gradient(circle,rgba(255,90,31,.38),transparent 70%);z-index:-1}
+.bcta h2{font-family:var(--disp);font-size:clamp(28px,3.4vw,48px);font-weight:700;letter-spacing:-.035em;line-height:1.05;margin-top:16px}
+.bcta p{margin-top:14px;font-size:16px;line-height:1.65;color:#c9c7c1;max-width:56ch}
+.bcta-chips{list-style:none;padding:0;margin:20px 0 0;display:flex;flex-wrap:wrap;gap:8px}
+.bcta-chips li{font-size:13px;color:#e6e4de;border:1px solid var(--line-d);border-radius:999px;padding:7px 14px}
+.bcta-actions{display:grid;gap:12px;justify-items:stretch;min-width:250px}
+.bcta-actions .btn{justify-content:space-between}
+.bcta-link{font-size:14px;font-weight:600;color:#c9c7c1;text-align:center;text-decoration:underline;text-underline-offset:3px}
+.bcta-link:hover{color:#fff}
+/* /book-a-call page */
+.bkp-hero{padding-bottom:clamp(10px,2vw,24px)}
+.bkp-hero .h1{font-size:clamp(40px,5.4vw,78px);line-height:1.02;max-width:16ch}
+.bkp-hero .lead{max-width:60ch;margin-top:20px}
+.bkp-hero + .bk{padding-top:clamp(28px,4vw,56px)}
+.bkp-list{counter-reset:none}
+.bkp-card{display:grid;align-content:start;gap:10px;height:100%;padding:24px 24px 26px;border-radius:22px;background:#fff;border:1px solid var(--line)}
+.bkp-people{padding-bottom:clamp(40px,6vw,80px)}
+.bkp-people ul{list-style:none;margin:20px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.bkp-people ul a{display:flex;align-items:center;gap:16px;padding:18px;border-radius:22px;background:#fff;border:1px solid var(--line);transition:border-color .3s,transform .3s}
+.bkp-people ul a:hover{border-color:var(--or);transform:translateY(-2px)}
+.bkp-people img{width:72px;height:72px;border-radius:50%;object-fit:cover;flex:none}
+.bkp-people ul a>span{display:grid;gap:4px;font-size:14px;color:var(--body);line-height:1.45}
+.bkp-people ul b{font-family:var(--disp);font-size:18px;color:var(--fg);letter-spacing:-.02em}
+.bkp-alt{margin-top:22px;font-size:15px;color:var(--body);line-height:1.7}
+.bkp-alt a{color:var(--fg);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.pcall a{color:inherit;font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media (max-width:980px){.bcta{grid-template-columns:1fr}.bcta-actions{min-width:0}}
+@media (max-width:640px){.bkp-people ul{grid-template-columns:1fr}.bcta{border-radius:22px}.bcta-actions .btn{justify-content:center;gap:12px}}
+.seo-prose,.sx-sec h2,.sx-cards b{overflow-wrap:break-word}
+.bkp-card b{font-family:var(--disp);font-size:clamp(17px,1.35vw,20px);font-weight:700;letter-spacing:-.025em;line-height:1.2}
+.bkp-card .d{font-size:14.5px;line-height:1.55;color:var(--body);font-weight:400}
+.bkp-card .n{font-size:12px}
+/* Booking page variant: calendar first, details beside it */
+.bk.bk-page .bk-grid{grid-template-columns:minmax(0,1.35fr) minmax(0,.65fr)}
+.bk.bk-page .bk-cal{order:-1}
+.bk-side h2{font-family:var(--disp);font-size:clamp(22px,2vw,28px);font-weight:700;letter-spacing:-.03em;line-height:1.15}
+.bk-side .bk-list{margin-top:18px}
+@media (max-width:980px){.bk.bk-page .bk-grid{grid-template-columns:minmax(0,1fr)}}
+.sx-cards .d{font-weight:400}

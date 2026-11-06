@@ -284,7 +284,7 @@ export const BLOG_POSTS: BlogPost[] = [
     <h4>Continuous Conversion Rate Optimization (CRO)</h4>
     <p>A/B test landing page headline variants, monitor voice agent call transcripts for friction points, and iteratively lower cost per acquisition.</p>
   </div>
-  <p>Not sure whether to lead with a VSL or an interactive front end? Read our split-test data on <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">high-ticket VSL vs. multi-step quiz funnels</a>, or <a href="/contact">book a funnel strategy call</a> and we will map this architecture to your offer.</p>
+  <p>Not sure whether to lead with a VSL or an interactive front end? Read our split-test data on <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">high-ticket VSL vs. multi-step quiz funnels</a>, or <a href="/book-a-call">book a funnel strategy call</a> and we will map this architecture to your offer.</p>
 </section>
 `
   },
@@ -436,7 +436,7 @@ export const BLOG_POSTS: BlogPost[] = [
   </ul>
   <p>This hybrid architecture captures the high opt-in volume of an interactive quiz while delivering the high closing percentage and authority of a master VSL.</p>
   <p>Once the diagnostic captures the lead, speed is everything. Pair it with the <a href="/blog/ai-sales-funnels-voice-lead-qualification-2026">AI voice qualification stack</a> so the prospect is called within 60 seconds, and protect the booked call with the <a href="/blog/reduce-sales-call-no-show-rate-reminder-automation">no-show reduction sequence</a>. If your offer is low-ticket rather than high-ticket, the <a href="/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown">self-liquidating offer funnel breakdown</a> is the better starting point.</p>
-  <p>Want us to build the hybrid stack for your offer? See <a href="/#pricing">our funnel build packages</a> or <a href="/contact">book a strategy call</a>.</p>
+  <p>Want us to build the hybrid stack for your offer? See <a href="/#pricing">our funnel build packages</a> or <a href="/book-a-call">book a strategy call</a>.</p>
 </section>
 
 <section id="decision-matrix">
@@ -723,7 +723,7 @@ export const BLOG_POSTS: BlogPost[] = [
     <li><strong>No consent handling.</strong> In regions that require it, send the <code>data_processing_options</code> flags rather than skipping the event.</li>
     <li><strong>Forgetting the value parameter.</strong> Purchase events without a value cannot be used for value-based bidding, which is how <a href="/scalelowticket">low-ticket funnels like our $847K self-liquidating offer</a> scale profitably.</li>
   </ul>
-  <p>If you would rather have this installed and verified for you alongside the funnel itself, our <a href="/#pricing">build packages</a> include server-side tracking as standard. <a href="/contact">Book a strategy call</a> and bring your Events Manager login.</p>
+  <p>If you would rather have this installed and verified for you alongside the funnel itself, our <a href="/#pricing">build packages</a> include server-side tracking as standard. <a href="/book-a-call">Book a strategy call</a> and bring your Events Manager login.</p>
 </section>
 `
   },
@@ -914,7 +914,7 @@ export const BLOG_POSTS: BlogPost[] = [
     <h4>Report on time-to-first-touch weekly</h4>
     <p>Add a custom field stamped at submission and at first contact. If the median creeps above 60 seconds, something in the chain is broken.</p>
   </div>
-  <p>This stack is part of every funnel we ship. Combined with an <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">interactive diagnostic front end</a>, it is how the <a href="/milliondollarcasestudy">$1.52M consulting funnel</a> brought cost per booked call down from $280 to $112. To have it built for your pipeline in 5 to 10 business days, <a href="/contact">book a strategy call</a>.</p>
+  <p>This stack is part of every funnel we ship. Combined with an <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">interactive diagnostic front end</a>, it is how the <a href="/milliondollarcasestudy">$1.52M consulting funnel</a> brought cost per booked call down from $280 to $112. To have it built for your pipeline in 5 to 10 business days, <a href="/book-a-call">book a strategy call</a>.</p>
 </section>
 `
   },
@@ -1083,7 +1083,7 @@ export const BLOG_POSTS: BlogPost[] = [
     <li>The product needs a sales conversation to be understood, in which case an application funnel is more efficient.</li>
     <li>Margins on the backend cannot support a 60-day payback window while the email sequence does its work.</li>
   </ul>
-  <p>For local services and B2B offers above $3,000, the <a href="/blog/ai-sales-funnels-voice-lead-qualification-2026">AI-qualified application funnel</a> usually outperforms. If you are unsure which model fits your offer, see the breakdown of <a href="/case-ecom">126+ eCommerce funnels</a> alongside our <a href="/case-leadgen">lead generation results</a>, or <a href="/contact">book a strategy call</a> and we will run the numbers with you.</p>
+  <p>For local services and B2B offers above $3,000, the <a href="/blog/ai-sales-funnels-voice-lead-qualification-2026">AI-qualified application funnel</a> usually outperforms. If you are unsure which model fits your offer, see the breakdown of <a href="/case-ecom">126+ eCommerce funnels</a> alongside our <a href="/case-leadgen">lead generation results</a>, or <a href="/book-a-call">book a strategy call</a> and we will run the numbers with you.</p>
 </section>
 `
   },
@@ -1238,7 +1238,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <section id="measure">
   <h2>7. Measuring Show Rate Properly</h2>
   <p>Track show rate as attended calls divided by booked calls, by lead source and by closer, weekly. Also track <strong>cost per attended call</strong>, which is the number that actually ties ad spend to revenue. On the consulting funnel above, cost per booked call fell from $280 to $112, and cost per attended call fell further still once show-ups climbed. Send the attended-call event back to Meta too, using the event ladder in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide</a>, so the algorithm learns who actually shows up.</p>
-  <p>Every sequence in this article ships as part of our <a href="/#services">CRM automation and follow-up builds</a>. If your show rate is under 75%, <a href="/contact">book a strategy call</a> and we will audit the gap between booking and call for you.</p>
+  <p>Every sequence in this article ships as part of our <a href="/#services">CRM automation and follow-up builds</a>. If your show rate is under 75%, <a href="/book-a-call">book a strategy call</a> and we will audit the gap between booking and call for you.</p>
 </section>
 `
   },
@@ -1511,7 +1511,7 @@ export const BLOG_POSTS: BlogPost[] = [
       </tbody>
     </table>
   </div>
-  <p>Whichever platform you choose, the work that produces results is the same: an interactive front end, follow-up inside a minute, a reminder sequence and server-side tracking. That is what we build in 5 to 10 business days. See the <a href="/case-leadgen">lead generation case studies</a> for what it looks like in your industry, or <a href="/contact">book a strategy call</a> and we will recommend the stack for your offer.</p>
+  <p>Whichever platform you choose, the work that produces results is the same: an interactive front end, follow-up inside a minute, a reminder sequence and server-side tracking. That is what we build in 5 to 10 business days. See the <a href="/case-leadgen">lead generation case studies</a> for what it looks like in your industry, or <a href="/book-a-call">book a strategy call</a> and we will recommend the stack for your offer.</p>
 </section>
 `
   },
@@ -1668,7 +1668,7 @@ export const BLOG_POSTS: BlogPost[] = [
   <p>Personal injury intake is one of the strongest use cases, because accident victims call several firms at once and often enquire at night; see how it fits into the full system in our <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">personal injury lead generation guide</a>.</p>
   <p>Across 60+ live deployments on the <a href="/case-leadgen">lead generation funnels</a> we run: median first contact at 38 seconds, 84% of leads reached inside the first minute, a 2.4x lift in lead-to-booking on the same ads and landing pages, and 100% of after-hours leads worked rather than waiting for the morning. On the <a href="/milliondollarcasestudy">$1.52M consulting funnel</a>, AI qualification was one of the four changes that cut cost per booked call from $280 to $112.</p>
   <p>Where it fails: leads from very low-intent sources (giveaways, broad lead-form ads with no qualifying question) produce short, annoyed calls. Offers that need a long consultative first conversation suit a human setter. And an agent launched without a tested knowledge base will say something wrong in week one; test with 50 internal calls before it touches a real lead.</p>
-  <p>If you want this built and connected to your CRM, it ships as part of our <a href="/#services">AI calling and automation builds</a>. <a href="/contact">Book a strategy call</a> and we will map the script and routing to your offer.</p>
+  <p>If you want this built and connected to your CRM, it ships as part of our <a href="/#services">AI calling and automation builds</a>. <a href="/book-a-call">Book a strategy call</a> and we will map the script and routing to your offer.</p>
 </section>
 `
   },
@@ -1828,7 +1828,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <section id="tracking">
   <h2>7. Tracking Jobs, Not Form Fills</h2>
   <p>If the ads optimize for form submissions, Meta and Google will find you cheap, low-intent leads. Send the events that matter back instead: estimator completed, inspection booked, inspection attended, contract signed, with the job value. That is the CRM event ladder from our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Meta Conversions API guide</a>, and after about two weeks the ad platforms start delivering homeowners who look like the ones who signed.</p>
-  <p>Every piece of this playbook, the estimator page, the ads, the follow-up automation and the tracking, is what we build for roofing and home services clients in 5 to 10 business days. Browse the <a href="/case-leadgen">home services results</a>, or <a href="/contact">book a strategy call</a> and we will model the cost per job for your market.</p>
+  <p>Every piece of this playbook, the estimator page, the ads, the follow-up automation and the tracking, is what we build for roofing and home services clients in 5 to 10 business days. Browse the <a href="/case-leadgen">home services results</a>, or <a href="/book-a-call">book a strategy call</a> and we will model the cost per job for your market.</p>
 </section>
 `
   },
@@ -1980,7 +1980,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <section id="measure">
   <h2>7. Measuring Cost per Signed Case</h2>
   <p>Cost per lead is the wrong scoreboard. Track the full ladder: lead, verified lead, consultation booked, consultation attended, retainer signed. On the $388K campaign that ladder read 1,079 verified leads, 669 show-ups, 194 signed clients, at an average of $2,000 per client, which is a 19.09x return on $20,324 of spend.</p>
-  <p>Send those stages back to Meta as server-side events, as described in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide</a>, so the algorithm learns which claimants sign rather than which ones fill in forms. Every result in this article is on the <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury case studies</a> page. If you want this built for your firm or your lead business, <a href="/contact">book a strategy call</a>.</p>
+  <p>Send those stages back to Meta as server-side events, as described in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide</a>, so the algorithm learns which claimants sign rather than which ones fill in forms. Every result in this article is on the <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury case studies</a> page. If you want this built for your firm or your lead business, <a href="/book-a-call">book a strategy call</a>.</p>
 </section>
 `
   },
@@ -2119,7 +2119,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <section id="measure">
   <h2>7. What to Measure</h2>
   <p>Track the ladder, not the lead: verified lead, conversation, application, approval, funded loan and commission. Send applications and fundings back to Meta through the <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API</a> so the algorithm finds more borrowers who fund. The same discipline drives the results in our <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">personal injury lead generation guide</a>, where cost per signed case matters more than cost per lead.</p>
-  <p>All the campaigns above are on the <a href="/case-studies/mortgage-insurance-lead-generation">mortgage and insurance case studies</a> page. If you want this funnel built for your branch or brokerage, <a href="/contact">book a strategy call</a>.</p>
+  <p>All the campaigns above are on the <a href="/case-studies/mortgage-insurance-lead-generation">mortgage and insurance case studies</a> page. If you want this funnel built for your branch or brokerage, <a href="/book-a-call">book a strategy call</a>.</p>
 </section>
 `
   },

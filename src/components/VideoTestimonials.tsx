@@ -191,7 +191,7 @@ export default function VideoTestimonials() {
             onToggle={handleToggle}
           />
 
-          <a className="bt s3" href="#robo">
+          <a className="bt s3" href="/book-a-call">
             <span className="k">Your turn</span>
             <b>Be the next clip.</b>
             <span className="go">

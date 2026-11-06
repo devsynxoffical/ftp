@@ -2,7 +2,7 @@
 
 import { useState, useRef } from "react";
 import { LOGOS } from "@/data/siteContent";
-import BookingSection from "@/components/BookingSection";
+import BookingCta from "@/components/BookingCta";
 
 export default function ContactPage() {
   const [step, setStep] = useState(0);
@@ -512,14 +512,7 @@ ${msg.trim()}`;
         </div>
       </section>
     </main>
-    <BookingSection
-      path="/contact"
-      title={
-        <>
-          Or book your call <span className="it">directly.</span>
-        </>
-      }
-    />
+    <BookingCta path="/contact" />
     </>
   );
 }

@@ -152,7 +152,7 @@ export default async function AuthorPage({ params }: PageProps) {
 
           <div className="kcta">
             <h2>Work with {a.name.split(" ")[0]}&rsquo;s team</h2>
-            <Link className="btn" href="/contact">
+            <Link className="btn" href="/book-a-call">
               Book a strategy call <i>&#8599;</i>
             </Link>
           </div>

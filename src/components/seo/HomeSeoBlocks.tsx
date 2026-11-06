@@ -93,7 +93,7 @@ export function HomeExplore() {
             <div><b>5-10</b><span>days per build</span></div>
             <div><b>$999</b><span>builds from</span></div>
           </div>
-          <Link className="btn o" href="/contact">
+          <Link className="btn o" href="/book-a-call">
             Book a strategy call <i>&#8599;</i>
           </Link>
         </aside>

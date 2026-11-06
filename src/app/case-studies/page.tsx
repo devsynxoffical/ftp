@@ -218,7 +218,7 @@ export default function CaseStudiesPage() {
           <p className="lead" style={{ margin: "0 auto 24px", textAlign: "center" }}>
             Want your campaign on this page?
           </p>
-          <Link className="btn o" href="/#robo">
+          <Link className="btn o" href="/book-a-call">
             Build my funnel <i>&#8599;</i>
           </Link>
         </div>

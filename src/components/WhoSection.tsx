@@ -155,7 +155,7 @@ export default function WhoSection() {
           {WHO.map((item, index) => (
             <a
               key={item.name}
-              href="#robo"
+              href="/book-a-call"
               data-i={index}
               className={selectedIdx === index ? "on" : ""}
               onClick={(e) => {
@@ -232,7 +232,7 @@ export default function WhoSection() {
                 <span key={c}>{c}</span>
               ))}
             </div>
-            <a className="btn g" href="#robo">
+            <a className="btn g" href="/book-a-call">
               Map my funnel <i>&#8599;</i>
             </a>
           </div>
