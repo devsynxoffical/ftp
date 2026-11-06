@@ -32,7 +32,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       },
       {
         h2: "B2B lead generation in the UAE",
-        html: `<p>B2B buyers in the UAE rarely convert from a cold form. What works is a specific offer (an audit, a benchmark, a demo with a clear outcome), a <a href="/quiz-funnels">qualifying quiz</a> or application, and a fast human or AI follow-up that books a meeting. LinkedIn and Google search usually carry the targeting; Meta works for owner-led SMEs. For agencies and SaaS, see our <a href="/case-studies/agency-saas-lead-generation">agency and SaaS results</a>. If you need outbound or appointment setting for high-ticket B2B rather than a funnel, our partner <a href="https://qualifiedleadsx.com">Qualified Leads X</a> specialises in that.</p>`,
+        html: `<p>B2B buyers in the UAE rarely convert from a cold form. What works is a specific offer (an audit, a benchmark, a demo with a clear outcome), a <a href="/quiz-funnels">qualifying quiz</a> or application, and a fast human or AI follow-up that books a meeting. LinkedIn and Google search usually carry the targeting; Meta works for owner-led SMEs. For agencies and SaaS, see our <a href="/case-studies/agency-saas-lead-generation">agency and SaaS results</a>. If you need outbound or appointment setting for high-ticket B2B rather than a funnel, our partner <a href="https://qualifiedleadsx.com">Qualified Leads X</a> specializes in that.</p>`,
       },
       {
         h2: "How the system works",
@@ -59,7 +59,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       },
     ],
     proof: {
-      heading: "Real results from the same system (US and international clients)",
+      heading: "Published results from the same system (mostly US clients)",
       items: [
         { value: "247", label: "Real estate leads at $16.48 each", href: "/case-studies/real-estate-247-leads-at-16-48-cpl" },
         { value: "$11.57", label: "Real estate cost per lead, 69 leads", href: "/case-studies/real-estate-69-leads-at-11-57-cpl" },
@@ -130,7 +130,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       },
     ],
     proof: {
-      heading: "Booked appointments from our follow-up systems (US clients)",
+      heading: "Booked appointments from our funnel and follow-up builds",
       items: [
         { value: "174", label: "Coaching appointments, $115,500 revenue", href: "/case-studies/coaching-116k-revenue-on-2214-ad-spend" },
         { value: "180", label: "Agency appointments on $2,824 ad spend", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
@@ -226,7 +226,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       { q: "How long does a GoHighLevel build take?", a: "Most of our builds go live in 5 to 10 business days. A single workflow fix can take a day; a multi-location account with several funnels, custom integrations and AI agents can take longer. The timeline is agreed before work starts, and you review staging links before anything goes live." },
       { q: "Can you work in my existing GoHighLevel account?", a: "Yes, and we prefer it. We build inside your account or sub-account, so you keep ownership of every funnel, workflow and contact. If the account already has messy automations, we audit them first, turn off anything that conflicts, and document what stays so your team understands the final setup." },
       { q: "Do you build snapshots for agencies?", a: "Yes. If you run an agency on GoHighLevel, we can build the system once and package it as a snapshot, so each new client sub-account starts with the funnels, pipelines, workflows, calendars and custom values in place. You then only change the client-specific details instead of rebuilding." },
-      { q: "What is the difference between a GoHighLevel expert and a GoHighLevel agency?", a: "An expert or developer usually executes a defined build or fix. An agency also owns strategy, copy, ads, tracking and ongoing optimisation. We do both: fixed-scope builds for teams that want to run the account themselves, and done-for-you systems for businesses that want a partner accountable for results." },
+      { q: "What is the difference between a GoHighLevel expert and a GoHighLevel agency?", a: "An expert or developer usually executes a defined build or fix. An agency also owns strategy, copy, ads, tracking and ongoing optimization. We do both: fixed-scope builds for teams that want to run the account themselves, and done-for-you systems for businesses that want a partner accountable for results." },
     ],
     related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot"],
     parent: HUB,
