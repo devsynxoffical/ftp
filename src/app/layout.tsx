@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import WhatsAppButton from "@/components/WhatsAppButton";
 import { AUTHORS } from "@/data/authors";
 import Script from "next/script";
 
@@ -313,6 +314,7 @@ fbq('track', 'PageView');`}
           <main>{children}</main>
           <Footer />
         </SmoothScroll>
+        <WhatsAppButton />
       </body>
     </html>
   );
