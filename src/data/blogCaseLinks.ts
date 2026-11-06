@@ -26,4 +26,7 @@ export const BLOG_CASE_INDUSTRIES: Record<string, string[]> = {
   "facebook-lead-ads-vs-funnels": ["mva-personal-injury-lead-generation", "mortgage-insurance-lead-generation"],
   "sales-funnel-stages": ["shopify-dtc-ecommerce", "coaching-consulting-funnels"],
   "how-to-reduce-cost-per-lead": ["roofing-lead-generation", "hvac-lead-generation"],
+  "speed-to-lead-statistics": ["mva-personal-injury-lead-generation", "real-estate-lead-generation"],
+  "quiz-funnel-examples": ["roofing-lead-generation", "med-spa-marketing"],
+  "vsl-funnel-examples": ["coaching-consulting-funnels", "low-ticket-funnels"],
 };

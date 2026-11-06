@@ -196,7 +196,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "Which CRM does it connect to?", a: "Any CRM with webhooks or an API. We build most on GoHighLevel because the form trigger, calendar and pipeline sit in one account, but we also connect HubSpot and other CRMs. The AI writes the call outcome, answers and booked slot back to the contact record." },
       { q: "Is it compliant to call leads with AI?", a: "It can be, when the lead has given consent to be called and texted on the form, the agent discloses it is an AI in the opening lines, and calling hours and opt-outs are respected. Rules differ by country and state, so scripts should be reviewed before launch." },
     ],
-    related: ["/ai-voice-agents", "/ai-appointment-setter", "/funnels-for/personal-injury-lawyers", "/funnels-for/coaches", "/funnels-for/mortgage", "/compare/ai-voice-agent-vs-human-setter", "/tools/ai-voice-agent-roi-calculator"],
+    related: ["/ai-voice-agents", "/ai-appointment-setter", "/funnels-for/personal-injury-lawyers", "/funnels-for/coaches", "/funnels-for/mortgage", "/compare/ai-voice-agent-vs-human-setter", "/tools/ai-voice-agent-roi-calculator", "/blog/speed-to-lead-statistics"],
     parent: HUB,
     updated: U,
   },

@@ -5,7 +5,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
   {
     slug: "speed-to-lead-statistics",
     metaTitle: "Speed to Lead Statistics 2026: Research and Our Data",
-    metaDescription: "Speed to lead statistics from HBR and the Lead Response Management study, plus our data from 60+ deployments: 38-second median first contact, 2.4x bookings.",
+    metaDescription: "Speed to lead statistics from HBR and the Lead Response Management study, plus our data from 60+ deployments: a 38-second median first contact.",
     keyTakeaways: [
       "The best-known research agrees on direction: leads contacted within minutes are far more likely to be reached and qualified than leads contacted hours later, and many companies still take more than a day to respond.",
       "Across 60+ Funnels That Print deployments, automated follow-up produced a median first contact of 38 seconds and reached 84% of leads inside the first minute.",
@@ -19,7 +19,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     author: AUTHORS.rahul,
     publishedAt: "2026-11-06",
     updatedAt: "2026-11-06",
-    readTime: "9 min read",
+    readTime: "8 min read",
     image: "/img/blog/speed-to-lead-statistics.jpg",
     imageAlt: "Dashboard showing a lead response time histogram with most first contacts under 60 seconds next to a phone receiving an instant text message",
     keywords: [
@@ -44,8 +44,9 @@ export const PLAN_POSTS_C: BlogPost[] = [
       { id: "stats-table", title: "4. Speed to Lead Statistics at a Glance" },
       { id: "by-industry", title: "5. Speed to Lead by Industry" },
       { id: "measure-yours", title: "6. How to Measure Your Own Speed to Lead" },
-      { id: "improve-it", title: "7. How to Get Under 60 Seconds" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "why-slow", title: "7. Why Most Businesses Are Still Slow" },
+      { id: "improve-it", title: "8. How to Get Under 60 Seconds" },
+      { id: "faq", title: "9. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -160,8 +161,21 @@ export const PLAN_POSTS_C: BlogPost[] = [
   <p>Put these numbers on one weekly view. Our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a> includes a speed-to-lead row, and the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> shows what a higher booking rate is worth at your lead volume.</p>
 </section>
 
+<section id="why-slow">
+  <h2>7. Why Most Businesses Are Still Slow</h2>
+  <p>If the research has been public for over a decade, why do so many audits still find response times measured in hours? In the accounts we review before a build, the causes are nearly always the same:</p>
+  <ul>
+    <li><strong>Leads land in an inbox, not a pipeline.</strong> Form notifications go to a shared email address that someone checks between other jobs.</li>
+    <li><strong>Nobody owns the first touch.</strong> Sales assumes marketing has followed up, and marketing assumes sales has.</li>
+    <li><strong>Business hours.</strong> A large share of paid leads arrive in the evening and at weekends, exactly when nobody is at a desk.</li>
+    <li><strong>Lead ads without integration.</strong> Instant form leads sit inside the ad platform until someone downloads them.</li>
+    <li><strong>No reporting.</strong> If response time is not on a dashboard, it is not managed, and it drifts.</li>
+  </ul>
+  <p>None of these are effort problems. They are wiring problems, which is why a one-time build fixes them for good.</p>
+</section>
+
 <section id="improve-it">
-  <h2>7. How to Get Under 60 Seconds</h2>
+  <h2>8. How to Get Under 60 Seconds</h2>
   <p>No sales team answers every lead in under a minute by trying harder. Getting there is a systems problem with four parts:</p>
   <ul>
     <li><strong>Instant text on submit</strong> with the lead's name and a booking link. Our <a href="/templates/sms-follow-up-templates">SMS follow-up templates</a> include the first message we use.</li>
@@ -176,7 +190,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
   {
     slug: "quiz-funnel-examples",
     metaTitle: "Quiz Funnel Examples: 7 Real Builds and Patterns",
-    metaDescription: "Quiz funnel examples from real builds in roofing, MVA, med spa and coaching, plus product finder, assessment and calculator patterns with question structures.",
+    metaDescription: "Quiz funnel examples from roofing, MVA, med spa and coaching builds, plus product finder, assessment and calculator patterns, with question structures.",
     keyTakeaways: [
       "The best quiz funnel examples ask three to six easy multiple-choice questions, collect contact details last and end on a result page that leads to one clear next step.",
       "Our real builds show the range: 537 roofing leads at $4.27 from a multi-step estimator, 1,079 MVA leads that produced $388,000 in revenue, and 174 coaching appointments on $2,214 of ad spend.",
@@ -190,7 +204,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     author: AUTHORS.gaurav,
     publishedAt: "2026-11-06",
     updatedAt: "2026-11-06",
-    readTime: "9 min read",
+    readTime: "8 min read",
     image: "/img/blog/quiz-funnel-examples.jpg",
     imageAlt: "Three phone screens showing a multiple-choice quiz question, a progress bar and a personalized result page with a booking button",
     keywords: [
@@ -216,8 +230,10 @@ export const PLAN_POSTS_C: BlogPost[] = [
       { id: "coaching-diagnostic", title: "5. Coaching Diagnostic: 174 Appointments" },
       { id: "patterns", title: "6. Three Reusable Patterns (Not Client Builds)" },
       { id: "comparison", title: "7. All Seven Compared" },
-      { id: "follow-up", title: "8. Result Pages and Follow-Up That Convert" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "writing-questions", title: "8. How to Write Quiz Questions" },
+      { id: "follow-up", title: "9. Result Pages and Follow-Up That Convert" },
+      { id: "mistakes", title: "10. Common Quiz Funnel Mistakes" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -342,8 +358,22 @@ export const PLAN_POSTS_C: BlogPost[] = [
   </div>
 </section>
 
+<section id="writing-questions">
+  <h2>8. How to Write Quiz Questions</h2>
+  <p>Across the four client builds above, the questions followed the same rules, whatever the industry.</p>
+  <ol>
+    <li><strong>Start with the easiest, most interesting question.</strong> "What does your roof need?" or "Which area would you like to treat?" is about the visitor, not about you, and it takes one tap to answer.</li>
+    <li><strong>Every question must change something.</strong> If an answer does not affect the result page, the routing or the first follow-up message, delete the question. Each extra screen costs completions.</li>
+    <li><strong>Put qualifying questions in the middle.</strong> Timing, decision-maker and budget questions work best after two or three easy answers, once the visitor is committed.</li>
+    <li><strong>Offer four or five answers at most</strong>, including an honest "not sure" option so nobody stalls.</li>
+    <li><strong>Ask for contact details last</strong>, framed as where to send the result, estimate or case review.</li>
+    <li><strong>Verify the phone number</strong> when lead quality matters. A text code filters typos and fake numbers before your team dials them.</li>
+  </ol>
+  <p>Write the questions in the customer's words, not your internal labels. A homeowner says "my roof is leaking", not "repair inquiry". Our <a href="/templates/funnel-copy-template">funnel copy template</a> has prompts for the headline and result page copy that sit around the questions.</p>
+</section>
+
 <section id="follow-up">
-  <h2>8. Result Pages and Follow-Up That Convert</h2>
+  <h2>9. Result Pages and Follow-Up That Convert</h2>
   <p>A quiz earns trust by asking good questions. The result page and follow-up are where that trust either becomes a sale or leaks away.</p>
   <ul>
     <li><strong>Reflect the answers.</strong> Name the job type, injury, treatment or bottleneck the visitor chose. A generic thank-you page throws away the personalization you just collected.</li>
@@ -354,12 +384,26 @@ export const PLAN_POSTS_C: BlogPost[] = [
   </ul>
   <p>Deciding between a quiz and a video front end? Our <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">VSL vs interactive quiz funnel comparison</a> covers when each wins, and the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup shows other funnel types. When you want one built, <a href="/contact">book a strategy call</a>; builds go live in 5 to 10 business days.</p>
 </section>
+
+<section id="mistakes">
+  <h2>10. Common Quiz Funnel Mistakes</h2>
+  <p>When a quiz funnel underperforms, it is usually one of these:</p>
+  <ul>
+    <li><strong>A trivia-style promise.</strong> "Which type of entrepreneur are you?" attracts curiosity clicks, not buyers. Promise something the buyer actually wants: an estimate, a case review, a plan.</li>
+    <li><strong>Too many questions.</strong> Ten screens for a local service is too many. Cut until every question earns its place.</li>
+    <li><strong>Asking for contact details first.</strong> It turns the quiz back into a form and loses the commitment effect.</li>
+    <li><strong>A result page with no next step.</strong> If the result does not lead straight to a booking or checkout, most visitors leave.</li>
+    <li><strong>Answers that never reach the CRM.</strong> The sales team calls blind and asks the same questions again, which annoys the lead and wastes the quiz.</li>
+    <li><strong>Slow follow-up.</strong> A quiz lead is a warm lead for minutes, not days. The <a href="/glossary/speed-to-lead">speed to lead</a> principle applies here more than anywhere.</li>
+  </ul>
+  <p>Fix these and a quiz is one of the most reliable front ends for cold traffic we build.</p>
+</section>
 `,
   },
   {
     slug: "vsl-funnel-examples",
     metaTitle: "VSL Funnel Examples: 6 Builds Broken Down Page by Page",
-    metaDescription: "VSL funnel examples from real builds, including a $1.52M consulting funnel, with page-by-page structure, script beats and the application and booking steps.",
+    metaDescription: "VSL funnel examples from real builds, including a $1.52M consulting funnel, with page-by-page structure, script beats and application and booking steps.",
     keyTakeaways: [
       "A VSL funnel is an ad, a video sales letter page, a short application or checkout, and follow-up that protects the next step. The video sells; the steps around it decide how many buyers you keep.",
       "Our largest high-ticket example, a consulting VSL funnel with qualification filters, CAPI tracking and multi-touch follow-up, collected $1.52M over 19 months.",
@@ -373,7 +417,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     author: AUTHORS.rahul,
     publishedAt: "2026-11-06",
     updatedAt: "2026-11-06",
-    readTime: "9 min read",
+    readTime: "8 min read",
     image: "/img/blog/vsl-funnel-examples.jpg",
     imageAlt: "Laptop playing a video sales letter above an application form and a booking calendar laid out as a three-step funnel diagram",
     keywords: [
@@ -400,7 +444,9 @@ export const PLAN_POSTS_C: BlogPost[] = [
       { id: "patterns", title: "6. Two Reusable Patterns (Not Client Builds)" },
       { id: "script-beats", title: "7. The Script Beats Every Example Shares" },
       { id: "application-booking", title: "8. Application and Booking Steps" },
-      { id: "faq", title: "9. Frequently Asked Questions" },
+      { id: "mistakes", title: "9. Common VSL Funnel Mistakes" },
+      { id: "which-to-copy", title: "10. Which Example Should You Copy?" },
+      { id: "faq", title: "11. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -445,6 +491,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     <li><strong>Follow-up</strong>: instant contact, reminders and tracking that tells the ad platform which viewers became buyers.</li>
   </ol>
   <p>The video gets the attention, but in our builds the biggest gains usually came from layers three and four. You can see how we approach all four on our <a href="/vsl-funnels">VSL funnel service</a> page.</p>
+  <p>One more point before the examples: a VSL funnel is not only for high-ticket offers. The same video-led argument works on a checkout page for a $27 product and in a scheduled webinar for a coaching program. What changes from one example to the next is the length of the video and what the viewer is asked to do afterwards, which is why we break down each step separately.</p>
 </section>
 
 <section id="high-ticket-consulting">
@@ -535,6 +582,31 @@ export const PLAN_POSTS_C: BlogPost[] = [
     <li><strong>Instant contact.</strong> Across 60+ deployments our <a href="/speed-to-lead">speed-to-lead</a> layer had a median first contact of 38 seconds and lifted lead-to-booking 2.4x.</li>
     <li><strong>Three-channel reminders</strong> by SMS, email and call, which took show-up rates up to 88%.</li>
     <li><strong>Server-side tracking</strong> through the <a href="/meta-conversions-api-setup">Meta Conversions API</a>, which recovered 31% more events in our builds.</li>
+  </ul>
+  <p>Each of these steps is small on its own. Together they decide how many of the people your video convinced actually end up on a call or in a checkout.</p>
+</section>
+
+<section id="mistakes">
+  <h2>9. Common VSL Funnel Mistakes</h2>
+  <p>When we audit VSL funnels that are not working, the video is rarely the only problem. These are the issues we find most often:</p>
+  <ul>
+    <li><strong>A slow opening.</strong> If the first 30 seconds do not name the outcome and the audience, most cold viewers leave before the argument starts. Check the retention curve before reshooting anything else.</li>
+    <li><strong>Too many exits on the page.</strong> Navigation menus, social links and several buttons pull viewers away. A VSL page needs one action.</li>
+    <li><strong>No qualification.</strong> A calendar open to everyone fills with people who cannot buy, and closers burn out on bad calls.</li>
+    <li><strong>A gap between booking and the call.</strong> Calls booked three or more days out without reminders are the ones that no-show. Our <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> closes that gap.</li>
+    <li><strong>Pixel-only tracking.</strong> If the ad platform only sees page views and opt-ins, it optimizes for viewers, not buyers. Send qualified-call and sale events back.</li>
+    <li><strong>Judging too early.</strong> High-ticket funnels need weeks of data because closes lag ad spend. Agree a test budget and timeline before launch.</li>
+  </ul>
+</section>
+
+<section id="which-to-copy">
+  <h2>10. Which Example Should You Copy?</h2>
+  <p>Match the example to your price and buying process rather than to whatever looks most impressive:</p>
+  <ul>
+    <li><strong>You sell a high-ticket service or program and can take calls:</strong> copy the consulting or coaching structure, with a VSL, a short application and a protected calendar.</li>
+    <li><strong>Your offer needs real teaching before people understand it:</strong> copy the webinar structure and invest in attendance reminders. Our <a href="/webinar-funnels">webinar funnels</a> page covers the build.</li>
+    <li><strong>You sell a product under about $50:</strong> copy the low-ticket structure, where checkout, order bump and upsell matter as much as the video.</li>
+    <li><strong>Your cold traffic will not watch a long video:</strong> start with the quiz-first pattern and move the video to the result page.</li>
   </ul>
   <p>For more formats, see the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup or our guide on <a href="/blog/how-to-build-a-high-ticket-funnel">how to build a high ticket funnel</a>. When you are ready, <a href="/contact">book a strategy call</a>; a complete VSL funnel goes live in 5 to 10 business days.</p>
 </section>
