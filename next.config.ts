@@ -34,7 +34,7 @@ const securityHeaders = [
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: blob: https:",
       "media-src 'self' blob: https:",
-      "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com",
+      "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com https://calendar.google.com",
       "connect-src 'self' https:",
       "frame-ancestors 'self'",
     ].join("; "),
