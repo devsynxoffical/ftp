@@ -2877,7 +2877,8 @@ main:has(> .robo:last-child) + .foot {
    ========================================================================== */
 
 .post-wrap {
-  padding-top: clamp(30px, 4vw, 50px);
+  /* Clear the fixed nav (same offset as case study pages), or it covers the back link. */
+  padding-top: clamp(120px, 12vw, 155px);
   padding-bottom: clamp(60px, 8vw, 110px);
 }
 .post-nav-back {
