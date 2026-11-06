@@ -64,7 +64,7 @@ export const COMPARE_PAGES: SeoPage[] = [
       { q: "Can you help me migrate from one platform to another?", a: "Yes. A migration usually covers contacts and tags, pipelines, forms, calendars, email and SMS sequences, domains and tracking. We rebuild the funnel and automations, test every path, then switch traffic over. Most migrations fit inside the same 5 to 10 business day window as a new build when the scope is a single funnel." },
       { q: "What if I am comparing agencies rather than software?", a: "Read the funnel agency vs freelancer comparison. It covers price ranges, who owns the outcome, how long builds take and when a single freelancer is the smarter hire. The short version: one page from a specialist is cheaper, but a system of copy, build, automation and tracking is easier to get right with one accountable team." },
     ],
-    related: ["/compare/gohighlevel-vs-hubspot", "/compare/clickfunnels-vs-kajabi", "/compare/ai-voice-agent-vs-human-setter", "/compare/funnel-agency-vs-freelancer", "/blog/gohighlevel-vs-clickfunnels-lead-generation-2026", "/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026"],
+    related: ["/compare/gohighlevel-vs-hubspot", "/compare/clickfunnels-vs-kajabi", "/compare/ai-voice-agent-vs-human-setter", "/compare/funnel-agency-vs-freelancer", "/blog/gohighlevel-vs-clickfunnels-lead-generation-2026", "/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026", "/compare/vsl-funnel-vs-webinar-funnel", "/compare/meta-pixel-vs-conversions-api"],
     parent: { name: "Home", path: "/" },
     updated: U,
   },
@@ -408,6 +408,154 @@ export const COMPARE_PAGES: SeoPage[] = [
       { q: "Is a freelancer faster than an agency?", a: "For a single page, often yes, because there is less process. For a complete funnel with copy, CRM, follow-up automation and tracking, an agency is usually faster because the work runs in parallel. Our builds go live in 5 to 10 business days, which is hard to match when you coordinate several freelancers yourself." },
     ],
     related: ["/sales-funnel-agency", "/services", "/blog/how-much-does-a-sales-funnel-cost", "/tools/funnel-conversion-calculator", "/case-studies", "/compare"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/compare/vsl-funnel-vs-webinar-funnel",
+    kind: "compare",
+    keyword: "vsl funnel vs webinar funnel",
+    title: "VSL Funnel vs Webinar Funnel: Which Books More Calls?",
+    description: "VSL funnel vs webinar funnel compared on offer price, audience temperature, production effort, show-up and cost per booked call, with real results.",
+    eyebrow: "Compare",
+    h1: "VSL funnel vs webinar funnel: which one should sell your offer?",
+    intro:
+      "<strong>VSL funnel vs webinar funnel</strong> is really a question about how much time your buyer needs before they will book a call or pay. We build both for coaches, consultants and agencies, and the answer depends on offer price, how warm the traffic is and how much production you can sustain. Here is the verdict, a side-by-side table and how to test it on your own numbers.",
+    quick: {
+      q: "Is a VSL funnel or a webinar funnel better?",
+      a: "For most high-ticket offers sold on a call, a VSL funnel is the better default: faster to build, no show-up problem and a lower cost per booked call. A webinar funnel wins when the offer needs 45 to 90 minutes of teaching, the audience is cold to the concept, or you sell directly on the session.",
+    },
+    sections: [
+      {
+        h2: "The verdict",
+        html: `<p>Start with a <a href="/vsl-funnels">VSL funnel</a> if your offer is sold on a sales call, your prospect already understands the problem and you want a funnel live in days rather than weeks. A short video, an application and a calendar remove the biggest leak in webinars: people who register and never show up. Choose a <a href="/webinar-funnels">webinar funnel</a> when the buyer needs a new belief before they will buy, when you sell a program at a price point where a long, teaching-led session closes on its own, or when you can run live events that create real urgency. Many of our best coaching accounts end up running both, with the webinar feeding the same booking calendar as the VSL.</p>`,
+      },
+      {
+        h2: "Side-by-side comparison",
+        html: `<div class="table-wrap"><table><thead><tr><th></th><th>VSL funnel</th><th>Webinar funnel</th></tr></thead><tbody>
+<tr><td>Best offer price</td><td>Mid to high ticket sold on a call</td><td>Programs and high ticket that need teaching; also direct sales on the session</td></tr>
+<tr><td>Audience temperature</td><td>Problem-aware or warmer</td><td>Colder audiences who need education first</td></tr>
+<tr><td>Sales cycle</td><td>Short: watch, apply, book the same day</td><td>Longer: register, attend, then buy or book</td></tr>
+<tr><td>Production effort</td><td>One script and a 5 to 20 minute video</td><td>45 to 90 minute presentation, slides, hosting and replays</td></tr>
+<tr><td>Show-up dynamics</td><td>None for the video; only the call needs reminders</td><td>Two drop-offs: registration to attendance, then attendance to call</td></tr>
+<tr><td>Cost per booked call</td><td>Usually lower, fewer steps</td><td>Higher per call, but calls tend to be warmer</td></tr>
+<tr><td>Main limitation</td><td>Less time to handle objections</td><td>Show-up rates and live-event fatigue</td></tr>
+</tbody></table></div>`,
+      },
+      {
+        h2: "When each format wins",
+        html: `<p><strong>The VSL wins</strong> when speed and cost per booked call matter most. There is no event date to wait for, the funnel runs every hour of the day and the only appointment that needs reminders is the call itself. It also suits offers where the closer does the heavy lifting, so the video only has to qualify and create intent. Our <a href="/templates/vsl-script-template">VSL script template</a> lays out the structure we use.</p>
+<p><strong>The webinar wins</strong> when the offer needs more explanation than a short video can carry, or when attendance itself creates commitment. Someone who sits through an hour of teaching usually arrives on the call ready to talk price. Webinars also give you registrant lists for retargeting and email, which a VSL page collects less of. If you are weighing a quiz against a VSL instead, read our <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">VSL vs quiz funnel breakdown</a>.</p>`,
+      },
+      {
+        h2: "Hybrid options we build most",
+        html: `<ul>
+<li><strong>VSL plus application:</strong> a short video, a few qualifying questions and a calendar. Unqualified applicants go to a nurture sequence instead of the closer's calendar.</li>
+<li><strong>Evergreen webinar:</strong> a recorded session on a schedule or on demand, with chat and offer timers. It keeps the teaching depth without live-event fatigue, though replays need honest framing.</li>
+<li><strong>Webinar into booked call:</strong> the session ends with an application rather than a checkout, so the webinar does the education and the call does the close.</li>
+</ul>
+<p>In every version the follow-up matters as much as the format. Calls booked from either funnel get SMS, email and reminder sequences, which is how we reach show-up rates up to 88% with three-channel reminders.</p>`,
+      },
+      {
+        h2: "How to test VSL vs webinar on your offer",
+        html: `<ol>
+<li>Keep the offer, the closer and the ad audience the same, and change only the front end.</li>
+<li>Give each format enough budget to produce at least 30 to 50 booked calls before you judge it.</li>
+<li>Compare cost per booked call, show-up rate, close rate and revenue per call, not cost per lead or cost per registration.</li>
+<li>Track every stage back to the ad platform so it can optimize for calls and sales, not opt-ins.</li>
+</ol>
+<p>Plug each format's numbers into the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> to see which one produces more revenue per dollar. If the term is new to you, our <a href="/glossary/vsl">VSL glossary entry</a> covers the basics.</p>`,
+      },
+    ],
+    proof: {
+      heading: "VSL and webinar results from our accounts",
+      items: [
+        { value: "$1.52M", label: "High-ticket consulting funnel built around a VSL and booked calls", href: "/milliondollarcasestudy" },
+        { value: "$115,000", label: "Webinar revenue from 527 leads on $15,151 ad spend", href: "/case-studies/webinar-115k-revenue-on-15k-ad-spend" },
+        { value: "29.7x", label: "ROAS: $64,960 webinar revenue and 140 appointments on $2,184", href: "/case-studies/webinar-65k-revenue-on-2184-ad-spend" },
+        { value: "$115,500", label: "Coaching revenue, 174 appointments on $2,214 spend", href: "/case-studies/coaching-116k-revenue-on-2214-ad-spend" },
+      ],
+      more: { label: "Coaching and consulting case studies", href: "/case-studies/coaching-consulting-funnels" },
+    },
+    faqs: [
+      { q: "Does a VSL funnel convert better than a webinar funnel?", a: "Not always. A VSL usually produces cheaper booked calls because it has fewer steps and no attendance drop-off. A webinar often produces fewer but warmer calls with higher close rates. Judge them on revenue per dollar of ad spend, because a cheaper call that rarely closes can be worse than an expensive one that usually does." },
+      { q: "How long should a VSL be compared to a webinar?", a: "Most VSLs we write run 5 to 20 minutes, long enough to explain the problem, the mechanism and who the offer is for. Webinars usually run 45 to 90 minutes including teaching and the pitch. Longer is not better in either format. Cut anything that does not move the viewer toward booking or buying." },
+      { q: "Are evergreen webinars as good as live ones?", a: "Live sessions usually get stronger attendance and engagement because the date creates urgency. Evergreen webinars win on consistency: they run every day without the presenter and can be improved one section at a time. Many coaches use live events to refine the presentation, then move the best version to evergreen once it converts reliably." },
+      { q: "Which format works better for cold traffic?", a: "If the audience already knows they have the problem, a VSL works well even on cold traffic. If they need to be convinced the problem exists or that a new approach works, a webinar's extra time usually helps. Retargeting video viewers and registrants with proof and short clips improves results for both formats." },
+      { q: "What does it cost to build each funnel?", a: "Our builds are one-time fees of $999 for design, $1,499 for design, copy and full build, or $1,999 for the complete suite with CRM, automation, AI booking agent and tracking. A webinar also needs a presentation and hosting, and both need ad spend. Most builds go live in 5 to 10 business days." },
+      { q: "Can I run a VSL and a webinar funnel at the same time?", a: "Yes, and it is a common setup in coaching. Both funnels can feed the same application and calendar, with source tracking so you can see which one produces calls that close. Keep budgets separate at first so each format gets a fair test, then shift spend toward the better revenue per call." },
+    ],
+    related: ["/vsl-funnels", "/webinar-funnels", "/templates/vsl-script-template", "/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026", "/tools/funnel-conversion-calculator", "/glossary/vsl", "/compare"],
+    parent: HUB,
+    updated: U,
+  },
+  {
+    path: "/compare/meta-pixel-vs-conversions-api",
+    kind: "compare",
+    keyword: "meta pixel vs conversions api",
+    title: "Meta Pixel vs Conversions API: Do You Need Both?",
+    description: "Meta Pixel vs Conversions API compared: where events fire, iOS and ad blocker resilience, CRM data, Event Match Quality and deduplication.",
+    eyebrow: "Compare",
+    h1: "Meta Pixel vs Conversions API: which should track your funnel?",
+    intro:
+      "<strong>Meta Pixel vs Conversions API</strong> is not really an either-or choice. The Pixel tracks what happens in the browser, the Conversions API sends events from your server or CRM, and Meta is built to receive both and merge them. This page compares the two side by side so you can see what each one catches, what each one misses and why we run them together on every funnel we build.",
+    quick: {
+      q: "Should I use the Meta Pixel or the Conversions API?",
+      a: "Use both, with deduplication. The Pixel captures browser behavior quickly and easily, while the Conversions API sends events from your server that ad blockers and iOS restrictions cannot remove, plus CRM stages like booked calls and sales. A shared event_id lets Meta count each conversion once instead of twice.",
+    },
+    sections: [
+      {
+        h2: "The verdict",
+        html: `<p>Run the <a href="/glossary/meta-pixel">Meta Pixel</a> and the <a href="/glossary/conversions-api">Conversions API</a> together, and deduplicate them with a matching event_id. The Pixel alone loses events to ad blockers, browser privacy settings and iOS restrictions, and it can only see what happens on a web page. The Conversions API alone works, but it gives up some easy browser signals and takes more setup. Together they give Meta the most complete picture of who converts, which is what lets the algorithm find more people like your buyers. In our accounts, adding the Conversions API recovered 31% more events than the Pixel was reporting on its own.</p>`,
+      },
+      {
+        h2: "Side-by-side comparison",
+        html: `<div class="table-wrap"><table><thead><tr><th></th><th>Meta Pixel</th><th>Conversions API</th></tr></thead><tbody>
+<tr><td>Where events fire</td><td>In the visitor's browser, via JavaScript</td><td>From your server, CRM or a gateway</td></tr>
+<tr><td>Ad blocker and iOS resilience</td><td>Weak: blocked scripts and cookie limits drop events</td><td>Strong: events do not depend on the browser</td></tr>
+<tr><td>Data you can send</td><td>Page views, form submits, purchases on the page</td><td>All of that plus CRM stages, qualified leads, booked and attended calls, offline sales</td></tr>
+<tr><td>Setup effort</td><td>Low: paste a script, configure events</td><td>Medium to high: server or gateway setup, field mapping, testing</td></tr>
+<tr><td>Event Match Quality</td><td>Relies on cookies and whatever the browser exposes</td><td>Higher when you send hashed email, phone and other customer details</td></tr>
+<tr><td>Deduplication</td><td>Sends event_id with each browser event</td><td>Sends the same event_id so Meta merges the pair</td></tr>
+</tbody></table></div>`,
+      },
+      {
+        h2: "What the Pixel still does well",
+        html: `<p>The Pixel is quick to install, fires instantly and captures browser context such as page views, scroll and button clicks with little effort. It also sets the cookies that help Meta match a visitor back to an ad click. For a simple landing page with a thank-you page, the Pixel catches most events when it is not blocked. That is why we never remove it; we just stop relying on it alone.</p>`,
+      },
+      {
+        h2: "What only the Conversions API can do",
+        html: `<p>The biggest advantage is not recovered page events but the data a browser never sees. A lead submits a form, a setter qualifies them, they book, attend and buy a week later. Those stages live in your CRM, and only a server-side connection can send them back to Meta as conversions. Optimizing for booked or attended calls instead of raw form fills is often what turns a cheap-but-junk lead campaign into one that produces buyers. Our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">CAPI guide for lead gen funnels</a> walks through which stages to send.</p>`,
+      },
+      {
+        h2: "Conversions API Gateway vs direct server integration",
+        html: `<ul>
+<li><strong>Conversions API Gateway:</strong> a managed setup that mirrors your Pixel events server-side with little code. It improves resilience quickly but mostly sends what the Pixel already sees, not CRM stages.</li>
+<li><strong>Partner integrations:</strong> platforms such as Shopify or CRMs with built-in Meta connections. Fast, but check which events and customer fields they actually send.</li>
+<li><strong>Direct server or CRM integration:</strong> your server or CRM workflow calls the API with hashed customer data and a shared event_id. It takes the most work and gives the most control, including offline and pipeline events.</li>
+</ul>
+<p>For booked-call funnels we usually build the direct route from the CRM. If you want it done for you, see our <a href="/meta-conversions-api-setup">Meta Conversions API setup service</a>, and use the <a href="/tools/cost-per-lead-calculator">cost per lead calculator</a> to model what better optimization is worth.</p>`,
+      },
+    ],
+    proof: {
+      heading: "Tracking-led results from our accounts",
+      items: [
+        { value: "31%", label: "More events recovered after adding the Conversions API in our accounts", href: "/meta-conversions-api-setup" },
+        { value: "$4.27", label: "Roofing cost per lead across 537 leads on $2,292 spend", href: "/case-studies/roofing-537-leads-at-4-27-cpl" },
+        { value: "492", label: "Mortgage leads at $5.23 cost per lead", href: "/case-studies/mortgage-492-leads-at-5-23-cpl" },
+        { value: "$1.52M", label: "High-ticket consulting funnel optimized on booked calls", href: "/milliondollarcasestudy" },
+      ],
+      more: { label: "See lead generation case studies", href: "/case-leadgen" },
+    },
+    faqs: [
+      { q: "Does the Conversions API replace the Meta Pixel?", a: "No. Meta recommends running both, and so do we. The Pixel captures browser signals and sets matching cookies, while the Conversions API sends server events that cannot be blocked plus CRM stages the browser never sees. Removing the Pixel usually lowers match quality, so keep it and add the server connection alongside it." },
+      { q: "Will running both double count my conversions?", a: "Not if deduplication is set up. Each event should carry the same event name and a shared event_id from both the browser and the server. Meta then keeps one and discards the duplicate. Check the Events Manager deduplication view after launch, because a mismatched ID is the most common reason numbers suddenly look inflated." },
+      { q: "What is a good Event Match Quality score?", a: "Higher is better, and Meta shows the score per event in Events Manager. The main lever is sending more hashed customer details with each server event, such as email, phone, name and location, plus the click ID and browser ID when available. Lead funnels that collect email and phone can usually raise match quality noticeably." },
+      { q: "Is the Conversions API Gateway enough?", a: "It is a good fast improvement when you mostly need browser events to survive blockers. It is not enough if you want Meta to optimize for qualified leads, booked calls or sales that happen in your CRM, because those events have to come from the CRM or server. For booked-call funnels we prefer a direct integration." },
+      { q: "Does the Conversions API fix iOS tracking?", a: "It helps a lot but does not undo every restriction. Server events are not blocked by the browser, so far more of them reach Meta, and sending hashed customer data improves matching. Users who opt out of tracking still limit what Meta can attribute, so expect better data, not perfect data." },
+      { q: "How long does it take to set up both?", a: "A Pixel takes minutes. A properly tested Conversions API connection with CRM stages, customer data, event_id deduplication and verification in Events Manager usually takes a few days, depending on your stack. On our complete suite builds, tracking is part of the 5 to 10 business day build." },
+    ],
+    related: ["/meta-conversions-api-setup", "/glossary/meta-pixel", "/glossary/conversions-api", "/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "/crm-automation", "/compare"],
     parent: HUB,
     updated: U,
   },

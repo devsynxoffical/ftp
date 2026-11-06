@@ -2,9 +2,12 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { preload } from "react-dom";
 import { HERO_WORDS } from "@/data/siteContent";
 
 export default function Hero() {
+  // The hero video poster is the LCP element on mobile: fetch it first.
+  preload("/img/hero/bg-poster.webp", { as: "image", fetchPriority: "high" });
   const heroRef = useRef<HTMLElement>(null);
   const typeRef = useRef<HTMLSpanElement>(null);
   const leadRef = useRef<HTMLParagraphElement>(null);
@@ -100,6 +103,7 @@ export default function Hero() {
         muted
         loop
         playsInline
+        poster="/img/hero/bg-poster.webp"
         aria-hidden="true"
       >
         <source src="/img/hero/bg.webm" type="video/webm" />

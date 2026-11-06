@@ -1479,7 +1479,7 @@ section.ct .info span{display:block;font-size:12px;color:var(--mute);font-weight
 .cxs{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px}
 .cxs li{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
 .cxs li b{font-family:var(--disp);font-weight:800;font-size:18px;color:var(--or);line-height:1;padding-top:2px}
-.cxs li h3{font-family:var(--disp);font-size:17px;font-weight:600;letter-spacing:-.02em}
+.cxs li h2{font-family:var(--disp);font-size:17px;font-weight:600;letter-spacing:-.02em;line-height:1.3;margin:0}
 .cxs li p{font-size:13.5px;color:var(--body);line-height:1.4;margin-top:2px}
 .cxch{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:22px}
 .cxch a{position:relative;display:block;background:var(--bg3);border-radius:16px;padding:14px 16px;transition:background .3s,transform .3s}
@@ -2979,7 +2979,7 @@ main:has(> .robo:last-child) + .foot {
   border-radius: 18px;
   padding: 22px;
 }
-.post-toc-card h4 {
+.post-toc-card h3 {
   font-family: var(--disp);
   font-size: 14px;
   font-weight: 700;
@@ -3327,7 +3327,7 @@ main:has(> .robo:last-child) + .foot {
   align-items: center;
   margin: 44px 0;
 }
-.post-author-box h4 {
+.post-author-box h3 {
   font-family: var(--disp);
   font-size: 18px;
   font-weight: 700;
@@ -4916,3 +4916,4 @@ main {
 @media (max-width:980px){.fdir{grid-template-columns:1fr 1fr}}
 @media (max-width:980px){.fdir-wide,.fdir>nav:last-child{grid-column:1/-1}}
 @media (max-width:560px){.fdir{gap:36px 20px}.fdir-wide ul{columns:1}}
+.seo-kids-h{font-family:var(--disp);font-size:clamp(20px,1.8vw,26px);font-weight:700;letter-spacing:-.02em;margin-top:clamp(28px,4vw,44px)}.seo-kids-h + ul{margin-top:16px}

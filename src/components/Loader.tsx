@@ -16,7 +16,15 @@ export default function Loader() {
       "(prefers-reduced-motion: reduce)"
     ).matches;
 
-    if (prefersReducedMotion) {
+    // Play the brand intro once per visit. It sits over the page, so on every
+    // later navigation it would only delay the first paint (and LCP).
+    let seen = false;
+    try {
+      seen = sessionStorage.getItem("ftp-intro") === "1";
+      sessionStorage.setItem("ftp-intro", "1");
+    } catch {}
+
+    if (prefersReducedMotion || seen) {
       setIsRemoved(true);
       return;
     }
@@ -79,7 +87,7 @@ export default function Loader() {
           setTimeout(() => {
             setIsRemoved(true);
           }, 1700);
-        }, 250);
+        }, 120);
 
         return;
       }
@@ -87,7 +95,7 @@ export default function Loader() {
       setWordIndex(i);
       const pct = Math.round((i / (LOADER_WORDS.length - 1)) * 100);
       setPercent(pct);
-    }, 260);
+    }, 150);
 
     return () => clearInterval(interval);
   }, []);
