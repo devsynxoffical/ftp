@@ -1,6 +1,6 @@
 import type { SeoPage } from "./types";
 
-const U = "2026-11-05";
+const U = "2026-11-06";
 const SETTER = { name: "AI appointment setter", path: "/ai-appointment-setter" };
 const VOICE = { name: "AI voice agents", path: "/ai-voice-agents" };
 

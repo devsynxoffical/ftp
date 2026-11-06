@@ -1,7 +1,7 @@
 import type { SeoPage } from "./types";
 
 const HUB = { name: "Services", path: "/services" };
-const U = "2026-11-05";
+const U = "2026-11-06";
 
 export const LOCATION_PAGES: SeoPage[] = [
   {
