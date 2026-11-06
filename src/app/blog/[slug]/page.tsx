@@ -338,7 +338,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
                 <div>
                   <span className="tag">Written By</span>
-                  <h4>{post.author.name}</h4>
+                  <h3>{post.author.name}</h3>
                   <p>{post.author.bio}</p>
                   <Link className="post-author-link" href={`/team/${post.author.slug}`} rel="author">
                     More from {post.author.name.split(" ")[0]} <i>&#8599;</i>
@@ -352,7 +352,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div className="post-sidebar-sticky">
                 {post.toc && post.toc.length > 0 && (
                   <div className="post-toc-card">
-                    <h4>Table of Contents</h4>
+                    <h3>Table of Contents</h3>
                     <nav className="post-toc-list">
                       {post.toc.map((item) => (
                         <a key={item.id} href={`#${item.id}`} className="post-toc-link">

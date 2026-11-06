@@ -294,6 +294,7 @@ export default function PortfolioFoldfolio() {
                     src={`/img/funnels/f${currentFunnel.id}.webp`}
                     alt=""
                     decoding="async"
+                    loading="lazy"
                   />
                 </div>
                 <span className="sb r">
@@ -311,6 +312,7 @@ export default function PortfolioFoldfolio() {
                     src={`/img/funnels/f${currentFunnel.id}.webp`}
                     alt={`${currentFunnel.name} funnel`}
                     decoding="async"
+                    loading="lazy"
                   />
                 </div>
                 <span className="sb l">09:41</span>
@@ -331,14 +333,14 @@ export default function PortfolioFoldfolio() {
                 <div className="sub">Funnels That Print &middot; Portfolio</div>
                 <div className="notifs">
                   <div className="notif">
-                    <img src="/img/funnels/f8-t.webp" alt="" />
+                    <img src="/img/funnels/f8-t.webp" alt="" loading="lazy" />
                     <div>
                       <b>Mortgage AI System is live</b>
                       <span className="mono">WEBINAR FUNNEL &middot; NOW</span>
                     </div>
                   </div>
                   <div className="notif">
-                    <img src="/img/funnels/f7-t.webp" alt="" />
+                    <img src="/img/funnels/f7-t.webp" alt="" loading="lazy" />
                     <div>
                       <b>Rowan Security, 41 calls booked</b>
                       <span className="mono">
@@ -382,7 +384,7 @@ export default function PortfolioFoldfolio() {
                     Incoming call &middot; about your next funnel
                   </div>
                   <div className="cav">
-                    <img src="/img/team/gaurav.webp" alt="Gaurav Kapoor" />
+                    <img src="/img/team/gaurav.webp" alt="Gaurav Kapoor" loading="lazy" />
                   </div>
                   <div
                     ref={slideRef}
@@ -437,7 +439,7 @@ export default function PortfolioFoldfolio() {
                   </div>
                   <div className="cfw">
                     <div className="cfa">
-                      <img src="/img/team/gaurav.webp" alt="Gaurav Kapoor" />
+                      <img src="/img/team/gaurav.webp" alt="Gaurav Kapoor" loading="lazy" />
                       <div>
                         <b>Gaurav Kapoor</b>
                         <span>Founder &middot; on the line</span>

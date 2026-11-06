@@ -138,7 +138,7 @@ ${msg.trim()}`;
             <li>
               <b>01</b>
               <div>
-                <h3>Send your details</h3>
+                <h2>Send your details</h2>
                 <p>
                   Two minutes. Your offer, your traffic and what is not working.
                 </p>
@@ -147,14 +147,14 @@ ${msg.trim()}`;
             <li>
               <b>02</b>
               <div>
-                <h3>We review your funnel</h3>
+                <h2>We review your funnel</h2>
                 <p>We look at your pages, ads and follow-up before we talk.</p>
               </div>
             </li>
             <li>
               <b>03</b>
               <div>
-                <h3>Strategy call and plan</h3>
+                <h2>Strategy call and plan</h2>
                 <p>
                   A short call, then a package, a price and a launch timeline.
                 </p>

@@ -114,7 +114,8 @@ function schemaFor(p: SeoPage) {
 export default function SeoPageView({ path }: { path: string }) {
   const p = getSeoPage(path);
   if (!p) notFound();
-  const kids = p.kind === "hub" ? getSeoChildren(p.path) : [];
+  // Hubs list every child page; a service page lists its industry variants.
+  const kids = getSeoChildren(p.path);
   const related = p.related.filter((r) => linkTitle(r));
 
   return (
@@ -156,6 +157,7 @@ export default function SeoPageView({ path }: { path: string }) {
 
           {kids.length > 0 && (
             <section className="seo-kids" aria-label={`${p.h1}: all pages`}>
+              {p.kind !== "hub" && <h2 className="seo-kids-h">By industry</h2>}
               <ul>
                 {kids.map((k) => (
                   <li key={k.path}>
