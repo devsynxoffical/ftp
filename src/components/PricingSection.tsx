@@ -10,7 +10,7 @@ const PLANS = [
     period: "one-time",
     desc: "We design your funnel pages, brand visuals and assets ready for your dev team or builder.",
     ctaText: "Start with Design",
-    ctaUrl: "#robo",
+    ctaUrl: "/book-a-call",
     features: [
       "Complete custom Figma design system",
       "Desktop & mobile responsive layouts",
@@ -26,7 +26,7 @@ const PLANS = [
     period: "one-time",
     desc: "Complete done-for-you AC Funnel with persuasive direct-response copy and full responsive build.",
     ctaText: "Get your AC Funnel now",
-    ctaUrl: "#robo",
+    ctaUrl: "/book-a-call",
     features: [
       "Everything in Design Only",
       "High-converting sales copy (headline, body, CTAs)",
@@ -44,7 +44,7 @@ const PLANS = [
     period: "one-time",
     desc: "End-to-end acquisition system: pages, copy, automations, CRM pipelines and AI follow-up built and connected.",
     ctaText: "Build the Complete Suite",
-    ctaUrl: "#robo",
+    ctaUrl: "/book-a-call",
     features: [
       "Everything in Design + Copy Build",
       "Complete CRM setup & custom pipelines",
@@ -235,7 +235,7 @@ export default function PricingSection() {
           </a>
 
           <p className="pcall">
-            Not sure which fits? Book a short call and we will tell you.
+            Not sure which fits? <a href="/book-a-call">Book a short call</a> and we will tell you.
           </p>
         </div>
 

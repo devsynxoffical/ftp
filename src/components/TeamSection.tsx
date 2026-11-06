@@ -113,7 +113,7 @@ export default function TeamSection() {
           <br />
           <span className="g">your next funnel.</span>
         </h2>
-        <a className="tmore" href="#robo">
+        <a className="tmore" href="/book-a-call">
           Work with us{" "}
           <svg
             width="18"
@@ -219,7 +219,7 @@ export default function TeamSection() {
                   <div className="team-card-back-actions">
                     <a
                       className="team-btn-primary"
-                      href="#robo"
+                      href="/book-a-call"
                       onClick={(e) => e.stopPropagation()}
                     >
                       Book a call

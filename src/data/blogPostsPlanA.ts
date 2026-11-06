@@ -212,7 +212,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <li><strong>You sell something that needs a conversation:</strong> pay for copy, follow-up and tracking. Without them, the pages will generate leads that never turn into calls.</li>
     <li><strong>You sell a low-priced product online:</strong> prioritize checkout, order bump and upsell structure. Our <a href="/blog/low-ticket-funnel-guide">low ticket funnel guide</a> covers the economics.</li>
   </ul>
-  <p>Whichever level you pick, ask every provider the same three questions: what exactly is in scope, who owns the accounts after launch, and what happens in the first 60 seconds after someone opts in. To see examples by industry, browse our <a href="/case-studies">case studies</a> or the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup. When you are ready, <a href="/contact">book a strategy call</a> and we will run the payback math on your numbers.</p>
+  <p>Whichever level you pick, ask every provider the same three questions: what exactly is in scope, who owns the accounts after launch, and what happens in the first 60 seconds after someone opts in. To see examples by industry, browse our <a href="/case-studies">case studies</a> or the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup. When you are ready, <a href="/book-a-call">book a strategy call</a> and we will run the payback math on your numbers.</p>
 </section>
 `,
   },
@@ -406,7 +406,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>Notice what the table does not show: page design. None of these results came from a particularly clever layout. They came from matching the funnel type to the offer and then running the follow-up and tracking properly.</p>
   <p>Three patterns show up in all eight. First, the funnel type matched the price and buying process. Second, follow-up started in seconds: across 60+ speed-to-lead deployments we measured a median first contact of 38 seconds and a 2.4x lift in lead-to-booking. Third, conversions were sent back to the ad platform server-side, which recovered 31% more events and gave the algorithm better data.</p>
   <p>The booked-call examples also shared a reminder layer. With three-channel reminders by SMS, email and call, we have seen show-up rates of up to 88%, which is often the difference between a funnel that looks expensive and one that pays back. The <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> is the template we start from.</p>
-  <p>If you want one of these structures built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> builds them in 5 to 10 business days. Pricing is covered in <a href="/blog/how-much-does-a-sales-funnel-cost">how much does a sales funnel cost</a>, or you can <a href="/contact">book a strategy call</a> and we will tell you which example is closest to your business.</p>
+  <p>If you want one of these structures built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> builds them in 5 to 10 business days. Pricing is covered in <a href="/blog/how-much-does-a-sales-funnel-cost">how much does a sales funnel cost</a>, or you can <a href="/book-a-call">book a strategy call</a> and we will tell you which example is closest to your business.</p>
 </section>
 `,
   },
@@ -608,7 +608,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
       </tbody>
     </table>
   </div>
-  <p>The builder matters less than what you build on it. The same structure that produced our <a href="/milliondollarcasestudy">$1.52M high-ticket result</a> would work on more than one of these platforms. Browse <a href="/funnels-for">funnels by industry</a> to see what we use in your market, check <a href="/blog/how-much-does-a-sales-funnel-cost">how much a sales funnel costs</a> to build, or <a href="/contact">book a strategy call</a> and we will recommend a stack for your offer.</p>
+  <p>The builder matters less than what you build on it. The same structure that produced our <a href="/milliondollarcasestudy">$1.52M high-ticket result</a> would work on more than one of these platforms. Browse <a href="/funnels-for">funnels by industry</a> to see what we use in your market, check <a href="/blog/how-much-does-a-sales-funnel-cost">how much a sales funnel costs</a> to build, or <a href="/book-a-call">book a strategy call</a> and we will recommend a stack for your offer.</p>
 </section>
 `,
   },
@@ -863,7 +863,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <h4>Review weekly</h4>
     <p>Track time to first contact, contact rate, booking rate and show rate. If first contact drifts above 60 seconds, something in the chain has broken.</p>
   </div>
-  <p>Our step-by-step <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">60-second follow-up guide</a> walks through the workflow in detail. Or let us build it: our complete suite includes the funnel, CRM, automation, AI booking agent and tracking for $1,999 one-time, live in 5 to 10 business days. <a href="/contact">Book a strategy call</a> to see if it fits.</p>
+  <p>Our step-by-step <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">60-second follow-up guide</a> walks through the workflow in detail. Or let us build it: our complete suite includes the funnel, CRM, automation, AI booking agent and tracking for $1,999 one-time, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> to see if it fits.</p>
 </section>
 `,
   },
@@ -1058,7 +1058,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <li>Added a three-touch reminder sequence with video preview messages from the closer.</li>
   </ol>
   <p>Cost per booked call fell to $112, and the funnel went on to collect $1.52M in 19 months. The full breakdown, including the timeline, is on the <a href="/milliondollarcasestudy">$1.52M case study</a> page. For other structures, see our <a href="/blog/sales-funnel-examples">sales funnel examples</a>.</p>
-  <p>If you want this built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> delivers it in 5 to 10 business days on fixed pricing, with the complete suite at $1,999 one-time. <a href="/contact">Book a strategy call</a> and bring your offer.</p>
+  <p>If you want this built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> delivers it in 5 to 10 business days on fixed pricing, with the complete suite at $1,999 one-time. <a href="/book-a-call">Book a strategy call</a> and bring your offer.</p>
 </section>
 `,
   },
@@ -1287,7 +1287,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <li><strong>Mid-ticket offer:</strong> a workshop, program or membership at a few hundred dollars.</li>
     <li><strong>High-ticket offer:</strong> sold on a call to buyers who apply, using the structure in <a href="/blog/how-to-build-a-high-ticket-funnel">how to build a high ticket funnel</a>.</li>
   </ul>
-  <p>If you want the full system built, including checkout, bump, upsells, tracking and backend automation, see the <a href="/scalelowticket">low-ticket scaling system</a>. We build funnels in 5 to 10 business days on fixed pricing. More structures are in our <a href="/blog/sales-funnel-examples">sales funnel examples</a>, or <a href="/contact">book a strategy call</a> and we will check whether your offer can self-liquidate.</p>
+  <p>If you want the full system built, including checkout, bump, upsells, tracking and backend automation, see the <a href="/scalelowticket">low-ticket scaling system</a>. We build funnels in 5 to 10 business days on fixed pricing. More structures are in our <a href="/blog/sales-funnel-examples">sales funnel examples</a>, or <a href="/book-a-call">book a strategy call</a> and we will check whether your offer can self-liquidate.</p>
 </section>
 `,
   },

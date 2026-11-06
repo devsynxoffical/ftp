@@ -10,7 +10,7 @@ import CopyButton from "@/components/seo/CopyButton";
 import LogoTicker from "@/components/LogoTicker";
 import ProcessSection from "@/components/ProcessSection";
 import PricingSection from "@/components/PricingSection";
-import BookingSection from "@/components/BookingSection";
+import BookingCta from "@/components/BookingCta";
 import { whatsappHref, whatsappMessage } from "@/lib/whatsapp";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
@@ -165,9 +165,9 @@ export default function SeoPageView({ path }: { path: string }) {
               <h1 className="h1 d">{accentH1(p.h1)}</h1>
               <div className="lead seo-intro" dangerouslySetInnerHTML={{ __html: p.intro }} />
               <div className="seo-cta">
-                <a className="btn o" href="#book">
+                <Link className="btn o" href="/book-a-call">
                   Book a strategy call <i>&#8599;</i>
-                </a>
+                </Link>
                 <a className="btn wa" href={wa} target="_blank" rel="noopener">
                   WhatsApp us <i>&#8599;</i>
                 </a>
@@ -250,9 +250,9 @@ export default function SeoPageView({ path }: { path: string }) {
               </a>
             </li>
           </ol>
-          <a className="btn o sx-toc-cta" href="#book">
+          <Link className="btn o sx-toc-cta" href="/book-a-call">
             Book a call <i>&#8599;</i>
-          </a>
+          </Link>
         </aside>
         <div className="sx-main">
           {p.sections.map((s, n) => (
@@ -318,7 +318,7 @@ export default function SeoPageView({ path }: { path: string }) {
       {sells && <ProcessSection />}
       {sells && <PricingSection />}
 
-      <BookingSection path={p.path} topic={waTopic} />
+      <BookingCta path={p.path} topic={waTopic} />
 
       {related.length > 0 && (
         <section className="sec box sx-related" aria-labelledby="seo-related-h">

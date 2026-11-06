@@ -263,7 +263,7 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
 
           <div className="kcta">
             <h2>Want numbers like these?</h2>
-            <Link className="btn" href="/contact">
+            <Link className="btn" href="/book-a-call">
               Book a strategy call <i>&#8599;</i>
             </Link>
           </div>

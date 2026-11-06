@@ -127,7 +127,7 @@ export default function Hero() {
           className="hcta rise"
           style={{ "--rd": ".3s" } as React.CSSProperties}
         >
-          <a className="btn grad" href="#robo">
+          <a className="btn grad" href="/book-a-call">
             Build my funnel <i>&#8599;</i>
           </a>
           <Link className="tag" href="/case-studies">

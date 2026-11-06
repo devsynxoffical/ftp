@@ -183,7 +183,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     <li><strong>CRM routing</strong> so every lead lands in a pipeline stage with an owner and a timer, set up through <a href="/crm-automation">CRM automation</a>.</li>
     <li><strong>A retry cadence</strong> over the first hour and day for leads who did not pick up.</li>
   </ul>
-  <p>This is the layer that produced our 38-second median, and it is part of the $1,999 complete suite, built in 5 to 10 business days. If you want to see what it would change in your pipeline, <a href="/contact">book a strategy call</a> and bring your current response time.</p>
+  <p>This is the layer that produced our 38-second median, and it is part of the $1,999 complete suite, built in 5 to 10 business days. If you want to see what it would change in your pipeline, <a href="/book-a-call">book a strategy call</a> and bring your current response time.</p>
 </section>
 `,
   },
@@ -382,7 +382,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     <li><strong>Use the answers in the first message.</strong> Pass every answer into the CRM as a field so the first text and call can reference it. Our <a href="/speed-to-lead">speed-to-lead</a> layer reached 84% of leads inside the first minute across 60+ deployments and lifted lead-to-booking 2.4x.</li>
     <li><strong>Send answers to your ad platform.</strong> Qualified answers make better conversion events than raw opt-ins, which helps ads find more people like your best leads.</li>
   </ul>
-  <p>Deciding between a quiz and a video front end? Our <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">VSL vs interactive quiz funnel comparison</a> covers when each wins, and the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup shows other funnel types. When you want one built, <a href="/contact">book a strategy call</a>; builds go live in 5 to 10 business days.</p>
+  <p>Deciding between a quiz and a video front end? Our <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">VSL vs interactive quiz funnel comparison</a> covers when each wins, and the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup shows other funnel types. When you want one built, <a href="/book-a-call">book a strategy call</a>; builds go live in 5 to 10 business days.</p>
 </section>
 
 <section id="mistakes">
@@ -608,7 +608,7 @@ export const PLAN_POSTS_C: BlogPost[] = [
     <li><strong>You sell a product under about $50:</strong> copy the low-ticket structure, where checkout, order bump and upsell matter as much as the video.</li>
     <li><strong>Your cold traffic will not watch a long video:</strong> start with the quiz-first pattern and move the video to the result page.</li>
   </ul>
-  <p>For more formats, see the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup or our guide on <a href="/blog/how-to-build-a-high-ticket-funnel">how to build a high ticket funnel</a>. When you are ready, <a href="/contact">book a strategy call</a>; a complete VSL funnel goes live in 5 to 10 business days.</p>
+  <p>For more formats, see the <a href="/blog/sales-funnel-examples">sales funnel examples</a> roundup or our guide on <a href="/blog/how-to-build-a-high-ticket-funnel">how to build a high ticket funnel</a>. When you are ready, <a href="/book-a-call">book a strategy call</a>; a complete VSL funnel goes live in 5 to 10 business days.</p>
 </section>
 `,
   },

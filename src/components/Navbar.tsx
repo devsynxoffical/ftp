@@ -204,7 +204,7 @@ export default function Navbar() {
         <div className="nr">
           <Link
             className="btn"
-            href="/#robo"
+            href="/book-a-call"
             style={{ height: 44 }}
             onClick={closeMenu}
           >
@@ -294,6 +294,9 @@ export default function Navbar() {
               </Link>
               <Link href="/blog" onClick={closeMenu}>
                 Blog
+              </Link>
+              <Link href="/book-a-call" onClick={closeMenu}>
+                Book a call
               </Link>
               <Link href="/contact" className="dim" onClick={closeMenu}>
                 Contact

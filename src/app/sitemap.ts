@@ -32,7 +32,8 @@ const PAGE_LASTMOD: Record<string, string> = {
   "/milliondollarcasestudy": "2026-11-05",
   "/scalelowticket": "2026-11-05",
   "/blog": "2026-11-05",
-  "/contact": "2026-10-28",
+  "/contact": "2026-11-06",
+  "/book-a-call": "2026-11-06",
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -44,6 +45,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/case-leadgen", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/case-ecom", priority: 0.8, changeFrequency: "weekly" as const },
     { path: "/blog", priority: 0.8, changeFrequency: "weekly" as const },
+    { path: "/book-a-call", priority: 0.9, changeFrequency: "monthly" as const },
     { path: "/contact", priority: 0.7, changeFrequency: "yearly" as const },
   ].map(({ path, priority, changeFrequency }) => ({
     url: `${BASE_URL}${path}`,

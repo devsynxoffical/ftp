@@ -12,7 +12,7 @@ export function whatsappMessage(path: string, h1: string): string {
   const hi = "Hi Funnels That Print!";
   let body: string;
   if (path === "/") body = "I found your website and I'd like to discuss a sales funnel for my business.";
-  else if (path.startsWith("/contact")) body = "I'd like to book a strategy call about my funnel.";
+  else if (path.startsWith("/contact") || path.startsWith("/book-a-call")) body = "I'd like to book a strategy call about my funnel.";
   else if (path === "/blog") body = "I'm reading your journal and have a question about my funnel.";
   else if (path.startsWith("/blog/")) body = `I just read ${topic} on your blog and have a question about it for my business.`;
   else if (path.startsWith("/case-studies") || path.startsWith("/case-") || path === "/milliondollarcasestudy" || path === "/scalelowticket")

@@ -301,7 +301,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                   days. 275+ verified client proofs.
                 </p>
                 <div className="post-cta-actions">
-                  <Link className="btn o" href="/contact">
+                  <Link className="btn o" href="/book-a-call">
                     Book a Funnel Strategy Call <i>&#8599;</i>
                   </Link>
                   <Link className="btn g" href="/case-studies">
@@ -370,7 +370,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                     Turn cold traffic into qualified calls with our turnkey
                     acquisition architecture.
                   </p>
-                  <Link className="btn o" href="/contact" style={{ width: "100%", justifyContent: "center" }}>
+                  <Link className="btn o" href="/book-a-call" style={{ width: "100%", justifyContent: "center" }}>
                     Get Strategy Call <i>&#8599;</i>
                   </Link>
                 </div>

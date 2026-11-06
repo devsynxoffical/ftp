@@ -3,14 +3,14 @@ import type { Metadata } from "next";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "Book a Funnel Strategy Call",
+  title: "Contact Us: Send a Funnel Project Brief",
   description:
-    "Book a free funnel strategy call with Funnels That Print. Tell us your offer and goals and get a custom sales funnel, CRM automation and AI calling plan.",
+    "Contact Funnels That Print: send a 2-minute project brief about your offer, traffic and goals and get a sales funnel, automation and AI calling plan.",
   alternates: {
     canonical: `${BASE_URL}/contact`,
   },
   openGraph: {
-    title: "Book a Funnel Strategy Call | Funnels That Print",
+    title: "Contact Funnels That Print | Send a Project Brief",
     description:
       "Get a custom plan for your sales funnel, follow-up automation and AI calling agent. Built in 5 to 10 business days.",
     url: `${BASE_URL}/contact`,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book a Funnel Strategy Call | Funnels That Print",
+    title: "Contact Funnels That Print | Send a Project Brief",
     description:
       "Get a custom plan for your sales funnel, follow-up automation and AI calling agent. Built in 5 to 10 business days.",
     images: ["/img/og/funnels-that-print-og.jpg"],
@@ -48,7 +48,7 @@ const contactSchemaGraph = {
         {
           "@type": "ListItem",
           position: 2,
-          name: "Book a Strategy Call",
+          name: "Contact",
           item: `${BASE_URL}/contact`,
         },
       ],
@@ -56,7 +56,7 @@ const contactSchemaGraph = {
     {
       "@type": "ContactPage",
       "@id": `${BASE_URL}/contact#contact`,
-      name: "Book a Strategy Call | Funnels That Print",
+      name: "Contact Funnels That Print",
       url: `${BASE_URL}/contact`,
       description:
         "Schedule a 1-on-1 strategy call or enquire about building high-converting funnels.",

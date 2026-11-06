@@ -157,6 +157,9 @@ export default function Footer() {
           <Link href="/blog">
             Journal <i>&#8599;</i>
           </Link>
+          <Link href="/book-a-call">
+            Book a call <i>&#8599;</i>
+          </Link>
           <Link href="/contact">
             Contact <i>&#8599;</i>
           </Link>

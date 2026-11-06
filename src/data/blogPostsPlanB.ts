@@ -170,7 +170,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
   </ol>
   <p>Across 60+ speed-to-lead deployments on the <a href="/case-leadgen">lead generation funnels</a> we run, median first contact was 38 seconds, 84% of leads were reached inside the first minute and lead-to-booking improved 2.4x on unchanged ads and landing pages. When booked calls then run through 3-channel reminders, show-up rates reach up to 88%, which matters because a booked call that no-shows is worth nothing.</p>
   <p>Where it underdelivers: very low-intent lead sources such as giveaways or instant forms with no qualifying question, offers that need a long first conversation, and agents launched without a tested knowledge base. AI calling multiplies the funnel you already have; it does not rescue a weak offer.</p>
-  <p>If you want AI calling wired into your CRM, calendar and reminders, it ships in our complete suite build at $1,999, live in 5 to 10 business days. <a href="/contact">Book a strategy call</a> and we will map the script and routing to your offer.</p>
+  <p>If you want AI calling wired into your CRM, calendar and reminders, it ships in our complete suite build at $1,999, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and we will map the script and routing to your offer.</p>
 </section>
 `,
   },
@@ -337,7 +337,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     <li><strong>Letting tracking drift.</strong> A broken pixel or a renamed form field can make a healthy step look dead for weeks. Check that every key event fires after each change, and compare CRM counts with ad platform counts weekly.</li>
     <li><strong>Changing ads and pages at the same time.</strong> If new creative and a new page launch the same day, you cannot tell which one moved the number. Stagger changes by at least a week.</li>
   </ol>
-  <p>Fixing these rarely needs a redesign. It needs someone to look at the full path from ad to sale with fresh eyes. If you would rather have the leaks found for you, we audit and rebuild funnels as part of our <a href="/sales-funnel-agency">sales funnel agency</a> service, with builds live in 5 to 10 business days. <a href="/contact">Book a strategy call</a> and bring your stage-by-stage numbers.</p>
+  <p>Fixing these rarely needs a redesign. It needs someone to look at the full path from ad to sale with fresh eyes. If you would rather have the leaks found for you, we audit and rebuild funnels as part of our <a href="/sales-funnel-agency">sales funnel agency</a> service, with builds live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and bring your stage-by-stage numbers.</p>
 </section>
 `,
   },
@@ -534,7 +534,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     <li><strong>One owner per lead.</strong> Messages come from a named person, and replies reach that person's phone.</li>
     <li><strong>Reporting by cohort.</strong> Lead-to-booking, show rate and cost per attended call by source and by week, so you can see which change moved what.</li>
   </ul>
-  <p>Once leads are booked, a 3-channel reminder sequence is what protects the result; on our client funnels it lifted show-up rates to as high as 88%. We build the full system, from instant follow-up to reminders and reactivation, as part of our <a href="/gohighlevel-agency">GoHighLevel agency</a> and CRM automation work, live in 5 to 10 business days. <a href="/contact">Book a strategy call</a> and we will map your current follow-up against this checklist.</p>
+  <p>Once leads are booked, a 3-channel reminder sequence is what protects the result; on our client funnels it lifted show-up rates to as high as 88%. We build the full system, from instant follow-up to reminders and reactivation, as part of our <a href="/gohighlevel-agency">GoHighLevel agency</a> and CRM automation work, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and we will map your current follow-up against this checklist.</p>
 </section>
 `,
   },
@@ -713,7 +713,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     <li>Cost per signed client or sale</li>
   </ol>
   <p>Whichever format wins on the last two numbers wins. To make Meta optimize for those same outcomes, send booked, attended and closed events back through server-side tracking. Our <a href="/meta-conversions-api-setup">Meta Conversions API setup</a> recovered 31% more events than the pixel alone on client builds, which gives the algorithm a clearer picture of who actually becomes a customer. The step-by-step version is in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide for lead funnels</a>.</p>
-  <p>If you want a landing-page funnel with qualification, OTP verification, CRM routing and tracking built for you, it is what our <a href="/sales-funnel-agency">sales funnel agency</a> does every week, live in 5 to 10 business days. <a href="/contact">Book a strategy call</a> and bring your current cost per lead and cost per customer.</p>
+  <p>If you want a landing-page funnel with qualification, OTP verification, CRM routing and tracking built for you, it is what our <a href="/sales-funnel-agency">sales funnel agency</a> does every week, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and bring your current cost per lead and cost per customer.</p>
 </section>
 `,
   },
@@ -881,7 +881,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
   <h2>9. Measuring Every Stage on One Dashboard</h2>
   <p>Put one primary KPI per stage, plus cost per stage, on a single weekly dashboard split by traffic source. Our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a> has the layout, and the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> shows how a change at one stage flows through to revenue.</p>
   <p>Three rules keep the dashboard honest. Pull stage counts from the CRM, not from memory. Compare each stage with its own history, not with a generic benchmark. And judge every change by the stage after it: a landing page that lifts opt-ins but lowers booked calls has made the funnel worse. When you know which stage is leaking, our guide on <a href="/blog/how-to-increase-funnel-conversion-rate">how to increase funnel conversion rate</a> lists the fixes in priority order.</p>
-  <p>We build the full stack, from pages to pipeline to reporting, in 5 to 10 business days. <a href="/contact">Book a strategy call</a> and we will map your current funnel against these six stages.</p>
+  <p>We build the full stack, from pages to pipeline to reporting, in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and we will map your current funnel against these six stages.</p>
 </section>
 `,
   },
@@ -1060,7 +1060,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     <li><strong>Judge on cost per outcome.</strong> The MVA firm in our <a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">$388,000 revenue case</a> paid $18.94 per verified lead, far above the cheapest figures in the table, and returned 19.09x on $20,324 of ad spend. A cheap lead nobody can sign is the expensive one.</li>
     <li><strong>Follow up inside a minute.</strong> Lead cost only matters if the lead becomes a conversation. Across 60+ speed-to-lead deployments, 84% of leads were reached inside the first minute and lead-to-booking rose 2.4x. That effectively cuts your cost per booked call by more than half without touching the ads; see our <a href="/speed-to-lead">speed-to-lead</a> service.</li>
   </ol>
-  <p>Track cost per lead, cost per booked call and cost per customer side by side every week, using a sheet like our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a>. If you would like us to audit your offer, creative, page and tracking against these eight fixes, <a href="/contact">book a strategy call</a>. Our funnel builds go live in 5 to 10 business days.</p>
+  <p>Track cost per lead, cost per booked call and cost per customer side by side every week, using a sheet like our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a>. If you would like us to audit your offer, creative, page and tracking against these eight fixes, <a href="/book-a-call">book a strategy call</a>. Our funnel builds go live in 5 to 10 business days.</p>
 </section>
 `,
   },

@@ -83,8 +83,8 @@ export default function RoboSection() {
             <span>Let&apos;s Talk</span>
           </span>
         </h2>
-        <a href="mailto:info@funnelsthatprint.com">
-          Talk with us <i>&rarr;</i>
+        <a href="/book-a-call">
+          Book a call <i>&rarr;</i>
         </a>
         <div className="sp" />
       </div>

@@ -212,7 +212,7 @@ export default function Case1MPage() {
 
         <div className="kcta rv">
           <h2>Want the same stack behind your offer?</h2>
-          <Link className="btn" href="/contact">
+          <Link className="btn" href="/book-a-call">
             Book a strategy call <i>&#8599;</i>
           </Link>
         </div>
