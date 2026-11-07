@@ -17,6 +17,7 @@ import UFSquareMarquee from "@/components/UFSquareMarquee";
 import { HOME_FAQ_SCHEMA } from "@/data/homeFaqSchema";
 import JournalPreview from "@/components/JournalPreview";
 import BookingCta from "@/components/BookingCta";
+import Loader from "@/components/Loader";
 import { HomeExplore, HOME_SERVICE_SCHEMA } from "@/components/seo/HomeSeoBlocks";
 
 export default function Home() {
@@ -30,6 +31,8 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(HOME_SERVICE_SCHEMA) }}
       />
+      {/* Brand intro plays on the home page only, so organic landing pages render immediately. */}
+      <Loader />
       <Hero />
       <LogoTicker />
       <LiveAutomation />

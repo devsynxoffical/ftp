@@ -337,7 +337,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     <li><strong>Letting tracking drift.</strong> A broken pixel or a renamed form field can make a healthy step look dead for weeks. Check that every key event fires after each change, and compare CRM counts with ad platform counts weekly.</li>
     <li><strong>Changing ads and pages at the same time.</strong> If new creative and a new page launch the same day, you cannot tell which one moved the number. Stagger changes by at least a week.</li>
   </ol>
-  <p>Fixing these rarely needs a redesign. It needs someone to look at the full path from ad to sale with fresh eyes. If you would rather have the leaks found for you, we audit and rebuild funnels as part of our <a href="/sales-funnel-agency">sales funnel agency</a> service, with builds live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and bring your stage-by-stage numbers.</p>
+  <p>Fixing these rarely needs a redesign. It needs someone to look at the full path from ad to sale with fresh eyes. If you would rather have the leaks found for you, we audit and rebuild funnels as part of our <a href="/">sales funnel agency</a> service, with builds live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and bring your stage-by-stage numbers.</p>
 </section>
 `,
   },
@@ -713,7 +713,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     <li>Cost per signed client or sale</li>
   </ol>
   <p>Whichever format wins on the last two numbers wins. To make Meta optimize for those same outcomes, send booked, attended and closed events back through server-side tracking. Our <a href="/meta-conversions-api-setup">Meta Conversions API setup</a> recovered 31% more events than the pixel alone on client builds, which gives the algorithm a clearer picture of who actually becomes a customer. The step-by-step version is in our <a href="/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Conversions API guide for lead funnels</a>.</p>
-  <p>If you want a landing-page funnel with qualification, OTP verification, CRM routing and tracking built for you, it is what our <a href="/sales-funnel-agency">sales funnel agency</a> does every week, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and bring your current cost per lead and cost per customer.</p>
+  <p>If you want a landing-page funnel with qualification, OTP verification, CRM routing and tracking built for you, it is what our <a href="/">sales funnel agency</a> does every week, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and bring your current cost per lead and cost per customer.</p>
 </section>
 `,
   },

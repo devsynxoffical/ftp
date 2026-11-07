@@ -13,7 +13,7 @@ const GROUPS: { title: string; hub: L; links: L[] }[] = [
     title: "Services",
     hub: { href: "/services", label: "All services" },
     links: [
-      { href: "/sales-funnel-agency", label: "Sales funnel agency" },
+      { href: "/sales-funnel-agency", label: "Done-for-you sales funnels" },
       { href: "/gohighlevel-agency", label: "GoHighLevel agency" },
       { href: "/ai-voice-agents", label: "AI voice agents" },
       { href: "/ai-appointment-setter", label: "AI appointment setter" },

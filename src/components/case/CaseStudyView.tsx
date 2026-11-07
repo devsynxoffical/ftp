@@ -2,12 +2,15 @@ import fs from "node:fs";
 import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import path from "node:path";
 import Link from "next/link";
+import { linkTitle, linkSummary } from "@/data/seo";
 import {
   getAdjacentCases,
   getCaseCard,
   getCasesForIndustry,
   getRelatedCases,
   type CasePage,
+  getCaseBenchmarks,
+  getCaseNextSteps,
 } from "@/data/casePages";
 import { getIndustryBySlug, midSentence } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
@@ -34,6 +37,10 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
     .map((c) => getCaseCard(c.slug))
     .filter((c): c is NonNullable<typeof c> => Boolean(c));
   const adjacent = getAdjacentCases(page.slug);
+  const benchmarks = getCaseBenchmarks(page.slug);
+  const nextSteps = getCaseNextSteps(page.slug).filter((h) => linkTitle(h));
+  const quickQ = `What did this ${page.niche.toLowerCase()} campaign achieve?`;
+  const quickA = [page.summary, benchmarks[0]].filter(Boolean).join(" ");
   const industryCount = getCasesForIndustry(industry.slug).length;
   const guides = industry.guides
     .map((g) => getBlogPostBySlug(g))
@@ -173,6 +180,12 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
                 </ul>
               )}
 
+              <section className="case-quick" aria-labelledby="case-quick-h">
+                <span className="tag">Quick answer</span>
+                <h2 id="case-quick-h">{quickQ}</h2>
+                <p>{quickA}</p>
+              </section>
+
               <div className="kcap open case-body">
                 <h2>The full breakdown</h2>
                 {page.blocks.length > 0 ? (
@@ -193,7 +206,7 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               </div>
 
               <div className="kact">
-                <Link className="btn o" href="/contact">
+                <Link className="btn o" href="/book-a-call">
                   Get results like this <i>&#8599;</i>
                 </Link>
                 {page.igUrl && (
@@ -210,6 +223,35 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               <h2>Result summary</h2>
               <p>{page.summary}</p>
             </section>
+            {benchmarks.length > 0 && (
+              <section className="case-card case-bench">
+                <h2>How this result compares</h2>
+                <ul>
+                  {benchmarks.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+                <p className="case-bench-note">
+                  Compared with the other {midSentence(industry.hubTitle.replace(/ Case Studies$/, ""))} results published on this site. See them all
+                  on the <Link href={`/case-studies/${industry.slug}`}>{industry.hubTitle.toLowerCase()}</Link> page.
+                </p>
+              </section>
+            )}
+            {nextSteps.length > 0 && (
+              <section className="case-card case-next">
+                <h2>Build this for your business</h2>
+                <ul>
+                  {nextSteps.map((h) => (
+                    <li key={h}>
+                      <Link href={h}>
+                        <b>{linkTitle(h)}</b>
+                        {linkSummary(h) && <span>{linkSummary(h)}</span>}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
             <section className="case-card">
               <h2>How {industry.label === "Shopify" ? "this eCommerce" : `this ${midSentence(industry.label)}`} system is built</h2>
               <ol className="tl">

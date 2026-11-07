@@ -305,18 +305,14 @@ export default function Navbar() {
 
             <div className="mfoot">
               <div>
-                <span className="mono">Follow us</span>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  LinkedIn
-                </a>
+                <span className="mono">Company</span>
+                <Link href="/about" onClick={closeMenu}>
+                  About us
+                </Link>
                 <br />
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  Instagram
-                </a>
-                <br />
-                <a href="https://x.com" target="_blank" rel="noopener noreferrer">
-                  X
-                </a>
+                <Link href="/book-a-call" onClick={closeMenu}>
+                  Book a call
+                </Link>
               </div>
               <div>
                 <span className="mono">Reach out</span>
