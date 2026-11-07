@@ -38,6 +38,7 @@ export function getSeoChildren(path: string): SeoPage[] {
 const CORE: Record<string, string> = {
   "/": "Funnels That Print home",
   "/contact": "Contact us",
+  "/about": "About Funnels That Print",
   "/book-a-call": "Book a funnel strategy call",
   "/blog": "Journal",
   "/case-studies": "Sales funnel case studies",

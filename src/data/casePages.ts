@@ -651,10 +651,10 @@ export function getCasePage(slug: string): CasePage | undefined {
     raw: r,
     isVideo,
     nicheLabel: d.label,
-    title: d.title,
-    titleUsesTemplate: d.title.length + BRAND_SUFFIX.length <= 60,
+    title: searchTitle(d.title),
+    titleUsesTemplate: searchTitle(d.title).length + BRAND_SUFFIX.length <= 60,
     description: allDescriptions().get(d.slug)!,
-    h1: d.title,
+    h1: searchTitle(d.title),
     headline,
     noindex: Boolean(d.override?.noindex),
     phrase: d.phrase?.phrase ?? null,
@@ -716,4 +716,163 @@ export function getCaseCard(slug: string) {
     primary: p.primary,
     secondary: p.secondary,
   };
+}
+
+
+/**
+ * Case titles open with a short label ("Roofing Case Study: ..."). People
+ * search for the industry phrase ("roofing lead generation case study"), so
+ * the label is expanded when the title still fits in 60 characters. Slugs and
+ * URLs are unchanged.
+ */
+const SEARCH_PREFIX: Record<string, string> = {
+  Roofing: "Roofing Lead Generation",
+  MVA: "MVA Lead Generation",
+  Mortgage: "Mortgage Lead Generation",
+  "Final Expense": "Final Expense Lead Generation",
+  HVAC: "HVAC Lead Generation",
+  Solar: "Solar Lead Generation",
+  "Home Services": "Home Services Lead Generation",
+  "Real Estate": "Real Estate Lead Generation",
+  "Med Spa": "Med Spa Marketing",
+  Coaching: "Coaching Funnel",
+  Webinar: "Webinar Funnel",
+  Summit: "Summit Funnel",
+  Agency: "Agency Lead Generation",
+  "Lead Gen": "Lead Generation",
+  SaaS: "SaaS Marketing",
+  "Shopify Store": "Shopify Meta Ads",
+  "DTC Brand": "DTC Meta Ads",
+  "Skincare Brand": "Skincare Meta Ads",
+  "Fashion Brand": "Fashion Meta Ads",
+  "Fitness Brand": "Fitness Meta Ads",
+  "Supplement Brand": "Supplement Meta Ads",
+};
+
+export function searchTitle(title: string): string {
+  const i = title.indexOf(" Case Study");
+  if (i < 0) return title;
+  const expanded = SEARCH_PREFIX[title.slice(0, i)];
+  if (!expanded) return title;
+  const next = expanded + title.slice(i);
+  return next.length <= 60 ? next : title;
+}
+
+/** Parses "$5.31", "$105K", "$2.3M", "4.2x", "1,024" into a number. */
+export function parseMetric(v: string | undefined): number | null {
+  if (!v) return null;
+  const m = v.replace(/,/g, "").match(/(\d+(?:\.\d+)?)\s*([kKmM])?/);
+  if (!m) return null;
+  let n = parseFloat(m[1]);
+  if (m[2]) n *= /k/i.test(m[2]) ? 1e3 : 1e6;
+  return Number.isFinite(n) ? n : null;
+}
+
+const median = (xs: number[]) => {
+  const s = [...xs].sort((a, b) => a - b);
+  const m = Math.floor(s.length / 2);
+  return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2;
+};
+const fmtMoney = (n: number) =>
+  n >= 1e6
+    ? `$${(n / 1e6).toFixed(1).replace(/\.0$/, "")}M`
+    : n >= 1e4
+      ? `$${Math.round(n / 1e3)}K`
+      : `$${n.toLocaleString("en-US", { maximumFractionDigits: n < 100 ? 2 : 0, minimumFractionDigits: n < 100 && n % 1 ? 2 : 0 })}`;
+const ordinal = (n: number) => {
+  const s = ["th", "st", "nd", "rd"];
+  const v = n % 100;
+  return n + (s[(v - 20) % 10] || s[v] || s[0]);
+};
+
+/** A metric from the reported facts, falling back to the headline boxes (eCommerce cases report ROAS and sales there). */
+function caseMetric(c: CasePage, label: string): number | null {
+  const f = parseMetric(fact(c.facts, label));
+  if (f !== null) return f;
+  const boxes = [c.primary, c.secondary];
+  const match: Record<string, RegExp> = {
+    ROAS: /return on ad spend|roas/i,
+    "Cost per lead": /cost per lead/i,
+    Revenue: /^(revenue|sales|in sales|collected)$/i,
+  };
+  const re = match[label];
+  if (!re) return null;
+  const box = boxes.find((b) => re.test(b.label.trim()));
+  return box ? parseMetric(box.value) : null;
+}
+
+const INDUSTRY_WORD: Record<string, string> = {
+  "roofing-lead-generation": "roofing",
+  "mva-personal-injury-lead-generation": "MVA and personal injury",
+  "mortgage-insurance-lead-generation": "mortgage and insurance",
+  "med-spa-marketing": "med spa",
+  "hvac-lead-generation": "HVAC",
+  "solar-home-services-lead-generation": "solar and home services",
+  "real-estate-lead-generation": "real estate",
+  "coaching-consulting-funnels": "coaching and consulting",
+  "agency-saas-lead-generation": "agency, SaaS and B2B",
+  "low-ticket-funnels": "low-ticket funnel",
+  "shopify-dtc-ecommerce": "Shopify and DTC",
+  "beauty-skincare-ecommerce": "beauty and skincare",
+  "fashion-apparel-ecommerce": "fashion and apparel",
+  "supplements-fitness-ecommerce": "supplement and fitness",
+};
+
+/**
+ * How one case compares with every other published case in its industry, on
+ * the figures both report. Computed from the case data, so each page carries
+ * numbers that exist nowhere else. Only metrics with 3+ comparable cases.
+ */
+export function getCaseBenchmarks(slug: string): string[] {
+  const page = getCasePage(slug);
+  if (!page) return [];
+  const peers = getCasesForIndustry(page.industry)
+    .map((c) => getCasePage(c.slug))
+    .filter((c): c is CasePage => Boolean(c) && !c!.noindex);
+  const word = INDUSTRY_WORD[page.industry] ?? "similar";
+  const out: string[] = [];
+  const metric = (label: string, lowerIsBetter: boolean, kind: "money" | "x" | "count", noun: string) => {
+    const mine = caseMetric(page, label);
+    if (mine === null || mine <= 0) return;
+    const vals = peers.map((c) => caseMetric(c, label)).filter((x): x is number => x !== null && x > 0);
+    if (vals.length < 3) return;
+    const sorted = [...vals].sort((a, b) => (lowerIsBetter ? a - b : b - a));
+    const rank = sorted.indexOf(mine) + 1;
+    const med = median(vals);
+    const show = (n: number) => (kind === "money" ? fmtMoney(n) : kind === "x" ? `${+n.toFixed(2)}x` : Math.round(n).toLocaleString("en-US"));
+    const pos = rank === 1 ? `the ${lowerIsBetter ? "lowest" : "highest"}` : `the ${ordinal(rank)} ${lowerIsBetter ? "lowest" : "highest"}`;
+    const rel = mine === med ? "equal to" : (lowerIsBetter ? mine < med : mine > med) ? "better than" : "behind";
+    out.push(
+      `Its ${noun} of ${show(mine)} is ${pos} of ${vals.length} ${word} campaigns we have published with this figure, ${rel} the median of ${show(med)}.`
+    );
+  };
+  metric("Cost per lead", true, "money", "cost per lead");
+  metric("ROAS", false, "x", "return on ad spend");
+  metric("Leads", false, "count", "lead volume");
+  metric("Revenue", false, "money", "revenue");
+  return out.slice(0, 3);
+}
+
+/** Where a reader of this case goes next: the industry funnel page and the service behind the result. */
+export function getCaseNextSteps(slug: string): string[] {
+  const page = getCasePage(slug);
+  if (!page) return [];
+  const n = page.niche.toLowerCase();
+  const byIndustry: Record<string, string[]> = {
+    "roofing-lead-generation": ["/funnels-for/roofing", "/speed-to-lead"],
+    "mva-personal-injury-lead-generation": ["/funnels-for/personal-injury-lawyers", "/ai-voice-agents"],
+    "mortgage-insurance-lead-generation": [/final expense|insurance/.test(n) ? "/funnels-for/insurance" : "/funnels-for/mortgage", "/ai-appointment-setter"],
+    "med-spa-marketing": ["/funnels-for/med-spas", "/ai-appointment-setter"],
+    "hvac-lead-generation": ["/funnels-for/hvac", "/speed-to-lead"],
+    "solar-home-services-lead-generation": [/solar/.test(n) ? "/funnels-for/solar" : "/funnels-for/home-services", "/speed-to-lead"],
+    "real-estate-lead-generation": ["/funnels-for/real-estate", "/ai-appointment-setter/real-estate"],
+    "coaching-consulting-funnels": [/webinar|summit/.test(n) ? "/webinar-funnels" : "/funnels-for/coaches", "/vsl-funnels"],
+    "agency-saas-lead-generation": [/saas/.test(n) ? "/funnels-for/saas" : "/funnels-for/consultants", "/quiz-funnels"],
+    "low-ticket-funnels": ["/scalelowticket", "/blog/low-ticket-funnel-guide"],
+    "shopify-dtc-ecommerce": ["/funnels-for/ecommerce", "/meta-conversions-api-setup"],
+    "beauty-skincare-ecommerce": ["/funnels-for/ecommerce", "/meta-conversions-api-setup"],
+    "fashion-apparel-ecommerce": ["/funnels-for/ecommerce", "/meta-conversions-api-setup"],
+    "supplements-fitness-ecommerce": ["/funnels-for/ecommerce", "/meta-conversions-api-setup"],
+  };
+  return byIndustry[page.industry] ?? ["/services"];
 }

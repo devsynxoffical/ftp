@@ -1,9 +1,9 @@
+import { BRAND_DESCRIPTION } from "@/data/brand";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Loader from "@/components/Loader";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { AUTHORS } from "@/data/authors";
 import Script from "next/script";
@@ -15,7 +15,7 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Sales Funnel Agency: AI Funnels, CRM Automation & AI Calling",
+    default: "Funnels That Print | Sales Funnel Agency for Booked Calls",
     template: "%s | Funnels That Print",
   },
   description:
@@ -131,8 +131,8 @@ const jsonLd = {
         height: 512,
       },
       image: `${BASE_URL}/img/og/funnels-that-print-og.jpg`,
-      description:
-        "Funnel automation and direct-response engineering agency since 2019. We build high-converting sales funnels, CRM automations, and AI voice calling systems.",
+      description: BRAND_DESCRIPTION,
+      slogan: "Funnels, automation and AI calling, built around booked calls.",
       foundingDate: "2019",
       // sameAs intentionally omitted: linkedin.com/company/funnelsthatprint and
       // x.com/funnelsthatprint return 404. Add real profile URLs here once they exist.
@@ -141,7 +141,7 @@ const jsonLd = {
         contactType: "sales & client strategy",
         email: "info@funnelsthatprint.com",
         availableLanguage: ["English"],
-        url: `${BASE_URL}/contact`,
+        url: `${BASE_URL}/book-a-call`,
       },
       knowsAbout: [
         "Sales Funnel Architecture",
@@ -308,7 +308,6 @@ fbq('track', 'PageView');`}
             src={`https://www.facebook.com/tr?id=${META_PIXEL_ID}&ev=PageView&noscript=1`}
           />
         </noscript>
-        <Loader />
         <SmoothScroll>
           <Navbar />
           <main>{children}</main>

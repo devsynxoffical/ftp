@@ -1,6 +1,6 @@
 # Funnels That Print
 
-> Funnels That Print (FTP) is a direct-response funnel engineering, CRM automation, and AI calling agency founded in 2019. The agency designs high-converting customer journeys that turn cold traffic into qualified booked sales appointments and revenue on autopilot.
+> Funnels That Print is a Dubai-based sales funnel agency founded in 2019 by Gaurav and Rahul Kapoor. We build done-for-you sales funnels, GoHighLevel CRM automation, AI voice agents and Meta Conversions API tracking for businesses that sell through booked calls or checkouts, and we publish every client result with its original proof.
 
 ## Quick Facts & Verified Track Record
 - **Primary Website**: https://www.funnelsthatprint.com
@@ -18,6 +18,7 @@
 - **Attribution & Server-Side Tracking**: Full-stack tracking setups including Meta CAPI, Google Enhanced Conversions, and server-side tagging.
 
 ## Primary Pages & Knowledge Links
+- [About Funnels That Print](https://www.funnelsthatprint.com/about): Company facts, founders, location, how results are documented.
 - [Home Page](https://www.funnelsthatprint.com/): Complete agency overview, live automation interactive simulator, and pricing tiers.
 - [High-Ticket Consulting Case Study ($1.52M)](https://www.funnelsthatprint.com/milliondollarcasestudy): Video breakdown and numbers behind $1.52M generated in 19 months.
 - [Low-Ticket Scaling System ($847K)](https://www.funnelsthatprint.com/scalelowticket): Deep-dive into building self-liquidating front door funnels with buyer backend.

@@ -178,11 +178,11 @@ export default function Footer() {
         </div>
 
         <div className="ffl">
-          <span className="fh">Follow Us</span>
-          <a href="#top">X/Twitter</a>
-          <a href="#top">Instagram</a>
-          <a href="#top">LinkedIn</a>
-          <a href="#top">YouTube</a>
+          <span className="fh">Company</span>
+          <Link href="/about">About us</Link>
+          <Link href="/team/gaurav-kapoor">Gaurav Kapoor</Link>
+          <Link href="/team/rahul-kapoor">Rahul Kapoor</Link>
+          <Link href="/book-a-call">Book a call</Link>
         </div>
 
         <div className="fnl">
@@ -227,7 +227,7 @@ export default function Footer() {
           <span className="fdh">Services</span>
           <ul>
             {[
-              ["/sales-funnel-agency", "Sales funnel agency"],
+              ["/sales-funnel-agency", "Done-for-you funnels"],
               ["/gohighlevel-agency", "GoHighLevel agency"],
               ["/ai-voice-agents", "AI voice agents"],
               ["/ai-appointment-setter", "AI appointment setter"],

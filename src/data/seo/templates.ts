@@ -380,7 +380,7 @@ FINAL CHECK
 <li><strong>Missing consent language.</strong> Without it you cannot legally follow up by text, which is where <a href="/speed-to-lead">speed-to-lead</a> wins most bookings.</li>
 <li><strong>Dead thank-you pages.</strong> Use it to confirm the call and show a pre-call video.</li>
 </ul>
-<p>Measure the result with the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a>, or have our <a href="/sales-funnel-agency">sales funnel agency</a> write and build it for you.</p>`,
+<p>Measure the result with the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a>, or have our <a href="/">sales funnel agency</a> write and build it for you.</p>`,
       },
     ],
     proof: {

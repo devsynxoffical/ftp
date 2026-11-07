@@ -152,7 +152,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
       </tbody>
     </table>
   </div>
-  <p>The complete suite is the one most lead generation clients choose, because it includes the speed-to-lead layer. Across 60+ deployments, that layer produced a median first contact of 38 seconds, reached 84% of leads inside the first minute and lifted lead-to-booking 2.4x on the same ads. The full scope is on our <a href="/sales-funnel-agency">sales funnel agency</a> page.</p>
+  <p>The complete suite is the one most lead generation clients choose, because it includes the speed-to-lead layer. Across 60+ deployments, that layer produced a median first contact of 38 seconds, reached 84% of leads inside the first minute and lifted lead-to-booking 2.4x on the same ads. The full scope is on our <a href="/">sales funnel agency</a> page.</p>
 </section>
 
 <section id="hidden-costs">
@@ -406,7 +406,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>Notice what the table does not show: page design. None of these results came from a particularly clever layout. They came from matching the funnel type to the offer and then running the follow-up and tracking properly.</p>
   <p>Three patterns show up in all eight. First, the funnel type matched the price and buying process. Second, follow-up started in seconds: across 60+ speed-to-lead deployments we measured a median first contact of 38 seconds and a 2.4x lift in lead-to-booking. Third, conversions were sent back to the ad platform server-side, which recovered 31% more events and gave the algorithm better data.</p>
   <p>The booked-call examples also shared a reminder layer. With three-channel reminders by SMS, email and call, we have seen show-up rates of up to 88%, which is often the difference between a funnel that looks expensive and one that pays back. The <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> is the template we start from.</p>
-  <p>If you want one of these structures built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> builds them in 5 to 10 business days. Pricing is covered in <a href="/blog/how-much-does-a-sales-funnel-cost">how much does a sales funnel cost</a>, or you can <a href="/book-a-call">book a strategy call</a> and we will tell you which example is closest to your business.</p>
+  <p>If you want one of these structures built for your offer, our <a href="/">sales funnel agency</a> builds them in 5 to 10 business days. Pricing is covered in <a href="/blog/how-much-does-a-sales-funnel-cost">how much does a sales funnel cost</a>, or you can <a href="/book-a-call">book a strategy call</a> and we will tell you which example is closest to your business.</p>
 </section>
 `,
   },
@@ -1058,7 +1058,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <li>Added a three-touch reminder sequence with video preview messages from the closer.</li>
   </ol>
   <p>Cost per booked call fell to $112, and the funnel went on to collect $1.52M in 19 months. The full breakdown, including the timeline, is on the <a href="/milliondollarcasestudy">$1.52M case study</a> page. For other structures, see our <a href="/blog/sales-funnel-examples">sales funnel examples</a>.</p>
-  <p>If you want this built for your offer, our <a href="/sales-funnel-agency">sales funnel agency</a> delivers it in 5 to 10 business days on fixed pricing, with the complete suite at $1,999 one-time. <a href="/book-a-call">Book a strategy call</a> and bring your offer.</p>
+  <p>If you want this built for your offer, our <a href="/">sales funnel agency</a> delivers it in 5 to 10 business days on fixed pricing, with the complete suite at $1,999 one-time. <a href="/book-a-call">Book a strategy call</a> and bring your offer.</p>
 </section>
 `,
   },
@@ -1276,7 +1276,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     <li><strong>You sell local services.</strong> Roofers, HVAC companies and clinics generally do better with a short lead form and instant follow-up than with a paid digital product.</li>
     <li><strong>Cash flow cannot wait.</strong> If the funnel liquidates at less than 100%, the backend has to close the gap, and that can take weeks.</li>
   </ul>
-  <p>If one of these describes you, look at our <a href="/sales-funnel-agency">sales funnel agency</a> options for booked-call and lead funnels instead.</p>
+  <p>If one of these describes you, look at our <a href="/">sales funnel agency</a> options for booked-call and lead funnels instead.</p>
 </section>
 
 <section id="backend">
