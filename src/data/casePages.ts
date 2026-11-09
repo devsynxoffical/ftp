@@ -874,5 +874,31 @@ export function getCaseNextSteps(slug: string): string[] {
     "fashion-apparel-ecommerce": ["/funnels-for/ecommerce", "/meta-conversions-api-setup"],
     "supplements-fitness-ecommerce": ["/funnels-for/ecommerce", "/meta-conversions-api-setup"],
   };
-  return byIndustry[page.industry] ?? ["/services"];
+  const base = byIndustry[page.industry] ?? ["/services"];
+  const extra = CASE_EXTRA_LINKS[slug] ?? [];
+  return [...base, ...extra.filter((h) => !base.includes(h))];
 }
+
+/** Cases tied to a place (from the original posts) or to a newer industry page. */
+const CASE_EXTRA_LINKS: Record<string, string[]> = {
+  "roofing-686-leads-at-5-31-cpl": ["/locations/texas"],
+  "roofing-850-leads": ["/locations/texas"],
+  "roofing-537-leads-at-4-27-cpl": ["/locations/texas", "/locations/florida"],
+  "mortgage-823-leads-at-23-97-cpl": ["/locations/texas"],
+  "mortgage-142-leads-at-4-31-cpl": ["/locations/texas"],
+  "real-estate-247-leads-at-16-48-cpl": ["/locations/texas"],
+  "agency-142-leads-at-11-24-cpl": ["/funnels-for/pressure-washing", "/locations/texas"],
+  "mva-530-leads-at-27-cpl": ["/locations/texas"],
+  "mva-1865-leads-at-5-24-cpl": ["/locations/texas"],
+  "solar-300-leads-at-14-71-cpl": ["/locations/texas"],
+  "home-services-542-leads-at-23-82-cpl": ["/locations/texas"],
+  "hvac-5628-appointments-booked": ["/locations/florida"],
+  "lead-gen-89-leads": ["/funnels-for/car-dealerships"],
+  "lead-gen-7-75-cost-per-lead": ["/locations/florida"],
+  "mva-465-leads-at-14-21-cpl": ["/locations/florida"],
+  "home-services-5-10-cost-per-lead": ["/locations/new-york"],
+  "med-spa-74k-revenue-on-10k-ad-spend": ["/locations/new-york"],
+  "med-spa-1011-leads": ["/locations/new-york", "/locations/california"],
+  "mva-276-otp-verified-calls-in-5-days": ["/locations/new-york"],
+  "roofing-52-booked-calls": ["/locations/california"],
+};

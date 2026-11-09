@@ -8,6 +8,9 @@ import { GLOSSARY_PAGES } from "./glossary";
 import { LOCATION_PAGES } from "./locations";
 import { AI_NICHE_PAGES } from "./aiNiches";
 import { STATE_PAGES } from "./locations-states";
+import { INDUSTRY_PAGES_2 } from "./industries2";
+import { AI_SERVICE_PAGES } from "./services-ai";
+import { GROWTH_SERVICE_PAGES } from "./services-growth";
 import { BLOG_POSTS } from "../blogPosts";
 import { CASE_INDUSTRIES } from "../caseIndustries";
 import { getCasePage } from "../casePages";
@@ -24,6 +27,9 @@ export const SEO_PAGES: SeoPage[] = [
   ...LOCATION_PAGES,
   ...AI_NICHE_PAGES,
   ...STATE_PAGES,
+  ...INDUSTRY_PAGES_2,
+  ...AI_SERVICE_PAGES,
+  ...GROWTH_SERVICE_PAGES,
 ];
 
 const BY_PATH = new Map(SEO_PAGES.map((p) => [p.path, p]));

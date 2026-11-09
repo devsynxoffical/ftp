@@ -15,6 +15,7 @@ const GROUPS: { title: string; hub: L; links: L[] }[] = [
     links: [
       { href: "/sales-funnel-agency", label: "Done-for-you sales funnels" },
       { href: "/gohighlevel-agency", label: "GoHighLevel agency" },
+      { href: "/ai-agents", label: "AI agents for business" },
       { href: "/ai-voice-agents", label: "AI voice agents" },
       { href: "/ai-appointment-setter", label: "AI appointment setter" },
       { href: "/speed-to-lead", label: "Speed to lead automation" },
