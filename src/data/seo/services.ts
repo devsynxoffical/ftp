@@ -441,7 +441,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "What happens when a lead wants to talk to a person?", a: "The agent offers a warm transfer during business hours or books a callback with a named team member. Handoff rules are set before launch, and a prospect who asks for a human is never kept talking to the AI. The conversation summary goes to that person, so the lead never repeats themselves." },
       { q: "How long does setup take?", a: "A standard AI appointment setter with script, knowledge base, calendar connection, reminders and CRM write-back takes 5 to 10 business days, including at least 50 internal test calls before it speaks to a real lead. After launch we review recordings in the first weeks and tighten the script where calls stall or end early." },
     ],
-    related: ["/ai-voice-agents", "/crm-automation", "/funnels-for/med-spas", "/funnels-for/dentists", "/funnels-for/gyms", "/compare/ai-voice-agent-vs-human-setter", "/tools/no-show-cost-calculator", "/ai-sales-funnels", "/blog/ai-calling-for-lead-generation", "/ai-appointment-setter/real-estate", "/ai-appointment-setter/insurance"],
+    related: ["/ai-voice-agents", "/crm-automation", "/funnels-for/med-spas", "/funnels-for/dentists", "/funnels-for/gyms", "/compare/ai-voice-agent-vs-human-setter", "/tools/no-show-cost-calculator", "/ai-sales-funnels", "/blog/ai-calling-for-lead-generation", "/ai-appointment-setter/real-estate", "/ai-appointment-setter/insurance", "/ai-voice-agent-dubai"],
     parent: HUB,
     updated: U,
   },

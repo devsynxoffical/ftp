@@ -228,7 +228,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       { q: "Do you build snapshots for agencies?", a: "Yes. If you run an agency on GoHighLevel, we can build the system once and package it as a snapshot, so each new client sub-account starts with the funnels, pipelines, workflows, calendars and custom values in place. You then only change the client-specific details instead of rebuilding." },
       { q: "What is the difference between a GoHighLevel expert and a GoHighLevel agency?", a: "An expert or developer usually executes a defined build or fix. An agency also owns strategy, copy, ads, tracking and ongoing optimization. We do both: fixed-scope builds for teams that want to run the account themselves, and done-for-you systems for businesses that want a partner accountable for results." },
     ],
-    related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot"],
+    related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot", "/ai-voice-agent-dubai"],
     parent: HUB,
     updated: U,
   },

@@ -50,7 +50,7 @@ function schemaFor(p: SeoPage) {
   ];
   const webPage = { "@type": "WebPage", "@id": `${url}#webpage`, url, name: p.title, description: p.description, isPartOf: { "@id": `${BASE_URL}/#website` }, inLanguage: "en-US", dateModified: `${p.updated}T09:00:00+00:00` };
 
-  if (p.kind === "service" || p.kind === "industry") {
+  if (p.kind === "service" || p.kind === "industry" || p.kind === "location") {
     graph.push(webPage, {
       "@type": "Service",
       "@id": `${url}#service`,
@@ -59,7 +59,9 @@ function schemaFor(p: SeoPage) {
       description: p.description,
       url,
       provider: ORG_PUBLISHER,
-      areaServed: ["US", "GB", "CA", "AU", "AE"],
+      areaServed: p.area
+        ? { "@type": p.area.type, name: p.area.name, ...(p.area.type === "State" ? { containedInPlace: { "@type": "Country", name: "United States" } } : {}) }
+        : ["US", "GB", "CA", "AU", "AE"],
       mainEntityOfPage: { "@id": `${url}#webpage` },
     });
   } else if (p.kind === "tool") {
@@ -130,7 +132,7 @@ function accentH1(h1: string) {
   );
 }
 
-const SELLS = new Set(["service", "industry"]);
+const SELLS = new Set(["service", "industry", "location"]);
 
 export default function SeoPageView({ path }: { path: string }) {
   const p = getSeoPage(path);

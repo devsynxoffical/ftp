@@ -288,7 +288,7 @@ export const TOOL_PAGES: SeoPage[] = [
       { q: "Should I include returning customer revenue?", a: "Only if the ads drove that return purchase. For a clean read, calculate ROAS on new-customer revenue and track repeat revenue separately as lifetime value. Mixing them makes prospecting look better than it is and can hide a front end that is quietly losing money on every new buyer." },
       { q: "Can ROAS be too high?", a: "Yes, in practice. A very high ROAS on small spend often means you are under-spending and leaving profitable buyers to competitors. If you sit far above break-even, raise budget in steps of 20 to 30% and watch whether profit after ad spend keeps climbing, even as ROAS drifts down." },
     ],
-    related: ["/tools", "/tools/funnel-conversion-calculator", "/tools/cost-per-lead-calculator", "/glossary/conversions-api", "/templates/funnel-kpi-dashboard", "/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown"],
+    related: ["/tools", "/tools/funnel-conversion-calculator", "/tools/cost-per-lead-calculator", "/glossary/conversions-api", "/templates/funnel-kpi-dashboard", "/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown", "/compare/meta-pixel-vs-conversions-api"],
     parent: HUB,
     updated: U,
   },

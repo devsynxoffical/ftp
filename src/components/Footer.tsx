@@ -250,6 +250,7 @@ export default function Footer() {
           <ul>
             {[
               ["/funnels-for", "Funnels by industry"],
+              ["/locations", "Locations"],
               ["/case-studies", "Case studies"],
               ["/tools", "Free calculators"],
               ["/templates", "Free templates"],
