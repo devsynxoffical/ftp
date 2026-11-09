@@ -5,7 +5,7 @@
  * answer under the hero, 600+ words, a proof block, 5-6 FAQs, schema and
  * internal links. scripts/validate checks all of it.
  */
-export type SeoKind = "hub" | "service" | "industry" | "compare" | "tool" | "template" | "glossary";
+export type SeoKind = "hub" | "service" | "industry" | "location" | "compare" | "tool" | "template" | "glossary";
 
 export interface SeoSection {
   h2: string;
@@ -49,6 +49,8 @@ export interface SeoPage {
   tool?: string;
   /** Downloadable template: file name under /templates/files and its text. */
   template?: { file: string; body: string };
+  /** Location pages: the place served, for Service.areaServed (e.g. { name: "Texas", type: "State" }). */
+  area?: { name: string; type: "State" | "City" | "Country" };
   /** Glossary term name for DefinedTerm. */
   term?: string;
 }

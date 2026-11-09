@@ -37,7 +37,7 @@ const PAGE_LASTMOD: Record<string, string> = {
   "/about": "2026-11-07",
 };
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export function allSitemapEntries(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = [
     { path: "", priority: 1.0, changeFrequency: "weekly" as const },
     { path: "/milliondollarcasestudy", priority: 0.9, changeFrequency: "monthly" as const },

@@ -229,7 +229,10 @@ export default function Footer() {
             {[
               ["/sales-funnel-agency", "Done-for-you funnels"],
               ["/gohighlevel-agency", "GoHighLevel agency"],
+              ["/ai-agents", "AI agents"],
               ["/ai-voice-agents", "AI voice agents"],
+              ["/ai-receptionist", "AI receptionist"],
+              ["/facebook-ads-agency", "Facebook ads"],
               ["/ai-appointment-setter", "AI appointment setter"],
               ["/speed-to-lead", "Speed to lead"],
               ["/vsl-funnels", "VSL funnels"],
@@ -250,6 +253,7 @@ export default function Footer() {
           <ul>
             {[
               ["/funnels-for", "Funnels by industry"],
+              ["/locations", "Locations"],
               ["/case-studies", "Case studies"],
               ["/tools", "Free calculators"],
               ["/templates", "Free templates"],
