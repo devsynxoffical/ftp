@@ -568,6 +568,16 @@ export const INDUSTRY_PAGES: SeoPage[] = [
         html: `<p>Our <a href="/case-studies/mva-personal-injury-lead-generation">MVA and personal injury case studies</a> are the largest data set we have: 8,810 leads at $7.61 on $67,013.43, 6,275 leads at $4.38, 1,865 leads at $5.24, and 530 leads at $27. The <a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">$388K revenue case</a> paid $18.94 per lead across 1,079 leads for a 19.09x return. Another program booked 387 appointments. We go deeper in <a href="/blog/personal-injury-mva-lead-generation-exclusive-leads">exclusive MVA leads explained</a>.</p>`,
       },
       {
+        h2: "Buying auto accident leads vs building your own funnel",
+        html: `<p>Firms looking for auto accident leads usually compare three sources:</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>Who else gets the lead</th><th>Control over questions and consent</th><th>Speed of contact</th></tr></thead><tbody>
+<tr><td>Shared leads from a vendor</td><td>Several firms</td><td>None</td><td>Whoever calls first wins</td></tr>
+<tr><td>Exclusive leads from a vendor</td><td>Only your firm</td><td>Limited, and origin is hard to verify</td><td>Depends on the vendor's delivery</td></tr>
+<tr><td>Your own funnel and ad account</td><td>Only your firm</td><td>Full: you write the qualifier and consent</td><td>Seconds, with verified calls</td></tr>
+</tbody></table></div>
+<p>Buying leads is quicker to start. Your own funnel takes 5 to 10 business days to build, but you own the data, the consent record and the ad account history, and you can tighten qualification when signed cases matter more than volume.</p>`,
+      },
+      {
         h2: "Where firms lose signable cases",
         html: `<ul>
 <li>Intake that works 9 to 5 while most accident searches happen evenings and weekends.</li>
@@ -596,7 +606,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     ],
     related: ["/case-studies/mva-personal-injury-lead-generation", "/speed-to-lead", "/ai-voice-agents", "/funnels-for/mortgage", "/funnels-for/insurance", "/funnels-for/consultants", "/templates/lead-qualification-questions", "/blog/facebook-lead-ads-vs-funnels", "/blog/speed-to-lead-statistics", "/locations/texas", "/locations/florida", "/locations/new-york", "/ai-receptionist"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/funnels-for/coaches",

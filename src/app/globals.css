@@ -4741,6 +4741,8 @@ main {
 .ih-stats span{font-size:12px;font-weight:600;color:var(--mute)}
 .ih-h2{margin:clamp(40px,6vw,72px) 0 22px}
 .ih-build{margin-top:clamp(40px,6vw,80px)}
+.ih-bench{margin-top:clamp(24px,3vw,40px)}
+.ih-bench a{color:var(--or);text-decoration:underline;text-underline-offset:3px}
 .ih-others{margin-top:clamp(36px,5vw,64px)}
 .ih-others ul,.ind-links ul{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:10px}
 .ih-others a{display:inline-block;padding:10px 16px;border-radius:999px;background:#fff;border:1px solid var(--line2);font-size:14px;font-weight:600;transition:all .3s}

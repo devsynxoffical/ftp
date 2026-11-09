@@ -1,4 +1,5 @@
 import type { SeoPage } from "./types";
+import { cplBenchmarkTable, cplSentence, roasBenchmarkTable, ECOM_SLUGS } from "../benchmarks";
 
 const HUB = { name: "Tools", path: "/tools" };
 const U = "2026-11-05";
@@ -7,15 +8,15 @@ export const TOOL_PAGES: SeoPage[] = [
   {
     path: "/tools",
     kind: "hub",
-    keyword: "free funnel calculators",
-    title: "Free Funnel Calculators for Leads, ROAS & No-Shows",
-    description: "Free funnel calculators for conversion rate, cost per lead, ROAS, no-show cost and AI voice agent ROI. Plug in your numbers and see where revenue leaks.",
+    keyword: "sales funnel calculators",
+    title: "Free Sales Funnel Calculators: Leads, ROAS & No-Shows",
+    description: "Free sales funnel calculators for conversion rate, cost per lead, ROAS, no-show cost and AI voice ROI. Plug in your numbers and see where revenue leaks.",
     eyebrow: "Tools",
-    h1: "Free funnel calculators for the numbers that decide profit",
+    h1: "Free sales funnel calculators for the numbers that decide profit",
     intro:
-      "These <strong>free funnel calculators</strong> turn your ad spend, conversion rates and deal values into the five numbers we check first on every audit: funnel conversion, cost per lead, ROAS, the cost of no-shows and the return on an AI voice agent. Each one runs in your browser, shows its formula and needs no email address.",
+      "These free <strong>sales funnel calculators</strong> turn your ad spend, conversion rates and deal values into the five numbers we check first on every audit: funnel conversion, cost per lead, ROAS, the cost of no-shows and the return on an AI voice agent. Each one runs in your browser, shows its formula and needs no email address.",
     quick: {
-      q: "Which funnel calculator should I use first?",
+      q: "Which sales funnel calculator should I use first?",
       a: "Start with the funnel conversion calculator, because it shows every stage from visitor to sale and reveals the weakest step. Then use the cost per lead calculator to find your break-even lead price, the ROAS calculator to check profit, and the no-show and AI voice calculators to price the follow-up gaps.",
     },
     sections: [
@@ -24,10 +25,22 @@ export const TOOL_PAGES: SeoPage[] = [
         html: `<div class="table-wrap"><table><thead><tr><th>Calculator</th><th>Answers</th><th>Inputs you need</th></tr></thead><tbody>
 <tr><td><a href="/tools/funnel-conversion-calculator">Funnel conversion calculator</a></td><td>How many visitors become leads, calls and sales, and what each costs</td><td>Visitors, ad spend, opt-in, booking, show and close rates, deal value</td></tr>
 <tr><td><a href="/tools/cost-per-lead-calculator">Cost per lead calculator</a></td><td>What you pay per lead and the most you can afford to pay</td><td>Ad spend, leads, lead-to-customer rate, revenue per customer, margin</td></tr>
-<tr><td><a href="/tools/roas-calculator">ROAS calculator</a></td><td>Whether ad revenue is profitable after margin</td><td>Ad spend, attributed revenue, gross margin</td></tr>
+<tr><td><a href="/tools/roas-calculator">ROAS calculator</a></td><td>Whether ad revenue is profitable after margin, and your break-even ROAS</td><td>Ad spend, attributed revenue, gross margin</td></tr>
 <tr><td><a href="/tools/no-show-cost-calculator">No-show cost calculator</a></td><td>Revenue lost to missed calls and what fixing it recovers</td><td>Calls booked, current and target no-show rate, close rate, deal value</td></tr>
 <tr><td><a href="/tools/ai-voice-agent-roi-calculator">AI voice agent ROI calculator</a></td><td>Cost per booking for an AI caller versus a human setter</td><td>Lead volume, setter cost, contact and booking rates, AI minutes and price</td></tr>
 </tbody></table></div>`,
+      },
+      {
+        h2: "The formulas behind each calculator",
+        html: `<p>Every sales funnel calculator here prints its math, so you can rebuild it in a spreadsheet:</p>
+<ul>
+<li><strong>Funnel conversion:</strong> sales = visitors × opt-in rate × booking rate × show rate × close rate.</li>
+<li><strong>Cost per lead:</strong> ad spend ÷ leads. Break-even cost per lead = revenue per customer × gross margin × lead-to-customer rate.</li>
+<li><strong>ROAS:</strong> attributed revenue ÷ ad spend. Break-even ROAS = 1 ÷ gross margin.</li>
+<li><strong>No-show cost:</strong> booked calls × (current no-show rate − target rate) × close rate × deal value.</li>
+<li><strong>AI voice ROI:</strong> cost per booking = monthly cost ÷ (leads × contact rate × booking rate), for a setter and for an AI caller.</li>
+</ul>
+<p>Not sure where your funnel leaks? A <a href="/sales-funnel-audit">sales funnel audit</a> runs the same math on your real accounts.</p>`,
       },
       {
         h2: "How to use them together",
@@ -58,7 +71,7 @@ export const TOOL_PAGES: SeoPage[] = [
     ],
     related: ["/tools/funnel-conversion-calculator", "/tools/cost-per-lead-calculator", "/tools/roas-calculator", "/templates", "/blog/how-to-increase-funnel-conversion-rate"],
     parent: { name: "Home", path: "/" },
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/tools/funnel-conversion-calculator",
@@ -141,8 +154,8 @@ export const TOOL_PAGES: SeoPage[] = [
     kind: "tool",
     tool: "cost-per-lead",
     keyword: "cost per lead calculator",
-    title: "Cost Per Lead Calculator With Break-Even CPL",
-    description: "Free cost per lead calculator. See your CPL, cost per customer and the break-even cost per lead your margin allows, with real industry benchmarks.",
+    title: "Cost Per Lead Calculator + Average CPL by Industry",
+    description: "Free cost per lead calculator: get your CPL, break-even CPL and cost per customer, plus average cost per lead by industry from 40+ real campaigns.",
     eyebrow: "Free tool",
     h1: "Cost per lead calculator with break-even CPL",
     intro:
@@ -163,6 +176,19 @@ export const TOOL_PAGES: SeoPage[] = [
 <p>The <a href="/glossary/cost-per-lead">cost per lead</a> glossary entry covers which leads to count and why verified leads change the math.</p>`,
       },
       {
+        h2: "How to calculate cost per lead by hand",
+        html: `<p>The basic formula is <strong>cost per lead = ad spend ÷ number of leads</strong>. The useful versions change what counts as a lead or what counts as spend:</p>
+<div class="table-wrap"><table><thead><tr><th>Metric</th><th>Formula</th><th>Example</th></tr></thead><tbody>
+<tr><td>Cost per lead (CPL)</td><td>Ad spend ÷ leads</td><td>$5,000 ÷ 250 = $20</td></tr>
+<tr><td>Cost per qualified lead</td><td>Ad spend ÷ leads that pass qualification</td><td>$5,000 ÷ 150 = $33.33</td></tr>
+<tr><td>Blended CPL</td><td>Total spend on all channels ÷ total leads</td><td>($5,000 Meta + $3,000 Google) ÷ 400 = $20</td></tr>
+<tr><td>Cost per booked call</td><td>Ad spend ÷ booked calls</td><td>$5,000 ÷ 75 = $66.67</td></tr>
+<tr><td>Cost per customer (CAC)</td><td>Cost per lead ÷ lead-to-customer rate</td><td>$20 ÷ 5% = $400</td></tr>
+<tr><td>Break-even CPL</td><td>Revenue per customer × gross margin × lead-to-customer rate</td><td>$4,000 × 50% × 5% = $100</td></tr>
+</tbody></table></div>
+<p>Use the same date range for spend and leads, and count a lead once even if it submits twice. If you pay an agency or a lead vendor, add those fees to spend for a true cost per lead.</p>`,
+      },
+      {
         h2: "Worked example with the default numbers",
         html: `<p>The calculator opens with $5,000 of spend, 250 leads, a 5% lead-to-customer rate, $4,000 revenue per customer and a 50% gross margin:</p>
 <ul>
@@ -179,16 +205,10 @@ export const TOOL_PAGES: SeoPage[] = [
         html: `<p>Positive headroom means each lead earns more gross profit than it costs, so scaling spend is the right move even if cost per lead rises. Negative headroom means you lose money on average, and the fix is either a cheaper lead or a higher lead-to-customer rate. The second is usually easier: doubling close rate doubles break-even CPL.</p>`,
       },
       {
-        h2: "Cost per lead benchmarks from our clients",
-        html: `<div class="table-wrap"><table><thead><tr><th>Industry</th><th>Documented cost per lead</th></tr></thead><tbody>
-<tr><td>Roofing</td><td>$4.27 to $24</td></tr>
-<tr><td>MVA personal injury</td><td>$4.38 to $27</td></tr>
-<tr><td>Mortgage and final expense</td><td>$4.31 to $25.48</td></tr>
-<tr><td>HVAC</td><td>$5.57 to $23.09</td></tr>
-<tr><td>Real estate</td><td>$11.57 to $28</td></tr>
-<tr><td>B2B lead generation</td><td>$6.72 to $40</td></tr>
-</tbody></table></div>
-<p>Each range comes from real campaigns in our <a href="/case-studies/all">case studies</a>. Lower is not automatically better: a $40 B2B lead can beat a $5 consumer lead on cost per customer.</p>`,
+        h2: "Average cost per lead by industry",
+        html: `<p>These are medians and ranges from the lead generation campaigns published in our <a href="/case-studies/all">case studies</a>, recalculated automatically each time a case is added. Industries with fewer than three campaigns are left out.</p>
+${cplBenchmarkTable()}
+<p>Treat them as a reference, not a target. A median is what a typical campaign paid; your break-even cost per lead from the calculator above is what you can afford. Lower is not automatically better: a $40 B2B lead can beat a $5 consumer lead on cost per customer, and stricter qualification raises cost per lead while lowering cost per sale.</p>`,
       },
       {
         h2: "What to fix when the number is bad",
@@ -210,6 +230,7 @@ export const TOOL_PAGES: SeoPage[] = [
       more: { label: "Browse lead generation case studies", href: "/case-leadgen" },
     },
     faqs: [
+      { q: "What is the average cost per lead by industry?", a: `In our published campaigns, the median cost per lead was ${cplSentence()}. Ranges are wide inside every industry because offer, market, season and qualification change the price. Compare any average with your own break-even cost per lead before deciding a lead is expensive.` },
       { q: "What is a good cost per lead?", a: "A good cost per lead is any figure comfortably below your break-even cost per lead. For a business with a 5% close rate, $4,000 customers and 50% margin, that ceiling is $100. Industry averages are a rough guide only, because offer, market and lead quality change what each lead is worth." },
       { q: "Should I use first-sale value or lifetime value?", a: "Use first-sale value if you need ads to pay back quickly or cash is tight. Use lifetime value only when you have at least a year of retention data. Many businesses run both: first-sale break-even sets the safe limit, and lifetime break-even sets how aggressive scaling can get." },
       { q: "Why is my cost per lead low but sales are poor?", a: "The ad platform is optimizing for form fills, so it finds people who fill forms rather than people who buy. Add verification and qualification, then send booked calls or sales back through the Conversions API so the algorithm learns which leads matter. Cost per lead may rise while cost per sale falls." },
@@ -218,15 +239,15 @@ export const TOOL_PAGES: SeoPage[] = [
     ],
     related: ["/tools", "/tools/funnel-conversion-calculator", "/tools/roas-calculator", "/glossary/cost-per-lead", "/blog/how-to-reduce-cost-per-lead", "/blog/roofing-lead-generation-funnel-cost-per-lead-playbook", "/facebook-ads-agency"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/tools/roas-calculator",
     kind: "tool",
     tool: "roas",
     keyword: "roas calculator",
-    title: "ROAS Calculator: Break-Even ROAS and Real Profit",
-    description: "Free ROAS calculator. Enter ad spend, revenue and gross margin to get ROAS, break-even ROAS and profit after ad spend, with real client benchmarks.",
+    title: "ROAS Calculator With Break-Even ROAS by Margin",
+    description: "Free ROAS calculator and break-even ROAS calculator. Enter spend, revenue and margin to get ROAS, break-even ROAS and profit after ad spend.",
     eyebrow: "Free tool",
     h1: "ROAS calculator with break-even ROAS and profit",
     intro:
@@ -256,12 +277,28 @@ export const TOOL_PAGES: SeoPage[] = [
 <p>Change the margin to 25% and the same 4.2x ROAS leaves only $500 of profit, because break-even rises to 4x. Margin decides how much ROAS you need.</p>`,
       },
       {
+        h2: "Break-even ROAS formula and table",
+        html: `<p><strong>Break-even ROAS = 1 ÷ gross margin.</strong> At that ROAS, the gross profit from ad revenue exactly pays for the ads. To build in a profit target, use <strong>target ROAS = 1 ÷ (gross margin − target profit margin)</strong>, with both as decimals.</p>
+<div class="table-wrap"><table><thead><tr><th>Gross margin</th><th>Break-even ROAS</th><th>ROAS for 10% profit</th><th>ROAS for 20% profit</th></tr></thead><tbody>
+<tr><td>25%</td><td>4x</td><td>6.67x</td><td>20x</td></tr>
+<tr><td>30%</td><td>3.33x</td><td>5x</td><td>10x</td></tr>
+<tr><td>40%</td><td>2.5x</td><td>3.33x</td><td>5x</td></tr>
+<tr><td>50%</td><td>2x</td><td>2.5x</td><td>3.33x</td></tr>
+<tr><td>60%</td><td>1.67x</td><td>2x</td><td>2.5x</td></tr>
+<tr><td>70%</td><td>1.43x</td><td>1.67x</td><td>2x</td></tr>
+<tr><td>80%</td><td>1.25x</td><td>1.43x</td><td>1.67x</td></tr>
+</tbody></table></div>
+<p>Gross margin here means revenue minus product, shipping, fulfillment, payment fees and returns. Leave ad spend out, because the formula already accounts for it. The calculator above works as a break-even ROAS calculator: enter only your margin and read the break-even line.</p>`,
+      },
+      {
         h2: "How to read the results",
         html: `<p>Compare your ROAS with break-even ROAS, not with someone else's ROAS. If you are above break-even, you can usually scale spend and accept some ROAS decline. If you are below it, check attribution first, then the offer: an <a href="/glossary/order-bump">order bump</a> or upsell raises revenue per buyer without raising ad cost, which is how low-ticket funnels like our <a href="/scalelowticket">$847K front end</a> recovered 112% of ad spend on day zero.</p>`,
       },
       {
-        h2: "ROAS benchmarks from our client work",
-        html: `<p>Across our Shopify and DTC results, 4.2x to 5.1x ROAS is the common range, with $449,221 in 49 days at 4.2x and $2.3M at 11.6x at the top end. Lead generation and coaching numbers run higher because one deal is worth thousands: $388,000 of MVA revenue at 19.09x and $115,500 of coaching revenue at 52x. Low-ticket front ends often sit at 2.5x to 3.7x because the goal is to self-liquidate, not profit up front. See the <a href="/case-ecom">eCommerce case studies</a> for the full set.</p>`,
+        h2: "eCommerce ROAS benchmarks by category",
+        html: `<p>Medians and ranges from the eCommerce and low-ticket campaigns in our case studies, recalculated each time a case is added:</p>
+${roasBenchmarkTable(ECOM_SLUGS)}
+<p>Lead generation and coaching numbers run higher because one deal is worth thousands: $388,000 of MVA revenue at 19.09x and $115,500 of coaching revenue at 52x. Low-ticket front ends are judged differently, because the goal is to self-liquidate, not profit up front. See the <a href="/case-ecom">eCommerce case studies</a> for every campaign.</p>`,
       },
       {
         h2: "What to fix when ROAS is bad",
@@ -282,6 +319,7 @@ export const TOOL_PAGES: SeoPage[] = [
       more: { label: "See all eCommerce results", href: "/case-ecom" },
     },
     faqs: [
+      { q: "How do I calculate break-even ROAS?", a: "Divide 1 by your gross margin as a decimal. A 40% margin gives a break-even ROAS of 2.5x, a 25% margin needs 4x and a 60% margin needs about 1.67x. Below break-even, every sale from ads loses money after product costs, so fix margin, average order value or conversion before adding budget." },
       { q: "What is a good ROAS?", a: "A good ROAS is one above your break-even ROAS with room to scale. For a 40% margin business that means comfortably above 2.5x. For a 70% margin service, anything above about 1.4x covers spend. Our Shopify clients commonly run 4.2x to 5.1x, but their margins set what that means in profit." },
       { q: "What is the difference between ROAS and ROI?", a: "ROAS divides revenue by ad spend only. ROI divides profit by total investment, including product cost, staff, software and the funnel build. ROAS is faster to measure and good for daily decisions, while ROI tells you whether the whole acquisition system makes money. This calculator bridges them with profit after ad spend." },
       { q: "Why does my ad platform ROAS differ from my store?", a: "Platforms use their own attribution windows and lose events to browser privacy settings and ad blockers. Your store counts every order but cannot tell which ad caused it. Server-side tracking narrows the gap. Use store revenue for profit decisions and platform ROAS to compare campaigns against each other." },
@@ -290,7 +328,7 @@ export const TOOL_PAGES: SeoPage[] = [
     ],
     related: ["/tools", "/tools/funnel-conversion-calculator", "/tools/cost-per-lead-calculator", "/glossary/conversions-api", "/templates/funnel-kpi-dashboard", "/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown", "/compare/meta-pixel-vs-conversions-api", "/funnels-for/skincare-brands", "/funnels-for/fashion-brands"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/tools/no-show-cost-calculator",
@@ -412,6 +450,16 @@ export const TOOL_PAGES: SeoPage[] = [
         html: `<p>AI calling runs about $0.10 to $0.25 per minute, which works out to roughly $3 to $9 per booked appointment against $40 to $120 from human setters. Across 60+ speed-to-lead deployments, median first contact was 38 seconds and lead-to-booking rose 2.4x on the same ads. Compare the trade-offs in <a href="/compare/ai-voice-agent-vs-human-setter">AI voice agent vs human setter</a>.</p>`,
       },
       {
+        h2: "How much does an AI appointment setter cost?",
+        html: `<p>An AI appointment setter has two costs: usage and the build.</p>
+<ul>
+<li><strong>Usage:</strong> platform, telephony and speech costs land at about $0.10 to $0.25 per minute. A qualifying call averages two to four minutes, so roughly $3 to $9 per booked appointment at the contact and booking rates we see.</li>
+<li><strong>Build:</strong> script, CRM connection, calendar booking, testing and compliance setup. Our complete suite, which includes the AI booking agent with the funnel, CRM, reminders and tracking, is a one-time $1,999.</li>
+<li><strong>Upkeep:</strong> scripts need updates when offers, hours or calendars change, which the calculator includes as a monthly figure.</li>
+</ul>
+<p>Our <a href="/blog/ai-appointment-setter-voice-agent-cost-setup-results">AI appointment setter cost guide</a> breaks the numbers down further, and the <a href="/ai-appointment-setter">AI appointment setter</a> page shows what the build includes.</p>`,
+      },
+      {
         h2: "What to fix when the ROI is weak",
         html: `<ul>
 <li><strong>Low booking rate:</strong> tighten the script with the <a href="/templates/ai-voice-agent-script">AI voice agent script template</a>.</li>
@@ -439,6 +487,6 @@ export const TOOL_PAGES: SeoPage[] = [
     ],
     related: ["/tools", "/tools/no-show-cost-calculator", "/ai-voice-agents", "/compare/ai-voice-agent-vs-human-setter", "/templates/ai-voice-agent-script", "/blog/ai-appointment-setter-voice-agent-cost-setup-results", "/ai-agents", "/ai-receptionist"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-09",
   },
 ];
