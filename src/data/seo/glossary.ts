@@ -93,12 +93,12 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     kind: "glossary",
     term: "Sales funnel",
     keyword: "what is a sales funnel",
-    title: "What Is a Sales Funnel? Definition, Stages and Examples",
-    description: "What is a sales funnel? A plain definition, the stages from ad to sale, real examples from $1.52M and $847K funnels, and the mistakes that leak revenue.",
+    title: "What Is a Sales Funnel? Meaning, Stages and Examples",
+    description: "What is a sales funnel? Its meaning in plain words, the stages from ad to sale, real $1.52M and $847K funnel examples, and mistakes that leak revenue.",
     eyebrow: "Glossary",
-    h1: "What is a sales funnel? Definition and examples",
+    h1: "What is a sales funnel? Meaning, stages and examples",
     intro:
-      "<strong>What is a sales funnel</strong>? It is the planned path a stranger follows from first seeing your ad to becoming a paying customer, with each step designed to move the right people forward and filter out the rest. Below is the definition, how the stages work, real examples from our builds and the mistakes we fix most often.",
+      "<strong>What is a sales funnel</strong>? It is the planned path a stranger follows from first seeing your ad to becoming a paying customer, with each step designed to move the right people forward and filter out the rest. In simple terms, the meaning of a sales funnel is the route from stranger to customer, drawn as a funnel because fewer people remain at each step. Below are the stages, the numbers to watch at each one, real examples from our builds and the mistakes we fix most often.",
     quick: {
       q: "What is a sales funnel?",
       a: "A sales funnel is the sequence of steps that turns attention into revenue: an ad or post brings a visitor, a page captures them as a lead, follow-up qualifies and books them, and a sales call or checkout converts them. It is called a funnel because fewer people remain at each step.",
@@ -114,6 +114,17 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Expand.</strong> Upsells, renewals and referrals raise the value of each customer.</li>
 </ol>
 <p>Every step is tracked in a <a href="/glossary/crm-pipeline">CRM pipeline</a> so you can see where people drop off. For a deeper walkthrough, read <a href="/blog/sales-funnel-stages">sales funnel stages</a>.</p>`,
+      },
+      {
+        h2: "Sales funnel stages at a glance",
+        html: `<div class="table-wrap"><table><thead><tr><th>Stage</th><th>Also called</th><th>What happens</th><th>Number to watch</th></tr></thead><tbody>
+<tr><td>Traffic</td><td>Awareness, top of funnel (TOFU)</td><td>An ad, post or search result earns a click</td><td>Cost per click, click-through rate</td></tr>
+<tr><td>Capture</td><td>Interest</td><td>A landing page or quiz turns the visitor into a lead</td><td>Opt-in rate, <a href="/tools/cost-per-lead-calculator">cost per lead</a></td></tr>
+<tr><td>Nurture and qualify</td><td>Consideration, middle of funnel (MOFU)</td><td>Follow-up builds trust and screens for fit</td><td>Speed to lead, booking rate</td></tr>
+<tr><td>Convert</td><td>Decision, bottom of funnel (BOFU)</td><td>A call or checkout turns the lead into a customer</td><td><a href="/glossary/show-rate">Show rate</a>, close rate, cost per sale</td></tr>
+<tr><td>Expand</td><td>Retention, loyalty</td><td>Upsells, renewals and referrals</td><td>Average order value, lifetime value</td></tr>
+</tbody></table></div>
+<p>A sales funnel and a marketing funnel describe the same path; marketing teams usually own the top stages and sales teams the bottom ones.</p>`,
       },
       {
         h2: "Examples from our cases",
@@ -161,7 +172,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     ],
     related: ["/sales-funnel-agency", "/glossary/lead-magnet", "/glossary/tripwire-offer", "/glossary/crm-pipeline", "/blog/sales-funnel-examples", "/blog/how-much-does-a-sales-funnel-cost", "/blog/sales-funnel-stages", "/sales-funnel-audit", "/landing-page-design"],
     parent: G,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/glossary/tripwire-offer",
@@ -208,6 +219,16 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <p>A tripwire becomes a self-liquidating offer once the front end, including bumps and upsells, pays for its own traffic.</p>`,
       },
       {
+        h2: "Tripwire product bundles",
+        html: `<p>A tripwire does not have to be a single product. A <strong>tripwire bundle</strong> groups two to four small, related items at one impulse price, for example a template pack, a checklist and a short training sold together for $27. Bundles work when each item is useful alone and together they solve one problem completely.</p>
+<ul>
+<li><strong>Bundle as the front end:</strong> raises perceived value without raising the price, which can lift conversion on cold traffic.</li>
+<li><strong>Bundle as the order bump:</strong> offer the companion items as a one-click add-on, which raises average order value instead.</li>
+<li><strong>Physical products:</strong> eCommerce brands bundle a starter kit or sample set at a low price to acquire a customer, then sell refills and full sizes.</li>
+</ul>
+<p>Keep the bundle narrow. Stuffing in unrelated items makes the offer harder to explain and teaches buyers to expect everything for $27. Test the single product and the bundle on the same traffic before committing.</p>`,
+      },
+      {
         h2: "Common mistakes",
         html: `<ul>
 <li><strong>Selling a smaller version of the core offer.</strong> A tripwire should solve one specific problem completely, not tease the main product.</li>
@@ -240,7 +261,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     ],
     related: ["/scalelowticket", "/sales-funnel-agency", "/glossary/self-liquidating-offer", "/glossary/order-bump", "/glossary/upsell-and-downsell", "/blog/low-ticket-funnel-guide"],
     parent: G,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/glossary/self-liquidating-offer",
@@ -779,7 +800,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     kind: "glossary",
     term: "Conversions API",
     keyword: "what is conversions api",
-    title: "What Is Conversions API? Meta CAPI Explained Simply",
+    title: "What Is Conversions API (CAPI)? Meta Tracking Explained",
     description: "What is Conversions API? Meta's server-side tracking explained: how it works with the Pixel, which events to send, deduplication, and a 31% event lift.",
     eyebrow: "Glossary",
     h1: "What is Conversions API? Definition and how it works",
@@ -799,6 +820,18 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li>Later outcomes, such as a booked call or closed sale in the <a href="/glossary/crm-pipeline">CRM pipeline</a>, are sent as additional events.</li>
 <li>Meta uses the fuller data to report results and optimize delivery toward people likely to convert.</li>
 </ol>`,
+      },
+      {
+        h2: "Conversion API, Conversions API or CAPI?",
+        html: `<p>They are the same thing. Meta's official name is <strong>Conversions API</strong>, usually shortened to <strong>CAPI</strong>. People often search for "conversion API" or "Facebook Conversion API"; both refer to the same server-side connection, which works for Facebook and Instagram ads alike.</p>
+<p>Other ad platforms have their own server-side versions under different names:</p>
+<ul>
+<li><strong>Meta:</strong> Conversions API (CAPI), paired with the <a href="/glossary/meta-pixel">Meta Pixel</a>.</li>
+<li><strong>TikTok:</strong> Events API, paired with the TikTok Pixel.</li>
+<li><strong>Google Ads:</strong> enhanced conversions and offline conversion imports.</li>
+<li><strong>LinkedIn:</strong> Conversions API, paired with the Insight Tag.</li>
+</ul>
+<p>The idea is the same everywhere: send the conversion from your server or CRM, with hashed customer details, so the platform can match it to the ad. Our <a href="/meta-conversions-api-setup">Conversions API setup</a> service covers Meta.</p>`,
       },
       {
         h2: "Pixel vs Conversions API",
@@ -849,7 +882,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     ],
     related: ["/meta-conversions-api-setup", "/glossary/meta-pixel", "/glossary/cost-per-lead", "/glossary/crm-pipeline", "/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "/compare/meta-pixel-vs-conversions-api"],
     parent: G,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/glossary/meta-pixel",
@@ -1083,12 +1116,12 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     kind: "glossary",
     term: "GoHighLevel snapshot",
     keyword: "gohighlevel snapshot",
-    title: "GoHighLevel Snapshot: What It Is and How to Use It",
+    title: "GoHighLevel Snapshot (GHL Snapshots): How to Use One",
     description: "A GoHighLevel snapshot copies a full account setup into a new sub-account. What it includes, how agencies use it, a real example and common mistakes.",
     eyebrow: "Glossary",
     h1: "GoHighLevel snapshot: definition and how agencies use it",
     intro:
-      "A <strong>GoHighLevel snapshot</strong> is a saved template of a HighLevel sub-account's setup, including funnels, forms, pipelines, workflows, calendars and message templates, that can be loaded into another sub-account in one step. Agencies use snapshots to launch new clients with a proven system instead of rebuilding it each time.",
+      "A <strong>GoHighLevel snapshot</strong> is a saved template of a HighLevel sub-account's setup, including funnels, forms, pipelines, workflows, calendars and message templates, that can be loaded into another sub-account in one step. Most users simply call them GHL snapshots. Agencies use snapshots to launch new clients with a proven system instead of rebuilding it each time.",
     quick: {
       q: "What is a GoHighLevel snapshot?",
       a: "A GoHighLevel snapshot is a reusable copy of a sub-account's configuration: funnels, websites, forms, surveys, pipelines, workflows, calendars, custom fields and email and SMS templates. It does not copy contacts or conversations. Agencies on the agency plan load a snapshot into each new client account to start with a working system.",
@@ -1116,6 +1149,18 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <tr><td>Calendars, custom fields, templates</td><td>Domain connections</td></tr>
 </tbody></table></div>
 <p>Integrations such as an <a href="/glossary/ai-voice-agent">AI voice agent</a> webhook need reconnecting per account.</p>`,
+      },
+      {
+        h2: "How to vet a GHL snapshot before you load it",
+        html: `<p>GHL snapshots are shared by link between agencies, and many are sold ready-made. Before loading one into a client account, check:</p>
+<ul>
+<li><strong>A live demo account.</strong> Ask to submit the funnel yourself and watch the workflows fire, not just a screen recording.</li>
+<li><strong>Workflow documentation.</strong> Every trigger, wait step and tag should be named and explained, or you will be debugging someone else's logic.</li>
+<li><strong>Conflicts with existing assets.</strong> Loading into an account that already has pipelines or custom fields with the same names creates duplicates. Test in an empty sub-account first.</li>
+<li><strong>Integrations to reconnect.</strong> Phone numbers, calendars, payment and ad accounts never transfer, so list what needs connecting after import.</li>
+<li><strong>Compliance text.</strong> Consent wording, opt-out handling and quiet hours must match your client's market.</li>
+</ul>
+<p>We build custom snapshots for agencies as part of our <a href="/gohighlevel-agency">GoHighLevel agency</a> service, or you can <a href="/hire-gohighlevel-expert">hire a GoHighLevel expert</a> to audit one you already bought.</p>`,
       },
       {
         h2: "Example from our cases",
@@ -1153,7 +1198,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     ],
     related: ["/gohighlevel-agency", "/crm-automation", "/glossary/crm-pipeline", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/blog/gohighlevel-review"],
     parent: G,
-    updated: U,
+    updated: "2026-11-09",
   },
   {
     path: "/glossary/cost-per-lead",

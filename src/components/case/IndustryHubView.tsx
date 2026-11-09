@@ -9,6 +9,7 @@ import { getBlogPostBySlug } from "@/data/blogPosts";
 import PageFaq from "@/components/PageFaq";
 import QuickAnswer from "@/components/QuickAnswer";
 import RoboSection from "@/components/RoboSection";
+import { industryBenchmark, money, times, MIN_N } from "@/data/benchmarks";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 const OG_FALLBACK = "/img/og/funnels-that-print-og.jpg";
@@ -25,6 +26,9 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
     .map((g) => getBlogPostBySlug(g))
     .filter((g): g is NonNullable<typeof g> => Boolean(g));
   const others = CASE_INDUSTRIES.filter((i) => i.slug !== industry.slug);
+  const bench = industryBenchmark(industry.slug);
+  const cpl = bench.cpl && bench.cpl.n >= MIN_N ? bench.cpl : undefined;
+  const roas = bench.roas && bench.roas.n >= MIN_N ? bench.roas : undefined;
   const setHub = industry.set === "ec" ? { href: "/case-ecom", label: "All eCommerce case studies" } : { href: "/case-leadgen", label: "All lead generation case studies" };
 
   const schema = {
@@ -100,6 +104,29 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
           </div>
 
           <QuickAnswer q={industry.quick.q} a={industry.quick.a} id="ih-quick-h" />
+
+          {(cpl || roas) && (
+            <section className="case-card ih-bench" aria-labelledby="ih-bench-h">
+              <h2 id="ih-bench-h">{bench.label} benchmarks from these case studies</h2>
+              <p>
+                Calculated from the published results below and updated whenever a case is added.
+                {cpl && (
+                  <>
+                    {" "}The median cost per lead was <b>{money(cpl.median)}</b> across {cpl.n} campaigns, ranging from {money(cpl.min)} to {money(cpl.max)}.
+                  </>
+                )}
+                {roas && (
+                  <>
+                    {" "}The median return on ad spend was <b>{times(roas.median)}</b> across {roas.n} campaigns, ranging from {times(roas.min)} to {times(roas.max)}.
+                  </>
+                )}
+              </p>
+              <p>
+                Compare other industries and work out what you can afford with the{" "}
+                {cpl ? <Link href="/tools/cost-per-lead-calculator">cost per lead calculator</Link> : <Link href="/tools/roas-calculator">ROAS and break-even ROAS calculator</Link>}.
+              </p>
+            </section>
+          )}
 
           <h2 className="ih-h2">All {midSentence(industry.label)} results</h2>
           <div className="cgrid2 ih-grid">
