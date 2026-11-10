@@ -1530,6 +1530,7 @@ section.ct .info span{display:block;font-size:12px;color:var(--mute);font-weight
 .cxf:not([data-s="2"]) #cxsend,.cxf[data-s="2"] #cxnext{display:none}
 .cxok{position:absolute;inset:0;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px;opacity:0;visibility:hidden;transition:opacity .4s}
 .cxf.sent .cxok{opacity:1;visibility:visible}
+.cxok p a{color:var(--or);text-decoration:underline;text-underline-offset:3px;font-weight:600}
 .cxok span{width:72px;height:72px;border-radius:50%;background:var(--lime);display:grid;place-items:center;font-size:32px;margin-bottom:18px;animation:wpop .5s cubic-bezier(.2,.7,.2,1.4)}
 .cxok b{font-family:var(--disp);font-size:28px;letter-spacing:-.03em}.cxok p{color:var(--body);max-width:36ch;margin:10px 0 20px}
 .cxlogos{padding:20px 0 clamp(50px,6vw,90px);text-align:center}
