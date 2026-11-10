@@ -208,7 +208,7 @@ export const TOOL_PAGES: SeoPage[] = [
         h2: "Average cost per lead by industry",
         html: `<p>These are medians and ranges from the lead generation campaigns published in our <a href="/case-studies/all">case studies</a>, recalculated automatically each time a case is added. Industries with fewer than three campaigns are left out.</p>
 ${cplBenchmarkTable()}
-<p>Treat them as a reference, not a target. A median is what a typical campaign paid; your break-even cost per lead from the calculator above is what you can afford. Lower is not automatically better: a $40 B2B lead can beat a $5 consumer lead on cost per customer, and stricter qualification raises cost per lead while lowering cost per sale.</p>`,
+<p>Every campaign behind these numbers is listed in our <a href="/blog/facebook-ads-cost-per-lead-benchmarks">Facebook ads cost per lead benchmarks</a>. Treat them as a reference, not a target. A median is what a typical campaign paid; your break-even cost per lead from the calculator above is what you can afford. Lower is not automatically better: a $40 B2B lead can beat a $5 consumer lead on cost per customer, and stricter qualification raises cost per lead while lowering cost per sale.</p>`,
       },
       {
         h2: "What to fix when the number is bad",

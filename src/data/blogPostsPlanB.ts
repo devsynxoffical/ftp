@@ -190,7 +190,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     category: "Funnel Architecture",
     author: AUTHORS.gaurav,
     publishedAt: "2026-11-05",
-    updatedAt: "2026-11-05",
+    updatedAt: "2026-11-10",
     readTime: "9 min read",
     image: "/img/blog/how-to-increase-funnel-conversion-rate.jpg",
     imageAlt: "Funnel analytics dashboard on a monitor showing step-by-step conversion rates with the largest drop-off highlighted in red",
@@ -211,7 +211,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     ],
     toc: [
       { id: "measure-first", title: "1. Measure Every Stage Before You Change Anything" },
-      { id: "find-the-leak", title: "2. Find the Leak: A Stage-by-Stage Diagnostic" },
+      { id: "find-the-leak", title: "2. Funnel Not Converting? Find the Leak Stage by Stage" },
       { id: "offer-and-first-screen", title: "3. Fixes 1 to 3: Offer, Message Match and First Screen" },
       { id: "form-and-proof", title: "4. Fixes 4 to 6: Form, Proof and Page Speed" },
       { id: "after-the-lead", title: "5. Fixes 7 to 9: Speed-to-Lead, Booking and Show Rate" },
@@ -266,8 +266,8 @@ export const PLAN_POSTS_B: BlogPost[] = [
 </section>
 
 <section id="find-the-leak">
-  <h2>2. Find the Leak: A Stage-by-Stage Diagnostic</h2>
-  <p>Put each stage's rate into the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> and look for the step with the biggest drop measured in money, not percentage. A 50% to 55% improvement on the booking step is often worth more than a 2% to 3% improvement on the landing page, because every booked call is worth far more than a page view.</p>
+  <h2>2. Funnel Not Converting? Find the Leak Stage by Stage</h2>
+  <p>When a funnel is not converting, the cause is almost never "the funnel" as a whole. It is one stage, and the symptom tells you which. Put each stage's rate into the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> and look for the step with the biggest drop measured in money, not percentage. A 50% to 55% improvement on the booking step is often worth more than a 2% to 3% improvement on the landing page, because every booked call is worth far more than a page view.</p>
   <div class="table-wrap">
     <table class="data-table">
       <thead><tr><th>Symptom</th><th>Likely leak</th><th>First fix to try</th></tr></thead>
@@ -607,6 +607,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
       },
     ],
     related: [
+      "facebook-ads-cost-per-lead-benchmarks",
       "mortgage-lead-generation-meta-ads-otp-verified",
       "personal-injury-mva-lead-generation-exclusive-leads",
       "how-to-reduce-cost-per-lead",
@@ -909,7 +910,6 @@ export const PLAN_POSTS_B: BlogPost[] = [
       "how to reduce cost per lead",
       "lower cost per lead",
       "reduce cpl",
-      "facebook ads cost per lead",
       "cost per lead benchmarks",
       "lead generation costs",
       "improve lead quality",
@@ -959,6 +959,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
       },
     ],
     related: [
+      "facebook-ads-cost-per-lead-benchmarks",
       "roofing-lead-generation-funnel-cost-per-lead-playbook",
       "facebook-lead-ads-vs-funnels",
       "how-to-increase-funnel-conversion-rate",
@@ -973,7 +974,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
 
 <section id="benchmarks">
   <h2>2. What Real Campaigns Achieved</h2>
-  <p>Benchmarks vary widely by industry, location, season and how strict the qualification is. These are documented results from client ad accounts:</p>
+  <p>Benchmarks vary widely by industry, location, season and how strict the qualification is. These are documented results from client ad accounts. For every published campaign side by side, with medians by industry, see our <a href="/blog/facebook-ads-cost-per-lead-benchmarks">Facebook ads cost per lead benchmarks</a>.</p>
   <div class="table-wrap">
     <table class="data-table">
       <thead><tr><th>Industry</th><th>Leads</th><th>Cost per lead</th></tr></thead>

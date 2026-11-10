@@ -29,4 +29,6 @@ export const BLOG_CASE_INDUSTRIES: Record<string, string[]> = {
   "speed-to-lead-statistics": ["mva-personal-injury-lead-generation", "real-estate-lead-generation"],
   "quiz-funnel-examples": ["roofing-lead-generation", "med-spa-marketing"],
   "vsl-funnel-examples": ["coaching-consulting-funnels", "low-ticket-funnels"],
+  "facebook-ads-cost-per-lead-benchmarks": ["roofing-lead-generation", "mva-personal-injury-lead-generation"],
+  "membership-funnel": ["low-ticket-funnels", "coaching-consulting-funnels"],
 };

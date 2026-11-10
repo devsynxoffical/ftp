@@ -2,6 +2,7 @@ import { AUTHORS, type Author } from "./authors";
 import { PLAN_POSTS_A } from "./blogPostsPlanA";
 import { PLAN_POSTS_B } from "./blogPostsPlanB";
 import { PLAN_POSTS_C } from "./blogPostsPlanC";
+import { PLAN_POSTS_D } from "./blogPostsPlanD";
 
 export type BlogAuthor = Author;
 
@@ -985,6 +986,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     related: [
+      "membership-funnel",
       "high-ticket-vsl-vs-interactive-quiz-funnel-2026",
       "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
       "speed-to-lead-automation-gohighlevel-60-second-follow-up",
@@ -1739,6 +1741,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     related: [
+      "facebook-ads-cost-per-lead-benchmarks",
       "speed-to-lead-automation-gohighlevel-60-second-follow-up",
       "ai-appointment-setter-voice-agent-cost-setup-results",
       "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
@@ -2126,6 +2129,7 @@ export const BLOG_POSTS: BlogPost[] = [
   ...PLAN_POSTS_A,
   ...PLAN_POSTS_B,
   ...PLAN_POSTS_C,
+  ...PLAN_POSTS_D,
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

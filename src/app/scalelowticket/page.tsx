@@ -215,6 +215,7 @@ export default function Case847KPage() {
       lead="The self-liquidating offer economics, tracking and follow-up frameworks used on this build."
       slugs={[
         "low-ticket-self-liquidating-offer-funnel-847k-breakdown",
+        "membership-funnel",
         "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
         "speed-to-lead-automation-gohighlevel-60-second-follow-up",
       ]}
