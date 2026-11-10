@@ -6,11 +6,12 @@ import { track } from "@/lib/track";
 
 /**
  * GA4 + conversion events.
- * - The GA4 tag loads only when NEXT_PUBLIC_GA_MEASUREMENT_ID is set (Vercel env var).
+ * - Loads the GA4 tag for the site's web stream.
  * - One delegated click listener reports lead actions site-wide, so every
  *   WhatsApp button and booking link is counted without wiring each one.
  */
-const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+/** GA4 web stream "FTP" (stream ID 16314300856). The env var can override it. */
+const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || "G-JYJ2H2HZLC";
 
 export default function Analytics() {
   useEffect(() => {
