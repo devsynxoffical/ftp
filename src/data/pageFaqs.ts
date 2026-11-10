@@ -52,6 +52,10 @@ export const PAGE_FAQS: Record<string, PageFaqItem[]> = {
       q: "What does a low ticket funnel agency do?",
       a: "A low ticket funnel agency builds the full front-end system: the offer, sales page, checkout, order bump, one-click upsell, buyer email and SMS sequences and purchase tracking. Funnels That Print builds that stack in 5 to 10 business days for a one-time fee of $999, $1,499 or $1,999, with no revenue share.",
     },
+    {
+      q: "Can you build a self-liquidating offer funnel for my business?",
+      a: "Yes. As an SLO funnel builder we plan the front-end product, price, order bump and upsell, then build the sales page, checkout, buyer follow-up and purchase tracking, usually in 5 to 10 business days from $999. We model average order value against your expected cost per buyer before launch, so you know what the front end must do to cover ad spend.",
+    },
   ],
   "case-studies": [
     {

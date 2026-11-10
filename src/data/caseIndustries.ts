@@ -58,7 +58,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "Who owns the funnel, ad account and leads?", a: "The roofing company does. The funnel, CRM, automations, ad account and every lead in the pipeline belong to the business, not to us. If you stop working with us, everything keeps running and the data stays yours, which is why results can compound over time instead of resetting with each new vendor." },
       { q: "What happens after a homeowner submits the estimator?", a: "They get an instant SMS, an immediate call from a rep or AI setter, and missed-call text-back if nobody answers. Across 60+ deployments of this follow-up, median first contact is 38 seconds and lead-to-booking improves 2.4x, so inspections get booked while the homeowner is still engaged and before competitors call back." },
     ],
-    guides: ["roofing-lead-generation-funnel-cost-per-lead-playbook", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
+    guides: ["facebook-ads-cost-per-lead-benchmarks", "roofing-lead-generation-funnel-cost-per-lead-playbook", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
   },
   {
     slug: "mva-personal-injury-lead-generation",
@@ -91,7 +91,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "How much does an MVA funnel cost to build?", a: "The build is a one-time fee: $999 for design only, $1,499 for design, copy and the full build, or $1,999 for the complete suite including CRM, intake automation, an AI booking agent and tracking. Ad spend is paid directly to Meta from the firm's own account, with no per-lead markup." },
       { q: "How quickly can a firm start receiving leads?", a: "The funnel, OTP verification, intake follow-up and Conversions API tracking are built in 5 to 10 business days. Leads start arriving once campaigns launch, and the first weeks are used to test angles and budgets. Signed-case data sent back to Meta then steers spend toward claimants who actually retain the firm." },
     ],
-    guides: ["personal-injury-mva-lead-generation-exclusive-leads", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
+    guides: ["facebook-ads-cost-per-lead-benchmarks", "personal-injury-mva-lead-generation-exclusive-leads", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
   },
   {
     slug: "mortgage-insurance-lead-generation",
@@ -124,7 +124,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "How much does a mortgage funnel cost?", a: "Builds are a one-time fee: $999 for design only, $1,499 for design, copy and the full build, or $1,999 for the complete suite with CRM, automation, an AI booking agent and tracking. Ad spend runs through the broker's own Meta account, so there is no per-lead charge or revenue share." },
       { q: "How long does it take to launch?", a: "The eligibility calculator, OTP verification, follow-up and funded-loan tracking are live in 5 to 10 business days. Campaigns then spend the first weeks testing angles and audiences, and application and funding events are sent back to Meta so lead quality improves as the account learns which borrowers close." },
     ],
-    guides: ["mortgage-lead-generation-meta-ads-otp-verified", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
+    guides: ["facebook-ads-cost-per-lead-benchmarks", "mortgage-lead-generation-meta-ads-otp-verified", "speed-to-lead-automation-gohighlevel-60-second-follow-up"],
   },
   {
     slug: "med-spa-marketing",
@@ -289,7 +289,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "How long does it take to launch a VSL or application funnel?", a: "The VSL or diagnostic front end, application, booking calendar, show-up sequence and revenue tracking are built in 5 to 10 business days. Most of the time goes into the script and qualification questions, because those decide who reaches the closer's calendar and how many booked calls actually show and buy." },
       { q: "Do you provide the sales team or closers?", a: "No. We build the funnel, follow-up, reminders and tracking, and your team or closers run the calls. The $1,999 suite can add an AI booking agent that qualifies and books leads before a human gets involved, and pipeline reporting shows which campaigns produce calls that show and close." },
     ],
-    guides: ["high-ticket-vsl-vs-interactive-quiz-funnel-2026", "reduce-sales-call-no-show-rate-reminder-automation"],
+    guides: ["membership-funnel", "high-ticket-vsl-vs-interactive-quiz-funnel-2026", "reduce-sales-call-no-show-rate-reminder-automation"],
   },
   {
     slug: "agency-saas-lead-generation",
@@ -355,7 +355,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "How long does it take to launch?", a: "The front-end sales page, checkout with order bump, upsell, buyer email and SMS sequences and purchase tracking are live in 5 to 10 business days. After launch, the first weeks focus on testing hooks, prices and bump offers until average order value consistently covers the cost per buyer from cold traffic." },
       { q: "What happens if the front end does not break even?", a: "The levers are average order value and conversion rate. We test the order bump, upsell offer, price point and the first screen of the sales page before cutting ad spend. If the front end still runs at a small loss, a strong backend can justify it, as long as buyer revenue is tracked accurately." },
     ],
-    guides: ["low-ticket-self-liquidating-offer-funnel-847k-breakdown", "gohighlevel-vs-clickfunnels-lead-generation-2026"],
+    guides: ["membership-funnel", "low-ticket-self-liquidating-offer-funnel-847k-breakdown", "gohighlevel-vs-clickfunnels-lead-generation-2026"],
   },
   {
     slug: "shopify-dtc-ecommerce",

@@ -91,7 +91,7 @@ export const GROWTH_SERVICE_PAGES: SeoPage[] = [
       { q: "Who owns the ad account and creative?", a: "You do. Campaigns run in your Meta Business Manager and ad account, billed to your card, and the creative we produce is yours to keep. If you stop working with us, the account, pixel data, audiences and ads stay with you and keep running if you choose." },
       { q: "Can you work with a strict ad category like mortgage or insurance?", a: "Yes. Credit, housing and some financial offers fall under Meta's Special Ad Categories, which limit age, gender and detailed targeting. We work within those rules using broad delivery, compliant creative and offers that qualify the buyer on the form or page instead of in the targeting." },
     ],
-    related: ["/meta-conversions-api-setup", "/landing-page-design", "/speed-to-lead", "/case-leadgen", "/case-ecom", "/blog/facebook-lead-ads-vs-funnels", "/tools/cost-per-lead-calculator"],
+    related: ["/meta-conversions-api-setup", "/landing-page-design", "/speed-to-lead", "/case-leadgen", "/case-ecom", "/blog/facebook-lead-ads-vs-funnels", "/tools/cost-per-lead-calculator", "/blog/facebook-ads-cost-per-lead-benchmarks"],
     parent: HUB,
     updated: U,
   },

@@ -1133,6 +1133,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
       },
     ],
     related: [
+      "membership-funnel",
       "low-ticket-self-liquidating-offer-funnel-847k-breakdown",
       "sales-funnel-examples",
       "how-to-build-a-high-ticket-funnel",
@@ -1284,7 +1285,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>A low ticket funnel without a backend is a break-even machine at best. The buyer list is the asset. In the $847K build, the majority of collected revenue came after the first purchase, from an email sequence, a buyers-only workshop and a high-ticket offer sold on calls.</p>
   <ul>
     <li><strong>Email sequence:</strong> teach with the product, then invite buyers to the next offer. Our <a href="/templates/email-nurture-sequence">email nurture sequence template</a> is a good starting point.</li>
-    <li><strong>Mid-ticket offer:</strong> a workshop, program or membership at a few hundred dollars.</li>
+    <li><strong>Mid-ticket offer:</strong> a workshop, program or membership at a few hundred dollars. Recurring offers follow the structure in our <a href="/blog/membership-funnel">membership funnel</a> guide.</li>
     <li><strong>High-ticket offer:</strong> sold on a call to buyers who apply, using the structure in <a href="/blog/how-to-build-a-high-ticket-funnel">how to build a high ticket funnel</a>.</li>
   </ul>
   <p>If you want the full system built, including checkout, bump, upsells, tracking and backend automation, see the <a href="/scalelowticket">low-ticket scaling system</a>. We build funnels in 5 to 10 business days on fixed pricing. More structures are in our <a href="/blog/sales-funnel-examples">sales funnel examples</a>, or <a href="/book-a-call">book a strategy call</a> and we will check whether your offer can self-liquidate.</p>

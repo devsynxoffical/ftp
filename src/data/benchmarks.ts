@@ -47,10 +47,19 @@ const LABEL: Record<string, string> = {
   "supplements-fitness-ecommerce": "Supplements and fitness",
 };
 
-export function industryBenchmark(slug: string): IndustryBenchmark {
-  const cases = getCasesForIndustry(slug)
+/**
+ * Cases whose published figures conflict (e.g. caption and dashboard disagree).
+ * Left out of every benchmark until the numbers are confirmed.
+ */
+const DISPUTED = new Set(["lead-gen-501-leads-at-40-cpl"]);
+
+const benchCases = (slug: string) =>
+  getCasesForIndustry(slug)
     .map((c) => getCasePage(c.slug))
-    .filter((p): p is CasePage => Boolean(p) && !p!.noindex);
+    .filter((p): p is CasePage => Boolean(p) && !p!.noindex && !DISPUTED.has(p!.slug));
+
+export function industryBenchmark(slug: string): IndustryBenchmark {
+  const cases = benchCases(slug);
   const cpl = cases.map((p) => metric(p, "Cost per lead", /cost per lead/i)).filter((x): x is number => x !== null && x > 0);
   const roas = cases.map((p) => metric(p, "ROAS", /return on ad spend|roas/i)).filter((x): x is number => x !== null && x > 0 && x < 100);
   return { slug, label: LABEL[slug] ?? slug, cases: cases.length, cpl: stats(cpl), roas: stats(roas) };
@@ -96,3 +105,20 @@ export function roasBenchmarkTable(slugs: string[]): string {
 }
 
 export const ECOM_SLUGS = ["shopify-dtc-ecommerce", "beauty-skincare-ecommerce", "fashion-apparel-ecommerce", "supplements-fitness-ecommerce", "low-ticket-funnels"];
+
+export interface CplCampaign { slug: string; industry: string; label: string; cpl: number; leads: number | null; spend: number | null }
+
+/** Every published lead generation campaign with a cost per lead, for benchmark articles. */
+export function cplCampaigns(): CplCampaign[] {
+  const out: CplCampaign[] = [];
+  for (const i of CASE_INDUSTRIES)
+    for (const p of benchCases(i.slug)) {
+      const cpl = metric(p, "Cost per lead", /cost per lead/i);
+      if (cpl === null || cpl <= 0) continue;
+      const fact = (re: RegExp) => parseMetric(p.facts.find((f) => re.test(f.label))?.value);
+      out.push({ slug: p.slug, industry: i.slug, label: LABEL[i.slug] ?? i.slug, cpl, leads: fact(/^leads$/i), spend: fact(/^ad spend$/i) });
+    }
+  return out;
+}
+
+export const int = (n: number) => Math.round(n).toLocaleString("en-US");
