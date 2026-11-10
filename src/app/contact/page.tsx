@@ -3,10 +3,13 @@
 import { useState, useRef } from "react";
 import { LOGOS } from "@/data/siteContent";
 import BookingCta from "@/components/BookingCta";
+import { track } from "@/lib/track";
+import { whatsappHref } from "@/lib/whatsapp";
 
 export default function ContactPage() {
   const [step, setStep] = useState(0);
   const [isSent, setIsSent] = useState(false);
+  const [briefText, setBriefText] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
 
   // Step 1: Goal
@@ -99,6 +102,9 @@ Also: ${extras.join(", ")}
 Reach via: ${reachVia}
 
 ${msg.trim()}`;
+
+    track("generate_lead", { method: "contact_form", page_path: "/contact", package: packageChoice, ad_spend: spend });
+    setBriefText(body);
 
     window.location.href = `mailto:info@funnelsthatprint.com?subject=${encodeURIComponent(
       "New funnel enquiry from " + name.trim()
@@ -480,6 +486,17 @@ ${msg.trim()}`;
             <p>
               Your email app opened with everything filled in. Press send and we
               reply within one business day.
+            </p>
+            <p>
+              Email app did not open?{" "}
+              <a
+                href={whatsappHref(`Hi Funnels That Print! Here is my project brief:\n\n${briefText}`)}
+                target="_blank"
+                rel="noopener"
+              >
+                Send the same brief on WhatsApp
+              </a>{" "}
+              or email it to info@funnelsthatprint.com.
             </p>
             <button
               type="button"

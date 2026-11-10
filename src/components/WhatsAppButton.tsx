@@ -36,11 +36,9 @@ export default function WhatsAppButton() {
       rel="noopener"
       aria-label="Chat with Funnels That Print on WhatsApp"
       onClick={() => {
-        // Refresh the message at click time, then report the lead to Meta.
+        // Refresh the message at click time. The click itself is reported by
+        // the site-wide listener in Analytics.tsx (GA4 + Meta Contact).
         setHref(whatsappHref(whatsappMessage(path, currentH1())));
-        try {
-          window.fbq?.("track", "Contact", { content_name: "WhatsApp", content_category: path });
-        } catch {}
       }}
     >
       <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true" focusable="false">
