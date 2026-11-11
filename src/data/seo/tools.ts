@@ -400,7 +400,7 @@ ${roasBenchmarkTable(ECOM_SLUGS)}
       { q: "Does the calculator work for clinics and service appointments?", a: "Yes. For med spas, dental offices or home service estimates, enter appointments booked, your no-show rate, the share of attended appointments that buy, and average ticket. For clinics where every attended appointment is paid, set close rate to 100% and use the appointment value." },
       { q: "Is the lost revenue figure realistic?", a: "It is an upper bound. Some people who skip calls would not have bought anyway, so recovered calls often close a little below average. Even at half the calculated figure, most businesses find no-shows cost more each month than the reminder automation and confirmation calls needed to reduce them." },
     ],
-    related: ["/tools", "/tools/funnel-conversion-calculator", "/tools/ai-voice-agent-roi-calculator", "/glossary/show-rate", "/templates/no-show-reminder-sequence", "/blog/reduce-sales-call-no-show-rate-reminder-automation", "/sales-funnel-audit"],
+    related: ["/tools", "/tools/funnel-conversion-calculator", "/tools/ai-voice-agent-roi-calculator", "/glossary/show-rate", "/templates/no-show-reminder-sequence", "/blog/reduce-sales-call-no-show-rate-reminder-automation", "/sales-funnel-audit", "/blog/med-spa-patient-acquisition"],
     parent: HUB,
     updated: U,
   },

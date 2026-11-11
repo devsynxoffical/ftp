@@ -100,6 +100,7 @@ export const PLAN_POSTS_D: BlogPost[] = [
       },
     ],
     related: [
+      "med-spa-patient-acquisition",
       "how-to-reduce-cost-per-lead",
       "facebook-lead-ads-vs-funnels",
       "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
@@ -358,6 +359,168 @@ export const PLAN_POSTS_D: BlogPost[] = [
     <li><strong>Tracking only purchases.</strong> Send renewals and cancellations to your reporting so you can see which ads bring members who stay.</li>
   </ul>
   <p>If you want a membership funnel built and tracked end to end, our <a href="/sales-funnel-agency">sales funnel agency</a> builds them in 5 to 10 business days.</p>
+</section>
+`,
+  },
+  {
+    slug: "med-spa-patient-acquisition",
+    metaTitle: "Med Spa Patient Acquisition Funnel: Guide With Real Numbers",
+    metaDescription: "How a med spa patient acquisition funnel works stage by stage, the cost-per-patient math, and results: 1,011 leads at $4.65 and $639K from 178 clients.",
+    keyTakeaways: [
+      "A med spa patient acquisition funnel has five stages: ad, intro offer page, booking, consultation or first visit, and rebooking. Each stage has one number to watch.",
+      "Cost per acquired patient = cost per lead ÷ (booking rate × show rate × consult-to-treatment rate). Fixing a later stage lowers it as much as cheaper leads do.",
+      "In our med spa campaigns, 1,011 leads came from $4,703 of ad spend ($4.65 per lead), $590 produced $11,700 of revenue (19.8x), and one clinic earned $639,000 from 178 clients.",
+      "Profit comes from rebooking: at $639,000 across 178 clients, an average client was worth about $3,590, far more than any intro offer.",
+    ],
+    title: "Med Spa Patient Acquisition Funnel: How to Turn Ads Into Booked, Returning Patients",
+    headline: "The five stages of a med spa patient acquisition funnel, the number to watch at each one, the cost-per-patient math, and what our med spa campaigns actually produced.",
+    excerpt: "Most med spa marketing guides stop at the ad. This one follows a new patient from the first click to the third visit: the intro offer, booking, show rate, consult-to-treatment, rebooking, and the math that tells you what a patient costs and what one is worth.",
+    category: "Funnel Architecture",
+    author: AUTHORS.gaurav,
+    publishedAt: "2026-11-11",
+    updatedAt: "2026-11-11",
+    readTime: "8 min read",
+    image: "/img/blog/med-spa-patient-acquisition.jpg",
+    imageAlt: "Med spa reception desk with a tablet showing an online booking calendar next to skincare products and eucalyptus",
+    keywords: [
+      "med spa patient acquisition",
+      "med spa patient acquisition funnel",
+      "medspa patient acquisition funnel",
+      "med spa lead generation",
+      "how to get more med spa patients",
+      "med spa marketing funnel",
+    ],
+    metrics: [
+      { label: "Leads at $4.65", value: "1,011", sub: "$4,703 ad spend" },
+      { label: "Return on Ad Spend", value: "19.8x", sub: "$11,700 from $590" },
+      { label: "Revenue per Client", value: "$3,590", sub: "$639K from 178 clients" },
+      { label: "Show Rate", value: "Up to 88%", sub: "with 3-channel reminders" },
+    ],
+    toc: [
+      { id: "what-it-is", title: "1. What a Med Spa Patient Acquisition Funnel Is" },
+      { id: "stages", title: "2. The Five Stages and the Number to Watch at Each" },
+      { id: "math", title: "3. What Does a New Patient Cost?" },
+      { id: "our-results", title: "4. What Our Med Spa Campaigns Produced" },
+      { id: "first-visit", title: "5. Turning the First Visit Into a Treatment Plan" },
+      { id: "retention", title: "6. Rebooking: Where Patient Value Comes From" },
+      { id: "mistakes", title: "7. Mistakes That Raise Your Cost per Patient" },
+      { id: "faq", title: "8. Frequently Asked Questions" },
+    ],
+    faqs: [
+      {
+        question: "What is a med spa patient acquisition funnel?",
+        answer: "It is the path a new patient follows from first seeing your ad to becoming a returning client: an ad, an intro offer page, online booking, a consultation or first treatment, and automated rebooking. Each stage is tracked so you know your cost per acquired patient, not just your cost per lead.",
+      },
+      {
+        question: "How much does it cost to acquire a med spa patient?",
+        answer: "Divide your cost per lead by the share of leads who book, show up and buy a treatment. With an illustrative $10 lead, 40% booking, 75% show rate and 50% consult-to-treatment, a patient costs about $67. Your own rates decide the real figure, so track every stage in your CRM.",
+      },
+      {
+        question: "What is the best way to get more med spa patients?",
+        answer: "Lead with one intro offer people already understand, call new leads within a minute, take a small deposit at booking, send three-channel reminders, and rebook every patient before they leave. In our builds, three-channel reminders lifted show rates as high as 88%.",
+      },
+      {
+        question: "Should a med spa use Facebook ads or Google ads for new patients?",
+        answer: "Both work for different jobs. Meta ads create demand for an intro offer among people not yet searching, which is where our med spa results come from. Google search captures people already looking for a treatment nearby. Many clinics start with Meta for volume and add search for high-intent treatments.",
+      },
+      {
+        question: "How do I keep med spa ads compliant?",
+        answer: "Avoid implying the viewer has a condition, follow Meta's rules on before-and-after images, keep forms to what is needed to book, and never send treatment or health details into ad platform events. Send generic events such as booked through the Conversions API instead.",
+      },
+    ],
+    related: [
+      "reduce-sales-call-no-show-rate-reminder-automation",
+      "speed-to-lead-automation-gohighlevel-60-second-follow-up",
+      "facebook-ads-cost-per-lead-benchmarks",
+      "membership-funnel",
+    ],
+    contentHtml: `
+<section id="what-it-is">
+  <h2>1. What a Med Spa Patient Acquisition Funnel Is</h2>
+  <p>A <strong>med spa patient acquisition funnel</strong> is the path a stranger follows from first seeing your ad to becoming a patient who comes back. It is more than lead generation: a lead is a name and a phone number, while a patient is someone who showed up, paid for a treatment and booked the next one.</p>
+  <p>That difference changes what you measure. A clinic that tracks only cost per lead can spend months buying cheap leads that never book. A clinic that tracks cost per acquired patient, and what each patient is worth over a year, knows exactly how much it can spend to grow. If you want the done-for-you build rather than the guide, see our <a href="/funnels-for/med-spas">med spa funnel</a> page.</p>
+</section>
+
+<section id="stages">
+  <h2>2. The Five Stages and the Number to Watch at Each</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Stage</th><th>What happens</th><th>Number to watch</th><th>Main fix when it is low</th></tr></thead>
+      <tbody>
+        <tr><td>1. Ad</td><td>One intro offer, real clinic footage</td><td>Cost per click, click-through rate</td><td>New offer angle or creative</td></tr>
+        <tr><td>2. Offer page</td><td>Treatment, who performs it, price, calendar</td><td>Opt-in or booking rate, cost per lead</td><td>Shorter page, one offer, booking on the page</td></tr>
+        <tr><td>3. Booking</td><td>Lead books a slot, often with a small deposit</td><td>Lead-to-booking rate</td><td><a href="/speed-to-lead">Contact inside 60 seconds</a></td></tr>
+        <tr><td>4. First visit</td><td>Consultation or intro treatment</td><td><a href="/glossary/show-rate">Show rate</a>, consult-to-treatment rate</td><td>Deposits, three-channel reminders, a clear treatment plan</td></tr>
+        <tr><td>5. Rebooking</td><td>Next visit booked before the patient leaves</td><td>Rebooking rate, revenue per patient</td><td>Treatment-interval reminders, memberships</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Most clinics only watch stage 2. The biggest losses usually happen at stages 3 and 4, after the lead has already been paid for.</p>
+</section>
+
+<section id="math">
+  <h2>3. What Does a New Patient Cost?</h2>
+  <p><strong>Cost per acquired patient = cost per lead ÷ (booking rate × show rate × consult-to-treatment rate)</strong></p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Scenario</th><th>Cost per lead</th><th>Booking rate</th><th>Show rate</th><th>Consult to treatment</th><th>Cost per patient</th></tr></thead>
+      <tbody>
+        <tr><td>Slow follow-up, one reminder</td><td>$10</td><td>25%</td><td>55%</td><td>50%</td><td>$145</td></tr>
+        <tr><td>60-second follow-up</td><td>$10</td><td>40%</td><td>55%</td><td>50%</td><td>$91</td></tr>
+        <tr><td>Plus deposits and three-channel reminders</td><td>$10</td><td>40%</td><td>75%</td><td>50%</td><td>$67</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These are illustrative inputs, not client data. They show that fixing follow-up and show rate cuts the cost of a patient by more than half without touching the ads. Put your own numbers into the <a href="/tools/cost-per-lead-calculator">cost per lead calculator</a> and price your no-shows with the <a href="/tools/no-show-cost-calculator">no-show cost calculator</a>.</p>
+</section>
+
+<section id="our-results">
+  <h2>4. What Our Med Spa Campaigns Produced</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Campaign</th><th>Result</th><th>What it shows</th></tr></thead>
+      <tbody>
+        <tr><td><a href="/case-studies/med-spa-1011-leads">1,011 leads</a></td><td>$4,703 of ad spend, $4.65 per lead</td><td>An intro offer can generate volume cheaply</td></tr>
+        <tr><td><a href="/case-studies/med-spa-12k-revenue-on-590-ad-spend">$11,700 on $590</a></td><td>45 leads, 19.8x return, about $260 of revenue per lead</td><td>A small budget can pay back many times when leads are followed up fast</td></tr>
+        <tr><td><a href="/case-studies/med-spa-639k-in-revenue">$639,000 from 178 clients</a></td><td>About $3,590 of revenue per client</td><td>Patient value comes from repeat treatments, not the first visit</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>All of these came from Meta ads funnels with fast follow-up. Every campaign is in our <a href="/case-studies/med-spa-marketing">med spa case studies</a>, and cross-industry lead costs are in our <a href="/blog/facebook-ads-cost-per-lead-benchmarks">Facebook ads cost per lead benchmarks</a>.</p>
+</section>
+
+<section id="first-visit">
+  <h2>5. Turning the First Visit Into a Treatment Plan</h2>
+  <ul>
+    <li><strong>Confirm the booking instantly.</strong> A text within a minute of booking, with the address, parking and what to expect, reduces no-shows before reminders even start.</li>
+    <li><strong>Take a small refundable deposit.</strong> It filters casual bookers and gives the patient a reason to show up.</li>
+    <li><strong>Remind on three channels.</strong> Text, email and a call at set intervals; our <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> has the timing.</li>
+    <li><strong>Present a plan, not a menu.</strong> At the visit, recommend a sequence of treatments with dates, so the patient leaves with the next appointment booked.</li>
+  </ul>
+  <p>An <a href="/ai-appointment-setter">AI appointment setter</a> can call leads who did not book within a minute, at any hour, and put them on the calendar.</p>
+</section>
+
+<section id="retention">
+  <h2>6. Rebooking: Where Patient Value Comes From</h2>
+  <p>The $639,000 campaign works out to about $3,590 per client. No intro offer earns that on its own; it comes from repeat treatments over months. Build rebooking into the funnel:</p>
+  <ul>
+    <li>Book the next visit before the patient leaves, timed to each treatment's natural interval.</li>
+    <li>Send interval reminders automatically from the CRM, for example when a toxin treatment is due again.</li>
+    <li>Offer a membership that bundles regular treatments at a monthly price. The <a href="/blog/membership-funnel">membership funnel</a> guide covers the retention math.</li>
+    <li>Ask happy patients for reviews and referrals at the moment they rebook.</li>
+  </ul>
+  <p>We set these sequences up as part of our <a href="/crm-automation">CRM automation</a> builds.</p>
+</section>
+
+<section id="mistakes">
+  <h2>7. Mistakes That Raise Your Cost per Patient</h2>
+  <ul>
+    <li><strong>Judging ads on cost per lead alone.</strong> Cheap leads that never book cost more per patient than pricier leads that do.</li>
+    <li><strong>Calling leads back hours later.</strong> By then many have booked elsewhere.</li>
+    <li><strong>One reminder and no deposit.</strong> Empty chairs then get blamed on the ads.</li>
+    <li><strong>Discounts so deep they attract one-time bargain hunters.</strong> They lower the first-visit price and the lifetime value.</li>
+    <li><strong>Sending treatment details into ad tracking.</strong> Use generic events through the <a href="/meta-conversions-api-setup">Conversions API</a> and keep health details out of ad platforms.</li>
+  </ul>
 </section>
 `,
   },

@@ -493,7 +493,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       },
       {
         h2: "Results from our med spa clients",
-        html: `<p>From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>: one clinic generated <a href="/case-studies/med-spa-639k-in-revenue">$639,000 from 178 clients</a>, another produced $74,100 from 303 clients on $10K of spend, and a smaller test turned $590 into $11,700, a 19.8x return. Cost per lead has been as low as $0.50 on a strong intro offer, and 1,011 leads came from $4,703 in another campaign.</p>`,
+        html: `<p>From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>: one clinic generated <a href="/case-studies/med-spa-639k-in-revenue">$639,000 from 178 clients</a>, another produced $74,100 from 303 clients on $10K of spend, and a smaller test turned $590 into $11,700, a 19.8x return. Cost per lead has been as low as $0.50 on a strong intro offer, and 1,011 leads came from $4,703 in another campaign. The full stage-by-stage math is in our <a href="/blog/med-spa-patient-acquisition">med spa patient acquisition guide</a>.</p>`,
       },
       {
         h2: "Mistakes that waste med spa ad spend",
@@ -522,7 +522,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       { q: "What intro offer works best for a med spa?", a: "A single, well-understood treatment priced to remove hesitation, such as a first injectable session, signature facial or a consultation credit. Avoid offering the whole menu. The goal is a first visit and a good experience; rebooking automation and memberships turn that visit into long-term revenue." },
       { q: "Can an AI agent book med spa appointments?", a: "Yes. An AI agent calls new leads within seconds, answers common questions about the intro offer, checks availability and books the slot. It should not give medical advice or discuss suitability for a treatment; those questions are routed to a provider at the consultation." },
     ],
-    related: ["/case-studies/med-spa-marketing", "/ai-appointment-setter", "/crm-automation", "/funnels-for/dentists", "/funnels-for/gyms", "/funnels-for/ecommerce", "/templates/no-show-reminder-sequence", "/blog/quiz-funnel-examples", "/ai-voice-agents/dental-clinics", "/locations/new-york", "/locations/california", "/ai-receptionist"],
+    related: ["/case-studies/med-spa-marketing", "/ai-appointment-setter", "/crm-automation", "/funnels-for/dentists", "/funnels-for/gyms", "/funnels-for/ecommerce", "/templates/no-show-reminder-sequence", "/blog/quiz-funnel-examples", "/ai-voice-agents/dental-clinics", "/locations/new-york", "/locations/california", "/ai-receptionist", "/blog/med-spa-patient-acquisition"],
     parent: HUB,
     updated: "2026-11-11",
   },

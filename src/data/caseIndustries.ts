@@ -157,7 +157,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { q: "Are med spa ads restricted on Meta?", a: "Yes, health and cosmetic procedure ads face stricter review. Creative must avoid negative body image, unrealistic promises and some before-and-after formats, and claims must match what providers can support. We write within those limits, and the clinic's medical director reviews treatment claims before campaigns go live." },
       { q: "How quickly can a med spa start booking consultations?", a: "The treatment matcher, booking calendar, reminders and tracking are built in 5 to 10 business days. Consultations can start booking as soon as ads launch, and early weeks are used to test offers and creative. Booked and attended appointments are tracked so budget shifts toward the treatments that fill the calendar." },
     ],
-    guides: ["reduce-sales-call-no-show-rate-reminder-automation", "ai-appointment-setter-voice-agent-cost-setup-results"],
+    guides: ["med-spa-patient-acquisition", "reduce-sales-call-no-show-rate-reminder-automation", "ai-appointment-setter-voice-agent-cost-setup-results"],
   },
   {
     slug: "hvac-lead-generation",
