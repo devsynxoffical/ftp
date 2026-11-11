@@ -791,7 +791,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
       { q: "Can an AI agent improve show rate?", a: "Yes. An AI appointment setter can confirm each booking by phone, send reminders, answer last-minute questions and reschedule people who cannot make it, at any hour. It also calls no-shows within minutes to rebook them, a task human setters often do not have time for." },
       { q: "Is show rate the same as close rate?", a: "No. Show rate measures how many booked calls happen. Close rate measures how many held calls turn into sales. A funnel can have a strong close rate and still lose revenue if many people never show, so track both and fix whichever has the larger gap first." },
     ],
-    related: ["/ai-appointment-setter", "/tools/no-show-cost-calculator", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/glossary/crm-pipeline", "/templates/no-show-reminder-sequence", "/ai-voice-agents/dental-clinics", "/ai-appointment-setter/insurance"],
+    related: ["/ai-appointment-setter", "/tools/no-show-cost-calculator", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/glossary/crm-pipeline", "/templates/no-show-reminder-sequence", "/ai-voice-agents/dental-clinics", "/ai-appointment-setter/insurance", "/blog/med-spa-patient-acquisition"],
     parent: G,
     updated: U,
   },

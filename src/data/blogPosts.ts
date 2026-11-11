@@ -1160,6 +1160,7 @@ export const BLOG_POSTS: BlogPost[] = [
       }
     ],
     related: [
+      "med-spa-patient-acquisition",
       "speed-to-lead-automation-gohighlevel-60-second-follow-up",
       "ai-sales-funnels-voice-lead-qualification-2026",
       "high-ticket-vsl-vs-interactive-quiz-funnel-2026",

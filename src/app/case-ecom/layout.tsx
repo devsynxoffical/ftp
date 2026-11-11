@@ -4,7 +4,7 @@ import ServiceSchema from "@/components/ServiceSchema";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "eCommerce Funnel Case Studies (126+)",
+  title: { absolute: "eCommerce Case Studies: 126+ Shopify and DTC Results" },
   description:
     "126+ eCommerce and DTC funnel case studies: ROAS, average order value and scaling results for beauty, apparel, supplement and fitness brands on Meta ads.",
   alternates: {

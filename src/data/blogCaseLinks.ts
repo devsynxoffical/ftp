@@ -31,4 +31,5 @@ export const BLOG_CASE_INDUSTRIES: Record<string, string[]> = {
   "vsl-funnel-examples": ["coaching-consulting-funnels", "low-ticket-funnels"],
   "facebook-ads-cost-per-lead-benchmarks": ["roofing-lead-generation", "mva-personal-injury-lead-generation"],
   "membership-funnel": ["low-ticket-funnels", "coaching-consulting-funnels"],
+  "med-spa-patient-acquisition": ["med-spa-marketing", "solar-home-services-lead-generation"],
 };
