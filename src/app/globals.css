@@ -4743,6 +4743,8 @@ main {
 .ih-h2{margin:clamp(40px,6vw,72px) 0 22px}
 .ih-build{margin-top:clamp(40px,6vw,80px)}
 .ih-bench{margin-top:clamp(24px,3vw,40px)}
+.ih-play{margin-top:18px;color:var(--body);font-size:16px;line-height:1.6}
+.ih-play a{color:var(--or);text-decoration:underline;text-underline-offset:3px;font-weight:600}
 .ih-bench a{color:var(--or);text-decoration:underline;text-underline-offset:3px}
 .ih-others{margin-top:clamp(36px,5vw,64px)}
 .ih-others ul,.ind-links ul{list-style:none;padding:0;margin:18px 0 0;display:flex;flex-wrap:wrap;gap:10px}
