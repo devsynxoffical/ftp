@@ -12,6 +12,24 @@ import RoboSection from "@/components/RoboSection";
 import { industryBenchmark, money, times, MIN_N } from "@/data/benchmarks";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
+
+/** Each case hub's matching "how we build it" page, with the anchor people search for. */
+const PLAYBOOK: Record<string, { href: string; anchor: string }> = {
+  "roofing-lead-generation": { href: "/funnels-for/roofing", anchor: "roofing lead generation funnel" },
+  "mva-personal-injury-lead-generation": { href: "/funnels-for/personal-injury-lawyers", anchor: "personal injury lead funnel" },
+  "mortgage-insurance-lead-generation": { href: "/funnels-for/mortgage", anchor: "mortgage lead funnel" },
+  "med-spa-marketing": { href: "/funnels-for/med-spas", anchor: "med spa patient acquisition funnel" },
+  "hvac-lead-generation": { href: "/funnels-for/hvac", anchor: "HVAC lead funnel" },
+  "solar-home-services-lead-generation": { href: "/funnels-for/solar", anchor: "solar lead funnel" },
+  "real-estate-lead-generation": { href: "/funnels-for/real-estate", anchor: "real estate lead funnel" },
+  "coaching-consulting-funnels": { href: "/funnels-for/coaches", anchor: "coaching funnel" },
+  "agency-saas-lead-generation": { href: "/funnels-for/marketing-agencies", anchor: "client acquisition funnel for agencies" },
+  "low-ticket-funnels": { href: "/funnels-for/course-creators", anchor: "low-ticket funnel for course creators" },
+  "shopify-dtc-ecommerce": { href: "/funnels-for/ecommerce", anchor: "eCommerce funnel" },
+  "beauty-skincare-ecommerce": { href: "/funnels-for/skincare-brands", anchor: "skincare brand funnel" },
+  "fashion-apparel-ecommerce": { href: "/funnels-for/fashion-brands", anchor: "fashion brand funnel" },
+  "supplements-fitness-ecommerce": { href: "/funnels-for/supplement-brands", anchor: "supplement brand funnel" },
+};
 const OG_FALLBACK = "/img/og/funnels-that-print-og.jpg";
 const publicFileExists = (p: string) => fs.existsSync(path.join(process.cwd(), "public", p));
 
@@ -104,6 +122,13 @@ export default function IndustryHubView({ industry }: { industry: CaseIndustry }
           </div>
 
           <QuickAnswer q={industry.quick.q} a={industry.quick.a} id="ih-quick-h" />
+
+          {PLAYBOOK[industry.slug] && (
+            <p className="ih-play">
+              Planning your own? See how we build a{" "}
+              <Link href={PLAYBOOK[industry.slug].href}>{PLAYBOOK[industry.slug].anchor}</Link>, step by step.
+            </p>
+          )}
 
           {(cpl || roas) && (
             <section className="case-card ih-bench" aria-labelledby="ih-bench-h">

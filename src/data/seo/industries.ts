@@ -468,12 +468,12 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     kind: "industry",
     keyword: "med spa funnel",
     serviceType: "Med spa funnel",
-    title: "Med Spa Funnel That Books Treatments and Consults",
-    description: "A med spa funnel with an intro offer, booking calendar, deposits and three-channel reminders. Real cases include $639K from 178 clients.",
+    title: "Med Spa Funnel: Patient Acquisition That Books Consults",
+    description: "A med spa funnel for patient acquisition: intro offer, booking calendar, deposits and three-channel reminders. Real cases include $639K from 178 clients.",
     eyebrow: "Funnels for med spas and aesthetic clinics",
-    h1: "A med spa funnel that turns intro offers into long-term clients",
+    h1: "A med spa funnel for patient acquisition that turns intro offers into long-term clients",
     intro:
-      "A <strong>med spa funnel</strong> sells a first visit, not a single treatment. The intro offer brings a new client through the door; the consultation, follow-up and rebooking turn them into someone worth thousands a year. Our med spa results include $639,000 in revenue from 178 clients and $11,700 from $590 of ad spend.",
+      "A <strong>med spa funnel</strong> sells a first visit, not a single treatment. The intro offer brings a new client through the door; the consultation, follow-up and rebooking turn them into someone worth thousands a year. Built as a patient acquisition funnel, it runs from ad to booked consult to rebooking. Our med spa results include $639,000 in revenue from 178 clients and $11,700 from $590 of ad spend.",
     quick: {
       q: "What should a med spa funnel include?",
       a: "One clear intro offer on a single treatment, a short page with real before-and-after policy-safe proof, a booking calendar with an optional deposit, instant text confirmation, and three-channel reminders. After the visit, automated rebooking and membership offers turn a first treatment into recurring revenue.",
@@ -524,7 +524,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     ],
     related: ["/case-studies/med-spa-marketing", "/ai-appointment-setter", "/crm-automation", "/funnels-for/dentists", "/funnels-for/gyms", "/funnels-for/ecommerce", "/templates/no-show-reminder-sequence", "/blog/quiz-funnel-examples", "/ai-voice-agents/dental-clinics", "/locations/new-york", "/locations/california", "/ai-receptionist"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-11",
   },
   {
     path: "/funnels-for/personal-injury-lawyers",

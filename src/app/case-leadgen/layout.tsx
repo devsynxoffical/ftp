@@ -4,7 +4,7 @@ import ServiceSchema from "@/components/ServiceSchema";
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 export const metadata: Metadata = {
-  title: "Lead Gen Funnel Case Studies (125+)",
+  title: { absolute: "Lead Generation Case Studies: 125+ Real Funnel Results" },
   description:
     "125+ lead generation funnel case studies with real cost per lead, booked calls and ad spend across roofing, mortgage, medspa, legal, solar and coaching.",
   alternates: {

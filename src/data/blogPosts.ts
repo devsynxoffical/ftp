@@ -517,8 +517,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026",
-    metaTitle: "Conversions API for Lead Gen: Server-Side Event Guide",
-    metaDescription: "Step-by-step Meta Conversions API setup for lead gen: CRM event ladder, deduplication, Event Match Quality above 8, and Google Enhanced Conversions mirroring.",
+    metaTitle: "Meta Conversions API Setup for Lead Gen: 2026 CAPI Guide",
+    metaDescription: "How to set up Meta Conversions API (CAPI) for lead gen in 5 steps: CRM events, deduplication, Event Match Quality above 8, and 31% more events recovered.",
     keyTakeaways: [
       "Browser pixels alone now miss roughly a third of conversions. Adding the Conversions API recovered 31% more events in our lead gen accounts.",
       "Map CRM stages to an event ladder (Lead, QualifiedLead, Schedule, Purchase) and send them server-side with the Meta click ID plus hashed email and phone.",
@@ -531,7 +531,7 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Tracking & Attribution",
     author: AUTHORS.rahul,
     publishedAt: "2026-05-12",
-    updatedAt: "2026-11-02",
+    updatedAt: "2026-11-11",
     readTime: "10 min read",
     image: "/img/blog/server-side-capi-tracking.jpg",
     imageAlt: "Server-side Meta Conversions API tracking diagram showing CRM events flowing back to Meta Ads",
@@ -557,13 +557,17 @@ export const BLOG_POSTS: BlogPost[] = [
       { id: "why-pixels-fail", title: "1. Why the Browser Pixel Alone Fails in 2026" },
       { id: "what-is-capi", title: "2. What the Meta Conversions API Actually Does" },
       { id: "event-map", title: "3. The Lead Gen Event Map: Lead, Qualified, Scheduled, Won" },
-      { id: "setup-steps", title: "4. Step-by-Step CAPI Setup for a CRM-Driven Funnel" },
+      { id: "setup-steps", title: "4. How to Set Up Meta Conversions API, Step by Step" },
       { id: "event-match-quality", title: "5. Raising Event Match Quality Above 8" },
       { id: "google-enhanced-conversions", title: "6. Mirroring the Setup in Google Enhanced Conversions" },
       { id: "mistakes", title: "7. The 7 Mistakes That Break CAPI Attribution" },
       { id: "faq", title: "8. Frequently Asked Questions" },
     ],
     faqs: [
+      {
+        question: "How do I set up Meta Conversions API?",
+        answer: "Five steps: capture the fbc and fbp cookies with each lead in your CRM, generate a Conversions API access token and dataset ID in Events Manager, send the Lead event from both the pixel and your server with a shared event_id, trigger Schedule, Qualified and Won events from CRM stage changes, then verify in Test Events before switching optimization.",
+      },
       {
         question: "Do I still need the Meta Pixel if I set up the Conversions API?",
         answer: "Yes. Run both. The browser pixel captures click IDs (fbc) and browser IDs (fbp) that the Conversions API then uses to match server events to the original ad click. Send the same event_id from both sources so Meta deduplicates them instead of double counting."
@@ -666,7 +670,7 @@ export const BLOG_POSTS: BlogPost[] = [
 </section>
 
 <section id="setup-steps">
-  <h2>4. Step-by-Step CAPI Setup for a CRM-Driven Funnel</h2>
+  <h2>4. How to Set Up Meta Conversions API, Step by Step</h2>
   <div class="step-card">
     <div class="step-badge">Step 1</div>
     <h4>Capture fbc, fbp and the full contact record at opt-in</h4>
