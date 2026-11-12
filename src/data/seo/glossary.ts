@@ -729,7 +729,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     kind: "glossary",
     term: "Show rate",
     keyword: "show rate",
-    title: "Show Rate: Definition, Formula and Benchmarks",
+    title: "Show Rate (Show-Up Rate): Formula and Benchmarks",
     description: "Show rate is the share of booked calls that happen. The formula, what counts as good, how 3-channel reminders reach up to 88%, and mistakes to avoid.",
     eyebrow: "Glossary",
     h1: "Show rate: definition, formula and how to improve it",
@@ -793,7 +793,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     ],
     related: ["/ai-appointment-setter", "/tools/no-show-cost-calculator", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/glossary/crm-pipeline", "/templates/no-show-reminder-sequence", "/ai-voice-agents/dental-clinics", "/ai-appointment-setter/insurance", "/blog/med-spa-patient-acquisition"],
     parent: G,
-    updated: U,
+    updated: "2026-11-12",
   },
   {
     path: "/glossary/conversions-api",
@@ -874,6 +874,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
       more: { label: "See 275+ results", href: "/case-studies" },
     },
     faqs: [
+      { q: "Can I send purchase events to Conversions API from my CRM?", a: "Yes, and for lead generation it is the main reason to use it. When a contact moves to booked, qualified or won in your CRM, a workflow sends the matching event to Meta with hashed email and phone and the time it happened. Meta calls this setup Conversions API for CRM. The algorithm then learns which leads turn into customers." },
       { q: "Do I still need the Meta Pixel if I use Conversions API?", a: "Yes. Meta recommends running both, and we do too. The Pixel captures browser behavior such as page views quickly, while Conversions API fills the gaps and adds offline events. With a shared event ID on both, Meta deduplicates them and counts each conversion once." },
       { q: "Which events should I send through Conversions API?", a: "For lead generation, send Lead when the form is submitted, Schedule when a call is booked, and Purchase or a custom event when a deal closes, with the deal value. For eCommerce, send the full checkout path. Deeper events help Meta find people who buy, not just people who fill in forms." },
       { q: "Is Conversions API hard to set up?", a: "It ranges from simple to technical. Platforms like Shopify and GoHighLevel offer built-in connections for common events. Custom funnels, CRM stage events and deduplication need more work, often through a server-side tag manager or webhooks. Testing in Events Manager before relying on the data is essential." },
@@ -882,7 +883,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
     ],
     related: ["/meta-conversions-api-setup", "/glossary/meta-pixel", "/glossary/cost-per-lead", "/glossary/crm-pipeline", "/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026", "/compare/meta-pixel-vs-conversions-api"],
     parent: G,
-    updated: "2026-11-09",
+    updated: "2026-11-12",
   },
   {
     path: "/glossary/meta-pixel",
