@@ -881,6 +881,17 @@ export function getCaseNextSteps(slug: string): string[] {
 
 /** Cases tied to a place (from the original posts) or to a newer industry page. */
 const CASE_EXTRA_LINKS: Record<string, string[]> = {
+  // Membership campaigns: the membership funnel guide owns "subscription/membership funnel" queries.
+  "low-ticket-funnel-1566-memberships-sold": ["/blog/membership-funnel"],
+  "low-ticket-funnel-537-memberships-sold": ["/blog/membership-funnel"],
+  "low-ticket-funnel-58k-revenue-on-23k-ad-spend": ["/blog/membership-funnel"],
+  "low-ticket-funnel-66k-in-revenue": ["/blog/membership-funnel"],
+  // Med spa cases: the patient acquisition guide owns "med spa patient acquisition" queries.
+  "med-spa-12k-revenue-on-590-ad-spend": ["/blog/med-spa-patient-acquisition"],
+  "med-spa-639k-in-revenue": ["/blog/med-spa-patient-acquisition"],
+  "med-spa-0-50-cost-per-lead": ["/blog/med-spa-patient-acquisition"],
+  "med-spa-46-leads": ["/blog/med-spa-patient-acquisition"],
+  "med-spa-11-leads": ["/blog/med-spa-patient-acquisition"],
   "roofing-686-leads-at-5-31-cpl": ["/locations/texas"],
   "roofing-850-leads": ["/locations/texas"],
   "roofing-537-leads-at-4-27-cpl": ["/locations/texas", "/locations/florida"],
@@ -897,8 +908,8 @@ const CASE_EXTRA_LINKS: Record<string, string[]> = {
   "lead-gen-7-75-cost-per-lead": ["/locations/florida"],
   "mva-465-leads-at-14-21-cpl": ["/locations/florida"],
   "home-services-5-10-cost-per-lead": ["/locations/new-york"],
-  "med-spa-74k-revenue-on-10k-ad-spend": ["/locations/new-york"],
-  "med-spa-1011-leads": ["/locations/new-york", "/locations/california"],
+  "med-spa-74k-revenue-on-10k-ad-spend": ["/locations/new-york", "/blog/med-spa-patient-acquisition"],
+  "med-spa-1011-leads": ["/blog/med-spa-patient-acquisition", "/locations/new-york", "/locations/california"],
   "mva-276-otp-verified-calls-in-5-days": ["/locations/new-york"],
   "roofing-52-booked-calls": ["/locations/california"],
 };
