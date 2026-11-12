@@ -33,7 +33,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Ad Spend",
     "headline": "$1,300 from one client... off just $26.16 ad spend.",
     "caption": "$1,300 from one client... off just $26.16 ad spend.\n\nLive inside the Ads Manager for one of our 1-1 mastermind clients:\n• Creatives pulling 18% CTR\n• Direct high-ticket purchase generated from cold traffic\n• Real-time ad dashboard verification without vanity metrics.",
-    "image": "/top-25-client-results/2-Facebook-08-19-2026_05_37_PM.png",
+    "image": "/top-25-client-results/2-Facebook-08-19-2026_05_37_PM.webp",
     "alt": "Gaurav Kapoor - $1,300 high ticket sale from $26.16 ad spend"
   },
   {
@@ -51,7 +51,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Ad Spend",
     "headline": "1,011 verified patient leads across NYC and Los Angeles.",
     "caption": "In 28 days across two of the most saturated aesthetic markets in the country:\n• $4,703 in Meta ad spend\n• 1,011 verified patient consultation leads\n• 34.8% landing page consultation completion rate\n• Strict qualification filtering curious tire-kickers from high-value cosmetic patients.",
-    "image": "/top-25-client-results/2-Facebook-08-19-2026_05_40_PM.png",
+    "image": "/top-25-client-results/2-Facebook-08-19-2026_05_40_PM.webp",
     "alt": "Gaurav Kapoor - NYC & LA MedSpa verified results"
   },
   {
@@ -69,7 +69,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "12-Mo Average",
     "headline": "1,811 verified website leads sustained profitably over 12 months.",
     "caption": "Anyone can show a good month. Very few show twelve.\n\nFull 12-month performance breakdown for a home service contractor:\n• 1,811 verified website inquiries\n• $4.90 average cost per lead over 365 continuous days\n• Sustainable, scalable acquisition without fatigue.",
-    "image": "/top-25-client-results/2-Facebook-08-19-2026_05_48_PM.png",
+    "image": "/top-25-client-results/2-Facebook-08-19-2026_05_48_PM.webp",
     "alt": "Gaurav Kapoor - Home Services 12-Month Lead Gen at $4.90 CPL"
   },
   {
@@ -123,7 +123,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Pay-Per-Lead",
     "headline": "748 OTP-verified MVA leads generated at $16.43 CPL.",
     "caption": "Another case study showing how we generated 748 OTP-verified motor vehicle accident leads at $16.43 CPL for our pay-per-lead agency client.\n\nLeads sold directly into attorney networks with full case-intent documentation.",
-    "image": "/top-25-client-results/Facebook-08-19-2026_05_44_PM.png",
+    "image": "/top-25-client-results/Facebook-08-19-2026_05_44_PM.webp",
     "alt": "Rahul Kapoor - 748 MVA Leads at $16.43 CPL"
   },
   {
@@ -141,7 +141,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "$255K Ad Spend",
     "headline": "Nearly $1M profitably: Turned $255K into $847K over 12 months.",
     "caption": "Live Ads Manager verification for our Low-Ticket Offer (LTO) Blueprint:\n• $255,130.04 total ad spend across 12 months\n• $847,307.07 verified frontend and backend revenue\n• 3.32 average ROAS maintained with cold traffic\n• 13,630 total paying customers generated.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.24.30%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.24.30%20PM.webp",
     "alt": "Gaurav Kapoor - $847K Low Ticket Offer Funnel Proof"
   },
   {
@@ -159,7 +159,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Branded Leads",
     "headline": "Roofing companies: How we generate consistent booked estimates.",
     "caption": "Real Ads Manager view for commercial and residential roofing contractors.\n\nBypassing shared lead aggregators like Angi and HomeAdvisor to deliver exclusive homeowners directly into the contractor's dispatch calendar.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.24.56%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.24.56%20PM.webp",
     "alt": "Gaurav Kapoor - Roofing Lead Generation Ads Manager"
   },
   {
@@ -177,7 +177,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Meta Ads",
     "headline": "Commercial cleaning: High-intent prospects asking for quotes.",
     "caption": "Your cleaning business doesn't need more 'reach' — it needs real people actively requesting quotes for recurring service.\n\nTargeted localized Meta campaign engineered to convert commercial property managers and residential homeowners.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.25.12%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.25.12%20PM.webp",
     "alt": "Gaurav Kapoor - Cleaning Business Lead Generation Proof"
   },
   {
@@ -195,7 +195,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Qualified Inquiries",
     "headline": "167 qualified pressure washing leads at just $13.37 in 30 days.",
     "caption": "Live campaign snapshot for residential exterior cleaning:\n• 167 qualified inquiries in 30 calendar days\n• Controlled $13.37 cost per lead\n• Custom dynamic creatives targeting high-ticket residential driveways, roofs, and siding.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.25.39%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.25.39%20PM.webp",
     "alt": "Rahul Kapoor - 167 Pressure Washing Leads at $13.37"
   },
   {
@@ -213,7 +213,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Roof Ownership",
     "headline": "76 qualified residential solar leads generated in just 7 days.",
     "caption": "Rapid scale deployment in the solar sector:\n• 76 verified homeowner submissions in 1 week\n• Strict qualification rules filtering renters, shaded roofs, and low power bills\n• Direct appointment scheduling into solar sales reps' pipelines.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.25.51%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.25.51%20PM.webp",
     "alt": "Rahul Kapoor - 76 Solar Leads in 7 Days"
   },
   {
@@ -231,7 +231,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Case Retainers",
     "headline": "MVA attorneys: 212 qualified injury leads in one month.",
     "caption": "Delivering case-ready personal injury leads for law firm partners:\n• 212 high-intent motor vehicle accident inquiries in a single month\n• Full multi-point qualification (at-fault status, police report, medical attention)\n• Consistent case acquisition without reliance on expensive billboard media.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.01%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.01%20PM.webp",
     "alt": "Rahul Kapoor - 212 MVA Legal Leads in One Month"
   },
   {
@@ -249,7 +249,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "No Third Parties",
     "headline": "How many agencies can generate verified MVA leads at scale?",
     "caption": "Live Ads Manager multi-campaign breakdown showing 5 concurrent regional campaigns generating high-intent claimant inquiries with zero bot traffic.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.11%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.11%20PM.webp",
     "alt": "Gaurav Kapoor - Scaled MVA Campaigns in Ads Manager"
   },
   {
@@ -267,7 +267,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "$2,245 Total Spend",
     "headline": "154 leads, $2,245 spent, $14.58 per mortgage lead for Aussie broker.",
     "caption": "Generating qualified mortgage refinance and home buyer leads in Australia:\n• 154 pre-screened borrower applications\n• $14.58 average cost per completed application\n• $2,245 total ad spend generating multiple six-figure loan settlements.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.38%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.38%20PM.webp",
     "alt": "Gaurav Kapoor - 154 Mortgage Leads at $14.58 CPL"
   },
   {
@@ -285,7 +285,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Direct Revenue",
     "headline": "44 prepaid patient consults & $6,153 revenue for U.S. clinic.",
     "caption": "Eliminating patient no-shows with an upfront paid reservation system:\n• 44 prepaid initial examinations and adjustment consultations\n• $6,153 collected frontend revenue before care plans\n• High lifetime patient value unlocked with automated appointment reminders.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.50%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.26.50%20PM.webp",
     "alt": "Gaurav Kapoor - 44 Prepaid Consults & $6,153 Revenue"
   },
   {
@@ -303,7 +303,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Recurring MRR",
     "headline": "Scaling a Skool-based membership program in a single day.",
     "caption": "Live campaign telemetry for digital education & paid community creators:\n• Fast funnel setup converting cold social traffic directly into monthly paying members\n• High retention and recurring community subscription revenue.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.27.14%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.27.14%20PM.webp",
     "alt": "Gaurav Kapoor - Skool Community Launch Breakdown"
   },
   {
@@ -321,7 +321,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Open Pipelines",
     "headline": "Helped a marketing agency owner cross $639,000 in 2 months.",
     "caption": "Real client dashboard view spanning May 1 to June 9:\n• $639,000 in collected revenue generated for a MedSpa marketing agency\n• 1,116 active sales conversations continuing to close\n• Proprietary acquisition system combining paid ads with conversational backend nurturing.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.27.29%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.27.29%20PM.webp",
     "alt": "Rahul Kapoor - $639,000 Agency Scaling Dashboard"
   },
   {
@@ -339,7 +339,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Branded Ads",
     "headline": "Why buying portal leads is costing refinance businesses fortunes.",
     "caption": "The dumbest advice refinance businesses follow: 'Just buy leads from a portal'.\n\nBranded Meta funnels deliver higher contact rates, verified equity, and credit-qualified homeowners who know who you are before you call.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.28.02%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.28.02%20PM.webp",
     "alt": "Rahul Kapoor - Refinance Lead Generation Campaign"
   },
   {
@@ -357,7 +357,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Campaign Scale",
     "headline": "99% of personal injury law firms do lead gen wrong. Here is the fix.",
     "caption": "Live metrics from a Texas personal injury law firm campaign:\n• Verified accident cases generated through empathetic creative hooks\n• Zero bot clicks or fraudulent submissions\n• Consistent retainers signed each week.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.28.33%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.28.33%20PM.webp",
     "alt": "Gaurav Kapoor - Texas Injury Law Firm Meta Campaign"
   },
   {
@@ -375,7 +375,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Industry Standard",
     "headline": "Industry spends $40–$80 per roofing lead. We generated them at $12.79.",
     "caption": "All validated, homeowner-verified residential roof replacement leads:\n• $12.79 cost per lead across competitive service areas\n• Industry competitors paying $80+ on Google search\n• Complete roof qualification and storm damage assessment questions built in.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.32.10%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.32.10%20PM.webp",
     "alt": "Rahul Kapoor - $12.79 Roofing Leads in Ads Manager"
   },
   {
@@ -393,7 +393,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Trial Signups",
     "headline": "Real results from a live SaaS user acquisition campaign in 16 days.",
     "caption": "Performance breakdown from an active B2B software campaign:\n• Interactive product demo landing page\n• High trial activation and low cost per customer onboarding.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.32.27%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.32.27%20PM.webp",
     "alt": "Rahul Kapoor - Live SaaS Acquisition Campaign"
   },
   {
@@ -411,7 +411,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Average Cost",
     "headline": "Auto detailing leads generated at under $10 vs $40 industry benchmark.",
     "caption": "Stop paying $40 per lead for car detailing.\n\nOptimized local service funnel generating pre-booked paint correction and ceramic coating inquiries ready to drop their vehicle off.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.33.02%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.33.02%20PM.webp",
     "alt": "Rahul Kapoor - Auto Detailing Lead Generation at <$10 CPL"
   },
   {
@@ -429,7 +429,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Homeowners",
     "headline": "Eliminating $100 CPMs for residential solar companies.",
     "caption": "Solar businesses are getting robbed paying $80-$100 CPMs for junk inquiries.\n\nOur angle-testing framework unlocked sub-$30 CPMs and exclusive high-bill homeowners eager for solar consultations.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.34.12%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.34.12%20PM.webp",
     "alt": "Gaurav Kapoor - Solar Lead Generation Without High CPMs"
   },
   {
@@ -447,7 +447,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "Calendar Booking",
     "headline": "AI Calling Agent integration converting leads in under 60 seconds.",
     "caption": "Speed-to-lead automation:\n• Immediate conversational AI voice calls within 60 seconds of ad form submit\n• Intelligent qualification filtering\n• Direct calendar bookings synced to client CRM.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.34.24%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.34.24%20PM.webp",
     "alt": "Gaurav Kapoor - AI Calling Agent Lead Qualification Flow"
   },
   {
@@ -465,7 +465,7 @@ export const REAL_PROOF_DATA: RealProofItem[] = [
     "metricSubLabel": "$2.10 Ad Spend",
     "headline": "Closed a $1,850 sale with 880x ROAS off just $2.10 ad spend.",
     "caption": "Proof of backend funnel power:\n• Closed a $1,850 coaching sale\n• 880.95x ROAS verified inside the Ads Manager\n• Initial frontend ad test spend was just $2.10\n• Engineered to turn interest into premium transactions immediately.",
-    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.34.43%20PM.png",
+    "image": "/top-25-client-results/Screenshot%202026-08-19%20at%205.34.43%20PM.webp",
     "alt": "Gaurav Kapoor - $1,850 Sale with 880x ROAS"
   }
 ];
