@@ -222,6 +222,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       more: { label: "Browse agency and SaaS results", href: "/case-studies/agency-saas-lead-generation" },
     },
     faqs: [
+      { q: "Do you offer GoHighLevel support after the build?", a: "Yes. Our complete suite includes 30 days of support after launch, covering fixes, small workflow changes and questions from your team. After that, ongoing support, new automations or marketing work for your GoHighLevel account are scoped on a strategy call, so you pay for what you need rather than a fixed retainer you may not use." },
       { q: "How much does it cost to hire a GoHighLevel expert?", a: "Freelancers often charge hourly, from small task fees to several thousand dollars for a full build. Our packages are fixed one-time fees: $999 for design, $1,499 for design, copy and full build, and $1,999 for the complete suite with automation, AI booking and tracking. Your GoHighLevel subscription is paid directly to the platform." },
       { q: "How long does a GoHighLevel build take?", a: "Most of our builds go live in 5 to 10 business days. A single workflow fix can take a day; a multi-location account with several funnels, custom integrations and AI agents can take longer. The timeline is agreed before work starts, and you review staging links before anything goes live." },
       { q: "Can you work in my existing GoHighLevel account?", a: "Yes, and we prefer it. We build inside your account or sub-account, so you keep ownership of every funnel, workflow and contact. If the account already has messy automations, we audit them first, turn off anything that conflicts, and document what stays so your team understands the final setup." },
@@ -230,6 +231,6 @@ export const LOCATION_PAGES: SeoPage[] = [
     ],
     related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot", "/ai-voice-agent-dubai", "/funnels-for/marketing-agencies"],
     parent: HUB,
-    updated: "2026-11-09",
+    updated: "2026-11-12",
   },
 ];
