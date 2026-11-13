@@ -49,6 +49,8 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // 2026-11-05: corrected cost-per-lead figures changed these case slugs.
+      // 2026-11-13: duplicate post merged into its twin (same campaign, same day).
+      { source: "/case-studies/shopify-store-162k-in-q4-at-4-7x-oct-2024", destination: "/case-studies/shopify-store-162k-in-q4-at-4-7x-roas", permanent: true },
       { source: "/case-studies/mva-6275-leads-at-50-cpl", destination: "/case-studies/mva-6275-leads-at-4-38-cpl", permanent: true },
       { source: "/case-studies/mva-126-leads-at-150-cpl", destination: "/case-studies/mva-126-leads-at-17-16-cpl", permanent: true },
       // Legacy .html and short URLs from the old static site. These used to be

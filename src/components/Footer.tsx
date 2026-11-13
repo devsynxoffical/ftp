@@ -281,27 +281,6 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-
-        <nav aria-label="Partner sites">
-          <span className="fdh">Partner sites</span>
-          <ul className="fdir-partners">
-            <li>
-              <a href="https://qualifiedleadsx.com" target="_blank" rel="noopener">
-                QualifiedLeadsX<small>High-ticket B2B lead generation</small>
-              </a>
-            </li>
-            <li>
-              <a href="https://contractorleads.us" target="_blank" rel="noopener">
-                ContractorLeads<small>Verified contractor leads</small>
-              </a>
-            </li>
-            <li>
-              <a href="https://rankempire.us" target="_blank" rel="noopener">
-                Rank Empire<small>SEO, AEO and GEO agency</small>
-              </a>
-            </li>
-          </ul>
-        </nav>
       </div>
 
       <div className="freach">
