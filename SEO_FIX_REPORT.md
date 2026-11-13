@@ -1,6 +1,6 @@
 # SEO / AEO / GEO fix report: funnelsthatprint.com
 
-Started 2026-11-13 from `CLAUDE_CODE_SEO_AEO_GEO_PROMPT.md`. Phases run so far: 0 (baseline) and 1 (crawl access). Everything below is measured, not estimated.
+Started 2026-11-13 from `CLAUDE_CODE_SEO_AEO_GEO_PROMPT.md`. Phases run so far: 0 (baseline), 1 (crawl access), 4.6 (sister-site links) and the first Phase 5 merge. Everything below is measured, not estimated.
 
 ## CONFIG
 
@@ -18,7 +18,7 @@ Filled from the codebase (`src/data/brand.ts`, `src/app/layout.tsx`) and earlier
 | PRIMARY CONVERSION | /book-a-call (Google Calendar booking) + WhatsApp | Confirmed |
 | STACK + HOST | Next.js 16 on Vercel | Confirmed |
 | SOCIAL / sameAs | None live (placeholder links removed Nov 7) | **MISSING: real LinkedIn company, YouTube, Instagram, Facebook, Clutch URLs** |
-| SISTER SITES | contractorleads.us, qualifiedleadsx.com, rankempire.us (sitewide footer links) | **DECISION NEEDED (Phase 4.6)** |
+| SISTER SITES | contractorleads.us, qualifiedleadsx.com, rankempire.us | Owner decision 2026-11-13: remove sitewide footer links (done) |
 | TOP 10 MONEY KEYWORDS | From Search Console: sales funnel agency, done-for-you sales funnel, gohighlevel agency, hire gohighlevel expert, ai appointment setter, speed to lead automation, meta conversions api setup, facebook ads agency, low ticket funnel agency, med spa funnel | Proposed, confirm |
 | TOP 10 BUYER QUESTIONS | Not supplied | Proposed from GSC/PAA, confirm |
 
@@ -92,11 +92,31 @@ Tested live from an external server: top 20 URLs x 13 user agents (Chrome, Googl
 
 No code change needed in Phase 1. Note: Vercel uses 308 (permanent) rather than 301; search engines treat both as permanent.
 
+## Phase 4.6: sister-site links (2026-11-13)
+
+Owner decision: remove sitewide links.
+
+- Removed the footer "Partner sites" column (links to qualifiedleadsx.com, contractorleads.us, rankempire.us) from every page; footer grid now three columns, checked at 390px and 1366px.
+- Added one contextual mention of the three sites on /about, `rel="nofollow noopener"`.
+- Result: 0 sister-site links on the home page (was 3 on every page).
+
+## Phase 5: duplicate case studies (2026-11-13)
+
+Owner decision: merge duplicates of the same campaign.
+
+| Removed URL | 308 to | Evidence |
+| --- | --- | --- |
+| /case-studies/shopify-store-162k-in-q4-at-4-7x-oct-2024 | /case-studies/shopify-store-162k-in-q4-at-4-7x-roas | Same post published twice on 2024-10-19 (identical caption), 0.87 text similarity |
+
+- Implemented through the existing `ALIASES` map in `src/data/casePages.ts`, so the old post ID also resolves to the kept page; all other 246 case URLs unchanged (checked by diffing every slug before and after).
+- Removed from the case-studies sitemap; 0 broken internal links after the change.
+- Held back, pending owner re-confirmation: the three `dtc-brand-11k-day-in-sales-at-4-2x` pages (`-roas` 2022-06-17, `-jul-2022` 2022-07-27, `-nov-2023` 2023-11-19) have different publish dates, captions and videos, and all three are indexed, so they look like separate posts rather than one campaign.
+
 ## MANUAL ACTIONS FOR OWNER
 
 1. Send: legal entity name, full street address, LinkedIn URLs for Gaurav and Rahul, and the real company profiles (LinkedIn page, YouTube, Instagram, Facebook, Clutch) to use as sameAs.
-2. Decide on the footer "Partner sites" links to contractorleads.us, qualifiedleadsx.com and rankempire.us (prompt recommends removing sitewide links; keep at most one contextual link on /about, nofollow if they target the same buyers).
-3. Confirm whether the two groups of possible duplicate case studies above are the same campaigns.
+2. Re-confirm the three `dtc-brand-11k-day-in-sales-at-4-2x` pages (different dates and videos) before they are merged.
+3. On contractorleads.us, qualifiedleadsx.com and rankempire.us, apply the same rule: no sitewide footer links back to funnelsthatprint.com.
 4. Google Cloud project 351359628625: enable the Google Analytics Data API and Admin API; add the Search Console service account as Viewer on the GA4 property; in GA4 mark `generate_lead`, `whatsapp_click` and `booking_click` as key events.
 
 ## UNVERIFIED CLAIMS

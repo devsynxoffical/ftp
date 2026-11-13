@@ -4910,7 +4910,7 @@ main {
 @media (max-width:640px){.hx-groups,.hx-cases ul{grid-template-columns:1fr}.hx-qa-stats div+div{padding-left:10px}}
 
 /* Footer directory (replaces the pill rows) */
-.fdir{display:grid;grid-template-columns:1fr 1fr 1.7fr 1.1fr;gap:clamp(28px,3vw,48px);padding:clamp(40px,5vw,72px) var(--gut);border-bottom:1px solid var(--line-d)}
+.fdir{display:grid;grid-template-columns:1fr 1fr 1.7fr;gap:clamp(28px,3vw,48px);padding:clamp(40px,5vw,72px) var(--gut);border-bottom:1px solid var(--line-d)}
 .fdh{display:block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#8a8a8a;margin-bottom:20px}
 .fdir ul{list-style:none;margin:0;padding:0}
 .fdir li a{display:inline-block;padding:6px 0;font-size:15px;line-height:1.4;color:#cfcfcf;transition:color .25s,transform .25s}

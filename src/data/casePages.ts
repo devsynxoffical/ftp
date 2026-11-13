@@ -160,6 +160,7 @@ const OVERRIDES: Record<string, Override> = {
  */
 const ALIASES: Record<string, string> = {
   DZXZSYykvpC: "DZXZSkyAU7x", // lead gen copy has no image; eCommerce copy has the metrics
+  DBTl4HjMqFI: "DBTXySHSrJa", // same $162K Q4 post published twice on 2024-10-19 (owner confirmed 2026-11-13)
 };
 
 /**

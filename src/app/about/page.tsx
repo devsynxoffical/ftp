@@ -158,6 +158,13 @@ export default function AboutPage() {
                 <Link href="/funnels-for">funnels by industry</Link> and every service on the <Link href="/services">services</Link>{" "}
                 page.
               </p>
+              <p>
+                The same team runs three sister sites for narrower services:{" "}
+                <a href="https://qualifiedleadsx.com" target="_blank" rel="nofollow noopener">QualifiedLeadsX</a> for high-ticket B2B lead
+                generation, <a href="https://contractorleads.us" target="_blank" rel="nofollow noopener">ContractorLeads</a> for verified
+                contractor leads, and <a href="https://rankempire.us" target="_blank" rel="nofollow noopener">Rank Empire</a> for SEO, AEO and
+                GEO.
+              </p>
             </div>
           </section>
 
