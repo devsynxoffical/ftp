@@ -16,7 +16,7 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Funnels That Print | Sales Funnel Agency for Booked Calls",
+    default: "Funnels That Print | AI Sales Funnels for Booked Calls",
     template: "%s | Funnels That Print",
   },
   description:

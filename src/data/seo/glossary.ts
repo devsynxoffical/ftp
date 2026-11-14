@@ -28,7 +28,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><a href="/glossary/lead-magnet"><strong>Lead magnet</strong></a>: the free resource, quiz result or estimate you trade for contact details.</li>
 <li><a href="/glossary/vsl"><strong>VSL (video sales letter)</strong></a>: a scripted video that sells the offer or the call before the prospect books.</li>
 </ul>
-<p>If you want a funnel built rather than defined, start with our <a href="/">sales funnel agency</a> page or the <a href="/blog/sales-funnel-stages">guide to sales funnel stages</a>.</p>`,
+<p>If you want a funnel built rather than defined, start with our <a href="/sales-funnel-agency">sales funnel agency</a> page or the <a href="/blog/sales-funnel-stages">guide to sales funnel stages</a>.</p>`,
       },
       {
         h2: "Offers and order value",
@@ -147,7 +147,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Tracking only the lead.</strong> If Meta only sees form fills, it optimizes for form fillers. Send booked calls and sales back too.</li>
 <li><strong>Copying a funnel type that does not fit.</strong> A webinar suits a complex offer; a quiz suits a local service. Match the format to the buyer.</li>
 </ul>
-<p>Our <a href="/">sales funnel agency</a> builds the full system, from page to pipeline, in 5 to 10 business days.</p>`,
+<p>Our <a href="/sales-funnel-agency">sales funnel agency</a> builds the full system, from page to pipeline, in 5 to 10 business days.</p>`,
       },
       {
         h2: "Related terms",
@@ -236,7 +236,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Underpriced into irrelevance.</strong> A $1 offer attracts buyers who will never pay $500. Price low, but high enough to qualify.</li>
 <li><strong>No follow-up after purchase.</strong> New buyers need onboarding emails and a next step, or the relationship stops at $27.</li>
 </ul>
-<p>Our <a href="/">sales funnel agency</a> plans the full offer stack before building the checkout. The <a href="/blog/low-ticket-funnel-guide">low-ticket funnel guide</a> covers pricing in depth.</p>`,
+<p>Our <a href="/sales-funnel-agency">sales funnel agency</a> plans the full offer stack before building the checkout. The <a href="/blog/low-ticket-funnel-guide">low-ticket funnel guide</a> covers pricing in depth.</p>`,
       },
       {
         h2: "Related terms",
@@ -309,7 +309,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>No back end.</strong> Breaking even is only useful if buyers can move on to something profitable.</li>
 <li><strong>Scaling before the numbers hold.</strong> Liquidation rates usually drop as budgets rise, so scale in steps.</li>
 </ul>
-<p>We plan the offer stack and build the checkout through our <a href="/">sales funnel agency</a>.</p>`,
+<p>We plan the offer stack and build the checkout through our <a href="/sales-funnel-agency">sales funnel agency</a>.</p>`,
       },
       {
         h2: "Related terms",
@@ -387,7 +387,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Pricing it above the main product.</strong> High-priced add-ons belong in the upsell.</li>
 <li><strong>Weak copy.</strong> The bump box needs its own headline and a single specific benefit.</li>
 </ul>
-<p>We write and build checkouts, bumps and upsells as part of our <a href="/">sales funnel agency</a> service. See more checkout results in <a href="/case-studies/low-ticket-funnels">low-ticket funnels</a>.</p>`,
+<p>We write and build checkouts, bumps and upsells as part of our <a href="/sales-funnel-agency">sales funnel agency</a> service. See more checkout results in <a href="/case-studies/low-ticket-funnels">low-ticket funnels</a>.</p>`,
       },
       {
         h2: "Related terms",
@@ -463,7 +463,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Too many steps.</strong> More than two upsells usually frustrates buyers and raises refunds.</li>
 <li><strong>Not tracking each page.</strong> Measure take rate per offer so you know which one to fix.</li>
 </ul>
-<p>We plan and build upsell paths in our <a href="/">sales funnel agency</a> service.</p>`,
+<p>We plan and build upsell paths in our <a href="/sales-funnel-agency">sales funnel agency</a> service.</p>`,
       },
       {
         h2: "Related terms",
@@ -621,7 +621,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Email-only follow-up for services.</strong> Local and high-ticket leads respond far better to a call or text in the first minute.</li>
 <li><strong>Asking for too much up front.</strong> Put the contact fields last, after easy questions.</li>
 </ul>
-<p>Our <a href="/">sales funnel agency</a> builds lead magnets, landing pages and the follow-up behind them.</p>`,
+<p>Our <a href="/sales-funnel-agency">sales funnel agency</a> builds lead magnets, landing pages and the follow-up behind them.</p>`,
       },
       {
         h2: "Related terms",
@@ -1249,7 +1249,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Ignoring follow-up.</strong> A slow response wastes leads you already paid for.</li>
 <li><strong>Judging on two days of data.</strong> Let campaigns exit learning before cutting them.</li>
 </ul>
-<p>Our <a href="/">sales funnel agency</a> optimizes for cost per booked call and sale, not just CPL. More tactics are in <a href="/blog/how-to-reduce-cost-per-lead">how to reduce cost per lead</a>.</p>`,
+<p>Our <a href="/sales-funnel-agency">sales funnel agency</a> optimizes for cost per booked call and sale, not just CPL. More tactics are in <a href="/blog/how-to-reduce-cost-per-lead">how to reduce cost per lead</a>.</p>`,
       },
       {
         h2: "Related terms",

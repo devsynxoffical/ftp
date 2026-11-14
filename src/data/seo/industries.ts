@@ -794,7 +794,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
 <li>Judging ads on the pixel alone when server events are missing.</li>
 <li>Discount-led creative that trains customers to wait for sales.</li>
 </ul>
-<p>If you want the whole path built and tested for you, that is what our <a href="/">sales funnel agency</a> service covers.</p>
+<p>If you want the whole path built and tested for you, that is what our <a href="/sales-funnel-agency">sales funnel agency</a> service covers.</p>
 <p>Related builds: <a href="/funnels-for/coaches">coaches</a> selling products, <a href="/funnels-for/med-spas">med spas</a> with retail lines, and <a href="/funnels-for/gyms">gyms</a> selling memberships online.</p>`,
       },
     ],
