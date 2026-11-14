@@ -72,14 +72,14 @@ export const SERVICE_PAGES: SeoPage[] = [
   {
     path: "/sales-funnel-agency",
     kind: "service",
-    keyword: "done-for-you sales funnels",
+    keyword: "sales funnel agency",
     serviceType: "Done-for-you sales funnel design and build",
-    title: "Done-For-You Sales Funnels Built in 5 to 10 Days",
-    description: "Done-for-you sales funnels: strategy, copy, design, build, automation and tracking in one project, with 275+ documented results and launch in 5 to 10 days.",
+    title: "Sales Funnel Agency: Done-For-You Funnels in 5 to 10 Days",
+    description: "Sales funnel agency for done-for-you funnels: strategy, copy, design, build, automation and tracking in one project, live in 5 to 10 days. 275+ results.",
     eyebrow: "Done-for-you funnels",
-    h1: "Done-for-you sales funnels for offers that sell on a call or a checkout",
+    h1: "A sales funnel agency that builds done-for-you funnels for offers that sell on a call or a checkout",
     intro:
-      "Funnels That Print builds <strong>done-for-you sales funnels</strong>: strategy, copy, design, build, automation and tracking delivered as one project, so you are not stitching together a copywriter, a designer and a CRM freelancer. We have documented 275+ client results since 2019, including a $1.52M high-ticket consulting funnel and an $847K low-ticket front end, and most builds go live in 5 to 10 business days.",
+      "Funnels That Print is a <strong>sales funnel agency</strong> that builds done-for-you sales funnels: strategy, copy, design, build, automation and tracking delivered as one project, so you are not stitching together a copywriter, a designer and a CRM freelancer. We have documented 275+ client results since 2019, including a $1.52M high-ticket consulting funnel and an $847K low-ticket front end, and most builds go live in 5 to 10 business days.",
     quick: {
       q: "What is a done-for-you sales funnel?",
       a: "A done-for-you sales funnel is one an agency plans, writes, designs, builds and connects for you: the landing page or quiz, the offer and copy, the checkout or booking calendar, follow-up emails and texts, and conversion tracking. You approve each stage and own every asset, but you do not build any of it yourself.",
@@ -138,7 +138,7 @@ export const SERVICE_PAGES: SeoPage[] = [
     ],
     related: ["/funnels-for/roofing", "/funnels-for/coaches", "/funnels-for/mortgage", "/compare/funnel-agency-vs-freelancer", "/tools/funnel-conversion-calculator", "/blog/how-much-does-a-sales-funnel-cost", "/landing-page-design", "/sales-funnel-audit"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-14",
   },
   {
     path: "/ai-sales-funnels",
