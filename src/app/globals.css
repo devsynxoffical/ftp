@@ -5041,6 +5041,11 @@ main {
 .case-quick{margin:22px 0 4px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--or);border-radius:18px;padding:18px 20px}
 .case-quick h2{font-family:var(--disp);font-size:clamp(18px,1.6vw,22px);font-weight:700;letter-spacing:-.02em;line-height:1.25;margin-top:10px}
 .case-quick p{margin-top:8px;font-size:15.5px;line-height:1.65;color:var(--fg)}
+.case-dash table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15.5px}
+.case-dash th,.case-dash td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.case-dash td{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.case-dash th{font-weight:500;color:var(--body)}
+.case-dash .case-dash-src{font-size:14px;color:var(--mute,#777)}
 .case-bench ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
 .case-bench li{position:relative;padding:14px 16px 14px 44px;border-radius:14px;background:var(--bg);font-size:15.5px;line-height:1.55}
 .case-bench li::before{content:"";position:absolute;left:16px;top:18px;width:14px;height:14px;border-radius:4px;background:var(--or)}
