@@ -16,6 +16,7 @@ import { getIndustryBySlug, midSentence } from "@/data/caseIndustries";
 import { getBlogPostBySlug } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
 import CaseVideo from "@/components/case/CaseVideo";
+import { CASE_DASHBOARDS } from "@/data/caseDashboards";
 import VIDEO_DURATIONS from "@/data/videoDurations.json";
 
 /** Seconds -> ISO 8601 duration, e.g. 75 -> "PT1M15S". */
@@ -223,6 +224,23 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
               <h2>Result summary</h2>
               <p>{page.summary}</p>
             </section>
+            {CASE_DASHBOARDS[page.id] && (
+              <section className="case-card case-dash" aria-labelledby="case-dash-h">
+                <h2 id="case-dash-h">What the dashboard in the video shows</h2>
+                <p className="case-dash-src">Source: {CASE_DASHBOARDS[page.id].source}.</p>
+                <table>
+                  <tbody>
+                    {CASE_DASHBOARDS[page.id].rows.map((r) => (
+                      <tr key={r.label}>
+                        <th scope="row">{r.label}</th>
+                        <td>{r.value}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <p>{CASE_DASHBOARDS[page.id].note}</p>
+              </section>
+            )}
             {benchmarks.length > 0 && (
               <section className="case-card case-bench">
                 <h2>How this result compares</h2>
