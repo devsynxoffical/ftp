@@ -74,7 +74,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/roofing",
     kind: "industry",
-    keyword: "roofing lead generation funnel",
+    keyword: "roofing lead generation",
     serviceType: "Roofing lead generation funnel",
     title: "Roofing Lead Generation Funnel That Books Inspections",
     description: "A roofing lead generation funnel with a storm-damage quiz, OTP-verified phones and 60-second follow-up. Real cases from $4.27 to $24 per lead.",
@@ -87,6 +87,18 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       a: "A three to five question quiz about roof age, damage and homeownership, an OTP-verified phone number, then an instant text and call that books a free inspection. The offer is the inspection or insurance claim help, not a discount. Follow-up runs for 14 days, and booked inspections are sent back to Meta as conversions.",
     },
     sections: [
+      {
+        h2: "Roofing lead generation: where roofers get jobs",
+        html: `<p>Roofing leads come from two very different markets. Insurance work follows storms: hail and wind create a short burst of claims in one area. Retail work is homeowners replacing an aging roof on their own budget. Each channel serves one market better than the other.</p>
+<div class="table-wrap"><table><thead><tr><th>Channel</th><th>Market</th><th>Is the lead yours alone?</th><th>Watch out for</th></tr></thead><tbody>
+<tr><td>Storm canvassing and door knocking</td><td>Insurance</td><td>Yes</td><td>Only works in the weeks after a storm, and needs a crew</td></tr>
+<tr><td>Google Local Services and Search ads</td><td>Both, mostly repair</td><td>Yes</td><td>Many calls are small repairs, not replacements</td></tr>
+<tr><td>Meta ads into a quiz funnel</td><td>Retail replacement and storm areas</td><td>Yes</td><td>Needs qualifying questions or you pay to inspect renters' roofs</td></tr>
+<tr><td>Shared lead marketplaces</td><td>Both</td><td>Often no</td><td>You compete on speed and price with every other buyer of that lead</td></tr>
+<tr><td>Referrals and past customers</td><td>Both</td><td>Yes</td><td>Rarely enough volume on their own</td></tr>
+</tbody></table></div>
+<p>A free inspection offer on Meta, filtered by homeowner status, roof age and damage type, is the most scalable of these because you control the volume and the leads are exclusive. That is the funnel this page describes, and our <a href="/case-studies/roofing-lead-generation">roofing case studies</a> show what it has cost.</p>`,
+      },
       {
         h2: "The front end: a quiz, not a contact form",
         html: `<p>Homeowners do not wake up wanting a roofer. They react to a hailstorm, a stain on the ceiling, or a neighbor's new roof. The ad meets that moment and the funnel keeps the commitment small:</p>
@@ -141,7 +153,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/hvac",
     kind: "industry",
-    keyword: "hvac lead generation funnel",
+    keyword: "hvac lead generation",
     serviceType: "HVAC lead generation funnel",
     title: "HVAC Lead Generation Funnel for Installs and Tune-Ups",
     description: "An HVAC lead generation funnel that separates emergency repairs, tune-ups and replacements, then books them fast. Real cases from $5.57 per lead.",
@@ -154,6 +166,18 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       a: "HVAC demand is seasonal and split between urgent repairs, low-ticket maintenance and high-ticket replacements. The funnel asks the job type first, routes emergencies to an immediate call, books tune-ups straight onto the calendar, and sends replacement leads to a comfort consultant with financing information ready.",
     },
     sections: [
+      {
+        h2: "HVAC lead generation: the channels compared",
+        html: `<p>Most HVAC companies get leads from five places. They differ in who else gets the same lead, how fast it turns into a booked job, and whether you own the system afterwards.</p>
+<div class="table-wrap"><table><thead><tr><th>Channel</th><th>How you pay</th><th>Is the lead yours alone?</th><th>Best for</th></tr></thead><tbody>
+<tr><td>Google Local Services Ads</td><td>Per lead</td><td>Yes, the homeowner calls you</td><td>Emergency repair calls in peak season</td></tr>
+<tr><td>Google Search ads</td><td>Per click</td><td>Yes</td><td>High-intent searches like "AC repair near me"</td></tr>
+<tr><td>Google Business Profile and local SEO</td><td>Time and content, no media cost</td><td>Yes</td><td>Steady inbound calls once reviews build up</td></tr>
+<tr><td>Meta ads into a funnel</td><td>Per impression</td><td>Yes</td><td>Tune-up offers, replacement estimates and maintenance plans, at volume</td></tr>
+<tr><td>Shared lead marketplaces</td><td>Per lead</td><td>Often no, the same request can go to several contractors</td><td>Filling gaps, if you can call back within minutes</td></tr>
+</tbody></table></div>
+<p>Search channels catch demand that already exists. Meta ads create it, which is why they suit tune-ups and replacements that homeowners put off until prompted. Whatever the channel, the job is won by the first company to call back, so <a href="/speed-to-lead">speed to lead</a> matters more than the source. The rest of this page shows the funnel we put behind Meta ads, the channel we run for HVAC clients.</p>`,
+      },
       {
         h2: "Three entry points, one funnel",
         html: `<div class="table-wrap"><table><thead><tr><th>Lead type</th><th>Offer</th><th>Next step</th></tr></thead><tbody>
@@ -204,7 +228,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/solar",
     kind: "industry",
-    keyword: "solar lead generation funnel",
+    keyword: "solar lead generation",
     serviceType: "Solar lead generation funnel",
     title: "Solar Lead Generation Funnel With Savings Qualifiers",
     description: "A solar lead generation funnel that qualifies on ownership, roof and bill size before booking a consultation. Real solar cases at $14.71 per lead.",
@@ -217,6 +241,18 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       a: "Homeownership, average monthly electric bill, roof shade and age, credit or financing preference, and zip code for utility and service area. Those answers predict whether a system pencils out. Qualified homeowners then get a savings estimate and a booked consultation, while unqualified ones receive a polite exit instead of a sales call.",
     },
     sections: [
+      {
+        h2: "Solar lead generation: buying leads vs generating your own",
+        html: `<p>Solar installers usually choose between buying leads or appointments from a vendor and running their own ads. The trade-off is control: bought leads arrive with no setup, but you do not choose the questions they answered or how many other installers called them first.</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>What you control</th><th>Main risk</th></tr></thead><tbody>
+<tr><td>Bought shared leads</td><td>Only the zip codes</td><td>The same homeowner hears from several installers</td></tr>
+<tr><td>Bought exclusive appointments</td><td>Volume and price, agreed in advance</td><td>High cost per appointment, and quality varies by vendor</td></tr>
+<tr><td>Door-to-door</td><td>Territory and pitch</td><td>Labor cost and turnover</td></tr>
+<tr><td>Your own Meta ads and savings quiz</td><td>Offer, questions, follow-up and data</td><td>Needs a funnel, tracking and fast follow-up to work</td></tr>
+<tr><td>Referrals from installed customers</td><td>Incentive and timing</td><td>Volume is limited by your install base</td></tr>
+</tbody></table></div>
+<p>Running your own ads only pays off if the funnel screens out renters, low bills and poor credit before a consultant spends time on the lead. The savings quiz below does that, and the leads stay yours.</p>`,
+      },
       {
         h2: "Building the savings quiz",
         html: `<p>The front end is a five to seven step quiz framed as a savings check:</p>

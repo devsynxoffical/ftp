@@ -295,6 +295,16 @@ ${cplBenchmarkTable()}
         html: `<p>Compare your ROAS with break-even ROAS, not with someone else's ROAS. If you are above break-even, you can usually scale spend and accept some ROAS decline. If you are below it, check attribution first, then the offer: an <a href="/glossary/order-bump">order bump</a> or upsell raises revenue per buyer without raising ad cost, which is how low-ticket funnels like our <a href="/scalelowticket">$847K front end</a> recovered 112% of ad spend on day zero.</p>`,
       },
       {
+        h2: "What is a good ROAS?",
+        html: `<p>A good ROAS is any ROAS above your break-even ROAS, with enough room left for the profit you want. There is no single number that is good for every business, because the same 3x is profitable at a 50% margin (break-even 2x) and loses money at a 25% margin (break-even 4x).</p>
+<ul>
+<li><strong>Find your floor:</strong> 1 ÷ gross margin. Below it, every sale from ads loses money.</li>
+<li><strong>Set your target:</strong> 1 ÷ (gross margin − target profit margin), from the table above.</li>
+<li><strong>Judge the trend, not one day:</strong> compare a week or more of spend, because attribution lags and a single day can swing either way.</li>
+</ul>
+<p>A commonly quoted target is 4x. That only breaks even at a 25% margin, yet it is comfortably profitable at 50%, which is why your margin matters more than any rule of thumb. Use the calculator with your own margin, then compare with the category medians below.</p>`,
+      },
+      {
         h2: "eCommerce ROAS benchmarks by category",
         html: `<p>Medians and ranges from the eCommerce and low-ticket campaigns in our case studies, recalculated each time a case is added:</p>
 ${roasBenchmarkTable(ECOM_SLUGS)}
