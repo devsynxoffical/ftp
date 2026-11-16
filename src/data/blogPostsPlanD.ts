@@ -211,7 +211,7 @@ export const PLAN_POSTS_D: BlogPost[] = [
     category: "Funnel Architecture",
     author: AUTHORS.rahul,
     publishedAt: "2026-11-10",
-    updatedAt: "2026-11-10",
+    updatedAt: "2026-11-16",
     readTime: "8 min read",
     image: "/img/blog/membership-funnel.jpg",
     imageAlt: "Smartphone on a stand showing a membership signup screen with a join button, next to a laptop chart of members growing over time",
@@ -222,6 +222,8 @@ export const PLAN_POSTS_D: BlogPost[] = [
       "subscription sales funnel",
       "membership funnel template",
       "low ticket subscription funnel",
+      "low ticket subscription influencer funnel",
+      "creator subscription funnel",
     ],
     metrics: [
       { label: "Memberships Sold", value: "2,063", sub: "$65,600 revenue" },
@@ -234,10 +236,11 @@ export const PLAN_POSTS_D: BlogPost[] = [
       { id: "structure", title: "2. The Membership Funnel Step by Step" },
       { id: "math", title: "3. The Math: What Can You Pay Per Member?" },
       { id: "our-campaigns", title: "4. Three Real Membership Campaigns" },
-      { id: "retention", title: "5. Retention: Where the Profit Is" },
-      { id: "template", title: "6. Membership Funnel Template" },
-      { id: "mistakes", title: "7. Common Mistakes" },
-      { id: "faq", title: "8. Frequently Asked Questions" },
+      { id: "creators", title: "5. Low-Ticket Subscription Funnels for Influencers and Creators" },
+      { id: "retention", title: "6. Retention: Where the Profit Is" },
+      { id: "template", title: "7. Membership Funnel Template" },
+      { id: "mistakes", title: "8. Common Mistakes" },
+      { id: "faq", title: "9. Frequently Asked Questions" },
     ],
     faqs: [
       {
@@ -319,8 +322,21 @@ export const PLAN_POSTS_D: BlogPost[] = [
   <p>The $58K campaign is the clearest example of the math: at $42.41 of ad spend per member and $107.22 of revenue per member in the period reported, the front end paid for its own ads before counting any later renewals. That is the same principle as a <a href="/glossary/self-liquidating-offer">self-liquidating offer</a>, applied to a subscription. All three campaigns are in our <a href="/case-studies/low-ticket-funnels">low-ticket funnel case studies</a>, and the <a href="/scalelowticket">$847K low-ticket breakdown</a> shows the same front-end structure on a one-time product.</p>
 </section>
 
+<section id="creators">
+  <h2>5. Low-Ticket Subscription Funnels for Influencers and Creators</h2>
+  <p>A <strong>low-ticket subscription funnel</strong> is the version of this structure most influencers and creators use: a paid community, challenge group or content library at a monthly price low enough that a follower can say yes without a sales call. The audience does the work that cold ads do for everyone else, so the first months can be profitable before any ad spend.</p>
+  <ol>
+    <li><strong>Start with the warm audience.</strong> Send followers from bio links, stories and email to the same offer page and checkout the ads will use later. This tests the promise and the price on people who already trust you.</li>
+    <li><strong>Keep the first payment small and the promise narrow.</strong> One outcome for one type of follower converts better than an all-access pitch.</li>
+    <li><strong>Add the order bump and the annual upsell.</strong> These raise first-day revenue per member, which decides how much you can later pay for cold traffic.</li>
+    <li><strong>Scale with paid ads only after the funnel converts warm traffic.</strong> Lookalike audiences built from paying members are the usual next step, judged on cost per member against the break-even figures in section 3.</li>
+    <li><strong>Treat retention as the main product.</strong> Creator memberships often churn when the novelty fades, so the onboarding and check-ins in section 6 matter more than a new ad.</li>
+  </ol>
+  <p>The <a href="/case-studies/low-ticket-funnel-1566-memberships-sold">1,566-membership fitness campaign</a> in the table above is this model at volume. For a one-time product instead of a subscription, the <a href="/scalelowticket">$847K low-ticket breakdown</a> shows the same front end, and our <a href="/case-studies/low-ticket-funnels">low-ticket funnel case studies</a> list every campaign in the series.</p>
+</section>
+
 <section id="retention">
-  <h2>5. Retention: Where the Profit Is</h2>
+  <h2>6. Retention: Where the Profit Is</h2>
   <ul>
     <li><strong>A fast first win.</strong> Members who get a result in the first two days cancel less. Point new members at one short lesson, template or session, not the whole library.</li>
     <li><strong>Activity tracking.</strong> Tag members who have not logged in or attended for 14 days and send a personal check-in by text or email.</li>
@@ -332,7 +348,7 @@ export const PLAN_POSTS_D: BlogPost[] = [
 </section>
 
 <section id="template">
-  <h2>6. Membership Funnel Template</h2>
+  <h2>7. Membership Funnel Template</h2>
   <div class="table-wrap">
     <table class="data-table">
       <thead><tr><th>Step</th><th>Page or message</th><th>Number to track</th></tr></thead>
@@ -350,7 +366,7 @@ export const PLAN_POSTS_D: BlogPost[] = [
 </section>
 
 <section id="mistakes">
-  <h2>7. Common Mistakes</h2>
+  <h2>8. Common Mistakes</h2>
   <ul>
     <li><strong>Judging the funnel on day one.</strong> A membership funnel that breaks even on the first payment is already a strong result. Judge it on cohort revenue at 90 days.</li>
     <li><strong>Selling the whole library.</strong> Nobody joins for 400 videos. Sell the first outcome.</li>
