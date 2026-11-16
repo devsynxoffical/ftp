@@ -1,18 +1,13 @@
-"use client";
-
-import { usePathname } from "next/navigation";
 import { BLOG_POSTS } from "@/data/blogPosts";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
 /**
- * Breadcrumb + CollectionPage markup for the journal index only. It used to
- * live in the blog layout, which also injected it into every article, giving
- * each post two conflicting breadcrumb trails.
+ * Breadcrumb + CollectionPage markup for the journal index only. Rendered by
+ * the /blog page as a server component, so neither the articles nor this
+ * markup reach the article pages or the browser bundle.
  */
 export default function BlogIndexSchema() {
-  const pathname = usePathname();
-  if (pathname !== "/blog") return null;
   const posts = [...BLOG_POSTS].sort((a, b) => b.publishedAt.localeCompare(a.publishedAt));
   const schema = {
     "@context": "https://schema.org",

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import BlogIndexSchema from "@/components/BlogIndexSchema";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 
@@ -39,10 +38,5 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <>
-      <BlogIndexSchema />
-      {children}
-    </>
-  );
+  return children;
 }
