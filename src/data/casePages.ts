@@ -135,6 +135,8 @@ const OVERRIDES: Record<string, Override> = {
   DQapbVREnJ4: { title: "Webinar Case Study: Live Summit and Webinar Ads Breakdown", primary: { value: "Live", label: "Ads breakdown" } },
   DQXUnRNkjR3: { title: "Roofing Case Study: OTP-Verified Lead Forms Strategy Session", primary: { value: "Video", label: "Strategy session" } },
   "DQH-ld1EiFv": { title: "Agency Case Study: $850 From One Ad at 295x ROAS", primary: { value: "$850", label: "From one ad" }, secondary: { value: "295.14x", label: "Return on ad spend" } },
+  // Owner confirmed 2026-11-16: the Ads Manager table in the video is correct (EUR), the caption's $280K at 5.0x is not.
+  DbCVqzFhiLU: { title: "DTC Brand Case Study: \u20ac126K in Sales at 2.13x ROAS", primary: { value: "\u20ac126,168", label: "Purchase value" }, secondary: { value: "2.13x", label: "Return on ad spend" } },
   DP74WvtkkIj: { title: "Low-Ticket Funnel Case Study: 63.98 ROAS on an LTO Campaign", primary: { value: "63.98x", label: "Return on ad spend" } },
   DMgZ9YRSuz5: { title: "Coaching Case Study: Agency Client at $85K in a Month", primary: { value: "$85K", label: "Revenue last month" } },
   DL0r43yScHo: { title: "Mortgage Case Study: Offer and Ad Copy Strategy Session", primary: { value: "Video", label: "Strategy session" } },
@@ -168,6 +170,16 @@ const ALIASES: Record<string, string> = {
  * Source-data niche tags that contradict the post itself (checked by reading
  * each one). Corrected here so the case lands in the right industry hub.
  */
+/**
+ * Headline figures corrected to what the dashboard in the case video shows
+ * (owner confirmed 2026-11-16). The caption figures were wrong.
+ */
+const RAW_FIX: Record<string, Partial<RawCase>> = {
+  CpSA2DYIUeU: { rev: "$222,128", revl: "in February 2023" }, // Shopify Feb 1-28, 2023
+  CsVfgXouvaF: { rev: "$166,173", revl: "in April 2023" }, // Shopify Apr 1-30, 2023
+  ClNmKjfuASL: { rev: "$278,801", revl: "in 21 Days" }, // Shopify Nov 1-21, 2022
+};
+
 const NICHE_FIX: Record<string, string> = {
   DTLiCG_En3K: "Webinar", // investor summit registrations
   "DTAB1YGEr1-": "Home Services", // 12-month home services lead gen at $4.90 CPL
@@ -428,7 +440,8 @@ function buildDrafts(): Draft[] {
   const seenIds = new Set<string>();
   const push = (raw: RawCase, set: CaseSet) => {
     if (seenIds.has(raw.id) || ALIASES[raw.id]) return; // the eCommerce data repeats three posts
-    const r = NICHE_FIX[raw.id] ? { ...raw, nic: NICHE_FIX[raw.id] } : raw;
+    const fixed = RAW_FIX[raw.id] ? { ...raw, ...RAW_FIX[raw.id] } : raw;
+    const r = NICHE_FIX[raw.id] ? { ...fixed, nic: NICHE_FIX[raw.id] } : fixed;
     seenIds.add(r.id);
     const facts = set === "lg" ? reconcileCpl(parseFacts(r.pts), r.cap) : [];
     const override = OVERRIDES[r.id];

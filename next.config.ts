@@ -49,6 +49,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       // 2026-11-05: corrected cost-per-lead figures changed these case slugs.
+      // 2026-11-16: headline figures corrected to the dashboard shown in each video.
+      { source: "/case-studies/shopify-store-301k-in-sales-at-4-7x-roas", destination: "/case-studies/shopify-store-279k-in-21-days-at-4-7x-roas", permanent: true },
+      { source: "/case-studies/dtc-brand-168k-month-in-sales-at-4-9x-roas", destination: "/case-studies/dtc-brand-222k-in-february-2023-at-4-9x-roas", permanent: true },
+      { source: "/case-studies/supplement-brand-192k-month-in-sales", destination: "/case-studies/supplement-brand-166k-in-april-2023", permanent: true },
+      { source: "/case-studies/dtc-brand-280k-in-sales-at-5-0x-roas", destination: "/case-studies/dtc-brand-126k-in-sales-at-2-13x-roas", permanent: true },
       // 2026-11-13: duplicate post merged into its twin (same campaign, same day).
       { source: "/case-studies/shopify-store-162k-in-q4-at-4-7x-oct-2024", destination: "/case-studies/shopify-store-162k-in-q4-at-4-7x-roas", permanent: true },
       { source: "/case-studies/mva-6275-leads-at-50-cpl", destination: "/case-studies/mva-6275-leads-at-4-38-cpl", permanent: true },

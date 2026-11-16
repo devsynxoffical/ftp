@@ -446,11 +446,11 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
     keyword: "facebook ads for supplement brands",
     serviceType: "Facebook ads for supplement brands",
     title: "Facebook Ads for Supplement Brands Within Ad Policy",
-    description: "Facebook ads for supplement brands that scale inside Meta's ad policies: compliant creative, subscriptions and CAPI. Cases include $192K a month at 4.7x.",
+    description: "Facebook ads for supplement brands that scale inside Meta's ad policies: compliant creative, subscriptions and CAPI. One case: $166K in a month at 4.7x.",
     eyebrow: "Funnels for supplement brands",
     h1: "Facebook ads for supplement brands that scale without breaking ad policy",
     intro:
-      "The hardest part of <strong>facebook ads for supplement brands</strong> is usually not finding buyers but staying approved. Strong hooks drift into health claims, ads get rejected, accounts get restricted and scaling stops. We fix that with creative built around routine, ingredients, format and taste, subscription offers that reward retention, and server-side tracking that shows true return. One supplement brand reached $192,000 a month in sales at 4.7x ROAS.",
+      "The hardest part of <strong>facebook ads for supplement brands</strong> is usually not finding buyers but staying approved. Strong hooks drift into health claims, ads get rejected, accounts get restricted and scaling stops. We fix that with creative built around routine, ingredients, format and taste, subscription offers that reward retention, and server-side tracking that shows true return. One supplement brand reached $166,173 in sales in a single month at 4.7x ROAS.",
     quick: {
       q: "How do supplement brands advertise on Facebook without getting rejected?",
       a: "Avoid any claim that a product treats, cures or prevents a condition, avoid implying the viewer has a health issue, and skip before-and-after body imagery. Build creative around routine, ingredients, sourcing, taste and the customer experience. Send traffic to a landing page held to the same rules, and iterate from a library of approved hooks.",
@@ -490,7 +490,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
         h2: "Results",
         html: `<p>From our <a href="/case-studies/supplements-fitness-ecommerce">supplements and fitness case studies</a>. These are sales and ROAS figures only; they say nothing about what any product does, and our ads do not either.</p>
 <div class="table-wrap"><table><thead><tr><th>Case</th><th>Sales</th><th>ROAS</th></tr></thead><tbody>
-<tr><td><a href="/case-studies/supplement-brand-192k-month-in-sales">Supplement brand, monthly</a></td><td>$192,000 per month</td><td>4.7x</td></tr>
+<tr><td><a href="/case-studies/supplement-brand-166k-in-april-2023">Supplement brand, April 2023</a></td><td>$166,173 in one month</td><td>4.7x</td></tr>
 <tr><td><a href="/case-studies/supplement-brand-138k-in-30-days-at-4-6x-roas">Supplement brand, 30 days</a></td><td>$137,620</td><td>4.6x</td></tr>
 <tr><td><a href="/case-studies/fitness-brand-156k-in-sales-at-4-8x-roas">Fitness brand</a></td><td>$156,000</td><td>4.8x</td></tr>
 <tr><td><a href="/case-studies/supplement-brand-72k-in-sales-at-4-09x-roas">Supplement brand</a></td><td>$71,788</td><td>4.09x</td></tr>
@@ -512,7 +512,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
     ],
     proof: {
       items: [
-        { value: "$192K", label: "Supplement sales per month at 4.7x ROAS", href: "/case-studies/supplement-brand-192k-month-in-sales" },
+        { value: "$166K", label: "Supplement sales in April 2023 at 4.7x ROAS", href: "/case-studies/supplement-brand-166k-in-april-2023" },
         { value: "$137,620", label: "Supplement sales in 30 days at 4.6x ROAS", href: "/case-studies/supplement-brand-138k-in-30-days-at-4-6x-roas" },
         { value: "$156K", label: "Fitness brand sales at 4.8x ROAS", href: "/case-studies/fitness-brand-156k-in-sales-at-4-8x-roas" },
         { value: "$62,182", label: "Supplement sales at 4.50x ROAS", href: "/case-studies/supplement-brand-62k-in-sales-at-4-50x-roas" },
@@ -520,7 +520,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
       more: { label: "Supplements and fitness case studies", href: "/case-studies/supplements-fitness-ecommerce" },
     },
     faqs: [
-      { q: "Can supplement brands advertise on Facebook?", a: "Yes, with care. Meta allows supplement ads but restricts health claims, copy implying personal attributes, before-and-after body imagery and some ingredients. Brands that build creative around routine, ingredients, taste and customer experience can scale; our documented supplement cases include $192,000 a month at 4.7x ROAS within those rules." },
+      { q: "Can supplement brands advertise on Facebook?", a: "Yes, with care. Meta allows supplement ads but restricts health claims, copy implying personal attributes, before-and-after body imagery and some ingredients. Brands that build creative around routine, ingredients, taste and customer experience can scale; our documented supplement cases include $166,173 in one month at 4.7x ROAS within those rules." },
       { q: "Do you write health claims for supplement ads?", a: "No. We do not write claims that a product treats, cures, prevents or improves any condition, and we do not invent benefits. Claims language should come from your regulatory or legal adviser. Our job is the funnel, offer, creative structure and tracking, built around what you are permitted to say." },
       { q: "What offers work best for supplements?", a: "Subscribe-and-save, multi-pack bundles and starter kits usually beat single-bottle discounts, because the business depends on reorders. A small bonus on the first subscription order, such as a shaker or travel case, often works better than a deeper discount. Track subscription retention, not just first-order ROAS." },
       { q: "What ROAS do your supplement cases show?", a: "Our supplement and fitness cases range from 4.09x to 4.8x ROAS, including $137,620 in 30 days at 4.6x and $71,788 at 4.09x. These are results for specific brands with their own margins and offers. Work out your break-even ROAS before setting targets, especially if the subscription carries most of the margin." },
