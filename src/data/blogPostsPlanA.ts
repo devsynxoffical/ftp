@@ -628,7 +628,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     category: "AI & Automation",
     author: AUTHORS.rahul,
     publishedAt: "2026-11-05",
-    updatedAt: "2026-11-05",
+    updatedAt: "2026-11-16",
     readTime: "10 min read",
     image: "/img/blog/gohighlevel-review.jpg",
     imageAlt: "GoHighLevel style dashboard on a laptop showing a pipeline board, a conversations inbox and a workflow builder side by side",
@@ -760,14 +760,30 @@ export const PLAN_POSTS_A: BlogPost[] = [
         <tr><th>Plan</th><th>Monthly price</th><th>Best for</th></tr>
       </thead>
       <tbody>
-        <tr><td>Starter</td><td>$97</td><td>A single business running its own funnels and CRM</td></tr>
-        <tr class="highlight-row"><td><strong>Unlimited</strong></td><td><strong>$297</strong></td><td><strong>Agencies managing multiple client sub-accounts</strong></td></tr>
+        <tr><td>Starter</td><td>$97</td><td>A single business or a new agency: includes 3 sub-accounts</td></tr>
+        <tr class="highlight-row"><td><strong>Unlimited</strong></td><td><strong>$297</strong></td><td><strong>Agencies managing many clients: unlimited sub-accounts, white-label desktop app, basic API access</strong></td></tr>
         <tr><td>SaaS Pro</td><td>$497</td><td>Agencies reselling the platform under their own brand</td></tr>
       </tbody>
     </table>
   </div>
   <p>Annual billing reduces each plan, and a free trial is available. On top of the plan, budget for usage: SMS and calls, email sends, phone numbers and AI features. For AI calling specifically, our deployments ran roughly $0.10 to $0.25 per minute, or about $3 to $9 per booked appointment compared with $40 to $120 using human setters. The <a href="/tools/ai-voice-agent-roi-calculator">AI voice agent ROI calculator</a> shows what that means at your volume.</p>
-  <p>Plan names and inclusions change, so confirm the details on HighLevel's own pricing page before you sign up.</p>
+  <h3>Add-ons that change the real monthly cost</h3>
+  <p>HighLevel lists these add-ons on its pricing page (checked November 16, 2026). Most can be resold to clients with your own markup on the $497 plan.</p>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Add-on</th><th>Listed price</th></tr></thead>
+      <tbody>
+        <tr><td>AI Employee, Growth plan</td><td>$50 a month per sub-account</td></tr>
+        <tr><td>AI Employee, Unlimited plan</td><td>$97 a month per sub-account</td></tr>
+        <tr><td>WhatsApp integration</td><td>$10 a month per sub-account</td></tr>
+        <tr><td>Branded client portal app</td><td>$49 a month per sub-account</td></tr>
+        <tr><td>HIPAA compliance</td><td>$297 a month</td></tr>
+        <tr><td>White-label mobile app</td><td>$497 a month</td></tr>
+        <tr><td>Premium support</td><td>$500 a month</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Every plan starts with a 14-day free trial, and contacts and users are unlimited on all three. Plan names and inclusions change, so confirm the details on <a href="https://www.gohighlevel.com/pricing" rel="nofollow noopener" target="_blank">HighLevel's own pricing page</a> before you sign up.</p>
 </section>
 
 <section id="scorecard">
