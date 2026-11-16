@@ -42,7 +42,7 @@ export function GET() {
     <title>Funnels That Print Journal</title>
     <link>${BASE_URL}/blog</link>
     <atom:link href="${BASE_URL}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnel strategy.</description>
+    <description>Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnels, backed by client data.</description>
     <language>en-us</language>
     <lastBuildDate>${lastBuild}</lastBuildDate>
     <image>

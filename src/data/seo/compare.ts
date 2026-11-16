@@ -142,7 +142,7 @@ export const COMPARE_PAGES: SeoPage[] = [
     kind: "compare",
     keyword: "gohighlevel vs systeme.io",
     title: "GoHighLevel vs Systeme.io: Pricing and Fit Compared (2026)",
-    description: "GoHighLevel vs Systeme.io compared on pricing as of November 2026, CRM, SMS, courses and funnels, and which one fits your business.",
+    description: "GoHighLevel vs Systeme.io compared on pricing as of November 2026, CRM, SMS, courses and funnels, with a clear verdict on which fits your business.",
     eyebrow: "Compare",
     h1: "GoHighLevel vs Systeme.io: CRM power or low-cost simplicity?",
     intro:
@@ -280,7 +280,7 @@ export const COMPARE_PAGES: SeoPage[] = [
     kind: "compare",
     keyword: "ai voice agent vs human setter",
     title: "AI Voice Agent vs Human Setter: Cost, Speed, Results",
-    description: "AI voice agent vs human setter compared on cost per booked call, speed-to-lead, coverage and quality, with when a person still wins.",
+    description: "AI voice agent vs human setter compared on cost per booked call, speed-to-lead, coverage and quality, plus when a person still wins and how to use both.",
     eyebrow: "Compare",
     h1: "AI voice agent vs human setter: who should call your leads?",
     intro:
@@ -494,7 +494,7 @@ export const COMPARE_PAGES: SeoPage[] = [
     kind: "compare",
     keyword: "meta pixel vs conversions api",
     title: "Meta Pixel vs Conversions API: Do You Need Both?",
-    description: "Meta Pixel vs Conversions API compared: where events fire, iOS and ad blocker resilience, CRM data, Event Match Quality and deduplication.",
+    description: "Meta Pixel vs Conversions API compared: where events fire, iOS and ad blocker resilience, CRM data, Event Match Quality, deduplication and using both.",
     eyebrow: "Compare",
     h1: "Meta Pixel vs Conversions API: which should track your funnel?",
     intro:

@@ -11,6 +11,7 @@
  * their links always match the generated URLs.
  */
 import { CASES } from "./cases";
+import { CASE_DASHBOARDS } from "./caseDashboards";
 import { LEADS } from "./leads";
 import {
   CASE_INDUSTRIES,
@@ -549,25 +550,45 @@ function bodyBlocks(r: RawCase, h1: string): CasePage["blocks"] {
   return blocks;
 }
 
+const SYSTEM_TEXT: Record<string, string> = {
+  "Paid ads, funnel and follow-up": "Built with paid ads, a funnel and follow-up",
+  "Meta Video Ads & Scaling Systems": "Built with Meta video ads and a scaling system",
+  "Meta Performance & Creative Engine": "Built with Meta ads and a creative testing system",
+};
+
+/**
+ * Meta description built from the case's own structured data (result, system,
+ * extra metrics, publish month, proof type), so every snippet states facts
+ * instead of quoting the social caption. Parts are added while the text stays
+ * within 158 characters.
+ */
 function describe(d: Draft, h1: string, blocks: CasePage["blocks"]): string {
+  void h1;
+  void blocks;
   const lead = d.phrase
     ? `${d.label} case study: ${d.phrase.phrase}.`
     : `${d.label} case study: ${fallbackPhrase(d.r, 90)}.`;
-  const tail =
-    d.set === "lg"
-      ? " See the funnel, ads and follow-up system behind the result, with verified screenshots."
-      : " See the Meta ads, offer and scaling system behind the result, with verified screenshots.";
-  // Prefer a real sentence from the breakdown when it fits; it makes each description unique.
-  const firstPara = blocks.find((b) => b.type === "p")?.items[0] ?? "";
-  const sentence = (firstPara.match(/^[^.!?]{40,150}[.!?]/)?.[0] ?? "").trim();
-  const chatty = /^(hey|hi|hello|yo|what is going on|what's up|whats up|happy (monday|tuesday|wednesday|thursday|friday|saturday|sunday)|good (morning|evening))\b/i;
-  if (sentence && !chatty.test(sentence) && !/comment|dm |message me/i.test(sentence) && (lead + " " + sentence).length <= 160) {
-    return `${lead} ${sentence}`;
-  }
-  if ((lead + tail).length <= 160) return lead + tail;
-  const shortTail = d.set === "lg" ? " Funnel, ads and follow-up with verified results." : " Ads, offer and scaling with verified results.";
-  if ((lead + shortTail).length <= 160) return lead + shortTail;
-  return cutAtBoundary(lead + shortTail, 157) + ".";
+  const phraseText = lead.toLowerCase();
+  const extras = d.facts
+    .filter((f) => !phraseText.includes(f.value.toLowerCase()))
+    .slice(0, 2)
+    .map((f) => `${f.label.toLowerCase()} ${f.value}`);
+  const system = SYSTEM_TEXT[d.r.sys] ?? "Built with paid ads and a conversion system";
+  const when = d.published ? `, published ${monthYear(d.published)}` : "";
+  const proofs = CASE_DASHBOARDS[d.r.id]
+    ? ["Includes the dashboard figures from the video.", "Dashboard figures included.", "With dashboard proof."]
+    : d.r.type === "video"
+      ? ["Video breakdown with the verified numbers.", "Video breakdown included.", "With video proof."]
+      : ["Verified screenshot proof of the result.", "Screenshot proof included.", "With screenshot proof."];
+  const add = (base: string, options: string[]) => {
+    const fit = options.find((o) => (base + " " + o).length <= 158);
+    return fit ? `${base} ${fit}` : base;
+  };
+  let out = add(lead, [`${system}${when}.`, `${system}.`]);
+  if (extras.length) out = add(out, [`Also shows ${extras.join(" and ")}.`, `Also shows ${extras[0]}.`]);
+  out = add(out, proofs);
+  if (out.length < 140) out = add(out, ["See how it was built.", "See how."]);
+  return out;
 }
 
 let DESCRIPTIONS: Map<string, string> | null = null;

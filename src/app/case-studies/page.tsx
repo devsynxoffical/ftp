@@ -15,7 +15,7 @@ import VideoTestimonials from "@/components/VideoTestimonials";
 export const metadata: Metadata = {
   title: "Sales Funnel Case Studies (275+)",
   description:
-    "Browse 275+ verified sales funnel case studies: lead generation funnels for roofing, mortgage, medspa, legal and coaching, plus eCommerce and DTC brand results.",
+    "Browse 275+ verified sales funnel case studies: lead generation funnels for roofing, mortgage, medspa, legal and coaching, plus eCommerce and DTC results.",
   alternates: {
     canonical: "https://www.funnelsthatprint.com/case-studies",
   },

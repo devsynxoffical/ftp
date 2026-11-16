@@ -25,7 +25,7 @@ export const AUTHORS: Record<string, Author> = {
     // @gauravecomm is the handle signed on his own eCommerce case study posts.
     sameAs: ["https://www.instagram.com/gauravecomm/"],
     metaDescription:
-      "Gaurav Kapoor, founder of Funnels That Print. Sales funnel strategist behind the $1.52M high-ticket and $847K low-ticket funnels, writing on funnels and offers.",
+      "Gaurav Kapoor, founder of Funnels That Print. Sales funnel strategist behind the $1.52M high-ticket and $847K low-ticket funnels, writing on funnel strategy.",
     name: "Gaurav Kapoor",
     role: "Founder & Funnel Strategist, Funnels That Print",
     avatar: "/img/team/gaurav.webp",

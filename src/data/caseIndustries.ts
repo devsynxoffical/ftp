@@ -167,7 +167,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     hubTitle: "HVAC Lead Generation Case Studies",
     hubMetaTitle: "HVAC Lead Generation Case Studies & Results",
     hubDescription:
-      "HVAC lead generation results: install and replacement leads, cost per lead and ad spend from Meta funnels with instant follow-up for heating and cooling firms.",
+      "HVAC lead generation results: install and replacement leads, cost per lead and ad spend from Meta funnels with fast follow-up for heating and cooling firms.",
     intro: [
       "HVAC demand is seasonal and urgent. When a system fails in a heatwave or a cold snap, the homeowner calls whoever answers first, and replacement jobs carry the margin.",
       "These cases show HVAC install and replacement campaigns with lead volume, cost per lead and spend, built on quote funnels and follow-up that reaches the homeowner in under a minute.",

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: "%s | Funnels That Print",
   },
   description:
-    "Funnels That Print builds high-converting sales funnels, GoHighLevel CRM automation and AI calling agents that turn ad traffic into booked calls. 275+ results.",
+    "Funnels That Print builds high-converting sales funnels, GoHighLevel CRM automation and AI voice agents that turn ad traffic into booked calls. 275+ results.",
   keywords: [
     "sales funnel agency",
     "AI sales funnel",

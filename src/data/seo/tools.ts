@@ -336,7 +336,7 @@ ${roasBenchmarkTable(ECOM_SLUGS)}
     tool: "no-show-cost",
     keyword: "no-show cost calculator",
     title: "No-Show Cost Calculator: Revenue Lost to Missed Calls",
-    description: "Free no-show cost calculator. See revenue lost to missed sales calls each month and year, and how much a lower no-show rate recovers.",
+    description: "Free no-show cost calculator. See the revenue lost to missed sales calls each month and year, and how much a lower no-show rate would recover for you.",
     eyebrow: "Free tool",
     h1: "No-show cost calculator for sales calls and appointments",
     intro:

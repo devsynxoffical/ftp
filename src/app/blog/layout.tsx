@@ -6,7 +6,7 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 export const metadata: Metadata = {
   title: "AI Sales Funnel & Automation Blog",
   description:
-    "Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnel strategy.",
+    "Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnels, backed by client data.",
   alternates: {
     canonical: `${BASE_URL}/blog`,
   },

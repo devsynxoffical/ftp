@@ -7,7 +7,7 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 export const metadata: Metadata = {
   title: "$1.52M High-Ticket Funnel Case Study",
   description:
-    "How a high-ticket consulting offer scaled to $1,520,000 in 19 months with a VSL funnel, AI lead qualification, speed-to-lead automation and Meta CAPI tracking.",
+    "How a high-ticket consulting offer scaled to $1,520,000 in 19 months with a VSL funnel, AI lead qualification, speed-to-lead and Meta CAPI tracking.",
   alternates: {
     canonical: `${BASE_URL}/milliondollarcasestudy`,
   },
