@@ -7,7 +7,6 @@ import JournalPreview from "@/components/JournalPreview";
 import IndustryLinks from "@/components/case/IndustryLinks";
 import PageFaq from "@/components/PageFaq";
 import { PAGE_FAQS, PAGE_QUICK } from "@/data/pageFaqs";
-import QuickAnswer from "@/components/QuickAnswer";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
@@ -118,7 +117,6 @@ export default function CaseStudiesPage() {
             business.
           </p>
         </header>
-        <QuickAnswer q={PAGE_QUICK["case-studies"].q} a={PAGE_QUICK["case-studies"].a} className="cs-quick" />
 
         <div className="hub">
           <Link className="hc lg" href="/case-leadgen">
@@ -224,7 +222,7 @@ export default function CaseStudiesPage() {
         </div>
       </div>
       <IndustryLinks />
-      <PageFaq faqs={PAGE_FAQS["case-studies"]} path="/case-studies" eyebrow="About these results" />
+      <PageFaq faqs={[PAGE_QUICK["case-studies"], ...PAGE_FAQS["case-studies"]]} path="/case-studies" eyebrow="About these results" />
       <JournalPreview
         id="journal"
         eyebrow="From the journal"
