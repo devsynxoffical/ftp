@@ -735,7 +735,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "speed-to-lead-automation-gohighlevel-60-second-follow-up",
     metaTitle: "GoHighLevel Speed-to-Lead Workflow: 60-Second Follow-Up",
-    metaDescription: "Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and a 5-day nurture, with copy-paste templates.",
+    metaDescription: "Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and 5-day nurture, with copy-paste templates.",
     keyTakeaways: [
       "Leads contacted within 60 seconds are far more likely to qualify. At a one-hour delay, contact rate falls from 84% to 27%.",
       "Minute one fires three channels in parallel, an SMS, an AI voice call and an email, all triggered by the form submission inside GoHighLevel.",
@@ -1525,7 +1525,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "ai-appointment-setter-voice-agent-cost-setup-results",
     metaTitle: "AI Appointment Setter Cost: Pricing, Setup and Results",
-    metaDescription: "What an AI appointment setter does, what it costs per call and per booking, how to set it up with your CRM and calendar, and results from 60+ live deployments.",
+    metaDescription: "What an AI appointment setter does, what it costs per call and per booking, how to set it up with your CRM and calendar, and results from 60+ deployments.",
     keyTakeaways: [
       "An AI appointment setter is a voice agent that calls a new lead within about 60 seconds, asks two to four qualifying questions, handles objections from a knowledge base and books a slot directly on a rep's calendar.",
       "Typical all-in cost is $0.10 to $0.25 per minute of calling, which works out to $3 to $9 per booked appointment at the contact and booking rates we see, compared with $40 to $120 for a human setter.",

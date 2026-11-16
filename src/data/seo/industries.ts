@@ -824,7 +824,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     keyword: "dental patient funnel",
     serviceType: "Dental patient funnel",
     title: "Dental Patient Funnel for New Patient Bookings",
-    description: "A dental patient funnel for new-patient exams, implants and Invisalign-style consults, with booking, reminders and HIPAA-aware tracking.",
+    description: "A dental patient funnel for new-patient exams, implants and Invisalign-style consults, with online booking, reminders and HIPAA-aware tracking built in.",
     eyebrow: "Funnels for dental practices",
     h1: "A dental patient funnel that fills the new-patient schedule",
     intro:
@@ -1032,7 +1032,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     keyword: "saas demo funnel",
     serviceType: "SaaS demo funnel",
     title: "SaaS Demo Funnel That Books Qualified Demos",
-    description: "A SaaS demo funnel with firmographic qualification, instant routing and demo reminders. Cases include $71,934 in 24 days for an AI SaaS.",
+    description: "A SaaS demo funnel with firmographic qualification, instant routing and demo reminders. Real cases include $71,934 in 24 days for an AI SaaS product.",
     eyebrow: "Funnels for SaaS companies",
     h1: "A SaaS demo funnel that routes qualified buyers straight to a calendar",
     intro:

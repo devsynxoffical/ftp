@@ -35,7 +35,7 @@ export const PLAN_POSTS_D: BlogPost[] = [
   {
     slug: "facebook-ads-cost-per-lead-benchmarks",
     metaTitle: "Facebook Ads Cost Per Lead: Benchmarks From Real Campaigns",
-    metaDescription: `Facebook ads cost per lead benchmarks from ${N} real Meta campaigns: median ${money(MEDIAN)}, ranges by industry, what a good CPL is and why it rises.`,
+    metaDescription: `Facebook ads cost per lead benchmarks from ${N} real Meta campaigns: median ${money(MEDIAN)}, ranges by industry, what a good CPL is, why it rises and how to fix it.`,
     keyTakeaways: [
       `Across ${N} published Meta (Facebook and Instagram) lead generation campaigns, the median cost per lead was ${money(MEDIAN)}, with a range from ${money(LOW)} to ${money(HIGH)}.`,
       `In the ${FULL.length} campaigns that published both spend and lead count, ${money(SPEND)} bought ${int(LEADS)} leads, a blended cost per lead of ${money(WEIGHTED)}.`,

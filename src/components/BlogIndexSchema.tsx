@@ -30,7 +30,7 @@ export default function BlogIndexSchema() {
         name: "Funnels That Print Journal: AI Sales Funnels, Automation and Tracking",
         url: `${BASE_URL}/blog`,
         description:
-          "Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnel strategy.",
+          "Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnels, backed by client data.",
         isPartOf: { "@id": `${BASE_URL}/#website` },
         inLanguage: "en-US",
         mainEntity: {
