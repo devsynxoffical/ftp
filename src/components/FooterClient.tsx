@@ -1,0 +1,315 @@
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
+
+export interface FooterLink {
+  href: string;
+  label: string;
+}
+
+/**
+ * Interactive part of the footer. The guide and industry links are passed in
+ * from the server component in Footer.tsx, so the blog and case data never
+ * ship to the browser.
+ */
+
+export default function FooterClient({
+  latestGuides,
+  industries,
+}: {
+  latestGuides: FooterLink[];
+  industries: FooterLink[];
+}) {
+  const footRef = useRef<HTMLElement>(null);
+  const fwRef = useRef<HTMLDivElement>(null);
+  const fstartRef = useRef<HTMLAnchorElement>(null);
+  const [subscribed, setSubscribed] = useState(false);
+
+  useEffect(() => {
+    const foot = footRef.current;
+    const fw = fwRef.current;
+    const fstart = fstartRef.current;
+    if (!foot || !fw || !fstart) return;
+
+    // Split text into spans for staggered hover effect
+    const text = "Start a project";
+    // Each word is wrapped so a line break can only happen between words,
+    // never between the letter spans of one word.
+    fw.innerHTML = text
+      .split(" ")
+      .map(
+        (word) =>
+          `<span class="fwrd">${[...word]
+            .map((c) => `<span>${c}</span>`)
+            .join("")}</span>`
+      )
+      .join(" ");
+
+    const fit = () => {
+      fw.style.fontSize = "100px";
+      const cs = getComputedStyle(fstart);
+      const arr = fstart.querySelector(".arr");
+      const arrWidth = arr ? arr.getBoundingClientRect().width : 90;
+      const av =
+        fstart.clientWidth -
+        parseFloat(cs.paddingLeft) -
+        parseFloat(cs.paddingRight) -
+        arrWidth -
+        30;
+      const calculated = Math.max(
+        28,
+        Math.min(220, Math.floor(100 * (av / fw.scrollWidth)))
+      );
+      fw.style.fontSize = `${calculated}px`;
+    };
+
+    fit();
+    window.addEventListener("resize", fit);
+    if (document.fonts) {
+      document.fonts.ready.then(fit);
+    }
+
+    // Pointer move radial glow
+    let mx = 0;
+    let my = 0;
+    let ticking = false;
+
+    const onPointerMove = (e: PointerEvent) => {
+      mx = e.clientX;
+      my = e.clientY;
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(() => {
+          ticking = false;
+          const r = foot.getBoundingClientRect();
+          foot.style.setProperty("--mx", `${mx - r.left}px`);
+          foot.style.setProperty("--my", `${my - r.top}px`);
+        });
+      }
+    };
+
+    foot.addEventListener("pointermove", onPointerMove);
+
+    return () => {
+      window.removeEventListener("resize", fit);
+      foot.removeEventListener("pointermove", onPointerMove);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    const globalLenis = (window as unknown as { lenis?: { scrollTo: (y: number, opts: object) => void } }).lenis;
+    if (globalLenis) {
+      globalLenis.scrollTo(0, { duration: 1.6 });
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    setSubscribed(true);
+  };
+
+  return (
+    <footer className="foot" id="foot" ref={footRef}>
+      <a
+        className="fstart"
+        href="mailto:info@funnelsthatprint.com"
+        id="fstart"
+        ref={fstartRef}
+      >
+        <div className="fw" id="fw" ref={fwRef}>
+          Start a project
+        </div>
+        <svg className="arr" viewBox="0 0 100 100" aria-hidden="true">
+          <path d="M30 70 L70 30 M40 30 H70 V60" />
+        </svg>
+      </a>
+
+      <div className="fg">
+        <div className="fbr">
+          <div>
+            <div className="mk">
+              FTP<sup>&reg;</sup>
+            </div>
+            <div className="ico">
+              <a href="#top" aria-label="Home">
+                &#10033;
+              </a>
+              <a href="#services" aria-label="Services">
+                &#9673;
+              </a>
+              <Link href="/case-studies" aria-label="Case studies">
+                &lt;/&gt;
+              </Link>
+            </div>
+          </div>
+          <div>
+            <p className="fbrh">
+              Funnels, automation, follow-up and AI calling, built around booked
+              calls.
+            </p>
+            <div className="cp">
+              &copy; 2026 Funnels That Print. All rights reserved.
+            </div>
+          </div>
+        </div>
+
+        <nav className="flk" aria-label="Footer">
+          <Link href="/#services">
+            Services <i>&#8599;</i>
+          </Link>
+          <Link href="/#process">
+            Process <i>&#8599;</i>
+          </Link>
+          <Link href="/case-studies">
+            Case studies <i>&#8599;</i>
+          </Link>
+          <Link href="/#pricing">
+            Pricing <i>&#8599;</i>
+          </Link>
+          <Link href="/blog">
+            Journal <i>&#8599;</i>
+          </Link>
+          <Link href="/book-a-call">
+            Book a call <i>&#8599;</i>
+          </Link>
+          <Link href="/contact">
+            Contact <i>&#8599;</i>
+          </Link>
+        </nav>
+
+        <div className="ffl fjournal">
+          <span className="fh">Latest guides</span>
+          {latestGuides.map((g) => (
+            <Link key={g.href} href={g.href}>
+              {g.label}
+            </Link>
+          ))}
+        </div>
+
+        <div className="ffl">
+          <span className="fh">Company</span>
+          <Link href="/about">About us</Link>
+          <Link href="/team/gaurav-kapoor">Gaurav Kapoor</Link>
+          <Link href="/team/rahul-kapoor">Rahul Kapoor</Link>
+          <Link href="/book-a-call">Book a call</Link>
+        </div>
+
+        <div className="fnl">
+          <div className="gh" aria-hidden="true">
+            Stay ahead
+          </div>
+          <img
+            className="env"
+            src="/img/x/envelope.webp"
+            alt=""
+            loading="lazy"
+          />
+          <div className="nb">
+            <span className="fh">Newsletter</span>
+            <p>
+              Subscribe for funnel teardowns and new case studies, once a
+              month.
+            </p>
+          </div>
+          <form id="nl" onSubmit={handleSubscribe}>
+            {subscribed ? (
+              <span style={{ padding: "13px 18px", color: "var(--lime)" }}>
+                Thanks, you are on the list.
+              </span>
+            ) : (
+              <>
+                <input
+                  id="nl-e"
+                  type="email"
+                  placeholder="Your Email"
+                  required
+                />
+                <button type="submit">Join</button>
+              </>
+            )}
+          </form>
+        </div>
+      </div>
+
+      <div className="fdir">
+        <nav aria-label="Services">
+          <span className="fdh">Services</span>
+          <ul>
+            {[
+              ["/sales-funnel-agency", "Done-for-you funnels"],
+              ["/gohighlevel-agency", "GoHighLevel agency"],
+              ["/ai-agents", "AI agents"],
+              ["/ai-voice-agents", "AI voice agents"],
+              ["/ai-receptionist", "AI receptionist"],
+              ["/facebook-ads-agency", "Facebook ads"],
+              ["/ai-appointment-setter", "AI appointment setter"],
+              ["/speed-to-lead", "Speed to lead"],
+              ["/vsl-funnels", "VSL funnels"],
+              ["/meta-conversions-api-setup", "Meta CAPI setup"],
+              ["/hire-gohighlevel-expert", "Hire a GoHighLevel expert"],
+              ["/lead-generation-agency-dubai", "Lead generation in Dubai"],
+              ["/services", "All services"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-label="Resources">
+          <span className="fdh">Resources</span>
+          <ul>
+            {[
+              ["/funnels-for", "Funnels by industry"],
+              ["/locations", "Locations"],
+              ["/case-studies", "Case studies"],
+              ["/tools", "Free calculators"],
+              ["/templates", "Free templates"],
+              ["/compare", "Comparisons"],
+              ["/glossary", "Glossary"],
+              ["/blog", "Journal"],
+            ].map(([href, label]) => (
+              <li key={href}>
+                <Link href={href}>{label}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <nav aria-label="Case studies by industry" className="fdir-wide">
+          <span className="fdh">Case studies by industry</span>
+          <ul>
+            {industries.map((i) => (
+              <li key={i.href}>
+                <Link href={i.href}>{i.label}</Link>
+              </li>
+            ))}
+            <li>
+              <Link href="/case-studies/all">All case studies</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div className="freach">
+        <div>
+          <span className="fh">Direct reach</span>
+          <a className="femail" href="mailto:info@funnelsthatprint.com">
+            info@funnelsthatprint.com
+          </a>
+        </div>
+        <div className="fmeta">
+          <span>Available for select projects</span>
+          <span>Based in Dubai &amp; global</span>
+          <button type="button" id="ftop" onClick={scrollToTop}>
+            Back to top &uarr;
+          </button>
+        </div>
+      </div>
+    </footer>
+  );
+}
