@@ -477,7 +477,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     ],
     quick: {
       q: "What ROAS do supplement and fitness brands achieve?",
-      a: "Documented supplement and fitness cases run from about 3.6x to 4.8x ROAS. Highlights include $192,000 per month at 4.7x, a $156,000 fitness scale at 4.8x, $137,620 in 30 days at 4.6x, $102,000 at 4.2x and $62,182 at 4.5x. Subscriptions and compliant direct-response creative drive most of these results.",
+      a: "Documented supplement and fitness cases run from about 3.6x to 4.8x ROAS. Highlights include $166,173 in one month at 4.7x, a $156,000 fitness scale at 4.8x, $137,620 in 30 days at 4.6x, $102,000 at 4.2x and $62,182 at 4.5x. Subscriptions and compliant direct-response creative drive most of these results.",
     },
     faqs: [
       { q: "How do you keep supplement ads compliant?", a: "Creative avoids medical and prohibited claims and focuses on routine, ingredients and customer experience. Ads do not promise to treat, cure or prevent conditions, avoid before-and-after weight-loss imagery and steer clear of language that calls out personal attributes. The brand reviews ingredient claims against its own substantiation before anything goes live." },

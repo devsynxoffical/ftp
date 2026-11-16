@@ -84,4 +84,15 @@ export const CASE_DASHBOARDS: Record<string, CaseDashboard> = {
     note: "This single ad returned $3.71 in purchase value for every $1 of spend over the month; the other ads in the table are smaller.",
     reviewed: "2026-11-16",
   },
+  DbCVqzFhiLU: {
+    source: "Meta Ads Manager table totals shown in the video (amounts in euros)",
+    rows: [
+      { label: "Amount spent", value: "\u20ac59,254.77" },
+      { label: "Purchase conversion value", value: "\u20ac126,168.44" },
+      { label: "Purchases", value: "1,523" },
+      { label: "Average purchase ROAS", value: "2.13x" },
+    ],
+    note: "Purchase value divided by spend is about 2.13x, and the average cost per purchase works out to about \u20ac38.91.",
+    reviewed: "2026-11-16",
+  },
 };

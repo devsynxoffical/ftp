@@ -149,7 +149,7 @@ export const PAGE_QUICK: Record<string, PageFaqItem> = {
   },
   "case-ecom": {
     q: "What ROAS do these eCommerce brands achieve?",
-    a: "Most documented eCommerce and DTC cases scale at roughly 4x to 5x ROAS on Meta. Highlights include $2,300,000 scaled at 11.6x, $1,000,000+ at 4.6x, $449,221 in 49 days, $340,000 for a skincare brand at 5.4x and $192,000 per month for a supplement brand at 4.7x, with screenshots from each ad account.",
+    a: "Most documented eCommerce and DTC cases scale at roughly 4x to 5x ROAS on Meta. Highlights include $2,300,000 scaled at 11.6x, $1,000,000+ at 4.6x, $449,221 in 49 days, $340,000 for a skincare brand at 5.4x and $166,173 in one month for a supplement brand at 4.7x, with screenshots from each ad account.",
   },
   scalelowticket: {
     q: "What does a low ticket funnel agency build?",
