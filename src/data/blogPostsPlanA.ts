@@ -7,7 +7,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     metaTitle: "How Much Does a Sales Funnel Cost? 2026 Pricing Guide",
     metaDescription: "How much does a sales funnel cost in 2026? Honest ranges for DIY, freelancers and agencies, what drives the price, and our fixed $999 to $1,999 builds.",
     keyTakeaways: [
-      "A sales funnel costs anywhere from a monthly software fee for a DIY build to five figures plus a retainer from a full-service agency. The build fee is rarely the biggest number; ad spend and lost leads are.",
+      "A sales funnel costs $0 beyond software if you build it yourself, a few hundred to a few thousand dollars from a freelancer, and several thousand to five figures, often plus a monthly retainer, from a full-service agency. The build fee is rarely the biggest number; ad spend and lost leads are.",
       "Price is driven by five things: copy, number of pages, CRM and automation depth, tracking, and who owns the result after launch.",
       "Funnels That Print builds on fixed, one-time pricing: $999 for design only, $1,499 for design, copy and full build, and $1,999 for the complete suite with CRM, automation, AI booking agent and tracking.",
       "Judge cost against payback. A funnel that lifts lead-to-booking 2.4x or recovers 112% of ad spend on day zero pays for itself in weeks, while a cheap funnel with no follow-up quietly burns budget.",
@@ -18,7 +18,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     category: "Funnel Architecture",
     author: AUTHORS.gaurav,
     publishedAt: "2026-11-05",
-    updatedAt: "2026-11-05",
+    updatedAt: "2026-11-17",
     readTime: "10 min read",
     image: "/img/blog/how-much-does-a-sales-funnel-cost.jpg",
     imageAlt: "Notebook with a funnel budget worksheet next to a laptop showing a landing page, a checkout page and a CRM pipeline",
@@ -83,7 +83,7 @@ export const PLAN_POSTS_A: BlogPost[] = [
     contentHtml: `
 <section id="what-you-pay-for">
   <h2>1. What You Are Actually Paying For</h2>
-  <p><strong>How much does a sales funnel cost?</strong> The honest answer is that it depends less on the pages and more on everything around them. A sales funnel is the full path from ad click to sale: the landing page or quiz, the offer, the checkout or booking calendar, the follow-up that reaches the lead, and the tracking that tells your ad platform which leads became customers. A quote that only covers pages is pricing a fraction of the system.</p>
+  <p><strong>How much does a sales funnel cost?</strong> Building it yourself costs $0 beyond a funnel builder subscription, a freelancer typically charges a few hundred to a few thousand dollars, and a full-service agency charges several thousand to five figures, often with a monthly retainer. Our fixed builds are $999 to $1,999 one-time. Where you land depends less on the pages and more on everything around them. A sales funnel is the full path from ad click to sale: the landing page or quiz, the offer, the checkout or booking calendar, the follow-up that reaches the lead, and the tracking that tells your ad platform which leads became customers. A quote that only covers pages is pricing a fraction of the system.</p>
   <p>Since 2019 we have built and documented more than 275 client results, from $5 roofing leads to a <a href="/milliondollarcasestudy">$1.52M high-ticket consulting funnel</a>. The funnels that paid back fastest were rarely the most expensive. They were the ones where the build included the parts that most quotes leave out: instant follow-up, reminders and server-side tracking.</p>
   <p>If you are new to the terminology, our <a href="/glossary/sales-funnel">sales funnel glossary entry</a> explains each stage. This guide focuses on money: what each option costs, what drives the number up, and how to judge whether a funnel is worth it before you sign anything.</p>
 </section>
