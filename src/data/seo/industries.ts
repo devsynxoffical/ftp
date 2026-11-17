@@ -312,19 +312,31 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/real-estate",
     kind: "industry",
-    keyword: "real estate lead funnel",
+    keyword: "real estate lead generation",
     serviceType: "Real estate lead funnel",
-    title: "Real Estate Lead Funnel for Buyers and Sellers",
-    description: "A real estate lead funnel with separate buyer and seller paths, home value and pre-approval qualifiers, and fast agent follow-up. Cases from $11.57.",
+    title: "Real Estate Lead Generation Funnel for Buyers and Sellers",
+    description: "Real estate lead generation with a funnel that splits buyers and sellers, qualifies on home value and pre-approval, and books agents fast. Cases from $11.57.",
     eyebrow: "Funnels for real estate agents",
-    h1: "A real estate lead funnel that separates buyers, sellers and browsers",
+    h1: "A real estate lead generation funnel that separates buyers, sellers and browsers",
     intro:
-      "A <strong>real estate lead funnel</strong> has to cope with the longest and messiest buying cycle of any industry we serve. Most people who click a listing ad are months away from moving. The funnel's job is to find the ones who are ready now, keep the rest warm, and get both to an agent without the agent spending hours on cold calls. Our real estate cases range from $11.57 to $28 per lead.",
+      "A <strong>real estate lead generation funnel</strong> has to cope with the longest and messiest buying cycle of any industry we serve. Most people who click a listing ad are months away from moving. The funnel's job is to find the ones who are ready now, keep the rest warm, and get both to an agent without the agent spending hours on cold calls. Our real estate cases range from $11.57 to $28 per lead.",
     quick: {
       q: "How should a real estate lead funnel be structured?",
       a: "Split it into a seller path and a buyer path. Sellers get a home value estimate in exchange for address and timeline. Buyers get a curated listings or first-time buyer guide and answer questions about price range, area and pre-approval. Both feed a CRM that calls hot leads instantly and nurtures the rest for months.",
     },
     sections: [
+      {
+        h2: "Real estate lead generation: the main sources compared",
+        html: `<p>Agents and teams usually mix several lead sources. They differ in what each lead costs you, whether other agents receive the same contact, and how ready the person is to transact.</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>How you pay</th><th>Is the lead yours alone?</th><th>Typical readiness</th></tr></thead><tbody>
+<tr><td>Portal leads (listing sites)</td><td>Monthly spend or a referral fee at closing</td><td>Depends on the program</td><td>Often active buyers asking about one listing</td></tr>
+<tr><td>Sphere, past clients and referrals</td><td>Time and staying in touch</td><td>Yes</td><td>High, but limited volume</td></tr>
+<tr><td>Open houses</td><td>Time</td><td>Yes</td><td>Mixed: neighbors, browsers and serious buyers</td></tr>
+<tr><td>Google search ads and local SEO</td><td>Per click, or content over time</td><td>Yes</td><td>High intent, more competition in big metros</td></tr>
+<tr><td>Meta ads into your own funnel</td><td>Per impression</td><td>Yes</td><td>Earlier in the journey, so follow-up decides the result</td></tr>
+</tbody></table></div>
+<p>Meta ads into your own funnel give you the most volume you control, but those leads are often months from a move. That is why the funnel below separates sellers from buyers and runs a long follow-up instead of handing every form to an agent the same day.</p>`,
+      },
       {
         h2: "Seller and buyer paths",
         html: `<div class="table-wrap"><table><thead><tr><th></th><th>Seller path</th><th>Buyer path</th></tr></thead><tbody>
@@ -394,6 +406,18 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     },
     sections: [
       {
+        h2: "Mortgage leads: buying them vs generating your own",
+        html: `<p>Loan officers get leads from vendors, referral partners, their own past clients and their own ads. The question that matters is who else is calling the same borrower, and how much you know before you dial.</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>Is the lead yours alone?</th><th>What you know up front</th><th>Main risk</th></tr></thead><tbody>
+<tr><td>Shared vendor leads</td><td>No, several lenders may call</td><td>What the vendor's form asked</td><td>Racing other lenders on speed and rate</td></tr>
+<tr><td>Exclusive or aged vendor leads</td><td>Exclusive, or no longer fresh</td><td>Varies by vendor</td><td>Price per lead, and contact rates on older data</td></tr>
+<tr><td>Realtor and builder referrals</td><td>Yes</td><td>Context from the referrer</td><td>Volume depends on the relationships</td></tr>
+<tr><td>Past clients and refinance database</td><td>Yes</td><td>Loan history</td><td>Only valuable when rates move</td></tr>
+<tr><td>Your own Meta or Google ads</td><td>Yes</td><td>Every qualifier you choose to ask</td><td>Needs verification and compliant consent</td></tr>
+</tbody></table></div>
+<p>Generating your own leads costs more setup but gives you exclusive borrowers and the questions you need. The funnel below adds phone verification and TCPA-ready consent, so the leads you pay for can be called with confidence.</p>`,
+      },
+      {
         h2: "Purchase and refinance qualifiers",
         html: `<p>The quiz forks on the first question, loan purpose, because purchase and refinance borrowers need different information:</p>
 <ul>
@@ -454,6 +478,18 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       a: "It asks age range, state, coverage amount wanted, who the coverage is for and basic health screening in plain language, then verifies the phone number. Prospects who fit the product book a call or receive an instant callback. Every lead carries a stored consent record covering calls and texts from your agency.",
     },
     sections: [
+      {
+        h2: "Insurance leads: the sources agents use",
+        html: `<p>Final expense and life agents typically work from bought leads, inbound calls, direct mail responses, referrals or their own ads. Each source trades cost against exclusivity and contact rate.</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>Is the lead yours alone?</th><th>Main risk</th></tr></thead><tbody>
+<tr><td>Bought shared leads</td><td>No</td><td>Several agents call the same person within minutes</td></tr>
+<tr><td>Pay-per-call inbound</td><td>Usually yes</td><td>Cost per call and call quality vary by vendor</td></tr>
+<tr><td>Direct mail responses</td><td>Yes</td><td>Slow turnaround and print and postage costs</td></tr>
+<tr><td>Referrals and existing policyholders</td><td>Yes</td><td>Limited volume</td></tr>
+<tr><td>Your own Meta ads with an eligibility quiz</td><td>Yes</td><td>Needs verified phone numbers and consent wording</td></tr>
+</tbody></table></div>
+<p>Running your own ads gives you exclusive, pre-qualified leads, as long as the funnel checks eligibility and verifies the phone number before an agent dials. That is the funnel described on this page.</p>`,
+      },
       {
         h2: "The final expense pattern",
         html: `<p>Final expense buyers are typically older, phone-first and cautious. The funnel is short and plain:</p>
@@ -857,19 +893,31 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/dentists",
     kind: "industry",
-    keyword: "dental patient funnel",
+    keyword: "dental marketing",
     serviceType: "Dental patient funnel",
-    title: "Dental Patient Funnel for New Patient Bookings",
-    description: "A dental patient funnel for new-patient exams, implants and Invisalign-style consults, with online booking, reminders and HIPAA-aware tracking built in.",
+    title: "Dental Marketing Funnel for New Patient Bookings",
+    description: "Dental marketing that books new patients: a funnel for exams, implants and clear aligner consults, with online booking, reminders and HIPAA-aware tracking.",
     eyebrow: "Funnels for dental practices",
-    h1: "A dental patient funnel that fills the new-patient schedule",
+    h1: "A dental marketing funnel that fills the new-patient schedule",
     intro:
-      "A <strong>dental patient funnel</strong> needs to do two different jobs: fill hygiene chairs with new-patient exams and book consultations for high-value treatments such as implants or clear aligners. To be upfront, we do not have published dental case studies. The structure below comes from our work with comparable appointment-based local health businesses, chiefly med spas, and the proof on this page comes from those clients.",
+      "A <strong>dental marketing funnel</strong> needs to do two different jobs: fill hygiene chairs with new-patient exams and book consultations for high-value treatments such as implants or clear aligners. To be upfront, we do not have published dental case studies. The structure below comes from our work with comparable appointment-based local health businesses, chiefly med spas, and the proof on this page comes from those clients.",
     quick: {
       q: "How does a dental patient funnel work?",
       a: "An ad offers either a new-patient exam or a free consultation for a specific treatment. A short page explains the offer, insurance acceptance and location, then a booking calendar or callback request captures the patient. Instant confirmation, three-channel reminders and recall automation protect the schedule and bring patients back every six months.",
     },
     sections: [
+      {
+        h2: "Dental marketing: where new patients come from",
+        html: `<p>Most practices draw new patients from five channels. Each fits a different kind of patient, so the right mix depends on whether you want to fill hygiene chairs or sell high-value treatment.</p>
+<div class="table-wrap"><table><thead><tr><th>Channel</th><th>Best for</th><th>What decides the result</th></tr></thead><tbody>
+<tr><td>Google Business Profile and maps</td><td>Patients searching "dentist near me"</td><td>Reviews, photos and hours kept current</td></tr>
+<tr><td>Google search ads</td><td>Urgent needs and named treatments</td><td>Answering the phone and booking on the first call</td></tr>
+<tr><td>Meta ads into a funnel</td><td>Implants, aligners and new-patient exam offers</td><td>A clear offer, a short booking path and reminders</td></tr>
+<tr><td>Insurance networks and referrals</td><td>Steady routine care</td><td>Being listed and keeping referrers informed</td></tr>
+<tr><td>Recall of existing patients</td><td>Hygiene visits and follow-up treatment</td><td>Automated reminders that patients actually read</td></tr>
+</tbody></table></div>
+<p>Search and maps capture people already looking for a dentist. Meta ads create demand for treatments people postpone, which is why this page focuses on the funnel behind them: separate offers for routine care and high-value consults, then booking and reminders that protect the show rate.</p>`,
+      },
       {
         h2: "Two funnels, not one",
         html: `<div class="table-wrap"><table><thead><tr><th></th><th>New-patient funnel</th><th>Treatment consult funnel</th></tr></thead><tbody>
