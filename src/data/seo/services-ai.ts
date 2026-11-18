@@ -284,7 +284,7 @@ export const AI_SERVICE_PAGES: SeoPage[] = [
         h2: "Consent, opt-outs and SMS registration",
         html: `<p>Reactivation is where compliance matters most, because the contacts are not expecting you. In general terms:</p>
 <ul>
-<li><strong>Consent:</strong> in the US, the TCPA restricts automated and prerecorded or artificial-voice calls and texts to people who have not given the right kind of consent, and the FCC has treated AI-generated voices as artificial voices. We only include contacts with a documented consent source, and we exclude anyone on your internal do-not-contact list.</li>
+<li><strong>Consent:</strong> in the US, the TCPA restricts automated and prerecorded or artificial-voice calls and texts to people who have not given the right kind of consent, and the <a href="https://docs.fcc.gov/public/attachments/DOC-400393A1.pdf" target="_blank" rel="noopener noreferrer">FCC has treated AI-generated voices</a> as artificial voices. We only include contacts with a documented consent source, and we exclude anyone on your internal do-not-contact list.</li>
 <li><strong>A2P 10DLC:</strong> US carriers expect business texting from standard local numbers to be registered, with a brand and campaign description. Unregistered traffic is likely to be filtered or blocked, so registration comes before the first send.</li>
 <li><strong>Opt-outs:</strong> every first message explains how to stop, and STOP, unsubscribe or do-not-call replies are processed instantly across SMS and voice.</li>
 <li><strong>Timing:</strong> messages and calls go out in reasonable local hours.</li>

@@ -4,9 +4,12 @@ import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { FEATURED_CASES } from "@/data/siteContent";
-import { getCaseHref } from "@/data/casePages";
 
-export default function FeaturedCases() {
+/**
+ * Case links are worked out on the server (see app/page.tsx) and passed in,
+ * so the full case-study dataset is not bundled for the browser.
+ */
+export default function FeaturedCases({ hrefs }: { hrefs: Record<string, string> }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeModalIndex, setActiveModalIndex] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
@@ -162,7 +165,7 @@ export default function FeaturedCases() {
                     <span>{cs.metricLabel}</span>
                   </div>
 
-                  <Link className="btn v" href={getCaseHref(cs.slug)}>
+                  <Link className="btn v" href={hrefs[cs.slug]}>
                     View full case study <i>&#8599;</i>
                   </Link>
                 </div>
@@ -203,7 +206,7 @@ export default function FeaturedCases() {
                 </div>
                 <Link
                   className="btn v case-modal-btn"
-                  href={getCaseHref(FEATURED_CASES[activeModalIndex].slug)}
+                  href={hrefs[FEATURED_CASES[activeModalIndex].slug]}
                   onClick={() => setActiveModalIndex(null)}
                 >
                   Full Case Study <i>&#8599;</i>

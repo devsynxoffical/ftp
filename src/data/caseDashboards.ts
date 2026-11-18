@@ -237,4 +237,37 @@ export const CASE_DASHBOARDS: Record<string, CaseDashboard> = {
     note: "Cost per lead ranged from $16.26 to $31.59 across the ads shown, and the largest ad by spend produced 391 leads at $23.97.",
     reviewed: "2026-11-18",
   },
+  DMoKiPVSxaH: {
+    source: "Meta Ads Manager, July 1 to 28, 2025, with yesterday (July 27, 2025) also shown in the video",
+    rows: [
+      { label: "Amount spent, July 1 to 28", value: "$21,159.01" },
+      { label: "Purchase conversion value, July 1 to 28", value: "$56,645.82" },
+      { label: "Purchases", value: "526" },
+      { label: "Average purchase ROAS", value: "2.68x" },
+      { label: "July 27 alone: spend, value, purchases", value: "$577.74, $2,646.20, 24 (4.58x)" },
+    ],
+    note: "Across the 28 days the cost per purchase was about $40.23, and the single day shown returned well above the period average.",
+    reviewed: "2026-11-18",
+  },
+  C_M4VfOy4s5: {
+    source: "Meta Ads Manager, ads for 6 campaigns (totals row shown in the video)",
+    rows: [
+      { label: "Impressions", value: "148,973" },
+      { label: "Leads", value: "89" },
+      { label: "Cost per lead", value: "$28.42" },
+      { label: "Amount spent", value: "$2,529.32" },
+    ],
+    note: "The ads ran on small daily budgets of $8 to $15 per ad set, and cost per lead across the ads shown ranged from about $12.59 to $90.73.",
+    reviewed: "2026-11-18",
+  },
+  DQl6sBlEsCi: {
+    source: "Meta Ads Manager, ads for 10 campaigns (totals row shown in the video)",
+    rows: [
+      { label: "Amount spent", value: "$5,900.99" },
+      { label: "Results (website leads / registrations)", value: "1,261" },
+      { label: "Top ad: spend and results", value: "$1,208.67 for 252 leads ($4.80 each)" },
+    ],
+    note: "Spend divided by registrations works out to about $4.68 each, in line with the $4 to $5 cost per lead of the top ads.",
+    reviewed: "2026-11-18",
+  },
 };
