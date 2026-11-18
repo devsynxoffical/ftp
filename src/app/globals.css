@@ -3213,6 +3213,7 @@ main:has(> .robo:last-child) + .foot {
   color: var(--or);
   margin-bottom: 10px;
 }
+.arch-card h3,
 .arch-card h4 {
   font-family: var(--disp);
   font-size: 17px;
@@ -3244,6 +3245,7 @@ main:has(> .robo:last-child) + .foot {
   border-radius: 999px;
   margin-bottom: 10px;
 }
+.step-card h3,
 .step-card h4 {
   font-family: var(--disp);
   font-size: 18px;
@@ -3359,7 +3361,7 @@ main:has(> .robo:last-child) + .foot {
     min-height: 300px;
   }
   .post-layout-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
   .post-sidebar-col {
     order: -1;
@@ -4716,7 +4718,7 @@ main {
 .case-body ul{margin:12px 0 0;padding-left:20px;display:grid;gap:6px;color:var(--body);font-size:15px;line-height:1.5}
 .kpt li strong{font-weight:700}
 .case-ig{background:#fff;color:var(--fg);border:1px solid var(--line2)}
-.case-sections{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(16px,2vw,28px);margin-top:clamp(40px,6vw,80px)}
+.case-sections{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(16px,2vw,28px);margin-top:clamp(40px,6vw,80px)}
 .case-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:clamp(20px,2.6vw,34px)}
 .case-card h2,.case-related h2,.case-guides h2,.ih-others h2,.ih-h2{font-family:var(--disp);font-size:clamp(22px,2vw,30px);font-weight:700;letter-spacing:-.03em;line-height:1.15}
 .case-card>p{margin-top:12px;color:var(--body);font-size:16px;line-height:1.6}
@@ -4756,7 +4758,7 @@ main {
 .ind-links a:hover{border-color:var(--or);transform:translateY(-2px)}
 .ind-links b{font-size:15px;font-weight:700;line-height:1.3}
 .ind-links span{flex:none;font-size:12px;font-weight:600;color:var(--mute)}
-@media (max-width:980px){.case-sections{grid-template-columns:1fr}.case-rel-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:980px){.case-sections{grid-template-columns:minmax(0,1fr)}.case-rel-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:640px){.case-rel-grid,.case-guides ul{grid-template-columns:1fr}.kd{grid-template-columns:1fr}.kd .md{position:relative;top:0}.km{grid-template-columns:1fr 1fr}.kpn{grid-template-columns:1fr}}
 
 /* Author profile pages (/team/<slug>) */
@@ -5043,7 +5045,8 @@ main {
 .case-quick p{margin-top:8px;font-size:15.5px;line-height:1.65;color:var(--fg)}
 .case-dash table{width:100%;border-collapse:collapse;margin-top:14px;font-size:15.5px}
 .case-dash th,.case-dash td{padding:11px 4px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.case-dash td{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;white-space:nowrap}
+.case-dash td{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.case-dash th{width:52%}
 .case-dash th{font-weight:500;color:var(--body)}
 .case-dash .case-dash-src{font-size:14px;color:var(--mute,#777)}
 .case-bench ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
