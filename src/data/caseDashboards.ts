@@ -270,4 +270,37 @@ export const CASE_DASHBOARDS: Record<string, CaseDashboard> = {
     note: "Spend divided by registrations works out to about $4.68 each, in line with the $4 to $5 cost per lead of the top ads.",
     reviewed: "2026-11-18",
   },
+  CgvlkTVBTDj: {
+    source: "Shopify analytics for July 1 to 31, 2022, recorded on August 2, 2022",
+    rows: [
+      { label: "Gross orders, July 2022", value: "$172,434.56" },
+      { label: "Returns", value: "-$12,490.47" },
+      { label: "Total sales, July 2022", value: "$159,944.09" },
+      { label: "Orders, July 2022", value: "3,122" },
+      { label: "Total sales on August 2, 2022 (morning)", value: "$5,347.89 (105 orders)" },
+    ],
+    note: "July total sales averaged about $51 per order, and returns took about 7.2% off gross orders.",
+    reviewed: "2026-11-18",
+  },
+  CaF8d61BZSO: {
+    source: "Shopify Live View, single day, recorded during the day",
+    rows: [
+      { label: "Total sales so far that day", value: "$6,319.84" },
+      { label: "Total orders", value: "112" },
+      { label: "Total sessions", value: "901" },
+      { label: "Visitors on site at that moment", value: "3" },
+    ],
+    note: "About 12.4% of sessions that day had converted to an order at the time of recording, at roughly $56 per order.",
+    reviewed: "2026-11-18",
+  },
+  CaZWmNEMev9: {
+    source: "Shopify Live View, single day, recorded with about 12 hours of the day left",
+    rows: [
+      { label: "Total sales so far that day", value: "$3,873.37" },
+      { label: "Total orders", value: "46" },
+      { label: "Total sessions", value: "67" },
+    ],
+    note: "This is a mid-day snapshot, so it does not show the full day; orders averaged about $84 at that point.",
+    reviewed: "2026-11-18",
+  },
 };
