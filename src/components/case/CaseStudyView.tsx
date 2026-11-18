@@ -226,7 +226,7 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
             </section>
             {CASE_DASHBOARDS[page.id] && (
               <section className="case-card case-dash" aria-labelledby="case-dash-h">
-                <h2 id="case-dash-h">What the dashboard in the video shows</h2>
+                <h2 id="case-dash-h">{video ? "What the dashboard in the video shows" : "What the dashboard screenshot shows"}</h2>
                 <p className="case-dash-src">Source: {CASE_DASHBOARDS[page.id].source}.</p>
                 <table>
                   <tbody>
