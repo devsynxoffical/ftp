@@ -58,7 +58,7 @@ export const AI_NICHE_PAGES: SeoPage[] = [
       {
         h2: "CRM sync, consent and AI disclosure",
         html: `<p>We connect the agent to <strong>Follow Up Boss</strong> or <strong>GoHighLevel</strong>, so every call creates or updates the contact, adds the answers as fields, attaches a transcript summary and moves the lead to the right stage. Agents see one record, not two systems.</p>
-<p>Outbound AI calls to mobile numbers fall under the TCPA in the US, and the FCC treats AI-generated voices as artificial voices, so the lead form must capture clear consent to be contacted by automated and AI calls and texts. We check your form language, honor quiet hours and opt-outs, and have the agent state that it is an AI assistant in its opening line. Your broker or attorney should approve the final consent text. For the funnel side, see <a href="/funnels-for/real-estate">real estate funnels</a>.</p>`,
+<p>Outbound AI calls to mobile numbers fall under the TCPA in the US, and the <a href="https://docs.fcc.gov/public/attachments/DOC-400393A1.pdf" target="_blank" rel="noopener noreferrer">FCC treats AI-generated voices as artificial voices</a> (declaratory ruling, February 8, 2024), so the lead form must capture clear consent to be contacted by automated and AI calls and texts. We check your form language, honor quiet hours and opt-outs, and have the agent state that it is an AI assistant in its opening line. Your broker or attorney should approve the final consent text. For the funnel side, see <a href="/funnels-for/real-estate">real estate funnels</a>.</p>`,
       },
     ],
     proof: {

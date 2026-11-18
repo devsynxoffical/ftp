@@ -6,6 +6,8 @@ import ProcessSection from "@/components/ProcessSection";
 import WhoSection from "@/components/WhoSection";
 import PortfolioFoldfolio from "@/components/PortfolioFoldfolio";
 import FeaturedCases from "@/components/FeaturedCases";
+import { FEATURED_CASES } from "@/data/siteContent";
+import { getCaseHref } from "@/data/casePages";
 import RealClientResults from "@/components/RealClientResults";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import TeamSection from "@/components/TeamSection";
@@ -40,7 +42,7 @@ export default function Home() {
       <ProcessSection />
       <WhoSection />
       <PortfolioFoldfolio />
-      <FeaturedCases />
+      <FeaturedCases hrefs={Object.fromEntries(FEATURED_CASES.map((c) => [c.slug, getCaseHref(c.slug)]))} />
       <RealClientResults />
       <VideoTestimonials />
       <TeamSection />
