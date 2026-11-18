@@ -112,27 +112,27 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <p>When two quotes differ by ten times, the difference almost always comes from these five line items.</p>
   <div class="step-card">
     <div class="step-badge">Factor 1</div>
-    <h4>Copywriting</h4>
+    <h3>Copywriting</h3>
     <p>Copy is the single biggest variable in conversion and in price. A funnel built on copy you supply is cheaper to quote but often converts worse. Our <a href="/templates/funnel-copy-template">funnel copy template</a> shows the structure we write to if you want to draft it yourself.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Factor 2</div>
-    <h4>Number and type of pages</h4>
+    <h3>Number and type of pages</h3>
     <p>A single opt-in page is quick. A <a href="/vsl-funnels">VSL funnel</a> with an application, a <a href="/quiz-funnels">quiz funnel</a> with branching logic, or a checkout with an order bump and two upsells takes longer to plan, build and test.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Factor 3</div>
-    <h4>CRM and automation depth</h4>
+    <h3>CRM and automation depth</h3>
     <p>Pipeline stages, instant SMS and email, missed-call text-back, round-robin routing and reminder sequences are where most of the build hours go, and where most of the revenue is recovered. See what this covers on our <a href="/crm-automation">CRM automation</a> page.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Factor 4</div>
-    <h4>Tracking</h4>
+    <h3>Tracking</h3>
     <p>Pixel-only tracking is cheap to set up and increasingly unreliable. Server-side events through the <a href="/meta-conversions-api-setup">Meta Conversions API</a> take more work but recovered 31% more events in our builds, which changes what the ad algorithm learns from.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Factor 5</div>
-    <h4>Ownership and retainers</h4>
+    <h3>Ownership and retainers</h3>
     <p>Some agencies build inside their own accounts and charge monthly for access. That lowers the upfront number but raises lifetime cost and makes leaving painful. Ask who owns the funnel, CRM and ad account before you compare prices.</p>
   </div>
 </section>
@@ -705,22 +705,22 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <div class="arch-grid">
     <div class="arch-card">
       <div class="arch-num">Capture</div>
-      <h4>Funnels, sites and forms</h4>
+      <h3>Funnels, sites and forms</h3>
       <p>Landing pages, multi-step forms, surveys, websites and basic checkout.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">Manage</div>
-      <h4>CRM and pipelines</h4>
+      <h3>CRM and pipelines</h3>
       <p>Contacts, opportunities, pipeline stages, tags, custom fields and round-robin assignment.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">Follow up</div>
-      <h4>SMS, email, calls and inbox</h4>
+      <h3>SMS, email, calls and inbox</h3>
       <p>Two-way texting, email, phone numbers, missed-call text-back and one unified conversations inbox.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">Automate</div>
-      <h4>Workflows and calendars</h4>
+      <h3>Workflows and calendars</h3>
       <p>Trigger-based workflows, booking calendars, reminders, review requests and AI features.</p>
     </div>
   </div>
@@ -861,22 +861,22 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <h2>10. Getting Started Without the Mess</h2>
   <div class="step-card">
     <div class="step-badge">Step 1</div>
-    <h4>Design the pipeline before the pages</h4>
+    <h3>Design the pipeline before the pages</h3>
     <p>Seven stages is plenty: New Lead, Contacted, Qualified, Booked, Showed, Won, Lost. Every automation should key off a stage change. Our <a href="/glossary/crm-pipeline">CRM pipeline</a> entry covers the logic.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 2</div>
-    <h4>Build the first-minute workflow</h4>
+    <h3>Build the first-minute workflow</h3>
     <p>SMS, call attempt and email inside 60 seconds, with booking as the workflow goal so everything stops when the lead books. Use our <a href="/templates/sms-follow-up-templates">SMS follow-up templates</a> as a starting point.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 3</div>
-    <h4>Add reminders and tracking</h4>
+    <h3>Add reminders and tracking</h3>
     <p>A three-channel reminder sequence before every call, and server-side events for qualified and booked stages.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 4</div>
-    <h4>Review weekly</h4>
+    <h3>Review weekly</h3>
     <p>Track time to first contact, contact rate, booking rate and show rate. If first contact drifts above 60 seconds, something in the chain has broken.</p>
   </div>
   <p>Our step-by-step <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">60-second follow-up guide</a> walks through the workflow in detail. Or let us build it: our complete suite includes the funnel, CRM, automation, AI booking agent and tracking for $1,999 one-time, live in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> to see if it fits.</p>
@@ -1197,27 +1197,27 @@ export const PLAN_POSTS_A: BlogPost[] = [
   <h2>4. The Page Sequence</h2>
   <div class="step-card">
     <div class="step-badge">Page 1</div>
-    <h4>Sales page</h4>
+    <h3>Sales page</h3>
     <p>Lead with the result, show proof early, explain exactly what the buyer gets, and anchor the price against the value. A short video helps. Our <a href="/templates/funnel-copy-template">funnel copy template</a> has the section order.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 2</div>
-    <h4>Checkout with an order bump</h4>
+    <h3>Checkout with an order bump</h3>
     <p>Use a two-step checkout, contact details then payment, so abandoned carts can be followed up. Add one <a href="/glossary/order-bump">order bump</a>: a complementary item priced around half the front end, sold with a single checkbox.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 3</div>
-    <h4>One-click upsell</h4>
+    <h3>One-click upsell</h3>
     <p>A deeper or faster version of what they just bought, usually a few times the front-end price, purchased without re-entering card details.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 4</div>
-    <h4>Downsell</h4>
+    <h3>Downsell</h3>
     <p>A lighter version for those who declined the upsell. The <a href="/glossary/upsell-and-downsell">upsell and downsell</a> entry explains how to structure the pair.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 5</div>
-    <h4>Thank-you and onboarding</h4>
+    <h3>Thank-you and onboarding</h3>
     <p>Deliver the product, tell buyers what to expect next, and introduce the backend without hard-selling it yet.</p>
   </div>
 </section>

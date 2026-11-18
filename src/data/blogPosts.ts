@@ -197,22 +197,22 @@ export const BLOG_POSTS: BlogPost[] = [
   <div class="arch-grid">
     <div class="arch-card">
       <div class="arch-num">01</div>
-      <h4>Dynamic Intent Capture</h4>
+      <h3>Dynamic Intent Capture</h3>
       <p>High-speed, server-rendered landing pages featuring value-first micro-quizzes or interactive calculators rather than intimidating static application walls.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">02</div>
-      <h4>Autonomous Voice Engagement</h4>
+      <h3>Autonomous Voice Engagement</h3>
       <p>Within 45 seconds of lead submission, an AI voice calling agent dials the prospect, verifies identity, asks qualifying budget/timeline criteria, and handles initial objections.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">03</div>
-      <h4>Multi-Touch Nurturing Matrix</h4>
+      <h3>Multi-Touch Nurturing Matrix</h3>
       <p>Instant SMS confirmation with calendar invite, 3-channel reminder sequences (Email, SMS, voice verification), and dynamic no-show reactivation loops.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">04</div>
-      <h4>Server-Side Feedback Loop (CAPI)</h4>
+      <h3>Server-Side Feedback Loop (CAPI)</h3>
       <p>CRM sends qualified stage events back to Meta &amp; Google ad algorithms with exact match data (fbc, fbp, phone, email hash), training ad platforms to hunt only for buyers.</p>
     </div>
   </div>
@@ -262,27 +262,27 @@ export const BLOG_POSTS: BlogPost[] = [
   <p>If you are looking to deploy an autonomous acquisition engine for your business, here is the exact 5-point implementation roadmap:</p>
   <div class="step-card">
     <div class="step-badge">Phase 1</div>
-    <h4>Offer &amp; Diagnostic Hook Alignment</h4>
+    <h3>Offer &amp; Diagnostic Hook Alignment</h3>
     <p>Condense your value proposition into an interactive assessment or front-door problem solver that gives immediate utility before asking for a calendar booking.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Phase 2</div>
-    <h4>CRM Infrastructure &amp; Dynamic Pipelines</h4>
+    <h3>CRM Infrastructure &amp; Dynamic Pipelines</h3>
     <p>Build unified pipeline stages with zero data lag: New Lead &rarr; Instant Voice Dial &rarr; Qualified &rarr; Booked &rarr; Nurtured &rarr; Closed.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Phase 3</div>
-    <h4>Voice AI Scripting &amp; Guardrails</h4>
+    <h3>Voice AI Scripting &amp; Guardrails</h3>
     <p>Develop conversational prompts focused on 4 essentials: verify identity, qualify budget/urgency, handle top 3 objections, and confirm calendar slot.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Phase 4</div>
-    <h4>Full-Funnel Server-Side Attribution</h4>
+    <h3>Full-Funnel Server-Side Attribution</h3>
     <p>Configure server-side Meta CAPI and Google Tag Manager containers with 1st-party cookie capture to prevent attribution decay.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Phase 5</div>
-    <h4>Continuous Conversion Rate Optimization (CRO)</h4>
+    <h3>Continuous Conversion Rate Optimization (CRO)</h3>
     <p>A/B test landing page headline variants, monitor voice agent call transcripts for friction points, and iteratively lower cost per acquisition.</p>
   </div>
   <p>Not sure whether to lead with a VSL or an interactive front end? Read our split-test data on <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">high-ticket VSL vs. multi-step quiz funnels</a>, or <a href="/book-a-call">book a funnel strategy call</a> and we will map this architecture to your offer.</p>
@@ -673,27 +673,27 @@ export const BLOG_POSTS: BlogPost[] = [
   <h2>4. How to Set Up Meta Conversions API, Step by Step</h2>
   <div class="step-card">
     <div class="step-badge">Step 1</div>
-    <h4>Capture fbc, fbp and the full contact record at opt-in</h4>
+    <h3>Capture fbc, fbp and the full contact record at opt-in</h3>
     <p>Add hidden fields to your form that read the <code>_fbc</code> and <code>_fbp</code> cookies plus the landing URL. Store them on the contact record in your CRM. Without these, server events match on email and phone only, which caps your match quality.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 2</div>
-    <h4>Generate an access token and dataset ID in Events Manager</h4>
+    <h3>Generate an access token and dataset ID in Events Manager</h3>
     <p>In Meta Events Manager, open your pixel (now called a dataset), go to Settings, and generate a Conversions API access token. Note the dataset ID. These are the only two credentials you need.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 3</div>
-    <h4>Fire the Lead event from both pixel and server with a shared event_id</h4>
+    <h3>Fire the Lead event from both pixel and server with a shared event_id</h3>
     <p>On form submit, generate a unique ID, pass it to the pixel's <code>fbq('track','Lead',{},{eventID})</code> call and to the server event's <code>event_id</code>. Meta keeps one and discards the duplicate.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 4</div>
-    <h4>Trigger downstream events from pipeline stage changes</h4>
+    <h3>Trigger downstream events from pipeline stage changes</h3>
     <p>Build a CRM workflow: when a contact moves to "Booked", send a <code>Schedule</code> event via CAPI with hashed email, phone, name, fbc, fbp and the original event time. Repeat for "Qualified" and "Won".</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 5</div>
-    <h4>Verify in Test Events, then switch the optimization event</h4>
+    <h3>Verify in Test Events, then switch the optimization event</h3>
     <p>Use the Test Events tab to confirm each event arrives with a match quality score. Once you see 50 or more Schedule events in a 7-day window, change your campaign's conversion event from Lead to Schedule. Expect a 7 to 14 day learning reset.</p>
   </div>
 </section>
@@ -816,22 +816,22 @@ export const BLOG_POSTS: BlogPost[] = [
   <div class="arch-grid">
     <div class="arch-card">
       <div class="arch-num">0 to 15s</div>
-      <h4>Instant SMS Acknowledgement</h4>
+      <h3>Instant SMS Acknowledgement</h3>
       <p>A personalised text confirming the request, naming the next step and asking one qualifying question.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">15 to 45s</div>
-      <h4>AI Voice Call Attempt</h4>
+      <h3>AI Voice Call Attempt</h3>
       <p>An AI calling agent dials, confirms the request, asks budget and timing, and books directly onto the calendar.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">45 to 60s</div>
-      <h4>Email With Proof and Booking Link</h4>
+      <h3>Email With Proof and Booking Link</h3>
       <p>A short email containing a 60-second video, two relevant <a href="/case-studies">case studies</a>, and the booking link.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">Day 1 to 5</div>
-      <h4>Multi-Channel Nurture</h4>
+      <h3>Multi-Channel Nurture</h3>
       <p>Eight further touches across SMS, call and email for anyone not yet booked, then a soft close.</p>
     </div>
   </div>
@@ -896,27 +896,27 @@ export const BLOG_POSTS: BlogPost[] = [
   <p>If you are still deciding on the platform, our <a href="/blog/gohighlevel-vs-clickfunnels-lead-generation-2026">GoHighLevel vs ClickFunnels comparison</a> explains why the follow-up system below is the reason we build booked-call funnels in GoHighLevel. For the voice call step, the full cost and script breakdown is in the <a href="/blog/ai-appointment-setter-voice-agent-cost-setup-results">AI appointment setter guide</a>.</p>
   <div class="step-card">
     <div class="step-badge">Step 1</div>
-    <h4>Pipeline stages</h4>
+    <h3>Pipeline stages</h3>
     <p>New Lead, Contacted, Qualified, Booked, Showed, Won, Lost. Keep it to seven. Every automation keys off a stage change.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 2</div>
-    <h4>Trigger: form submitted or Facebook lead form received</h4>
+    <h3>Trigger: form submitted or Facebook lead form received</h3>
     <p>One workflow per lead source so you can measure speed and conversion by channel.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 3</div>
-    <h4>Actions in order</h4>
+    <h3>Actions in order</h3>
     <p>Send SMS, wait 20 seconds, trigger AI call via webhook or native voice agent, wait 20 seconds, send email, then branch on "replied", "booked" or "no response".</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 4</div>
-    <h4>Goal events and exits</h4>
+    <h3>Goal events and exits</h3>
     <p>Set "Appointment booked" as the workflow goal so every branch stops instantly when the lead books. Add an opt-out keyword exit.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 5</div>
-    <h4>Report on time-to-first-touch weekly</h4>
+    <h3>Report on time-to-first-touch weekly</h3>
     <p>Add a custom field stamped at submission and at first contact. If the median creeps above 60 seconds, something in the chain is broken.</p>
   </div>
   <p>This stack is part of every funnel we ship. Combined with an <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">interactive diagnostic front end</a>, it is how the <a href="/milliondollarcasestudy">$1.52M consulting funnel</a> brought cost per booked call down from $280 to $112. To have it built for your pipeline in 5 to 10 business days, <a href="/book-a-call">book a strategy call</a>.</p>
@@ -1020,27 +1020,27 @@ export const BLOG_POSTS: BlogPost[] = [
   <p>Platform note: this checkout ran on ClickFunnels with the follow-up in GoHighLevel, the split we recommend for product funnels in our <a href="/blog/gohighlevel-vs-clickfunnels-lead-generation-2026">GoHighLevel vs ClickFunnels comparison</a>.</p>
   <div class="step-card">
     <div class="step-badge">Page 1</div>
-    <h4>Long-form sales page</h4>
+    <h3>Long-form sales page</h3>
     <p>Headline built on the result, a 4-minute video, stacked proof, a clear "what you get" section and the $27 price anchored against the $297 it replaces. Conversion rate from cold Meta traffic: 3.1% to 4.4% depending on the creative.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 2</div>
-    <h4>Two-step checkout with order bump</h4>
+    <h3>Two-step checkout with order bump</h3>
     <p>Contact details first, payment second, so abandoned carts could be recovered. A $17 order bump (a complementary swipe file) was ticked by 41% of buyers.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 3</div>
-    <h4>One-click upsell 1: $97 accelerator</h4>
+    <h3>One-click upsell 1: $97 accelerator</h3>
     <p>A deeper version of the front end with done-for-you assets. Taken by 22% of buyers. No re-entering card details.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 4</div>
-    <h4>Downsell or upsell 2: $47 add-on</h4>
+    <h3>Downsell or upsell 2: $47 add-on</h3>
     <p>Shown to those who declined the $97 offer. Taken by 14% of that group.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Page 5</div>
-    <h4>Thank-you page with onboarding and backend seed</h4>
+    <h3>Thank-you page with onboarding and backend seed</h3>
     <p>Delivered the product, set expectations for the email sequence, and introduced the high-ticket program without selling it yet.</p>
   </div>
   <p>If you are deciding between this structure and a high-ticket application model, our <a href="/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">VSL vs. quiz funnel comparison</a> explains when each wins.</p>
@@ -1372,22 +1372,22 @@ export const BLOG_POSTS: BlogPost[] = [
   <div class="arch-grid">
     <div class="arch-card">
       <div class="arch-num">01</div>
-      <h4>Minute one</h4>
+      <h3>Minute one</h3>
       <p>SMS, AI call and email in parallel from the form trigger. Native in GoHighLevel. External tools in ClickFunnels.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">02</div>
-      <h4>Two-way inbox</h4>
+      <h3>Two-way inbox</h3>
       <p>Replies land in one conversation view and can pause or branch the workflow. GoHighLevel only.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">03</div>
-      <h4>Nurture and reactivation</h4>
+      <h3>Nurture and reactivation</h3>
       <p>5-day unreached sequence, no-show reactivation, 90-day database reactivation. Native in GoHighLevel.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">04</div>
-      <h4>Email broadcasts</h4>
+      <h3>Email broadcasts</h3>
       <p>Both platforms handle newsletters and sequences. ClickFunnels' editor is nicer; GoHighLevel's segmentation is deeper.</p>
     </div>
   </div>
@@ -1623,22 +1623,22 @@ export const BLOG_POSTS: BlogPost[] = [
   <h2>3. Setup: Trigger, CRM, Calendar and Handoff</h2>
   <div class="step-card">
     <div class="step-badge">Step 1</div>
-    <h4>Trigger from the form</h4>
+    <h3>Trigger from the form</h3>
     <p>The lead submits the landing page form. The CRM workflow fires a webhook to the voice platform with the lead's name, phone, form answers and the source campaign. We run this from <a href="/blog/gohighlevel-vs-clickfunnels-lead-generation-2026">GoHighLevel</a> alongside the instant SMS and email, so the lead receives a text a few seconds before the call.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 2</div>
-    <h4>Call window and retries</h4>
+    <h3>Call window and retries</h3>
     <p>Call within 60 seconds during allowed hours. If unanswered, retry at 10 minutes and 2 hours, then hand the lead to the 5-day nurture sequence from the <a href="/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">speed-to-lead stack</a>. Outside allowed hours, send the SMS immediately and queue the call for the morning.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 3</div>
-    <h4>Calendar access</h4>
+    <h3>Calendar access</h3>
     <p>The agent reads live availability from the sales calendar (round-robin across reps if needed) and offers two specific slots rather than asking an open question. Booking writes the appointment, triggers the confirmation SMS and starts the reminder sequence.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Step 4</div>
-    <h4>Write-back and handoff</h4>
+    <h3>Write-back and handoff</h3>
     <p>Every call ends with a structured outcome: qualified or not, answers to each question, objections raised, booked slot, and a two-line summary, written to the contact record and the pipeline stage. If the prospect asks for a human, the agent warm-transfers during business hours or books a callback.</p>
   </div>
 </section>
@@ -1775,22 +1775,22 @@ export const BLOG_POSTS: BlogPost[] = [
   <div class="arch-grid">
     <div class="arch-card">
       <div class="arch-num">01</div>
-      <h4>Storm and hail</h4>
+      <h3>Storm and hail</h3>
       <p>Geo-targeted within days of a weather event. "Hail hit [County] on Tuesday. Free inspection before you file." Highest urgency, highest volume, short window.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">02</div>
-      <h4>Roof age</h4>
+      <h3>Roof age</h3>
       <p>Target homeowners in neighbourhoods built 18 to 30 years ago. "Roofs installed in the 2000s are reaching end of life. Know before it leaks."</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">03</div>
-      <h4>Insurance claims</h4>
+      <h3>Insurance claims</h3>
       <p>"We handle the claim paperwork with you." Educational angle that pre-frames the homeowner to use you as the contractor of record.</p>
     </div>
     <div class="arch-card">
       <div class="arch-num">04</div>
-      <h4>Financing</h4>
+      <h3>Financing</h3>
       <p>"New roof from $X per month, 0% for 12 months." Converts the deferred buyer who knows the roof is due but fears the lump sum.</p>
     </div>
   </div>

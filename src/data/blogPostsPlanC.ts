@@ -323,17 +323,17 @@ export const PLAN_POSTS_C: BlogPost[] = [
   <p>The following are patterns, not client results. Use them as starting structures and measure your own numbers.</p>
   <div class="step-card">
     <div class="step-badge">Pattern 1</div>
-    <h4>Product finder</h4>
+    <h3>Product finder</h3>
     <p><strong>For:</strong> ecommerce stores with more than a handful of products. <strong>Questions:</strong> who it is for, the main goal or problem, preferences such as skin type or size, budget. <strong>Result page:</strong> one primary recommendation with a direct add-to-cart button, plus one alternative. <strong>Follow-up:</strong> an email that repeats the recommendation and a reminder for abandoned carts.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Pattern 2</div>
-    <h4>Assessment or scorecard</h4>
+    <h3>Assessment or scorecard</h3>
     <p><strong>For:</strong> B2B services, agencies and consultants. <strong>Questions:</strong> eight to twelve quick yes-or-no or scale questions about current practices. <strong>Result page:</strong> a score, the two weakest areas and an offer to review the results on a call. <strong>Follow-up:</strong> a short email series based on the lowest-scoring area.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Pattern 3</div>
-    <h4>Calculator</h4>
+    <h3>Calculator</h3>
     <p><strong>For:</strong> offers with a clear financial outcome, such as solar savings, mortgage payments or cost of no-shows. <strong>Questions:</strong> a few numeric inputs. <strong>Result page:</strong> the calculated figure and what it would take to improve it. Our free <a href="/tools/no-show-cost-calculator">no-show cost calculator</a> is an example of the format.</p>
   </div>
 </section>
@@ -541,12 +541,12 @@ export const PLAN_POSTS_C: BlogPost[] = [
   <p>These are patterns we use when scoping, not client results. Measure your own numbers before you scale them.</p>
   <div class="step-card">
     <div class="step-badge">Pattern 1</div>
-    <h4>Quiz first, VSL on the result page</h4>
+    <h3>Quiz first, VSL on the result page</h3>
     <p>A short diagnostic captures and qualifies the lead, then a four to six minute bridge video on the result page explains the mechanism before the calendar. It suits cold traffic that will not watch a long video before giving any information. Our <a href="/quiz-funnels">quiz funnels</a> often use this hybrid.</p>
   </div>
   <div class="step-card">
     <div class="step-badge">Pattern 2</div>
-    <h4>Local service explainer VSL</h4>
+    <h3>Local service explainer VSL</h3>
     <p>A 90-second video from the owner on a lead page for a higher-value local service, such as solar or a cosmetic procedure, followed by a short form and an instant call. The video builds trust before the form; the speed of the call does the rest.</p>
   </div>
 </section>
