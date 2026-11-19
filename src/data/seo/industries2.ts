@@ -197,6 +197,10 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
     },
     sections: [
       {
+        h2: "Looking to hire a sales funnel agency instead?",
+        html: `<p>This page is about how marketing agencies win clients for themselves. If you are a business owner looking for a <a href="/sales-funnel-agency">sales funnel agency</a> to build your own funnel, see our done-for-you service: fixed one-time builds from $999 to $1,999, live in 5 to 10 business days, with CRM automation and tracking in the complete package. You can also <a href="/book-a-call">book a 30-minute strategy call</a> and get a plan and a fixed price within one business day.</p>`,
+      },
+      {
         h2: "Why marketing agencies need a client acquisition funnel",
         html: `<ul>
 <li><strong>Referrals do not scale on demand.</strong> They arrive when they arrive. A funnel lets the agency add sales calls when delivery capacity opens up and pause when it is full.</li>
