@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { submitLead } from "@/lib/submitLead";
+import { track } from "@/lib/track";
 
 export interface FooterLink {
   href: string;
@@ -25,6 +27,7 @@ export default function FooterClient({
   const fwRef = useRef<HTMLDivElement>(null);
   const fstartRef = useRef<HTMLAnchorElement>(null);
   const [subscribed, setSubscribed] = useState(false);
+  const [nlError, setNlError] = useState("");
 
   useEffect(() => {
     const foot = footRef.current;
@@ -106,9 +109,19 @@ export default function FooterClient({
     }
   };
 
-  const handleSubscribe = (e: React.FormEvent) => {
+  const handleSubscribe = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const input = e.currentTarget.elements.namedItem("nl-e") as HTMLInputElement | null;
+    const email = input?.value.trim() || "";
+    if (!email) return;
+    const err = await submitLead({ type: "newsletter", email });
+    if (err) {
+      setNlError(err);
+      return;
+    }
+    setNlError("");
     setSubscribed(true);
+    track("generate_lead", { method: "newsletter_footer", page_path: window.location.pathname });
   };
 
   return (
@@ -223,11 +236,14 @@ export default function FooterClient({
               <>
                 <input
                   id="nl-e"
+                  name="nl-e"
+                  aria-label="Your email"
                   type="email"
                   placeholder="Your Email"
                   required
                 />
                 <button type="submit">Join</button>
+                {nlError && <span role="alert" className="nl-err">{nlError}</span>}
               </>
             )}
           </form>

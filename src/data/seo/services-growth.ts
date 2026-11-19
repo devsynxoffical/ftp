@@ -19,6 +19,7 @@ export const GROWTH_SERVICE_PAGES: SeoPage[] = [
       q: "What does a Facebook ads agency for lead generation do?",
       a: "It plans and runs your Meta campaigns: builds the account structure, produces and tests creative, writes the offer and angles, chooses between instant forms and landing pages, connects the CRM and Conversions API, and scales winners on clear rules. A good one reports on booked calls and revenue, not only on leads and clicks.",
     },
+    gallery: { heading: "Meta ads results from real", slugs: ["roofing-686-leads-at-5-31-cpl", "mortgage-823-leads-at-23-97-cpl", "mva-388k-revenue-on-20k-ad-spend", "shopify-store-2-3m-in-sales-at-11-6x-roas"] },
     sections: [
       {
         h2: "How we structure a Meta ad account",
@@ -91,7 +92,7 @@ export const GROWTH_SERVICE_PAGES: SeoPage[] = [
       { q: "Who owns the ad account and creative?", a: "You do. Campaigns run in your Meta Business Manager and ad account, billed to your card, and the creative we produce is yours to keep. If you stop working with us, the account, pixel data, audiences and ads stay with you and keep running if you choose." },
       { q: "Can you work with a strict ad category like mortgage or insurance?", a: "Yes. Credit, housing and some financial offers fall under Meta's Special Ad Categories, which limit age, gender and detailed targeting. We work within those rules using broad delivery, compliant creative and offers that qualify the buyer on the form or page instead of in the targeting." },
     ],
-    related: ["/meta-conversions-api-setup", "/landing-page-design", "/speed-to-lead", "/case-leadgen", "/case-ecom", "/blog/facebook-lead-ads-vs-funnels", "/tools/cost-per-lead-calculator", "/blog/facebook-ads-cost-per-lead-benchmarks"],
+    related: ["/meta-conversions-api-setup", "/landing-page-design", "/speed-to-lead", "/case-leadgen", "/case-ecom", "/blog/facebook-lead-ads-vs-funnels", "/tools/cost-per-lead-calculator", "/blog/facebook-ads-cost-per-lead-benchmarks", "/lead-generation-agency"],
     parent: HUB,
     updated: U,
   },

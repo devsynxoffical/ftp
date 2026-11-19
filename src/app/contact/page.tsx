@@ -5,12 +5,15 @@ import { LOGOS } from "@/data/siteContent";
 import BookingCta from "@/components/BookingCta";
 import { track } from "@/lib/track";
 import { whatsappHref } from "@/lib/whatsapp";
+import { submitLead } from "@/lib/submitLead";
 
 export default function ContactPage() {
   const [step, setStep] = useState(0);
   const [isSent, setIsSent] = useState(false);
   const [briefText, setBriefText] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [sending, setSending] = useState(false);
+  const [viaEmailApp, setViaEmailApp] = useState(false);
 
   // Step 1: Goal
   const [packageChoice, setPackageChoice] = useState("Design + Copy Build");
@@ -85,8 +88,9 @@ export default function ContactPage() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (sending) return;
     if (!validateStep(1)) {
       setStep(1);
       return;
@@ -102,14 +106,32 @@ Also: ${extras.join(", ")}
 Reach via: ${reachVia}
 
 ${msg.trim()}`;
-
-    track("generate_lead", { method: "contact_form", page_path: "/contact", package: packageChoice, ad_spend: spend });
     setBriefText(body);
+    setSending(true);
 
-    window.location.href = `mailto:info@funnelsthatprint.com?subject=${encodeURIComponent(
-      "New funnel enquiry from " + name.trim()
-    )}&body=${encodeURIComponent(body)}`;
+    const honeypot = (formRef.current?.elements.namedItem("company_url") as HTMLInputElement | null)?.value;
+    const err = await submitLead({
+      type: "contact",
+      name: name.trim(),
+      email: email.trim(),
+      phone: phone.trim(),
+      company: site.trim(),
+      message: msg.trim(),
+      fields: { Package: packageChoice, Extras: extras.join(", "), "Ad spend": spend, "Reach via": reachVia },
+      honeypot,
+    });
+    setSending(false);
 
+    if (err) {
+      // Delivery failed: fall back to the visitor's email app so the brief is not lost.
+      setViaEmailApp(true);
+      window.location.href = `mailto:info@funnelsthatprint.com?subject=${encodeURIComponent(
+        "New funnel enquiry from " + name.trim()
+      )}&body=${encodeURIComponent(body)}`;
+    } else {
+      setViaEmailApp(false);
+      track("generate_lead", { method: "contact_form", page_path: "/contact", package: packageChoice, ad_spend: spend });
+    }
     setIsSent(true);
   };
 
@@ -197,6 +219,7 @@ ${msg.trim()}`;
           noValidate
           onSubmit={handleSubmit}
         >
+          <input type="text" name="company_url" tabIndex={-1} autoComplete="off" aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }} />
           <div className="cxtop">
             <span className="mono">Project brief</span>
             <div className="cxsteps" role="tablist">
@@ -473,8 +496,8 @@ ${msg.trim()}`;
                 Continue <i>&#8594;</i>
               </button>
             ) : (
-              <button type="submit" className="cxb send" id="cxsend">
-                Send message <i>&#8599;</i>
+              <button type="submit" className="cxb send" id="cxsend" disabled={sending}>
+                {sending ? "Sending..." : <>Send message <i>&#8599;</i></>}
               </button>
             )}
           </div>
@@ -482,13 +505,14 @@ ${msg.trim()}`;
           {/* Success Overlay */}
           <div className="cxok" id="cxok">
             <span>&#10003;</span>
-            <b>Your brief is ready</b>
+            <b>{viaEmailApp ? "Your brief is ready" : "Message received"}</b>
             <p>
-              Your email app opened with everything filled in. Press send and we
-              reply within one business day.
+              {viaEmailApp
+                ? "Our form could not send just now, so your email app opened with everything filled in. Press send and we reply within one business day."
+                : "Thanks. Your brief is with Gaurav and Rahul, and we reply within one business day."}
             </p>
             <p>
-              Email app did not open?{" "}
+              {viaEmailApp ? "Email app did not open?" : "Want a faster answer?"}{" "}
               <a
                 href={whatsappHref(`Hi Funnels That Print! Here is my project brief:\n\n${briefText}`)}
                 target="_blank"

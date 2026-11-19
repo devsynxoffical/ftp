@@ -11,6 +11,7 @@ import { STATE_PAGES } from "./locations-states";
 import { INDUSTRY_PAGES_2 } from "./industries2";
 import { AI_SERVICE_PAGES } from "./services-ai";
 import { GROWTH_SERVICE_PAGES } from "./services-growth";
+import { NOV19_PAGES } from "./services-nov19";
 import { BLOG_POSTS } from "../blogPosts";
 import { CASE_INDUSTRIES } from "../caseIndustries";
 import { getCasePage } from "../casePages";
@@ -30,6 +31,7 @@ export const SEO_PAGES: SeoPage[] = [
   ...INDUSTRY_PAGES_2,
   ...AI_SERVICE_PAGES,
   ...GROWTH_SERVICE_PAGES,
+  ...NOV19_PAGES,
 ];
 
 const BY_PATH = new Map(SEO_PAGES.map((p) => [p.path, p]));

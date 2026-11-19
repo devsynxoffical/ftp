@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { submitLead } from "@/lib/submitLead";
+import { track } from "@/lib/track";
 import type { BlogPost } from "@/data/blogPosts";
 import RoboSection from "@/components/RoboSection";
 import UFSquareMarquee from "@/components/UFSquareMarquee";
@@ -50,12 +52,20 @@ export default function BlogIndexClient({ posts }: { posts: BlogCard[] }) {
       ? sortedPosts
       : sortedPosts.filter((post) => post.category === activeCategory);
 
-  const handleNewsletterSubmit = (e: React.FormEvent) => {
+  const [newsletterError, setNewsletterError] = useState("");
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (newsletterEmail.trim()) {
-      setSubmitted(true);
-      setNewsletterEmail("");
+    const email = newsletterEmail.trim();
+    if (!email) return;
+    const err = await submitLead({ type: "newsletter", email });
+    if (err) {
+      setNewsletterError(err);
+      return;
     }
+    setNewsletterError("");
+    setSubmitted(true);
+    setNewsletterEmail("");
+    track("generate_lead", { method: "newsletter_blog", page_path: "/blog" });
   };
 
   return (
@@ -223,13 +233,19 @@ export default function BlogIndexClient({ posts }: { posts: BlogCard[] }) {
                   type="email"
                   required
                   placeholder="Enter your business email"
+                  aria-label="Your business email"
                   value={newsletterEmail}
                   onChange={(e) => setNewsletterEmail(e.target.value)}
                   className="blog-nl-input"
                 />
                 <button type="submit" className="btn o" style={{ width: "100%", justifyContent: "center" }}>
-                  Join 14,800+ Operators <i>&#8599;</i>
+                  Join the newsletter <i>&#8599;</i>
                 </button>
+                {newsletterError && (
+                  <span role="alert" className="mono" style={{ fontSize: "12px", color: "#ff8a7a", display: "block", marginTop: "10px" }}>
+                    {newsletterError}
+                  </span>
+                )}
                 <span className="mono" style={{ fontSize: "11px", color: "rgba(255,255,255,0.6)", textAlign: "center", display: "block", marginTop: "10px" }}>
                   We respect your privacy. Unsubscribe with 1 click anytime.
                 </span>
