@@ -84,6 +84,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       q: "What is a done-for-you sales funnel?",
       a: "A done-for-you sales funnel is one an agency plans, writes, designs, builds and connects for you: the landing page or quiz, the offer and copy, the checkout or booking calendar, follow-up emails and texts, and conversion tracking. You approve each stage and own every asset, but you do not build any of it yourself.",
     },
+    gallery: { heading: "Funnels and campaigns from real", slugs: ["coaching-116k-revenue-on-2214-ad-spend", "roofing-686-leads-at-5-31-cpl", "agency-15900-closed-in-10-days", "shopify-store-2-3m-in-sales-at-11-6x-roas"] },
     sections: [
       {
         h2: "What we build",
@@ -136,7 +137,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "Can you fix my existing funnel instead of rebuilding it?", a: "Often, yes. We audit the pages, follow-up, booking flow and tracking, then fix the biggest leak first. Many funnels lose most of their value after the form, through slow follow-up or no reminders, so the fix is frequently automation rather than new pages." },
       { q: "Do I own the funnel?", a: "Yes. Pages, copy, workflows, CRM data and ad accounts stay in your accounts. We build inside your software subscriptions, so if you stop working with us everything keeps running and nothing has to be migrated or rebuilt. You also receive logins and a handover video." },
     ],
-    related: ["/funnels-for/roofing", "/funnels-for/coaches", "/funnels-for/mortgage", "/compare/funnel-agency-vs-freelancer", "/tools/funnel-conversion-calculator", "/blog/how-much-does-a-sales-funnel-cost", "/landing-page-design", "/sales-funnel-audit"],
+    related: ["/funnels-for/roofing", "/funnels-for/coaches", "/funnels-for/mortgage", "/compare/funnel-agency-vs-freelancer", "/tools/funnel-conversion-calculator", "/blog/how-much-does-a-sales-funnel-cost", "/landing-page-design", "/sales-funnel-audit", "/lead-generation-agency"],
     parent: HUB,
     updated: "2026-11-14",
   },
@@ -215,6 +216,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       q: "What does a GoHighLevel agency set up?",
       a: "A GoHighLevel agency configures the account end to end: funnels and forms, the CRM pipeline and stages, calendars with round-robin and reminders, SMS and email workflows, missed-call text-back, conversation AI, reputation requests and dashboards. Agencies also get snapshots, reusable templates that clone the whole setup into client sub-accounts.",
     },
+    gallery: { heading: "GoHighLevel systems in real", slugs: ["agency-15900-closed-in-10-days", "agency-14k-revenue-on-2824-ad-spend", "coaching-116k-revenue-on-2214-ad-spend", "roofing-686-leads-at-5-31-cpl"] },
     sections: [
       {
         h2: "What we build in GoHighLevel",
@@ -256,7 +258,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "How long does a GoHighLevel setup take?", a: "A standard business setup with funnel, pipeline, calendar, speed-to-lead and reminder workflows takes 5 to 10 business days. Agency snapshots with several funnels and niche variations take longer and are scoped on a strategy call before work starts. You review everything on staging links before launch." },
       { q: "Does GoHighLevel include AI calling?", a: "GoHighLevel has native conversation AI for SMS and voice, which handles confirmations and simple questions well. For full qualification calls we connect a dedicated AI voice agent by webhook, which writes outcomes and booked slots back into the GoHighLevel pipeline and triggers the right reminders." },
     ],
-    related: ["/crm-automation", "/funnels-for/hvac", "/funnels-for/real-estate", "/funnels-for/med-spas", "/compare/gohighlevel-vs-hubspot", "/glossary/gohighlevel-snapshot", "/tools/cost-per-lead-calculator", "/hire-gohighlevel-expert", "/funnels-for/marketing-agencies", "/ai-chat-agent"],
+    related: ["/crm-automation", "/funnels-for/hvac", "/funnels-for/real-estate", "/funnels-for/med-spas", "/compare/gohighlevel-vs-hubspot", "/glossary/gohighlevel-snapshot", "/tools/cost-per-lead-calculator", "/hire-gohighlevel-expert", "/funnels-for/marketing-agencies", "/ai-chat-agent", "/gohighlevel-white-label", "/glossary/gohighlevel"],
     parent: HUB,
     updated: U,
   },

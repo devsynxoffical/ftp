@@ -270,7 +270,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
       { q: "Should an agency run cold outreach or paid ads?", a: "Both can work, and they suit different stages. Cold email and LinkedIn outreach are cheap and good for testing a niche and message. Paid funnels cost more upfront but scale on demand and bring prospects who chose to engage. Many agencies validate an offer with outreach, then put ad spend behind what books calls." },
       { q: "How long until an agency funnel produces calls?", a: "Builds go live in 5 to 10 business days. After launch, expect a short testing period on creative and offer before cost per booked call settles. One agency case shows $15,900 closed within a 10-day window, but timelines vary with offer, price point, niche and budget, so we plan for testing first." },
     ],
-    related: ["/case-studies/agency-saas-lead-generation", "/webinar-funnels", "/vsl-funnels", "/funnels-for/saas", "/funnels-for/consultants", "/funnels-for/course-creators", "/templates/vsl-script-template"],
+    related: ["/case-studies/agency-saas-lead-generation", "/webinar-funnels", "/vsl-funnels", "/funnels-for/saas", "/funnels-for/consultants", "/funnels-for/course-creators", "/templates/vsl-script-template", "/gohighlevel-white-label"],
     parent: HUB,
     updated: U,
   },

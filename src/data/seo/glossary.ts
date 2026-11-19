@@ -1197,7 +1197,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
       { q: "How do I update clients who already have a snapshot?", a: "Edit the master sub-account, create a new snapshot version, then push the changed assets to client accounts. Push selectively, since loading everything can overwrite customizations a client made. Keep notes on what changed in each version so you can roll forward safely." },
       { q: "How long does it take to build a good snapshot?", a: "A single-funnel snapshot with pipeline, calendar, speed-to-lead and reminder workflows can be built and tested in 5 to 10 business days. Multi-niche snapshots with several funnels, AI calling and reporting take longer and are scoped first. Testing every path before snapshotting saves far more time later." },
     ],
-    related: ["/gohighlevel-agency", "/crm-automation", "/glossary/crm-pipeline", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/blog/gohighlevel-review"],
+    related: ["/gohighlevel-agency", "/crm-automation", "/glossary/crm-pipeline", "/glossary/speed-to-lead", "/glossary/ai-voice-agent", "/blog/gohighlevel-review", "/glossary/gohighlevel", "/gohighlevel-white-label"],
     parent: G,
     updated: "2026-11-09",
   },

@@ -12,6 +12,9 @@ import ProcessSection from "@/components/ProcessSection";
 import PricingSection from "@/components/PricingSection";
 import BookingCta from "@/components/BookingCta";
 import { whatsappHref, whatsappMessage } from "@/lib/whatsapp";
+import { getCasePage } from "@/data/casePages";
+import SeoIcon from "@/components/seo/SeoIcon";
+import FunnelPlanner from "@/components/seo/FunnelPlanner";
 
 const BASE_URL = "https://www.funnelsthatprint.com";
 const OG = "/img/og/funnels-that-print-og.jpg";
@@ -144,6 +147,7 @@ export default function SeoPageView({ path }: { path: string }) {
   const sells = SELLS.has(p.kind) || p.path === "/services" || p.path === "/funnels-for";
   const waTopic = ["glossary", "tool", "template", "compare"].includes(p.kind) ? p.h1 : p.eyebrow;
   const wa = whatsappHref(whatsappMessage(p.path, waTopic));
+  const shots = (p.gallery?.slugs ?? []).map((slug) => ({ slug, c: getCasePage(slug) })).filter((x) => x.c);
 
   return (
     <>
@@ -232,6 +236,30 @@ export default function SeoPageView({ path }: { path: string }) {
         </section>
       )}
 
+      {p.features && (
+        <section className="sec box sx-feat" aria-labelledby="sx-feat-h">
+          <div className="fx-head">
+            <div>
+              <div className="eyebrow mono">{p.features.eyebrow}</div>
+              <h2 id="sx-feat-h" className="h2 d">
+                {p.features.heading} <span className="it">{p.features.accent}</span>
+              </h2>
+            </div>
+          </div>
+          <ul className="sx-feat-grid">
+            {p.features.items.map((f, n) => (
+              <li key={f.title} style={{ ["--d" as string]: `${n * 60}ms` }}>
+                <span className="sx-feat-ic">
+                  <SeoIcon name={f.icon} />
+                </span>
+                <b>{f.title}</b>
+                <p>{f.text}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Main content: sticky table of contents + numbered section cards. */}
       <div className="box sx-body">
         <aside className="sx-toc" aria-label="On this page">
@@ -282,6 +310,35 @@ export default function SeoPageView({ path }: { path: string }) {
         </div>
       </div>
 
+      {shots.length > 0 && (
+        <section className="sec box sx-gal" aria-labelledby="sx-gal-h">
+          <div className="fx-head">
+            <div>
+              <div className="eyebrow mono">Screenshots</div>
+              <h2 id="sx-gal-h" className="h2 d">
+                {p.gallery?.heading ?? "From real"} <span className="it">client accounts.</span>
+              </h2>
+            </div>
+          </div>
+          <ul className="sx-gal-grid">
+            {shots.map(({ slug, c }) => (
+              <li key={slug}>
+                <Link href={`/case-studies/${slug}`}>
+                  <span className="sx-gal-img">
+                    <img src={c!.image} alt={`Screenshot: ${c!.h1}`} loading="lazy" decoding="async" width={640} height={640} />
+                    <em>
+                      <b>{c!.primary.value}</b> {c!.primary.label}
+                    </em>
+                  </span>
+                  <span className="sx-gal-t">{c!.h1}</span>
+                  <i aria-hidden="true">&#8599;</i>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {p.proof && p.proof.items.length > 0 && (
         <section className="sx-proof" aria-labelledby="seo-proof-h">
           <div className="box">
@@ -319,6 +376,8 @@ export default function SeoPageView({ path }: { path: string }) {
 
       {sells && <ProcessSection />}
       {sells && <PricingSection />}
+
+      {p.kind !== "hub" && <FunnelPlanner preset={p.planner?.sell} topic={p.h1} />}
 
       <BookingCta path={p.path} topic={waTopic} />
 

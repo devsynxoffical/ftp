@@ -76,7 +76,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       { q: "Is AI calling allowed in the UAE?", a: "AI calling is a tool, and the same rules apply as to any call: consent, data protection under the PDPL, approved calling hours and respect for the Do Not Call Registry. We disclose that the caller is an AI assistant and keep a human handover. Check the current regulations with your legal adviser before launch." },
       { q: "Do you work with businesses outside the UAE?", a: "Yes. Most of our clients are in the US, and we also work with businesses in Canada, the UK, Australia and the wider GCC. The funnel, follow-up and tracking system is the same everywhere; what we adapt is the channel mix, language, calling hours and the consent wording for each market." },
     ],
-    related: ["/ai-voice-agent-dubai", "/funnels-for/real-estate", "/case-studies/real-estate-lead-generation", "/speed-to-lead", "/case-studies/agency-saas-lead-generation", "/tools/cost-per-lead-calculator", "/locations"],
+    related: ["/ai-voice-agent-dubai", "/funnels-for/real-estate", "/case-studies/real-estate-lead-generation", "/speed-to-lead", "/case-studies/agency-saas-lead-generation", "/tools/cost-per-lead-calculator", "/locations", "/lead-generation-agency"],
     parent: HUB,
     updated: U,
   },
@@ -166,6 +166,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       q: "What should I look for when I hire a GoHighLevel expert?",
       a: "Look for someone who asks about your sales process before touching the account, can show live builds with real results, documents every workflow, builds inside your account so you keep ownership, and tests every path before launch. Expect a fixed scope, a timeline of one to two weeks, and a clear handover.",
     },
+    gallery: { heading: "GoHighLevel builds in real", slugs: ["agency-15900-closed-in-10-days", "agency-14k-revenue-on-2824-ad-spend", "coaching-116k-revenue-on-2214-ad-spend", "mortgage-823-leads-at-23-97-cpl"] },
     sections: [
       {
         h2: "What a GoHighLevel (GHL) expert does",
@@ -229,7 +230,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       { q: "Do you build snapshots for agencies?", a: "Yes. If you run an agency on GoHighLevel, we can build the system once and package it as a snapshot, so each new client sub-account starts with the funnels, pipelines, workflows, calendars and custom values in place. You then only change the client-specific details instead of rebuilding." },
       { q: "What is the difference between a GoHighLevel expert and a GoHighLevel agency?", a: "An expert or developer usually executes a defined build or fix. An agency also owns strategy, copy, ads, tracking and ongoing optimization. We do both: fixed-scope builds for teams that want to run the account themselves, and done-for-you systems for businesses that want a partner accountable for results." },
     ],
-    related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot", "/ai-voice-agent-dubai", "/funnels-for/marketing-agencies"],
+    related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot", "/ai-voice-agent-dubai", "/funnels-for/marketing-agencies", "/gohighlevel-white-label", "/glossary/gohighlevel"],
     parent: HUB,
     updated: "2026-11-12",
   },

@@ -53,4 +53,13 @@ export interface SeoPage {
   area?: { name: string; type: "State" | "City" | "Country" };
   /** Glossary term name for DefinedTerm. */
   term?: string;
+  /** Card grid under the hero: what is included, key features or options. */
+  features?: { eyebrow: string; heading: string; accent: string; items: { icon: SeoIcon; title: string; text: string }[] };
+  /** Real campaign screenshots from these case pages, shown as an image gallery. */
+  gallery?: { heading?: string; slugs: string[] };
+  /** Preselect the funnel planner's "what do you sell" answer. */
+  planner?: { sell?: PlannerSell };
 }
+
+export type SeoIcon = "bolt" | "target" | "chat" | "calendar" | "chart" | "layers" | "shield" | "phone" | "flow" | "dollar" | "users" | "swap";
+export type PlannerSell = "local" | "coaching" | "ecom" | "b2b" | "other";
