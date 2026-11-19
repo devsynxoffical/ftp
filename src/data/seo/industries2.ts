@@ -90,19 +90,31 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
   {
     path: "/funnels-for/pressure-washing",
     kind: "industry",
-    keyword: "pressure washing lead generation",
+    keyword: "pressure washing leads",
     serviceType: "Pressure washing lead generation",
-    title: "Pressure Washing Lead Generation That Books Jobs",
-    description: "Pressure washing lead generation with instant-quote funnels, fast follow-up and rebook reminders. Our real case: 142 leads at $11.24 for a Texas company.",
+    title: "Pressure Washing Leads: Lead Generation That Books Jobs",
+    description: "Pressure washing leads from instant-quote funnels, fast follow-up and rebook reminders. Our real case: 142 leads at $11.24 each for a Texas company.",
     eyebrow: "Funnels for pressure washing companies",
     h1: "Pressure washing lead generation that turns quote requests into booked jobs",
     intro:
-      "Most <strong>pressure washing lead generation</strong> stalls because the owner is on a job when the lead comes in, and a homeowner pricing a driveway clean rarely waits for a callback. We fix that with an instant-quote funnel that captures surface type and size, verifies the phone number and texts back within seconds. Our one documented pressure washing case, a Texas company, produced 142 leads at $11.24 each, and we lean on related home services results honestly.",
+      "Most <strong>pressure washing leads</strong> go cold because the owner is on a job when the lead comes in, and a homeowner pricing a driveway clean rarely waits for a callback. We fix that with an instant-quote funnel that captures surface type and size, verifies the phone number and texts back within seconds. Our one documented pressure washing case, a Texas company, produced 142 leads at $11.24 each, and we lean on related home services results honestly.",
     quick: {
       q: "What is the best way to get pressure washing leads?",
       a: "Run local Meta ads with real before-and-after footage, send clicks to a short quote quiz asking surface, approximate size and timing, verify the phone number and reply within a minute. Then book the job or an on-site quote, and put every customer on a rebook reminder for the next season.",
     },
     sections: [
+      {
+        h2: "Pressure washing leads: where they come from",
+        html: `<p>Pressure washing and power washing companies usually get leads from five places. They differ in whether other companies get the same request, and in how quickly the job can be booked.</p>
+<div class="table-wrap"><table><thead><tr><th>Source</th><th>Is the lead yours alone?</th><th>Watch out for</th></tr></thead><tbody>
+<tr><td>Google Business Profile and maps</td><td>Yes</td><td>Needs reviews and photos before it brings steady calls</td></tr>
+<tr><td>Google Local Services and search ads</td><td>Yes</td><td>Cost per click rises in spring and summer</td></tr>
+<tr><td>Meta ads into a quote funnel</td><td>Yes</td><td>Needs before-and-after footage and a reply within minutes</td></tr>
+<tr><td>Shared lead marketplaces</td><td>Often no</td><td>Several companies call the same homeowner, so price becomes the deciding factor</td></tr>
+<tr><td>Repeat customers and neighbors</td><td>Yes</td><td>Only works if past customers are reminded to rebook</td></tr>
+</tbody></table></div>
+<p>Owning the lead source matters most in this trade because jobs are small and repeatable: a driveway clean today is a house wash next season. The funnel below is built for exclusive leads from Meta ads, with the instant quote and rebook reminders that turn them into repeat work.</p>`,
+      },
       {
         h2: "Why pressure washing businesses need a lead generation system",
         html: `<ul>
