@@ -5138,3 +5138,11 @@ main {
 @media (max-width:1100px){.sx-feat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.sx-gal-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.fp-grid{grid-template-columns:minmax(0,1fr)}}
 @media (max-width:640px){.sx-feat-grid{grid-template-columns:minmax(0,1fr)}.fp-grid{border-radius:24px;padding:18px}.fp-chips button{font-size:13.5px;padding:9px 13px}.sx-gal-grid{gap:10px}.sx-gal-grid a{padding:7px 7px 14px;border-radius:18px}.sx-gal-t{font-size:12.5px;padding:0 26px 0 4px}.sx-gal-img em{left:6px;right:6px;bottom:6px;padding:7px 9px;font-size:11px}.sx-gal-img em b{font-size:15px}.sx-gal-grid i{right:10px;bottom:12px;width:22px;height:22px;font-size:11px}.fp-out{min-height:0}.fp-wait{min-height:140px}}
 @media (prefers-reduced-motion:reduce){.sx-feat-grid li,.sx-gal-grid a,.sx-gal-img img,.fp-out.on{transition:none;animation:none}}
+
+/* Home: every service as a tag list */
+.hx-svc{margin-top:clamp(44px,5vw,70px)}
+.hx-svc h3{margin:0 0 18px}
+.hx-svc ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.hx-svc a{display:inline-block;padding:9px 15px;border-radius:999px;border:1px solid var(--line2);background:#fff;font-size:14px;font-weight:500;color:var(--fg);transition:background .25s,color .25s,border-color .25s}
+.hx-svc a:hover{background:#141414;color:#fff;border-color:#141414}
+@media (max-width:640px){.hx-svc a{font-size:13px;padding:8px 12px}}

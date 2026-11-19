@@ -62,6 +62,40 @@ const GROUPS: { title: string; hub: L; links: L[] }[] = [
   },
 ];
 
+/** Every core service page, linked from the home page with its search phrase as the anchor. */
+const ALL_SERVICES: L[] = [
+  { href: "/sales-funnel-agency", label: "Sales funnel agency" },
+  { href: "/lead-generation-agency", label: "Lead generation agency" },
+  { href: "/facebook-ads-agency", label: "Facebook ads agency" },
+  { href: "/gohighlevel-agency", label: "GoHighLevel agency" },
+  { href: "/hire-gohighlevel-expert", label: "Hire a GoHighLevel expert" },
+  { href: "/gohighlevel-white-label", label: "GoHighLevel white label" },
+  { href: "/crm-automation", label: "CRM automation" },
+  { href: "/speed-to-lead", label: "Speed to lead automation" },
+  { href: "/ai-appointment-setter", label: "AI appointment setter" },
+  { href: "/ai-voice-agents", label: "AI voice agents" },
+  { href: "/ai-receptionist", label: "AI receptionist" },
+  { href: "/ai-agents", label: "AI agents for business" },
+  { href: "/ai-sales-funnels", label: "AI sales funnels" },
+  { href: "/lead-reactivation", label: "Database reactivation" },
+  { href: "/landing-page-design", label: "Landing page design" },
+  { href: "/sales-funnel-audit", label: "Sales funnel audit" },
+  { href: "/vsl-funnels", label: "VSL funnels" },
+  { href: "/webinar-funnels", label: "Webinar funnels" },
+  { href: "/quiz-funnels", label: "Quiz funnels" },
+  { href: "/meta-conversions-api-setup", label: "Meta Conversions API setup" },
+  { href: "/funnels-for/ecommerce", label: "eCommerce funnels" },
+  { href: "/funnels-for/roofing", label: "Roofing lead generation" },
+  { href: "/funnels-for/hvac", label: "HVAC lead generation" },
+  { href: "/funnels-for/solar", label: "Solar lead generation" },
+  { href: "/funnels-for/real-estate", label: "Real estate lead generation" },
+  { href: "/funnels-for/mortgage", label: "Mortgage leads" },
+  { href: "/funnels-for/insurance", label: "Insurance leads" },
+  { href: "/funnels-for/med-spas", label: "Med spa marketing" },
+  { href: "/funnels-for/personal-injury-lawyers", label: "Personal injury leads" },
+  { href: "/funnels-for/dentists", label: "Dental marketing" },
+];
+
 /**
  * Home "Explore" section (SEO plan): the answer-first quick answer, the most
  * searched pages grouped by intent, and every case study hub. Styled with the
@@ -120,6 +154,17 @@ export function HomeExplore() {
           ))}
         </div>
       </div>
+
+      <nav className="hx-svc" aria-labelledby="hx-svc-h">
+        <h3 id="hx-svc-h" className="hx-gh mono">All {ALL_SERVICES.length} services</h3>
+        <ul>
+          {ALL_SERVICES.map((l) => (
+            <li key={l.href}>
+              <Link href={l.href}>{l.label}</Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <div className="hx-cases" aria-labelledby="hx-cases-h">
         <div className="hx-cases-head">

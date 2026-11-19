@@ -392,14 +392,14 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/mortgage",
     kind: "industry",
-    keyword: "mortgage lead generation funnel",
+    keyword: "mortgage leads",
     serviceType: "Mortgage lead generation funnel",
-    title: "Mortgage Lead Generation Funnel With Verified Leads",
-    description: "A mortgage lead generation funnel with purchase and refinance paths, OTP verification and TCPA-ready consent. Real cases from $4.31 per lead.",
+    title: "Mortgage Leads: Verified Lead Generation for Loan Officers",
+    description: "Exclusive mortgage leads from your own funnel: purchase and refinance paths, OTP-verified phones and TCPA-ready consent. Real cases from $4.31 per lead.",
     eyebrow: "Funnels for mortgage brokers and loan officers",
-    h1: "A mortgage lead generation funnel built for verified, compliant leads",
+    h1: "Mortgage leads from a lead generation funnel built for verified, compliant borrowers",
     intro:
-      "A <strong>mortgage lead generation funnel</strong> has to produce borrowers a loan officer can actually reach and help, under some of the strictest advertising and calling rules of any industry. Our mortgage builds combine a short eligibility quiz, phone verification and clear consent language, and our cases include 142 leads at $4.31 and $65K+ in revenue on $5,300 of ad spend.",
+      "The best <strong>mortgage leads</strong> come from a mortgage lead generation funnel that produces borrowers a loan officer can actually reach and help, under some of the strictest advertising and calling rules of any industry. Our mortgage builds combine a short eligibility quiz, phone verification and clear consent language, and our cases include 142 leads at $4.31 and $65K+ in revenue on $5,300 of ad spend.",
     quick: {
       q: "What makes a mortgage lead generation funnel work?",
       a: "A specific offer, such as a first-time buyer plan or a payment review, a short quiz on loan purpose, timeline, property value and credit range, OTP phone verification, and consent language that covers automated calls and texts. Then a loan officer or AI agent calls within a minute and books a consultation.",
@@ -465,14 +465,14 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/insurance",
     kind: "industry",
-    keyword: "insurance lead generation funnel",
+    keyword: "insurance leads",
     serviceType: "Insurance lead generation funnel",
-    title: "Insurance Lead Generation Funnel for Agents",
-    description: "An insurance lead generation funnel for final expense and life agents: eligibility quiz, verified phones and consent-first follow-up. Cases at $7.79.",
+    title: "Insurance Leads: Exclusive Lead Generation for Agents",
+    description: "Exclusive insurance leads for final expense and life agents: eligibility quiz, verified phones and consent-first follow-up. Real cases at $7.79 per lead.",
     eyebrow: "Funnels for insurance agents",
-    h1: "An insurance lead generation funnel that agents can call with confidence",
+    h1: "Insurance leads from a lead generation funnel agents can call with confidence",
     intro:
-      "An <strong>insurance lead generation funnel</strong> works when it delivers exclusive, verified prospects with documented consent to be contacted. Our strongest insurance results come from final expense, where one campaign produced 2,440 leads at $7.79 each. The structure below is built from that work and applies to most individual life and protection products.",
+      "Good <strong>insurance leads</strong> come from an insurance lead generation funnel that delivers exclusive, verified prospects with documented consent to be contacted. Our strongest insurance results come from final expense, where one campaign produced 2,440 leads at $7.79 each. The structure below is built from that work and applies to most individual life and protection products.",
     quick: {
       q: "How does an insurance lead generation funnel qualify prospects?",
       a: "It asks age range, state, coverage amount wanted, who the coverage is for and basic health screening in plain language, then verifies the phone number. Prospects who fit the product book a call or receive an instant callback. Every lead carries a stored consent record covering calls and texts from your agency.",
@@ -538,14 +538,14 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/med-spas",
     kind: "industry",
-    keyword: "med spa funnel",
+    keyword: "med spa marketing",
     serviceType: "Med spa funnel",
-    title: "Med Spa Funnel: Patient Acquisition That Books Consults",
-    description: "A med spa funnel for patient acquisition: intro offer, booking calendar, deposits and three-channel reminders. Real cases include $639K from 178 clients.",
+    title: "Med Spa Marketing Funnel: Patient Acquisition That Books",
+    description: "Med spa marketing built on a patient acquisition funnel: intro offer, booking calendar, deposits and reminders. Real cases include $639K from 178 clients.",
     eyebrow: "Funnels for med spas and aesthetic clinics",
-    h1: "A med spa funnel for patient acquisition that turns intro offers into long-term clients",
+    h1: "Med spa marketing with a patient acquisition funnel that turns intro offers into clients",
     intro:
-      "A <strong>med spa funnel</strong> sells a first visit, not a single treatment. The intro offer brings a new client through the door; the consultation, follow-up and rebooking turn them into someone worth thousands a year. Built as a patient acquisition funnel, it runs from ad to booked consult to rebooking. Our med spa results include $639,000 in revenue from 178 clients and $11,700 from $590 of ad spend.",
+      "A med spa funnel is the core of effective <strong>med spa marketing</strong>: it sells a first visit, not a single treatment. The intro offer brings a new client through the door; the consultation, follow-up and rebooking turn them into someone worth thousands a year. Built as a patient acquisition funnel, it runs from ad to booked consult to rebooking. Our med spa results include $639,000 in revenue from 178 clients and $11,700 from $590 of ad spend.",
     quick: {
       q: "What should a med spa funnel include?",
       a: "One clear intro offer on a single treatment, a short page with real before-and-after policy-safe proof, a booking calendar with an optional deposit, instant text confirmation, and three-channel reminders. After the visit, automated rebooking and membership offers turn a first treatment into recurring revenue.",
@@ -601,14 +601,14 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/personal-injury-lawyers",
     kind: "industry",
-    keyword: "personal injury lead funnel",
+    keyword: "personal injury leads",
     serviceType: "Personal injury lead funnel",
-    title: "Personal Injury Lead Funnel for MVA Cases",
-    description: "A personal injury lead funnel for motor vehicle accident cases: case qualifier, verified calls and instant intake. $388K revenue on $20,324 spend.",
+    title: "Personal Injury Leads: MVA Lead Funnel for Law Firms",
+    description: "Exclusive personal injury leads for motor vehicle accident cases: case qualifier, verified calls and instant intake. $388K revenue on $20,324 spend.",
     eyebrow: "Funnels for personal injury law firms",
-    h1: "A personal injury lead funnel that delivers signable accident cases",
+    h1: "Personal injury leads from a funnel that delivers signable accident cases",
     intro:
-      "A <strong>personal injury lead funnel</strong> is measured by signed cases, not form fills. Motor vehicle accident claimants are stressed, often injured and contacted by several firms. The funnel has to screen for case viability, prove the phone number is real, and put the claimant on the phone with intake while they are still deciding. One of our MVA campaigns turned $20,324 of ad spend into $388,000 in revenue.",
+      "Good <strong>personal injury leads</strong> are measured by signed cases, not form fills. Motor vehicle accident claimants are stressed, often injured and contacted by several firms. The funnel has to screen for case viability, prove the phone number is real, and put the claimant on the phone with intake while they are still deciding. One of our MVA campaigns turned $20,324 of ad spend into $388,000 in revenue.",
     quick: {
       q: "What does a personal injury lead funnel ask claimants?",
       a: "When the accident happened, whether they were at fault, whether they received medical treatment, whether police were called, and whether they already have an attorney. Those five answers predict case viability. The phone number is OTP-verified, consent is captured, and intake calls within a minute or the claimant calls in directly.",
