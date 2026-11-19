@@ -5146,3 +5146,12 @@ main {
 .hx-svc a{display:inline-block;padding:9px 15px;border-radius:999px;border:1px solid var(--line2);background:#fff;font-size:14px;font-weight:500;color:var(--fg);transition:background .25s,color .25s,border-color .25s}
 .hx-svc a:hover{background:#141414;color:#fff;border-color:#141414}
 @media (max-width:640px){.hx-svc a{font-size:13px;padding:8px 12px}}
+
+/* Robot on touch screens: no hover, so it sways on its own (rotate composes
+   with the entry translate and the scroll/finger transform set in JS). */
+@keyframes roboSway{0%,100%{rotate:-4deg}50%{rotate:5deg}}
+@media (hover:none),(pointer:coarse){
+  .robo .rl img{transition:opacity .9s,translate 1.4s cubic-bezier(.2,.7,.2,1),transform .35s ease-out;transform-origin:30% 60%}
+  .robo.in .rl img{animation:roboSway 4.5s ease-in-out 1.4s infinite}
+}
+@media (prefers-reduced-motion:reduce){.robo.in .rl img{animation:none}}

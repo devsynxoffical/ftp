@@ -23,38 +23,69 @@ export default function RoboSection() {
     );
     io.observe(ro);
 
-    // Pointer move robot tilt matching ftp 4
+    // Robot tilt. Desktop: follows the mouse. Touch screens have no hover, so
+    // the robot follows the finger while it moves and tilts with scroll.
     let rx = 0;
     let ry = 0;
     let t = false;
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const touch = window.matchMedia("(hover: none), (pointer: coarse)").matches;
 
-    const onPointerMove = (e: PointerEvent) => {
-      const r = ro.getBoundingClientRect();
-      rx = (e.clientX - r.left) / r.width - 0.5;
-      ry = (e.clientY - r.top) / r.height - 0.5;
-
-      if (!t) {
-        t = true;
-        requestAnimationFrame(() => {
-          t = false;
-          rb.style.transform = `translate(${rx * 24}px, ${ry * 20}px) rotate(${
-            rx * 3
-          }deg)`;
-        });
-      }
+    const apply = () => {
+      if (t) return;
+      t = true;
+      requestAnimationFrame(() => {
+        t = false;
+        rb.style.transform = `translate(${rx * 24}px, ${ry * 20}px) rotate(${rx * 3}deg)`;
+      });
     };
 
+    const track = (x: number, y: number) => {
+      const r = ro.getBoundingClientRect();
+      rx = (x - r.left) / r.width - 0.5;
+      ry = (y - r.top) / r.height - 0.5;
+      apply();
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (e.pointerType === "mouse") track(e.clientX, e.clientY);
+    };
+    const onTouchMove = (e: TouchEvent) => {
+      const f = e.touches[0];
+      if (f) track(f.clientX, f.clientY);
+    };
     const onPointerLeave = () => {
       rb.style.transform = "";
     };
 
-    ro.addEventListener("pointermove", onPointerMove);
-    ro.addEventListener("pointerleave", onPointerLeave);
+    // Scroll: map the section's position in the viewport (-1 below, +1 above)
+    // to a sideways lean and a small vertical drift.
+    const onScroll = () => {
+      const r = ro.getBoundingClientRect();
+      const vh = window.innerHeight;
+      if (r.bottom < 0 || r.top > vh) return;
+      const p = Math.max(-1, Math.min(1, (vh / 2 - (r.top + r.height / 2)) / vh));
+      rx = p * 0.9;
+      ry = -p * 0.9;
+      apply();
+    };
+
+    if (!reduce) {
+      ro.addEventListener("pointermove", onPointerMove);
+      ro.addEventListener("pointerleave", onPointerLeave);
+      if (touch) {
+        ro.addEventListener("touchmove", onTouchMove, { passive: true });
+        window.addEventListener("scroll", onScroll, { passive: true });
+        onScroll();
+      }
+    }
 
     return () => {
       io.disconnect();
       ro.removeEventListener("pointermove", onPointerMove);
       ro.removeEventListener("pointerleave", onPointerLeave);
+      ro.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
 
