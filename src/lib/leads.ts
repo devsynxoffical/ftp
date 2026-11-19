@@ -7,12 +7,12 @@
  *    Receives the lead as JSON and can create the contact and start a workflow.
  * 2. RESEND_API_KEY: sends the lead as an email to LEAD_TO_EMAIL through Resend
  *    (LEAD_FROM_EMAIL must be a sender on a domain verified in Resend).
- * 3. Always: FormSubmit (formsubmit.co) emails the lead to LEAD_TO_EMAIL with no
- *    API key. The first lead triggers a one-time activation email to that
- *    inbox; after the owner clicks it, every lead arrives as an email.
  *
- * Every lead is also written to the server log so nothing is lost while a
- * destination is being set up.
+ * Every lead is also written to the server log ("[lead]" in Vercel logs), so
+ * nothing is lost while a destination is being set up. With no destination
+ * configured the API reports failure and the contact form falls back to the
+ * visitor's email app. (FormSubmit was tried and rejected: its Cloudflare
+ * challenge blocks server requests.)
  */
 
 export interface Lead {
@@ -80,29 +80,6 @@ export async function deliverLead(l: Lead): Promise<{ delivered: string[]; faile
         ),
     ]);
   }
-  jobs.push([
-    "formsubmit",
-    () =>
-      post(
-        `https://formsubmit.co/ajax/${encodeURIComponent(TO)}`,
-        {
-          _subject: subject(l),
-          _replyto: l.email,
-          _template: "table",
-          _captcha: "false",
-          type: l.type,
-          name: l.name,
-          email: l.email,
-          phone: l.phone,
-          company: l.company,
-          ...l.fields,
-          page: `${SITE}${l.page}`,
-          message: l.message,
-        },
-        { Origin: SITE, Referer: `${SITE}${l.page}` },
-      ),
-  ]);
-
   const results = await Promise.allSettled(jobs.map(([, run]) => run()));
   const delivered: string[] = [];
   const failed: string[] = [];
