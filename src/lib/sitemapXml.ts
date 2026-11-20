@@ -11,7 +11,7 @@ export const BASE_URL = "https://www.funnelsthatprint.com";
 export const SITEMAP_GROUPS = ["core", "industries", "locations", "content", "case-studies"] as const;
 export type SitemapGroup = (typeof SITEMAP_GROUPS)[number];
 
-const INDUSTRY_PREFIXES = ["/funnels-for", "/ai-appointment-setter/", "/ai-voice-agents/"];
+const INDUSTRY_PREFIXES = ["/funnels-for", "/ai-appointment-setter/", "/ai-voice-agents/", "/ai-receptionist/"];
 const LOCATION_PREFIXES = ["/locations", "/lead-generation-agency-dubai", "/ai-voice-agent-dubai"];
 const CONTENT_PREFIXES = ["/blog", "/tools", "/templates", "/glossary", "/compare"];
 const CASE_PREFIXES = ["/case-studies", "/case-leadgen", "/case-ecom", "/milliondollarcasestudy", "/scalelowticket"];

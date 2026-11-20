@@ -265,7 +265,7 @@ export default function FooterClient({
               ["/speed-to-lead", "Speed to lead"],
               ["/vsl-funnels", "VSL funnels"],
               ["/meta-conversions-api-setup", "Meta CAPI setup"],
-              ["/hire-gohighlevel-expert", "Hire a GoHighLevel expert"],
+              ["/gohighlevel-expert", "GoHighLevel expert"],
               ["/lead-generation-agency-dubai", "Lead generation in Dubai"],
               ["/services", "All services"],
             ].map(([href, label]) => (

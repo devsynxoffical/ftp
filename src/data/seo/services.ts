@@ -65,7 +65,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "Which platforms do you build on?", a: "Most lead generation builds run on GoHighLevel because the CRM, SMS, email, calendar and automation live in one account. Product funnels with order bumps and upsells often use ClickFunnels for checkout. We also integrate HubSpot, Shopify, Calendly and custom code when the business already depends on them." },
       { q: "Do you run the ads as well?", a: "The core services are the funnel, automation, AI and tracking. Many case studies on this site include ad management and done-with-you sessions where we work inside the client's ad account. On a strategy call we confirm whether you need ads managed or only the system the ads send traffic to." },
     ],
-    related: ["/funnels-for", "/case-studies", "/tools/funnel-conversion-calculator", "/compare/funnel-agency-vs-freelancer", "/lead-generation-agency-dubai", "/hire-gohighlevel-expert", "/blog/how-much-does-a-sales-funnel-cost"],
+    related: ["/funnels-for", "/case-studies", "/tools/funnel-conversion-calculator", "/compare/funnel-agency-vs-freelancer", "/lead-generation-agency-dubai", "/gohighlevel-expert", "/blog/how-much-does-a-sales-funnel-cost"],
     parent: { name: "Home", path: "/" },
     updated: U,
   },
@@ -258,7 +258,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "How long does a GoHighLevel setup take?", a: "A standard business setup with funnel, pipeline, calendar, speed-to-lead and reminder workflows takes 5 to 10 business days. Agency snapshots with several funnels and niche variations take longer and are scoped on a strategy call before work starts. You review everything on staging links before launch." },
       { q: "Does GoHighLevel include AI calling?", a: "GoHighLevel has native conversation AI for SMS and voice, which handles confirmations and simple questions well. For full qualification calls we connect a dedicated AI voice agent by webhook, which writes outcomes and booked slots back into the GoHighLevel pipeline and triggers the right reminders." },
     ],
-    related: ["/crm-automation", "/funnels-for/hvac", "/funnels-for/real-estate", "/funnels-for/med-spas", "/compare/gohighlevel-vs-hubspot", "/glossary/gohighlevel-snapshot", "/tools/cost-per-lead-calculator", "/hire-gohighlevel-expert", "/funnels-for/marketing-agencies", "/ai-chat-agent", "/gohighlevel-white-label", "/glossary/gohighlevel"],
+    related: ["/crm-automation", "/funnels-for/hvac", "/funnels-for/real-estate", "/funnels-for/med-spas", "/compare/gohighlevel-vs-hubspot", "/glossary/gohighlevel-snapshot", "/tools/cost-per-lead-calculator", "/gohighlevel-expert", "/funnels-for/marketing-agencies", "/ai-chat-agent", "/gohighlevel-white-label", "/glossary/gohighlevel"],
     parent: HUB,
     updated: U,
   },
@@ -318,7 +318,7 @@ export const SERVICE_PAGES: SeoPage[] = [
       { q: "Can automation work with my sales team?", a: "Yes. Automation handles the repetitive steps, such as first contact, reminders and chasing no-shows, and hands leads to people at the right moment. Reps get tasks and notifications when a lead replies or books, so they spend their time on conversations instead of admin." },
       { q: "How do I know the automations are working?", a: "We build a dashboard with the numbers that matter: speed to first contact, contact rate, booking rate, show rate and close rate by source. Every workflow is tested end to end before launch, and we review the numbers after the first weeks of real traffic, then fix the weakest step first." },
     ],
-    related: ["/gohighlevel-agency", "/speed-to-lead", "/funnels-for/med-spas", "/funnels-for/dentists", "/funnels-for/insurance", "/compare/gohighlevel-vs-hubspot", "/tools/no-show-cost-calculator", "/hire-gohighlevel-expert", "/blog/lead-nurturing-strategies", "/lead-reactivation"],
+    related: ["/gohighlevel-agency", "/speed-to-lead", "/funnels-for/med-spas", "/funnels-for/dentists", "/funnels-for/insurance", "/compare/gohighlevel-vs-hubspot", "/tools/no-show-cost-calculator", "/gohighlevel-expert", "/blog/lead-nurturing-strategies", "/lead-reactivation"],
     parent: HUB,
     updated: U,
   },
@@ -393,7 +393,7 @@ export const SERVICE_PAGES: SeoPage[] = [
     keyword: "ai appointment setter",
     serviceType: "AI appointment setting",
     title: "AI Appointment Setter: Book Qualified Calls 24/7",
-    description: "An AI appointment setter that contacts every lead in seconds, books qualified calls 24/7, sends reminders and rebooks no-shows, built into your CRM.",
+    description: "An AI appointment setter for AI lead follow-up: contacts every lead in seconds, books qualified calls 24/7, sends reminders and rebooks no-shows.",
     eyebrow: "AI appointment setter",
     h1: "An AI appointment setter that books qualified calls 24/7",
     intro:
@@ -403,6 +403,18 @@ export const SERVICE_PAGES: SeoPage[] = [
       a: "An AI appointment setter is a voice and SMS agent that books sales or service appointments automatically. It reaches new leads within a minute at any hour, asks qualifying questions, offers open slots from your live calendar, sends confirmations and reminders, and follows up with no-shows to rebook them, logging everything in your CRM.",
     },
     sections: [
+      {
+        h2: "What is AI lead follow-up?",
+        html: `<p>AI lead follow-up means an AI agent contacts every new lead the moment they come in, by text or a phone call, has a short qualifying conversation and books the ones who fit into your calendar. It replaces the slow part of most sales processes: the hours or days between a form fill and the first human call, which is where most leads go cold.</p>
+<ul>
+<li><strong>Instant first touch:</strong> a text and, if you want, a call within 60 seconds of the form, ad lead or missed call.</li>
+<li><strong>Qualification:</strong> three to five questions you approve, such as budget, timeline, location or need.</li>
+<li><strong>Booking:</strong> qualified leads pick a slot from your live calendar during the conversation.</li>
+<li><strong>Persistence:</strong> leads who do not reply get a short, polite sequence over the next days instead of being forgotten.</li>
+<li><strong>Hand-off:</strong> anything the AI cannot handle goes to a person with the full conversation attached.</li>
+</ul>
+<p>Inbound phone calls are handled the same way by an <a href="/ai-receptionist">AI receptionist</a>, and both run inside your <a href="/gohighlevel-expert">GoHighLevel</a> account.</p>`,
+      },
       {
         h2: "The full booking loop",
         html: `<ol>
@@ -445,7 +457,7 @@ export const SERVICE_PAGES: SeoPage[] = [
     ],
     related: ["/ai-voice-agents", "/crm-automation", "/funnels-for/med-spas", "/funnels-for/dentists", "/funnels-for/gyms", "/compare/ai-voice-agent-vs-human-setter", "/tools/no-show-cost-calculator", "/ai-sales-funnels", "/blog/ai-calling-for-lead-generation", "/ai-appointment-setter/real-estate", "/ai-appointment-setter/insurance", "/ai-voice-agent-dubai", "/ai-agents", "/ai-chat-agent"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-20",
   },
   {
     path: "/speed-to-lead",

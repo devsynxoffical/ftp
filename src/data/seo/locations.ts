@@ -152,22 +152,40 @@ export const LOCATION_PAGES: SeoPage[] = [
     updated: U,
   },
   {
-    path: "/hire-gohighlevel-expert",
+    path: "/gohighlevel-expert",
     kind: "service",
-    keyword: "hire gohighlevel expert",
-    serviceType: "GoHighLevel expert build and configuration",
-    title: "Hire GoHighLevel Expert (GHL): Cost, Questions, Timeline",
-    description: "Hire GoHighLevel expert help for snapshots, workflows, funnels, Conversations AI and API integrations. What to ask, red flags, and builds from $999.",
-    eyebrow: "Hire a GoHighLevel expert",
-    h1: "Hire GoHighLevel expert help without hiring the wrong person",
+    keyword: "gohighlevel expert",
+    serviceType: "GoHighLevel expert setup, consulting and automation",
+    title: "GoHighLevel Expert and Consultant for Setup and Automation",
+    description: "GoHighLevel expert and consultant for setup, workflows, automation, snapshots and AI. What to ask before you hire, red flags, and builds from $999.",
+    eyebrow: "GoHighLevel expert",
+    h1: "GoHighLevel expert and consultant for setup and automation",
     intro:
-      "If you want to <strong>hire GoHighLevel expert</strong> help, often searched as hiring a GHL expert, the hard part is not finding someone who knows the menus. It is finding someone who can turn your sales process into funnels, workflows and calendars that book appointments and keep working after they leave. This page covers what a GoHighLevel expert actually does, freelancer versus agency, the questions to ask, the red flags, and how we work.",
+      "A <strong>GoHighLevel expert</strong> turns your sales process into funnels, workflows, calendars and AI follow-up that book appointments and keep working after the build is finished. If you want to hire a GoHighLevel expert or consultant, often searched as a GHL expert, the hard part is not finding someone who knows the menus. It is finding someone who understands how you sell. This page covers what a GoHighLevel expert and consultant actually do, the automations worth building first, freelancer versus agency, the questions to ask, the red flags, and how we work.",
     quick: {
-      q: "What should I look for when I hire a GoHighLevel expert?",
-      a: "Look for someone who asks about your sales process before touching the account, can show live builds with real results, documents every workflow, builds inside your account so you keep ownership, and tests every path before launch. Expect a fixed scope, a timeline of one to two weeks, and a clear handover.",
+      q: "What does a GoHighLevel expert do?",
+      a: "A GoHighLevel expert sets up and automates your HighLevel account: funnels and forms, pipelines, calendars, SMS and email workflows, AI replies, snapshots and integrations. A good one starts with your sales process, builds inside your account so you keep ownership, documents every workflow and tests every path before real leads arrive.",
     },
     gallery: { heading: "GoHighLevel builds in real", slugs: ["agency-15900-closed-in-10-days", "agency-14k-revenue-on-2824-ad-spend", "coaching-116k-revenue-on-2214-ad-spend", "mortgage-823-leads-at-23-97-cpl"] },
     sections: [
+      {
+        h2: "What does a GoHighLevel consultant do?",
+        html: `<p>A GoHighLevel consultant decides what to build before anything is built. They review how leads arrive, how fast you follow up, where deals stall and what your team will actually use, then turn that into a written plan: which pipelines, which automations, which calendars and which reports. Many businesses already pay for HighLevel but use a fraction of it, and a consultant's first job is often to remove clutter, not add more.</p>
+<p>We combine both roles. A short consulting session maps your process and agrees the scope, then the same team builds it, so nothing is lost between the plan and the account.</p>`,
+      },
+      {
+        h2: "Which GoHighLevel automations should you set up first?",
+        html: `<p>Start with the automations that touch revenue directly, in this order:</p>
+<ol>
+<li><strong>Speed to lead:</strong> every new lead gets a text and a call within 60 seconds. See <a href="/speed-to-lead">speed-to-lead automation</a>.</li>
+<li><strong>Missed-call text-back:</strong> anyone who calls and is not answered gets a text straight away, or an <a href="/ai-receptionist">AI receptionist</a> answers for you.</li>
+<li><strong>Booking and reminders:</strong> calendar confirmations plus reminders by SMS and email, which cut no-shows.</li>
+<li><strong>Pipeline stage automation:</strong> deals move automatically when a call is booked, attended or missed.</li>
+<li><strong>Nurture and reactivation:</strong> long-term follow-up for leads who are not ready, and <a href="/lead-reactivation">database reactivation</a> for old contacts.</li>
+<li><strong>AI follow-up:</strong> an <a href="/ai-appointment-setter">AI appointment setter</a> that qualifies and books by SMS or voice.</li>
+</ol>
+<p>Reporting and review requests come next. Automations with no clear trigger or owner are the main reason HighLevel accounts become hard to maintain.</p>`,
+      },
       {
         h2: "What a GoHighLevel (GHL) expert does",
         html: `<ul>
@@ -232,6 +250,6 @@ export const LOCATION_PAGES: SeoPage[] = [
     ],
     related: ["/gohighlevel-agency", "/compare/funnel-agency-vs-freelancer", "/glossary/gohighlevel-snapshot", "/crm-automation", "/blog/gohighlevel-review", "/compare/gohighlevel-vs-hubspot", "/ai-voice-agent-dubai", "/funnels-for/marketing-agencies", "/gohighlevel-white-label", "/glossary/gohighlevel"],
     parent: HUB,
-    updated: "2026-11-12",
+    updated: "2026-11-20",
   },
 ];

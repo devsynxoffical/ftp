@@ -64,17 +64,21 @@ const GROUPS: { title: string; hub: L; links: L[] }[] = [
 
 /** Every core service page, linked from the home page with its search phrase as the anchor. */
 const ALL_SERVICES: L[] = [
+  { href: "/ai-receptionist", label: "AI receptionist" },
+  { href: "/ai-receptionist/hvac", label: "AI receptionist for HVAC" },
+  { href: "/ai-receptionist/plumbers", label: "AI receptionist for plumbers" },
+  { href: "/ai-receptionist/contractors", label: "AI receptionist for contractors" },
+  { href: "/ai-receptionist/real-estate", label: "AI receptionist for real estate" },
+  { href: "/ai-appointment-setter", label: "AI appointment setter" },
+  { href: "/gohighlevel-expert", label: "GoHighLevel expert" },
   { href: "/sales-funnel-agency", label: "Sales funnel agency" },
   { href: "/lead-generation-agency", label: "Lead generation agency" },
   { href: "/facebook-ads-agency", label: "Facebook ads agency" },
   { href: "/gohighlevel-agency", label: "GoHighLevel agency" },
-  { href: "/hire-gohighlevel-expert", label: "Hire a GoHighLevel expert" },
   { href: "/gohighlevel-white-label", label: "GoHighLevel white label" },
   { href: "/crm-automation", label: "CRM automation" },
   { href: "/speed-to-lead", label: "Speed to lead automation" },
-  { href: "/ai-appointment-setter", label: "AI appointment setter" },
   { href: "/ai-voice-agents", label: "AI voice agents" },
-  { href: "/ai-receptionist", label: "AI receptionist" },
   { href: "/ai-agents", label: "AI agents for business" },
   { href: "/ai-sales-funnels", label: "AI sales funnels" },
   { href: "/lead-reactivation", label: "Database reactivation" },
@@ -119,9 +123,9 @@ export function HomeExplore() {
           <span className="hx-tag">Quick answer</span>
           <h3 id="hx-qa-h">What does Funnels That Print do?</h3>
           <p>
-            Funnels That Print is a sales funnel agency. We build done-for-you funnels (VSL, quiz, webinar and low-ticket) and the
-            systems around them: GoHighLevel CRM automation, AI voice agents that call leads within 60 seconds, reminders, and Meta
-            Conversions API tracking. Builds launch in 5 to 10 business days, from $999, with 275+ documented results since 2019.
+            Funnels That Print builds AI receptionists, AI appointment setters and GoHighLevel automation for local service
+            businesses. Every call is answered 24/7, every new lead is contacted within 60 seconds, and qualified jobs are booked
+            straight into your calendar. Setups launch in 5 to 10 business days, from $999, with 275+ documented results since 2019.
           </p>
           <div className="hx-qa-stats">
             <div><b>275+</b><span>documented results</span></div>
@@ -198,13 +202,13 @@ export const HOME_SERVICE_SCHEMA = {
     {
       "@type": "Service",
       "@id": `${BASE_URL}/#service`,
-      name: "Sales funnel and automation services",
-      serviceType: "Sales funnel design, build and automation",
+      name: "AI receptionist, AI appointment setter and GoHighLevel automation",
+      serviceType: "AI receptionist and marketing automation",
       provider: { "@id": `${BASE_URL}/#organization` },
       areaServed: { "@type": "Place", name: "Worldwide" },
       url: `${BASE_URL}/services`,
       description:
-        "Done-for-you sales funnels (VSL, quiz, webinar, low-ticket), GoHighLevel CRM automation, AI voice agents, speed-to-lead follow-up and Meta Conversions API tracking.",
+        "AI receptionists that answer every call, AI appointment setters that follow up with every lead in 60 seconds, and GoHighLevel automation for local service businesses.",
       offers: [
         { "@type": "Offer", name: "Design only", price: "999", priceCurrency: "USD" },
         { "@type": "Offer", name: "Design, copy and full build", price: "1499", priceCurrency: "USD" },

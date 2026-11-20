@@ -13,10 +13,10 @@ export interface CaseStudy {
 export const CASE_STUDIES: CaseStudy[] = caseStudiesData as CaseStudy[];
 
 export const HERO_WORDS = [
+  "more jobs.",
+  "every call.",
   "booked calls.",
-  "qualified leads.",
-  "applications.",
-  "customers.",
+  "appointments.",
 ];
 
 export const LOADER_WORDS = [
