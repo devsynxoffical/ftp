@@ -124,6 +124,11 @@ type Override = {
  * here is stated in the original post.
  */
 const OVERRIDES: Record<string, Override> = {
+  // Added 2026-11-20 from the owner's case list (figures as stated by the owner).
+  DeMdVqDSMLy: { title: "Hackathon Case Study: 34,397 Enquiries at $7.82", primary: { value: "34,397", label: "Enquiries" }, secondary: { value: "$7.82", label: "Cost per enquiry" } },
+  DeCJICayIm1: { title: "Hackathon Case Study: 27,169 Enquiries at $7.59", primary: { value: "27,169", label: "Enquiries" }, secondary: { value: "$7.59", label: "Cost per enquiry" } },
+  "Dfrv-GDSHhw": { title: "Credit Repair Case Study: 196 Leads at $6.07 CPL", primary: { value: "196", label: "Leads generated" }, secondary: { value: "$6.07", label: "Cost per lead" } },
+  DfuDbu2S7qc: { title: "Agency Case Study: MVA Agency Owner Done-With-You Sessions", primary: { value: "Video", label: "Client testimonial" } },
   "C4qlCg-BGeu": { title: "Agency Case Study: Done-With-You Client Acquisition Program", primary: { value: "Video", label: "Program breakdown" } },
   DdrANhmycDu: { title: "Coaching Case Study: 15,958 Summit Registrations at $7.48", primary: { value: "15,958+", label: "Registrations" }, secondary: { value: "$7.48", label: "Cost per registration" } },
   DXBWqork2wC: { title: "Coaching Case Study: $1,850 Sale From $2.10 in Ad Spend", primary: { value: "$1,850", label: "Sale closed" }, secondary: { value: "$2.10", label: "Ad spend" } },

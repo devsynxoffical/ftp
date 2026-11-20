@@ -5155,3 +5155,7 @@ main {
   .robo.in .rl img{animation:roboSway 4.5s ease-in-out 1.4s infinite}
 }
 @media (prefers-reduced-motion:reduce){.robo.in .rl img{animation:none}}
+
+/* Case pages: source link back for cases first published on a sister site */
+.case-original{font-size:14px;color:var(--body);margin:14px 0 0}.case-original a{font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.case-body p,.case-body li{overflow-wrap:anywhere}
