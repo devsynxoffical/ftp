@@ -28,6 +28,12 @@ const OG_FALLBACK = "/img/og/funnels-that-print-og.jpg";
 const publicFileExists = (p: string) => fs.existsSync(path.join(process.cwd(), "public", p));
 
 /** Server-rendered case study page. All text is in the HTML, nothing hidden behind a toggle. */
+/** Cases first published on a sister site: link back so the original stays the canonical source. */
+const ORIGINALS: Record<string, { label: string; url: string }> = {
+  "De-Ky4BJwCb": { label: "Brand Scaling Hacks", url: "https://www.brandscalinghacks.com/cases/376000-25-days-dtc-client-meta-ads" },
+  DecOWXJvonp: { label: "Brand Scaling Hacks", url: "https://www.brandscalinghacks.com/cases/307950-revenue-fitness-brand-2053-units-30-days" },
+};
+
 export default function CaseStudyView({ page }: { page: CasePage }) {
   const industry = getIndustryBySlug(page.industry)!;
   const url = `${BASE_URL}/case-studies/${page.slug}`;
@@ -205,6 +211,15 @@ export default function CaseStudyView({ page }: { page: CasePage }) {
                   <p>{page.summary}</p>
                 )}
               </div>
+
+              {ORIGINALS[page.id] && (
+                <p className="case-original">
+                  Original case study:{" "}
+                  <a href={ORIGINALS[page.id].url} target="_blank" rel="noopener">
+                    {ORIGINALS[page.id].label} &#8599;
+                  </a>
+                </p>
+              )}
 
               <div className="kact">
                 <Link className="btn o" href="/book-a-call">
