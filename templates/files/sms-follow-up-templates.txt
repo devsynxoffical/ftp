@@ -1,0 +1,82 @@
+SMS FOLLOW-UP TEMPLATES
+Funnels That Print | funnelsthatprint.com/templates/sms-follow-up-templates
+
+Before you send anything:
+ - Text only people who gave consent to receive texts from your business at opt-in.
+ - Identify your business in the first message of every conversation.
+ - Include opt-out language ("Reply STOP to opt out") in the first message and regularly after.
+ - If replies are handled by an AI assistant, say so.
+ - Send between 8am and 8pm in the lead's local time unless they text you first.
+ - Keep each message under 160 characters where you can. Replace {braces}.
+
+------------------------------------------------------------
+1. INSTANT RESPONSE (send within 60 seconds of opt-in)
+------------------------------------------------------------
+Hi {first_name}, this is {agent_name} with {company}. Thanks for requesting {offer}. Is now a good time for a quick call? Reply STOP to opt out.
+
+AI version:
+Hi {first_name}, this is {company}'s AI assistant. Thanks for requesting {offer}! A few quick questions so we can help. Reply STOP to opt out.
+
+------------------------------------------------------------
+2. MISSED CALL FOLLOW-UP (right after an unanswered call)
+------------------------------------------------------------
+Hi {first_name}, just tried calling about your {offer} request. When is a better time today, morning or afternoon?
+
+------------------------------------------------------------
+3. QUALIFYING QUESTION (if they reply but have not booked)
+------------------------------------------------------------
+Quick question so I can point you the right way: {qualifying question, e.g. "Is the property you want to refinance your primary home?"}
+
+------------------------------------------------------------
+4. BOOKING LINK
+------------------------------------------------------------
+Perfect, {first_name}. Grab a time that works here: {booking_link}. Takes {length} min and you will leave with {takeaway}.
+
+------------------------------------------------------------
+5. DAY 1 EVENING (no reply)
+------------------------------------------------------------
+Hi {first_name}, {agent_name} from {company} again. Still want help with {problem}? Just reply YES and I will send a couple of times.
+
+------------------------------------------------------------
+6. DAY 2 (value or proof)
+------------------------------------------------------------
+{first_name}, we just helped a {similar customer type} in {city/niche} {specific result}. Happy to show you how it would work for you. Want a quick call?
+
+------------------------------------------------------------
+7. DAY 3 (easy yes/no)
+------------------------------------------------------------
+Hi {first_name}, should I keep your {offer} request open or close it out? A simple yes or no is perfect.
+
+------------------------------------------------------------
+8. DAY 5 (objection handler)
+------------------------------------------------------------
+A lot of people hold off because {common objection, e.g. "they think it will be expensive"}. {One-line answer}. Want me to send details?
+
+------------------------------------------------------------
+9. DAY 7 (breakup message)
+------------------------------------------------------------
+Hi {first_name}, I have not heard back so I will stop reaching out. If you still want {result}, reply anytime and we will pick it up. Reply STOP to opt out.
+
+------------------------------------------------------------
+10. REACTIVATION (30 to 90 days later, old leads)
+------------------------------------------------------------
+Hi {first_name}, it is {agent_name} from {company}. You asked about {offer} a while back. Are you still looking for help with that? Reply STOP to opt out.
+
+------------------------------------------------------------
+REPLY HANDLING
+------------------------------------------------------------
+Reply "YES" or a time         -> send booking link (message 4) or book directly.
+Reply with a question         -> answer in one message, then ask for the call.
+Reply "not now" or "later"    -> ask "No problem, when should I check back?" and set a task.
+Reply "wrong number"          -> apologize, mark the contact as invalid, stop the sequence.
+Reply STOP / UNSUBSCRIBE / END / QUIT / CANCEL -> stop all texts immediately. Send one confirmation: "You are unsubscribed from {company} texts. No more messages will be sent."
+Angry or asks for a human     -> stop automation and notify a team member right away.
+
+------------------------------------------------------------
+SEQUENCE RULES
+------------------------------------------------------------
+ - Stop the sequence the moment the lead books, replies STOP, or asks a human question.
+ - Pair texts with calls. A text after a missed call gets more replies than a text alone.
+ - Never send more than two unanswered texts in a single day.
+ - Log every message and opt-out in the CRM.
+ - Review your consent language and sending rules with counsel. Requirements vary by state and country.

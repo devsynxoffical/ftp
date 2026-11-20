@@ -1,0 +1,215 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/0umf92h1sb77c.js"
+4:"/_next/static/chunks/3n2fx6_1svfxt.js"
+5:"/_next/static/chunks/34pui1c-qzugx.js"
+6:I[39756,["$3","$4","$5"],"default"]
+7:I[37457,["$3","$4","$5"],"default"]
+f:"/_next/static/chunks/2lyy0yvf_0_wr.js"
+10:"/_next/static/chunks/0rsakdox7r09y.js"
+11:I[22016,["$3","$4","$5","$f","$10"],""]
+21:"ViewportBoundary"
+22:I[97367,["$3","$4","$5"],"$21"]
+23:"MetadataBoundary"
+24:I[97367,["$3","$4","$5"],"$23"]
+25:"$Sreact.suspense"
+26:I[27201,["$3","$4","$5"],"IconMark"]
+9:X
+9:C
+a:X
+e:T6d4,{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.funnelsthatprint.com"},{"@type":"ListItem","position":2,"name":"Templates","item":"https://www.funnelsthatprint.com/templates"},{"@type":"ListItem","position":3,"name":"Funnel KPI dashboard template","item":"https://www.funnelsthatprint.com/templates/funnel-kpi-dashboard"}]},{"@type":"Article","@id":"https://www.funnelsthatprint.com/templates/funnel-kpi-dashboard#article","headline":"Funnel KPI Dashboard Template (Google Sheets Ready)","description":"Free funnel KPI dashboard template: weekly ad, lead, booking, show, close and revenue metrics with formulas, targets, color rules and a review routine.","image":["https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"],"datePublished":"2026-11-05T09:00:00+00:00","dateModified":"2026-11-05T09:00:00+00:00","author":{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-gaurav","name":"Gaurav Kapoor","jobTitle":"Founder & Funnel Strategist, Funnels That Print","image":"https://www.funnelsthatprint.com/img/team/gaurav.webp","url":"https://www.funnelsthatprint.com/team/gaurav-kapoor","worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"},"sameAs":["https://www.instagram.com/gauravecomm/"]},"publisher":{"@type":"Organization","@id":"https://www.funnelsthatprint.com/#organization","name":"Funnels That Print","url":"https://www.funnelsthatprint.com","logo":{"@type":"ImageObject","url":"https://www.funnelsthatprint.com/favicon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.funnelsthatprint.com/templates/funnel-kpi-dashboard"},"inLanguage":"en-US"}]}d:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$e"}}],["$","header",null,{"className":"sx-hero","data-wa-topic":"Funnel KPI dashboard template","children":["$","div",null,{"className":"box","children":[["$","nav",null,{"className":"crumbs","aria-label":"Breadcrumb","children":[["$","$L11",null,{"href":"/","children":"Home"}],[["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L11",null,{"href":"/templates","children":"Templates"}]]]}],["$","div",null,{"className":"sx-hero-grid","children":[["$","div",null,{"className":"sx-hero-copy","children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h1",null,{"className":"h1 d","children":["Funnel KPI"," ",["$","span",null,{"className":"it","children":"dashboard template"}]]}],["$","div",null,{"className":"lead seo-intro","dangerouslySetInnerHTML":{"__html":"This <strong>funnel KPI dashboard template</strong> is a three-tab spreadsheet layout for tracking a lead funnel week by week: ad spend through revenue with formulas for every rate, a speed-and-follow-up tab, and a targets tab with break-even rules. Paste it into Google Sheets or Excel and fill one row per week."}}],["$","div",null,{"className":"seo-cta","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22Funnel%20KPI%20dashboard%20template%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Ffunnel-kpi-dashboard)","target":"_blank","rel":"noopener","children":["WhatsApp us ","$L12"]}]]}],"$L13"]}],"$L14"]}]]}]}],"$L15","$undefined",false,"$undefined","$L16",false,"$L17",false,false,"$L18","$L19","$L1a","$L1b","$L1c"],["$L1d","$L1e"],"$L1f"]}],"p":"$@20","v":null,"s":"$a"}}]]
+b:[["children",{"s":{"n":"slug","t":"d","k":"funnel-kpi-dashboard","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@c","v":"$9","s":"$a"},"c":"$Qd"}]]
+1:[["children",{"s":"templates","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#ff5a1f"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Funnel KPI Dashboard Template (Google Sheets Ready)"}],["$","meta","1",{"name":"description","content":"Free funnel KPI dashboard template: weekly ad, lead, booking, show, close and revenue metrics with formulas, targets, color rules and a review routine."}],["$","link","2",{"rel":"author","href":"https://www.funnelsthatprint.com"}],["$","meta","3",{"name":"author","content":"Funnels That Print Team"}],["$","link","4",{"rel":"manifest","href":"/site.webmanifest"}],["$","meta","5",{"name":"keywords","content":"AI receptionist,AI appointment setter,AI lead follow up,GoHighLevel expert,GoHighLevel automation,marketing automation agency,AI receptionist for HVAC,AI receptionist for plumbers,AI receptionist for contractors,AI receptionist for real estate,speed to lead automation,Funnels That Print"}],["$","meta","6",{"name":"creator","content":"Funnels That Print"}],["$","meta","7",{"name":"publisher","content":"Funnels That Print"}],["$","meta","8",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","10",{"name":"category","content":"technology"}],["$","link","11",{"rel":"canonical","href":"https://www.funnelsthatprint.com/templates/funnel-kpi-dashboard"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"name":"google-site-verification","content":"eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI"}],["$","meta","14",{"property":"og:title","content":"Funnel KPI Dashboard Template (Google Sheets Ready)"}],["$","meta","15",{"property":"og:description","content":"Free funnel KPI dashboard template: weekly ad, lead, booking, show, close and revenue metrics with formulas, targets, color rules and a review routine."}],["$","meta","16",{"property":"og:url","content":"https://www.funnelsthatprint.com/templates/funnel-kpi-dashboard"}],["$","meta","17",{"property":"og:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"Funnel KPI dashboard template"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:title","content":"Funnel KPI Dashboard Template (Google Sheets Ready)"}],["$","meta","24",{"name":"twitter:description","content":"Free funnel KPI dashboard template: weekly ad, lead, booking, show, close and revenue metrics with formulas, targets, color rules and a review routine."}],["$","meta","25",{"name":"twitter:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.28owc4u0ts-l3.ico","sizes":"32x32","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link","29",{"rel":"icon","href":"/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L26","31",{}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$a"}},"a":"$@28","u":"$@29","b":"_t-y9Pl6m-ON9I0Gi1dJQ"}
+2a:I[65093,["$3","$4","$5","$f","$10"],"default"]
+2c:I[15685,["$3","$4","$5","$f","$10"],"default"]
+32:I[35777,["$3","$4","$5","$f","$10"],"default"]
+33:I[97367,["$3","$4","$5"],"OutletBoundary"]
+12:["$","i",null,{"children":"↗"}]
+13:["$","ul",null,{"className":"sx-trust","aria-label":"Why Funnels That Print","children":[["$","li",null,{"children":[["$","b",null,{"children":"275+"}]," documented results"]}],["$","li",null,{"children":[["$","b",null,{"children":"5-10"}]," day builds"]}],["$","li",null,{"children":[["$","b",null,{"children":"$$999"}]," builds from"]}]]}]
+14:["$","aside",null,{"className":"hx-qa sx-qa","aria-labelledby":"seo-quick-h","children":[["$","span",null,{"className":"hx-tag","children":"Quick answer"}],["$","h2",null,{"id":"seo-quick-h","children":"What KPIs should a sales funnel dashboard track?"}],["$","p",null,{"children":"Track ad spend, landing page visitors, leads, qualified leads, calls booked, calls attended, sales and cash collected. From those, calculate opt-in rate, cost per lead, booking rate, show rate, close rate, cost per sale and ROAS. Add time to first contact, because speed drives booking rate."}],["$","div",null,{"className":"hx-qa-stats","children":[["$","div","/milliondollarcasestudyHigh-ticket consulting funnel in 19 months",{"children":[["$","b",null,{"children":"$$1.52M"}],["$","span",null,{"children":"High-ticket consulting funnel in 19 months"}]]}],["$","div","/case-studies/mva-8810-leads-at-7-61-cplCost per lead across 8,810 MVA leads",{"children":[["$","b",null,{"children":"$$7.61"}],["$","span",null,{"children":"Cost per lead across 8,810 MVA leads"}]]}],["$","div","/case-studies/low-ticket-funnel-135k-revenue-on-36k-ad-spendLow-ticket revenue from 892 sales",{"children":[["$","b",null,{"children":"$$135,143"}],["$","span",null,{"children":"Low-ticket revenue from 892 sales"}]]}]]}]]}]
+15:["$","$L2a",null,{}]
+16:["$","div",null,{"className":"box sx-body","children":[["$","aside",null,{"className":"sx-toc","aria-label":"On this page","children":[["$","span",null,{"className":"mono","children":"On this page"}],["$","ol",null,{"children":[[["$","li","how-to-use-this-template",{"children":["$","a",null,{"href":"#how-to-use-this-template","children":[["$","span",null,{"children":"01"}],"How to use this template"]}]}],["$","li","customizing-it-by-business-type",{"children":["$","a",null,{"href":"#customizing-it-by-business-type","children":[["$","span",null,{"children":"02"}],"Customizing it by business type"]}]}],["$","li","dashboard-mistakes",{"children":["$","a",null,{"href":"#dashboard-mistakes","children":[["$","span",null,{"children":"03"}],"Dashboard mistakes"]}]}]],["$","li",null,{"children":["$","a",null,{"href":"#faq","children":[["$","span",null,{"children":"04"}],"Questions, answered"]}]}]]}],["$","$L11",null,{"className":"btn o sx-toc-cta","href":"/book-a-call","children":["Book a call ",["$","i",null,{"children":"↗"}]]}]]}],["$","div",null,{"className":"sx-main","children":[[["$","section","How to use this template",{"id":"how-to-use-this-template","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"01"}],["$","h2",null,{"children":"How to use this template"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ol>\n<li><strong>Create three tabs</strong> named as in the file and paste the column headers.</li>\n<li><strong>Enter inputs every Monday</strong> for the previous week from your ad manager, funnel builder and CRM.</li>\n<li><strong>Copy the formulas down</strong> and wrap them in IFERROR so empty weeks stay clean.</li>\n<li><strong>Set targets</strong> using break-even cost per lead and break-even ROAS from our <a href=\"/tools/cost-per-lead-calculator\">cost per lead calculator</a> and <a href=\"/tools/roas-calculator\">ROAS calculator</a>.</li>\n<li><strong>Hold a 15-minute weekly review</strong> and commit to one change.</li>\n</ol>\n<p>The <a href=\"/glossary/cost-per-lead\">cost per lead</a> entry explains which leads to count.</p>"}}]]}],["$","section","Customizing it by business type",{"id":"customizing-it-by-business-type","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"02"}],["$","h2",null,{"children":"Customizing it by business type"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Call-based offers:</strong> use the template as is. Add a column for pipeline value if deals take weeks to close.</li>\n<li><strong>Local services:</strong> rename calls to estimates and add jobs won and average ticket.</li>\n<li><strong>eCommerce and low-ticket:</strong> drop booking and show columns, add checkout conversion, average order value and bump take rate. Our <a href=\"/scalelowticket\">$847K low-ticket case</a> tracks exactly these.</li>\n<li><strong>Webinars:</strong> add registrations, attendance and replay views between leads and calls.</li>\n</ul>"}}]]}],["$","section","Dashboard mistakes",{"id":"dashboard-mistakes","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"03"}],["$","h2",null,{"children":"Dashboard mistakes"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Tracking only ad metrics.</strong> CTR and CPL tell you nothing about the leak after the form.</li>\n<li><strong>Using platform revenue.</strong> Use cash collected; platforms miss events without <a href=\"/meta-conversions-api-setup\">Conversions API</a> tracking.</li>\n<li><strong>Reacting to one week.</strong> Compare four-week rolling averages.</li>\n<li><strong>No owner.</strong> Each red metric needs a name and a due date.</li>\n</ul>\n<p>If the dashboard shows a gap you cannot close, our <a href=\"/services\">services</a> cover the fix.</p>"}}]]}]],"$L2b"]}]]}]
+17:["$","section",null,{"className":"sx-proof","aria-labelledby":"seo-proof-h","children":["$","div",null,{"className":"box","children":[["$","div",null,{"className":"fx-head","children":[["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Proof"}],["$","h2",null,{"id":"seo-proof-h","className":"h2 d","children":["Real numbers from ",["$","span",null,{"className":"it","children":"client campaigns."}]]}]]}],["$","$L11",null,{"className":"btn w","href":"/case-studies/all","children":["Browse all case studies"," ",["$","i",null,{"children":"↗"}]]}]]}],["$","ul",null,{"children":[["$","li","/milliondollarcasestudyHigh-ticket consulting funnel in 19 months",{"children":["$","$L11",null,{"href":"/milliondollarcasestudy","children":[["$","b",null,{"children":"$$1.52M"}],["$","span",null,{"children":"High-ticket consulting funnel in 19 months"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/mva-8810-leads-at-7-61-cplCost per lead across 8,810 MVA leads",{"children":["$","$L11",null,{"href":"/case-studies/mva-8810-leads-at-7-61-cpl","children":[["$","b",null,{"children":"$$7.61"}],["$","span",null,{"children":"Cost per lead across 8,810 MVA leads"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/low-ticket-funnel-135k-revenue-on-36k-ad-spendLow-ticket revenue from 892 sales",{"children":["$","$L11",null,{"href":"/case-studies/low-ticket-funnel-135k-revenue-on-36k-ad-spend","children":[["$","b",null,{"children":"$$135,143"}],["$","span",null,{"children":"Low-ticket revenue from 892 sales"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]}]
+18:["$","$L2c",null,{"topic":"Funnel KPI dashboard template"}]
+19:["$","section",null,{"className":"box bcta-wrap","aria-labelledby":"bcta-h","children":["$","div",null,{"className":"bcta","children":[["$","div",null,{"className":"bcta-copy","children":[["$","span",null,{"className":"hx-tag","children":"Free 30-minute call"}],["$","h2",null,{"id":"bcta-h","children":["Talk to the people who will ",["$","span",null,{"className":"it","children":"build it."}]]}],["$","p",null,{"children":"Pick a time with Gaurav or Rahul. We review your funnel, follow-up and tracking, and tell you the fastest win before you spend anything."}],["$","ul",null,{"className":"bcta-chips","children":[["$","li",null,{"children":"30 minutes"}],["$","li",null,{"children":"No obligation"}],["$","li",null,{"children":"Fixed quote after the call"}]]}]]}],["$","div",null,{"className":"bcta-actions","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22Funnel%20KPI%20dashboard%20template%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Ffunnel-kpi-dashboard)","target":"_blank","rel":"noopener","children":["WhatsApp us ",["$","i",null,{"children":"↗"}]]}],["$","$L11",null,{"className":"bcta-link","href":"/contact","children":"Or send a project brief"}]]}]]}]}]
+1a:["$","section",null,{"className":"sec box sx-related","aria-labelledby":"seo-related-h","children":[["$","div",null,{"className":"fx-head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Keep reading"}],["$","h2",null,{"id":"seo-related-h","className":"h2 d","children":["Related ",["$","span",null,{"className":"it","children":"guides."}]]}]]}]}],["$","ul",null,{"className":"sx-cards","children":[["$","li","/templates",{"children":["$","$L11",null,{"href":"/templates","children":[["$","span",null,{"className":"n mono","children":"01"}],["$","b",null,{"children":"Free sales funnel templates you can use today"}],["$","span",null,{"className":"d","children":"Free sales funnel templates: VSL script, funnel copy, SMS and email follow-up, AI voice script, no-show reminders, qualifying questions, KPI dashboard."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/tools/funnel-conversion-calculator",{"children":["$","$L11",null,{"href":"/tools/funnel-conversion-calculator","children":[["$","span",null,{"className":"n mono","children":"02"}],["$","b",null,{"children":"Funnel conversion calculator"}],["$","span",null,{"className":"d","children":"Free funnel conversion calculator. Enter visitors, opt-in, booking, show and close rates to see leads, sales, cost per sale, revenue and ROAS."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/tools/roas-calculator",{"children":["$","$L11",null,{"href":"/tools/roas-calculator","children":[["$","span",null,{"className":"n mono","children":"03"}],["$","b",null,{"children":"ROAS calculator with break-even ROAS and profit"}],["$","span",null,{"className":"d","children":"Free ROAS calculator and break-even ROAS calculator. Enter spend, revenue and margin to get ROAS, break-even ROAS and profit after ad spend."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/glossary/cost-per-lead",{"children":["$","$L11",null,{"href":"/glossary/cost-per-lead","children":[["$","span",null,{"className":"n mono","children":"04"}],["$","b",null,{"children":"What is cost per lead? Formula, benchmarks and examples"}],["$","span",null,{"className":"d","children":"What is cost per lead? The CPL formula, real benchmarks from $4.27 roofing leads to $24 at volume, and why the cheapest lead is not always the best lead."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/meta-conversions-api-setup",{"children":["$","$L11",null,{"href":"/meta-conversions-api-setup","children":[["$","span",null,{"className":"n mono","children":"05"}],["$","b",null,{"children":"Meta Conversions API setup for lead generation and eCommerce"}],["$","span",null,{"className":"d","children":"Meta Conversions API setup done for you: server-side events, deduplication, CRM stage events and Event Match Quality above 8, so ads find real buyers."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/blog/sales-funnel-stages",{"children":["$","$L11",null,{"href":"/blog/sales-funnel-stages","children":[["$","span",null,{"className":"n mono","children":"06"}],["$","b",null,{"children":"Sales Funnel Stages: The 6 Stages and What to Measure"}],["$","span",null,{"className":"d","children":"The six sales funnel stages explained: what happens at each, the assets and automation you need, the KPIs to track and how to map them to your CRM."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/sales-funnel-audit",{"children":["$","$L11",null,{"href":"/sales-funnel-audit","children":[["$","span",null,{"className":"n mono","children":"07"}],["$","b",null,{"children":"A sales funnel audit that finds where your leads and revenue leak"}],["$","span",null,{"className":"d","children":"Sales funnel audit of your offer, ads, pages, follow-up, show rate, CRM and tracking, with leaks ranked by revenue impact and fixed in the right order."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
+2d:T7ee,{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.funnelsthatprint.com/templates/funnel-kpi-dashboard#faq","mainEntity":[{"@type":"Question","name":"Should I track funnel KPIs weekly or daily?","acceptedAnswer":{"@type":"Answer","text":"Weekly for decisions, daily only for spend and obvious breakages. Daily numbers swing too much on normal volumes to act on, and reacting to them causes constant changes that never get a fair test. Review four-week rolling averages before changing offers, pages or budgets."}},{"@type":"Question","name":"Which KPI matters most?","acceptedAnswer":{"@type":"Answer","text":"Cost per sale against gross profit per sale, because it combines every stage. When it is off, the stage rates show where: opt-in rate points to the page, booking rate to follow-up speed, show rate to reminders and close rate to qualification or the sales call."}},{"@type":"Question","name":"Can I automate this dashboard?","acceptedAnswer":{"@type":"Answer","text":"Yes. Most inputs can sync automatically from ad platforms and your CRM using native integrations or connectors into Google Sheets or a reporting tool. Start manually for a month so you understand every number, then automate the inputs that take the most time to copy."}},{"@type":"Question","name":"Why track time to first contact?","acceptedAnswer":{"@type":"Answer","text":"Because it predicts booking rate better than almost anything else after the click. Across our 60+ speed-to-lead deployments, median first contact was 38 seconds and lead-to-booking rose 2.4x. If booking rate drops, check this column first before rewriting ads or pages."}},{"@type":"Question","name":"What if I do not track show rate or close rate yet?","acceptedAnswer":{"@type":"Answer","text":"Start now with a simple CRM tag or calendar status for attended and sold. Even two weeks of data beats a guess. Until you have it, use conservative estimates in the targets tab and the funnel conversion calculator, and replace them as real numbers come in."}}]}1b:["$","section",null,{"className":"sec box page-faq","id":"faq","aria-label":"Frequently asked questions","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2d"}}],["$","div",null,{"className":"head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h2",null,{"className":"h2 d","children":["Frequently asked ",["$","span",null,{"className":"it","children":"questions"}],"."]}]]}]}],["$","div",null,{"className":"page-faq-list","children":[["$","div","Should I track funnel KPIs weekly or daily?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Should I track funnel KPIs weekly or daily?"}],["$","p",null,{"children":"Weekly for decisions, daily only for spend and obvious breakages. Daily numbers swing too much on normal volumes to act on, and reacting to them causes constant changes that never get a fair test. Review four-week rolling averages before changing offers, pages or budgets."}]]}],["$","div","Which KPI matters most?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Which KPI matters most?"}],["$","p",null,{"children":"Cost per sale against gross profit per sale, because it combines every stage. When it is off, the stage rates show where: opt-in rate points to the page, booking rate to follow-up speed, show rate to reminders and close rate to qualification or the sales call."}]]}],["$","div","Can I automate this dashboard?",{"className":"page-faq-item","children":["$L2e","$L2f"]}],"$L30","$L31"]}]]}]
+1c:["$","$L32",null,{}]
+1d:["$","script","script-0",{"src":"/_next/static/chunks/2lyy0yvf_0_wr.js","async":true}]
+1e:["$","script","script-1",{"src":"/_next/static/chunks/0rsakdox7r09y.js","async":true}]
+1f:["$","$L33",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@34"}]}]
+29:true
+35:I[27566,["$3","$4","$5","$f","$10"],"default"]
+a:300
+36:T108e,FUNNEL KPI DASHBOARD TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/funnel-kpi-dashboard
+
+Paste into Google Sheets or Excel. One row per week. Columns A to T below.
+Fill the INPUT columns from your ad manager, funnel builder and CRM.
+CALCULATED columns use the formulas shown (row 2 shown; copy down).
+
+============================================================
+TAB 1. WEEKLY FUNNEL (one row per week)
+============================================================
+Col | Metric                         | Type       | Source / formula
+A   | Week starting                  | INPUT      | Monday date
+B   | Ad spend                       | INPUT      | Ad manager
+C   | Impressions                    | INPUT      | Ad manager
+D   | Link clicks                    | INPUT      | Ad manager
+E   | Landing page visitors          | INPUT      | Funnel analytics
+F   | Leads                          | INPUT      | CRM (new contacts from ads)
+G   | Verified / qualified leads     | INPUT      | CRM tag or score
+H   | Calls booked                   | INPUT      | Calendar
+I   | Calls attended                 | INPUT      | Calendar / CRM
+J   | Sales                          | INPUT      | CRM or payments
+K   | Revenue (cash collected)       | INPUT      | Payments
+L   | CTR                            | CALC       | =D2/C2
+M   | Opt-in rate                    | CALC       | =F2/E2
+N   | Cost per lead                  | CALC       | =B2/F2
+O   | Qualified lead rate            | CALC       | =G2/F2
+P   | Booking rate                   | CALC       | =H2/F2
+Q   | Show rate                      | CALC       | =I2/H2
+R   | Close rate                     | CALC       | =J2/I2
+S   | Cost per sale                  | CALC       | =B2/J2
+T   | ROAS                           | CALC       | =K2/B2
+
+Wrap each formula in IFERROR(...,"") so empty weeks do not show errors.
+
+============================================================
+TAB 2. SPEED AND FOLLOW-UP (one row per week)
+============================================================
+A   | Week starting                  | INPUT
+B   | Median time to first contact   | INPUT  | CRM report (seconds or minutes)
+C   | % leads contacted < 1 minute   | INPUT  | CRM report
+D   | % leads contacted < 5 minutes  | INPUT  | CRM report
+E   | Leads never contacted          | INPUT  | CRM report
+F   | Calls confirmed before start   | INPUT  | CRM tag
+G   | Confirmation rate              | CALC   | =F2/'Weekly funnel'!H2
+H   | No-shows rebooked              | INPUT  | CRM
+
+============================================================
+TAB 3. TARGETS (set once, review monthly)
+============================================================
+Metric              | Your target | Red if
+Cost per lead       | {target}    | above break-even CPL
+Booking rate        | {target}%   | down 20% vs 4-week average
+Show rate           | 80%+        | below 70%
+Close rate          | {target}%   | down 20% vs 4-week average
+Cost per sale       | {target}    | above gross profit per sale
+ROAS                | {target}x   | below break-even ROAS (1 / gross margin)
+Time to first contact | under 60 seconds | over 5 minutes
+
+Break-even CPL = revenue per customer x gross margin x lead-to-customer rate.
+Break-even ROAS = 1 / gross margin.
+
+============================================================
+CONDITIONAL FORMATTING
+============================================================
+Green: at or better than target. Amber: within 10% of target. Red: worse than the "Red if" rule.
+Apply to columns L to T on Tab 1 and B to D on Tab 2.
+
+============================================================
+WEEKLY REVIEW (15 minutes, same time every week)
+============================================================
+1. Which metric turned red this week?
+2. Is it a volume problem (spend, CTR, opt-in) or a follow-up problem (booking, show, close)?
+3. What is the one change we will make this week? Owner: {name}. Due: {date}.
+4. Did last week's change move its metric? Keep, adjust or roll back.
+
+Notes:
+ - Use cash collected for revenue, not contract value, unless you track both.
+ - Count leads only once, even if they opt in twice.
+ - Compare 4-week rolling averages before reacting to a single week.
+2b:["$","section",null,{"className":"seo-template","aria-labelledby":"seo-template-h","children":[["$","div",null,{"className":"seo-template-head","children":[["$","h2",null,{"id":"seo-template-h","children":"The template"}],["$","div",null,{"className":"seo-template-actions","children":[["$","$L35",null,{"text":"$36"}],"$L37"]}]]}],"$L38"]}]
+2e:["$","h3",null,{"children":"Can I automate this dashboard?"}]
+2f:["$","p",null,{"children":"Yes. Most inputs can sync automatically from ad platforms and your CRM using native integrations or connectors into Google Sheets or a reporting tool. Start manually for a month so you understand every number, then automate the inputs that take the most time to copy."}]
+30:["$","div","Why track time to first contact?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Why track time to first contact?"}],["$","p",null,{"children":"Because it predicts booking rate better than almost anything else after the click. Across our 60+ speed-to-lead deployments, median first contact was 38 seconds and lead-to-booking rose 2.4x. If booking rate drops, check this column first before rewriting ads or pages."}]]}]
+31:["$","div","What if I do not track show rate or close rate yet?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"What if I do not track show rate or close rate yet?"}],["$","p",null,{"children":"Start now with a simple CRM tag or calendar status for attended and sold. Even two weeks of data beats a guess. Until you have it, use conservative estimates in the targets tab and the funnel conversion calculator, and replace them as real numbers come in."}]]}]
+34:null
+a:C
+37:["$","a",null,{"className":"btn g","href":"/templates/files/funnel-kpi-dashboard.txt","download":true,"children":["Download .txt ",["$","i",null,{"children":"↗"}]]}]
+39:T108e,FUNNEL KPI DASHBOARD TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/funnel-kpi-dashboard
+
+Paste into Google Sheets or Excel. One row per week. Columns A to T below.
+Fill the INPUT columns from your ad manager, funnel builder and CRM.
+CALCULATED columns use the formulas shown (row 2 shown; copy down).
+
+============================================================
+TAB 1. WEEKLY FUNNEL (one row per week)
+============================================================
+Col | Metric                         | Type       | Source / formula
+A   | Week starting                  | INPUT      | Monday date
+B   | Ad spend                       | INPUT      | Ad manager
+C   | Impressions                    | INPUT      | Ad manager
+D   | Link clicks                    | INPUT      | Ad manager
+E   | Landing page visitors          | INPUT      | Funnel analytics
+F   | Leads                          | INPUT      | CRM (new contacts from ads)
+G   | Verified / qualified leads     | INPUT      | CRM tag or score
+H   | Calls booked                   | INPUT      | Calendar
+I   | Calls attended                 | INPUT      | Calendar / CRM
+J   | Sales                          | INPUT      | CRM or payments
+K   | Revenue (cash collected)       | INPUT      | Payments
+L   | CTR                            | CALC       | =D2/C2
+M   | Opt-in rate                    | CALC       | =F2/E2
+N   | Cost per lead                  | CALC       | =B2/F2
+O   | Qualified lead rate            | CALC       | =G2/F2
+P   | Booking rate                   | CALC       | =H2/F2
+Q   | Show rate                      | CALC       | =I2/H2
+R   | Close rate                     | CALC       | =J2/I2
+S   | Cost per sale                  | CALC       | =B2/J2
+T   | ROAS                           | CALC       | =K2/B2
+
+Wrap each formula in IFERROR(...,"") so empty weeks do not show errors.
+
+============================================================
+TAB 2. SPEED AND FOLLOW-UP (one row per week)
+============================================================
+A   | Week starting                  | INPUT
+B   | Median time to first contact   | INPUT  | CRM report (seconds or minutes)
+C   | % leads contacted < 1 minute   | INPUT  | CRM report
+D   | % leads contacted < 5 minutes  | INPUT  | CRM report
+E   | Leads never contacted          | INPUT  | CRM report
+F   | Calls confirmed before start   | INPUT  | CRM tag
+G   | Confirmation rate              | CALC   | =F2/'Weekly funnel'!H2
+H   | No-shows rebooked              | INPUT  | CRM
+
+============================================================
+TAB 3. TARGETS (set once, review monthly)
+============================================================
+Metric              | Your target | Red if
+Cost per lead       | {target}    | above break-even CPL
+Booking rate        | {target}%   | down 20% vs 4-week average
+Show rate           | 80%+        | below 70%
+Close rate          | {target}%   | down 20% vs 4-week average
+Cost per sale       | {target}    | above gross profit per sale
+ROAS                | {target}x   | below break-even ROAS (1 / gross margin)
+Time to first contact | under 60 seconds | over 5 minutes
+
+Break-even CPL = revenue per customer x gross margin x lead-to-customer rate.
+Break-even ROAS = 1 / gross margin.
+
+============================================================
+CONDITIONAL FORMATTING
+============================================================
+Green: at or better than target. Amber: within 10% of target. Red: worse than the "Red if" rule.
+Apply to columns L to T on Tab 1 and B to D on Tab 2.
+
+============================================================
+WEEKLY REVIEW (15 minutes, same time every week)
+============================================================
+1. Which metric turned red this week?
+2. Is it a volume problem (spend, CTR, opt-in) or a follow-up problem (booking, show, close)?
+3. What is the one change we will make this week? Owner: {name}. Due: {date}.
+4. Did last week's change move its metric? Keep, adjust or roll back.
+
+Notes:
+ - Use cash collected for revenue, not contract value, unless you track both.
+ - Count leads only once, even if they opt in twice.
+ - Compare 4-week rolling averages before reacting to a single week.
+38:["$","pre",null,{"children":"$39"}]
+28:0
+c:"$undefined"
+8:"$undefined"
+27:"$undefined"
+20:"$undefined"

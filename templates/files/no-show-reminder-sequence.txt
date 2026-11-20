@@ -1,0 +1,90 @@
+NO-SHOW REMINDER SEQUENCE
+Funnels That Print | funnelsthatprint.com/templates/no-show-reminder-sequence
+
+Three channels: SMS, email and a voice confirmation call.
+Trigger: appointment booked. Stop: appointment attended, cancelled, or contact opts out.
+Replace {braces}. Use the lead's time zone for every send.
+Only text and call people who consented at booking. Honor STOP and opt-out requests immediately.
+
+============================================================
+STEP 1. AT BOOKING (immediately)
+============================================================
+SMS:
+Hi {first_name}, you are booked with {host_name} at {company} on {day}, {date} at {time} {timezone}. Reply YES to confirm or R to reschedule. Reply STOP to opt out.
+
+Email:
+Subject: Confirmed: {appointment type} on {day} at {time}
+Hi {first_name},
+You are booked for your {appointment type} with {host_name}.
+When: {day}, {date} at {time} {timezone}
+Where: {address / phone number / video link}
+What to have ready: {item 1}, {item 2}
+To get the most from the call, watch this {length}-minute video first: {video_link}
+Need a different time? {reschedule_link}
+{host_name}, {company}
+
+============================================================
+STEP 2. 24 HOURS BEFORE
+============================================================
+SMS:
+Hi {first_name}, quick reminder: your {appointment type} with {host_name} is tomorrow at {time}. Reply YES to confirm or R to pick a new time.
+
+Email:
+Subject: Tomorrow at {time}: your {appointment type}
+Hi {first_name}, a reminder that we are meeting tomorrow at {time}. Here is what we will cover:
+ - {agenda item 1}
+ - {agenda item 2}
+ - {agenda item 3}
+Join here: {link}. See you then.
+
+============================================================
+STEP 3. VOICE CONFIRMATION CALL (morning of, or 24h before if no YES)
+============================================================
+Human or AI caller. If AI, disclose it in the first sentence.
+"Hi {first_name}, this is {caller_name}, an AI assistant with {company}. I am calling to confirm your {appointment type} with {host_name} today at {time}. Are you still good for that time?"
+ - Yes -> "Great, {host_name} is looking forward to it. You will get the link by text." End.
+ - No -> "No problem. Would {slot 1} or {slot 2} work better?" Rebook. End.
+ - Voicemail -> "Hi {first_name}, {caller_name}, an AI assistant with {company}, confirming your appointment today at {time}. Reply to our text if you need a new time."
+
+============================================================
+STEP 4. 1 HOUR BEFORE
+============================================================
+SMS:
+{first_name}, see you in an hour! Here is your link: {link}. {host_name} has your notes ready.
+
+============================================================
+STEP 5. 5 MINUTES AFTER START (if not joined)
+============================================================
+SMS:
+Hi {first_name}, {host_name} is on the call now and waiting for you: {link}. Running late? Reply and let us know.
+
+Call: place one call from {host_name} or the assistant. If no answer, go to step 6.
+
+============================================================
+STEP 6. NO-SHOW RECOVERY
+============================================================
+Same day, 30 minutes after:
+SMS: Hi {first_name}, sorry we missed you today. Life happens. Want to grab another time? {reschedule_link}
+
+Next day:
+Email:
+Subject: Missed you yesterday
+Hi {first_name}, we had your {appointment type} set for yesterday and did not connect. No problem at all. If you still want {result}, pick a new time here: {reschedule_link}.
+
+Day 3:
+SMS: {first_name}, still want help with {problem}? Reply YES and I will send two open times. Reply STOP to opt out.
+
+Day 7:
+Email:
+Subject: Should we close your file?
+Hi {first_name}, I have not heard back, so I will close your request for now. If anything changes, reply to this email and we will pick it up.
+
+============================================================
+CRM RULES
+============================================================
+ - Tag every booking with source and booking lead time (hours between booking and appointment).
+ - Mark confirmed when the lead replies YES or confirms by phone.
+ - Unconfirmed 2 hours before: alert the host and attempt one more call.
+ - Track show rate weekly: attended / booked. Target 80% or higher.
+ - Exclude cancelled and rescheduled appointments from recovery messages.
+ - Log opt-outs and stop every channel for that contact.

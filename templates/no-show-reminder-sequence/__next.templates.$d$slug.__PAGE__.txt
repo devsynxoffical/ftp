@@ -1,0 +1,236 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/0umf92h1sb77c.js"
+4:"/_next/static/chunks/3n2fx6_1svfxt.js"
+5:"/_next/static/chunks/34pui1c-qzugx.js"
+6:I[39756,["$3","$4","$5"],"default"]
+7:I[37457,["$3","$4","$5"],"default"]
+f:"/_next/static/chunks/2lyy0yvf_0_wr.js"
+10:"/_next/static/chunks/0rsakdox7r09y.js"
+11:I[22016,["$3","$4","$5","$f","$10"],""]
+21:"ViewportBoundary"
+22:I[97367,["$3","$4","$5"],"$21"]
+23:"MetadataBoundary"
+24:I[97367,["$3","$4","$5"],"$23"]
+25:"$Sreact.suspense"
+26:I[27201,["$3","$4","$5"],"IconMark"]
+9:X
+9:C
+a:X
+e:T6f8,{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.funnelsthatprint.com"},{"@type":"ListItem","position":2,"name":"Templates","item":"https://www.funnelsthatprint.com/templates"},{"@type":"ListItem","position":3,"name":"No-show reminder sequence for sales calls and appointments","item":"https://www.funnelsthatprint.com/templates/no-show-reminder-sequence"}]},{"@type":"Article","@id":"https://www.funnelsthatprint.com/templates/no-show-reminder-sequence#article","headline":"No-Show Reminder Sequence: SMS, Email & Voice","description":"Free no-show reminder sequence: booking confirmation, 24-hour and 1-hour reminders, a voice confirmation call and recovery messages for missed calls.","image":["https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"],"datePublished":"2026-11-05T09:00:00+00:00","dateModified":"2026-11-05T09:00:00+00:00","author":{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-gaurav","name":"Gaurav Kapoor","jobTitle":"Founder & Funnel Strategist, Funnels That Print","image":"https://www.funnelsthatprint.com/img/team/gaurav.webp","url":"https://www.funnelsthatprint.com/team/gaurav-kapoor","worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"},"sameAs":["https://www.instagram.com/gauravecomm/"]},"publisher":{"@type":"Organization","@id":"https://www.funnelsthatprint.com/#organization","name":"Funnels That Print","url":"https://www.funnelsthatprint.com","logo":{"@type":"ImageObject","url":"https://www.funnelsthatprint.com/favicon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.funnelsthatprint.com/templates/no-show-reminder-sequence"},"inLanguage":"en-US"}]}d:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$e"}}],["$","header",null,{"className":"sx-hero","data-wa-topic":"No-show reminder sequence for sales calls and appointments","children":["$","div",null,{"className":"box","children":[["$","nav",null,{"className":"crumbs","aria-label":"Breadcrumb","children":[["$","$L11",null,{"href":"/","children":"Home"}],[["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L11",null,{"href":"/templates","children":"Templates"}]]]}],["$","div",null,{"className":"sx-hero-grid","children":[["$","div",null,{"className":"sx-hero-copy","children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h1",null,{"className":"h1 d","children":["No-show reminder sequence for sales calls"," ",["$","span",null,{"className":"it","children":"and appointments"}]]}],["$","div",null,{"className":"lead seo-intro","dangerouslySetInnerHTML":{"__html":"This <strong>no-show reminder sequence</strong> uses three channels, SMS, email and a voice confirmation call, to get booked prospects to show up, and a recovery sequence to rebook the ones who do not. It is the structure behind show-up rates of up to 88% in our client builds."}}],["$","div",null,{"className":"seo-cta","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22No-show%20reminder%20sequence%20for%20sales%20calls%20and%20appointments%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Fno-show-reminder-sequence)","target":"_blank","rel":"noopener","children":["WhatsApp us ","$L12"]}]]}],"$L13"]}],"$L14"]}]]}]}],"$L15","$undefined",false,"$undefined","$L16",false,"$L17",false,false,"$L18","$L19","$L1a","$L1b","$L1c"],["$L1d","$L1e"],"$L1f"]}],"p":"$@20","v":null,"s":"$a"}}]]
+b:[["children",{"s":{"n":"slug","t":"d","k":"no-show-reminder-sequence","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@c","v":"$9","s":"$a"},"c":"$Qd"}]]
+1:[["children",{"s":"templates","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#ff5a1f"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"No-Show Reminder Sequence: SMS, Email & Voice"}],["$","meta","1",{"name":"description","content":"Free no-show reminder sequence: booking confirmation, 24-hour and 1-hour reminders, a voice confirmation call and recovery messages for missed calls."}],["$","link","2",{"rel":"author","href":"https://www.funnelsthatprint.com"}],["$","meta","3",{"name":"author","content":"Funnels That Print Team"}],["$","link","4",{"rel":"manifest","href":"/site.webmanifest"}],["$","meta","5",{"name":"keywords","content":"AI receptionist,AI appointment setter,AI lead follow up,GoHighLevel expert,GoHighLevel automation,marketing automation agency,AI receptionist for HVAC,AI receptionist for plumbers,AI receptionist for contractors,AI receptionist for real estate,speed to lead automation,Funnels That Print"}],["$","meta","6",{"name":"creator","content":"Funnels That Print"}],["$","meta","7",{"name":"publisher","content":"Funnels That Print"}],["$","meta","8",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","10",{"name":"category","content":"technology"}],["$","link","11",{"rel":"canonical","href":"https://www.funnelsthatprint.com/templates/no-show-reminder-sequence"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"name":"google-site-verification","content":"eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI"}],["$","meta","14",{"property":"og:title","content":"No-Show Reminder Sequence: SMS, Email & Voice"}],["$","meta","15",{"property":"og:description","content":"Free no-show reminder sequence: booking confirmation, 24-hour and 1-hour reminders, a voice confirmation call and recovery messages for missed calls."}],["$","meta","16",{"property":"og:url","content":"https://www.funnelsthatprint.com/templates/no-show-reminder-sequence"}],["$","meta","17",{"property":"og:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"No-show reminder sequence for sales calls and appointments"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:title","content":"No-Show Reminder Sequence: SMS, Email & Voice"}],["$","meta","24",{"name":"twitter:description","content":"Free no-show reminder sequence: booking confirmation, 24-hour and 1-hour reminders, a voice confirmation call and recovery messages for missed calls."}],["$","meta","25",{"name":"twitter:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.28owc4u0ts-l3.ico","sizes":"32x32","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link","29",{"rel":"icon","href":"/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L26","31",{}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$a"}},"a":"$@28","u":"$@29","b":"_t-y9Pl6m-ON9I0Gi1dJQ"}
+2a:I[65093,["$3","$4","$5","$f","$10"],"default"]
+2c:I[15685,["$3","$4","$5","$f","$10"],"default"]
+31:I[35777,["$3","$4","$5","$f","$10"],"default"]
+32:I[97367,["$3","$4","$5"],"OutletBoundary"]
+12:["$","i",null,{"children":"↗"}]
+13:["$","ul",null,{"className":"sx-trust","aria-label":"Why Funnels That Print","children":[["$","li",null,{"children":[["$","b",null,{"children":"275+"}]," documented results"]}],["$","li",null,{"children":[["$","b",null,{"children":"5-10"}]," day builds"]}],["$","li",null,{"children":[["$","b",null,{"children":"$$999"}]," builds from"]}]]}]
+14:["$","aside",null,{"className":"hx-qa sx-qa","aria-labelledby":"seo-quick-h","children":[["$","span",null,{"className":"hx-tag","children":"Quick answer"}],["$","h2",null,{"id":"seo-quick-h","children":"What is the best reminder sequence to reduce no-shows?"}],["$","p",null,{"children":"Confirm by text and email the moment someone books, remind them 24 hours before, place a confirmation call the morning of, text again one hour before, and message five minutes after start if they have not joined. Then run a recovery sequence over seven days to rebook anyone who missed."}],["$","div",null,{"className":"hx-qa-stats","children":[["$","div","/case-studies/coaching-116k-revenue-on-2214-ad-spendRevenue from 174 coaching appointments",{"children":[["$","b",null,{"children":"$$115,500"}],["$","span",null,{"children":"Revenue from 174 coaching appointments"}]]}],["$","div","/case-studies/webinar-65k-revenue-on-2184-ad-spendWebinar revenue from 140 appointments",{"children":[["$","b",null,{"children":"$$64,960"}],["$","span",null,{"children":"Webinar revenue from 140 appointments"}]]}],["$","div","/case-studies/agency-14k-revenue-on-2824-ad-spendAgency revenue from 180 appointments",{"children":[["$","b",null,{"children":"$$14,040"}],["$","span",null,{"children":"Agency revenue from 180 appointments"}]]}]]}]]}]
+15:["$","$L2a",null,{}]
+16:["$","div",null,{"className":"box sx-body","children":[["$","aside",null,{"className":"sx-toc","aria-label":"On this page","children":[["$","span",null,{"className":"mono","children":"On this page"}],["$","ol",null,{"children":[[["$","li","how-to-use-this-template",{"children":["$","a",null,{"href":"#how-to-use-this-template","children":[["$","span",null,{"children":"01"}],"How to use this template"]}]}],["$","li","customizing-it-by-industry",{"children":["$","a",null,{"href":"#customizing-it-by-industry","children":[["$","span",null,{"children":"02"}],"Customizing it by industry"]}]}],["$","li","mistakes-that-keep-no-shows-high",{"children":["$","a",null,{"href":"#mistakes-that-keep-no-shows-high","children":[["$","span",null,{"children":"03"}],"Mistakes that keep no-shows high"]}]}]],["$","li",null,{"children":["$","a",null,{"href":"#faq","children":[["$","span",null,{"children":"04"}],"Questions, answered"]}]}]]}],["$","$L11",null,{"className":"btn o sx-toc-cta","href":"/book-a-call","children":["Book a call ",["$","i",null,{"children":"↗"}]]}]]}],["$","div",null,{"className":"sx-main","children":[[["$","section","How to use this template",{"id":"how-to-use-this-template","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"01"}],["$","h2",null,{"children":"How to use this template"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ol>\n<li><strong>Trigger on booking</strong> in your CRM, with each step timed relative to the appointment.</li>\n<li><strong>Ask for a reply.</strong> \"Reply YES to confirm\" turns a reminder into a commitment and tells you who is at risk.</li>\n<li><strong>Call the unconfirmed.</strong> Use a person or an AI assistant that discloses it is AI.</li>\n<li><strong>Exit cleanly</strong> on attendance, cancellation, reschedule or opt-out.</li>\n<li><strong>Track show rate weekly</strong> on the <a href=\"/templates/funnel-kpi-dashboard\">funnel KPI dashboard</a>.</li>\n</ol>\n<p>The <a href=\"/glossary/show-rate\">show rate</a> entry explains how to calculate and benchmark attendance.</p>"}}]]}],["$","section","Customizing it by industry",{"id":"customizing-it-by-industry","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"02"}],["$","h2",null,{"children":"Customizing it by industry"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Coaching and consulting calls:</strong> add a pre-call video to the confirmation and 24-hour messages so prospects arrive warm.</li>\n<li><strong>Home services estimates:</strong> confirm the address and arrival window, and text when the estimator is on the way.</li>\n<li><strong>Med spas and dental:</strong> include preparation instructions and the cancellation policy. See <a href=\"/funnels-for/med-spas\">med spa funnels</a>.</li>\n<li><strong>Legal intake:</strong> remind clients which documents to bring and keep case details out of texts.</li>\n<li><strong>Webinars:</strong> send reminders at 24 hours, 1 hour and live, then a replay sequence.</li>\n</ul>"}}]]}],["$","section","Mistakes that keep no-shows high",{"id":"mistakes-that-keep-no-shows-high","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"03"}],["$","h2",null,{"children":"Mistakes that keep no-shows high"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Email-only reminders.</strong> Texts get read; emails often do not.</li>\n<li><strong>Booking too far out.</strong> The longer the gap, the more people forget. Offer slots within 48 hours.</li>\n<li><strong>No reason to attend.</strong> Tell them what they will leave with.</li>\n<li><strong>Giving up after one miss.</strong> Many no-shows rebook if you ask kindly.</li>\n<li><strong>Ignoring opt-outs.</strong> Stop every channel the moment someone replies STOP.</li>\n</ul>\n<p>Put a dollar figure on the problem with the <a href=\"/tools/no-show-cost-calculator\">no-show cost calculator</a>. We build these flows in <a href=\"/crm-automation\">CRM automation</a> and <a href=\"/ai-appointment-setter\">AI appointment setter</a> projects.</p>"}}]]}]],"$L2b"]}]]}]
+17:["$","section",null,{"className":"sx-proof","aria-labelledby":"seo-proof-h","children":["$","div",null,{"className":"box","children":[["$","div",null,{"className":"fx-head","children":[["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Proof"}],["$","h2",null,{"id":"seo-proof-h","className":"h2 d","children":["Real numbers from ",["$","span",null,{"className":"it","children":"client campaigns."}]]}]]}],["$","$L11",null,{"className":"btn w","href":"/case-studies/all","children":["Browse all case studies"," ",["$","i",null,{"children":"↗"}]]}]]}],["$","ul",null,{"children":[["$","li","/case-studies/coaching-116k-revenue-on-2214-ad-spendRevenue from 174 coaching appointments",{"children":["$","$L11",null,{"href":"/case-studies/coaching-116k-revenue-on-2214-ad-spend","children":[["$","b",null,{"children":"$$115,500"}],["$","span",null,{"children":"Revenue from 174 coaching appointments"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/webinar-65k-revenue-on-2184-ad-spendWebinar revenue from 140 appointments",{"children":["$","$L11",null,{"href":"/case-studies/webinar-65k-revenue-on-2184-ad-spend","children":[["$","b",null,{"children":"$$64,960"}],["$","span",null,{"children":"Webinar revenue from 140 appointments"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/agency-14k-revenue-on-2824-ad-spendAgency revenue from 180 appointments",{"children":["$","$L11",null,{"href":"/case-studies/agency-14k-revenue-on-2824-ad-spend","children":[["$","b",null,{"children":"$$14,040"}],["$","span",null,{"children":"Agency revenue from 180 appointments"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]}]
+18:["$","$L2c",null,{"topic":"No-show reminder sequence for sales calls and appointments"}]
+19:["$","section",null,{"className":"box bcta-wrap","aria-labelledby":"bcta-h","children":["$","div",null,{"className":"bcta","children":[["$","div",null,{"className":"bcta-copy","children":[["$","span",null,{"className":"hx-tag","children":"Free 30-minute call"}],["$","h2",null,{"id":"bcta-h","children":["Talk to the people who will ",["$","span",null,{"className":"it","children":"build it."}]]}],["$","p",null,{"children":"Pick a time with Gaurav or Rahul. We review your funnel, follow-up and tracking, and tell you the fastest win before you spend anything."}],["$","ul",null,{"className":"bcta-chips","children":[["$","li",null,{"children":"30 minutes"}],["$","li",null,{"children":"No obligation"}],["$","li",null,{"children":"Fixed quote after the call"}]]}]]}],["$","div",null,{"className":"bcta-actions","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22No-show%20reminder%20sequence%20for%20sales%20calls%20and%20appointments%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Fno-show-reminder-sequence)","target":"_blank","rel":"noopener","children":["WhatsApp us ",["$","i",null,{"children":"↗"}]]}],["$","$L11",null,{"className":"bcta-link","href":"/contact","children":"Or send a project brief"}]]}]]}]}]
+1a:["$","section",null,{"className":"sec box sx-related","aria-labelledby":"seo-related-h","children":[["$","div",null,{"className":"fx-head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Keep reading"}],["$","h2",null,{"id":"seo-related-h","className":"h2 d","children":["Related ",["$","span",null,{"className":"it","children":"guides."}]]}]]}]}],["$","ul",null,{"className":"sx-cards","children":[["$","li","/templates",{"children":["$","$L11",null,{"href":"/templates","children":[["$","span",null,{"className":"n mono","children":"01"}],["$","b",null,{"children":"Free sales funnel templates you can use today"}],["$","span",null,{"className":"d","children":"Free sales funnel templates: VSL script, funnel copy, SMS and email follow-up, AI voice script, no-show reminders, qualifying questions, KPI dashboard."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/tools/no-show-cost-calculator",{"children":["$","$L11",null,{"href":"/tools/no-show-cost-calculator","children":[["$","span",null,{"className":"n mono","children":"02"}],["$","b",null,{"children":"No-show cost calculator for sales calls and appointments"}],["$","span",null,{"className":"d","children":"Free no-show cost calculator. See the revenue lost to missed sales calls each month and year, and how much a lower no-show rate would recover for you."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/glossary/show-rate",{"children":["$","$L11",null,{"href":"/glossary/show-rate","children":[["$","span",null,{"className":"n mono","children":"03"}],["$","b",null,{"children":"Show rate: definition, formula and how to improve it"}],["$","span",null,{"className":"d","children":"Show rate is the share of booked calls that happen. The formula, what counts as good, how 3-channel reminders reach up to 88%, and mistakes to avoid."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/ai-appointment-setter",{"children":["$","$L11",null,{"href":"/ai-appointment-setter","children":[["$","span",null,{"className":"n mono","children":"04"}],["$","b",null,{"children":"An AI appointment setter that books qualified calls 24/7"}],["$","span",null,{"className":"d","children":"An AI appointment setter for AI lead follow-up: contacts every lead in seconds, books qualified calls 24/7, sends reminders and rebooks no-shows."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/crm-automation",{"children":["$","$L11",null,{"href":"/crm-automation","children":[["$","span",null,{"className":"n mono","children":"05"}],["$","b",null,{"children":"A CRM automation agency for pipelines, reminders and nurture"}],["$","span",null,{"className":"d","children":"A CRM automation agency that builds pipelines, lead routing, reminders, nurture and reactivation workflows so no lead is forgotten and more calls show up."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/blog/reduce-sales-call-no-show-rate-reminder-automation",{"children":["$","$L11",null,{"href":"/blog/reduce-sales-call-no-show-rate-reminder-automation","children":[["$","span",null,{"className":"n mono","children":"06"}],["$","b",null,{"children":"How to Reduce Sales Call No-Show Rates to Under 12%"}],["$","span",null,{"className":"d","children":"Cut sales call no-shows from 38% to under 12%: booking page fixes, a 7-touch reminder sequence, pre-call video, confirmation gate and no-show reactivation."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
+2d:T807,{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.funnelsthatprint.com/templates/no-show-reminder-sequence#faq","mainEntity":[{"@type":"Question","name":"How many reminders should I send before an appointment?","acceptedAnswer":{"@type":"Answer","text":"Four touches works for most businesses: confirmation at booking, a reminder 24 hours before, a confirmation call or text the morning of, and a final text one hour before. Add a message five minutes after start for anyone who has not joined. More than that starts to feel pushy."}},{"@type":"Question","name":"Do confirmation calls really help?","acceptedAnswer":{"@type":"Answer","text":"Yes, especially for high-value appointments. A short call asks for an explicit yes and catches people who need to reschedule before they ghost. If staffing is a problem, an AI assistant can make these calls, provided it discloses that it is AI and offers a human when asked."}},{"@type":"Question","name":"What show rate should I aim for?","acceptedAnswer":{"@type":"Answer","text":"With three-channel reminders, our clients reach show-up rates of up to 88%. A realistic first target is 80% for calls booked from paid ads. If you sit below 70%, reminders are the fastest fix, followed by booking appointments sooner after opt-in."}},{"@type":"Question","name":"What should I send after a no-show?","acceptedAnswer":{"@type":"Answer","text":"A kind, short text within 30 minutes offering a new time, an email the next day, a final text on day 3 and a close-the-loop email on day 7. Avoid guilt or sarcasm. Many people missed for ordinary reasons and will rebook if it is easy."}},{"@type":"Question","name":"Can I use this sequence in GoHighLevel?","acceptedAnswer":{"@type":"Answer","text":"Yes. GoHighLevel workflows support appointment-based triggers, wait steps relative to the start time, SMS, email and call tasks, and exit conditions on status changes. The same structure also works in HubSpot, Calendly with Zapier, or any CRM that can schedule messages relative to an appointment."}}]}1b:["$","section",null,{"className":"sec box page-faq","id":"faq","aria-label":"Frequently asked questions","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2d"}}],["$","div",null,{"className":"head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h2",null,{"className":"h2 d","children":["Frequently asked ",["$","span",null,{"className":"it","children":"questions"}],"."]}]]}]}],["$","div",null,{"className":"page-faq-list","children":[["$","div","How many reminders should I send before an appointment?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How many reminders should I send before an appointment?"}],["$","p",null,{"children":"Four touches works for most businesses: confirmation at booking, a reminder 24 hours before, a confirmation call or text the morning of, and a final text one hour before. Add a message five minutes after start for anyone who has not joined. More than that starts to feel pushy."}]]}],["$","div","Do confirmation calls really help?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Do confirmation calls really help?"}],["$","p",null,{"children":"Yes, especially for high-value appointments. A short call asks for an explicit yes and catches people who need to reschedule before they ghost. If staffing is a problem, an AI assistant can make these calls, provided it discloses that it is AI and offers a human when asked."}]]}],"$L2e","$L2f","$L30"]}]]}]
+1c:["$","$L31",null,{}]
+1d:["$","script","script-0",{"src":"/_next/static/chunks/2lyy0yvf_0_wr.js","async":true}]
+1e:["$","script","script-1",{"src":"/_next/static/chunks/0rsakdox7r09y.js","async":true}]
+1f:["$","$L32",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@33"}]}]
+29:true
+34:I[27566,["$3","$4","$5","$f","$10"],"default"]
+a:300
+35:T1186,NO-SHOW REMINDER SEQUENCE
+Funnels That Print | funnelsthatprint.com/templates/no-show-reminder-sequence
+
+Three channels: SMS, email and a voice confirmation call.
+Trigger: appointment booked. Stop: appointment attended, cancelled, or contact opts out.
+Replace {braces}. Use the lead's time zone for every send.
+Only text and call people who consented at booking. Honor STOP and opt-out requests immediately.
+
+============================================================
+STEP 1. AT BOOKING (immediately)
+============================================================
+SMS:
+Hi {first_name}, you are booked with {host_name} at {company} on {day}, {date} at {time} {timezone}. Reply YES to confirm or R to reschedule. Reply STOP to opt out.
+
+Email:
+Subject: Confirmed: {appointment type} on {day} at {time}
+Hi {first_name},
+You are booked for your {appointment type} with {host_name}.
+When: {day}, {date} at {time} {timezone}
+Where: {address / phone number / video link}
+What to have ready: {item 1}, {item 2}
+To get the most from the call, watch this {length}-minute video first: {video_link}
+Need a different time? {reschedule_link}
+{host_name}, {company}
+
+============================================================
+STEP 2. 24 HOURS BEFORE
+============================================================
+SMS:
+Hi {first_name}, quick reminder: your {appointment type} with {host_name} is tomorrow at {time}. Reply YES to confirm or R to pick a new time.
+
+Email:
+Subject: Tomorrow at {time}: your {appointment type}
+Hi {first_name}, a reminder that we are meeting tomorrow at {time}. Here is what we will cover:
+ - {agenda item 1}
+ - {agenda item 2}
+ - {agenda item 3}
+Join here: {link}. See you then.
+
+============================================================
+STEP 3. VOICE CONFIRMATION CALL (morning of, or 24h before if no YES)
+============================================================
+Human or AI caller. If AI, disclose it in the first sentence.
+"Hi {first_name}, this is {caller_name}, an AI assistant with {company}. I am calling to confirm your {appointment type} with {host_name} today at {time}. Are you still good for that time?"
+ - Yes -> "Great, {host_name} is looking forward to it. You will get the link by text." End.
+ - No -> "No problem. Would {slot 1} or {slot 2} work better?" Rebook. End.
+ - Voicemail -> "Hi {first_name}, {caller_name}, an AI assistant with {company}, confirming your appointment today at {time}. Reply to our text if you need a new time."
+
+============================================================
+STEP 4. 1 HOUR BEFORE
+============================================================
+SMS:
+{first_name}, see you in an hour! Here is your link: {link}. {host_name} has your notes ready.
+
+============================================================
+STEP 5. 5 MINUTES AFTER START (if not joined)
+============================================================
+SMS:
+Hi {first_name}, {host_name} is on the call now and waiting for you: {link}. Running late? Reply and let us know.
+
+Call: place one call from {host_name} or the assistant. If no answer, go to step 6.
+
+============================================================
+STEP 6. NO-SHOW RECOVERY
+============================================================
+Same day, 30 minutes after:
+SMS: Hi {first_name}, sorry we missed you today. Life happens. Want to grab another time? {reschedule_link}
+
+Next day:
+Email:
+Subject: Missed you yesterday
+Hi {first_name}, we had your {appointment type} set for yesterday and did not connect. No problem at all. If you still want {result}, pick a new time here: {reschedule_link}.
+
+Day 3:
+SMS: {first_name}, still want help with {problem}? Reply YES and I will send two open times. Reply STOP to opt out.
+
+Day 7:
+Email:
+Subject: Should we close your file?
+Hi {first_name}, I have not heard back, so I will close your request for now. If anything changes, reply to this email and we will pick it up.
+
+============================================================
+CRM RULES
+============================================================
+ - Tag every booking with source and booking lead time (hours between booking and appointment).
+ - Mark confirmed when the lead replies YES or confirms by phone.
+ - Unconfirmed 2 hours before: alert the host and attempt one more call.
+ - Track show rate weekly: attended / booked. Target 80% or higher.
+ - Exclude cancelled and rescheduled appointments from recovery messages.
+ - Log opt-outs and stop every channel for that contact.
+2b:["$","section",null,{"className":"seo-template","aria-labelledby":"seo-template-h","children":[["$","div",null,{"className":"seo-template-head","children":[["$","h2",null,{"id":"seo-template-h","children":"The template"}],["$","div",null,{"className":"seo-template-actions","children":[["$","$L34",null,{"text":"$35"}],"$L36"]}]]}],"$L37"]}]
+2e:["$","div","What show rate should I aim for?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"What show rate should I aim for?"}],["$","p",null,{"children":"With three-channel reminders, our clients reach show-up rates of up to 88%. A realistic first target is 80% for calls booked from paid ads. If you sit below 70%, reminders are the fastest fix, followed by booking appointments sooner after opt-in."}]]}]
+2f:["$","div","What should I send after a no-show?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"What should I send after a no-show?"}],["$","p",null,{"children":"A kind, short text within 30 minutes offering a new time, an email the next day, a final text on day 3 and a close-the-loop email on day 7. Avoid guilt or sarcasm. Many people missed for ordinary reasons and will rebook if it is easy."}]]}]
+30:["$","div","Can I use this sequence in GoHighLevel?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Can I use this sequence in GoHighLevel?"}],["$","p",null,{"children":"Yes. GoHighLevel workflows support appointment-based triggers, wait steps relative to the start time, SMS, email and call tasks, and exit conditions on status changes. The same structure also works in HubSpot, Calendly with Zapier, or any CRM that can schedule messages relative to an appointment."}]]}]
+33:null
+a:C
+36:["$","a",null,{"className":"btn g","href":"/templates/files/no-show-reminder-sequence.txt","download":true,"children":["Download .txt ",["$","i",null,{"children":"↗"}]]}]
+38:T1186,NO-SHOW REMINDER SEQUENCE
+Funnels That Print | funnelsthatprint.com/templates/no-show-reminder-sequence
+
+Three channels: SMS, email and a voice confirmation call.
+Trigger: appointment booked. Stop: appointment attended, cancelled, or contact opts out.
+Replace {braces}. Use the lead's time zone for every send.
+Only text and call people who consented at booking. Honor STOP and opt-out requests immediately.
+
+============================================================
+STEP 1. AT BOOKING (immediately)
+============================================================
+SMS:
+Hi {first_name}, you are booked with {host_name} at {company} on {day}, {date} at {time} {timezone}. Reply YES to confirm or R to reschedule. Reply STOP to opt out.
+
+Email:
+Subject: Confirmed: {appointment type} on {day} at {time}
+Hi {first_name},
+You are booked for your {appointment type} with {host_name}.
+When: {day}, {date} at {time} {timezone}
+Where: {address / phone number / video link}
+What to have ready: {item 1}, {item 2}
+To get the most from the call, watch this {length}-minute video first: {video_link}
+Need a different time? {reschedule_link}
+{host_name}, {company}
+
+============================================================
+STEP 2. 24 HOURS BEFORE
+============================================================
+SMS:
+Hi {first_name}, quick reminder: your {appointment type} with {host_name} is tomorrow at {time}. Reply YES to confirm or R to pick a new time.
+
+Email:
+Subject: Tomorrow at {time}: your {appointment type}
+Hi {first_name}, a reminder that we are meeting tomorrow at {time}. Here is what we will cover:
+ - {agenda item 1}
+ - {agenda item 2}
+ - {agenda item 3}
+Join here: {link}. See you then.
+
+============================================================
+STEP 3. VOICE CONFIRMATION CALL (morning of, or 24h before if no YES)
+============================================================
+Human or AI caller. If AI, disclose it in the first sentence.
+"Hi {first_name}, this is {caller_name}, an AI assistant with {company}. I am calling to confirm your {appointment type} with {host_name} today at {time}. Are you still good for that time?"
+ - Yes -> "Great, {host_name} is looking forward to it. You will get the link by text." End.
+ - No -> "No problem. Would {slot 1} or {slot 2} work better?" Rebook. End.
+ - Voicemail -> "Hi {first_name}, {caller_name}, an AI assistant with {company}, confirming your appointment today at {time}. Reply to our text if you need a new time."
+
+============================================================
+STEP 4. 1 HOUR BEFORE
+============================================================
+SMS:
+{first_name}, see you in an hour! Here is your link: {link}. {host_name} has your notes ready.
+
+============================================================
+STEP 5. 5 MINUTES AFTER START (if not joined)
+============================================================
+SMS:
+Hi {first_name}, {host_name} is on the call now and waiting for you: {link}. Running late? Reply and let us know.
+
+Call: place one call from {host_name} or the assistant. If no answer, go to step 6.
+
+============================================================
+STEP 6. NO-SHOW RECOVERY
+============================================================
+Same day, 30 minutes after:
+SMS: Hi {first_name}, sorry we missed you today. Life happens. Want to grab another time? {reschedule_link}
+
+Next day:
+Email:
+Subject: Missed you yesterday
+Hi {first_name}, we had your {appointment type} set for yesterday and did not connect. No problem at all. If you still want {result}, pick a new time here: {reschedule_link}.
+
+Day 3:
+SMS: {first_name}, still want help with {problem}? Reply YES and I will send two open times. Reply STOP to opt out.
+
+Day 7:
+Email:
+Subject: Should we close your file?
+Hi {first_name}, I have not heard back, so I will close your request for now. If anything changes, reply to this email and we will pick it up.
+
+============================================================
+CRM RULES
+============================================================
+ - Tag every booking with source and booking lead time (hours between booking and appointment).
+ - Mark confirmed when the lead replies YES or confirms by phone.
+ - Unconfirmed 2 hours before: alert the host and attempt one more call.
+ - Track show rate weekly: attended / booked. Target 80% or higher.
+ - Exclude cancelled and rescheduled appointments from recovery messages.
+ - Log opt-outs and stop every channel for that contact.
+37:["$","pre",null,{"children":"$38"}]
+28:0
+c:"$undefined"
+8:"$undefined"
+27:"$undefined"
+20:"$undefined"

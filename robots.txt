@@ -1,0 +1,31 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+User-Agent: Googlebot
+User-Agent: Bingbot
+User-Agent: Applebot
+User-Agent: DuckDuckBot
+User-Agent: YandexBot
+User-Agent: Baiduspider
+User-Agent: Slurp
+Allow: /
+Disallow: /api/
+
+User-Agent: GPTBot
+User-Agent: OAI-SearchBot
+User-Agent: ChatGPT-User
+User-Agent: PerplexityBot
+User-Agent: ClaudeBot
+User-Agent: anthropic-ai
+User-Agent: Google-Extended
+User-Agent: Applebot-Extended
+User-Agent: cohere-ai
+User-Agent: Meta-ExternalAgent
+User-Agent: Bytespider
+Allow: /
+Disallow: /api/
+
+Host: https://www.funnelsthatprint.com
+Sitemap: https://www.funnelsthatprint.com/sitemap.xml
+Sitemap: https://www.funnelsthatprint.com/feed.xml

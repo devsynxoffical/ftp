@@ -1,0 +1,257 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/0umf92h1sb77c.js"
+4:"/_next/static/chunks/3n2fx6_1svfxt.js"
+5:"/_next/static/chunks/34pui1c-qzugx.js"
+6:I[39756,["$3","$4","$5"],"default"]
+7:I[37457,["$3","$4","$5"],"default"]
+f:"/_next/static/chunks/2lyy0yvf_0_wr.js"
+10:"/_next/static/chunks/0rsakdox7r09y.js"
+11:I[22016,["$3","$4","$5","$f","$10"],""]
+21:"ViewportBoundary"
+22:I[97367,["$3","$4","$5"],"$21"]
+23:"MetadataBoundary"
+24:I[97367,["$3","$4","$5"],"$23"]
+25:"$Sreact.suspense"
+26:I[27201,["$3","$4","$5"],"IconMark"]
+9:X
+9:C
+a:X
+e:T6e3,{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.funnelsthatprint.com"},{"@type":"ListItem","position":2,"name":"Templates","item":"https://www.funnelsthatprint.com/templates"},{"@type":"ListItem","position":3,"name":"Sales funnel copy template for every page","item":"https://www.funnelsthatprint.com/templates/funnel-copy-template"}]},{"@type":"Article","@id":"https://www.funnelsthatprint.com/templates/funnel-copy-template#article","headline":"Sales Funnel Copy Template: Every Page, Fill-In Ready","description":"Free sales funnel copy template for the landing page, quiz or application, booking page and thank-you page, with headline formulas and consent language.","image":["https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"],"datePublished":"2026-11-05T09:00:00+00:00","dateModified":"2026-11-05T09:00:00+00:00","author":{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-gaurav","name":"Gaurav Kapoor","jobTitle":"Founder & Funnel Strategist, Funnels That Print","image":"https://www.funnelsthatprint.com/img/team/gaurav.webp","url":"https://www.funnelsthatprint.com/team/gaurav-kapoor","worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"},"sameAs":["https://www.instagram.com/gauravecomm/"]},"publisher":{"@type":"Organization","@id":"https://www.funnelsthatprint.com/#organization","name":"Funnels That Print","url":"https://www.funnelsthatprint.com","logo":{"@type":"ImageObject","url":"https://www.funnelsthatprint.com/favicon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.funnelsthatprint.com/templates/funnel-copy-template"},"inLanguage":"en-US"}]}d:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$e"}}],["$","header",null,{"className":"sx-hero","data-wa-topic":"Sales funnel copy template for every page","children":["$","div",null,{"className":"box","children":[["$","nav",null,{"className":"crumbs","aria-label":"Breadcrumb","children":[["$","$L11",null,{"href":"/","children":"Home"}],[["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L11",null,{"href":"/templates","children":"Templates"}]]]}],["$","div",null,{"className":"sx-hero-grid","children":[["$","div",null,{"className":"sx-hero-copy","children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h1",null,{"className":"h1 d","children":["Sales funnel copy template for"," ",["$","span",null,{"className":"it","children":"every page"}]]}],["$","div",null,{"className":"lead seo-intro","dangerouslySetInnerHTML":{"__html":"This <strong>sales funnel copy template</strong> gives you fill-in copy for the four pages most lead funnels need: the landing page, a quiz or application, the booking page and the thank-you page. It includes three headline formulas, a proof bar, an objection FAQ and the consent line every phone-number form should carry."}}],["$","div",null,{"className":"seo-cta","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22Sales%20funnel%20copy%20template%20for%20every%20page%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Ffunnel-copy-template)","target":"_blank","rel":"noopener","children":["WhatsApp us ","$L12"]}]]}],"$L13"]}],"$L14"]}]]}]}],"$L15","$undefined",false,"$undefined","$L16",false,"$L17",false,false,"$L18","$L19","$L1a","$L1b","$L1c"],["$L1d","$L1e"],"$L1f"]}],"p":"$@20","v":null,"s":"$a"}}]]
+b:[["children",{"s":{"n":"slug","t":"d","k":"funnel-copy-template","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@c","v":"$9","s":"$a"},"c":"$Qd"}]]
+1:[["children",{"s":"templates","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#ff5a1f"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Sales Funnel Copy Template: Every Page, Fill-In Ready"}],["$","meta","1",{"name":"description","content":"Free sales funnel copy template for the landing page, quiz or application, booking page and thank-you page, with headline formulas and consent language."}],["$","link","2",{"rel":"author","href":"https://www.funnelsthatprint.com"}],["$","meta","3",{"name":"author","content":"Funnels That Print Team"}],["$","link","4",{"rel":"manifest","href":"/site.webmanifest"}],["$","meta","5",{"name":"keywords","content":"AI receptionist,AI appointment setter,AI lead follow up,GoHighLevel expert,GoHighLevel automation,marketing automation agency,AI receptionist for HVAC,AI receptionist for plumbers,AI receptionist for contractors,AI receptionist for real estate,speed to lead automation,Funnels That Print"}],["$","meta","6",{"name":"creator","content":"Funnels That Print"}],["$","meta","7",{"name":"publisher","content":"Funnels That Print"}],["$","meta","8",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","10",{"name":"category","content":"technology"}],["$","link","11",{"rel":"canonical","href":"https://www.funnelsthatprint.com/templates/funnel-copy-template"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"name":"google-site-verification","content":"eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI"}],["$","meta","14",{"property":"og:title","content":"Sales Funnel Copy Template: Every Page, Fill-In Ready"}],["$","meta","15",{"property":"og:description","content":"Free sales funnel copy template for the landing page, quiz or application, booking page and thank-you page, with headline formulas and consent language."}],["$","meta","16",{"property":"og:url","content":"https://www.funnelsthatprint.com/templates/funnel-copy-template"}],["$","meta","17",{"property":"og:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"Sales funnel copy template for every page"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:title","content":"Sales Funnel Copy Template: Every Page, Fill-In Ready"}],["$","meta","24",{"name":"twitter:description","content":"Free sales funnel copy template for the landing page, quiz or application, booking page and thank-you page, with headline formulas and consent language."}],["$","meta","25",{"name":"twitter:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.28owc4u0ts-l3.ico","sizes":"32x32","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link","29",{"rel":"icon","href":"/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L26","31",{}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$a"}},"a":"$@28","u":"$@29","b":"_t-y9Pl6m-ON9I0Gi1dJQ"}
+2a:I[65093,["$3","$4","$5","$f","$10"],"default"]
+2c:I[15685,["$3","$4","$5","$f","$10"],"default"]
+32:I[35777,["$3","$4","$5","$f","$10"],"default"]
+33:I[97367,["$3","$4","$5"],"OutletBoundary"]
+12:["$","i",null,{"children":"↗"}]
+13:["$","ul",null,{"className":"sx-trust","aria-label":"Why Funnels That Print","children":[["$","li",null,{"children":[["$","b",null,{"children":"275+"}]," documented results"]}],["$","li",null,{"children":[["$","b",null,{"children":"5-10"}]," day builds"]}],["$","li",null,{"children":[["$","b",null,{"children":"$$999"}]," builds from"]}]]}]
+14:["$","aside",null,{"className":"hx-qa sx-qa","aria-labelledby":"seo-quick-h","children":[["$","span",null,{"className":"hx-tag","children":"Quick answer"}],["$","h2",null,{"id":"seo-quick-h","children":"What copy does a sales funnel need?"}],["$","p",null,{"children":"A lead funnel needs a landing page headline that names the outcome, a subheadline explaining the next step, a button that says what the visitor gets, proof, a short how-it-works section and an objection FAQ. Then a quiz or application, a booking page that sells the call, and a thank-you page that confirms it."}],["$","div",null,{"className":"hx-qa-stats","children":[["$","div","/case-studies/roofing-686-leads-at-5-31-cplCost per lead across 686 roofing leads",{"children":[["$","b",null,{"children":"$$5.31"}],["$","span",null,{"children":"Cost per lead across 686 roofing leads"}]]}],["$","div","/case-studies/mortgage-492-leads-at-5-23-cplCost per lead across 492 mortgage leads",{"children":[["$","b",null,{"children":"$$5.23"}],["$","span",null,{"children":"Cost per lead across 492 mortgage leads"}]]}],["$","div","/scalelowticketLow-ticket front end, $27 product + $17 bump",{"children":[["$","b",null,{"children":"$$847K"}],["$","span",null,{"children":"Low-ticket front end, $27 product + $17 bump"}]]}]]}]]}]
+15:["$","$L2a",null,{}]
+16:["$","div",null,{"className":"box sx-body","children":[["$","aside",null,{"className":"sx-toc","aria-label":"On this page","children":[["$","span",null,{"className":"mono","children":"On this page"}],["$","ol",null,{"children":[[["$","li","how-to-use-this-template",{"children":["$","a",null,{"href":"#how-to-use-this-template","children":[["$","span",null,{"children":"01"}],"How to use this template"]}]}],["$","li","customizing-it-by-industry",{"children":["$","a",null,{"href":"#customizing-it-by-industry","children":[["$","span",null,{"children":"02"}],"Customizing it by industry"]}]}],["$","li","copy-mistakes-we-fix-most-often",{"children":["$","a",null,{"href":"#copy-mistakes-we-fix-most-often","children":[["$","span",null,{"children":"03"}],"Copy mistakes we fix most often"]}]}]],["$","li",null,{"children":["$","a",null,{"href":"#faq","children":[["$","span",null,{"children":"04"}],"Questions, answered"]}]}]]}],["$","$L11",null,{"className":"btn o sx-toc-cta","href":"/book-a-call","children":["Book a call ",["$","i",null,{"children":"↗"}]]}]]}],["$","div",null,{"className":"sx-main","children":[[["$","section","How to use this template",{"id":"how-to-use-this-template","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"01"}],["$","h2",null,{"children":"How to use this template"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ol>\n<li><strong>Write the offer in one sentence</strong> before touching the headline. If you cannot, the page will not fix it.</li>\n<li><strong>Draft three headlines</strong> with the formulas and pick the one with the most specific result.</li>\n<li><strong>Collect proof</strong> with names and numbers, then fill the proof bar and testimonials.</li>\n<li><strong>Write the quiz questions</strong> from easy to hard, using our <a href=\"/templates/lead-qualification-questions\">lead qualification questions</a>.</li>\n<li><strong>Build and test on a phone first.</strong> Most paid traffic is mobile.</li>\n</ol>\n<p>If you are giving away a guide or checklist, the <a href=\"/glossary/lead-magnet\">lead magnet</a> entry explains how to frame it.</p>"}}]]}],["$","section","Customizing it by industry",{"id":"customizing-it-by-industry","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"02"}],["$","h2",null,{"children":"Customizing it by industry"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Roofing, HVAC and solar:</strong> turn the quiz into a short estimator (property type, issue, ZIP code). See <a href=\"/funnels-for/roofing\">roofing funnels</a>.</li>\n<li><strong>Personal injury:</strong> lead with eligibility (\"See if your accident qualifies\") and keep the form short and private.</li>\n<li><strong>Mortgage and insurance:</strong> use a rate or savings check and verify phone numbers with a one-time code.</li>\n<li><strong>Coaching and B2B:</strong> use an application with revenue and team-size questions, and add a VSL above the form.</li>\n<li><strong>eCommerce:</strong> swap the booking page for checkout with an order bump and one-click upsell.</li>\n</ul>"}}]]}],["$","section","Copy mistakes we fix most often",{"id":"copy-mistakes-we-fix-most-often","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"03"}],["$","h2",null,{"children":"Copy mistakes we fix most often"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Clever headlines.</strong> Clear beats clever. Name the buyer and the result.</li>\n<li><strong>\"Submit\" buttons.</strong> Say what they get: \"Get My Estimate\".</li>\n<li><strong>Asking for a phone number first.</strong> Micro-commitments come before contact details.</li>\n<li><strong>Missing consent language.</strong> Without it you cannot legally follow up by text, which is where <a href=\"/speed-to-lead\">speed-to-lead</a> wins most bookings.</li>\n<li><strong>Dead thank-you pages.</strong> Use it to confirm the call and show a pre-call video.</li>\n</ul>\n<p>Measure the result with the <a href=\"/tools/funnel-conversion-calculator\">funnel conversion calculator</a>, or have our <a href=\"/sales-funnel-agency\">sales funnel agency</a> write and build it for you.</p>"}}]]}]],"$L2b"]}]]}]
+17:["$","section",null,{"className":"sx-proof","aria-labelledby":"seo-proof-h","children":["$","div",null,{"className":"box","children":[["$","div",null,{"className":"fx-head","children":[["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Proof"}],["$","h2",null,{"id":"seo-proof-h","className":"h2 d","children":["Real numbers from ",["$","span",null,{"className":"it","children":"client campaigns."}]]}]]}],["$","$L11",null,{"className":"btn w","href":"/case-studies/all","children":["Browse all case studies"," ",["$","i",null,{"children":"↗"}]]}]]}],["$","ul",null,{"children":[["$","li","/case-studies/roofing-686-leads-at-5-31-cplCost per lead across 686 roofing leads",{"children":["$","$L11",null,{"href":"/case-studies/roofing-686-leads-at-5-31-cpl","children":[["$","b",null,{"children":"$$5.31"}],["$","span",null,{"children":"Cost per lead across 686 roofing leads"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/mortgage-492-leads-at-5-23-cplCost per lead across 492 mortgage leads",{"children":["$","$L11",null,{"href":"/case-studies/mortgage-492-leads-at-5-23-cpl","children":[["$","b",null,{"children":"$$5.23"}],["$","span",null,{"children":"Cost per lead across 492 mortgage leads"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/scalelowticketLow-ticket front end, $27 product + $17 bump",{"children":["$","$L11",null,{"href":"/scalelowticket","children":[["$","b",null,{"children":"$$847K"}],["$","span",null,{"children":"Low-ticket front end, $27 product + $17 bump"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]}]
+18:["$","$L2c",null,{"topic":"Sales funnel copy template for every page"}]
+19:["$","section",null,{"className":"box bcta-wrap","aria-labelledby":"bcta-h","children":["$","div",null,{"className":"bcta","children":[["$","div",null,{"className":"bcta-copy","children":[["$","span",null,{"className":"hx-tag","children":"Free 30-minute call"}],["$","h2",null,{"id":"bcta-h","children":["Talk to the people who will ",["$","span",null,{"className":"it","children":"build it."}]]}],["$","p",null,{"children":"Pick a time with Gaurav or Rahul. We review your funnel, follow-up and tracking, and tell you the fastest win before you spend anything."}],["$","ul",null,{"className":"bcta-chips","children":[["$","li",null,{"children":"30 minutes"}],["$","li",null,{"children":"No obligation"}],["$","li",null,{"children":"Fixed quote after the call"}]]}]]}],["$","div",null,{"className":"bcta-actions","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22Sales%20funnel%20copy%20template%20for%20every%20page%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Ffunnel-copy-template)","target":"_blank","rel":"noopener","children":["WhatsApp us ",["$","i",null,{"children":"↗"}]]}],["$","$L11",null,{"className":"bcta-link","href":"/contact","children":"Or send a project brief"}]]}]]}]}]
+1a:["$","section",null,{"className":"sec box sx-related","aria-labelledby":"seo-related-h","children":[["$","div",null,{"className":"fx-head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Keep reading"}],["$","h2",null,{"id":"seo-related-h","className":"h2 d","children":["Related ",["$","span",null,{"className":"it","children":"guides."}]]}]]}]}],["$","ul",null,{"className":"sx-cards","children":[["$","li","/templates",{"children":["$","$L11",null,{"href":"/templates","children":[["$","span",null,{"className":"n mono","children":"01"}],["$","b",null,{"children":"Free sales funnel templates you can use today"}],["$","span",null,{"className":"d","children":"Free sales funnel templates: VSL script, funnel copy, SMS and email follow-up, AI voice script, no-show reminders, qualifying questions, KPI dashboard."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/sales-funnel-agency",{"children":["$","$L11",null,{"href":"/sales-funnel-agency","children":[["$","span",null,{"className":"n mono","children":"02"}],["$","b",null,{"children":"A sales funnel agency that builds done-for-you funnels for offers that sell on a call or a checkout"}],["$","span",null,{"className":"d","children":"Sales funnel agency for done-for-you funnels: strategy, copy, design, build, automation and tracking in one project, live in 5 to 10 days. 275+ results."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/quiz-funnels",{"children":["$","$L11",null,{"href":"/quiz-funnels","children":[["$","span",null,{"className":"n mono","children":"03"}],["$","b",null,{"children":"A quiz funnel agency for interactive, qualifying funnels"}],["$","span",null,{"className":"d","children":"A quiz funnel agency building interactive quizzes, estimators and diagnostics that capture more leads, qualify them and route each to the right next step."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/glossary/lead-magnet",{"children":["$","$L11",null,{"href":"/glossary/lead-magnet","children":[["$","span",null,{"className":"n mono","children":"04"}],["$","b",null,{"children":"Lead magnet: definition, types and examples"}],["$","span",null,{"className":"d","children":"A lead magnet is a free resource traded for contact details. Definition, the types that convert best, real cost-per-lead examples and common mistakes."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/tools/funnel-conversion-calculator",{"children":["$","$L11",null,{"href":"/tools/funnel-conversion-calculator","children":[["$","span",null,{"className":"n mono","children":"05"}],["$","b",null,{"children":"Funnel conversion calculator"}],["$","span",null,{"className":"d","children":"Free funnel conversion calculator. Enter visitors, opt-in, booking, show and close rates to see leads, sales, cost per sale, revenue and ROAS."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/blog/sales-funnel-examples",{"children":["$","$L11",null,{"href":"/blog/sales-funnel-examples","children":[["$","span",null,{"className":"n mono","children":"06"}],["$","b",null,{"children":"8 Sales Funnel Examples With Real Numbers (2026)"}],["$","span",null,{"className":"d","children":"Eight sales funnel examples from real client builds: high-ticket VSL, low-ticket, webinar, quiz, lead gen and SaaS, with ad spend, leads and revenue."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/compare/clickfunnels-vs-kajabi",{"children":["$","$L11",null,{"href":"/compare/clickfunnels-vs-kajabi","children":[["$","span",null,{"className":"n mono","children":"07"}],["$","b",null,{"children":"ClickFunnels vs Kajabi: checkout engine or course platform?"}],["$","span",null,{"className":"d","children":"ClickFunnels vs Kajabi compared on pricing as of November 2026, checkout, upsells, courses and community, with an honest verdict for each use."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/landing-page-design",{"children":["$","$L11",null,{"href":"/landing-page-design","children":[["$","span",null,{"className":"n mono","children":"08"}],["$","b",null,{"children":"A landing page design agency that builds pages to convert paid traffic"}],["$","span",null,{"className":"d","children":"Landing page design agency for lead, quiz, VSL, bridge and sales pages: mobile-first, fast, written to convert and tracked. From $999 one-time."}],"$L2d"]}]}]]}]]}]
+2e:T7f6,{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.funnelsthatprint.com/templates/funnel-copy-template#faq","mainEntity":[{"@type":"Question","name":"How long should funnel page copy be?","acceptedAnswer":{"@type":"Answer","text":"As long as the decision requires. A free estimate needs a short page because the ask is small. A high-ticket application needs more proof and objection handling because the ask is bigger. Start short, then add sections that answer the questions prospects ask on calls."}},{"@type":"Question","name":"Should I use a quiz or a simple form?","acceptedAnswer":{"@type":"Answer","text":"On cold traffic, a short quiz usually beats a form because the first questions feel easy and personal, so more people finish. Forms work when intent is already high, such as retargeting or branded search. Test both if you have the volume, using the same offer and headline."}},{"@type":"Question","name":"What makes a good funnel headline?","acceptedAnswer":{"@type":"Answer","text":"It names who the page is for and the result they want, ideally with a number, a time frame or a named method. Read it to someone in your audience: if they cannot repeat what you offer in one sentence, rewrite it. Clarity beats wordplay on paid traffic."}},{"@type":"Question","name":"Do I need consent language on my form?","acceptedAnswer":{"@type":"Answer","text":"If you plan to call or text leads, yes. State that they agree to receive calls and texts, including automated or AI-assisted ones, that consent is not a condition of purchase, and how to opt out. Requirements vary by location, so confirm wording with counsel."}},{"@type":"Question","name":"How do I test which copy works best?","acceptedAnswer":{"@type":"Answer","text":"Change one element at a time, starting with the headline, then the offer framing, then the button. Run each version until it has at least 100 leads or a clear difference in opt-in rate. Judge by booked calls or sales, not just opt-ins, because cheap leads can hide a worse page."}}]}1b:["$","section",null,{"className":"sec box page-faq","id":"faq","aria-label":"Frequently asked questions","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2e"}}],["$","div",null,{"className":"head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h2",null,{"className":"h2 d","children":["Frequently asked ",["$","span",null,{"className":"it","children":"questions"}],"."]}]]}]}],["$","div",null,{"className":"page-faq-list","children":[["$","div","How long should funnel page copy be?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How long should funnel page copy be?"}],["$","p",null,{"children":"As long as the decision requires. A free estimate needs a short page because the ask is small. A high-ticket application needs more proof and objection handling because the ask is bigger. Start short, then add sections that answer the questions prospects ask on calls."}]]}],["$","div","Should I use a quiz or a simple form?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Should I use a quiz or a simple form?"}],["$","p",null,{"children":"On cold traffic, a short quiz usually beats a form because the first questions feel easy and personal, so more people finish. Forms work when intent is already high, such as retargeting or branded search. Test both if you have the volume, using the same offer and headline."}]]}],"$L2f","$L30","$L31"]}]]}]
+1c:["$","$L32",null,{}]
+1d:["$","script","script-0",{"src":"/_next/static/chunks/2lyy0yvf_0_wr.js","async":true}]
+1e:["$","script","script-1",{"src":"/_next/static/chunks/0rsakdox7r09y.js","async":true}]
+1f:["$","$L33",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@34"}]}]
+29:true
+35:I[27566,["$3","$4","$5","$f","$10"],"default"]
+a:300
+36:T10f8,SALES FUNNEL COPY TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/funnel-copy-template
+
+Covers: opt-in or landing page, application or quiz page, booking page, thank-you page.
+Replace everything in {braces}. Keep sentences short. One idea per line on mobile.
+
+============================================================
+PAGE 1. LANDING PAGE
+============================================================
+
+PRE-HEADLINE (call out the audience)
+For {audience} who {qualifier, e.g. already do $30K a month / own a home in {city}}
+
+HEADLINE (the outcome + time frame or mechanism)
+Option A: How {audience} {get result} in {time frame} without {pain}
+Option B: Get {specific result} with our {named method}, or {risk reversal}
+Option C: {Number} {audience} {got result} last {period}. Here is how.
+
+SUBHEADLINE (who it is for, what happens next)
+{One sentence explaining the method}. Answer {3} quick questions to see {what they get, e.g. your estimate / if you qualify / your custom plan}.
+
+PRIMARY BUTTON
+{Action verb} + {what they get}: "Check My Eligibility", "Get My Free Estimate", "See If I Qualify"
+Under button: Takes {30 seconds}. No {thing they fear, e.g. sales pressure, credit check}.
+
+PROOF BAR
+{Number} {customers/projects/clients} | {rating} average rating | {years} years
+
+PROBLEM SECTION
+Heading: Sound familiar?
+ - {Pain point 1 in their words}
+ - {Pain point 2}
+ - {Pain point 3}
+Line: It is not you. It is {the old approach}.
+
+HOW IT WORKS
+Step 1: {Action}. {One line on what happens}.
+Step 2: {Action}. {One line}.
+Step 3: {Result}. {One line}.
+
+BENEFITS (outcomes, not features)
+ - {Feature} so you can {outcome}
+ - {Feature} so you can {outcome}
+ - {Feature} so you can {outcome}
+
+TESTIMONIALS (name, location or business, specific result)
+"{Quote with a specific number or change}." - {Name}, {business or city}
+
+OBJECTION FAQ
+Q: How much does it cost?  A: {Honest range or how pricing is decided}.
+Q: How long does it take?  A: {Real time frame}.
+Q: What if {main fear}?    A: {Direct answer}.
+
+FINAL CALL TO ACTION
+Heading: Ready to {result}?
+Button: {same as primary}
+
+============================================================
+PAGE 2. QUIZ OR APPLICATION
+============================================================
+
+Intro line: Answer {number} quick questions so we can {benefit to them}.
+
+Question 1 (easy, no personal data): What best describes you? {option A} / {option B} / {option C}
+Question 2: What is your biggest challenge right now? {options}
+Question 3: How soon do you want to {result}? Right away / Within 3 months / Just researching
+Question 4 (qualifier): {budget, revenue, property type, injury date, etc.} {options}
+Contact step heading: Where should we send your {result/estimate/plan}?
+Fields: First name, Email, Mobile phone
+Consent line: By submitting, you agree to receive calls and texts from {Company} about your request, including automated and AI-assisted messages. Consent is not a condition of purchase. Msg and data rates may apply. Reply STOP to opt out.
+
+============================================================
+PAGE 3. BOOKING PAGE
+============================================================
+
+Headline: Great news, {first_name}. You qualify for a {call name}.
+Subheadline: Pick a time below. The call takes {length} minutes and you will leave with {specific takeaway}.
+Bullets under calendar:
+ - We will review {their situation}.
+ - You will see {deliverable}.
+ - No obligation. If it is not a fit, we will tell you.
+
+============================================================
+PAGE 4. THANK-YOU PAGE
+============================================================
+
+Headline: You are booked for {day} at {time}.
+Step 1: Add it to your calendar. {button}
+Step 2: Watch this {length}-minute video so the call is useful. {video}
+Step 3: Reply to the text we just sent with "YES" to confirm.
+Line: Need to reschedule? Use the link in your confirmation email.
+
+============================================================
+FINAL CHECK
+============================================================
+[ ] Headline names a result a buyer would pay for.
+[ ] The button says what they get, not "Submit".
+[ ] Every testimonial includes a specific detail.
+[ ] Consent and opt-out language is on every form that collects a phone number.
+[ ] Page reads cleanly on a phone with no zooming.
+2b:["$","section",null,{"className":"seo-template","aria-labelledby":"seo-template-h","children":[["$","div",null,{"className":"seo-template-head","children":[["$","h2",null,{"id":"seo-template-h","children":"The template"}],["$","div",null,{"className":"seo-template-actions","children":[["$","$L35",null,{"text":"$36"}],"$L37"]}]]}],"$L38"]}]
+2d:["$","i",null,{"aria-hidden":"true","children":"↗"}]
+2f:["$","div","What makes a good funnel headline?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"What makes a good funnel headline?"}],["$","p",null,{"children":"It names who the page is for and the result they want, ideally with a number, a time frame or a named method. Read it to someone in your audience: if they cannot repeat what you offer in one sentence, rewrite it. Clarity beats wordplay on paid traffic."}]]}]
+30:["$","div","Do I need consent language on my form?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Do I need consent language on my form?"}],["$","p",null,{"children":"If you plan to call or text leads, yes. State that they agree to receive calls and texts, including automated or AI-assisted ones, that consent is not a condition of purchase, and how to opt out. Requirements vary by location, so confirm wording with counsel."}]]}]
+31:["$","div","How do I test which copy works best?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How do I test which copy works best?"}],["$","p",null,{"children":"Change one element at a time, starting with the headline, then the offer framing, then the button. Run each version until it has at least 100 leads or a clear difference in opt-in rate. Judge by booked calls or sales, not just opt-ins, because cheap leads can hide a worse page."}]]}]
+34:null
+a:C
+37:["$","a",null,{"className":"btn g","href":"/templates/files/funnel-copy-template.txt","download":true,"children":["Download .txt ",["$","i",null,{"children":"↗"}]]}]
+39:T10f8,SALES FUNNEL COPY TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/funnel-copy-template
+
+Covers: opt-in or landing page, application or quiz page, booking page, thank-you page.
+Replace everything in {braces}. Keep sentences short. One idea per line on mobile.
+
+============================================================
+PAGE 1. LANDING PAGE
+============================================================
+
+PRE-HEADLINE (call out the audience)
+For {audience} who {qualifier, e.g. already do $30K a month / own a home in {city}}
+
+HEADLINE (the outcome + time frame or mechanism)
+Option A: How {audience} {get result} in {time frame} without {pain}
+Option B: Get {specific result} with our {named method}, or {risk reversal}
+Option C: {Number} {audience} {got result} last {period}. Here is how.
+
+SUBHEADLINE (who it is for, what happens next)
+{One sentence explaining the method}. Answer {3} quick questions to see {what they get, e.g. your estimate / if you qualify / your custom plan}.
+
+PRIMARY BUTTON
+{Action verb} + {what they get}: "Check My Eligibility", "Get My Free Estimate", "See If I Qualify"
+Under button: Takes {30 seconds}. No {thing they fear, e.g. sales pressure, credit check}.
+
+PROOF BAR
+{Number} {customers/projects/clients} | {rating} average rating | {years} years
+
+PROBLEM SECTION
+Heading: Sound familiar?
+ - {Pain point 1 in their words}
+ - {Pain point 2}
+ - {Pain point 3}
+Line: It is not you. It is {the old approach}.
+
+HOW IT WORKS
+Step 1: {Action}. {One line on what happens}.
+Step 2: {Action}. {One line}.
+Step 3: {Result}. {One line}.
+
+BENEFITS (outcomes, not features)
+ - {Feature} so you can {outcome}
+ - {Feature} so you can {outcome}
+ - {Feature} so you can {outcome}
+
+TESTIMONIALS (name, location or business, specific result)
+"{Quote with a specific number or change}." - {Name}, {business or city}
+
+OBJECTION FAQ
+Q: How much does it cost?  A: {Honest range or how pricing is decided}.
+Q: How long does it take?  A: {Real time frame}.
+Q: What if {main fear}?    A: {Direct answer}.
+
+FINAL CALL TO ACTION
+Heading: Ready to {result}?
+Button: {same as primary}
+
+============================================================
+PAGE 2. QUIZ OR APPLICATION
+============================================================
+
+Intro line: Answer {number} quick questions so we can {benefit to them}.
+
+Question 1 (easy, no personal data): What best describes you? {option A} / {option B} / {option C}
+Question 2: What is your biggest challenge right now? {options}
+Question 3: How soon do you want to {result}? Right away / Within 3 months / Just researching
+Question 4 (qualifier): {budget, revenue, property type, injury date, etc.} {options}
+Contact step heading: Where should we send your {result/estimate/plan}?
+Fields: First name, Email, Mobile phone
+Consent line: By submitting, you agree to receive calls and texts from {Company} about your request, including automated and AI-assisted messages. Consent is not a condition of purchase. Msg and data rates may apply. Reply STOP to opt out.
+
+============================================================
+PAGE 3. BOOKING PAGE
+============================================================
+
+Headline: Great news, {first_name}. You qualify for a {call name}.
+Subheadline: Pick a time below. The call takes {length} minutes and you will leave with {specific takeaway}.
+Bullets under calendar:
+ - We will review {their situation}.
+ - You will see {deliverable}.
+ - No obligation. If it is not a fit, we will tell you.
+
+============================================================
+PAGE 4. THANK-YOU PAGE
+============================================================
+
+Headline: You are booked for {day} at {time}.
+Step 1: Add it to your calendar. {button}
+Step 2: Watch this {length}-minute video so the call is useful. {video}
+Step 3: Reply to the text we just sent with "YES" to confirm.
+Line: Need to reschedule? Use the link in your confirmation email.
+
+============================================================
+FINAL CHECK
+============================================================
+[ ] Headline names a result a buyer would pay for.
+[ ] The button says what they get, not "Submit".
+[ ] Every testimonial includes a specific detail.
+[ ] Consent and opt-out language is on every form that collects a phone number.
+[ ] Page reads cleanly on a phone with no zooming.
+38:["$","pre",null,{"children":"$39"}]
+28:0
+c:"$undefined"
+8:"$undefined"
+27:"$undefined"
+20:"$undefined"

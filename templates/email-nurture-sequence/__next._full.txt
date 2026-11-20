@@ -1,0 +1,348 @@
+1:"$Sreact.fragment"
+c:"/_next/static/chunks/0umf92h1sb77c.js"
+d:"/_next/static/chunks/3n2fx6_1svfxt.js"
+e:"/_next/static/chunks/34pui1c-qzugx.js"
+f:I[68027,["$c","$d","$e"],"default",1]
+:HL["/_next/static/chunks/21s8vd3b3cazr.css","style"]
+:HL["/_next/static/chunks/19rhlcx2srev9.css","style"]
+2:T15f0,{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.funnelsthatprint.com/#organization","name":"Funnels That Print","alternateName":["FTP","FunnelsThatPrint"],"url":"https://www.funnelsthatprint.com","logo":{"@type":"ImageObject","url":"https://www.funnelsthatprint.com/favicon-512.png","width":512,"height":512},"image":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg","description":"Funnels That Print is a Dubai-based sales funnel agency founded in 2019 by Gaurav and Rahul Kapoor. We build done-for-you sales funnels, GoHighLevel CRM automation, AI voice agents and Meta Conversions API tracking for businesses that sell through booked calls or checkouts, and we publish every client result with its original proof.","slogan":"Funnels, automation and AI calling, built around booked calls.","foundingDate":"2019","contactPoint":{"@type":"ContactPoint","contactType":"sales & client strategy","email":"info@funnelsthatprint.com","availableLanguage":["English"],"url":"https://www.funnelsthatprint.com/book-a-call"},"knowsAbout":["Sales Funnel Architecture","Conversion Rate Optimization","High-Ticket Client Acquisition","Low-Ticket Self-Liquidating Offer (SLO) Funnels","CRM Automation & Workflows","AI Calling Agents & Conversational AI","Meta Conversion API (CAPI)","Direct Response Copywriting"],"founder":[{"@id":"https://www.funnelsthatprint.com/#person-gaurav"},{"@id":"https://www.funnelsthatprint.com/#person-rahul"}],"address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"areaServed":["US","GB","CA","AU","AE","Worldwide"],"hasOfferCatalog":{"@type":"OfferCatalog","name":"Funnel Systems & Automations","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Turnkey High-Ticket Acquisition Funnels","description":"Engineered VSL funnels, dynamic application filters, and qualification pipelines that turn cold traffic into high-ticket appointments."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Low-Ticket Front Door Scaling Systems","description":"Self-liquidating acquisition funnels with frictionless checkout, order bumps, and post-purchase backend upsells."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Full-Stack CRM & Multi-Touch Automation","description":"Speed-to-lead nurturing, SMS/email sequences, calendar sync, and no-show recovery flows built in GoHighLevel and major CRMs."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"24/7 Autonomous AI Voice Calling Agents","description":"Conversational voice agents that call new leads within 60 seconds, qualify prospects, and book calendar meetings automatically."}}]}},{"@type":"WebSite","@id":"https://www.funnelsthatprint.com/#website","url":"https://www.funnelsthatprint.com/","name":"Funnels That Print","alternateName":["FTP","FunnelsThatPrint","funnelsthatprint.com"],"description":"Turn traffic into qualified sales calls with high-converting funnels, CRM automations, and AI calling agents.","publisher":{"@id":"https://www.funnelsthatprint.com/#organization"},"inLanguage":"en-US"},{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-gaurav","name":"Gaurav Kapoor","jobTitle":"Founder & Funnel Strategist, Funnels That Print","description":"Founder of Funnels That Print. Since 2019 Gaurav has architected high-ticket and low-ticket acquisition funnels for coaching, consulting, home services, finance and DTC brands, including the $1.52M high-ticket consulting funnel and the $847K self-liquidating offer funnel documented on this site.","image":"https://www.funnelsthatprint.com/img/team/gaurav.webp","url":"https://www.funnelsthatprint.com/team/gaurav-kapoor","knowsAbout":["Sales funnel architecture","Offer positioning","VSL and application funnels","Direct-response copywriting","Conversion rate optimization"],"worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"},"sameAs":["https://www.instagram.com/gauravecomm/"]},{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-rahul","name":"Rahul Kapoor","jobTitle":"Co-founder & Automation Lead, Funnels That Print","description":"Co-founder of Funnels That Print and lead on CRM automation, speed-to-lead systems, AI voice calling agents and server-side tracking. Rahul has built the GoHighLevel workflows, Meta Conversions API pipelines and reminder automations behind 275+ client funnels.","image":"https://www.funnelsthatprint.com/img/team/rahul.webp","url":"https://www.funnelsthatprint.com/team/rahul-kapoor","knowsAbout":["GoHighLevel and CRM automation","Speed-to-lead and SMS/email workflows","AI voice calling agents","Meta Conversions API and server-side tracking","Pipeline and appointment automation"],"worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"}},{"@type":"ProfessionalService","@id":"https://www.funnelsthatprint.com/#service","name":"Funnels That Print — Acquisition & Automation Agency","url":"https://www.funnelsthatprint.com","image":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg","priceRange":"$$$","description":"Custom conversion journeys built around your offer, audience, and sales process. From first click to booked call.","address":{"@type":"PostalAddress","addressLocality":"Dubai","addressCountry":"AE"},"areaServed":["US","GB","CA","AU","AE","Worldwide"],"parentOrganization":{"@id":"https://www.funnelsthatprint.com/#organization"},"openingHoursSpecification":{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"00:00","closes":"23:59"}}]}6:X
+9:[["children",{"s":"__PAGE__","h":512,"d":{"r":"$La","p":false,"v":null}}]]
+7:[["children",{"s":{"n":"slug","t":"d","k":"email-nurture-sequence","s":[]},"h":66048,"d":{"r":"$L8","p":false,"v":"$6"},"c":"$Q9"}]]
+4:[["children",{"s":"templates","h":131584,"d":{"r":"$L5","p":false,"v":"$6"},"c":"$Q7"}]]
+0:{"P":null,"c":["","templates","email-nurture-sequence"],"q":"","i":false,"t":{"t":{"s":"","h":131600,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/21s8vd3b3cazr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/19rhlcx2srev9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/0umf92h1sb77c.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/3n2fx6_1svfxt.js","async":true,"nonce":"$undefined"}],["$","script","script-2",{"src":"/_next/static/chunks/34pui1c-qzugx.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","children":[["$","head",null,{"children":[["$","link",null,{"rel":"alternate","type":"text/plain","href":"/llms.txt","title":"LLM Context"}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2"}}]]}],"$L3"]}]]}],"p":false,"v":null},"c":"$Q4"},"h":{"r":"$Lb","p":false,"v":null}},"m":"$undefined","G":["$f",["$L10","$L11"]],"S":true,"r":"$undefined","s":"$undefined","a":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"_t-y9Pl6m-ON9I0Gi1dJQ"}
+12:I[79520,["$c","$d","$e"],""]
+14:I[65347,["$c","$d","$e"],"default"]
+15:I[55890,["$c","$d","$e"],"default"]
+16:I[39756,["$c","$d","$e"],"default"]
+17:I[37457,["$c","$d","$e"],"default"]
+18:I[80906,["$c","$d","$e"],"default"]
+19:I[31003,["$c","$d","$e"],"default"]
+1a:I[68438,["$c","$d","$e"],"default"]
+1c:I[97367,["$c","$d","$e"],"OutletBoundary"]
+1d:"$Sreact.suspense"
+1f:"ViewportBoundary"
+20:I[97367,["$c","$d","$e"],"$1f"]
+22:"MetadataBoundary"
+23:I[97367,["$c","$d","$e"],"$22"]
+13:["$","img",null,{"height":"1","width":"1","style":{"display":"none"},"alt":"","src":"https://www.facebook.com/tr?id=1815678279748077&ev=PageView&noscript=1"}]
+3:["$","body",null,{"children":[["$","$L12",null,{"id":"meta-pixel","strategy":"afterInteractive","children":"!function(f,b,e,v,n,t,s)\n{if(f.fbq)return;n=f.fbq=function(){n.callMethod?\nn.callMethod.apply(n,arguments):n.queue.push(arguments)};\nif(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';\nn.queue=[];t=b.createElement(e);t.async=!0;\nt.src=v;s=b.getElementsByTagName(e)[0];\ns.parentNode.insertBefore(t,s)}(window,document,'script',\n'https://connect.facebook.net/en_US/fbevents.js');\nfbq('init', '1815678279748077');\nfbq('track', 'PageView');"}],["$","noscript",null,{"children":"$13"}],["$","$L14",null,{"children":[["$","$L15",null,{}],["$","main",null,{"children":["$","$L16",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L17",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}],["$","$L18",null,{"latestGuides":[{"href":"/blog/med-spa-patient-acquisition","label":"Med Spa Patient Acquisition Funnel: Guide With Real Numbers"},{"href":"/blog/facebook-ads-cost-per-lead-benchmarks","label":"Facebook Ads Cost Per Lead: Benchmarks From Real Campaigns"},{"href":"/blog/membership-funnel","label":"Membership Funnel: How to Sell Subscriptions With Ads"},{"href":"/blog/speed-to-lead-statistics","label":"Speed to Lead Statistics 2026: Research and Our Data"}],"industries":[{"href":"/case-studies/roofing-lead-generation","label":"Roofing"},{"href":"/case-studies/mva-personal-injury-lead-generation","label":"MVA & Personal Injury"},{"href":"/case-studies/mortgage-insurance-lead-generation","label":"Mortgage & Insurance"},{"href":"/case-studies/med-spa-marketing","label":"Med Spa Marketing"},{"href":"/case-studies/hvac-lead-generation","label":"HVAC"},{"href":"/case-studies/solar-home-services-lead-generation","label":"Solar & Home Services"},{"href":"/case-studies/real-estate-lead-generation","label":"Real Estate"},{"href":"/case-studies/coaching-consulting-funnels","label":"Coaching, Consulting & Webinar Funnel"},{"href":"/case-studies/agency-saas-lead-generation","label":"Agency, SaaS & B2B"},{"href":"/case-studies/low-ticket-funnels","label":"Low-Ticket Funnel"},{"href":"/case-studies/shopify-dtc-ecommerce","label":"Shopify & DTC eCommerce"},{"href":"/case-studies/beauty-skincare-ecommerce","label":"Beauty & Skincare Brand"},{"href":"/case-studies/fashion-apparel-ecommerce","label":"Fashion & Apparel eCommerce"},{"href":"/case-studies/supplements-fitness-ecommerce","label":"Supplement & Fitness Brand"}]}]]}],["$","$L19",null,{}],["$","$L1a",null,{}]]}]
+5:["$","$1","c",{"children":[null,["$","$L16",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L17",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+8:["$","$1","c",{"children":[null,["$","$L16",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L17",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+a:["$","$1","c",{"children":["$L1b",[["$","script","script-0",{"src":"/_next/static/chunks/2lyy0yvf_0_wr.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/0rsakdox7r09y.js","async":true,"nonce":"$undefined"}]],["$","$L1c",null,{"children":["$","$1d",null,{"name":"Next.MetadataOutlet","children":"$@1e"}]}]]}]
+b:["$","$1","h",{"children":[null,["$","$L20",null,{"children":"$L21"}],["$","$L23",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$1d",null,{"name":"Next.Metadata","children":"$L24"}]}],null]}],null]}]
+10:["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/21s8vd3b3cazr.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+11:["$","link","1",{"rel":"stylesheet","href":"/_next/static/chunks/19rhlcx2srev9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]
+26:"/_next/static/chunks/2lyy0yvf_0_wr.js"
+27:"/_next/static/chunks/0rsakdox7r09y.js"
+28:I[22016,["$c","$d","$e","$26","$27"],""]
+6:C
+25:T6dc,{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.funnelsthatprint.com"},{"@type":"ListItem","position":2,"name":"Templates","item":"https://www.funnelsthatprint.com/templates"},{"@type":"ListItem","position":3,"name":"Email nurture sequence template","item":"https://www.funnelsthatprint.com/templates/email-nurture-sequence"}]},{"@type":"Article","@id":"https://www.funnelsthatprint.com/templates/email-nurture-sequence#article","headline":"Email Nurture Sequence Template: 7 Emails, 14 Days","description":"Free email nurture sequence template: seven plain-text emails over 14 days to turn opted-in leads into booked calls, with subject lines and send timing.","image":["https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"],"datePublished":"2026-11-05T09:00:00+00:00","dateModified":"2026-11-05T09:00:00+00:00","author":{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-gaurav","name":"Gaurav Kapoor","jobTitle":"Founder & Funnel Strategist, Funnels That Print","image":"https://www.funnelsthatprint.com/img/team/gaurav.webp","url":"https://www.funnelsthatprint.com/team/gaurav-kapoor","worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"},"sameAs":["https://www.instagram.com/gauravecomm/"]},"publisher":{"@type":"Organization","@id":"https://www.funnelsthatprint.com/#organization","name":"Funnels That Print","url":"https://www.funnelsthatprint.com","logo":{"@type":"ImageObject","url":"https://www.funnelsthatprint.com/favicon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.funnelsthatprint.com/templates/email-nurture-sequence"},"inLanguage":"en-US"}]}1b:[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$25"}}],["$","header",null,{"className":"sx-hero","data-wa-topic":"Email nurture sequence template","children":["$","div",null,{"className":"box","children":[["$","nav",null,{"className":"crumbs","aria-label":"Breadcrumb","children":[["$","$L28",null,{"href":"/","children":"Home"}],[["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L28",null,{"href":"/templates","children":"Templates"}]]]}],["$","div",null,{"className":"sx-hero-grid","children":[["$","div",null,{"className":"sx-hero-copy","children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h1",null,{"className":"h1 d","children":["Email nurture"," ",["$","span",null,{"className":"it","children":"sequence template"}]]}],["$","div",null,{"className":"lead seo-intro","dangerouslySetInnerHTML":{"__html":"This <strong>email nurture sequence template</strong> is seven plain-text emails over 14 days for leads who opted in but did not book or buy. Each email has one job, one link and a subject line, moving from delivery to education, proof, process, objections, a direct offer and a close-the-loop message."}}],["$","div",null,{"className":"seo-cta","children":[["$","$L28",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22Email%20nurture%20sequence%20template%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Femail-nurture-sequence)","target":"_blank","rel":"noopener","children":["WhatsApp us ",["$","i",null,{"children":"↗"}]]}]]}],["$","ul",null,{"className":"sx-trust","aria-label":"Why Funnels That Print","children":[["$","li",null,{"children":["$L29"," documented results"]}],"$L2a","$L2b"]}]]}],"$L2c"]}]]}]}],"$L2d","$undefined",false,"$undefined","$L2e",false,"$L2f",false,false,"$L30","$L31","$L32","$L33","$L34"]
+35:I[65093,["$c","$d","$e","$26","$27"],"default"]
+37:I[15685,["$c","$d","$e","$26","$27"],"default"]
+3d:I[35777,["$c","$d","$e","$26","$27"],"default"]
+29:["$","b",null,{"children":"275+"}]
+2a:["$","li",null,{"children":[["$","b",null,{"children":"5-10"}]," day builds"]}]
+2b:["$","li",null,{"children":[["$","b",null,{"children":"$$999"}]," builds from"]}]
+2c:["$","aside",null,{"className":"hx-qa sx-qa","aria-labelledby":"seo-quick-h","children":[["$","span",null,{"className":"hx-tag","children":"Quick answer"}],["$","h2",null,{"id":"seo-quick-h","children":"What is a good email nurture sequence?"}],["$","p",null,{"children":"A good nurture sequence delivers what the lead asked for immediately, then sends five to seven short emails over about two weeks: a common mistake, a case story, how working together looks, answers to objections, a direct offer, and a final yes-or-no email. It stops the moment the lead books or buys."}],["$","div",null,{"className":"hx-qa-stats","children":[["$","div","/case-studies/webinar-115k-revenue-on-15k-ad-spendWebinar revenue from 527 leads",{"children":[["$","b",null,{"children":"$$115,000"}],["$","span",null,{"children":"Webinar revenue from 527 leads"}]]}],["$","div","/case-studies/coaching-agency-client-at-85k-in-a-monthCoaching agency client revenue in one month",{"children":[["$","b",null,{"children":"$$85K"}],["$","span",null,{"children":"Coaching agency client revenue in one month"}]]}],["$","div","/milliondollarcasestudyHigh-ticket consulting funnel in 19 months",{"children":[["$","b",null,{"children":"$$1.52M"}],["$","span",null,{"children":"High-ticket consulting funnel in 19 months"}]]}]]}]]}]
+2d:["$","$L35",null,{}]
+2e:["$","div",null,{"className":"box sx-body","children":[["$","aside",null,{"className":"sx-toc","aria-label":"On this page","children":[["$","span",null,{"className":"mono","children":"On this page"}],["$","ol",null,{"children":[[["$","li","how-to-use-this-template",{"children":["$","a",null,{"href":"#how-to-use-this-template","children":[["$","span",null,{"children":"01"}],"How to use this template"]}]}],["$","li","customizing-it-by-industry",{"children":["$","a",null,{"href":"#customizing-it-by-industry","children":[["$","span",null,{"children":"02"}],"Customizing it by industry"]}]}],["$","li","mistakes-that-make-nurture-emails-fail",{"children":["$","a",null,{"href":"#mistakes-that-make-nurture-emails-fail","children":[["$","span",null,{"children":"03"}],"Mistakes that make nurture emails fail"]}]}]],["$","li",null,{"children":["$","a",null,{"href":"#faq","children":[["$","span",null,{"children":"04"}],"Questions, answered"]}]}]]}],["$","$L28",null,{"className":"btn o sx-toc-cta","href":"/book-a-call","children":["Book a call ",["$","i",null,{"children":"↗"}]]}]]}],["$","div",null,{"className":"sx-main","children":[[["$","section","How to use this template",{"id":"how-to-use-this-template","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"01"}],["$","h2",null,{"children":"How to use this template"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ol>\n<li><strong>Trigger it from opt-in,</strong> with email 1 sending immediately.</li>\n<li><strong>Add an exit condition:</strong> booked or purchased removes the contact from the sequence.</li>\n<li><strong>Write from a real person</strong> in plain text. Designed newsletters read like marketing and land in promotions tabs.</li>\n<li><strong>Fill email 3 with a real case</strong> you can document, with numbers.</li>\n<li><strong>Run it alongside texts.</strong> Email nurtures; SMS and calls book. Use the <a href=\"/templates/sms-follow-up-templates\">SMS follow-up templates</a> for the first hours.</li>\n</ol>\n<p>If your opt-in is a guide or checklist, read the <a href=\"/glossary/lead-magnet\">lead magnet</a> entry for how to tie emails back to it.</p>"}}]]}],["$","section","Customizing it by industry",{"id":"customizing-it-by-industry","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"02"}],["$","h2",null,{"children":"Customizing it by industry"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Coaching and consulting:</strong> stretch to 10 emails, add a second case story and a short video. See <a href=\"/funnels-for/consultants\">funnels for consultants</a>.</li>\n<li><strong>Local services:</strong> shorten to four emails over a week; buyers decide fast. Add seasonal reasons to act.</li>\n<li><strong>Mortgage and insurance:</strong> lead with education on the process and timeline, never rate promises.</li>\n<li><strong>SaaS:</strong> replace the case email with a use-case walkthrough, and make email 6 a demo or trial offer.</li>\n<li><strong>eCommerce:</strong> turn it into a welcome flow: offer, bestsellers, reviews, founder story and a deadline.</li>\n</ul>"}}]]}],["$","section","Mistakes that make nurture emails fail",{"id":"mistakes-that-make-nurture-emails-fail","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"03"}],["$","h2",null,{"children":"Mistakes that make nurture emails fail"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>No exit condition.</strong> Sending \"book a call\" emails to someone already booked looks careless.</li>\n<li><strong>Several links and asks per email.</strong> One email, one action.</li>\n<li><strong>All value, no ask.</strong> Every email should make the next step easy, even the educational ones.</li>\n<li><strong>Generic case stories.</strong> Specific numbers and time frames persuade; adjectives do not.</li>\n<li><strong>Ignoring replies.</strong> A reply is a hot lead. Route it to a person the same day.</li>\n</ul>\n<p>We build nurture flows inside <a href=\"/crm-automation\">CRM automation</a> projects. Check what nurture is worth with the <a href=\"/tools/cost-per-lead-calculator\">cost per lead calculator</a>: a higher lead-to-customer rate raises the CPL you can afford.</p>"}}]]}]],"$L36"]}]]}]
+2f:["$","section",null,{"className":"sx-proof","aria-labelledby":"seo-proof-h","children":["$","div",null,{"className":"box","children":[["$","div",null,{"className":"fx-head","children":[["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Proof"}],["$","h2",null,{"id":"seo-proof-h","className":"h2 d","children":["Real numbers from ",["$","span",null,{"className":"it","children":"client campaigns."}]]}]]}],["$","$L28",null,{"className":"btn w","href":"/case-studies/coaching-consulting-funnels","children":["See coaching and consulting results"," ",["$","i",null,{"children":"↗"}]]}]]}],["$","ul",null,{"children":[["$","li","/case-studies/webinar-115k-revenue-on-15k-ad-spendWebinar revenue from 527 leads",{"children":["$","$L28",null,{"href":"/case-studies/webinar-115k-revenue-on-15k-ad-spend","children":[["$","b",null,{"children":"$$115,000"}],["$","span",null,{"children":"Webinar revenue from 527 leads"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/coaching-agency-client-at-85k-in-a-monthCoaching agency client revenue in one month",{"children":["$","$L28",null,{"href":"/case-studies/coaching-agency-client-at-85k-in-a-month","children":[["$","b",null,{"children":"$$85K"}],["$","span",null,{"children":"Coaching agency client revenue in one month"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/milliondollarcasestudyHigh-ticket consulting funnel in 19 months",{"children":["$","$L28",null,{"href":"/milliondollarcasestudy","children":[["$","b",null,{"children":"$$1.52M"}],["$","span",null,{"children":"High-ticket consulting funnel in 19 months"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]}]
+30:["$","$L37",null,{"preset":"$undefined","topic":"Email nurture sequence template"}]
+31:["$","section",null,{"className":"box bcta-wrap","aria-labelledby":"bcta-h","children":["$","div",null,{"className":"bcta","children":[["$","div",null,{"className":"bcta-copy","children":[["$","span",null,{"className":"hx-tag","children":"Free 30-minute call"}],["$","h2",null,{"id":"bcta-h","children":["Talk to the people who will ",["$","span",null,{"className":"it","children":"build it."}]]}],["$","p",null,{"children":"Pick a time with Gaurav or Rahul. We review your funnel, follow-up and tracking, and tell you the fastest win before you spend anything."}],["$","ul",null,{"className":"bcta-chips","children":[["$","li",null,{"children":"30 minutes"}],["$","li",null,{"children":"No obligation"}],["$","li",null,{"children":"Fixed quote after the call"}]]}]]}],["$","div",null,{"className":"bcta-actions","children":[["$","$L28",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22Email%20nurture%20sequence%20template%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Femail-nurture-sequence)","target":"_blank","rel":"noopener","children":["WhatsApp us ",["$","i",null,{"children":"↗"}]]}],["$","$L28",null,{"className":"bcta-link","href":"/contact","children":"Or send a project brief"}]]}]]}]}]
+32:["$","section",null,{"className":"sec box sx-related","aria-labelledby":"seo-related-h","children":[["$","div",null,{"className":"fx-head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Keep reading"}],["$","h2",null,{"id":"seo-related-h","className":"h2 d","children":["Related ",["$","span",null,{"className":"it","children":"guides."}]]}]]}]}],["$","ul",null,{"className":"sx-cards","children":[["$","li","/templates",{"children":["$","$L28",null,{"href":"/templates","children":[["$","span",null,{"className":"n mono","children":"01"}],["$","b",null,{"children":"Free sales funnel templates you can use today"}],["$","span",null,{"className":"d","children":"Free sales funnel templates: VSL script, funnel copy, SMS and email follow-up, AI voice script, no-show reminders, qualifying questions, KPI dashboard."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/crm-automation",{"children":["$","$L28",null,{"href":"/crm-automation","children":[["$","span",null,{"className":"n mono","children":"02"}],["$","b",null,{"children":"A CRM automation agency for pipelines, reminders and nurture"}],["$","span",null,{"className":"d","children":"A CRM automation agency that builds pipelines, lead routing, reminders, nurture and reactivation workflows so no lead is forgotten and more calls show up."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/glossary/lead-magnet",{"children":["$","$L28",null,{"href":"/glossary/lead-magnet","children":[["$","span",null,{"className":"n mono","children":"03"}],["$","b",null,{"children":"Lead magnet: definition, types and examples"}],["$","span",null,{"className":"d","children":"A lead magnet is a free resource traded for contact details. Definition, the types that convert best, real cost-per-lead examples and common mistakes."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/templates/sms-follow-up-templates",{"children":["$","$L28",null,{"href":"/templates/sms-follow-up-templates","children":[["$","span",null,{"className":"n mono","children":"04"}],["$","b",null,{"children":"SMS follow up templates for new leads"}],["$","span",null,{"className":"d","children":"Free SMS follow up templates: instant response, missed call, booking, day 1 to 7 follow-ups, breakup and reactivation texts, with opt-out and AI lines."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/tools/cost-per-lead-calculator",{"children":["$","$L28",null,{"href":"/tools/cost-per-lead-calculator","children":[["$","span",null,{"className":"n mono","children":"05"}],["$","b",null,{"children":"Cost per lead calculator with break-even CPL"}],["$","span",null,{"className":"d","children":"Free cost per lead calculator: get your CPL, break-even CPL and cost per customer, plus average cost per lead by industry from 40+ real campaigns."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/blog/lead-nurturing-strategies",{"children":["$","$L28",null,{"href":"/blog/lead-nurturing-strategies","children":[["$","span",null,{"className":"n mono","children":"06"}],["$","b",null,{"children":"Lead Nurturing Strategies That Turn Leads Into Booked Calls"}],["$","span",null,{"className":"d","children":"Lead nurturing strategies that work: first-hour follow-up, SMS and email sequences, segmentation, AI calls, reactivation and the CRM setup behind them."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]
+38:T7d8,{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.funnelsthatprint.com/templates/email-nurture-sequence#faq","mainEntity":[{"@type":"Question","name":"How many emails should a nurture sequence have?","acceptedAnswer":{"@type":"Answer","text":"Five to seven over about two weeks is a solid default for most lead funnels. Longer sales cycles, like coaching or B2B, can run 10 or more over a month. After the sequence ends, move non-buyers to a regular newsletter so you stay in touch without hard selling."}},{"@type":"Question","name":"How often should nurture emails go out?","acceptedAnswer":{"@type":"Answer","text":"Daily for the first two days while interest is high, then every two or three days. The template sends on days 0, 1, 3, 5, 7, 10 and 14. If unsubscribes spike after a particular email, check that email's content before changing the schedule."}},{"@type":"Question","name":"Should nurture emails be plain text or designed?","acceptedAnswer":{"@type":"Answer","text":"Plain text for service businesses and high-ticket offers. It reads like a personal note, tends to reach the primary inbox, and invites replies. Designed emails suit eCommerce, where product images and buttons help. Either way, keep one clear link and a recognizable sender name."}},{"@type":"Question","name":"What should I do when a lead replies?","acceptedAnswer":{"@type":"Answer","text":"Treat it as a hot lead. Remove them from the automated sequence, answer personally within hours, and offer a call time. Replies like 1, 2 or 3 to the final email can be routed automatically: book, set a 90-day reminder, or remove from sales emails."}},{"@type":"Question","name":"Do I still need SMS if I have email nurture?","acceptedAnswer":{"@type":"Answer","text":"Yes, for booking. Email is good for education and proof over several days, but texts and calls are what get a lead on the calendar in the first hour. Use both: instant text and call at opt-in, then email nurture for leads who do not book."}}]}33:["$","section",null,{"className":"sec box page-faq","id":"faq","aria-label":"Frequently asked questions","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$38"}}],["$","div",null,{"className":"head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h2",null,{"className":"h2 d","children":["Frequently asked ",["$","span",null,{"className":"it","children":"questions"}],"."]}]]}]}],["$","div",null,{"className":"page-faq-list","children":[["$","div","How many emails should a nurture sequence have?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How many emails should a nurture sequence have?"}],["$","p",null,{"children":"Five to seven over about two weeks is a solid default for most lead funnels. Longer sales cycles, like coaching or B2B, can run 10 or more over a month. After the sequence ends, move non-buyers to a regular newsletter so you stay in touch without hard selling."}]]}],["$","div","How often should nurture emails go out?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How often should nurture emails go out?"}],["$","p",null,{"children":"Daily for the first two days while interest is high, then every two or three days. The template sends on days 0, 1, 3, 5, 7, 10 and 14. If unsubscribes spike after a particular email, check that email's content before changing the schedule."}]]}],["$","div","Should nurture emails be plain text or designed?",{"className":"page-faq-item","children":["$L39","$L3a"]}],"$L3b","$L3c"]}]]}]
+34:["$","$L3d",null,{}]
+3e:I[27566,["$c","$d","$e","$26","$27"],"default"]
+3f:T1176,EMAIL NURTURE SEQUENCE TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/email-nurture-sequence
+
+Use for: leads who opted in but did not book or buy.
+Length: 7 emails over 14 days. Stop the sequence when the lead books or buys.
+From name: a real person at {company}. Plain text style. One link per email.
+Every email must include your business address and an unsubscribe link in the footer.
+
+------------------------------------------------------------
+EMAIL 1. DAY 0 (immediately). DELIVER WHAT THEY ASKED FOR
+------------------------------------------------------------
+Subject: Your {lead magnet / estimate / guide} is here
+Preview: Plus the one thing to do next
+
+Hi {first_name},
+
+Here is your {lead magnet}: {link}
+
+Quick tip before you dive in: start with {specific section or step}. It is where most {audience} see the fastest result.
+
+If you would rather talk it through, you can book a {length}-minute call here: {booking_link}
+
+{sender_name}
+{company}
+
+------------------------------------------------------------
+EMAIL 2. DAY 1. THE BIG MISTAKE
+------------------------------------------------------------
+Subject: The mistake that costs {audience} {cost}
+Preview: Almost everyone makes it at first
+
+Hi {first_name},
+
+The most common mistake we see with {audience} is {mistake}.
+
+It feels right because {why people do it}. But it leads to {bad outcome}, which usually costs {money/time}.
+
+What to do instead: {one clear alternative}.
+
+If you want us to look at how this applies to you, reply to this email with your biggest question.
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 3. DAY 3. CASE STORY
+------------------------------------------------------------
+Subject: How {client name or type} got {result}
+Preview: Before, after and what changed
+
+Hi {first_name},
+
+{Client} came to us with {situation}. They had tried {previous attempt}.
+
+We changed three things:
+1. {change 1}
+2. {change 2}
+3. {change 3}
+
+Result: {specific result with number} in {time frame}.
+
+Want to see what the same approach would look like for you? {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 4. DAY 5. HOW IT WORKS
+------------------------------------------------------------
+Subject: What working with us actually looks like
+Preview: Step by step, no surprises
+
+Hi {first_name},
+
+People often ask what happens after they book. Here is the full process:
+
+Step 1: {call/assessment}. We look at {what you review}.
+Step 2: {plan}. You get {deliverable}.
+Step 3: {delivery}. {time frame}.
+Step 4: {result/support}.
+
+Most clients {typical outcome} within {time}.
+
+Book your call here: {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 5. DAY 7. OBJECTIONS
+------------------------------------------------------------
+Subject: "{common objection in their words}"
+Preview: Fair question. Here is the honest answer.
+
+Hi {first_name},
+
+We hear this a lot: "{objection}."
+
+Here is the honest answer: {answer, with a number or example}.
+
+And if {second objection}, {short answer}.
+
+Still have a question? Reply and I will answer personally.
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 6. DAY 10. DIRECT OFFER
+------------------------------------------------------------
+Subject: Want us to {do the thing} for you?
+Preview: {Short benefit}
+
+Hi {first_name},
+
+If you are ready to {result}, here is the next step: a {length}-minute call where we {what happens on the call}.
+
+You will leave with {specific takeaway}, whether you work with us or not.
+
+Pick a time: {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 7. DAY 14. CLOSE THE LOOP
+------------------------------------------------------------
+Subject: Should I close your file?
+Preview: One quick question
+
+Hi {first_name},
+
+I have not heard back, so I am guessing the timing is not right. That is completely fine.
+
+Reply with a number so I know what to do:
+1 - I am still interested, send me times.
+2 - Check back in a few months.
+3 - I am all set.
+
+{sender_name}
+
+------------------------------------------------------------
+AFTER DAY 14
+------------------------------------------------------------
+Move non-responders to a monthly newsletter with one useful idea and one case story per issue.
+Reply "1" -> send times or book. Reply "2" -> set a 90-day task. Reply "3" -> remove from sales emails.
+36:["$","section",null,{"className":"seo-template","aria-labelledby":"seo-template-h","children":[["$","div",null,{"className":"seo-template-head","children":[["$","h2",null,{"id":"seo-template-h","children":"The template"}],["$","div",null,{"className":"seo-template-actions","children":[["$","$L3e",null,{"text":"$3f"}],"$L40"]}]]}],"$L41"]}]
+39:["$","h3",null,{"children":"Should nurture emails be plain text or designed?"}]
+3a:["$","p",null,{"children":"Plain text for service businesses and high-ticket offers. It reads like a personal note, tends to reach the primary inbox, and invites replies. Designed emails suit eCommerce, where product images and buttons help. Either way, keep one clear link and a recognizable sender name."}]
+3b:["$","div","What should I do when a lead replies?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"What should I do when a lead replies?"}],["$","p",null,{"children":"Treat it as a hot lead. Remove them from the automated sequence, answer personally within hours, and offer a call time. Replies like 1, 2 or 3 to the final email can be routed automatically: book, set a 90-day reminder, or remove from sales emails."}]]}]
+3c:["$","div","Do I still need SMS if I have email nurture?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Do I still need SMS if I have email nurture?"}],["$","p",null,{"children":"Yes, for booking. Email is good for education and proof over several days, but texts and calls are what get a lead on the calendar in the first hour. Use both: instant text and call at opt-in, then email nurture for leads who do not book."}]]}]
+40:["$","a",null,{"className":"btn g","href":"/templates/files/email-nurture-sequence.txt","download":true,"children":["Download .txt ",["$","i",null,{"children":"↗"}]]}]
+42:T1176,EMAIL NURTURE SEQUENCE TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/email-nurture-sequence
+
+Use for: leads who opted in but did not book or buy.
+Length: 7 emails over 14 days. Stop the sequence when the lead books or buys.
+From name: a real person at {company}. Plain text style. One link per email.
+Every email must include your business address and an unsubscribe link in the footer.
+
+------------------------------------------------------------
+EMAIL 1. DAY 0 (immediately). DELIVER WHAT THEY ASKED FOR
+------------------------------------------------------------
+Subject: Your {lead magnet / estimate / guide} is here
+Preview: Plus the one thing to do next
+
+Hi {first_name},
+
+Here is your {lead magnet}: {link}
+
+Quick tip before you dive in: start with {specific section or step}. It is where most {audience} see the fastest result.
+
+If you would rather talk it through, you can book a {length}-minute call here: {booking_link}
+
+{sender_name}
+{company}
+
+------------------------------------------------------------
+EMAIL 2. DAY 1. THE BIG MISTAKE
+------------------------------------------------------------
+Subject: The mistake that costs {audience} {cost}
+Preview: Almost everyone makes it at first
+
+Hi {first_name},
+
+The most common mistake we see with {audience} is {mistake}.
+
+It feels right because {why people do it}. But it leads to {bad outcome}, which usually costs {money/time}.
+
+What to do instead: {one clear alternative}.
+
+If you want us to look at how this applies to you, reply to this email with your biggest question.
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 3. DAY 3. CASE STORY
+------------------------------------------------------------
+Subject: How {client name or type} got {result}
+Preview: Before, after and what changed
+
+Hi {first_name},
+
+{Client} came to us with {situation}. They had tried {previous attempt}.
+
+We changed three things:
+1. {change 1}
+2. {change 2}
+3. {change 3}
+
+Result: {specific result with number} in {time frame}.
+
+Want to see what the same approach would look like for you? {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 4. DAY 5. HOW IT WORKS
+------------------------------------------------------------
+Subject: What working with us actually looks like
+Preview: Step by step, no surprises
+
+Hi {first_name},
+
+People often ask what happens after they book. Here is the full process:
+
+Step 1: {call/assessment}. We look at {what you review}.
+Step 2: {plan}. You get {deliverable}.
+Step 3: {delivery}. {time frame}.
+Step 4: {result/support}.
+
+Most clients {typical outcome} within {time}.
+
+Book your call here: {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 5. DAY 7. OBJECTIONS
+------------------------------------------------------------
+Subject: "{common objection in their words}"
+Preview: Fair question. Here is the honest answer.
+
+Hi {first_name},
+
+We hear this a lot: "{objection}."
+
+Here is the honest answer: {answer, with a number or example}.
+
+And if {second objection}, {short answer}.
+
+Still have a question? Reply and I will answer personally.
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 6. DAY 10. DIRECT OFFER
+------------------------------------------------------------
+Subject: Want us to {do the thing} for you?
+Preview: {Short benefit}
+
+Hi {first_name},
+
+If you are ready to {result}, here is the next step: a {length}-minute call where we {what happens on the call}.
+
+You will leave with {specific takeaway}, whether you work with us or not.
+
+Pick a time: {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 7. DAY 14. CLOSE THE LOOP
+------------------------------------------------------------
+Subject: Should I close your file?
+Preview: One quick question
+
+Hi {first_name},
+
+I have not heard back, so I am guessing the timing is not right. That is completely fine.
+
+Reply with a number so I know what to do:
+1 - I am still interested, send me times.
+2 - Check back in a few months.
+3 - I am all set.
+
+{sender_name}
+
+------------------------------------------------------------
+AFTER DAY 14
+------------------------------------------------------------
+Move non-responders to a monthly newsletter with one useful idea and one case story per issue.
+Reply "1" -> send times or book. Reply "2" -> set a 90-day task. Reply "3" -> remove from sales emails.
+41:["$","pre",null,{"children":"$42"}]
+21:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#ff5a1f"}]]
+43:I[27201,["$c","$d","$e"],"IconMark"]
+1e:null
+24:[["$","title","0",{"children":"Email Nurture Sequence Template: 7 Emails, 14 Days"}],["$","meta","1",{"name":"description","content":"Free email nurture sequence template: seven plain-text emails over 14 days to turn opted-in leads into booked calls, with subject lines and send timing."}],["$","link","2",{"rel":"author","href":"https://www.funnelsthatprint.com"}],["$","meta","3",{"name":"author","content":"Funnels That Print Team"}],["$","link","4",{"rel":"manifest","href":"/site.webmanifest","crossOrigin":"$undefined"}],["$","meta","5",{"name":"keywords","content":"AI receptionist,AI appointment setter,AI lead follow up,GoHighLevel expert,GoHighLevel automation,marketing automation agency,AI receptionist for HVAC,AI receptionist for plumbers,AI receptionist for contractors,AI receptionist for real estate,speed to lead automation,Funnels That Print"}],["$","meta","6",{"name":"creator","content":"Funnels That Print"}],["$","meta","7",{"name":"publisher","content":"Funnels That Print"}],["$","meta","8",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","10",{"name":"category","content":"technology"}],["$","link","11",{"rel":"canonical","href":"https://www.funnelsthatprint.com/templates/email-nurture-sequence"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"name":"google-site-verification","content":"eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI"}],["$","meta","14",{"property":"og:title","content":"Email Nurture Sequence Template: 7 Emails, 14 Days"}],["$","meta","15",{"property":"og:description","content":"Free email nurture sequence template: seven plain-text emails over 14 days to turn opted-in leads into booked calls, with subject lines and send timing."}],["$","meta","16",{"property":"og:url","content":"https://www.funnelsthatprint.com/templates/email-nurture-sequence"}],["$","meta","17",{"property":"og:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"Email nurture sequence template"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:title","content":"Email Nurture Sequence Template: 7 Emails, 14 Days"}],["$","meta","24",{"name":"twitter:description","content":"Free email nurture sequence template: seven plain-text emails over 14 days to turn opted-in leads into booked calls, with subject lines and send timing."}],["$","meta","25",{"name":"twitter:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.28owc4u0ts-l3.ico","sizes":"32x32","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link","29",{"rel":"icon","href":"/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L43","31",{}]]

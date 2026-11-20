@@ -1,0 +1,141 @@
+EMAIL NURTURE SEQUENCE TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/email-nurture-sequence
+
+Use for: leads who opted in but did not book or buy.
+Length: 7 emails over 14 days. Stop the sequence when the lead books or buys.
+From name: a real person at {company}. Plain text style. One link per email.
+Every email must include your business address and an unsubscribe link in the footer.
+
+------------------------------------------------------------
+EMAIL 1. DAY 0 (immediately). DELIVER WHAT THEY ASKED FOR
+------------------------------------------------------------
+Subject: Your {lead magnet / estimate / guide} is here
+Preview: Plus the one thing to do next
+
+Hi {first_name},
+
+Here is your {lead magnet}: {link}
+
+Quick tip before you dive in: start with {specific section or step}. It is where most {audience} see the fastest result.
+
+If you would rather talk it through, you can book a {length}-minute call here: {booking_link}
+
+{sender_name}
+{company}
+
+------------------------------------------------------------
+EMAIL 2. DAY 1. THE BIG MISTAKE
+------------------------------------------------------------
+Subject: The mistake that costs {audience} {cost}
+Preview: Almost everyone makes it at first
+
+Hi {first_name},
+
+The most common mistake we see with {audience} is {mistake}.
+
+It feels right because {why people do it}. But it leads to {bad outcome}, which usually costs {money/time}.
+
+What to do instead: {one clear alternative}.
+
+If you want us to look at how this applies to you, reply to this email with your biggest question.
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 3. DAY 3. CASE STORY
+------------------------------------------------------------
+Subject: How {client name or type} got {result}
+Preview: Before, after and what changed
+
+Hi {first_name},
+
+{Client} came to us with {situation}. They had tried {previous attempt}.
+
+We changed three things:
+1. {change 1}
+2. {change 2}
+3. {change 3}
+
+Result: {specific result with number} in {time frame}.
+
+Want to see what the same approach would look like for you? {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 4. DAY 5. HOW IT WORKS
+------------------------------------------------------------
+Subject: What working with us actually looks like
+Preview: Step by step, no surprises
+
+Hi {first_name},
+
+People often ask what happens after they book. Here is the full process:
+
+Step 1: {call/assessment}. We look at {what you review}.
+Step 2: {plan}. You get {deliverable}.
+Step 3: {delivery}. {time frame}.
+Step 4: {result/support}.
+
+Most clients {typical outcome} within {time}.
+
+Book your call here: {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 5. DAY 7. OBJECTIONS
+------------------------------------------------------------
+Subject: "{common objection in their words}"
+Preview: Fair question. Here is the honest answer.
+
+Hi {first_name},
+
+We hear this a lot: "{objection}."
+
+Here is the honest answer: {answer, with a number or example}.
+
+And if {second objection}, {short answer}.
+
+Still have a question? Reply and I will answer personally.
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 6. DAY 10. DIRECT OFFER
+------------------------------------------------------------
+Subject: Want us to {do the thing} for you?
+Preview: {Short benefit}
+
+Hi {first_name},
+
+If you are ready to {result}, here is the next step: a {length}-minute call where we {what happens on the call}.
+
+You will leave with {specific takeaway}, whether you work with us or not.
+
+Pick a time: {booking_link}
+
+{sender_name}
+
+------------------------------------------------------------
+EMAIL 7. DAY 14. CLOSE THE LOOP
+------------------------------------------------------------
+Subject: Should I close your file?
+Preview: One quick question
+
+Hi {first_name},
+
+I have not heard back, so I am guessing the timing is not right. That is completely fine.
+
+Reply with a number so I know what to do:
+1 - I am still interested, send me times.
+2 - Check back in a few months.
+3 - I am all set.
+
+{sender_name}
+
+------------------------------------------------------------
+AFTER DAY 14
+------------------------------------------------------------
+Move non-responders to a monthly newsletter with one useful idea and one case story per issue.
+Reply "1" -> send times or book. Reply "2" -> set a 90-day task. Reply "3" -> remove from sales emails.

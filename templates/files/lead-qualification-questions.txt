@@ -1,0 +1,84 @@
+LEAD QUALIFICATION QUESTIONS
+Funnels That Print | funnelsthatprint.com/templates/lead-qualification-questions
+
+Use these on forms, quiz funnels, applications, AI voice agents and setter calls.
+Pick 3 to 5 per stage. Ask easy questions first and contact details last.
+Score each answer. Leads at or above your threshold go to a closer; the rest go to nurture.
+
+============================================================
+1. NEED (is there a real problem?)
+============================================================
+ - What made you reach out today?
+ - What is the main thing you want to fix or achieve?
+ - What happens if nothing changes in the next 6 months?
+ - Have you tried to solve this before? What happened?
+
+============================================================
+2. TIMING (will they act soon?)
+============================================================
+ - How soon do you want to get this done?
+     Right away (3) | Within 30 days (2) | 1 to 3 months (1) | Just researching (0)
+ - Is there a deadline or event driving that timing?
+
+============================================================
+3. AUTHORITY (can they say yes?)
+============================================================
+ - Who else is involved in this decision?
+ - If it makes sense on the call, could you move forward, or would you need to check with someone?
+     I decide (2) | Me and a partner, both attending (2) | Someone else decides (0)
+
+============================================================
+4. BUDGET OR ABILITY TO PAY
+============================================================
+ - Have you set aside a budget for this?
+     Yes, {range above minimum} (3) | Yes, {lower range} (1) | Not yet (0)
+ - Our {service} typically starts at {starting price}. Does that fit what you had in mind?
+
+============================================================
+5. FIT (are they the customer you serve?)
+============================================================
+Adapt per industry:
+ Home services / roofing / HVAC / solar
+  - Do you own the property? (must be yes)
+  - What is the property address or ZIP code? (inside service area)
+  - Is this an emergency, a repair or a replacement?
+ Personal injury
+  - When did the accident happen? (inside statute window for your state)
+  - Were you injured and did you receive medical treatment?
+  - Do you already have an attorney? (must be no)
+ Mortgage / insurance
+  - Are you looking to buy, refinance or take cash out?
+  - What is the approximate property value and loan balance?
+  - Roughly what is your credit score range?
+ Coaching / consulting / B2B
+  - What is your current monthly revenue?
+  - How many people are on your team?
+  - What have you already invested in solving this?
+ Med spa / clinic
+  - Which treatment are you interested in?
+  - Have you had this treatment before?
+  - Which location is most convenient?
+
+============================================================
+6. COMMITMENT (will they show up?)
+============================================================
+ - If we find a plan that works, are you ready to start in the next {time frame}?
+ - What would make this call a great use of your time?
+
+============================================================
+SCORING EXAMPLE
+============================================================
+Timing: 0 to 3 | Authority: 0 to 2 | Budget: 0 to 3 | Fit: pass/fail
+Fit fail                  -> polite decline + resource or referral.
+Score 6 to 8 + Fit pass   -> book directly with a closer.
+Score 3 to 5 + Fit pass   -> book with a setter or AI agent for a second qualifying call.
+Score 0 to 2              -> nurture sequence; re-ask timing in 30 days.
+
+============================================================
+WRITING RULES
+============================================================
+ - Use multiple-choice answers on forms; open questions on calls.
+ - Never ask more than one question at a time.
+ - Put the hardest question (budget, revenue) after the lead has answered three easy ones.
+ - Save every answer to a CRM field so the closer sees it before the call.
+ - Send qualified-lead events back to your ad platform so it learns which leads matter.

@@ -1,0 +1,265 @@
+2:"$Sreact.fragment"
+3:"/_next/static/chunks/0umf92h1sb77c.js"
+4:"/_next/static/chunks/3n2fx6_1svfxt.js"
+5:"/_next/static/chunks/34pui1c-qzugx.js"
+6:I[39756,["$3","$4","$5"],"default"]
+7:I[37457,["$3","$4","$5"],"default"]
+f:"/_next/static/chunks/2lyy0yvf_0_wr.js"
+10:"/_next/static/chunks/0rsakdox7r09y.js"
+11:I[22016,["$3","$4","$5","$f","$10"],""]
+21:"ViewportBoundary"
+22:I[97367,["$3","$4","$5"],"$21"]
+23:"MetadataBoundary"
+24:I[97367,["$3","$4","$5"],"$23"]
+25:"$Sreact.suspense"
+26:I[27201,["$3","$4","$5"],"IconMark"]
+9:X
+9:C
+a:X
+e:T6de,{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.funnelsthatprint.com"},{"@type":"ListItem","position":2,"name":"Templates","item":"https://www.funnelsthatprint.com/templates"},{"@type":"ListItem","position":3,"name":"VSL script template for high-ticket offers","item":"https://www.funnelsthatprint.com/templates/vsl-script-template"}]},{"@type":"Article","@id":"https://www.funnelsthatprint.com/templates/vsl-script-template#article","headline":"VSL Script Template for High-Ticket Offers (Free)","description":"Free VSL script template for high-ticket offers: hook, story, problem, three-pillar method, proof stack, offer and close, timed for an 8 to 15 min video.","image":["https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"],"datePublished":"2026-11-05T09:00:00+00:00","dateModified":"2026-11-05T09:00:00+00:00","author":{"@type":"Person","@id":"https://www.funnelsthatprint.com/#person-gaurav","name":"Gaurav Kapoor","jobTitle":"Founder & Funnel Strategist, Funnels That Print","image":"https://www.funnelsthatprint.com/img/team/gaurav.webp","url":"https://www.funnelsthatprint.com/team/gaurav-kapoor","worksFor":{"@id":"https://www.funnelsthatprint.com/#organization"},"sameAs":["https://www.instagram.com/gauravecomm/"]},"publisher":{"@type":"Organization","@id":"https://www.funnelsthatprint.com/#organization","name":"Funnels That Print","url":"https://www.funnelsthatprint.com","logo":{"@type":"ImageObject","url":"https://www.funnelsthatprint.com/favicon-512.png","width":512,"height":512}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.funnelsthatprint.com/templates/vsl-script-template"},"inLanguage":"en-US"}]}d:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$2","c",{"children":[[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$e"}}],["$","header",null,{"className":"sx-hero","data-wa-topic":"VSL script template for high-ticket offers","children":["$","div",null,{"className":"box","children":[["$","nav",null,{"className":"crumbs","aria-label":"Breadcrumb","children":[["$","$L11",null,{"href":"/","children":"Home"}],[["$","span",null,{"aria-hidden":"true","children":"/"}],["$","$L11",null,{"href":"/templates","children":"Templates"}]]]}],["$","div",null,{"className":"sx-hero-grid","children":[["$","div",null,{"className":"sx-hero-copy","children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h1",null,{"className":"h1 d","children":["VSL script template for"," ",["$","span",null,{"className":"it","children":"high-ticket offers"}]]}],["$","div",null,{"className":"lead seo-intro","dangerouslySetInnerHTML":{"__html":"This <strong>VSL script template</strong> is the seven-part structure we use for video sales letters that book calls for coaching, consulting, agency and professional service offers. It is timed for an 8 to 15 minute video, uses {placeholders} for every variable, and ends with a checklist to run before you record."}}],["$","div",null,{"className":"seo-cta","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22VSL%20script%20template%20for%20high-ticket%20offers%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Fvsl-script-template)","target":"_blank","rel":"noopener","children":["WhatsApp us ","$L12"]}]]}],"$L13"]}],"$L14"]}]]}]}],"$L15","$undefined",false,"$undefined","$L16",false,"$L17",false,false,"$L18","$L19","$L1a","$L1b","$L1c"],["$L1d","$L1e"],"$L1f"]}],"p":"$@20","v":null,"s":"$a"}}]]
+b:[["children",{"s":{"n":"slug","t":"d","k":"vsl-script-template","s":[]},"h":65632,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@c","v":"$9","s":"$a"},"c":"$Qd"}]]
+1:[["children",{"s":"templates","h":131136,"d":{"r":["$","$2","c",{"children":[null,["$","$L6",null,{"parallelRouterKey":"children","template":["$","$L7",null,{}]}]]}],"p":"$@8","v":"$9","s":"$a"},"c":"$Qb"}]]
+0:{"t":{"t":{"s":"","h":131088,"c":"$Q1"},"h":{"r":["$","$2","h",{"children":[null,["$","$L22",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1, viewport-fit=cover"}],["$","meta","2",{"name":"theme-color","content":"#ff5a1f"}]]}],["$","$L24",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$25",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"VSL Script Template for High-Ticket Offers (Free)"}],["$","meta","1",{"name":"description","content":"Free VSL script template for high-ticket offers: hook, story, problem, three-pillar method, proof stack, offer and close, timed for an 8 to 15 min video."}],["$","link","2",{"rel":"author","href":"https://www.funnelsthatprint.com"}],["$","meta","3",{"name":"author","content":"Funnels That Print Team"}],["$","link","4",{"rel":"manifest","href":"/site.webmanifest"}],["$","meta","5",{"name":"keywords","content":"AI receptionist,AI appointment setter,AI lead follow up,GoHighLevel expert,GoHighLevel automation,marketing automation agency,AI receptionist for HVAC,AI receptionist for plumbers,AI receptionist for contractors,AI receptionist for real estate,speed to lead automation,Funnels That Print"}],["$","meta","6",{"name":"creator","content":"Funnels That Print"}],["$","meta","7",{"name":"publisher","content":"Funnels That Print"}],["$","meta","8",{"name":"robots","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","9",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","10",{"name":"category","content":"technology"}],["$","link","11",{"rel":"canonical","href":"https://www.funnelsthatprint.com/templates/vsl-script-template"}],["$","meta","12",{"name":"format-detection","content":"telephone=no, address=no, email=no"}],["$","meta","13",{"name":"google-site-verification","content":"eiVneK8fO6fm24Qej8CRqkYHetGG1ZSQfG6oIxjf0UI"}],["$","meta","14",{"property":"og:title","content":"VSL Script Template for High-Ticket Offers (Free)"}],["$","meta","15",{"property":"og:description","content":"Free VSL script template for high-ticket offers: hook, story, problem, three-pillar method, proof stack, offer and close, timed for an 8 to 15 min video."}],["$","meta","16",{"property":"og:url","content":"https://www.funnelsthatprint.com/templates/vsl-script-template"}],["$","meta","17",{"property":"og:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","meta","18",{"property":"og:image:width","content":"1200"}],["$","meta","19",{"property":"og:image:height","content":"630"}],["$","meta","20",{"property":"og:image:alt","content":"VSL script template for high-ticket offers"}],["$","meta","21",{"property":"og:type","content":"article"}],["$","meta","22",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","23",{"name":"twitter:title","content":"VSL Script Template for High-Ticket Offers (Free)"}],["$","meta","24",{"name":"twitter:description","content":"Free VSL script template for high-ticket offers: hook, story, problem, three-pillar method, proof stack, offer and close, timed for an 8 to 15 min video."}],["$","meta","25",{"name":"twitter:image","content":"https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg"}],["$","link","26",{"rel":"icon","href":"/favicon.ico?favicon.28owc4u0ts-l3.ico","sizes":"32x32","type":"image/x-icon"}],["$","link","27",{"rel":"icon","href":"/favicon.ico","sizes":"any"}],["$","link","28",{"rel":"icon","href":"/favicon.svg","type":"image/svg+xml"}],["$","link","29",{"rel":"icon","href":"/favicon-96x96.png","sizes":"96x96","type":"image/png"}],["$","link","30",{"rel":"apple-touch-icon","href":"/apple-touch-icon.png","sizes":"180x180","type":"image/png"}],["$","$L26","31",{}]]}]}],null]}],null]}],"p":"$@27","v":null,"s":"$a"}},"a":"$@28","u":"$@29","b":"_t-y9Pl6m-ON9I0Gi1dJQ"}
+2a:I[65093,["$3","$4","$5","$f","$10"],"default"]
+2c:I[15685,["$3","$4","$5","$f","$10"],"default"]
+32:I[35777,["$3","$4","$5","$f","$10"],"default"]
+33:I[97367,["$3","$4","$5"],"OutletBoundary"]
+12:["$","i",null,{"children":"↗"}]
+13:["$","ul",null,{"className":"sx-trust","aria-label":"Why Funnels That Print","children":[["$","li",null,{"children":[["$","b",null,{"children":"275+"}]," documented results"]}],["$","li",null,{"children":[["$","b",null,{"children":"5-10"}]," day builds"]}],["$","li",null,{"children":[["$","b",null,{"children":"$$999"}]," builds from"]}]]}]
+14:["$","aside",null,{"className":"hx-qa sx-qa","aria-labelledby":"seo-quick-h","children":[["$","span",null,{"className":"hx-tag","children":"Quick answer"}],["$","h2",null,{"id":"seo-quick-h","children":"What should a VSL script include?"}],["$","p",null,{"children":"A VSL script needs a hook that names the audience, a short credibility section, the problem stated in the buyer's words, a named method with three pillars, a proof stack of real results, a clear offer with one next step, and a close that repeats the call to action. Most high-ticket VSLs run 8 to 15 minutes."}],["$","div",null,{"className":"hx-qa-stats","children":[["$","div","/milliondollarcasestudyHigh-ticket consulting funnel in 19 months",{"children":[["$","b",null,{"children":"$$1.52M"}],["$","span",null,{"children":"High-ticket consulting funnel in 19 months"}]]}],["$","div","/case-studies/coaching-680k-revenue-on-15k-ad-spend34 coaching sales on $15,483 ad spend",{"children":[["$","b",null,{"children":"$$680K"}],["$","span",null,{"children":"34 coaching sales on $15,483 ad spend"}]]}],["$","div","/case-studies/coaching-116k-revenue-on-2214-ad-spendROAS: $115,500 from 174 appointments",{"children":[["$","b",null,{"children":"52x"}],["$","span",null,{"children":"ROAS: $115,500 from 174 appointments"}]]}]]}]]}]
+15:["$","$L2a",null,{}]
+16:["$","div",null,{"className":"box sx-body","children":[["$","aside",null,{"className":"sx-toc","aria-label":"On this page","children":[["$","span",null,{"className":"mono","children":"On this page"}],["$","ol",null,{"children":[[["$","li","how-to-use-this-template",{"children":["$","a",null,{"href":"#how-to-use-this-template","children":[["$","span",null,{"children":"01"}],"How to use this template"]}]}],["$","li","customizing-it-by-industry",{"children":["$","a",null,{"href":"#customizing-it-by-industry","children":[["$","span",null,{"children":"02"}],"Customizing it by industry"]}]}],["$","li","mistakes-that-sink-a-vsl",{"children":["$","a",null,{"href":"#mistakes-that-sink-a-vsl","children":[["$","span",null,{"children":"03"}],"Mistakes that sink a VSL"]}]}]],["$","li",null,{"children":["$","a",null,{"href":"#faq","children":[["$","span",null,{"children":"04"}],"Questions, answered"]}]}]]}],["$","$L11",null,{"className":"btn o sx-toc-cta","href":"/book-a-call","children":["Book a call ",["$","i",null,{"children":"↗"}]]}]]}],["$","div",null,{"className":"sx-main","children":[[["$","section","How to use this template",{"id":"how-to-use-this-template","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"01"}],["$","h2",null,{"children":"How to use this template"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ol>\n<li><strong>Collect inputs first:</strong> your audience, their top three pains, your method, three documented results and the exact next step.</li>\n<li><strong>Write the hook last.</strong> Once the body is done you know which promise the proof supports.</li>\n<li><strong>Read it aloud and time it.</strong> At about 150 words per minute, a 1,500-word script runs ten minutes.</li>\n<li><strong>Record in one take per section</strong> and cut between them. Add captions; many viewers watch muted.</li>\n<li><strong>Place it on a page</strong> with the booking calendar or application directly below. See <a href=\"/vsl-funnels\">VSL funnels</a> for page layouts that work.</li>\n</ol>\n<p>New to the format? The <a href=\"/glossary/vsl\">VSL glossary entry</a> covers when a video beats a long-form page.</p>"}}]]}],["$","section","Customizing it by industry",{"id":"customizing-it-by-industry","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"02"}],["$","h2",null,{"children":"Customizing it by industry"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>Coaching and consulting:</strong> lean on the method and proof stack. Revenue numbers and before-and-after stories carry the video. See our <a href=\"/funnels-for/coaches\">funnels for coaches</a>.</li>\n<li><strong>Agencies and SaaS:</strong> replace the origin story with a short demo or teardown and use client metrics like cost per lead.</li>\n<li><strong>Local services and finance:</strong> keep it under five minutes, focus on the problem and the free assessment, and cut the method to one pillar.</li>\n<li><strong>Low-ticket products:</strong> use a shorter sales video that ends in a checkout rather than a call.</li>\n</ul>"}}]]}],["$","section","Mistakes that sink a VSL",{"id":"mistakes-that-sink-a-vsl","className":"sx-sec","children":[["$","span",null,{"className":"sx-n mono","children":"03"}],["$","h2",null,{"children":"Mistakes that sink a VSL"}],["$","div",null,{"className":"seo-prose","dangerouslySetInnerHTML":{"__html":"<ul>\n<li><strong>A slow start.</strong> If the first 30 seconds is about you, most viewers leave. Lead with them.</li>\n<li><strong>Vague proof.</strong> \"Clients love us\" persuades nobody. Use names, numbers and time frames you can document.</li>\n<li><strong>No disqualifier.</strong> Without one, the calendar fills with people who cannot buy and close rates drop.</li>\n<li><strong>One call to action at the very end.</strong> Mention the next step at least twice.</li>\n<li><strong>Testing the script before the offer.</strong> A weak offer does not get fixed by better words. Our comparison of <a href=\"/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026\">VSL vs quiz funnels</a> helps decide the format first.</li>\n</ul>\n<p>Once it is live, model the booked-call economics with the <a href=\"/tools/funnel-conversion-calculator\">funnel conversion calculator</a>.</p>"}}]]}]],"$L2b"]}]]}]
+17:["$","section",null,{"className":"sx-proof","aria-labelledby":"seo-proof-h","children":["$","div",null,{"className":"box","children":[["$","div",null,{"className":"fx-head","children":[["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Proof"}],["$","h2",null,{"id":"seo-proof-h","className":"h2 d","children":["Real numbers from ",["$","span",null,{"className":"it","children":"client campaigns."}]]}]]}],["$","$L11",null,{"className":"btn w","href":"/case-studies/coaching-consulting-funnels","children":["See coaching and consulting results"," ",["$","i",null,{"children":"↗"}]]}]]}],["$","ul",null,{"children":[["$","li","/milliondollarcasestudyHigh-ticket consulting funnel in 19 months",{"children":["$","$L11",null,{"href":"/milliondollarcasestudy","children":[["$","b",null,{"children":"$$1.52M"}],["$","span",null,{"children":"High-ticket consulting funnel in 19 months"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/coaching-680k-revenue-on-15k-ad-spend34 coaching sales on $15,483 ad spend",{"children":["$","$L11",null,{"href":"/case-studies/coaching-680k-revenue-on-15k-ad-spend","children":[["$","b",null,{"children":"$$680K"}],["$","span",null,{"children":"34 coaching sales on $15,483 ad spend"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/case-studies/coaching-116k-revenue-on-2214-ad-spendROAS: $115,500 from 174 appointments",{"children":["$","$L11",null,{"href":"/case-studies/coaching-116k-revenue-on-2214-ad-spend","children":[["$","b",null,{"children":"52x"}],["$","span",null,{"children":"ROAS: $115,500 from 174 appointments"}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}]]}]]}]}]
+18:["$","$L2c",null,{"topic":"VSL script template for high-ticket offers"}]
+19:["$","section",null,{"className":"box bcta-wrap","aria-labelledby":"bcta-h","children":["$","div",null,{"className":"bcta","children":[["$","div",null,{"className":"bcta-copy","children":[["$","span",null,{"className":"hx-tag","children":"Free 30-minute call"}],["$","h2",null,{"id":"bcta-h","children":["Talk to the people who will ",["$","span",null,{"className":"it","children":"build it."}]]}],["$","p",null,{"children":"Pick a time with Gaurav or Rahul. We review your funnel, follow-up and tracking, and tell you the fastest win before you spend anything."}],["$","ul",null,{"className":"bcta-chips","children":[["$","li",null,{"children":"30 minutes"}],["$","li",null,{"children":"No obligation"}],["$","li",null,{"children":"Fixed quote after the call"}]]}]]}],["$","div",null,{"className":"bcta-actions","children":[["$","$L11",null,{"className":"btn o","href":"/book-a-call","children":["Book a strategy call ",["$","i",null,{"children":"↗"}]]}],["$","a",null,{"className":"btn wa","href":"https://wa.me/919625695456?text=Hi%20Funnels%20That%20Print!%20I'm%20looking%20at%20%22VSL%20script%20template%20for%20high-ticket%20offers%22%20and%20want%20help%20setting%20it%20up%20for%20my%20business.%0A%0A(Page%3A%20https%3A%2F%2Fwww.funnelsthatprint.com%2Ftemplates%2Fvsl-script-template)","target":"_blank","rel":"noopener","children":["WhatsApp us ",["$","i",null,{"children":"↗"}]]}],["$","$L11",null,{"className":"bcta-link","href":"/contact","children":"Or send a project brief"}]]}]]}]}]
+1a:["$","section",null,{"className":"sec box sx-related","aria-labelledby":"seo-related-h","children":[["$","div",null,{"className":"fx-head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Keep reading"}],["$","h2",null,{"id":"seo-related-h","className":"h2 d","children":["Related ",["$","span",null,{"className":"it","children":"guides."}]]}]]}]}],["$","ul",null,{"className":"sx-cards","children":[["$","li","/templates",{"children":["$","$L11",null,{"href":"/templates","children":[["$","span",null,{"className":"n mono","children":"01"}],["$","b",null,{"children":"Free sales funnel templates you can use today"}],["$","span",null,{"className":"d","children":"Free sales funnel templates: VSL script, funnel copy, SMS and email follow-up, AI voice script, no-show reminders, qualifying questions, KPI dashboard."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/vsl-funnels",{"children":["$","$L11",null,{"href":"/vsl-funnels","children":[["$","span",null,{"className":"n mono","children":"02"}],["$","b",null,{"children":"VSL funnels for high-ticket offers"}],["$","span",null,{"className":"d","children":"VSL funnels for high-ticket offers: the video sales letter script, page, application, booking calendar and reminders, built and connected in 5 to 10 days."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/glossary/vsl",{"children":["$","$L11",null,{"href":"/glossary/vsl","children":[["$","span",null,{"className":"n mono","children":"03"}],["$","b",null,{"children":"What is a VSL? Video sales letter definition and examples"}],["$","span",null,{"className":"d","children":"What is a VSL? A video sales letter defined: how it works, the script structure, a real $1.52M VSL funnel example and the mistakes that lower bookings."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/templates/funnel-copy-template",{"children":["$","$L11",null,{"href":"/templates/funnel-copy-template","children":[["$","span",null,{"className":"n mono","children":"04"}],["$","b",null,{"children":"Sales funnel copy template for every page"}],["$","span",null,{"className":"d","children":"Free sales funnel copy template for the landing page, quiz or application, booking page and thank-you page, with headline formulas and consent language."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/tools/funnel-conversion-calculator",{"children":["$","$L11",null,{"href":"/tools/funnel-conversion-calculator","children":[["$","span",null,{"className":"n mono","children":"05"}],["$","b",null,{"children":"Funnel conversion calculator"}],["$","span",null,{"className":"d","children":"Free funnel conversion calculator. Enter visitors, opt-in, booking, show and close rates to see leads, sales, cost per sale, revenue and ROAS."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/blog/how-to-build-a-high-ticket-funnel",{"children":["$","$L11",null,{"href":"/blog/how-to-build-a-high-ticket-funnel","children":[["$","span",null,{"className":"n mono","children":"06"}],["$","b",null,{"children":"How to Build a High Ticket Funnel: 8-Step Guide"}],["$","span",null,{"className":"d","children":"How to build a high ticket funnel step by step: offer, front end, VSL or quiz, application, speed-to-lead, reminders and tracking, from a $1.52M build."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/blog/vsl-funnel-examples",{"children":["$","$L11",null,{"href":"/blog/vsl-funnel-examples","children":[["$","span",null,{"className":"n mono","children":"07"}],["$","b",null,{"children":"VSL Funnel Examples: 6 Builds Broken Down Page by Page"}],["$","span",null,{"className":"d","children":"VSL funnel examples from real builds, including a $1.52M consulting funnel, with page-by-page structure, script beats and application and booking steps."}],["$","i",null,{"aria-hidden":"true","children":"↗"}]]}]}],["$","li","/compare/vsl-funnel-vs-webinar-funnel",{"children":["$","$L11",null,{"href":"/compare/vsl-funnel-vs-webinar-funnel","children":[["$","span",null,{"className":"n mono","children":"08"}],["$","b",null,{"children":"VSL funnel vs webinar funnel: which one should sell your offer?"}],["$","span",null,{"className":"d","children":"VSL funnel vs webinar funnel compared on offer price, audience temperature, production effort, show-up and cost per booked call, with real results."}],"$L2d"]}]}]]}]]}]
+2e:T811,{"@context":"https://schema.org","@type":"FAQPage","@id":"https://www.funnelsthatprint.com/templates/vsl-script-template#faq","mainEntity":[{"@type":"Question","name":"How long should a VSL be?","acceptedAnswer":{"@type":"Answer","text":"For a high-ticket offer sold on a call, 8 to 15 minutes is typical, because the video has to explain a method and show proof. For local services or a free assessment, three to five minutes is enough. Cut anything that does not move the viewer toward the next step."}},{"@type":"Question","name":"Should I show my face or use slides?","acceptedAnswer":{"@type":"Answer","text":"Face to camera usually builds more trust for coaching, consulting and services, since buyers are choosing a person. Slides or screen recordings work for software, data-heavy offers and teardown-style videos. Many strong VSLs mix both: face for the hook and close, screen for proof."}},{"@type":"Question","name":"Where does the VSL go in the funnel?","acceptedAnswer":{"@type":"Answer","text":"Usually on the landing page, with the application or booking calendar directly underneath. Some funnels put a short VSL after opt-in instead, on the booking page, to warm the lead before they pick a time. The thank-you page is a good place for a second, shorter pre-call video."}},{"@type":"Question","name":"Do I need a script or can I talk freely?","acceptedAnswer":{"@type":"Answer","text":"Use the script as structure, even if you speak naturally. Unscripted videos tend to run long, bury the offer and forget the call to action. Many people write bullet points for each section, rehearse twice, then record section by section so mistakes only cost one short retake."}},{"@type":"Question","name":"How do I know if my VSL is working?","acceptedAnswer":{"@type":"Answer","text":"Track play rate, average watch time, and opt-in or booking rate from the page. If viewers drop in the first minute, rewrite the hook. If they watch but do not book, the offer or proof is the problem. Compare booked calls per 1,000 visitors before and after each change."}}]}1b:["$","section",null,{"className":"sec box page-faq","id":"faq","aria-label":"Frequently asked questions","children":[["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2e"}}],["$","div",null,{"className":"head","children":["$","div",null,{"children":[["$","div",null,{"className":"eyebrow mono","children":"Free template"}],["$","h2",null,{"className":"h2 d","children":["Frequently asked ",["$","span",null,{"className":"it","children":"questions"}],"."]}]]}]}],["$","div",null,{"className":"page-faq-list","children":[["$","div","How long should a VSL be?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How long should a VSL be?"}],["$","p",null,{"children":"For a high-ticket offer sold on a call, 8 to 15 minutes is typical, because the video has to explain a method and show proof. For local services or a free assessment, three to five minutes is enough. Cut anything that does not move the viewer toward the next step."}]]}],["$","div","Should I show my face or use slides?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Should I show my face or use slides?"}],["$","p",null,{"children":"Face to camera usually builds more trust for coaching, consulting and services, since buyers are choosing a person. Slides or screen recordings work for software, data-heavy offers and teardown-style videos. Many strong VSLs mix both: face for the hook and close, screen for proof."}]]}],"$L2f","$L30","$L31"]}]]}]
+1c:["$","$L32",null,{}]
+1d:["$","script","script-0",{"src":"/_next/static/chunks/2lyy0yvf_0_wr.js","async":true}]
+1e:["$","script","script-1",{"src":"/_next/static/chunks/0rsakdox7r09y.js","async":true}]
+1f:["$","$L33",null,{"children":["$","$25",null,{"name":"Next.MetadataOutlet","children":"$@34"}]}]
+29:true
+35:I[27566,["$3","$4","$5","$f","$10"],"default"]
+a:300
+36:T13e3,VSL SCRIPT TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/vsl-script-template
+
+Target length: 8 to 15 minutes for a high-ticket offer sold on a call.
+Speaking pace: about 150 words per minute. Replace everything in {braces}.
+Write it the way you talk. Read it out loud before you record.
+
+------------------------------------------------------------
+PART 1. THE HOOK (0:00 to 0:45)
+------------------------------------------------------------
+Goal: stop the right viewer and tell them why to keep watching.
+
+"If you are a {audience} doing {current situation, e.g. $20K to $50K a month} and you want {desired result} without {main thing they hate, e.g. cold calling, discounting, working weekends}, this video will show you exactly how {number} {audience} are doing it right now."
+
+"In the next {length} minutes I will show you:
+ 1. Why {common approach} keeps {bad outcome}.
+ 2. The {name of your method} we use to {result}.
+ 3. How to find out if it fits your {business/practice/company}."
+
+Disqualifier line (filters bad leads and builds trust):
+"This is not for {who it is not for, e.g. brand-new businesses with no offer yet}. If that is you, this will not help."
+
+------------------------------------------------------------
+PART 2. WHO I AM AND WHY LISTEN (0:45 to 2:00)
+------------------------------------------------------------
+"My name is {name}. I {role} at {company}. Over the last {years} we have helped {number} {audience} {result}."
+
+Proof, one or two specifics only:
+"{Client name or type} went from {before number} to {after number} in {time frame}."
+
+Short origin: "I started this because {personal reason or moment you saw the problem}."
+
+------------------------------------------------------------
+PART 3. THE PROBLEM (2:00 to 4:00)
+------------------------------------------------------------
+Name the pain in their words:
+"Most {audience} we talk to are dealing with one of three things:
+ - {pain 1, e.g. leads that never pick up the phone}
+ - {pain 2, e.g. paying for ads that bring tire-kickers}
+ - {pain 3, e.g. a calendar full of no-shows}"
+
+Make it cost something:
+"Every month this continues, it costs you roughly {cost in money, time or missed opportunity}."
+
+Blame the old method, not the viewer:
+"It is not your fault. You were told to {old advice}. That worked in {year/context}. It does not work now because {reason the market changed}."
+
+------------------------------------------------------------
+PART 4. THE NEW WAY (4:00 to 8:00)
+------------------------------------------------------------
+"Here is what works instead. We call it {method name}. It has {3} parts."
+
+Pillar 1: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Pillar 2: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Pillar 3: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Bridge: "When all three work together, {result} becomes predictable instead of hoping for a good month."
+
+------------------------------------------------------------
+PART 5. PROOF STACK (8:00 to 10:00)
+------------------------------------------------------------
+Three short case snapshots. Same structure each time:
+"{Client}, a {type of business} in {location or niche}. Before: {number}. What we changed: {one thing}. After: {number} in {time}."
+
+Only use results you can document. Show screenshots on screen while you speak.
+
+------------------------------------------------------------
+PART 6. THE OFFER AND NEXT STEP (10:00 to 12:00)
+------------------------------------------------------------
+"If you want us to {do the thing} for you, here is how it works.
+ Step 1: Book a {length}-minute call using the calendar below this video.
+ Step 2: On the call we will look at {what you review, e.g. your numbers, your current funnel}.
+ Step 3: If it is a fit, we will map out {deliverable} and show you exactly what it costs.
+ If it is not a fit, I will tell you, and point you to {alternative}."
+
+Risk reversal (only if true): "{guarantee or promise}."
+
+Scarcity (only if true): "We only take on {number} new {clients} each {month} because {real reason}."
+
+------------------------------------------------------------
+PART 7. CLOSE (12:00 to end)
+------------------------------------------------------------
+"So here is the choice. Keep {current situation} and hope it changes, or take {length} minutes to see if {method name} works for you. Click the button below, answer {number} quick questions and pick a time. I will see you on the call."
+
+------------------------------------------------------------
+CHECKLIST BEFORE RECORDING
+------------------------------------------------------------
+[ ] The hook names the audience in the first sentence.
+[ ] Every claim has a number, a name or a screenshot.
+[ ] The call to action appears at least twice.
+[ ] The disqualifier is in the first two minutes.
+[ ] No results are promised that you cannot document.
+[ ] Captions are added for viewers watching muted.
+2b:["$","section",null,{"className":"seo-template","aria-labelledby":"seo-template-h","children":[["$","div",null,{"className":"seo-template-head","children":[["$","h2",null,{"id":"seo-template-h","children":"The template"}],["$","div",null,{"className":"seo-template-actions","children":[["$","$L35",null,{"text":"$36"}],"$L37"]}]]}],"$L38"]}]
+2d:["$","i",null,{"aria-hidden":"true","children":"↗"}]
+2f:["$","div","Where does the VSL go in the funnel?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Where does the VSL go in the funnel?"}],["$","p",null,{"children":"Usually on the landing page, with the application or booking calendar directly underneath. Some funnels put a short VSL after opt-in instead, on the booking page, to warm the lead before they pick a time. The thank-you page is a good place for a second, shorter pre-call video."}]]}]
+30:["$","div","Do I need a script or can I talk freely?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"Do I need a script or can I talk freely?"}],["$","p",null,{"children":"Use the script as structure, even if you speak naturally. Unscripted videos tend to run long, bury the offer and forget the call to action. Many people write bullet points for each section, rehearse twice, then record section by section so mistakes only cost one short retake."}]]}]
+31:["$","div","How do I know if my VSL is working?",{"className":"page-faq-item","children":[["$","h3",null,{"children":"How do I know if my VSL is working?"}],["$","p",null,{"children":"Track play rate, average watch time, and opt-in or booking rate from the page. If viewers drop in the first minute, rewrite the hook. If they watch but do not book, the offer or proof is the problem. Compare booked calls per 1,000 visitors before and after each change."}]]}]
+34:null
+a:C
+37:["$","a",null,{"className":"btn g","href":"/templates/files/vsl-script-template.txt","download":true,"children":["Download .txt ",["$","i",null,{"children":"↗"}]]}]
+39:T13e3,VSL SCRIPT TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/vsl-script-template
+
+Target length: 8 to 15 minutes for a high-ticket offer sold on a call.
+Speaking pace: about 150 words per minute. Replace everything in {braces}.
+Write it the way you talk. Read it out loud before you record.
+
+------------------------------------------------------------
+PART 1. THE HOOK (0:00 to 0:45)
+------------------------------------------------------------
+Goal: stop the right viewer and tell them why to keep watching.
+
+"If you are a {audience} doing {current situation, e.g. $20K to $50K a month} and you want {desired result} without {main thing they hate, e.g. cold calling, discounting, working weekends}, this video will show you exactly how {number} {audience} are doing it right now."
+
+"In the next {length} minutes I will show you:
+ 1. Why {common approach} keeps {bad outcome}.
+ 2. The {name of your method} we use to {result}.
+ 3. How to find out if it fits your {business/practice/company}."
+
+Disqualifier line (filters bad leads and builds trust):
+"This is not for {who it is not for, e.g. brand-new businesses with no offer yet}. If that is you, this will not help."
+
+------------------------------------------------------------
+PART 2. WHO I AM AND WHY LISTEN (0:45 to 2:00)
+------------------------------------------------------------
+"My name is {name}. I {role} at {company}. Over the last {years} we have helped {number} {audience} {result}."
+
+Proof, one or two specifics only:
+"{Client name or type} went from {before number} to {after number} in {time frame}."
+
+Short origin: "I started this because {personal reason or moment you saw the problem}."
+
+------------------------------------------------------------
+PART 3. THE PROBLEM (2:00 to 4:00)
+------------------------------------------------------------
+Name the pain in their words:
+"Most {audience} we talk to are dealing with one of three things:
+ - {pain 1, e.g. leads that never pick up the phone}
+ - {pain 2, e.g. paying for ads that bring tire-kickers}
+ - {pain 3, e.g. a calendar full of no-shows}"
+
+Make it cost something:
+"Every month this continues, it costs you roughly {cost in money, time or missed opportunity}."
+
+Blame the old method, not the viewer:
+"It is not your fault. You were told to {old advice}. That worked in {year/context}. It does not work now because {reason the market changed}."
+
+------------------------------------------------------------
+PART 4. THE NEW WAY (4:00 to 8:00)
+------------------------------------------------------------
+"Here is what works instead. We call it {method name}. It has {3} parts."
+
+Pillar 1: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Pillar 2: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Pillar 3: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Bridge: "When all three work together, {result} becomes predictable instead of hoping for a good month."
+
+------------------------------------------------------------
+PART 5. PROOF STACK (8:00 to 10:00)
+------------------------------------------------------------
+Three short case snapshots. Same structure each time:
+"{Client}, a {type of business} in {location or niche}. Before: {number}. What we changed: {one thing}. After: {number} in {time}."
+
+Only use results you can document. Show screenshots on screen while you speak.
+
+------------------------------------------------------------
+PART 6. THE OFFER AND NEXT STEP (10:00 to 12:00)
+------------------------------------------------------------
+"If you want us to {do the thing} for you, here is how it works.
+ Step 1: Book a {length}-minute call using the calendar below this video.
+ Step 2: On the call we will look at {what you review, e.g. your numbers, your current funnel}.
+ Step 3: If it is a fit, we will map out {deliverable} and show you exactly what it costs.
+ If it is not a fit, I will tell you, and point you to {alternative}."
+
+Risk reversal (only if true): "{guarantee or promise}."
+
+Scarcity (only if true): "We only take on {number} new {clients} each {month} because {real reason}."
+
+------------------------------------------------------------
+PART 7. CLOSE (12:00 to end)
+------------------------------------------------------------
+"So here is the choice. Keep {current situation} and hope it changes, or take {length} minutes to see if {method name} works for you. Click the button below, answer {number} quick questions and pick a time. I will see you on the call."
+
+------------------------------------------------------------
+CHECKLIST BEFORE RECORDING
+------------------------------------------------------------
+[ ] The hook names the audience in the first sentence.
+[ ] Every claim has a number, a name or a screenshot.
+[ ] The call to action appears at least twice.
+[ ] The disqualifier is in the first two minutes.
+[ ] No results are promised that you cannot document.
+[ ] Captions are added for viewers watching muted.
+38:["$","pre",null,{"children":"$39"}]
+28:0
+c:"$undefined"
+8:"$undefined"
+27:"$undefined"
+20:"$undefined"

@@ -1,0 +1,104 @@
+VSL SCRIPT TEMPLATE
+Funnels That Print | funnelsthatprint.com/templates/vsl-script-template
+
+Target length: 8 to 15 minutes for a high-ticket offer sold on a call.
+Speaking pace: about 150 words per minute. Replace everything in {braces}.
+Write it the way you talk. Read it out loud before you record.
+
+------------------------------------------------------------
+PART 1. THE HOOK (0:00 to 0:45)
+------------------------------------------------------------
+Goal: stop the right viewer and tell them why to keep watching.
+
+"If you are a {audience} doing {current situation, e.g. $20K to $50K a month} and you want {desired result} without {main thing they hate, e.g. cold calling, discounting, working weekends}, this video will show you exactly how {number} {audience} are doing it right now."
+
+"In the next {length} minutes I will show you:
+ 1. Why {common approach} keeps {bad outcome}.
+ 2. The {name of your method} we use to {result}.
+ 3. How to find out if it fits your {business/practice/company}."
+
+Disqualifier line (filters bad leads and builds trust):
+"This is not for {who it is not for, e.g. brand-new businesses with no offer yet}. If that is you, this will not help."
+
+------------------------------------------------------------
+PART 2. WHO I AM AND WHY LISTEN (0:45 to 2:00)
+------------------------------------------------------------
+"My name is {name}. I {role} at {company}. Over the last {years} we have helped {number} {audience} {result}."
+
+Proof, one or two specifics only:
+"{Client name or type} went from {before number} to {after number} in {time frame}."
+
+Short origin: "I started this because {personal reason or moment you saw the problem}."
+
+------------------------------------------------------------
+PART 3. THE PROBLEM (2:00 to 4:00)
+------------------------------------------------------------
+Name the pain in their words:
+"Most {audience} we talk to are dealing with one of three things:
+ - {pain 1, e.g. leads that never pick up the phone}
+ - {pain 2, e.g. paying for ads that bring tire-kickers}
+ - {pain 3, e.g. a calendar full of no-shows}"
+
+Make it cost something:
+"Every month this continues, it costs you roughly {cost in money, time or missed opportunity}."
+
+Blame the old method, not the viewer:
+"It is not your fault. You were told to {old advice}. That worked in {year/context}. It does not work now because {reason the market changed}."
+
+------------------------------------------------------------
+PART 4. THE NEW WAY (4:00 to 8:00)
+------------------------------------------------------------
+"Here is what works instead. We call it {method name}. It has {3} parts."
+
+Pillar 1: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Pillar 2: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Pillar 3: {name}
+ What it is: {one sentence}
+ Why it works: {one sentence}
+ Example: {short client story with a number}
+
+Bridge: "When all three work together, {result} becomes predictable instead of hoping for a good month."
+
+------------------------------------------------------------
+PART 5. PROOF STACK (8:00 to 10:00)
+------------------------------------------------------------
+Three short case snapshots. Same structure each time:
+"{Client}, a {type of business} in {location or niche}. Before: {number}. What we changed: {one thing}. After: {number} in {time}."
+
+Only use results you can document. Show screenshots on screen while you speak.
+
+------------------------------------------------------------
+PART 6. THE OFFER AND NEXT STEP (10:00 to 12:00)
+------------------------------------------------------------
+"If you want us to {do the thing} for you, here is how it works.
+ Step 1: Book a {length}-minute call using the calendar below this video.
+ Step 2: On the call we will look at {what you review, e.g. your numbers, your current funnel}.
+ Step 3: If it is a fit, we will map out {deliverable} and show you exactly what it costs.
+ If it is not a fit, I will tell you, and point you to {alternative}."
+
+Risk reversal (only if true): "{guarantee or promise}."
+
+Scarcity (only if true): "We only take on {number} new {clients} each {month} because {real reason}."
+
+------------------------------------------------------------
+PART 7. CLOSE (12:00 to end)
+------------------------------------------------------------
+"So here is the choice. Keep {current situation} and hope it changes, or take {length} minutes to see if {method name} works for you. Click the button below, answer {number} quick questions and pick a time. I will see you on the call."
+
+------------------------------------------------------------
+CHECKLIST BEFORE RECORDING
+------------------------------------------------------------
+[ ] The hook names the audience in the first sentence.
+[ ] Every claim has a number, a name or a screenshot.
+[ ] The call to action appears at least twice.
+[ ] The disqualifier is in the first two minutes.
+[ ] No results are promised that you cannot document.
+[ ] Captions are added for viewers watching muted.

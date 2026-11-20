@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Funnels That Print Journal</title>
+    <link>https://www.funnelsthatprint.com/blog</link>
+    <atom:link href="https://www.funnelsthatprint.com/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Guides on AI sales funnels, speed-to-lead automation, GoHighLevel workflows, Meta Conversions API tracking and high-ticket funnels, backed by client data.</description>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 17 Nov 2026 00:00:00 GMT</lastBuildDate>
+    <image>
+      <url>https://www.funnelsthatprint.com/img/og/funnels-that-print-og.jpg</url>
+      <title>Funnels That Print Journal</title>
+      <link>https://www.funnelsthatprint.com/blog</link>
+    </image>
+    <item>
+      <title>Med Spa Patient Acquisition Funnel: Guide With Real Numbers</title>
+      <link>https://www.funnelsthatprint.com/blog/med-spa-patient-acquisition</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/med-spa-patient-acquisition</guid>
+      <pubDate>Wed, 11 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>How a med spa patient acquisition funnel works stage by stage, the cost-per-patient math, and results: 1,011 leads at $4.65 and $639K from 178 clients.</description>
+      <content:encoded><![CDATA[<p>Most med spa marketing guides stop at the ad. This one follows a new patient from the first click to the third visit: the intro offer, booking, show rate, consult-to-treatment, rebooking, and the math that tells you what a patient costs and what one is worth.</p><ul><li>A med spa patient acquisition funnel has five stages: ad, intro offer page, booking, consultation or first visit, and rebooking. Each stage has one number to watch.</li><li>Cost per acquired patient = cost per lead ÷ (booking rate × show rate × consult-to-treatment rate). Fixing a later stage lowers it as much as cheaper leads do.</li><li>In our med spa campaigns, 1,011 leads came from $4,703 of ad spend ($4.65 per lead), $590 produced $11,700 of revenue (19.8x), and one clinic earned $639,000 from 178 clients.</li><li>Profit comes from rebooking: at $639,000 across 178 clients, an average client was worth about $3,590, far more than any intro offer.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/med-spa-patient-acquisition">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/med-spa-patient-acquisition.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Facebook Ads Cost Per Lead: Benchmarks From Real Campaigns</title>
+      <link>https://www.funnelsthatprint.com/blog/facebook-ads-cost-per-lead-benchmarks</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/facebook-ads-cost-per-lead-benchmarks</guid>
+      <pubDate>Tue, 10 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>Facebook ads cost per lead benchmarks from 48 real Meta campaigns: median $11.13, ranges by industry, what a good CPL is, why it rises and how to fix it.</description>
+      <content:encoded><![CDATA[<p>Most cost per lead benchmarks online are survey averages with no campaigns behind them. These come from 48 Meta ad campaigns we ran and published, with every number linked to its case study, plus the break-even math that decides whether your own cost per lead is good.</p><ul><li>Across 48 published Meta (Facebook and Instagram) lead generation campaigns, the median cost per lead was $11.13, with a range from $4.27 to $35.00.</li><li>In the 30 campaigns that published both spend and lead count, $898,489 bought 105,828 leads, a blended cost per lead of $8.49.</li><li>44% of campaigns came in under $10 per lead and 77% under $20. Cost per lead varied as much inside one industry as between industries.</li><li>A good cost per lead is one below your break-even cost per lead: revenue per customer × gross margin × lead-to-customer rate. Judge campaigns on cost per booked call or sale, not on cost per lead alone.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/facebook-ads-cost-per-lead-benchmarks">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/facebook-ads-cost-per-lead-benchmarks.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Membership Funnel: How to Sell Subscriptions With Ads</title>
+      <link>https://www.funnelsthatprint.com/blog/membership-funnel</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/membership-funnel</guid>
+      <pubDate>Tue, 10 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>How a membership funnel works: entry offer, checkout, onboarding and retention math, plus three real campaigns that sold 537 to 2,063 memberships.</description>
+      <content:encoded><![CDATA[<p>A membership funnel is a low-ticket funnel with a second job: keep people paying. Here is how the entry offer, checkout, onboarding and retention fit together, how to work out what you can pay per member, and what three of our membership campaigns produced.</p><ul><li>A membership funnel sells a recurring subscription, so it is judged on cost per member against lifetime value, not on the first payment alone.</li><li>The standard path is ad, offer page, checkout with an order bump, onboarding sequence and a retention system that keeps members past month three.</li><li>In one of our campaigns, $22,774.44 of ad spend produced 537 memberships and $57,577.57 of revenue, a 2.53x ROAS and about $42 of ad spend per member.</li><li>Retention decides profit: lifetime value equals monthly price times average months retained, so adding one month of retention often beats any ad optimization.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/membership-funnel">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/membership-funnel.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Speed to Lead Statistics 2026: Research and Our Data</title>
+      <link>https://www.funnelsthatprint.com/blog/speed-to-lead-statistics</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/speed-to-lead-statistics</guid>
+      <pubDate>Fri, 06 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>Speed to lead statistics from HBR and the Lead Response Management study, plus our data from 60+ deployments: a 38-second median first contact.</description>
+      <content:encoded><![CDATA[<p>Most speed to lead statistics online are recycled from two studies, often misquoted. Here is what that research actually covers, what our own data from 60+ deployments shows, how response time plays out by industry, and how to measure your own number this week.</p><ul><li>The best-known research agrees on direction: leads contacted within minutes are far more likely to be reached and qualified than leads contacted hours later, and many companies still take more than a day to respond.</li><li>Across 60+ Funnels That Print deployments, automated follow-up produced a median first contact of 38 seconds and reached 84% of leads inside the first minute.</li><li>On the same ads and pages, that speed layer lifted lead-to-booking 2.4x. Response time is usually the cheapest conversion lever a lead gen business has.</li><li>Measure your own speed to lead as the time from form submit to the first real two-way contact attempt, reported as a median and as the share of leads reached inside 60 seconds.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/speed-to-lead-statistics">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/speed-to-lead-statistics.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Quiz Funnel Examples: 7 Real Builds and Patterns</title>
+      <link>https://www.funnelsthatprint.com/blog/quiz-funnel-examples</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/quiz-funnel-examples</guid>
+      <pubDate>Fri, 06 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>Quiz funnel examples from roofing, MVA, med spa and coaching builds, plus product finder, assessment and calculator patterns, with question structures.</description>
+      <content:encoded><![CDATA[<p>Most quiz funnel examples are screenshots with no numbers. These seven break down question structure, result page and follow-up: four real client builds in roofing, personal injury, med spa and coaching, plus product finder, assessment and calculator patterns.</p><ul><li>The best quiz funnel examples ask three to six easy multiple-choice questions, collect contact details last and end on a result page that leads to one clear next step.</li><li>Our real builds show the range: 537 roofing leads at $4.27 from a multi-step estimator, 1,079 MVA leads that produced $388,000 in revenue, and 174 coaching appointments on $2,214 of ad spend.</li><li>Product finders, assessments and calculators are reusable patterns. Pick the one that matches what the buyer wants to know about themselves.</li><li>A quiz only pays off when the follow-up uses the answers. Instant, answer-specific texts and calls reached 84% of leads inside the first minute across our deployments.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/quiz-funnel-examples">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/quiz-funnel-examples.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>VSL Funnel Examples: 6 Builds Broken Down Page by Page</title>
+      <link>https://www.funnelsthatprint.com/blog/vsl-funnel-examples</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/vsl-funnel-examples</guid>
+      <pubDate>Fri, 06 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>VSL funnel examples from real builds, including a $1.52M consulting funnel, with page-by-page structure, script beats and application and booking steps.</description>
+      <content:encoded><![CDATA[<p>Six VSL funnel examples with the structure laid bare: what is on each page, the beats in the video script, how the application or checkout works and what happens after someone books. Four are real client builds with numbers; two are clearly labeled patterns.</p><ul><li>A VSL funnel is an ad, a video sales letter page, a short application or checkout, and follow-up that protects the next step. The video sells; the steps around it decide how many buyers you keep.</li><li>Our largest high-ticket example, a consulting VSL funnel with qualification filters, CAPI tracking and multi-touch follow-up, collected $1.52M over 19 months.</li><li>Video-led selling also works at lower prices and in webinar form: the $847K low-ticket front end ran at 3.32x ROAS, and one webinar funnel returned 29.7x on ad spend.</li><li>Strong VSL scripts follow the same beats: hook, problem, mechanism, proof, offer, qualification and one call to action, with the application asking about budget and timing.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/vsl-funnel-examples">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/vsl-funnel-examples.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Exclusive MVA Leads for Personal Injury Firms</title>
+      <link>https://www.funnelsthatprint.com/blog/personal-injury-mva-lead-generation-exclusive-leads</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/personal-injury-mva-lead-generation-exclusive-leads</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>How personal injury firms get exclusive, OTP-verified MVA leads from Meta ads at $5 to $27 per lead instead of $150+ shared leads, with real campaign numbers.</description>
+      <content:encoded><![CDATA[<p>Personal injury firms pay $150 to $300 for shared MVA leads that four other firms also call. This guide shows the exclusive alternative: a Meta ads funnel with multi-step qualification and OTP verification, 60-second intake follow-up and signed-case tracking, with cost-per-lead and revenue figures from 13 documented MVA campaigns.</p><ul><li>Shared MVA leads cost personal injury firms $150 to $300 each and are sold to several firms at once. Exclusive leads from a firm-owned Meta funnel cost $4.38 to $27 per lead in our campaigns.</li><li>Quality comes from the funnel, not the ad: a multi-step form that screens accident date, injury and representation, plus OTP phone verification, removes fake numbers before intake sees them.</li><li>Targeting accidents from the last 30 days keeps leads case-ready. One national campaign produced 8,810 leads at $7.61 over 11 weeks on that rule.</li><li>The number that matters is cost per signed case. One Texas firm spent $20,324, got 1,079 verified leads at $18.94, 62% showed up, 29% signed, and collected $388,000.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/personal-injury-mva-lead-generation-exclusive-leads">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/mva-personal-injury-lead-generation.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Facebook Ads for Mortgage Leads: OTP-Verified Funnels</title>
+      <link>https://www.funnelsthatprint.com/blog/mortgage-lead-generation-meta-ads-otp-verified</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/mortgage-lead-generation-meta-ads-otp-verified</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>How loan officers get OTP-verified mortgage and refinance leads from Meta ads at $4 to $25 per lead, five offers that book appointments, and real results.</description>
+      <content:encoded><![CDATA[<p>Loan officers and mortgage brokers waste most of their lead budget on shared portal leads that never answer. This guide covers the firm-owned alternative: Meta ads, eligibility-style funnels, OTP verification, the five offers that book appointments, and results from our mortgage, refinance and final expense campaigns.</p><ul><li>Mortgage leads from portals are shared and often unreachable. Firm-owned Meta campaigns with OTP verification produced mortgage and refinance leads at $4.31 to $25.48 per lead in our accounts.</li><li>One campaign turned $5,300 of ad spend into 208 verified leads, 160+ conversations, 37 closed loans, $9.2M funded and $65K+ in commission in 21 days.</li><li>The offer does most of the work. Five offers that consistently book appointments: 5-minute pre-qualification, monthly-savings refinance, 24-hour pre-approval, mortgage protection and home equity cash-out.</li><li>The same funnel works for insurance: a final expense campaign produced 2,440 leads at $7.79 in one month.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/mortgage-lead-generation-meta-ads-otp-verified">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/mortgage-lead-generation-meta-ads.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>How Much Does a Sales Funnel Cost? 2026 Pricing Guide</title>
+      <link>https://www.funnelsthatprint.com/blog/how-much-does-a-sales-funnel-cost</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/how-much-does-a-sales-funnel-cost</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>How much does a sales funnel cost in 2026? Honest ranges for DIY, freelancers and agencies, what drives the price, and our fixed $999 to $1,999 builds.</description>
+      <content:encoded><![CDATA[<p>How much does a sales funnel cost? This guide lays out realistic price ranges for DIY, freelance and agency builds, the five factors that drive price, the hidden monthly costs nobody quotes, and the payback math we use with clients before any build starts.</p><ul><li>A sales funnel costs $0 beyond software if you build it yourself, a few hundred to a few thousand dollars from a freelancer, and several thousand to five figures, often plus a monthly retainer, from a full-service agency. The build fee is rarely the biggest number; ad spend and lost leads are.</li><li>Price is driven by five things: copy, number of pages, CRM and automation depth, tracking, and who owns the result after launch.</li><li>Funnels That Print builds on fixed, one-time pricing: $999 for design only, $1,499 for design, copy and full build, and $1,999 for the complete suite with CRM, automation, AI booking agent and tracking.</li><li>Judge cost against payback. A funnel that lifts lead-to-booking 2.4x or recovers 112% of ad spend on day zero pays for itself in weeks, while a cheap funnel with no follow-up quietly burns budget.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/how-much-does-a-sales-funnel-cost">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/how-much-does-a-sales-funnel-cost.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>8 Sales Funnel Examples With Real Numbers (2026)</title>
+      <link>https://www.funnelsthatprint.com/blog/sales-funnel-examples</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/sales-funnel-examples</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>Eight sales funnel examples from real client builds: high-ticket VSL, low-ticket, webinar, quiz, lead gen and SaaS, with ad spend, leads and revenue.</description>
+      <content:encoded><![CDATA[<p>Most sales funnel examples online are templates with no results attached. These eight are real client builds with ad spend, leads and revenue: a high-ticket VSL funnel, a low-ticket self-liquidating offer, a webinar, a quiz lead funnel, an MVA intake funnel, a med spa offer, a summit and an AI SaaS launch.</p><ul><li>The best sales funnel examples are the ones with numbers attached: ad spend, cost per lead and revenue, not just screenshots of pretty pages.</li><li>Funnel type follows the offer. High-ticket offers use a VSL or quiz into a booked call, low-ticket products use a checkout with bumps and upsells, and local services use short lead forms with instant follow-up.</li><li>Results in this roundup range from a $1.52M high-ticket consulting funnel and an $847K low-ticket front end to roofing leads at $4.27 and a webinar returning 29.7x on ad spend.</li><li>Across every example, the follow-up layer mattered as much as the page: speed-to-lead, reminders and server-side tracking.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/sales-funnel-examples">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/sales-funnel-examples.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Best Funnel Builder 2026: 6 Platforms Compared</title>
+      <link>https://www.funnelsthatprint.com/blog/best-funnel-builder-2026</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/best-funnel-builder-2026</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>The best funnel builder 2026 picks for lead gen, courses and products: GoHighLevel, ClickFunnels, Systeme.io, Kajabi, HubSpot and Leadpages compared.</description>
+      <content:encoded><![CDATA[<p>Choosing the best funnel builder in 2026 comes down to what happens at the end of your funnel. This comparison covers GoHighLevel, ClickFunnels, Systeme.io, Kajabi, HubSpot and landing page builders like Leadpages and Unbounce, with pricing as of November 2026 and a decision table by business type.</p><ul><li>There is no single best funnel builder for 2026. The right platform depends on where your funnel ends: a booked call, a checkout, a course or a simple opt-in.</li><li>GoHighLevel is our pick for booked-call lead generation because CRM, SMS, calendars and automation share one account. ClickFunnels remains the strongest dedicated checkout for low-ticket product funnels.</li><li>Systeme.io is the best value for solo creators starting out, Kajabi suits course businesses that want polished delivery, and HubSpot fits B2B teams with a sales department and a larger budget.</li><li>As of November 2026, entry plans range from free (Systeme.io) to $179 a month (Kajabi Basic), and usage fees for SMS and email sit on top of most of them.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/best-funnel-builder-2026">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/best-funnel-builder-2026.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>GoHighLevel Review 2026: Pros, Cons and Real Pricing</title>
+      <link>https://www.funnelsthatprint.com/blog/gohighlevel-review</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/gohighlevel-review</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>An honest GoHighLevel review from a team that has built 275+ client funnels: features, pros and cons, pricing as of November 2026 and who it fits.</description>
+      <content:encoded><![CDATA[<p>An honest GoHighLevel review from a team that builds on it daily. We cover features, the strengths that matter for lead generation, the real downsides, pricing as of November 2026 including usage fees, and a clear verdict on who it fits.</p><ul><li>GoHighLevel is an all-in-one platform for funnels, CRM, SMS, email, calendars and automation. Its biggest strength is that follow-up runs in the same account as the funnel.</li><li>As of November 2026 plans are $97 a month (Starter), $297 (Unlimited) and $497 (SaaS Pro), with SMS, calling and email usage billed on top.</li><li>The main downsides are a steep learning curve, a page builder that is good but not best-in-class, and accounts that get messy without a clear structure.</li><li>It fits booked-call businesses and agencies best. Pure product sellers and large B2B sales teams may be better served elsewhere.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/gohighlevel-review">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/gohighlevel-review.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>How to Build a High Ticket Funnel: 8-Step Guide</title>
+      <link>https://www.funnelsthatprint.com/blog/how-to-build-a-high-ticket-funnel</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/how-to-build-a-high-ticket-funnel</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>How to build a high ticket funnel step by step: offer, front end, VSL or quiz, application, speed-to-lead, reminders and tracking, from a $1.52M build.</description>
+      <content:encoded><![CDATA[<p>Learn how to build a high ticket funnel step by step: positioning the offer, choosing a VSL or quiz front end, writing the application, calling leads inside a minute, protecting show rate with reminders and sending sales-call outcomes back to your ads.</p><ul><li>A high-ticket funnel moves a cold prospect to a qualified sales call. Its job is to filter and prepare buyers, not to close them on a page.</li><li>The eight steps are: offer, ad angle, front end, VSL or quiz, application, speed-to-lead, reminders, and server-side tracking with sales-call feedback.</li><li>In our $1.52M consulting build, adding an interactive front end, minute-one qualification and a reminder stack cut cost per booked call from $280 to $112.</li><li>The page gets the attention, but follow-up decides the result: a median first contact of 38 seconds and show rates up to 88% are what turn applications into revenue.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/how-to-build-a-high-ticket-funnel">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/how-to-build-a-high-ticket-funnel.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Low Ticket Funnel Guide: Build One That Pays for Ads</title>
+      <link>https://www.funnelsthatprint.com/blog/low-ticket-funnel-guide</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/low-ticket-funnel-guide</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>A practical low ticket funnel guide: pick the product, price it, add an order bump and upsells, hit break-even on day zero and build a buyer list.</description>
+      <content:encoded><![CDATA[<p>A low ticket funnel turns cold traffic into paying customers at break-even or better. This guide covers product choice, pricing, the five-page sequence, order bump and upsell math, value-based tracking and the backend offers that make the model profitable, with real figures from our case studies.</p><ul><li>A low ticket funnel sells an inexpensive product, usually $7 to $47, to cold traffic so that front-end revenue covers ad spend while you build a list of buyers.</li><li>The order bump and upsells decide the economics. Average order value has to beat cost per buyer for the funnel to self-liquidate.</li><li>Our $847K front end used a $27 product with a $17 order bump and recovered 112% of ad spend on day zero, before any backend sale.</li><li>A low ticket funnel only becomes a business when it has a backend. Without one, the best case is break-even.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/low-ticket-funnel-guide">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/low-ticket-funnel-guide.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>AI Calling for Lead Generation: Costs, Scripts, Compliance</title>
+      <link>https://www.funnelsthatprint.com/blog/ai-calling-for-lead-generation</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/ai-calling-for-lead-generation</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>AI calling for lead generation explained: where voice agents work, cost per booking, the call script, consent rules and results from 60+ builds.</description>
+      <content:encoded><![CDATA[<p>AI calling for lead generation has moved from experiment to standard equipment for teams that run paid lead funnels. This guide covers inbound versus outbound use, cost per minute and per booking, the four-part call script, AI versus human setters, consent and disclosure, and what 60+ live deployments taught us.</p><ul><li>AI calling for lead generation works best on inbound leads who just raised their hand: the agent calls within a minute, qualifies and books, instead of cold-dialing lists.</li><li>All-in cost is roughly $0.10 to $0.25 per minute, which lands around $3 to $9 per booked appointment, compared with $40 to $120 per booking from a human setter.</li><li>Across 60+ speed-to-lead deployments, median first contact was 38 seconds, 84% of leads were reached inside the first minute and lead-to-booking rose 2.4x on the same ads.</li><li>Consent and disclosure are not optional: collect clear phone and text consent on the form, say the caller is an AI in the first lines, and honor opt-outs immediately.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/ai-calling-for-lead-generation">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/ai-calling-for-lead-generation.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>How to Increase Funnel Conversion Rate: 10 Proven Fixes</title>
+      <link>https://www.funnelsthatprint.com/blog/how-to-increase-funnel-conversion-rate</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/how-to-increase-funnel-conversion-rate</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>How to increase funnel conversion rate step by step: find the leaking stage, fix the offer, page, form and follow-up, and measure with real benchmarks.</description>
+      <content:encoded><![CDATA[<p>A practical guide to increasing funnel conversion rate: how to measure each stage, find the biggest leak, and apply ten fixes in order of impact, from offer and first screen to forms, proof, speed-to-lead and reminders, with real figures from our client funnels.</p><ul><li>To increase funnel conversion rate, first find the stage that leaks most. Fixing the biggest drop-off beats polishing every page a little.</li><li>The highest-leverage fixes are usually the offer and the first screen, then the form, then follow-up speed. Button colors come last.</li><li>Interactive quiz-style forms that ask a few easy questions often convert cold traffic better than a single long contact form.</li><li>Many funnels lose more revenue after the lead than before it: calling inside a minute lifted lead-to-booking 2.4x across 60+ deployments.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/how-to-increase-funnel-conversion-rate">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/how-to-increase-funnel-conversion-rate.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Lead Nurturing Strategies That Turn Leads Into Booked Calls</title>
+      <link>https://www.funnelsthatprint.com/blog/lead-nurturing-strategies</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/lead-nurturing-strategies</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>Lead nurturing strategies that work: first-hour follow-up, SMS and email sequences, segmentation, AI calls, reactivation and the CRM setup behind them.</description>
+      <content:encoded><![CDATA[<p>Practical lead nurturing strategies for businesses that run paid lead funnels: first-hour follow-up, SMS and email sequences, segmentation from form answers, AI calls, content that moves leads forward, reactivation of old lists and the CRM automation that runs it all.</p><ul><li>The best lead nurturing strategies start in the first minute, not the first week: an instant SMS and call reached 84% of leads inside 60 seconds across 60+ deployments.</li><li>Run nurture on three channels with different jobs: SMS for speed and replies, email for depth and proof, voice for booking and confirmation.</li><li>Segment by what the lead told you, not just by source. Form answers decide which sequence, which proof and which offer each lead sees.</li><li>Every sequence needs an exit rule and a reactivation path. Booked leads stop nurture and enter reminders; cold leads move to long-term reactivation.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/lead-nurturing-strategies">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/lead-nurturing-strategies.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Facebook Lead Ads vs Funnels: Which Gets Better Leads?</title>
+      <link>https://www.funnelsthatprint.com/blog/facebook-lead-ads-vs-funnels</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/facebook-lead-ads-vs-funnels</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>Facebook lead ads vs funnels compared: cost per lead, lead quality, OTP verification, follow-up and when instant forms or landing pages win, with cases.</description>
+      <content:encoded><![CDATA[<p>Facebook lead ads (instant forms) and landing-page funnels both run on Meta ads, but they produce very different leads. This guide compares cost per lead, lead quality, contact rates, OTP verification, tracking and follow-up, with a decision framework and real campaign numbers.</p><ul><li>In the Facebook lead ads vs funnels debate, instant forms usually win on cost per lead and landing-page funnels usually win on lead quality, contact rate and cost per sale.</li><li>Instant forms prefill name, email and phone, which makes submitting effortless and also makes accidental, low-intent and unreachable leads common.</li><li>A multi-step landing-page funnel with qualifying questions and OTP phone verification filters fake and mistyped numbers before your team spends time on them.</li><li>Judge both formats on cost per booked appointment or signed client, not cost per lead, and feed downstream events back to Meta through the Conversions API.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/facebook-lead-ads-vs-funnels">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/facebook-lead-ads-vs-funnels.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Sales Funnel Stages: The 6 Stages and What to Measure</title>
+      <link>https://www.funnelsthatprint.com/blog/sales-funnel-stages</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/sales-funnel-stages</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>The six sales funnel stages explained: what happens at each, the assets and automation you need, the KPIs to track and how to map them to your CRM.</description>
+      <content:encoded><![CDATA[<p>A practical guide to sales funnel stages: awareness, interest, evaluation, decision, purchase and retention. For each stage you get the buyer's mindset, the assets and automation to build, the KPI to track and how it maps to a CRM pipeline, plus how the stages differ for high-ticket, low-ticket and ecommerce funnels.</p><ul><li>The six sales funnel stages are awareness, interest, evaluation, decision, purchase and retention. Each one has its own job, assets and conversion rate.</li><li>Every stage should map to a CRM pipeline stage so you can see exactly where leads stall, not just how many came in and how many bought.</li><li>Most revenue leaks sit in the middle stages: slow follow-up after the lead and no-shows after the booking. Calling inside a minute lifted lead-to-booking 2.4x across 60+ deployments.</li><li>Track one primary KPI per stage on a single dashboard, and judge changes on the stage after the one you changed.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/sales-funnel-stages">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/sales-funnel-stages.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>How to Reduce Cost Per Lead: 8 Fixes From Real Campaigns</title>
+      <link>https://www.funnelsthatprint.com/blog/how-to-reduce-cost-per-lead</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/how-to-reduce-cost-per-lead</guid>
+      <pubDate>Thu, 05 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>How to reduce cost per lead without wrecking lead quality: the CPL formula, offer, creative, landing page and tracking fixes, plus real benchmarks.</description>
+      <content:encoded><![CDATA[<p>A practical guide to lowering cost per lead on paid ads: the formula behind CPL, eight fixes from offer and creative to landing page, follow-up and tracking, real cost-per-lead benchmarks from roofing, MVA, mortgage, HVAC and coaching campaigns, and the guardrails that protect lead quality.</p><ul><li>To reduce cost per lead, work on the three numbers that make it up: cost per thousand impressions, click-through rate and landing page conversion rate. Click-through and conversion are the ones you control most.</li><li>The offer and the first screen of the landing page usually move cost per lead more than targeting tweaks or bid strategies.</li><li>Better tracking lowers cost per lead over time: server-side Conversions API recovered 31% more events on our builds, giving Meta more signal to find converters.</li><li>Never optimize cost per lead in isolation. Keep qualifying questions and phone verification, and judge every change on cost per booked call or sale.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/how-to-reduce-cost-per-lead">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/how-to-reduce-cost-per-lead.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>GoHighLevel vs ClickFunnels for Lead Gen (2026 Comparison)</title>
+      <link>https://www.funnelsthatprint.com/blog/gohighlevel-vs-clickfunnels-lead-generation-2026</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/gohighlevel-vs-clickfunnels-lead-generation-2026</guid>
+      <pubDate>Mon, 02 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>GoHighLevel vs ClickFunnels for lead generation in 2026: page builder, CRM, automation, AI calling, pricing and the stack we use after 275+ client funnels.</description>
+      <content:encoded><![CDATA[<p>GoHighLevel and ClickFunnels are the two platforms most lead generation businesses choose between. This comparison covers page building, CRM and pipeline, SMS and email automation, calendars, AI calling, tracking and pricing, with a decision table for agencies, coaches, home services and eCommerce offers.</p><ul><li>ClickFunnels is a better pure page and checkout builder. GoHighLevel is a better lead generation system because the CRM, SMS, email, calendar and follow-up automation live in the same account as the funnel.</li><li>For booked-call offers (agencies, coaching, home services, finance, medspa), the speed-to-lead and reminder automation decides results more than the page builder, which is why we build most lead gen funnels in GoHighLevel.</li><li>For low-ticket product funnels with order bumps and one-click upsells, ClickFunnels' checkout is still the stronger tool, and we connect it to GoHighLevel for follow-up.</li><li>Total monthly cost is similar once you add the tools ClickFunnels needs for SMS, calendar and pipeline; the difference is one login versus four.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/gohighlevel-vs-clickfunnels-lead-generation-2026">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/gohighlevel-vs-clickfunnels.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>AI Appointment Setter Cost: Pricing, Setup and Results</title>
+      <link>https://www.funnelsthatprint.com/blog/ai-appointment-setter-voice-agent-cost-setup-results</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/ai-appointment-setter-voice-agent-cost-setup-results</guid>
+      <pubDate>Mon, 02 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>What an AI appointment setter does, what it costs per call and per booking, how to set it up with your CRM and calendar, and results from 60+ deployments.</description>
+      <content:encoded><![CDATA[<p>AI appointment setters (voice agents that call, qualify and book leads) have moved from novelty to standard equipment in lead generation. This guide covers how they work, cost per call and per booking, the CRM and calendar setup, the script structure, compliance, and real results across 60+ deployments.</p><ul><li>An AI appointment setter is a voice agent that calls a new lead within about 60 seconds, asks two to four qualifying questions, handles objections from a knowledge base and books a slot directly on a rep's calendar.</li><li>Typical all-in cost is $0.10 to $0.25 per minute of calling, which works out to $3 to $9 per booked appointment at the contact and booking rates we see, compared with $40 to $120 for a human setter.</li><li>Latency under 700 milliseconds, a clear AI disclosure and a hard handoff rule to a human are the three things that decide whether prospects stay on the call.</li><li>Across 60+ deployments: 84% contact rate inside the first minute, 2.4x lead-to-booking lift on the same ads, and every after-hours lead worked.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/ai-appointment-setter-voice-agent-cost-setup-results">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/ai-appointment-setter.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Roofing Cost Per Lead: Funnel Playbook and Benchmarks</title>
+      <link>https://www.funnelsthatprint.com/blog/roofing-lead-generation-funnel-cost-per-lead-playbook</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/roofing-lead-generation-funnel-cost-per-lead-playbook</guid>
+      <pubDate>Mon, 02 Nov 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>How to build a roofing lead generation funnel: quote estimator page, Meta and Google ad angles, 60-second follow-up and real cost-per-lead benchmarks.</description>
+      <content:encoded><![CDATA[<p>Roofing companies pay some of the highest costs per lead in home services, and shared marketplace leads make it worse. This playbook covers the quote estimator funnel, Meta and Google campaign structure, storm and seasonal angles, the follow-up system that books inspections, and cost-per-lead benchmarks from our home services case studies.</p><ul><li>The highest-converting roofing funnel is a 4-step quote estimator (roof type, issue, timeline, address) on a fast page, not a contact form. It converts two to three times better on cold traffic.</li><li>Roofing leads go cold in minutes. Instant SMS, an AI or human call inside 60 seconds and missed-call text-back are what turn a $20 to $60 lead into a booked inspection.</li><li>Exclusive leads from your own funnel cost a fraction of shared leads from marketplaces and close at a far higher rate, because the homeowner only spoke to you.</li><li>Send booked-inspection and signed-contract events back to Meta and Google so the ads optimize for jobs, not form fills.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/roofing-lead-generation-funnel-cost-per-lead-playbook">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/roofing-lead-generation-funnel.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>How to Reduce Sales Call No-Show Rates to Under 12%</title>
+      <link>https://www.funnelsthatprint.com/blog/reduce-sales-call-no-show-rate-reminder-automation</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/reduce-sales-call-no-show-rate-reminder-automation</guid>
+      <pubDate>Wed, 16 Sep 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>Cut sales call no-shows from 38% to under 12%: booking page fixes, a 7-touch reminder sequence, pre-call video, confirmation gate and no-show reactivation.</description>
+      <content:encoded><![CDATA[<p>The average booked sales call has a 30% to 40% no-show rate. This guide covers the 3-channel reminder sequence, booking page friction fixes, pre-call video, confirmation gates and no-show reactivation automation that took show-up rates to 88% across our high-ticket client funnels.</p><ul><li>Booked sales calls no-show at 30% to 40% on average. This system took the show-up rate from 62% to 88.4% on the same bookings.</li><li>Fix the booking page first: shorter lead time, a visible agenda and a confirmation gate before the slot is held.</li><li>A 7-touch reminder sequence across SMS, email and an AI voice confirmation the evening before does most of the work.</li><li>Automated reactivation rebooked 34% of no-shows and cut cost per attended call by 41%.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/reduce-sales-call-no-show-rate-reminder-automation">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/sales-call-no-show-rate.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Self-Liquidating Offer Funnel: $847K Low-Ticket Breakdown</title>
+      <link>https://www.funnelsthatprint.com/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown</guid>
+      <pubDate>Tue, 04 Aug 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Case Breakdowns</category>
+      <description>Inside the $27 self-liquidating offer funnel that collected $847,307: page sequence, order bump and upsell math, backend ascension and value-based tracking.</description>
+      <content:encoded><![CDATA[<p>A self-liquidating offer (SLO) funnel uses a low-priced front-end product to cover ad spend while building a buyer list. This case breakdown shows the page sequence, pricing ladder, average order value math, and backend sequence that generated $847,307 collected.</p><ul><li>A self-liquidating offer funnel sells a $27 product with a $17 order bump and a one-click upsell so the front end pays for the ads on day zero. This one recovered 112% of ad spend.</li><li>Average order value of $68.40 against cost per buyer is the number that decides whether the funnel scales.</li><li>The front end built a buyer list. The backend ascension sequence is where most of the $847,307 came from.</li><li>Send purchase value back to Meta so the algorithm optimizes for buyers rather than cheap opt-ins. SLO funnels are the wrong choice for most high-ticket local service offers.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/low-ticket-self-liquidating-offer-funnel-847k-breakdown">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/low-ticket-slo-funnel.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>GoHighLevel Speed-to-Lead Workflow: 60-Second Follow-Up</title>
+      <link>https://www.funnelsthatprint.com/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up</guid>
+      <pubDate>Tue, 23 Jun 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and 5-day nurture, with copy-paste templates.</description>
+      <content:encoded><![CDATA[<p>Leads contacted within 60 seconds are up to 391% more likely to qualify. This guide walks through the complete speed-to-lead automation stack in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back, round-robin assignment and the 5-day nurture sequence, with copy-paste templates.</p><ul><li>Leads contacted within 60 seconds are far more likely to qualify. At a one-hour delay, contact rate falls from 84% to 27%.</li><li>Minute one fires three channels in parallel, an SMS, an AI voice call and an email, all triggered by the form submission inside GoHighLevel.</li><li>Missed-call text-back, round-robin assignment and a 5-day nurture sequence catch the leads the first minute misses.</li><li>Across 60+ deployments the median response time is 38 seconds and lead-to-booking rate lifted 2.4x on the same ads and landing page.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/speed-to-lead-automation-gohighlevel-60-second-follow-up">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/speed-to-lead-automation.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>Meta Conversions API Setup for Lead Gen: 2026 CAPI Guide</title>
+      <link>https://www.funnelsthatprint.com/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026</guid>
+      <pubDate>Tue, 12 May 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>Tracking &amp; Attribution</category>
+      <description>How to set up Meta Conversions API (CAPI) for lead gen in 5 steps: CRM events, deduplication, Event Match Quality above 8, and 31% more events recovered.</description>
+      <content:encoded><![CDATA[<p>Browser pixels now miss up to a third of conversions. This step-by-step Meta CAPI guide shows lead gen businesses how to set up server-side tracking, map CRM pipeline stages to conversion events, and improve Event Match Quality so Meta optimizes for booked calls, not clicks.</p><ul><li>Browser pixels alone now miss roughly a third of conversions. Adding the Conversions API recovered 31% more events in our lead gen accounts.</li><li>Map CRM stages to an event ladder (Lead, QualifiedLead, Schedule, Purchase) and send them server-side with the Meta click ID plus hashed email and phone.</li><li>Deduplicate browser and server events with a shared event ID, and push Event Match Quality above 8 so Meta optimizes for booked calls instead of form fills.</li><li>Expect a learning reset of about 14 days. Cost per qualified lead dropped 37% after 21 days of offline events.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/meta-conversions-api-capi-lead-gen-funnel-setup-guide-2026">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/server-side-capi-tracking.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>AI Lead Qualification: Voice Agents and Speed-to-Lead</title>
+      <link>https://www.funnelsthatprint.com/blog/ai-sales-funnels-voice-lead-qualification-2026</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/ai-sales-funnels-voice-lead-qualification-2026</guid>
+      <pubDate>Sun, 15 Mar 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Rahul Kapoor</dc:creator>
+      <category>AI &amp; Automation</category>
+      <description>How 2026 AI sales funnels pair interactive front ends with sub-second voice agents, 60-second speed-to-lead and Meta CAPI to cut cost per booked call by 42%.</description>
+      <content:encoded><![CDATA[<p>Traditional static Video Sales Letters (VSLs) and multi-step forms are suffering severe drop-offs. Discover the 2026 autonomous sales funnel framework pairing interactive front-ends with sub-700ms voice AI qualification and instant CRM speed-to-lead.</p><ul><li>Static VSL-first funnels lose most cold traffic before the pitch. Interactive front ends that ask four to six qualifying questions turn more clicks into leads.</li><li>Calling a new lead within 60 seconds with a sub-700ms voice agent cut cost per qualified booked call by 42.6% across 275+ funnels, with no change to ads or landing pages.</li><li>Sending qualified-call and sale events back to Meta through the Conversions API shifts ad delivery toward buyers within about 14 days.</li><li>The full stack is an interactive qualification page, instant SMS plus AI voice call, CRM routing, 3-channel reminders and server-side attribution.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/ai-sales-funnels-voice-lead-qualification-2026">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/ai-sales-funnels-2026.jpg" type="image/jpeg" length="0" />
+    </item>
+    <item>
+      <title>High-Ticket VSL vs Quiz Funnel: Which Converts Better?</title>
+      <link>https://www.funnelsthatprint.com/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026</link>
+      <guid isPermaLink="true">https://www.funnelsthatprint.com/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026</guid>
+      <pubDate>Tue, 20 Jan 2026 08:00:00 GMT</pubDate>
+      <dc:creator>Gaurav Kapoor</dc:creator>
+      <category>Funnel Architecture</category>
+      <description>VSL or quiz funnel for your high-ticket offer? Conversion data from 275+ split-tested funnels, the psychology behind each, and the hybrid stack that wins.</description>
+      <content:encoded><![CDATA[<p>Should your high-ticket offer use a traditional Video Sales Letter (VSL) or a multi-step interactive diagnostic quiz? Here are the conversion stats, psychology, and optimal architectures.</p><ul><li>Across 275+ split-tested funnels, four-to-six step quiz front ends completed at 64.8% against an 18% VSL view-through rate and cut cost per lead by 34%.</li><li>VSLs still close better once a prospect is qualified. The loss happens when a long video is the first thing cold traffic sees.</li><li>The winning 2026 format is hybrid: a diagnostic quiz first, then a four-to-six minute mechanism video on the results page before the calendar.</li><li>Route unqualified quiz respondents to a low-ticket or resource path so closers' calendars stay full of the right people.</li></ul><p><a href="https://www.funnelsthatprint.com/blog/high-ticket-vsl-vs-interactive-quiz-funnel-2026">Read the full guide</a></p>]]></content:encoded>
+      <enclosure url="https://www.funnelsthatprint.com/img/blog/high-ticket-vsl-architecture.jpg" type="image/jpeg" length="0" />
+    </item>
+  </channel>
+</rss>
