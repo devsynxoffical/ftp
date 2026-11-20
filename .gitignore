@@ -48,3 +48,7 @@ next-env.d.ts
 # exported bundles
 *.zip
 /ftp-sections-bundle/
+
+# Hostinger static build (scripts/build-hostinger.mjs)
+/.hostinger-tmp
+/hostinger-build
