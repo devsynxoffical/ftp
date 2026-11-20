@@ -221,7 +221,8 @@ export const AI_SERVICE_PAGES: SeoPage[] = [
 <li><strong>Clinics and <a href="/funnels-for/med-spas">med spas</a>:</strong> books consultations, answers prep and policy questions, and transfers anything clinical to staff. The dental version is on our <a href="/ai-voice-agents/dental-clinics">AI voice agents for dental clinics</a> page.</li>
 <li><strong>Law firms:</strong> runs first-pass <a href="/funnels-for/personal-injury-lawyers">personal injury intake</a> questions, flags likely cases and transfers to an intake specialist, without giving legal advice.</li>
 <li><strong><a href="/funnels-for/real-estate">Real estate</a>:</strong> answers listing calls, captures buyer or seller details and books showings or valuation calls.</li>
-</ul>`,
+</ul>
+<p>Detailed setups by trade: <a href="/ai-receptionist/hvac">AI receptionist for HVAC</a>, <a href="/ai-receptionist/plumbers">for plumbers</a>, <a href="/ai-receptionist/contractors">for contractors</a> and <a href="/ai-receptionist/real-estate">for real estate</a>.</p>`,
       },
       {
         h2: "How the call flows into your CRM",

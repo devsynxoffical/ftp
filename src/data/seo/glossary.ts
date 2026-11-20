@@ -1161,7 +1161,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
 <li><strong>Integrations to reconnect.</strong> Phone numbers, calendars, payment and ad accounts never transfer, so list what needs connecting after import.</li>
 <li><strong>Compliance text.</strong> Consent wording, opt-out handling and quiet hours must match your client's market.</li>
 </ul>
-<p>We build custom snapshots for agencies as part of our <a href="/gohighlevel-agency">GoHighLevel agency</a> service, or you can <a href="/hire-gohighlevel-expert">hire a GoHighLevel expert</a> to audit one you already bought.</p>`,
+<p>We build custom snapshots for agencies as part of our <a href="/gohighlevel-agency">GoHighLevel agency</a> service, or you can <a href="/gohighlevel-expert">hire a GoHighLevel expert</a> to audit one you already bought.</p>`,
       },
       {
         h2: "Example from our cases",

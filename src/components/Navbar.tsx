@@ -208,7 +208,7 @@ export default function Navbar() {
             style={{ height: 44 }}
             onClick={closeMenu}
           >
-            Build my funnel <i>&#8599;</i>
+            Book a call <i>&#8599;</i>
           </Link>
 
           <button

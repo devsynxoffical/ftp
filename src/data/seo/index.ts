@@ -12,6 +12,7 @@ import { INDUSTRY_PAGES_2 } from "./industries2";
 import { AI_SERVICE_PAGES } from "./services-ai";
 import { GROWTH_SERVICE_PAGES } from "./services-growth";
 import { NOV19_PAGES } from "./services-nov19";
+import { AI_RECEPTIONIST_PAGES } from "./aiReceptionistNiches";
 import { BLOG_POSTS } from "../blogPosts";
 import { CASE_INDUSTRIES } from "../caseIndustries";
 import { getCasePage } from "../casePages";
@@ -32,6 +33,7 @@ export const SEO_PAGES: SeoPage[] = [
   ...AI_SERVICE_PAGES,
   ...GROWTH_SERVICE_PAGES,
   ...NOV19_PAGES,
+  ...AI_RECEPTIONIST_PAGES,
 ];
 
 const BY_PATH = new Map(SEO_PAGES.map((p) => [p.path, p]));

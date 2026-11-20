@@ -182,7 +182,7 @@ export const NOV19_PAGES: SeoPage[] = [
 <li><strong>Automation:</strong> <a href="/speed-to-lead">speed-to-lead</a> follow-up, reminders, review requests and <a href="/lead-reactivation">database reactivation</a> workflows inside the snapshot.</li>
 <li><strong>Onboarding:</strong> a client welcome flow, a setup checklist and short training videos.</li>
 </ul>
-<p>Most setups are live in 5 to 10 business days. If you only need account setup and automation, not reselling, our <a href="/gohighlevel-agency">GoHighLevel agency</a> service or a <a href="/hire-gohighlevel-expert">GoHighLevel expert</a> is the better fit.</p>`,
+<p>Most setups are live in 5 to 10 business days. If you only need account setup and automation, not reselling, our <a href="/gohighlevel-agency">GoHighLevel agency</a> service or a <a href="/gohighlevel-expert">GoHighLevel expert</a> is the better fit.</p>`,
       },
       {
         h2: "How to price a white label GoHighLevel offer",
@@ -215,7 +215,7 @@ export const NOV19_PAGES: SeoPage[] = [
       { q: "Can you build a snapshot for my niche?", a: "Yes. We build and test the full system in one sub-account: funnels, forms, pipeline, calendars, workflows, reminders and message templates for your niche, then package it as a snapshot. Every new client account loads it in one step and starts with a working lead generation system." },
       { q: "Do you provide support to my clients?", a: "Our setup includes onboarding material and training for you and your team. Ongoing first-line support to your clients stays with your agency, since they know you as the provider. We offer ongoing build and automation support for agencies that want help with complex workflows or new snapshots." },
     ],
-    related: ["/gohighlevel-agency", "/hire-gohighlevel-expert", "/glossary/gohighlevel-snapshot", "/glossary/gohighlevel", "/blog/gohighlevel-review", "/compare/gohighlevel-alternatives", "/funnels-for/marketing-agencies", "/crm-automation"],
+    related: ["/gohighlevel-agency", "/gohighlevel-expert", "/glossary/gohighlevel-snapshot", "/glossary/gohighlevel", "/blog/gohighlevel-review", "/compare/gohighlevel-alternatives", "/funnels-for/marketing-agencies", "/crm-automation"],
     parent: SERVICES,
     updated: U,
   },
@@ -474,7 +474,7 @@ export const NOV19_PAGES: SeoPage[] = [
       },
       {
         h2: "Getting started with GoHighLevel",
-        html: `<p>Start with one job, not every feature: usually a lead form, a pipeline, a calendar and a 60-second follow-up workflow. Add reminders, review requests and <a href="/lead-reactivation">database reactivation</a> once that works. If you would rather have it built right the first time, our <a href="/gohighlevel-agency">GoHighLevel agency</a> team sets up the account in 5 to 10 business days, or you can <a href="/hire-gohighlevel-expert">hire a GoHighLevel expert</a> for a specific build.</p>`,
+        html: `<p>Start with one job, not every feature: usually a lead form, a pipeline, a calendar and a 60-second follow-up workflow. Add reminders, review requests and <a href="/lead-reactivation">database reactivation</a> once that works. If you would rather have it built right the first time, our <a href="/gohighlevel-agency">GoHighLevel agency</a> team sets up the account in 5 to 10 business days, or you can <a href="/gohighlevel-expert">hire a GoHighLevel expert</a> for a specific build.</p>`,
       },
     ],
     proof: { items: GHL_PROOF, more: { label: "See lead generation results", href: "/case-leadgen" } },
@@ -486,7 +486,7 @@ export const NOV19_PAGES: SeoPage[] = [
       { q: "Is GoHighLevel hard to learn?", a: "It has a steep learning curve because it does so much. Most teams only use a few screens daily: the inbox, the pipeline, the calendar and contacts. A clean setup with clear stages and named workflows makes it easy for staff, which is why many businesses hire a specialist for the initial build." },
       { q: "Can GoHighLevel replace ClickFunnels?", a: "For lead generation funnels, yes, and it adds SMS, calendars and a CRM. For complex info product funnels with many upsells, ClickFunnels is still more polished. Our ClickFunnels alternatives comparison covers when each one fits." },
     ],
-    related: ["/glossary/gohighlevel-snapshot", "/blog/gohighlevel-review", "/gohighlevel-agency", "/hire-gohighlevel-expert", "/gohighlevel-white-label", "/compare/gohighlevel-alternatives", "/glossary/crm-pipeline", "/glossary"],
+    related: ["/glossary/gohighlevel-snapshot", "/blog/gohighlevel-review", "/gohighlevel-agency", "/gohighlevel-expert", "/gohighlevel-white-label", "/compare/gohighlevel-alternatives", "/glossary/crm-pipeline", "/glossary"],
     parent: GLOSSARY,
     updated: U,
   },

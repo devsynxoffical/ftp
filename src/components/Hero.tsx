@@ -112,15 +112,16 @@ export default function Hero() {
 
       <div className="box">
         <h1 className="h1 d">
-          We build funnels that print{" "}
+          AI receptionists and automation that book{" "}
           <span className="type" id="type" ref={typeRef}>
-            booked calls.
+            more jobs.
           </span>
         </h1>
 
         <p className="lead hl" id="hlead" ref={leadRef}>
-          Define the offer, connect your traffic, and let the funnel, the follow-up
-          and the AI agent do the work while you focus on closing.
+          AI receptionists, AI appointment setters and GoHighLevel automation for
+          local service businesses. Every call answered, every lead followed up in
+          60 seconds, every job booked into your calendar.
         </p>
 
         <div
@@ -128,7 +129,7 @@ export default function Hero() {
           style={{ "--rd": ".3s" } as React.CSSProperties}
         >
           <a className="btn grad" href="/book-a-call">
-            Build my funnel <i>&#8599;</i>
+            Book a free call <i>&#8599;</i>
           </a>
           <Link className="tag" href="/case-studies">
             <i>&#9679;</i> Backed by <b>275+</b> case studies{" "}

@@ -48,6 +48,8 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // 2026-11-20 (SEO Recovery Plan): the GoHighLevel expert page moved to the plan's target URL.
+      { source: "/hire-gohighlevel-expert", destination: "/gohighlevel-expert", permanent: true },
       // 2026-11-05: corrected cost-per-lead figures changed these case slugs.
       // 2026-11-16: headline figures corrected to the dashboard shown in each video.
       { source: "/case-studies/shopify-store-301k-in-sales-at-4-7x-roas", destination: "/case-studies/shopify-store-279k-in-21-days-at-4-7x-roas", permanent: true },
