@@ -322,7 +322,7 @@ export default function FooterClient({
         </div>
         <div className="fmeta">
           <span>Available for select projects</span>
-          <span>Based in Dubai &amp; global</span>
+          <span>Based in the US &amp; global</span>
           <button type="button" id="ftop" onClick={scrollToTop}>
             Back to top &uarr;
           </button>
