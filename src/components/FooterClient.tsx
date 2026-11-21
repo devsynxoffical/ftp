@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { submitLead } from "@/lib/submitLead";
 import { track } from "@/lib/track";
+import PreferredSourceButton from "@/components/PreferredSourceButton";
 
 export interface FooterLink {
   href: string;
@@ -317,6 +318,7 @@ export default function FooterClient({
           <a className="femail" href="mailto:info@funnelsthatprint.com">
             info@funnelsthatprint.com
           </a>
+          <PreferredSourceButton className="gps-foot" />
         </div>
         <div className="fmeta">
           <span>Available for select projects</span>
