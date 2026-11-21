@@ -1,7 +1,7 @@
-:HL["/_next/static/chunks/21s8vd3b3cazr.css","style"]
+:HL["/_next/static/chunks/1w3qh176qjkn9.css","style"]
 :HL["/_next/static/chunks/19rhlcx2srev9.css","style"]
 :HL["/img/lg/DU72JoXkW4r.webp","image"]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"saas-65k-revenue-on-20k-ad-spend","s":["all"]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"case-studies","h":131136,"c":"$Q2"}]]
-0:{"b":"_t-y9Pl6m-ON9I0Gi1dJQ","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+0:{"b":"ggBN6L_rHjIdqP4zz0LYD","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
