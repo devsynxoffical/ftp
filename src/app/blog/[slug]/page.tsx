@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { ORG_PUBLISHER } from "@/data/schemaOrg";
 import Link from "next/link";
 import Image from "next/image";
+import PreferredSourceButton from "@/components/PreferredSourceButton";
 import type { Metadata } from "next";
 import {
   getBlogPostBySlug,
@@ -324,6 +325,15 @@ export default async function BlogPostPage({ params }: PageProps) {
                   </div>
                 </section>
               )}
+
+              {/* Google preferred source */}
+              <aside className="gps-card" aria-label="Follow us on Google">
+                <p>
+                  <b>Found this useful?</b> Add Funnels That Print as a preferred source on Google to see more of our
+                  guides in your search results.
+                </p>
+                <PreferredSourceButton />
+              </aside>
 
               {/* Author Bio Box */}
               <div className="post-author-box">
