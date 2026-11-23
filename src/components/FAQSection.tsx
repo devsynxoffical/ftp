@@ -11,70 +11,34 @@ interface FAQItem {
 
 const FAQS_DATA: FAQItem[] = [
   {
-    q: "What does Funnels That Print build?",
-    a: "We build conversion-focused funnels and the supporting systems around them, including landing pages, high-ticket funnels, VSLs, low-ticket funnels, bridge funnels, application flows, automations, CRM workflows and AI calling.",
+    q: "What does an AI automation agency do?",
+    a: "It builds systems that answer, qualify and book your leads without manual work: AI receptionists, AI appointment setters, CRM pipelines and follow-up sequences.",
     cat: "build",
-    tags: ["Funnels", "Pages", "Automation"],
+    tags: ["AI receptionist", "AI setter", "CRM"],
   },
   {
-    q: "Can you build the funnel from scratch?",
-    a: "Yes. We can handle the strategy, structure, copy, design, development, integrations and automation required for the build.",
-    cat: "build",
-    tags: ["Strategy", "Copy", "Build"],
-  },
-  {
-    q: "Can you work with my existing funnel?",
-    a: "Yes. If you already have a funnel, we can improve, rebuild or connect it to the systems you need.",
-    cat: "build",
-    tags: ["Audit", "Rebuild", "Integrations"],
-  },
-  {
-    q: "Do you build low-ticket funnels?",
-    a: "Yes. We can build the complete customer journey, including sales pages, checkout, upsells, downsells and follow-up sequences.",
-    cat: "build",
-    tags: ["Checkout", "Upsell", "Follow-up"],
-  },
-  {
-    q: "What is a bridge funnel?",
-    a: "A bridge funnel prepares a prospect before they reach the main offer. It is particularly useful when you are sending cold traffic toward an offer that requires additional education or trust.",
-    cat: "build",
-    tags: ["Cold traffic", "Pre-frame"],
-  },
-  {
-    q: "What does the AI Calling Agent do?",
-    a: "It can engage leads automatically, have an initial conversation, ask qualifying questions, handle common questions and help move suitable prospects toward booking an appointment.",
-    cat: "auto",
-    tags: ["AI calling", "Qualification"],
-  },
-  {
-    q: "Can you set up my automations?",
-    a: "Yes. We can build workflows for lead nurturing, email, SMS, appointment reminders, no-shows, reactivation, CRM movement and other parts of your sales process.",
-    cat: "auto",
-    tags: ["Email", "SMS", "CRM"],
-  },
-  {
-    q: "Do you integrate with CRMs?",
-    a: "Yes. We can connect the funnel with your CRM, calendar, communication tools, tracking and other required platforms.",
-    cat: "auto",
-    tags: ["CRM", "Calendar", "Tracking"],
-  },
-  {
-    q: "Do I need paid advertising?",
-    a: "No. Your funnel can work with paid traffic, organic traffic, email, referrals or other acquisition channels.",
+    q: "How much does an AI receptionist and funnel build cost?",
+    a: "Our builds start at $999. The complete suite with CRM, AI receptionist and automations is $1,999. Platform usage such as call minutes is paid to the platform.",
     cat: "work",
-    tags: ["Traffic", "Organic", "Paid"],
+    tags: ["From $999", "$1,999 suite"],
   },
   {
-    q: "How long does a funnel take to build?",
-    a: "Most projects take approximately 5 to 10 business days, depending on the scope, number of pages, integrations and automation requirements.",
+    q: "How long does a build take?",
+    a: "Most builds are live in 5 to 10 days.",
     cat: "work",
     tags: ["5 to 10 days", "Scope"],
   },
   {
-    q: "Do you guarantee results?",
-    a: "A funnel's performance depends on several factors, including the offer, market, traffic, sales process and execution. What we guarantee is a high-converting, professional build built around direct response best practices.",
+    q: "Do you use GoHighLevel?",
+    a: "Yes. Most of our builds run on GoHighLevel, connected to your calendar, phone and ad accounts.",
+    cat: "auto",
+    tags: ["GoHighLevel", "Calendar", "Ads"],
+  },
+  {
+    q: "What results have clients seen?",
+    a: "Published examples include 387 MVA appointments at $19.62 each and 174 coaching appointments on $2,214 in ad spend. See 275+ documented results on the site.",
     cat: "work",
-    tags: ["Performance", "Honesty"],
+    tags: ["Case studies", "Proof"],
   },
 ];
 
