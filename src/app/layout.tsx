@@ -16,11 +16,11 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Funnels That Print | AI Receptionist & Automation Agency",
+    default: "AI Receptionist and Automation Agency | Funnels That Print",
     template: "%s | Funnels That Print",
   },
   description:
-    "AI receptionist, AI appointment setter and GoHighLevel automation for local service businesses: answer every call, follow up in 60 seconds, book more jobs.",
+    "AI receptionists, AI appointment setters and GoHighLevel funnels that book calls for you. 275+ documented results, built in 5 to 10 days, from $999.",
   keywords: [
     "AI receptionist",
     "AI appointment setter",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Sales Funnel Agency: AI Funnels, CRM Automation & AI Calling",
+    title: "AI Receptionist and Automation Agency | Funnels That Print",
     description:
-      "High-converting sales funnels, GoHighLevel CRM automation and 24/7 AI calling agents that turn ad traffic into booked sales calls. 275+ verified client results.",
+      "AI receptionists, AI appointment setters and GoHighLevel funnels that book calls for you. 275+ documented results, built in 5 to 10 days, from $999.",
     url: BASE_URL,
     siteName: "Funnels That Print",
     locale: "en_US",
@@ -68,9 +68,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Sales Funnel Agency: AI Funnels, CRM Automation & AI Calling",
+    title: "AI Receptionist and Automation Agency | Funnels That Print",
     description:
-      "High-converting sales funnels, CRM automation and AI calling agents that turn ad traffic into booked calls.",
+      "AI receptionists, AI appointment setters and GoHighLevel funnels that book calls for you. 275+ documented results, built in 5 to 10 days, from $999.",
     images: ["/img/og/funnels-that-print-og.jpg"],
     creator: "@funnelsthatprint",
   },

@@ -10,90 +10,42 @@ export const HOME_FAQ_SCHEMA = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What does Funnels That Print build?",
+      name: "What does an AI automation agency do?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We build conversion-focused funnels and the supporting systems around them, including landing pages, high-ticket funnels, VSLs, low-ticket funnels, bridge funnels, application flows, automations, CRM workflows and AI calling.",
+        text: "It builds systems that answer, qualify and book your leads without manual work: AI receptionists, AI appointment setters, CRM pipelines and follow-up sequences.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you build the funnel from scratch?",
+      name: "How much does an AI receptionist and funnel build cost?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We can handle the strategy, structure, copy, design, development, integrations and automation required for the build.",
+        text: "Our builds start at $999. The complete suite with CRM, AI receptionist and automations is $1,999. Platform usage such as call minutes is paid to the platform.",
       },
     },
     {
       "@type": "Question",
-      name: "Can you work with my existing funnel?",
+      name: "How long does a build take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. If you already have a funnel, we can improve, rebuild or connect it to the systems you need.",
+        text: "Most builds are live in 5 to 10 days.",
       },
     },
     {
       "@type": "Question",
-      name: "Do you build low-ticket funnels?",
+      name: "Do you use GoHighLevel?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. We can build the complete customer journey, including sales pages, checkout, upsells, downsells and follow-up sequences.",
+        text: "Yes. Most of our builds run on GoHighLevel, connected to your calendar, phone and ad accounts.",
       },
     },
     {
       "@type": "Question",
-      name: "What is a bridge funnel?",
+      name: "What results have clients seen?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "A bridge funnel prepares a prospect before they reach the main offer. It is particularly useful when you are sending cold traffic toward an offer that requires additional education or trust.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What does the AI Calling Agent do?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "It can engage leads automatically, have an initial conversation, ask qualifying questions, handle common questions and help move suitable prospects toward booking an appointment.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you set up my automations?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We can build workflows for lead nurturing, email, SMS, appointment reminders, no-shows, reactivation, CRM movement and other parts of your sales process.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you integrate with CRMs?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes. We can connect the funnel with your CRM, calendar, communication tools, tracking and other required platforms.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do I need paid advertising?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "No. Your funnel can work with paid traffic, organic traffic, email, referrals or other acquisition channels.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How long does a funnel take to build?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Most projects take approximately 5 to 10 business days, depending on the scope, number of pages, integrations and automation requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you guarantee results?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "A funnel's performance depends on several factors, including the offer, market, traffic, sales process and execution. What we guarantee is a high-converting, professional build built around direct response best practices.",
+        text: "Published examples include 387 MVA appointments at $19.62 each and 174 coaching appointments on $2,214 in ad spend. See 275+ documented results on the site.",
       },
     },
   ],
