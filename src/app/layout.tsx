@@ -231,7 +231,7 @@ const jsonLd = {
     {
       "@type": "ProfessionalService",
       "@id": `${BASE_URL}/#service`,
-      name: "Funnels That Print — Acquisition & Automation Agency",
+      name: "Funnels That Print: Acquisition & Automation Agency",
       url: BASE_URL,
       image: `${BASE_URL}/img/og/funnels-that-print-og.jpg`,
       priceRange: "$$$",

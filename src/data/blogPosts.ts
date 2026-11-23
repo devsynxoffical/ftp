@@ -511,7 +511,7 @@ export const BLOG_POSTS: BlogPost[] = [
     <li><strong>Wire tracking per step.</strong> Fire an event on each question, on results-page view, on video play and on booking, and send booked calls back to the ad platform as a conversion.</li>
     <li><strong>Launch, then read the drop-off.</strong> After the first few hundred visitors, fix the step with the biggest loss first: a question that stalls people, a results page where nobody presses play, or a calendar with too few slots.</li>
   </ol>
-  <p>Before you build, model what each improvement is worth with the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a>. A small lift in quiz completion or booking rate often matters more than a large lift in video watch time, and the calculator shows which step to prioritize for your traffic and close rate.</p>
+  <p>Before you build, model what each improvement is worth with the <a href="/tools/funnel-conversion-calculator">sales funnel calculator</a>. A small lift in quiz completion or booking rate often matters more than a large lift in video watch time, and the calculator shows which step to prioritize for your traffic and close rate.</p>
 </section>
 `
   },
@@ -1000,7 +1000,7 @@ export const BLOG_POSTS: BlogPost[] = [
   <h2>1. What a Self-Liquidating Offer Funnel Is (and Is Not)</h2>
   <p>A <strong>self-liquidating offer (SLO) funnel</strong> is a low-ticket sales funnel designed so that the money collected from the front-end purchase, its order bump and one or two upsells pays back the ad spend that produced the buyer. The business acquires a paying customer for free or at a small profit, then earns on the backend.</p>
   <p>It is not a lead magnet with a product attached, and it is not a discount funnel. The front-end product has to be something a cold prospect would genuinely pay for in the next five minutes.</p>
-  <p>This article breaks down the structure behind our <a href="/scalelowticket">$847K low-ticket scaling system case study</a>. The full page-by-page walkthrough and screenshots live on that page; here we cover the economics and the decisions that made it work.</p>
+  <p>This article breaks down the structure behind our <a href="/scalelowticket">$847K low-ticket scaling system case study</a>. The full page-by-page walkthrough and screenshots live on that page; here we cover the economics and the decisions that made it work. If your offer is a subscription rather than a one-time product, the same front end feeds a <a href="/blog/membership-funnel">membership funnel</a>, where retention decides the profit.</p>
 </section>
 
 <section id="the-offer">
@@ -2067,7 +2067,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <section id="portal-problem">
   <h2>1. The Problem With Portal Leads</h2>
   <p>Most loan officers start <strong>mortgage lead generation</strong> by buying leads from portals. The borrower fills in one form and receives calls from four lenders within minutes. Many numbers are wrong, many borrowers are months away from applying, and the officer who calls fastest wins whatever is left.</p>
-  <p>The alternative is generating your own leads on Meta with a funnel that qualifies and verifies every borrower. The leads are exclusive, the data stays in your ad account, and the campaign gets better as it learns who actually funds. Every number below comes from our <a href="/case-studies/mortgage-insurance-lead-generation">mortgage and insurance case studies</a>.</p>
+  <p>The alternative is generating your own leads on Meta with a funnel that qualifies and verifies every borrower. The leads are exclusive, the data stays in your ad account, and the campaign gets better as it learns who actually funds. Every number below comes from our <a href="/case-studies/mortgage-insurance-lead-generation">mortgage and insurance case studies</a>. If you are still choosing software, our guide to the <a href="/blog/best-funnel-builder-2026#mortgage-loan">best funnel builder for mortgage and loan lead generation</a> compares the platforms we use for borrower funnels.</p>
 </section>
 
 <section id="results">
