@@ -77,13 +77,13 @@ export const TOOL_PAGES: SeoPage[] = [
     path: "/tools/funnel-conversion-calculator",
     kind: "tool",
     tool: "funnel-conversion",
-    keyword: "funnel conversion calculator",
-    title: "Funnel Conversion Calculator: Visitors to Sales & ROAS",
-    description: "Free funnel conversion calculator. Enter visitors, opt-in, booking, show and close rates to see leads, sales, cost per sale, revenue and ROAS.",
+    keyword: "sales funnel calculator",
+    title: "Sales Funnel Calculator: Conversion Rate, Revenue and ROAS",
+    description: "Free sales funnel calculator: enter visitors, opt-in, booking, show and close rates to see your leads, sales, cost per sale, revenue and ROAS.",
     eyebrow: "Free tool",
-    h1: "Funnel conversion calculator",
+    h1: "Sales funnel calculator: conversion rate, revenue and ROAS",
     intro:
-      "This <strong>funnel conversion calculator</strong> follows a visitor all the way to a sale: landing page opt-in, booked call, attended call and closed deal. Enter your traffic, ad spend and the rate at each step, and it returns leads, sales, cost per lead, cost per attended call, cost per sale, revenue and ROAS so you can see which stage is costing you the most.",
+      "This <strong>sales funnel calculator</strong>, also called a funnel conversion calculator, follows a visitor all the way to a sale: landing page opt-in, booked call, attended call and closed deal. Enter your traffic, ad spend and the rate at each step, and it returns leads, sales, cost per lead, cost per attended call, cost per sale, revenue and ROAS so you can see which stage is costing you the most.",
     quick: {
       q: "How do you calculate funnel conversion rate?",
       a: "Multiply the rate at each stage. Leads equal visitors times opt-in rate, booked calls equal leads times booking rate, attended calls equal booked times show rate, and sales equal attended times close rate. Visitor-to-sale conversion is sales divided by visitors. With 8%, 30%, 70% and 20%, that is 0.34%.",
@@ -147,7 +147,7 @@ export const TOOL_PAGES: SeoPage[] = [
     ],
     related: ["/tools", "/tools/roas-calculator", "/tools/no-show-cost-calculator", "/glossary/sales-funnel", "/templates/funnel-kpi-dashboard", "/blog/how-to-increase-funnel-conversion-rate", "/sales-funnel-audit"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-23",
   },
   {
     path: "/tools/cost-per-lead-calculator",

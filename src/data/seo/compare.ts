@@ -349,7 +349,7 @@ export const COMPARE_PAGES: SeoPage[] = [
     kind: "compare",
     keyword: "funnel agency vs freelancer",
     title: "Funnel Agency vs Freelancer: Cost, Risk and Who to Hire",
-    description: "Funnel agency vs freelancer compared on cost, speed, accountability and quality, with an honest look at when a freelancer is the better hire.",
+    description: "Funnel agency vs freelancer: what a sales funnel freelancer costs, when one beats an agency, the questions to ask and how to choose the right hire.",
     eyebrow: "Compare",
     h1: "Funnel agency vs freelancer: who should build your funnel?",
     intro:
@@ -359,6 +359,15 @@ export const COMPARE_PAGES: SeoPage[] = [
       a: "Hire a freelancer when the job is narrow and you can manage it yourself: one landing page, a design refresh or a single workflow. Hire an agency when results depend on several skills working together, such as copy, build, CRM automation, AI follow-up and tracking, and you want one team accountable for the outcome.",
     },
     sections: [
+      {
+        h2: "Hiring a sales funnel freelancer: what to expect",
+        html: `<p>A <strong>sales funnel freelancer</strong> is one specialist, usually a designer, copywriter or GoHighLevel builder, who builds part or all of a funnel for a fee per page or per hour. Hire one when the job is narrow and you can brief, review and connect the pieces yourself. If the result depends on copy, build, follow-up automation and tracking working together, a single freelancer rarely covers all of it.</p>
+<ul>
+<li><strong>Check the scope:</strong> ask exactly which parts they build: page, copy, CRM, automation, tracking.</li>
+<li><strong>Check ownership:</strong> pages, domain, CRM and ad account should be in your name from day one.</li>
+<li><strong>Check proof:</strong> ask for live funnels with numbers, not only screenshots of designs.</li>
+</ul>`,
+      },
       {
         h2: "The verdict",
         html: `<p>For a single, well-defined deliverable, a strong freelancer usually gives better value than an agency. For a full <a href="/glossary/sales-funnel">sales funnel</a> where the result depends on the page, the offer, the follow-up and the tracking, an agency reduces the risk of gaps between specialists. The worst outcome is hiring three freelancers who each do their part well while leads still go cold between the form and the call.</p>`,
@@ -401,7 +410,7 @@ export const COMPARE_PAGES: SeoPage[] = [
       more: { label: "Browse 275+ results", href: "/case-studies" },
     },
     faqs: [
-      { q: "How much does a funnel freelancer cost compared to an agency?", a: "Freelancer rates vary widely with experience and location, from budget template work to senior specialists who charge agency-level fees. Our agency builds are one-time fees of $999, $1,499 or $1,999 depending on scope. Compare the total cost of hiring every skill you need, not just the price of one page." },
+      { q: "How much does a sales funnel freelancer cost compared to an agency?", a: "Freelancer rates vary widely with experience and location, from budget template work to senior specialists who charge agency-level fees. Our agency builds are one-time fees of $999, $1,499 or $1,999 depending on scope. Compare the total cost of hiring every skill you need, not just the price of one page." },
       { q: "Are agencies just reselling freelancers?", a: "Some are, and it is worth asking. Ask who will write the copy, who builds the automations and who answers when something breaks. A good agency can name the people, show work they did themselves and explain how the pieces are tested together before launch. We use freelancers only for narrow tasks such as specialist video editing." },
       { q: "What should I ask before hiring either?", a: "Ask for case studies with real numbers in your industry, who owns the pages and accounts, how long the build takes, what happens after launch and how success is measured. Be wary of anyone who promises results without seeing your offer, or who measures success by pages delivered rather than cost per booked call or sale." },
       { q: "Can I start with a freelancer and switch to an agency later?", a: "Yes, and many businesses do. The main risk is ownership: make sure pages, domains, CRM data and ad accounts are in your name from day one, so switching does not mean rebuilding from scratch. An agency taking over usually begins with an audit of what already works before changing anything." },
@@ -409,7 +418,7 @@ export const COMPARE_PAGES: SeoPage[] = [
     ],
     related: ["/sales-funnel-agency", "/services", "/blog/how-much-does-a-sales-funnel-cost", "/tools/funnel-conversion-calculator", "/case-studies", "/compare", "/funnels-for/marketing-agencies", "/sales-funnel-audit"],
     parent: HUB,
-    updated: U,
+    updated: "2026-11-23",
   },
   {
     path: "/compare/vsl-funnel-vs-webinar-funnel",

@@ -250,7 +250,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
     contentHtml: `
 <section id="measure-first">
   <h2>1. Measure Every Stage Before You Change Anything</h2>
-  <p>If you want to know <strong>how to increase funnel conversion rate</strong>, start by refusing to touch the page until you can see where people leave. "Our funnel converts at 2%" is not a diagnosis. A funnel is a chain of separate conversions, and each one has its own rate and its own fix.</p>
+  <p>If you want to know <strong>how to increase funnel conversion rate</strong>, start by refusing to touch the page until you can see where people leave. "Our funnel converts at 2%" is not a diagnosis. A funnel is a chain of separate conversions, and each one has its own rate and its own fix. If you need outside help with the fixes, read <a href="/compare/funnel-agency-vs-freelancer">sales funnel freelancer vs agency</a> first.</p>
   <p>For a typical lead-generation funnel, track these steps separately:</p>
   <ol>
     <li>Ad click to landing page view (lost here: slow pages, broken links, message mismatch)</li>
@@ -267,7 +267,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
 
 <section id="find-the-leak">
   <h2>2. Funnel Not Converting? Find the Leak Stage by Stage</h2>
-  <p>When a funnel is not converting, the cause is almost never "the funnel" as a whole. It is one stage, and the symptom tells you which. Put each stage's rate into the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> and look for the step with the biggest drop measured in money, not percentage. A 50% to 55% improvement on the booking step is often worth more than a 2% to 3% improvement on the landing page, because every booked call is worth far more than a page view.</p>
+  <p>When a funnel is not converting, the cause is almost never "the funnel" as a whole. It is one stage, and the symptom tells you which. Put each stage's rate into the <a href="/tools/funnel-conversion-calculator">sales funnel calculator</a> and look for the step with the biggest drop measured in money, not percentage. A 50% to 55% improvement on the booking step is often worth more than a 2% to 3% improvement on the landing page, because every booked call is worth far more than a page view.</p>
   <div class="table-wrap">
     <table class="data-table">
       <thead><tr><th>Symptom</th><th>Likely leak</th><th>First fix to try</th></tr></thead>
@@ -795,7 +795,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
 <section id="what-they-are">
   <h2>1. What Sales Funnel Stages Are</h2>
   <p><strong>Sales funnel stages</strong> are the steps a buyer moves through between first hearing about you and paying you, then paying you again. Naming the stages matters because each one has a different job, needs different assets and fails for different reasons. "Our funnel is not converting" is a feeling. "Forty percent of booked calls are no-shows" is a stage-level problem with a known fix.</p>
-  <p>The classic model is AIDA: attention, interest, desire, action. It is useful for writing ads, but too compressed for running a business, because it stops at the sale and hides the steps where most money is lost. We use six stages, and every one maps to something you can build, automate and measure. If you are new to the concept, our <a href="/glossary/sales-funnel">sales funnel glossary entry</a> covers the definition and the main funnel types.</p>
+  <p>The classic model is AIDA: attention, interest, desire, action. It is useful for writing ads, but too compressed for running a business, because it stops at the sale and hides the steps where most money is lost. We use six stages, and every one maps to something you can build, automate and measure. If you are new to the concept, our <a href="/glossary/sales-funnel">sales funnel glossary entry</a> covers the definition and the main funnel types. If you plan to outsource the build, compare hiring a <a href="/compare/funnel-agency-vs-freelancer">sales funnel freelancer or an agency</a> before you start.</p>
 </section>
 
 <section id="overview">
@@ -831,7 +831,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
 <section id="purchase-retention">
   <h2>5. Stages 5 and 6: Purchase and Retention</h2>
   <p><strong>Purchase</strong> is the sales call that closes, or the checkout that completes. Assets: a consistent sales script, a clear offer with a guarantee, a one-page checkout, and for product funnels an <a href="/glossary/order-bump">order bump</a> and a post-purchase <a href="/glossary/upsell-and-downsell">upsell and downsell</a>. Track close rate for calls, checkout conversion for products and average order value for both. Raising order value at this stage is what lets you pay more for traffic at stage 1.</p>
-  <p><strong>Retention</strong> is everything after the first payment: onboarding, delivery, repeat purchases, upgrades and referrals. Most funnel diagrams stop before this stage, which is why so many businesses rebuy their own customers through ads. Assets: onboarding emails, check-in calls, review requests, referral offers and reactivation campaigns. Track repeat purchase rate, referral rate and lifetime value. A customer who refers one other customer has halved their own acquisition cost.</p>
+  <p><strong>Retention</strong> is everything after the first payment: onboarding, delivery, repeat purchases, upgrades and referrals. Most funnel diagrams stop before this stage, which is why so many businesses rebuy their own customers through ads. Assets: onboarding emails, check-in calls, review requests, referral offers and reactivation campaigns. Track repeat purchase rate, referral rate and lifetime value. A customer who refers one other customer has halved their own acquisition cost. If you sell a subscription, retention is the whole business model; our <a href="/blog/membership-funnel">membership funnel guide</a> shows the math.</p>
 </section>
 
 <section id="crm-mapping">
@@ -880,7 +880,7 @@ export const PLAN_POSTS_B: BlogPost[] = [
 
 <section id="measure">
   <h2>9. Measuring Every Stage on One Dashboard</h2>
-  <p>Put one primary KPI per stage, plus cost per stage, on a single weekly dashboard split by traffic source. Our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a> has the layout, and the <a href="/tools/funnel-conversion-calculator">funnel conversion calculator</a> shows how a change at one stage flows through to revenue.</p>
+  <p>Put one primary KPI per stage, plus cost per stage, on a single weekly dashboard split by traffic source. Our <a href="/templates/funnel-kpi-dashboard">funnel KPI dashboard template</a> has the layout, and the <a href="/tools/funnel-conversion-calculator">sales funnel calculator</a> shows how a change at one stage flows through to revenue.</p>
   <p>Three rules keep the dashboard honest. Pull stage counts from the CRM, not from memory. Compare each stage with its own history, not with a generic benchmark. And judge every change by the stage after it: a landing page that lifts opt-ins but lowers booked calls has made the funnel worse. When you know which stage is leaking, our guide on <a href="/blog/how-to-increase-funnel-conversion-rate">how to increase funnel conversion rate</a> lists the fixes in priority order.</p>
   <p>We build the full stack, from pages to pipeline to reporting, in 5 to 10 business days. <a href="/book-a-call">Book a strategy call</a> and we will map your current funnel against these six stages.</p>
 </section>

@@ -131,11 +131,12 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     set: "lg",
     niches: ["MedSpa"],
     label: "Med Spa",
-    hubTitle: "Med Spa Marketing Case Studies",
-    hubMetaTitle: "Med Spa Marketing & Lead Generation Case Studies",
+    hubTitle: "Med Spa Lead Generation Case Studies",
+    hubMetaTitle: "Med Spa Lead Generation Case Studies and Results",
     hubDescription:
-      "Med spa and aesthetics marketing results: leads, booked consultations, cost per lead and ad spend for injectables, laser and body treatment offers.",
+      "Med spa lead generation results: leads, booked consultations, cost per lead and ad spend for injectables, laser, skin and body treatment offers.",
     intro: [
+      "Med spa lead generation works best with a short treatment quiz, proof-led ads and instant booking, because patients usually book with the clinic that responds first. In the campaigns below, one clinic generated 1,011 leads on $4,703 of ad spend, about $4.65 per lead, and another reached $639,000 in revenue from 178 clients.",
       "Med spas and aesthetic clinics compete on trust and convenience. The patient is choosing who will treat their face or body, and usually books with whoever responds first and looks most credible.",
       "The cases below show lead and booking results for injectables, laser, skin and body treatments, built on treatment-matcher funnels with before-and-after proof and automated booking and reminders.",
     ],
@@ -146,10 +147,12 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
       { title: "Review and rebook flows", body: "Post-treatment review requests and rebooking reminders to lift lifetime value." },
     ],
     quick: {
-      q: "What results do med spa marketing funnels produce?",
+      q: "What results does med spa lead generation produce?",
       a: "Documented med spa campaigns include 1,011 leads on $4,703 of ad spend, $11,700 in revenue from 45 leads on $590 (a 19.8x return), $74,100 from 303 clients on $10K of spend, and $639,000 in revenue from 178 clients. One campaign reached a $0.50 cost per lead. Treatment and offer drive the spread.",
     },
     faqs: [
+      { q: "What is a good cost per lead for med spa lead generation?", a: "It depends on the treatment, the offer and the market. In our documented campaigns, one med spa generated 1,011 leads on $4,703 of ad spend, about $4.65 per lead, and another campaign reached $0.50 per lead. Higher-value treatments usually cost more per lead and are still worth it, so judge campaigns on cost per booked and attended consultation, not cost per lead alone." },
+      { q: "Is it better to buy med spa leads or generate your own?", a: "Bought or shared leads are often sent to several clinics at once, so the fastest caller wins and the rest pay for nothing. Leads from your own ads and funnel are exclusive, arrive with the patient's concern and timing, and can book straight into your calendar. That is why we build med spa lead generation inside the clinic's own ad account and CRM." },
       { q: "Which med spa treatments do these campaigns cover?", a: "Injectables, laser hair removal, skin treatments and body contouring offers. Each case lists the niche, offer and result, so you can compare campaigns for treatments similar to yours. The funnel structure stays the same across treatments, while the quiz questions, before-and-after proof and booking offer change for each service line." },
       { q: "How do you keep consultation no-shows down?", a: "With a confirmation step at booking and a multi-touch SMS and email reminder sequence tied to the appointment. Three-channel reminders have lifted show-up rates as high as 88% in our deployments. Missed consultations trigger an automatic rebook message, so a no-show becomes a rescheduled visit instead of a lost lead." },
       { q: "Do you build the booking system?", a: "Yes. The funnel, calendar, reminders and follow-up are built and connected to the clinic's CRM. Leads can book directly from the treatment matcher, and the front desk sees each patient's concern, area and timing before the consultation, which makes the first conversation faster and more personal." },
