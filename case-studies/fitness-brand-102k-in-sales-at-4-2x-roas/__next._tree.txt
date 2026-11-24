@@ -4,4 +4,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"fitness-brand-102k-in-sales-at-4-2x-roas","s":["all"]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"case-studies","h":131136,"c":"$Q2"}]]
-0:{"b":"ZZAP94GhWea_xD2oyIIhZ","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+0:{"b":"LT0R1KQFxQ38VOaKhbxp6","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
