@@ -4,4 +4,4 @@
  * entity facts everywhere.
  */
 export const BRAND_DESCRIPTION =
-  "Funnels That Print is a Dubai-based sales funnel agency founded in 2019 by Gaurav and Rahul Kapoor. We build done-for-you sales funnels, GoHighLevel CRM automation, AI voice agents and Meta Conversions API tracking for businesses that sell through booked calls or checkouts, and we publish every client result with its original proof.";
+  "Funnels That Print is an AI automation agency founded in 2019 by Gaurav and Rahul Kapoor. We build AI receptionists, AI appointment setters, GoHighLevel CRM automation and booking funnels for service businesses that sell through booked calls, and we publish every client result with its original proof.";
