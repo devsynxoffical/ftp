@@ -189,7 +189,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       },
       {
         h2: "Follow-up that respects urgency",
-        html: `<p>A broken AC in a heat wave is a race. Our <a href="/speed-to-lead">speed-to-lead automation</a> calls emergency leads within seconds and alerts dispatch by text. Tune-up leads that do not self-book get an <a href="/ai-voice-agents">AI voice agent</a> call to fill open slots, which is how a maintenance offer can generate thousands of appointments. Replacement leads enter a longer nurture with financing, rebate and review content, because those decisions take weeks.</p>`,
+        html: `<p>A broken AC in a heat wave is a race. Our <a href="/speed-to-lead">speed-to-lead automation</a> calls emergency leads within seconds and alerts dispatch by text. Tune-up leads that do not self-book get an <a href="/ai-voice-agents">AI voice agent</a> call to fill open slots, which is how a maintenance offer can generate thousands of appointments. Replacement leads enter a longer nurture with financing, rebate and review content, because those decisions take weeks. Calls that come in while the team is on a job go to an <a href="/ai-receptionist/hvac">AI receptionist for HVAC companies</a>, which triages emergencies and books same-day visits.</p>`,
       },
       {
         h2: "What our HVAC campaigns have cost",
@@ -1001,7 +1001,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       },
       {
         h2: "Winning the callback race",
-        html: `<p>Most home service companies lose jobs in the gap between the form and the first call. Our <a href="/speed-to-lead">speed-to-lead automation</a> texts and calls within seconds, and an <a href="/ai-appointment-setter">AI appointment setter</a> books the estimate when the office is busy or closed. A two-week follow-up sequence reaches homeowners who did not answer, and a seasonal reactivation campaign brings old estimates back when demand picks up.</p>`,
+        html: `<p>Most home service companies lose jobs in the gap between the form and the first call. Our <a href="/speed-to-lead">speed-to-lead automation</a> texts and calls within seconds, and an <a href="/ai-appointment-setter">AI appointment setter</a> books the estimate when the office is busy or closed. Inbound phone calls get the same treatment: an <a href="/ai-receptionist/plumbers">AI receptionist for plumbers</a> captures urgent jobs, and an <a href="/ai-receptionist/contractors">AI receptionist for contractors</a> books estimates with the job details. A two-week follow-up sequence reaches homeowners who did not answer, and a seasonal reactivation campaign brings old estimates back when demand picks up.</p>`,
       },
       {
         h2: "Cost per lead and booking data",

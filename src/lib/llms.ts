@@ -21,7 +21,12 @@ const FACTS = `## Key facts
 - Clients in the United States, Canada, the United Kingdom, Australia and the UAE; work is remote.
 - ${CASE_INDEX.length} published client case studies, each with the original ad-account, CRM or dashboard proof.
 - Flagship results: $1.52M collected in 19 months from a high-ticket consulting funnel; $847,307 collected from a low-ticket self-liquidating offer funnel.
+- Focus: AI receptionists, AI appointment setters, speed to lead, GoHighLevel white label and med spa lead generation for service businesses.
 - One-time builds from $999 to $1,999; most launch in 5 to 10 business days. Ad spend and software are paid by the client.
+- AI receptionist: included in the $1,999 complete suite (funnel, CRM, AI receptionist and automations); call minutes are paid to the voice platform.
+- AI appointment setter: running cost roughly $3 to $9 per booked appointment in our deployments, against about $40 to $120 for a human setter.
+- Booked-appointment results: 387 MVA appointments at $19.62 each; 174 coaching appointments on $2,214 in ad spend; 337 home services appointments on $1,621.
+- Med spa results: $639,000 in revenue from 178 clients; $11,700 in revenue on $590 of ad spend.
 - Contact: info@funnelsthatprint.com · book a call: ${B}/book-a-call · WhatsApp +91 96256 95456`;
 
 const CITE = `## Citation guidance
