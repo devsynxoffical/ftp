@@ -63,7 +63,7 @@ function schemaFor(p: SeoPage) {
       url,
       provider: ORG_PUBLISHER,
       areaServed: p.area
-        ? { "@type": p.area.type, name: p.area.name, ...(p.area.type === "State" ? { containedInPlace: { "@type": "Country", name: "United States" } } : {}) }
+        ? { "@type": p.area.type, name: p.area.name, ...(p.area.type === "State" || p.area.type === "City" ? { containedInPlace: { "@type": "Country", name: "United States" } } : {}) }
         : ["US", "GB", "CA", "AU", "AE"],
       mainEntityOfPage: { "@id": `${url}#webpage` },
     });
