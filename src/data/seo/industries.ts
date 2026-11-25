@@ -349,7 +349,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       },
       {
         h2: "Follow-up for a six-month decision",
-        html: `<p>Hot leads get a call within a minute through <a href="/speed-to-lead">speed-to-lead automation</a>, because the first agent to talk to a ready seller usually gets the listing appointment. Everyone else goes into a long nurture built with <a href="/crm-automation">CRM automation</a>: monthly market updates for their area, new listings that match their answers, and a check-in text every few weeks asking whether their timeline has changed. A lead who says "next year" in March is often ready by August.</p>`,
+        html: `<p>Hot leads get a call within a minute through <a href="/speed-to-lead">speed-to-lead automation</a>, because the first agent to talk to a ready seller usually gets the listing appointment. Everyone else goes into a long nurture built with <a href="/crm-automation">CRM automation</a>: monthly market updates for their area, new listings that match their answers, and a check-in text every few weeks asking whether their timeline has changed. A lead who says "next year" in March is often ready by August. Buyers and sellers who phone the office instead of filling in a form can be answered by an <a href="/ai-receptionist/real-estate">AI receptionist for real estate</a>, which qualifies them and books the call with the right agent.</p>`,
       },
       {
         h2: "Cost per lead from our real estate campaigns",
