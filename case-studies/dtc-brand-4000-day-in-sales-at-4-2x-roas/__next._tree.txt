@@ -3,4 +3,4 @@
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":{"n":"slug","t":"d","k":"dtc-brand-4000-day-in-sales-at-4-2x-roas","s":["all"]},"h":65632,"c":"$Q3"}]]
 1:[["children",{"s":"case-studies","h":131136,"c":"$Q2"}]]
-0:{"b":"-cSne4rqmmOCF7NkJ0O8n","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}
+0:{"b":"A--HDHeFTvY9_tnyrTpoZ","t":{"t":{"s":"","h":131088,"c":"$Q1"}}}

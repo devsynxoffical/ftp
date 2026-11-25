@@ -41,6 +41,7 @@ Serves businesses that sell through a booked call or a checkout: home services a
 - [A sales funnel audit that finds where your leads and revenue leak](https://www.funnelsthatprint.com/sales-funnel-audit): Sales funnel audit of your offer, ads, pages, follow-up, show rate, CRM and tracking, with leaks ranked by revenue impact and fixed in the right order.
 - [Lead generation agency that delivers booked calls, not just leads](https://www.funnelsthatprint.com/lead-generation-agency): Lead generation agency for service businesses: Meta ads, funnels, OTP-verified forms and 60-second follow-up, judged on booked calls, not cheap leads.
 - [GoHighLevel white label setup, done for your agency](https://www.funnelsthatprint.com/gohighlevel-white-label): Done-for-you GoHighLevel white label setup: your brand, domain, snapshots and SaaS pricing, ready to sell. Agency results: $15,900 closed in 10 days.
+- [An AI answering service that books the call, not just the message](https://www.funnelsthatprint.com/ai-answering-service): AI answering service that picks up every call 24/7, answers questions and books the appointment instead of taking a message. Built in 5 to 10 days.
 
 ## Hubs
 - [Services](https://www.funnelsthatprint.com/services): every service with pricing and process
