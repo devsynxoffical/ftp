@@ -7,7 +7,6 @@ import { TEMPLATE_PAGES } from "./templates";
 import { GLOSSARY_PAGES } from "./glossary";
 import { LOCATION_PAGES } from "./locations";
 import { AI_NICHE_PAGES } from "./aiNiches";
-import { STATE_PAGES } from "./locations-states";
 import { INDUSTRY_PAGES_2 } from "./industries2";
 import { AI_SERVICE_PAGES } from "./services-ai";
 import { GROWTH_SERVICE_PAGES } from "./services-growth";
@@ -29,7 +28,6 @@ export const SEO_PAGES: SeoPage[] = [
   ...GLOSSARY_PAGES,
   ...LOCATION_PAGES,
   ...AI_NICHE_PAGES,
-  ...STATE_PAGES,
   ...INDUSTRY_PAGES_2,
   ...AI_SERVICE_PAGES,
   ...GROWTH_SERVICE_PAGES,

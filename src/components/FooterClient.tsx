@@ -282,7 +282,7 @@ export default function FooterClient({
           <ul>
             {[
               ["/funnels-for", "Funnels by industry"],
-              ["/locations", "Locations"],
+              ["/ai-answering-service", "AI answering service"],
               ["/case-studies", "Case studies"],
               ["/tools", "Free calculators"],
               ["/templates", "Free templates"],

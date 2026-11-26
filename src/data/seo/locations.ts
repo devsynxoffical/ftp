@@ -76,7 +76,7 @@ export const LOCATION_PAGES: SeoPage[] = [
       { q: "Is AI calling allowed in the UAE?", a: "AI calling is a tool, and the same rules apply as to any call: consent, data protection under the PDPL, approved calling hours and respect for the Do Not Call Registry. We disclose that the caller is an AI assistant and keep a human handover. Check the current regulations with your legal adviser before launch." },
       { q: "Do you work with businesses outside the UAE?", a: "Yes. Most of our clients are in the US, and we also work with businesses in Canada, the UK, Australia and the wider GCC. The funnel, follow-up and tracking system is the same everywhere; what we adapt is the channel mix, language, calling hours and the consent wording for each market." },
     ],
-    related: ["/ai-voice-agent-dubai", "/funnels-for/real-estate", "/case-studies/real-estate-lead-generation", "/speed-to-lead", "/case-studies/agency-saas-lead-generation", "/tools/cost-per-lead-calculator", "/locations", "/lead-generation-agency"],
+    related: ["/ai-voice-agent-dubai", "/funnels-for/real-estate", "/case-studies/real-estate-lead-generation", "/speed-to-lead", "/case-studies/agency-saas-lead-generation", "/tools/cost-per-lead-calculator", "/ai-answering-service", "/lead-generation-agency"],
     parent: HUB,
     updated: U,
   },
