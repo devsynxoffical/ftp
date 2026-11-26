@@ -122,7 +122,7 @@ export const AI_RECEPTIONIST_PAGES: SeoPage[] = [
     keyword: "ai receptionist for plumbers",
     serviceType: "AI receptionist for plumbing companies",
     title: "AI Receptionist for Plumbers: Never Miss an Emergency Call",
-    description: "An AI receptionist for plumbers that answers every call 24/7, triages burst pipes and backups, books service calls and texts back missed callers in seconds.",
+    description: "AI receptionist for plumbers that answers every call 24/7, triages burst pipes and backups, books service calls and texts back missed callers in seconds.",
     eyebrow: "AI receptionist for plumbers",
     h1: "AI receptionist for plumbers that answers while you are under the sink",
     intro:

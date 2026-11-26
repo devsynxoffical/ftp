@@ -25,17 +25,26 @@ const OG = `${BASE_URL}/img/og/funnels-that-print-og.jpg`;
  * which the previous `new Date()` on all entries effectively was.
  */
 const PAGE_LASTMOD: Record<string, string> = {
-  "": "2026-11-05",
-  "/case-studies": "2026-11-05",
-  "/case-leadgen": "2026-11-05",
-  "/case-ecom": "2026-11-05",
-  "/milliondollarcasestudy": "2026-11-05",
-  "/scalelowticket": "2026-11-05",
-  "/blog": "2026-11-05",
-  "/contact": "2026-11-06",
+  "": "2026-11-23",
+  "/case-studies": "2026-11-20",
+  "/case-leadgen": "2026-11-20",
+  "/case-ecom": "2026-11-20",
+  "/milliondollarcasestudy": "2026-11-16",
+  "/scalelowticket": "2026-11-10",
+  "/blog": "2026-11-23",
+  "/contact": "2026-11-19",
   "/book-a-call": "2026-11-06",
-  "/about": "2026-11-07",
+  "/about": "2026-11-24",
 };
+
+/**
+ * Case study hubs and case pages: last content change (meta-only edits do not
+ * count). 2026-11-20 added 10 cases to the shared case data (PR 57); the med
+ * spa hub got new copy and FAQs on 2026-11-23.
+ */
+const HUB_LASTMOD: Record<string, string> = { "med-spa-marketing": "2026-11-23" };
+const CASE_DEFAULT_LASTMOD = "2026-11-20";
+const HUB_DEFAULT_LASTMOD = "2026-11-20";
 
 export function allSitemapEntries(): MetadataRoute.Sitemap {
   const staticEntries: MetadataRoute.Sitemap = [
@@ -66,12 +75,12 @@ export function allSitemapEntries(): MetadataRoute.Sitemap {
   }));
 
   const allCasesEntry: MetadataRoute.Sitemap = [
-    { url: `${BASE_URL}/case-studies/all`, lastModified: new Date("2026-11-05"), changeFrequency: "weekly" as const, priority: 0.7 },
+    { url: `${BASE_URL}/case-studies/all`, lastModified: new Date(HUB_DEFAULT_LASTMOD), changeFrequency: "weekly" as const, priority: 0.7 },
   ];
 
   const industryEntries: MetadataRoute.Sitemap = CASE_INDUSTRIES.map((i) => ({
     url: `${BASE_URL}/case-studies/${i.slug}`,
-    lastModified: new Date("2026-11-05"),
+    lastModified: new Date(HUB_LASTMOD[i.slug] ?? HUB_DEFAULT_LASTMOD),
     changeFrequency: "weekly" as const,
     priority: 0.8,
     images: [OG],
@@ -84,7 +93,7 @@ export function allSitemapEntries(): MetadataRoute.Sitemap {
     .filter((p) => !p.noindex)
     .map((p) => ({
       url: `${BASE_URL}/case-studies/${p.slug}`,
-      lastModified: new Date("2026-11-03"),
+      lastModified: new Date(CASE_DEFAULT_LASTMOD),
       changeFrequency: "monthly" as const,
       priority: 0.6,
       images: [`${BASE_URL}${p.image}`],

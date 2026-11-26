@@ -35,7 +35,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     hubTitle: "Roofing Lead Generation Case Studies",
     hubMetaTitle: "Roofing Lead Generation Case Studies & Results",
     hubDescription:
-      "Real roofing lead generation results: exclusive roofing leads, cost per lead, booked inspections and ad spend from Meta ads funnels with 60-second follow-up.",
+      "Real roofing lead generation results: exclusive roofing leads, cost per lead, booked inspections and ad spend from Meta funnels with 60-second follow-up.",
     intro: [
       "Roofing is one of the most expensive lead markets in home services. Replacement jobs are worth $10,000 to $40,000, so every roofer bids on the same homeowners and lead marketplaces sell each request to three to five companies at once.",
       "These case studies show the alternative: exclusive roofing leads from a funnel the roofer owns. Each one documents the cost per lead, lead volume, ad spend and, where available, booked inspections and closed jobs, taken from the client's ad account and CRM.",
@@ -170,7 +170,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     hubTitle: "HVAC Lead Generation Case Studies",
     hubMetaTitle: "HVAC Lead Generation Case Studies & Results",
     hubDescription:
-      "HVAC lead generation results: install and replacement leads, cost per lead and ad spend from Meta funnels with fast follow-up for heating and cooling firms.",
+      "HVAC lead generation results: install and replacement leads, cost per lead and ad spend from Meta funnels with fast follow-up for HVAC firms.",
     intro: [
       "HVAC demand is seasonal and urgent. When a system fails in a heatwave or a cold snap, the homeowner calls whoever answers first, and replacement jobs carry the margin.",
       "These cases show HVAC install and replacement campaigns with lead volume, cost per lead and spend, built on quote funnels and follow-up that reaches the homeowner in under a minute.",
@@ -203,7 +203,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     hubTitle: "Solar & Home Services Lead Generation Case Studies",
     hubMetaTitle: "Solar & Home Services Lead Generation Case Studies",
     hubDescription:
-      "Solar and home services lead generation results: exclusive leads, cost per lead, booked appointments and revenue for solar, renovation and trade businesses.",
+      "Solar and home services lead generation results: exclusive leads, cost per lead, booked appointments and revenue for solar, renovation and trade firms.",
     intro: [
       "Solar installers and home service businesses such as renovation, remodelling and trades share the same challenge: high-value jobs, comparison shoppers and homeowners who submit several requests at once.",
       "The cases below document lead volume, cost per lead and closed revenue for solar and home services clients, using quote funnels, fast follow-up and appointment reminders.",
@@ -234,7 +234,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     niches: ["Real Estate"],
     label: "Real Estate",
     hubTitle: "Real Estate Lead Generation Case Studies",
-    hubMetaTitle: "Real Estate Lead Generation Case Studies",
+    hubMetaTitle: "Real Estate Lead Generation Case Studies and Results",
     hubDescription:
       "Real estate lead generation results: buyer and seller leads, cost per lead and ad spend for agents, teams and property offers built on Meta ads funnels.",
     intro: [
@@ -302,7 +302,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     hubTitle: "Agency, SaaS & B2B Lead Generation Case Studies",
     hubMetaTitle: "Agency, SaaS & B2B Lead Generation Case Studies",
     hubDescription:
-      "Lead generation results for marketing agencies, SaaS and B2B offers: leads, booked calls, cost per lead and new clients from paid ads funnels and follow-up.",
+      "Lead generation results for marketing agencies, SaaS and B2B offers: leads, booked calls, cost per lead and new clients from paid ad funnels.",
     intro: [
       "Agencies, lead generation businesses and SaaS companies sell to other businesses. Leads are fewer and more valuable, and the sales cycle runs through a demo or strategy call.",
       "These cases show how agencies landed clients for themselves and for their own customers, and how SaaS offers generated leads and sign-ups, with cost per lead, booked calls and revenue.",
@@ -399,7 +399,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     niches: ["Beauty & Skincare"],
     label: "Skincare",
     hubTitle: "Beauty & Skincare Brand Case Studies",
-    hubMetaTitle: "Beauty & Skincare eCommerce Case Studies",
+    hubMetaTitle: "Beauty & Skincare eCommerce Case Studies and Results",
     hubDescription:
       "Beauty and skincare brand scaling results: revenue and ROAS from Meta video ads, before-and-after creative and subscription and bundle offers.",
     intro: [
@@ -432,7 +432,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     niches: ["Apparel & Fashion DTC"],
     label: "Fashion",
     hubTitle: "Fashion & Apparel eCommerce Case Studies",
-    hubMetaTitle: "Fashion & Apparel eCommerce Case Studies",
+    hubMetaTitle: "Fashion & Apparel eCommerce Case Studies and Results",
     hubDescription:
       "Fashion and apparel brand scaling results: revenue and ROAS from Meta ads, collection launches and seasonal campaigns for DTC clothing brands.",
     intro: [
@@ -465,7 +465,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     niches: ["DTC Fitness & Health", "DTC Supplements & Nutrition"],
     label: "Supplement",
     hubTitle: "Supplement & Fitness Brand Case Studies",
-    hubMetaTitle: "Supplement & Fitness eCommerce Case Studies",
+    hubMetaTitle: "Supplement & Fitness eCommerce Case Studies and Results",
     hubDescription:
       "Supplement, nutrition and fitness brand scaling results: revenue and ROAS from Meta ads, subscription offers and compliant direct-response creative.",
     intro: [

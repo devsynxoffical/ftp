@@ -465,7 +465,7 @@ export const SERVICE_PAGES: SeoPage[] = [
     keyword: "speed to lead automation",
     serviceType: "Speed-to-lead automation",
     title: "Speed to Lead Automation: Contact Every Lead in 60s",
-    description: "Speed to lead automation that texts, calls and emails every new lead within 60 seconds, with missed-call text-back and a 5-day nurture for unreached leads.",
+    description: "Speed to lead automation that texts, calls and emails new leads within 60 seconds, with missed-call text-back and a 5-day nurture for unreached leads.",
     eyebrow: "Speed to lead",
     h1: "Speed to lead automation: every lead contacted in under a minute",
     intro:
@@ -650,7 +650,7 @@ export const SERVICE_PAGES: SeoPage[] = [
     keyword: "webinar funnel",
     serviceType: "Webinar funnel build",
     title: "Webinar Funnel: Registration, Show-Up and Sales",
-    description: "Webinar funnels for coaches, course creators and B2B: registration page, paid or free entry, reminders that lift attendance, replay follow-up, sales calls.",
+    description: "Webinar funnels for coaches, course creators and B2B: registration page, paid or free entry, reminders that lift attendance, replays and sales calls.",
     eyebrow: "Webinar funnels",
     h1: "Webinar funnels that fill the room and sell after the event",
     intro:

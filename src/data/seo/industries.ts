@@ -315,7 +315,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     keyword: "real estate lead generation",
     serviceType: "Real estate lead funnel",
     title: "Real Estate Lead Generation Funnel for Buyers and Sellers",
-    description: "Real estate lead generation with a funnel that splits buyers and sellers, qualifies on home value and pre-approval, and books agents fast. Cases from $11.57.",
+    description: "Real estate lead generation funnel that splits buyers and sellers, qualifies on home value and pre-approval, and books agents fast. Cases from $11.57.",
     eyebrow: "Funnels for real estate agents",
     h1: "A real estate lead generation funnel that separates buyers, sellers and browsers",
     intro:
@@ -538,7 +538,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
   {
     path: "/funnels-for/med-spas",
     kind: "industry",
-    keyword: "med spa marketing",
+    keyword: "med spa lead generation",
     serviceType: "Med spa funnel",
     title: "Med Spa Lead Generation Funnel That Books Consults | FTP",
     description: "Med spa lead generation funnels with intro offers, deposits and reminders. Results include $639,000 from 178 clients and $11,700 from $590 in ads.",
@@ -895,7 +895,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     keyword: "dental marketing",
     serviceType: "Dental patient funnel",
     title: "Dental Marketing Funnel for New Patient Bookings",
-    description: "Dental marketing that books new patients: a funnel for exams, implants and clear aligner consults, with online booking, reminders and HIPAA-aware tracking.",
+    description: "Dental marketing that books new patients: a funnel for exams, implants and aligner consults, with online booking, reminders and HIPAA-aware tracking.",
     eyebrow: "Funnels for dental practices",
     h1: "A dental marketing funnel that fills the new-patient schedule",
     intro:
@@ -1114,7 +1114,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     kind: "industry",
     keyword: "saas demo funnel",
     serviceType: "SaaS demo funnel",
-    title: "SaaS Demo Funnel That Books Qualified Demos",
+    title: "SaaS Demo Funnel That Books Qualified Demos From Ads",
     description: "A SaaS demo funnel with firmographic qualification, instant routing and demo reminders. Real cases include $71,934 in 24 days for an AI SaaS product.",
     eyebrow: "Funnels for SaaS companies",
     h1: "A SaaS demo funnel that routes qualified buyers straight to a calendar",

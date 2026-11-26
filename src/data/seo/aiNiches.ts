@@ -181,7 +181,7 @@ export const AI_NICHE_PAGES: SeoPage[] = [
 <li><strong>Online form leads.</strong> New-patient offers from ads and the website need a call back within minutes, not at the end of the day.</li>
 <li><strong>Recall gaps.</strong> Patients overdue for cleanings rarely rebook on their own.</li>
 </ul>
-<p>The AI agent answers the call, or calls the form lead back within about a minute, and puts a time on the schedule. The patient-acquisition funnel that feeds it is described on <a href="/funnels-for/dentists">funnels for dentists</a>.</p>`,
+<p>The AI agent answers the call, or calls the form lead back within about a minute, and puts a time on the schedule. The patient-acquisition funnel that feeds it is described on <a href="/funnels-for/dentists">funnels for dentists</a>, and practices comparing it with a live message service can see the numbers on our <a href="/ai-answering-service">AI answering service</a> page.</p>`,
       },
       {
         h2: "New-patient calls and booking into your schedule",

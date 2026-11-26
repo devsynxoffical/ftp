@@ -141,6 +141,12 @@ const jsonLd = {
         url: `${BASE_URL}/book-a-call`,
       },
       knowsAbout: [
+        "AI Receptionist",
+        "AI Answering Service",
+        "AI Appointment Setter",
+        "Speed to Lead Automation",
+        "GoHighLevel White Label",
+        "Med Spa Lead Generation",
         "Sales Funnel Architecture",
         "Conversion Rate Optimization",
         "High-Ticket Client Acquisition",
