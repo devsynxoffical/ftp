@@ -123,7 +123,7 @@ export const NOV19_PAGES: SeoPage[] = [
       { q: "What do I need to provide?", a: "Access to your ad account (or we help you create one), your calendar, a clear service area and offer, and someone on your team who takes the booked calls. We handle the funnel, ads, tracking, CRM and follow-up automation, and we write the ad copy and scripts with you." },
       { q: "Do you guarantee results?", a: "We do not guarantee a number of leads or sales, because results depend on your market, offer, budget and sales team. We do guarantee transparency: you own the accounts, see the same dashboards we see, and get a weekly report on spend, leads, bookings, shows and revenue." },
     ],
-    related: ["/facebook-ads-agency", "/sales-funnel-agency", "/speed-to-lead", "/ai-appointment-setter", "/funnels-for", "/locations", "/case-leadgen", "/tools/cost-per-lead-calculator"],
+    related: ["/facebook-ads-agency", "/sales-funnel-agency", "/speed-to-lead", "/ai-appointment-setter", "/funnels-for", "/ai-answering-service", "/case-leadgen", "/tools/cost-per-lead-calculator"],
     parent: SERVICES,
     updated: U,
   },

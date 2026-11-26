@@ -146,7 +146,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
       },
       {
         h2: "Results",
-        html: `<p>We have one documented pressure washing case. For a pressure washing company in <a href="/locations/texas">Texas</a>, the funnel generated <a href="/case-studies/agency-142-leads-at-11-24-cpl">142 leads at $11.24 per lead on $1,596 of ad spend</a>. That is the only pressure washing figure we publish.</p>
+        html: `<p>We have one documented pressure washing case. For a pressure washing company in Texas, the funnel generated <a href="/case-studies/agency-142-leads-at-11-24-cpl">142 leads at $11.24 per lead on $1,596 of ad spend</a>. That is the only pressure washing figure we publish.</p>
 <p>The closest proof comes from other <a href="/case-studies/solar-home-services-lead-generation">home services campaigns</a> that use the same quote-and-book structure: <a href="/case-studies/home-services-337-appointments-booked">337 appointments on $1,621 of spend</a>, 49 leads at $13.03 on $638, and 180 leads at $14.25 on $2,665.70. Roofing estimator funnels, the nearest cousin, have run from $4.27 to $24 per lead. Those are different trades, so read them as a range of what the system does, not a promise for your market.</p>`,
       },
       {
@@ -176,7 +176,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
       { q: "Do you work with pressure washing companies outside Texas?", a: "Yes. Funnels That Print is based in Dubai and works remotely with clients across the US and other countries. Our pressure washing case happens to be a Texas company, but the funnel, follow-up and reminders do not depend on location. We adapt service area, seasonality and offers to your market." },
       { q: "Who answers my leads while I am on a job?", a: "An automated text goes out within seconds. If you do not pick up the call alert, an AI appointment setter calls the homeowner, confirms surface and address, and books a slot or estimate. You review everything in the CRM between jobs. AI calling typically works out to about $3 to $9 per booked appointment." },
     ],
-    related: ["/case-studies/solar-home-services-lead-generation", "/speed-to-lead", "/ai-appointment-setter", "/funnels-for/home-services", "/funnels-for/roofing", "/funnels-for/hvac", "/locations/texas", "/blog/quiz-funnel-examples"],
+    related: ["/case-studies/solar-home-services-lead-generation", "/speed-to-lead", "/ai-appointment-setter", "/funnels-for/home-services", "/funnels-for/roofing", "/funnels-for/hvac", "/ai-answering-service/houston-tx", "/blog/quiz-funnel-examples"],
     parent: HUB,
     updated: U,
   },

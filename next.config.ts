@@ -48,6 +48,13 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // 2026-11-26 (US city page plan, week 1): old "Lead Generation Agency in [State]" pages
+      // conflicted with the QLX lane; they move to the AI answering service pillar and city pages.
+      { source: "/locations", destination: "/ai-answering-service", permanent: true },
+      { source: "/locations/texas", destination: "/ai-answering-service/houston-tx", permanent: true },
+      { source: "/locations/new-york", destination: "/ai-answering-service/new-york-ny", permanent: true },
+      { source: "/locations/florida", destination: "/ai-answering-service", permanent: true },
+      { source: "/locations/california", destination: "/ai-answering-service", permanent: true },
       // 2026-11-20 (SEO Recovery Plan): the GoHighLevel expert page moved to the plan's target URL.
       { source: "/hire-gohighlevel-expert", destination: "/gohighlevel-expert", permanent: true },
       // 2026-11-05: corrected cost-per-lead figures changed these case slugs.

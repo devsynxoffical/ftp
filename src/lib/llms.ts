@@ -39,7 +39,7 @@ export function llmsTxt(): string {
   const hubs: [string, string, string][] = [
     ["Services", "/services", "every service with pricing and process"],
     ["Funnels by industry", "/funnels-for", `${SEO_PAGES.filter((p) => p.kind === "industry").length} industry playbooks`],
-    ["Locations", "/locations", "states we have client results in, and the Dubai office"],
+    ["AI answering service by city", "/ai-answering-service", "AI answering service pricing, with Houston and New York city pages"],
     ["Case studies", "/case-studies", `${CASE_INDEX.length} client results with proof`],
     ["Free calculators", "/tools", "funnel conversion, cost per lead, ROAS, no-show cost, AI voice ROI"],
     ["Free templates", "/templates", "VSL script, SMS, email, AI voice script and more"],
