@@ -46,7 +46,7 @@ Serves businesses that sell through a booked call or a checkout: home services a
 ## Hubs
 - [Services](https://www.funnelsthatprint.com/services): every service with pricing and process
 - [Funnels by industry](https://www.funnelsthatprint.com/funnels-for): 22 industry playbooks
-- [Locations](https://www.funnelsthatprint.com/locations): states we have client results in, and the Dubai office
+- [AI answering service by city](https://www.funnelsthatprint.com/ai-answering-service): AI answering service pricing, with Houston and New York city pages
 - [Case studies](https://www.funnelsthatprint.com/case-studies): 255 client results with proof
 - [Free calculators](https://www.funnelsthatprint.com/tools): funnel conversion, cost per lead, ROAS, no-show cost, AI voice ROI
 - [Free templates](https://www.funnelsthatprint.com/templates): VSL script, SMS, email, AI voice script and more

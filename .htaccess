@@ -19,6 +19,11 @@ RewriteRule ^(.+)/$ /$1 [L,R=301]
 RewriteRule ^api/(contact|newsletter)$ api/contact.php [L]
 
 # Permanent redirects (from next.config.ts)
+RewriteRule ^locations$ /ai-answering-service [L,R=301]
+RewriteRule ^locations/texas$ /ai-answering-service/houston-tx [L,R=301]
+RewriteRule ^locations/new-york$ /ai-answering-service/new-york-ny [L,R=301]
+RewriteRule ^locations/florida$ /ai-answering-service [L,R=301]
+RewriteRule ^locations/california$ /ai-answering-service [L,R=301]
 RewriteRule ^hire-gohighlevel-expert$ /gohighlevel-expert [L,R=301]
 RewriteRule ^case-studies/shopify-store-301k-in-sales-at-4-7x-roas$ /case-studies/shopify-store-279k-in-21-days-at-4-7x-roas [L,R=301]
 RewriteRule ^case-studies/dtc-brand-168k-month-in-sales-at-4-9x-roas$ /case-studies/dtc-brand-222k-in-february-2023-at-4-9x-roas [L,R=301]
