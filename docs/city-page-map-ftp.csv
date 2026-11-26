@@ -1,0 +1,27 @@
+Site,URL,Target keywords,US volume/mo (Semrush 25 Nov),Lowest KD,Action,Week
+FTP,/ai-answering-service,ai answering service; ai phone answering service,5200,23,Build pillar + Cities we serve,2
+FTP,/ai-answering-service/houston-tx,answering service houston; virtual receptionist houston; ai receptionist houston; ai agency houston,340,6,Build city,3
+FTP,/ai-answering-service/new-york-ny,answering service new york; virtual receptionist new york; ai agency new york,310,6,Build city,3
+FTP,/ai-answering-service/miami-fl,answering service miami; virtual receptionist miami,210,9,Build city,4
+FTP,/ai-answering-service/dallas-tx,answering service dallas; virtual receptionist dallas,190,13,Build city,4
+FTP,/ai-answering-service/atlanta-ga,virtual receptionist atlanta,70,7,Tier 2 only if tier 1 gets impressions,12
+FTP,/ai-answering-service/boston-ma,virtual receptionist boston,50,7,Tier 2,12
+FTP,/ai-answering-service/los-angeles-ca,ai automation agency los angeles; virtual receptionist los angeles,60,,Tier 2,12
+FTP,/locations/texas,"(Lead Generation Agency in Texas, QLX conflict)",0,,301 to /ai-answering-service/houston-tx,1
+FTP,/locations/new-york,(QLX conflict),0,,301 to /ai-answering-service/new-york-ny,1
+FTP,/locations/florida,(QLX conflict),0,,301 to /ai-answering-service/miami-fl,1
+FTP,/locations/california,(QLX conflict),0,,301 to /ai-answering-service,1
+FTP,/locations,hub,0,,301 to /ai-answering-service,1
+FTP,/gohighlevel-agency,gohighlevel agency; gohighlevel expert; gohighlevel consultant; gohighlevel setup service,590,26,Build,5
+FTP,/ai-receptionist/law-firms,ai receptionist for law firms; ai answering service for law firms,180,17,Build,6
+FTP,/ai-receptionist/medical-office,ai receptionist for medical office,140,21,Build,6
+FTP,/ai-receptionist/dentists,ai receptionist for dentists,110,16,"Build, link with /ai-voice-agents/dental-clinics",6
+FTP,/ai-receptionist/hvac,ai receptionist for hvac,70,11,Expand existing,6
+FTP,/ai-receptionist/plumbers,ai receptionist for plumbers,70,15,Expand existing,6
+FTP,/ai-receptionist/real-estate,ai receptionist for real estate,70,11,Expand existing,6
+FTP,/ai-receptionist/restaurants,ai receptionist for restaurants,70,15,Build,7
+FTP,/ai-receptionist/chiropractors,ai receptionist for chiropractors,50,10,Build,7
+FTP,/ai-receptionist/med-spa,ai receptionist for med spa,50,8,Build,7
+FTP,/ai-receptionist/small-business,ai receptionist for small business; ai answering service for small business,2160,53,Build,8
+FTP,/ai-voice-agents/real-estate,ai voice agent for real estate,390,22,Build,9
+FTP,/ai-automation-agency,ai automation agency; ai automation agency near me,3690,47,Build,10

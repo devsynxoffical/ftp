@@ -9,7 +9,7 @@ const BASE_URL = "https://www.funnelsthatprint.com";
 const URL = `${BASE_URL}/book-a-call`;
 const TITLE = "Book a Free Funnel Strategy Call (30 Minutes)";
 const DESC =
-  "Book a free funnel strategy call with Funnels That Print. Pick a 30-minute slot with Gaurav or Rahul and get a review of your funnel, follow-up and tracking.";
+  "Book a free strategy call with Funnels That Print. Pick a 30-minute slot with Gaurav or Rahul and get a review of your funnel, follow-up and tracking.";
 
 export const metadata: Metadata = {
   title: { absolute: "Book a Free Funnel Strategy Call | Funnels That Print" },

@@ -57,7 +57,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "ai-sales-funnels-voice-lead-qualification-2026",
     metaTitle: "AI Lead Qualification: Voice Agents and Speed-to-Lead",
-    metaDescription: "How 2026 AI sales funnels pair interactive front ends with sub-second voice agents, 60-second speed-to-lead and Meta CAPI to cut cost per booked call by 42%.",
+    metaDescription: "How 2026 AI sales funnels pair interactive front ends with sub-second voice agents, 60-second follow-up and Meta CAPI to cut cost per booked call by 42%.",
     keyTakeaways: [
       "Static VSL-first funnels lose most cold traffic before the pitch. Interactive front ends that ask four to six qualifying questions turn more clicks into leads.",
       "Calling a new lead within 60 seconds with a sub-700ms voice agent cut cost per qualified booked call by 42.6% across 275+ funnels, with no change to ads or landing pages.",
@@ -735,7 +735,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "speed-to-lead-automation-gohighlevel-60-second-follow-up",
     metaTitle: "GoHighLevel Speed-to-Lead Workflow: 60-Second Follow-Up",
-    metaDescription: "Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and 5-day nurture, with copy-paste templates.",
+    metaDescription: "Build a 60-second speed-to-lead system in GoHighLevel: instant SMS, AI voice call, email, missed-call text-back and 5-day nurture, with templates.",
     keyTakeaways: [
       "Leads contacted within 60 seconds are far more likely to qualify. At a one-hour delay, contact rate falls from 84% to 27%.",
       "Minute one fires three channels in parallel, an SMS, an AI voice call and an email, all triggered by the form submission inside GoHighLevel.",
@@ -926,7 +926,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "low-ticket-self-liquidating-offer-funnel-847k-breakdown",
     metaTitle: "Self-Liquidating Offer Funnel: $847K Low-Ticket Breakdown",
-    metaDescription: "Inside the $27 self-liquidating offer funnel that collected $847,307: page sequence, order bump and upsell math, backend ascension and value-based tracking.",
+    metaDescription: "Inside the $27 self-liquidating offer funnel that collected $847,307: page sequence, order bump and upsell math, backend offers and value-based tracking.",
     keyTakeaways: [
       "A self-liquidating offer funnel sells a $27 product with a $17 order bump and a one-click upsell so the front end pays for the ads on day zero. This one recovered 112% of ad spend.",
       "Average order value of $68.40 against cost per buyer is the number that decides whether the funnel scales.",
@@ -1096,7 +1096,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "reduce-sales-call-no-show-rate-reminder-automation",
     metaTitle: "How to Reduce Sales Call No-Show Rates to Under 12%",
-    metaDescription: "Cut sales call no-shows from 38% to under 12%: booking page fixes, a 7-touch reminder sequence, pre-call video, confirmation gate and no-show reactivation.",
+    metaDescription: "Cut sales call no-shows from 38% to under 12%: booking page fixes, a 7-touch reminder sequence, pre-call video, confirmation gate and no-show follow-up.",
     keyTakeaways: [
       "Booked sales calls no-show at 30% to 40% on average. This system took the show-up rate from 62% to 88.4% on the same bookings.",
       "Fix the booking page first: shorter lead time, a visible agenda and a confirmation gate before the slot is held.",
@@ -1252,7 +1252,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "gohighlevel-vs-clickfunnels-lead-generation-2026",
     metaTitle: "GoHighLevel vs ClickFunnels for Lead Gen (2026 Comparison)",
-    metaDescription: "GoHighLevel vs ClickFunnels for lead generation in 2026: page builder, CRM, automation, AI calling, pricing and the stack we use after 275+ client funnels.",
+    metaDescription: "GoHighLevel vs ClickFunnels for lead generation in 2026: page builder, CRM, automation, AI calling, pricing and the stack we use after 275+ funnels.",
     keyTakeaways: [
       "ClickFunnels is a better pure page and checkout builder. GoHighLevel is a better lead generation system because the CRM, SMS, email, calendar and follow-up automation live in the same account as the funnel.",
       "For booked-call offers (agencies, coaching, home services, finance, medspa), the speed-to-lead and reminder automation decides results more than the page builder, which is why we build most lead gen funnels in GoHighLevel.",
@@ -1843,7 +1843,7 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "personal-injury-mva-lead-generation-exclusive-leads",
     metaTitle: "Exclusive MVA Leads for Personal Injury Firms",
-    metaDescription: "How personal injury firms get exclusive, OTP-verified MVA leads from Meta ads at $5 to $27 per lead instead of $150+ shared leads, with real campaign numbers.",
+    metaDescription: "How personal injury firms get exclusive, OTP-verified MVA leads from Meta ads at $5 to $27 per lead instead of $150+ shared leads, with real numbers.",
     keyTakeaways: [
       "Shared MVA leads cost personal injury firms $150 to $300 each and are sold to several firms at once. Exclusive leads from a firm-owned Meta funnel cost $4.38 to $27 per lead in our campaigns.",
       "Quality comes from the funnel, not the ad: a multi-step form that screens accident date, injury and representation, plus OTP phone verification, removes fake numbers before intake sees them.",

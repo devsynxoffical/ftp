@@ -26,7 +26,7 @@ export const AI_SERVICE_PAGES: SeoPage[] = [
 <li><strong><a href="/ai-voice-agents">AI voice agent</a>:</strong> calls new leads within about a minute, qualifies them with your questions and books or transfers the good ones.</li>
 <li><strong><a href="/ai-appointment-setter">AI appointment setter</a>:</strong> runs the whole booking loop by call and SMS, including confirmations, reminders and rebooking no-shows.</li>
 <li><strong><a href="/ai-chat-agent">AI chat agent</a>:</strong> replies to website chat, SMS, Facebook Messenger, Instagram DMs and WhatsApp, answers questions from an approved knowledge base and books calls.</li>
-<li><strong><a href="/ai-receptionist">AI receptionist</a>:</strong> answers inbound calls 24/7, texts back missed callers, books after-hours appointments and transfers urgent calls to staff.</li>
+<li><strong><a href="/ai-receptionist">AI receptionist</a>:</strong> answers inbound calls 24/7, texts back missed callers, books after-hours appointments and transfers urgent calls to staff. Businesses replacing a human message service can compare costs on our <a href="/ai-answering-service">AI answering service</a> page.</li>
 <li><strong><a href="/lead-reactivation">Lead reactivation</a>:</strong> AI SMS and voice campaigns that work through old leads and past customers already sitting in your CRM.</li>
 </ul>
 <p>They are not separate products bolted together. Each one reads and writes the same contact record, so a lead who chats on Instagram, misses a call and later answers a reactivation text is one person with one history.</p>`,

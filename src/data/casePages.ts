@@ -578,7 +578,7 @@ const SYSTEM_TEXT: Record<string, string> = {
  * Meta description built from the case's own structured data (result, system,
  * extra metrics, publish month, proof type), so every snippet states facts
  * instead of quoting the social caption. Parts are added while the text stays
- * within 158 characters.
+ * within 154 characters.
  */
 function describe(d: Draft, h1: string, blocks: CasePage["blocks"]): string {
   void h1;
@@ -599,7 +599,7 @@ function describe(d: Draft, h1: string, blocks: CasePage["blocks"]): string {
       ? ["Video breakdown with the verified numbers.", "Video breakdown included.", "With video proof."]
       : ["Verified screenshot proof of the result.", "Screenshot proof included.", "With screenshot proof."];
   const add = (base: string, options: string[]) => {
-    const fit = options.find((o) => (base + " " + o).length <= 158);
+    const fit = options.find((o) => (base + " " + o).length <= 154);
     return fit ? `${base} ${fit}` : base;
   };
   let out = add(lead, [`${system}${when}.`, `${system}.`]);
@@ -629,8 +629,8 @@ function allDescriptions(): Map<string, string> {
         .match(/[^.!?]{30,140}[.!?]/g) ?? [];
       const alt = sentences
         .map((x) => `${lead} ${x.trim()}`)
-        .find((c) => c.length <= 160 && !used.has(c.toLowerCase()) && !/comment|dm |message me/i.test(c));
-      desc = alt ?? cutAtBoundary(`${lead} Published ${monthYear(d.published)}, ${d.r.type === "video" ? "video" : "screenshot"} breakdown.`, 160);
+        .find((c) => c.length <= 154 && !used.has(c.toLowerCase()) && !/comment|dm |message me/i.test(c));
+      desc = alt ?? cutAtBoundary(`${lead} Published ${monthYear(d.published)}, ${d.r.type === "video" ? "video" : "screenshot"} breakdown.`, 154);
     }
     used.add(desc.toLowerCase());
     DESCRIPTIONS.set(d.slug, desc);

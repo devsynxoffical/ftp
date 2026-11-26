@@ -186,7 +186,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
     keyword: "marketing agency lead generation",
     serviceType: "Marketing agency lead generation",
     title: "Marketing Agency Lead Generation That Signs Clients",
-    description: "Marketing agency lead generation with webinar, VSL and audit funnels plus AI qualification. Cases include 235 clients signed and $15,900 closed in 10 days.",
+    description: "Marketing agency lead generation with webinar, VSL and audit funnels plus AI qualification. Cases: 235 clients signed and $15,900 closed in 10 days.",
     eyebrow: "Funnels for marketing agencies",
     h1: "Marketing agency lead generation that fills your own sales calendar",
     intro:
