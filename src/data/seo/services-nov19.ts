@@ -92,7 +92,7 @@ export const NOV19_PAGES: SeoPage[] = [
 <tr><td><a href="/funnels-for/mortgage">Mortgage</a></td><td>Rate or payment check in under a minute</td><td><a href="/case-studies/mortgage-823-leads-at-23-97-cpl">823 OTP-verified leads in 30 days</a></td></tr>
 <tr><td><a href="/funnels-for/personal-injury-lawyers">Personal injury</a></td><td>Free accident case review</td><td><a href="/case-studies/mva-388k-revenue-on-20k-ad-spend">$388K revenue on $20,324 spend</a></td></tr>
 <tr><td><a href="/funnels-for/coaches">Coaching</a> and consulting</td><td>Application to a strategy call</td><td><a href="/case-studies/coaching-116k-revenue-on-2214-ad-spend">$115,500 from 174 appointments</a></td></tr>
-<tr><td><a href="/funnels-for/marketing-agencies">Agencies</a></td><td>Free audit or growth plan</td><td><a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">180 appointments on $2,824 spend</a></td></tr>
+<tr><td><a href="/funnels-for/marketing-agencies">Agencies</a></td><td>Free audit or growth plan</td><td><a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">174 appointments on $2,824 spend</a></td></tr>
 </tbody></table></div>
 <p>We also run lead generation for <a href="/funnels-for/hvac">HVAC</a>, <a href="/funnels-for/solar">solar</a>, <a href="/funnels-for/insurance">insurance</a>, <a href="/funnels-for/real-estate">real estate</a> and <a href="/funnels-for/med-spas">med spas</a>. The full list is on <a href="/funnels-for">funnels by industry</a>, and all results are on <a href="/case-leadgen">lead generation case studies</a>.</p>`,
       },
@@ -135,12 +135,12 @@ export const NOV19_PAGES: SeoPage[] = [
     title: "GoHighLevel White Label Setup for Agencies (Done for You)",
     description: "Done-for-you GoHighLevel white label setup: your brand, domain, snapshots and SaaS pricing, ready to sell. Agency results: $15,900 closed in 10 days.",
     eyebrow: "GoHighLevel white label",
-    h1: "GoHighLevel white label setup, done for your agency",
+    h1: "GoHighLevel White Label Setup, Done for Your Agency",
     intro:
       "<strong>GoHighLevel white label</strong> lets an agency give clients the full HighLevel platform under its own brand: your logo, your domain and, with SaaS mode, your own subscription prices. We set it up end to end, from the branded dashboard and email sending domain to snapshots, rebilling and the onboarding flow, so you can sell software and services without building any of it from scratch.",
     quick: {
       q: "What is GoHighLevel white label?",
-      a: "GoHighLevel white label means rebranding the HighLevel platform as your own. Clients log in at your domain and see your logo and colors, not HighLevel's. On the $497 agency plan, SaaS mode lets you sell it as your own software with automatic sub-account creation and rebilling of SMS, email and AI usage.",
+      a: "GoHighLevel white label lets you resell the platform under your own brand, domain and app, so clients log into your software, not GoHighLevel. Full white labeling with SaaS mode needs the $497 a month plan at the time of writing. Our done-for-you setup is live in 5 to 10 business days.",
     },
     features: {
       eyebrow: "What we set up",
@@ -170,29 +170,30 @@ export const NOV19_PAGES: SeoPage[] = [
 <tr><td>Unlimited</td><td>$297/month</td><td>Branded desktop app on your own domain, unlimited sub-accounts, basic API access</td></tr>
 <tr><td>Agency plan with SaaS mode</td><td>$497/month</td><td>Everything in Unlimited plus SaaS mode: sell your own plans, automatic sub-account creation and usage rebilling</td></tr>
 </tbody></table></div>
-<p>Prices are HighLevel's list prices as shown in our <a href="/blog/gohighlevel-review">GoHighLevel review</a>. A fully branded mobile app in the app stores is a separate paid add-on. SMS, calls, email and AI usage are charged on top of every plan, which is why rebilling matters once you resell.</p>`,
+<p>At the time of writing, the $97 Starter plan has limited branding, the $297 Unlimited plan adds a branded desktop app on your own domain, and the $497 agency plan adds SaaS mode so you can sell subscriptions. Check current prices on GoHighLevel before buying; these match gohighlevel.com in November 2026 and our <a href="/blog/gohighlevel-review">GoHighLevel review</a>. A fully branded mobile app in the app stores is a separate paid add-on. SMS, calls, email and AI usage are charged on top of every plan, which is why rebilling matters once you resell.</p>`,
       },
       {
         h2: "What our white label setup includes",
         html: `<ul>
-<li><strong>Branding:</strong> custom app domain with SSL, logo, colors, login page and branded support links.</li>
+<li><strong>Branding:</strong> branded domain, logo and login page, with SSL and branded support links.</li>
 <li><strong>Email and SMS:</strong> a dedicated mail sending domain with SPF, DKIM and DMARC, and a phone setup with A2P 10DLC registration steps for US numbers.</li>
-<li><strong>SaaS configuration:</strong> plan tiers, Stripe connection, trial rules, feature access per plan and usage rebilling markups.</li>
-<li><strong>Snapshot:</strong> a niche-ready system built and tested once, then packaged as a <a href="/glossary/gohighlevel-snapshot">GoHighLevel snapshot</a> for every new client.</li>
+<li><strong>SaaS configuration:</strong> SaaS mode pricing and Stripe setup, with trial rules, feature access per plan and usage rebilling markups.</li>
+<li><strong>Snapshot:</strong> snapshots with funnels, pipelines and automations for your niche, built and tested once, then packaged as a <a href="/glossary/gohighlevel-snapshot">GoHighLevel snapshot</a> for every new client.</li>
 <li><strong>Automation:</strong> <a href="/speed-to-lead">speed-to-lead</a> follow-up, reminders, review requests and <a href="/lead-reactivation">database reactivation</a> workflows inside the snapshot.</li>
-<li><strong>Onboarding:</strong> a client welcome flow, a setup checklist and short training videos.</li>
+<li><strong>Onboarding:</strong> an onboarding flow for new sub-accounts, with a setup checklist and short training videos.</li>
 </ul>
+<p>Agency results from real client accounts: a home services agency <a href="/case-studies/agency-15900-closed-in-10-days">closed $15,900 in 10 days</a> on our GHL system, and another agency <a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">booked 174 appointments and $14,040 in revenue</a> on $2,824 in spend.</p>
 <p>Most setups are live in 5 to 10 business days. If you only need account setup and automation, not reselling, our <a href="/gohighlevel-agency">GoHighLevel agency</a> service or a <a href="/gohighlevel-expert">GoHighLevel expert</a> is the better fit.</p>`,
       },
       {
         h2: "How to price a white label GoHighLevel offer",
-        html: `<p>Agencies usually sell white label HighLevel in one of three ways:</p>
+        html: `<p>Price on the outcome you deliver, not the software. Many agencies bundle the CRM with setup and support as a monthly retainer instead of selling software alone. The three common models:</p>
 <ol>
 <li><strong>Software only:</strong> a monthly subscription to your branded CRM, often positioned against the tools the client already pays for separately.</li>
 <li><strong>Software plus setup:</strong> a one-time setup fee to load your niche snapshot, connect numbers and train the team, then the subscription.</li>
 <li><strong>Done-for-you service:</strong> the platform is included in a retainer where you also run the ads, funnel and follow-up.</li>
 </ol>
-<p>Whatever the price, build in usage. A client who sends thousands of texts can cost more in usage than they pay you unless rebilling is switched on. The highest retention comes from niche snapshots that produce booked appointments in the first month, which is why we build the system to generate results, not just to look branded.</p>`,
+<p>Whatever the price, build in usage. A client who sends thousands of texts can cost more in usage than they pay you unless rebilling is switched on. The highest retention comes from niche snapshots that produce booked appointments in the first month, which is why we build the system with <a href="/crm-automation">CRM automation</a> that generates results, not just a branded login.</p>`,
       },
       {
         h2: "Mistakes that sink white label launches",

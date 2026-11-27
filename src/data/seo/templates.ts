@@ -1055,7 +1055,7 @@ CRM RULES
       items: [
         { value: "$115,500", label: "Revenue from 174 coaching appointments", href: "/case-studies/coaching-116k-revenue-on-2214-ad-spend" },
         { value: "$64,960", label: "Webinar revenue from 140 appointments", href: "/case-studies/webinar-65k-revenue-on-2184-ad-spend" },
-        { value: "$14,040", label: "Agency revenue from 180 appointments", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
+        { value: "$14,040", label: "Agency revenue from 174 appointments", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
       ],
       more: { label: "Browse all case studies", href: "/case-studies/all" },
     },

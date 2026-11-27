@@ -8,7 +8,7 @@ const PLANS = [
     title: "Design Only",
     price: "$999",
     period: "one-time",
-    desc: "We design your funnel pages, brand visuals and assets ready for your dev team or builder.",
+    desc: "Build from $999: your core funnel and booking flow, designed and ready for your team or builder.",
     ctaText: "Start with Design",
     ctaUrl: "/book-a-call",
     features: [
@@ -24,7 +24,7 @@ const PLANS = [
     title: "Design + Copy Build",
     price: "$1,499",
     period: "one-time",
-    desc: "Complete done-for-you AC Funnel with persuasive direct-response copy and full responsive build.",
+    desc: "Design + Copy Build, $1,499 one-time: a complete done-for-you funnel with copy.",
     ctaText: "Get your AC Funnel now",
     ctaUrl: "/book-a-call",
     features: [
@@ -42,7 +42,7 @@ const PLANS = [
     title: "Full AC Funnel Suite",
     price: "$1,999",
     period: "one-time",
-    desc: "End-to-end acquisition system: pages, copy, automations, CRM pipelines and AI follow-up built and connected.",
+    desc: "Complete suite, $1,999: funnel, CRM, AI receptionist and automations, built and connected.",
     ctaText: "Build the Complete Suite",
     ctaUrl: "/book-a-call",
     features: [

@@ -13,6 +13,7 @@ export interface CaseStudy {
 export const CASE_STUDIES: CaseStudy[] = caseStudiesData as CaseStudy[];
 
 export const HERO_WORDS = [
+  "more appointments.",
   "more jobs.",
   "every call.",
   "booked calls.",

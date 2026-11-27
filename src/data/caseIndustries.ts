@@ -148,7 +148,7 @@ export const CASE_INDUSTRIES: CaseIndustry[] = [
     ],
     quick: {
       q: "What results does med spa lead generation produce?",
-      a: "Documented med spa campaigns include 1,011 leads on $4,703 of ad spend, $11,700 in revenue from 45 leads on $590 (a 19.8x return), $74,100 from 303 clients on $10K of spend, and $639,000 in revenue from 178 clients. One campaign reached a $0.50 cost per lead. Treatment and offer drive the spread.",
+      a: "Documented med spa campaigns include 1,011 leads on $4,703 of ad spend, $11,700 in revenue from 45 leads on $590 (a 19.8x return), $74,100 in revenue on about $10K of spend, and $639,000 in revenue from 178 clients. One campaign reached a $0.50 cost per lead. Treatment and offer drive the spread.",
     },
     faqs: [
       { q: "What is a good cost per lead for med spa lead generation?", a: "It depends on the treatment, the offer and the market. In our documented campaigns, one med spa generated 1,011 leads on $4,703 of ad spend, about $4.65 per lead, and another campaign reached $0.50 per lead. Higher-value treatments usually cost more per lead and are still worth it, so judge campaigns on cost per booked and attended consultation, not cost per lead alone." },

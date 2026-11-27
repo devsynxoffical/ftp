@@ -145,8 +145,10 @@ export default function WhoSection() {
           </h2>
         </div>
         <p className="lead">
-          Our funnels are for businesses where generating the right sales
-          conversation matters more than cheap clicks or cheap leads.
+          If your sale happens on a call or in person, speed and follow-up decide
+          your revenue. We work with coaches, agencies,{" "}
+          <a href="/funnels-for/med-spas">med spas</a>, home services, real estate,
+          insurance and legal firms.
         </p>
       </div>
 

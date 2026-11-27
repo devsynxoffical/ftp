@@ -56,7 +56,7 @@ export default function RealClientResults() {
             Real Client Results &amp; Live Proof
           </h2>
           <p className="rcr-subtitle">
-            Live ad manager dashboards, verified campaign metrics, and closed revenue across client accounts.
+            A $5K done-with-you offer turned $15,151 in ad spend into 527 leads, 253 booked calls and 23 clients. A coaching client booked 174 appointments on $2,214.
           </p>
 
           {/* Proper Filter Buttons */}

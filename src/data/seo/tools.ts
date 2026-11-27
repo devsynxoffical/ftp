@@ -399,7 +399,7 @@ ${roasBenchmarkTable(ECOM_SLUGS)}
         { value: "$115,500", label: "Revenue from 174 coaching appointments", href: "/case-studies/coaching-116k-revenue-on-2214-ad-spend" },
         { value: "387", label: "MVA appointments booked", href: "/case-studies/mva-387-appointments-booked" },
         { value: "5,628", label: "HVAC appointments booked", href: "/case-studies/hvac-5628-appointments-booked" },
-        { value: "$14,040", label: "Agency revenue from 180 appointments", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
+        { value: "$14,040", label: "Agency revenue from 174 appointments", href: "/case-studies/agency-14k-revenue-on-2824-ad-spend" },
       ],
       more: { label: "Browse all case studies", href: "/case-studies/all" },
     },
