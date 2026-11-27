@@ -543,8 +543,12 @@ export default function LiveAutomation() {
       <div className="lrow">
         <div className="lcol-main">
           <p className="lead">
-            We wire your pages, CRM, calendar, follow-up and AI calling into one
-            flow that keeps booking calls while your team sleeps.
+            We build the full path from ad click to booked call: funnel pages, CRM,{" "}
+            <a href="/ai-receptionist">AI receptionist</a>,{" "}
+            <a href="/ai-appointment-setter">AI appointment setter</a> and follow-up
+            across SMS, email and WhatsApp. Leads get an answer in seconds, day or
+            night, and qualified ones land on your calendar. Agencies can resell the
+            same system with a <a href="/gohighlevel-white-label">GoHighLevel white label</a> setup.
           </p>
           <div className="lbt">
             <a className="btn lm" href="/book-a-call">

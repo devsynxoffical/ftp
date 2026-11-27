@@ -182,17 +182,18 @@ export const AI_SERVICE_PAGES: SeoPage[] = [
     title: "AI Receptionist: Answer Every Call 24/7 and Book Jobs",
     description: "AI receptionist for small businesses that answers every call, books jobs into your calendar and logs each call in your CRM. Part of our $1,999 suite.",
     eyebrow: "AI receptionist",
-    h1: "An AI receptionist that answers every call, day and night",
+    h1: "An AI Receptionist That Answers Every Call and Books the Job",
     intro:
       "An <strong>AI receptionist</strong> picks up your business line when your team cannot: after hours, at lunch, during a busy morning or while the owner is on a job. It greets callers, finds out what they need, books appointments from your live calendar, transfers urgent calls to the right person and saves a summary of every call to your CRM. Unlike our outbound agents, it is built for people calling you, whether they are new prospects, existing customers or someone with an urgent problem.",
     quick: {
       q: "What does an AI receptionist do?",
-      a: "It answers inbound calls 24/7, identifies the reason for the call, answers common questions from an approved script, books appointments into your calendar, transfers urgent or high-value calls to staff, and texts back anyone whose call was missed. Every call gets a written summary, tags and next steps in your CRM, so nothing depends on memory.",
+      a: "In short: an AI receptionist answers your phone 24/7 in a natural voice, answers common questions, takes job details, books appointments and texts your team a summary. It is part of our $1,999 complete suite, with call minutes paid to the voice platform, and goes live in 5 to 10 business days.",
     },
     sections: [
       {
         h2: "What the AI receptionist handles",
-        html: `<ul>
+        html: `<p>An AI receptionist answers your phone 24/7 in a natural voice, answers common questions, takes job details, books appointments and sends a summary to your team. No missed calls after hours or during busy times.</p>
+<ul>
 <li><strong>Answering:</strong> picks up on the first rings, around the clock, with your business name and an AI disclosure.</li>
 <li><strong>Missed-call text-back:</strong> if a call still drops, the caller gets a text within seconds asking how you can help.</li>
 <li><strong>After-hours booking:</strong> offers open slots from your calendar so night and weekend callers leave with an appointment.</li>
@@ -212,17 +213,18 @@ export const AI_SERVICE_PAGES: SeoPage[] = [
 <tr><td>Texts back missed callers</td><td>No</td><td>No</td><td>Yes</td></tr>
 <tr><td>Handles many calls at once</td><td>n/a</td><td>Depends on staffing</td><td>Yes</td></tr>
 </tbody></table></div>
+<p>Voicemail loses most callers. An answering service takes messages but rarely books. An AI receptionist answers instantly, books directly into your calendar and costs a fraction of a staffed service; the price comparison with a live service is on our <a href="/ai-answering-service">AI answering service</a> page.</p>
 <p>The real cost of a missed call is rarely visible. Callers who reach voicemail often hang up and dial the next company on the list, and nobody on your team ever knows they called. The AI receptionist turns those silent losses into logged contacts with a reason, a number and usually a booked time, which also tells you how many calls you were missing before. A human receptionist is still better for complex, emotional or high-trust calls. That is why transfer rules are part of every build, and why many clients use the AI only after hours and as overflow.</p>`,
       },
       {
         h2: "Industry setups",
         html: `<ul>
-<li><strong><a href="/funnels-for/home-services">Home services</a>, <a href="/funnels-for/hvac">HVAC</a> and <a href="/funnels-for/roofing">roofing</a>:</strong> separates emergencies from routine jobs, collects address and issue, books estimate windows and transfers true emergencies to the on-call tech.</li>
-<li><strong>Clinics and <a href="/funnels-for/med-spas">med spas</a>:</strong> books consultations, answers prep and policy questions, and transfers anything clinical to staff. The dental version is on our <a href="/ai-voice-agents/dental-clinics">AI voice agents for dental clinics</a> page.</li>
-<li><strong>Law firms:</strong> runs first-pass <a href="/funnels-for/personal-injury-lawyers">personal injury intake</a> questions, flags likely cases and transfers to an intake specialist, without giving legal advice.</li>
-<li><strong><a href="/funnels-for/real-estate">Real estate</a>:</strong> answers listing calls, captures buyer or seller details and books showings or valuation calls.</li>
+<li><strong><a href="/ai-receptionist/hvac">HVAC</a>:</strong> emergency triage and same-day booking, with true emergencies transferred to the on-call tech.</li>
+<li><strong><a href="/ai-receptionist/plumbers">Plumbers</a>:</strong> urgent job capture and dispatch notes, so the address and problem are ready before anyone calls back.</li>
+<li><strong><a href="/ai-receptionist/contractors">Contractors</a>:</strong> estimate booking with job details, scope and zip code collected on the call.</li>
+<li><strong><a href="/ai-receptionist/real-estate">Real estate</a>:</strong> buyer and seller qualification, with hot callers booked for a showing or valuation call.</li>
 </ul>
-<p>Detailed setups by trade: <a href="/ai-receptionist/hvac">AI receptionist for HVAC</a>, <a href="/ai-receptionist/plumbers">for plumbers</a>, <a href="/ai-receptionist/contractors">for contractors</a> and <a href="/ai-receptionist/real-estate">for real estate</a>.</p>`,
+<p>Clinics and <a href="/funnels-for/med-spas">med spas</a> use the same setup to book consultations and answer prep and policy questions, with anything clinical transferred to staff; the dental version is on our <a href="/ai-voice-agents/dental-clinics">AI voice agents for dental clinics</a> page.</p>`,
       },
       {
         h2: "How the call flows into your CRM",
@@ -230,7 +232,7 @@ export const AI_SERVICE_PAGES: SeoPage[] = [
       },
       {
         h2: "Cost and setup",
-        html: `<p>The build is part of our $1,999 complete suite, which includes the CRM, automation, AI booking agent and tracking. Call minutes are paid by you to the platform and usually run $0.10 to $0.25 per minute of talk time. Setup takes 5 to 10 business days: call flow and script, FAQ list, calendar and transfer rules, then at least 50 test calls before your real line is forwarded. Other AI options are on our <a href="/ai-agents">AI agents</a> page, or you can <a href="/book-a-call">book a call</a> to map your call flow.</p>`,
+        html: `<p>The build is part of our $1,999 complete suite, which includes the CRM and automations. Call minutes are paid directly to the voice platform at its usage rates, usually $0.10 to $0.25 per minute of talk time. Leads who fill in a form instead of calling are handled by the <a href="/ai-appointment-setter">AI appointment setter</a>. Setup takes 5 to 10 business days: call flow and script, FAQ list, calendar and transfer rules, then at least 50 test calls before your real line is forwarded. Other AI options are on our <a href="/ai-agents">AI agents</a> page, or you can <a href="/book-a-call">book a call</a> to map your call flow.</p>`,
       },
     ],
     proof: {

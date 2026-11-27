@@ -114,7 +114,7 @@ export default function Hero() {
         <h1 className="h1 d">
           AI receptionists and automation that book{" "}
           <span className="type" id="type" ref={typeRef}>
-            more jobs.
+            more appointments.
           </span>
         </h1>
 

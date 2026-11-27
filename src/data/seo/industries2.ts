@@ -206,7 +206,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
 <li><strong>Referrals do not scale on demand.</strong> They arrive when they arrive. A funnel lets the agency add sales calls when delivery capacity opens up and pause when it is full.</li>
 <li><strong>Prospects are skeptical of agencies.</strong> Many have been burned before. A training or case-study video lets them see how you think before the call, so the call starts warmer.</li>
 <li><strong>Founder time is the bottleneck.</strong> Qualification should happen before anything lands on the calendar. An <a href="/ai-appointment-setter">AI appointment setter</a> can screen budget, decision-maker and fit.</li>
-<li><strong>Tracked pipelines show what works.</strong> In one program, an agency booked 180 appointments and $14,040 in revenue on $2,824 of ad spend. You only see numbers like that when every step is tracked.</li>
+<li><strong>Tracked pipelines show what works.</strong> In one program, an agency booked 174 appointments and $14,040 in revenue on $2,824 of ad spend. You only see numbers like that when every step is tracked.</li>
 </ul>`,
       },
       {
@@ -236,7 +236,7 @@ export const INDUSTRY_PAGES_2: SeoPage[] = [
 <tr><td><a href="/case-studies/agency-235-new-clients-signed">New clients signed</a></td><td>235 clients</td></tr>
 <tr><td><a href="/case-studies/agency-15900-closed-in-10-days">Short sales window</a></td><td>$15,900 closed in 10 days</td></tr>
 <tr><td><a href="/case-studies/agency-1890-leads-at-6-72-cpl">Lead volume</a></td><td>1,890 leads at $6.72 on $12,707.55</td></tr>
-<tr><td><a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">Booked calls</a></td><td>180 appointments, $14,040 revenue on $2,824</td></tr>
+<tr><td><a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">Booked calls</a></td><td>174 appointments, $14,040 revenue on $2,824</td></tr>
 <tr><td><a href="/case-studies/agency-1261-registrations-for-5900">Event registrations</a></td><td>1,261 registrations for $5,900</td></tr>
 <tr><td><a href="/case-studies/agency-850-from-one-ad-at-295x-roas">Single ad</a></td><td>$850 at 295.14x return on ad spend</td></tr>
 </tbody></table></div>

@@ -998,7 +998,7 @@ export const GLOSSARY_PAGES: SeoPage[] = [
       },
       {
         h2: "Example from our builds",
-        html: `<p>Pipelines are how high-volume clients stay organized. An HVAC client tracked <a href="/case-studies/hvac-5628-appointments-booked">5,628 booked appointments</a> through stage-based automation, and an agency client moved <a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">180 appointments to $14,040 in revenue</a> on $2,824 of spend. In both, automations fired on stage changes so no lead waited on a person to remember it.</p>`,
+        html: `<p>Pipelines are how high-volume clients stay organized. An HVAC client tracked <a href="/case-studies/hvac-5628-appointments-booked">5,628 booked appointments</a> through stage-based automation, and an agency client moved <a href="/case-studies/agency-14k-revenue-on-2824-ad-spend">174 appointments to $14,040 in revenue</a> on $2,824 of spend. In both, automations fired on stage changes so no lead waited on a person to remember it.</p>`,
       },
       {
         h2: "Common mistakes",

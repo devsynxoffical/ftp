@@ -395,17 +395,17 @@ export const SERVICE_PAGES: SeoPage[] = [
     title: "AI Appointment Setter: Book Qualified Calls 24/7 | FTP",
     description: "AI appointment setter that replies in seconds, qualifies leads and books calls 24/7. Running cost roughly $3 to $9 per booked appointment in our builds.",
     eyebrow: "AI appointment setter",
-    h1: "An AI appointment setter that books qualified calls 24/7",
+    h1: "An AI Appointment Setter That Books Qualified Calls 24/7",
     intro:
       "An <strong>AI appointment setter</strong> does the job of a setter around the clock: it contacts every new lead by call and text within seconds, checks fit, books the appointment, confirms it, reminds the prospect and rebooks anyone who misses. We build the whole booking loop, not just the first call, so more booked calls turn into attended calls.",
     quick: {
       q: "What is an AI appointment setter?",
-      a: "An AI appointment setter is a voice and SMS agent that books sales or service appointments automatically. It reaches new leads within a minute at any hour, asks qualifying questions, offers open slots from your live calendar, sends confirmations and reminders, and follows up with no-shows to rebook them, logging everything in your CRM.",
+      a: "An AI appointment setter is software that talks to your leads by SMS, WhatsApp, Instagram DM or phone, asks your qualification questions and books qualified people into your calendar, around the clock. Builds start at $999, go live in 5 to 10 days, and run at roughly $3 to $9 per booked appointment in our deployments.",
     },
     sections: [
       {
         h2: "What is AI lead follow-up?",
-        html: `<p>AI lead follow-up means an AI agent contacts every new lead the moment they come in, by text or a phone call, has a short qualifying conversation and books the ones who fit into your calendar. It replaces the slow part of most sales processes: the hours or days between a form fill and the first human call, which is where most leads go cold.</p>
+        html: `<p>AI lead follow-up keeps messaging leads who did not book: reminders, answers to common questions and new time slots, until they book or opt out. It also covers the first touch, so the hours or days between a form fill and the first human call, where most leads go cold, disappear.</p>
 <ul>
 <li><strong>Instant first touch:</strong> a text and, if you want, a call within 60 seconds of the form, ad lead or missed call.</li>
 <li><strong>Qualification:</strong> three to five questions you approve, such as budget, timeline, location or need.</li>
@@ -428,15 +428,23 @@ export const SERVICE_PAGES: SeoPage[] = [
       },
       {
         h2: "Cost per booked appointment",
-        html: `<p>The comparison that matters is cost per booking. In our deployments an AI setter costs roughly $3 to $9 per booked appointment in running costs, against $40 to $120 for a human setter once salary or commission is divided by bookings. The full breakdown, including build and maintenance, is in <a href="/blog/ai-appointment-setter-voice-agent-cost-setup-results">AI appointment setter cost</a>. Use the <a href="/tools/ai-voice-agent-roi-calculator">ROI calculator</a> with your own lead volume.</p>`,
+        html: `<p>In our deployments an AI setter costs roughly $3 to $9 per booked appointment in running costs, against about $40 to $120 for a human setter once salary or commission is included.</p>
+<div class="table-wrap"><table>
+<thead><tr><th></th><th>AI appointment setter</th><th>Human setter</th></tr></thead>
+<tbody>
+<tr><td>Cost per booked appointment</td><td>Roughly $3 to $9 in running costs</td><td>About $40 to $120 with salary or commission</td></tr>
+<tr><td>Hours</td><td>24/7, including nights and weekends</td><td>Working hours</td></tr>
+<tr><td>First reply</td><td>Within a minute</td><td>When someone is free</td></tr>
+</tbody></table></div>
+<p>The full breakdown, including build and maintenance, is in <a href="/blog/ai-appointment-setter-voice-agent-cost-setup-results">AI appointment setter cost</a>. Use the <a href="/tools/ai-voice-agent-roi-calculator">ROI calculator</a> with your own lead volume.</p>`,
       },
       {
         h2: "Show rates matter as much as bookings",
-        html: `<p>A booked call that nobody attends is worth nothing. The AI setter runs the reminder and confirmation steps that took a high-ticket client's show rate from 62% to 88.4%, and one personal injury campaign reached a 62% show-up rate across 1,079 verified leads. Estimate what no-shows cost you today with the <a href="/tools/no-show-cost-calculator">no-show cost calculator</a>.</p>`,
+        html: `<p>A booking only counts if the person shows up. Every build sends confirmations and reminders by SMS and email, with easy rescheduling. The same steps took a high-ticket client's show rate from 62% to 88.4%, and one personal injury campaign reached a 62% show-up rate across 1,079 verified leads. Estimate what no-shows cost you today with the <a href="/tools/no-show-cost-calculator">no-show cost calculator</a>.</p>`,
       },
       {
         h2: "Best fit",
-        html: `<p>AI setters fit businesses with steady lead volume and a calendar to fill: <a href="/funnels-for/med-spas">med spas</a>, <a href="/funnels-for/dentists">dental practices</a>, <a href="/funnels-for/roofing">roofing inspections</a>, <a href="/funnels-for/consultants">consulting calls</a> and <a href="/funnels-for/gyms">gym trials</a>. The voice technology itself is covered on our <a href="/ai-voice-agents">AI voice agents</a> page, and the human alternative in <a href="/compare/ai-voice-agent-vs-human-setter">AI voice agent vs human setter</a>.</p>`,
+        html: `<p>Businesses with steady inbound leads and a sales call: <a href="/funnels-for/coaches">coaching</a>, <a href="/ai-appointment-setter/insurance">insurance</a>, <a href="/ai-appointment-setter/real-estate">real estate</a>, <a href="/funnels-for/med-spas">med spas</a>, <a href="/funnels-for/home-services">home services</a>, legal and agencies. See how it fits the full system on our <a href="/">AI automation agency</a> page. The voice technology itself is covered on our <a href="/ai-voice-agents">AI voice agents</a> page, and the human alternative in <a href="/compare/ai-voice-agent-vs-human-setter">AI voice agent vs human setter</a>.</p>`,
       },
     ],
     proof: {

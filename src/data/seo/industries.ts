@@ -543,29 +543,29 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     title: "Med Spa Lead Generation Funnel That Books Consults | FTP",
     description: "Med spa lead generation funnels with intro offers, deposits and reminders. Results include $639,000 from 178 clients and $11,700 from $590 in ads.",
     eyebrow: "Funnels for med spas and aesthetic clinics",
-    h1: "Med spa marketing with a patient acquisition funnel that turns intro offers into clients",
+    h1: "Med Spa Lead Generation with a Patient Acquisition Funnel That Books",
     intro:
       "A med spa funnel is the core of effective <strong>med spa marketing</strong>: it sells a first visit, not a single treatment. The intro offer brings a new client through the door; the consultation, follow-up and rebooking turn them into someone worth thousands a year. Built as a patient acquisition funnel, it runs from ad to booked consult to rebooking. Our med spa results include $639,000 in revenue from 178 clients and $11,700 from $590 of ad spend.",
     quick: {
       q: "What should a med spa funnel include?",
-      a: "One clear intro offer on a single treatment, a short page with real before-and-after policy-safe proof, a booking calendar with an optional deposit, instant text confirmation, and three-channel reminders. After the visit, automated rebooking and membership offers turn a first treatment into recurring revenue.",
+      a: "An intro offer page, a short qualification form, instant SMS follow-up, online booking with a deposit, and reminders before the appointment. Each step protects your show rate. Builds start at $999 and go live in 5 to 10 days; published results include $639,000 from 178 clients and $11,700 from $590 in ad spend.",
     },
     sections: [
       {
         h2: "Picking the intro offer",
-        html: `<p>The best-performing med spa funnels lead with one treatment people already understand, priced to remove hesitation: a first injectable session, a facial, a laser package intro, or a free consultation with a credit toward treatment. The page explains who it is for, what happens at the visit, who performs it and what it costs, then shows the calendar. Qualifying questions are light: treatment interest, first visit or returning, and preferred times.</p>`,
+        html: `<p>Lead with one treatment people already search for, at a clear price, and use the first visit to build a treatment plan. The best-performing offers remove hesitation: a first injectable session, a facial, a laser package intro, or a free consultation with a credit toward treatment. The page explains who it is for, what happens at the visit, who performs it and what it costs, then shows the calendar. Qualifying questions are light: treatment interest, first visit or returning, and preferred times.</p>`,
       },
       {
         h2: "Deposits, reminders and show rate",
-        html: `<p>No-shows are the main leak in clinic funnels. Taking a small refundable deposit at booking filters casual bookers, and our <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> sends text, email and call reminders at set intervals. Three-channel reminders have lifted show rates as high as 88% across our builds. Unbooked leads get a call from an <a href="/ai-appointment-setter">AI appointment setter</a> within a minute, and <a href="/crm-automation">CRM automation</a> handles rebooking reminders based on each treatment's natural interval.</p>`,
+        html: `<p>A small deposit and two reminders cut no-shows sharply. Your calendar fills with people who planned to come. The deposit filters casual bookers, and our <a href="/templates/no-show-reminder-sequence">no-show reminder sequence</a> sends text, email and call reminders at set intervals. Three-channel reminders have lifted show rates as high as 88% across our builds. Unbooked leads get a call from an <a href="/ai-appointment-setter">AI appointment setter</a> within a minute, and <a href="/crm-automation">CRM automation</a> handles rebooking reminders based on each treatment's natural interval.</p>`,
       },
       {
         h2: "HIPAA-sensitive wording and tracking",
-        html: `<p>Med spas sit close to healthcare, so treat client details carefully. Keep forms to the minimum needed to book, avoid asking about medical conditions before the consultation, and never pass treatment details or health information into ad platform events or URL parameters. Send generic events such as "booked" through the Conversions API rather than treatment names. If you collect health history online, use a form and CRM setup covered by an appropriate agreement. Ad copy should avoid implying the viewer has a condition, and before-and-after images must follow Meta's personal health policies.</p>`,
+        html: `<p>Ads and forms avoid health claims and sensitive data in tracking pixels. We set up tracking that respects privacy rules. Med spas sit close to healthcare, so treat client details carefully. Keep forms to the minimum needed to book, avoid asking about medical conditions before the consultation, and never pass treatment details or health information into ad platform events or URL parameters. Send generic events such as "booked" through the Conversions API rather than treatment names. If you collect health history online, use a form and CRM setup covered by an appropriate agreement. Ad copy should avoid implying the viewer has a condition, and before-and-after images must follow Meta's personal health policies.</p>`,
       },
       {
         h2: "Results from our med spa clients",
-        html: `<p>From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>: one clinic generated <a href="/case-studies/med-spa-639k-in-revenue">$639,000 from 178 clients</a>, another produced $74,100 from 303 clients on $10K of spend, and a smaller test turned $590 into $11,700, a 19.8x return. Cost per lead has been as low as $0.50 on a strong intro offer, and 1,011 leads came from $4,703 in another campaign. The full stage-by-stage math is in our <a href="/blog/med-spa-patient-acquisition">med spa patient acquisition guide</a>.</p>`,
+        html: `<p>From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>: one clinic generated <a href="/case-studies/med-spa-639k-in-revenue">$639,000 from 178 clients</a>. Another turned $590 of ad spend into $11,700 in revenue. A third reached $74,100 in revenue on about $10K in ads. Cost per lead has been as low as $0.50 on a strong intro offer, and 1,011 leads came from $4,703 in another campaign. The full stage-by-stage math is in our <a href="/blog/med-spa-patient-acquisition">med spa patient acquisition guide</a>, and calls that come in outside opening hours can go to an <a href="/ai-receptionist">AI receptionist</a>.</p>`,
       },
       {
         h2: "Mistakes that waste med spa ad spend",
@@ -582,7 +582,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       items: [
         { value: "$639K", label: "Med spa revenue from 178 clients", href: "/case-studies/med-spa-639k-in-revenue" },
         { value: "19.8x", label: "$11,700 revenue on $590 ad spend", href: "/case-studies/med-spa-12k-revenue-on-590-ad-spend" },
-        { value: "$74,100", label: "Revenue from 303 clients on $10K", href: "/case-studies/med-spa-74k-revenue-on-10k-ad-spend" },
+        { value: "$74,100", label: "Revenue on about $10K in ads", href: "/case-studies/med-spa-74k-revenue-on-10k-ad-spend" },
         { value: "$0.50", label: "Cost per lead on an intro offer", href: "/case-studies/med-spa-0-50-cost-per-lead" },
       ],
       more: { label: "All med spa case studies", href: "/case-studies/med-spa-marketing" },
@@ -937,7 +937,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       },
       {
         h2: "Proof from comparable appointment businesses",
-        html: `<p>Because we have no dental case studies, we point to the closest match: med spas, which share the same appointment economics and local, health-adjacent buyer. From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>, one clinic generated <a href="/case-studies/med-spa-74k-revenue-on-10k-ad-spend">$74,100 from 303 clients on $10K of spend</a>, another produced 1,011 leads on $4,703, and a third turned $590 into $11,700. Expect dental costs to differ, and treat these as directional rather than a dental benchmark.</p>`,
+        html: `<p>Because we have no dental case studies, we point to the closest match: med spas, which share the same appointment economics and local, health-adjacent buyer. From our <a href="/case-studies/med-spa-marketing">med spa case studies</a>, one clinic generated <a href="/case-studies/med-spa-74k-revenue-on-10k-ad-spend">$74,100 in revenue on about $10K of spend</a>, another produced 1,011 leads on $4,703, and a third turned $590 into $11,700. Expect dental costs to differ, and treat these as directional rather than a dental benchmark.</p>`,
       },
       {
         h2: "Mistakes that leave chairs empty",
@@ -953,7 +953,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
     proof: {
       heading: "Proof from comparable appointment-based businesses (not dental)",
       items: [
-        { value: "$74,100", label: "Med spa revenue from 303 clients on $10K", href: "/case-studies/med-spa-74k-revenue-on-10k-ad-spend" },
+        { value: "$74,100", label: "Med spa revenue on about $10K in ads", href: "/case-studies/med-spa-74k-revenue-on-10k-ad-spend" },
         { value: "1,011", label: "Med spa leads on $4,703 ad spend", href: "/case-studies/med-spa-1011-leads" },
         { value: "19.8x", label: "Med spa: $11,700 on $590", href: "/case-studies/med-spa-12k-revenue-on-590-ad-spend" },
       ],
@@ -1146,7 +1146,7 @@ export const INDUSTRY_PAGES: SeoPage[] = [
       },
       {
         h2: "B2B and SaaS numbers from our cases",
-        html: `<p>From our <a href="/case-studies/agency-saas-lead-generation">agency, SaaS and lead gen case studies</a>: $64,571 revenue on $19,768 of SaaS spend, B2B lead generation at $24.37 per lead across 1,131 leads and $40 per lead across 501 leads, and an agency program that booked 180 appointments for $14,040 on $2,824. For outbound pipeline alongside the funnel, <a href="https://qualifiedleadsx.com">QualifiedLeadsX</a> specializes in high-ticket B2B lead generation.</p>`,
+        html: `<p>From our <a href="/case-studies/agency-saas-lead-generation">agency, SaaS and lead gen case studies</a>: $64,571 revenue on $19,768 of SaaS spend, B2B lead generation at $24.37 per lead across 1,131 leads and $40 per lead across 501 leads, and an agency program that booked 174 appointments for $14,040 on $2,824. For outbound pipeline alongside the funnel, <a href="https://qualifiedleadsx.com">QualifiedLeadsX</a> specializes in high-ticket B2B lead generation.</p>`,
       },
       {
         h2: "SaaS funnel mistakes",
